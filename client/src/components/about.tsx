@@ -1,20 +1,13 @@
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
 export default function About() {
-  const features = [
-    "AI-Powered Translation",
-    "Multi-Language Support",
-    "Real-time Practice",
-    "Cross-Platform Compatibility",
-    "Seamless Integration",
-  ];
-
-  const useCases = [
-    "Language Learning",
-    "International Business",
-    "Travel Communication",
-    "Social Media Interaction",
-    "Educational Tools",
-  ];
-
   return (
     <section id="about" className="py-20 bg-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,14 +22,29 @@ export default function About() {
                 communication effortless and engaging, empowering people to connect globally
                 while learning naturally.
               </p>
-              
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button
+                    type="button"
+                    className="text-primary font-medium underline-offset-4 hover:underline focus:outline-none focus-visible:underline"
+                  >
+                    Privacy Policy
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl">
+                  <DialogHeader>
+                    <DialogTitle>Privacy Policy</DialogTitle>
+                  </DialogHeader>
+                  <ScrollArea className="max-h-[70vh] pr-4">
+                    <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
+                      <p>Privacy policy content coming soon.</p>
+                    </div>
+                  </ScrollArea>
+                </DialogContent>
+              </Dialog>
             </div>
-            
           </div>
-          <div className="relative">
-            
-            
-          </div>
+          <div className="relative"></div>
         </div>
       </div>
     </section>
