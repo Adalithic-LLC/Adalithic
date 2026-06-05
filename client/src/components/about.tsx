@@ -62,6 +62,17 @@ function PrivacyPolicyContent() {
       </p>
       <p>By using Arcatext, you agree to the practices described in this Privacy Policy.</p>
 
+      <div className="bg-primary/5 border border-primary/20 p-4 rounded-lg">
+        <h3 className="font-semibold text-secondary mb-2">NOTE: Regarding Data Privacy (in simple terms)</h3>
+        <ol className="list-decimal list-outside pl-5 space-y-2">
+          <li>Arcatext does not sell your data to anyone.</li>
+          <li>We only track messages that are Reworded (you have to tap the Reword button, so if you type with the keyboard without tapping Reword, no messages are tracked or stored).</li>
+          <li>We use data to better understand your language proficiency, to deliver learning features. We're not personally interested in what you text, but only want to help accelerate your language learning!</li>
+          <li>We filter out certain Reworded text and do not store it (ie. passwords - see complete list below).</li>
+          <li>You can turn off or on Reword tracking at any time (in the main Arcatext app). We default to 'on' state, so we can deliver learning features.</li>
+        </ol>
+      </div>
+
       <h3 className="font-semibold text-secondary pt-2">1. Who We Are</h3>
       <p>Arcatext is operated by Adalithic LLC.</p>
       <p>For privacy questions, contact us at:</p>
