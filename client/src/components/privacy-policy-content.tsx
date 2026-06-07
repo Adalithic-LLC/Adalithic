@@ -375,7 +375,9 @@ export function PrivacyPolicyContent() {
         LLC uses reasonable safeguards designed to reduce this risk.
       </p>
 
-      <h3 className="font-semibold text-secondary pt-2">9. Data Retention</h3>
+      <h3 className="font-semibold text-secondary pt-2">
+        9. Data Retention, Account Deletion, and Your Right to Erasure
+      </h3>
       <p>
         We retain information only for as long as reasonably necessary for the purposes described
         in this Privacy Policy, unless a longer retention period is required by law.
@@ -399,7 +401,38 @@ export function PrivacyPolicyContent() {
           Anonymized, de-identified, or aggregated datasets may be retained for longer periods
           because they are not intended to identify a specific user.
         </li>
+        <li>
+          Anonymous logs of Reworded messages may be retained after your account is deleted, as
+          described below.
+        </li>
       </ul>
+      <p>
+        You may delete your Arcatext account at any time from within the app. When you delete your
+        account, we remove your profile and account information, including your email address,
+        username, and authentication credentials.
+      </p>
+      <p>
+        Arcatext maintains anonymous logs of Reworded messages even after an account is deleted.
+        This allows users to benefit from their messaging history if they create an account again
+        with the same identifier (i.e., an email address). This also helps Arcatext continue to
+        train its own internal AI models on anonymous Reworded message data.
+      </p>
+      <p>
+        To keep these retained logs anonymous, your email address is replaced at the time of
+        deletion with a one-way, irreversible identifier. The retained Reworded messages are not
+        stored with your email address and cannot be read or linked back to you by Arcatext
+        personnel. If you later create a new account using the same email address, these messages
+        may be reconnected to your new account.
+      </p>
+      <p>
+        <span className="font-medium">Requesting complete erasure.</span> If you would prefer your
+        retained Reworded message data to be permanently and completely erased rather than retained
+        in anonymous form, you may contact us at arcatextapp@gmail.com with the subject line "Data
+        Erasure Request." Include the email address of the account whose data you want to erase.
+        This request email must be sent from the same email associated with the account in
+        question. Requests for data erasure can only be made for accounts that have already been
+        deleted. We will erase the associated retained data in accordance with applicable law.
+      </p>
 
       <h3 className="font-semibold text-secondary pt-2">10. Sensitive Information</h3>
       <p>
