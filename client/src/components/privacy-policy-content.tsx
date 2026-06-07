@@ -4,7 +4,7 @@ export function PrivacyPolicyContent() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operated by Adalithic LLC</p>
-      <p>Last Updated: May 18, 2026</p>
+      <p>Last Updated: June 7, 2026</p>
       <p>
         Arcatext is a custom keyboard and language application designed to help users write,
         translate, reword, and better understand messages across languages. This Privacy Policy
@@ -12,17 +12,6 @@ export function PrivacyPolicyContent() {
         stored, when it may be shared, and what choices you have.
       </p>
       <p>By using Arcatext, you agree to the practices described in this Privacy Policy.</p>
-
-      <div className="bg-primary/5 border border-primary/20 p-4 rounded-lg">
-        <h3 className="font-semibold text-secondary mb-2">NOTE: Regarding Data Privacy (in simple terms)</h3>
-        <ol className="list-decimal list-outside pl-5 space-y-2">
-          <li>Arcatext does not sell your data to anyone.</li>
-          <li>We only track messages that are Reworded (you have to tap the Reword button, so if you type with the keyboard without tapping Reword, no messages are tracked or stored).</li>
-          <li>We use data to better understand your language proficiency, to deliver learning features. We're not personally interested in what you text, but only want to help accelerate your language learning!</li>
-          <li>We filter out certain Reworded text and do not store it (ie. passwords - see complete list below).</li>
-          <li>You can turn off or on Reword tracking at any time (in the main Arcatext app). We default to 'on' state, so we can deliver learning features.</li>
-        </ol>
-      </div>
 
       <h3 className="font-semibold text-secondary pt-2">1. Who We Are</h3>
       <p>Arcatext is operated by Adalithic LLC.</p>
@@ -39,6 +28,16 @@ export function PrivacyPolicyContent() {
         Arcatext is designed to process only the information needed to provide, improve,
         personalize, and support the app's language features.
       </p>
+      <div className="bg-primary/5 border border-primary/20 p-4 rounded-lg">
+        <h3 className="font-semibold text-secondary mb-2">In simple terms</h3>
+        <ol className="list-decimal list-outside pl-5 space-y-2">
+          <li>Arcatext does not sell your data to anyone.</li>
+          <li>We only track messages that are Reworded (you have to tap the Reword button, so if you type with the keyboard without tapping Reword, no messages are tracked or stored).</li>
+          <li>We use data to better understand your language proficiency, to deliver learning features. We're not personally interested in what you text, but only want to help accelerate your language learning!</li>
+          <li>We filter out certain Reworded text and do not store it (for example, passwords, card numbers, and codes — see the complete list in Section 7).</li>
+          <li>You can turn Reword tracking off or on at any time (in the main Arcatext app). We default to the 'on' state so we can deliver learning features.</li>
+        </ol>
+      </div>
       <p className="font-medium">A. Text You Choose to Translate, Reword, Check, or Analyze</p>
       <p>
         When you use Arcatext features such as translation, Rewording, reverse translation,
@@ -314,7 +313,49 @@ export function PrivacyPolicyContent() {
       </ul>
 
       <h3 className="font-semibold text-secondary pt-2">
-        7. Anonymized and De-Identified Language Data
+        7. What We Filter Out and Never Store or Log
+      </h3>
+      <p>
+        To protect you, Arcatext automatically screens text on your device before any Reworded
+        entry is stored. When it detects anything sensitive, it discards the entire entry — it
+        does not store a shortened or redacted version, and nothing is linked to your profile.
+      </p>
+      <p>A Reworded entry is NOT stored when:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>
+          <span className="font-medium">Secure or sensitive fields</span> — you are typing in a
+          password or secure-entry field, or a field designated for email, phone numbers, PINs or
+          numeric codes, URLs, or search.
+        </li>
+        <li>
+          <span className="font-medium">Email addresses</span> — the text contains an email
+          address.
+        </li>
+        <li>
+          <span className="font-medium">Payment card numbers</span> — the text contains a 13–16
+          digit sequence that looks like a credit or debit card number.
+        </li>
+        <li>
+          <span className="font-medium">Verification or one-time codes</span> — the text contains
+          a standalone 4–8 digit code.
+        </li>
+        <li>
+          <span className="font-medium">Account or ID numbers</span> — the text contains a long
+          unbroken run of 9 or more digits.
+        </li>
+        <li>
+          <span className="font-medium">Passwords, API keys, and other secrets</span> — the text
+          contains a high-entropy token that looks like a password, key, or other random secret.
+        </li>
+      </ul>
+      <p>When in doubt, Arcatext errs on the side of not storing.</p>
+      <p>
+        <span className="font-medium">Your control.</span> You can turn off Reword storage
+        entirely at any time in the Arcatext app.
+      </p>
+
+      <h3 className="font-semibold text-secondary pt-2">
+        8. Anonymized and De-Identified Language Data
       </h3>
       <p>
         Arcatext and Adalithic LLC may use stored messages and language interactions to improve
@@ -323,56 +364,15 @@ export function PrivacyPolicyContent() {
       </p>
       <p>
         Arcatext and Adalithic LLC may also create anonymized, de-identified, or aggregated
-        language datasets derived from user-submitted messages. These datasets may be used
-        internally or shared, licensed, or sold to third parties, including:
+        language datasets derived from user-submitted messages. These datasets are used internally
+        by Adalithic LLC to improve Arcatext's language features and quality. We do not sell,
+        license, or share these datasets with third parties.
       </p>
-      <ul className="list-disc pl-6 space-y-1">
-        <li>Language-related data partners</li>
-        <li>Research partners</li>
-        <li>AI training partners</li>
-        <li>Language-related data brokers</li>
-      </ul>
-      <p>
-        Before such data is shared, licensed, or sold, Adalithic LLC will take steps designed to
-        remove direct identifiers such as:
-      </p>
-      <ul className="list-disc pl-6 space-y-1">
-        <li>Email addresses</li>
-        <li>Usernames</li>
-        <li>Passwords</li>
-        <li>Account IDs</li>
-        <li>Payment information</li>
-        <li>Other direct profile identifiers</li>
-      </ul>
       <p>
         Anonymized or de-identified datasets are not intended to identify you personally or be
-        associated with a specific user profile.
-      </p>
-      <p>
-        However, no anonymization or de-identification process can guarantee that re-identification
-        is impossible in every circumstance. Adalithic LLC uses reasonable safeguards designed to
-        reduce this risk.
-      </p>
-      <p>
-        Adalithic LLC will not knowingly sell or license language data that remains directly
-        associated with your email, username, password, or Arcatext profile.
-      </p>
-
-      <h3 className="font-semibold text-secondary pt-2">8. Sale or Licensing of Data</h3>
-      <p>
-        Adalithic LLC may sell, license, or otherwise provide anonymized, de-identified, or
-        aggregated language data to third parties for language-related purposes, including:
-      </p>
-      <ul className="list-disc pl-6 space-y-1">
-        <li>Language research</li>
-        <li>AI training</li>
-        <li>Translation improvement</li>
-        <li>Linguistic analysis</li>
-        <li>Development of language technologies</li>
-      </ul>
-      <p>
-        Adalithic LLC does not sell profile-linked Reworded messages that identify or are directly
-        associated with your Arcatext profile.
+        associated with a specific user profile. However, no anonymization or de-identification
+        process can guarantee that re-identification is impossible in every circumstance. Adalithic
+        LLC uses reasonable safeguards designed to reduce this risk.
       </p>
 
       <h3 className="font-semibold text-secondary pt-2">9. Data Retention</h3>
@@ -417,8 +417,8 @@ export function PrivacyPolicyContent() {
         <li>Private addresses</li>
         <li>Confidential business information</li>
         <li>
-          Highly sensitive personal messages you do not want processed, stored, or de-identified
-          for language-related uses
+          Highly sensitive personal messages you do not want processed or stored for
+          language-related uses
         </li>
       </ul>
       <p>
@@ -513,20 +513,11 @@ export function PrivacyPolicyContent() {
         <li>
           <span className="font-medium">De-identified language data</span> — Anonymized or
           aggregated language examples derived from user submissions. Purpose: to improve language
-          systems and support language datasets.
+          systems.
         </li>
       </ul>
-      <p>Arcatext does not sell profile-linked Reworded messages.</p>
-      <p>
-        Adalithic LLC may sell, license, or share anonymized, de-identified, or aggregated
-        language data for language-related purposes.
-      </p>
-      <p>
-        California residents may have the right to opt out of the sale or sharing of personal
-        information. To submit an opt-out request, contact:
-      </p>
-      <p>arcatextapp@gmail.com</p>
-      <p>Please include "California Privacy Opt-Out Request" in the subject line.</p>
+      <p>Adalithic LLC does not sell or share your personal information.</p>
+      <p>If you have questions about your privacy rights, contact arcatextapp@gmail.com.</p>
 
       <h3 className="font-semibold text-secondary pt-2">16. Security</h3>
       <p>
@@ -551,15 +542,11 @@ export function PrivacyPolicyContent() {
         <li>With service providers who help operate, secure, store, analyze, or improve the app</li>
         <li>With analytics or crash-reporting providers</li>
         <li>With payment processors or app-store providers</li>
-        <li>
-          With language-related data partners, AI training partners, research partners, or data
-          brokers using anonymized, de-identified, or aggregated language data
-        </li>
         <li>If required by law or legal process</li>
         <li>To protect the rights, safety, or security of Arcatext, users, Adalithic LLC, or others</li>
         <li>In connection with mergers, acquisitions, financing, or asset sales</li>
       </ul>
-      <p>We do not sell profile-linked Reworded messages.</p>
+      <p>We do not sell your data.</p>
 
       <h3 className="font-semibold text-secondary pt-2">
         18. App Store, Billing, and Payment Information
