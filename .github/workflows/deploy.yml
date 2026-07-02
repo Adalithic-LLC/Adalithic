@@ -30,18 +30,27 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx vite build
-      # Preserve the custom domain, disable Jekyll processing, and add the SPA
-      # fallback. GitHub Pages has no server-side routing, so a direct hit on a
+      # Preserve the custom domain, disable Jekyll processing, and add SPA
+      # fallbacks. GitHub Pages has no server-side routing, so a direct hit on a
       # client-only route (e.g. /terms, /privacy — the URLs the Arcatext app and
-      # the footer link to) would 404. Serving a copy of index.html as 404.html
-      # lets GitHub return the app for any unknown path; wouter then renders the
-      # right page client-side. The relative asset base (vite `base: "./"`) plus
-      # single-segment routes keep ./script.js resolving correctly.
-      - name: Add CNAME, .nojekyll, and SPA 404 fallback
+      # the footer link to) would otherwise 404.
+      #
+      # Two layers:
+      # 1. Real terms.html / privacy.html so GitHub Pages serves /terms and
+      #    /privacy as true HTTP 200s (important: these URLs are linked from the
+      #    app and submitted to the App Store / Google Play, which can flag a
+      #    404-status URL). Flat .html files serve at the extensionless path with
+      #    no trailing slash, so wouter matches and the relative asset base
+      #    (vite `base: "./"`) keeps ./script.js resolving to /script.js.
+      # 2. 404.html as a catch-all for any other client route (renders the app
+      #    with a 404 status; browsers still route it correctly).
+      - name: Add CNAME, .nojekyll, and SPA fallbacks
         run: |
           echo "adalithic.com" > dist/public/CNAME
           touch dist/public/.nojekyll
           cp dist/public/index.html dist/public/404.html
+          cp dist/public/index.html dist/public/terms.html
+          cp dist/public/index.html dist/public/privacy.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/public
