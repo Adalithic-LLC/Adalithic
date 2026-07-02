@@ -49,11 +49,7 @@ export function TermsOfUseContent() {
       <p>Arcatext is operated by Adalithic LLC.</p>
       <p>You can reach us at:</p>
       <p>
-        Support: support@adalithic.com
-        <br />
-        Legal: legal@adalithic.com
-        <br />
-        Privacy: privacy@adalithic.com
+        Email: arcatextapp@gmail.com
         <br />
         Website: https://adalithic.com/
       </p>
@@ -361,11 +357,7 @@ export function TermsOfUseContent() {
         <br />
         Arcatext Support
         <br />
-        Support: support@adalithic.com
-        <br />
-        Legal: legal@adalithic.com
-        <br />
-        Privacy: privacy@adalithic.com
+        Email: arcatextapp@gmail.com
         <br />
         Website: https://adalithic.com/
       </p>
