@@ -253,7 +253,7 @@ export function PrivacyPolicyContent() {
       </h3>
       <p>
         To provide translation and language features, Arcatext may send submitted text and related
-        settings to third-party AI service providers, such as OpenAI.
+        settings to third-party AI model providers and other service providers.
       </p>
       <p>
         These providers process the text to return translations, Rewordings, explanations, or
@@ -261,10 +261,10 @@ export function PrivacyPolicyContent() {
         terms, and processing practices.
       </p>
       <p>
-        As of this policy's last update, OpenAI states that data submitted through its API is not
-        used to train or improve OpenAI models by default unless the customer opts in. Arcatext
-        does not intentionally opt in to model training for user-submitted translation content
-        unless this policy is updated to say otherwise.
+        As of this policy's last update, our AI model providers state that data submitted through
+        their APIs is not used to train or improve their models by default unless the customer opts
+        in. Arcatext does not intentionally opt in to model training for user-submitted translation
+        content unless this policy is updated to say otherwise.
       </p>
       <p>Arcatext may also use service providers for:</p>
       <ul className="list-disc pl-6 space-y-1">
@@ -486,7 +486,8 @@ export function PrivacyPolicyContent() {
       </p>
       <p>
         By using Arcatext, you understand that your information may be processed in countries
-        outside your place of residence.
+        outside your place of residence. Additional information about transfers, including the
+        safeguards we use, appears in the Region-Specific Privacy Rights section below.
       </p>
 
       <h3 className="font-semibold text-secondary pt-2">13. Your Choices</h3>
@@ -628,6 +629,139 @@ export function PrivacyPolicyContent() {
         Email: arcatextapp@gmail.com
         <br />
         Support Page: https://adalithic.com/
+      </p>
+
+      <h3 className="font-semibold text-secondary pt-2">Region-Specific Privacy Rights</h3>
+      <p>
+        If there is any conflict between this Privacy Policy and the Terms of Use on privacy-related
+        matters, this Privacy Policy controls.
+      </p>
+      <p className="font-medium">Your Rights (Global Summary)</p>
+      <p>
+        Depending on where you live, you may have rights regarding your personal information,
+        including the right to access, correct, delete, or restrict processing of your data, the
+        right to data portability, the right to object to certain processing, and the right to
+        withdraw consent where processing is based on consent. Detailed rights and how to exercise
+        them are set out in the region-specific sections below. You may also contact us at
+        arcatextapp@gmail.com to make a request, and we will respond in accordance with applicable
+        law.
+      </p>
+
+      <p className="font-medium">
+        Rider A — European Economic Area (EEA), European Union, and EFTA Countries
+      </p>
+      <p>
+        This Rider applies to consumers resident in: Austria, Belgium, Bulgaria, Croatia, Cyprus,
+        Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy,
+        Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia,
+        Slovenia, Spain, Sweden, Iceland, and Norway.
+      </p>
+      <p className="font-medium">Lawful bases for processing</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>
+          <span className="font-medium">Performance of a contract</span> — processing necessary to
+          provide the core keyboard, translation, Rewording, and language features you request.
+        </li>
+        <li>
+          <span className="font-medium">Legitimate interests</span> — security, abuse prevention,
+          service improvement, and development of language systems. We have conducted a balancing
+          test and concluded that these interests are not overridden by your rights and freedoms in
+          most cases.
+        </li>
+        <li>
+          <span className="font-medium">Consent</span> — optional features such as storing Reworded
+          messages for learning and progress tracking. You can withdraw consent at any time by
+          turning the feature off in the app.
+        </li>
+      </ul>
+      <p className="font-medium">Your rights</p>
+      <p>
+        Subject to applicable exceptions, you have the right to access your personal data; obtain
+        rectification of inaccurate data; obtain erasure of your data ("right to be forgotten");
+        obtain restriction of processing; receive your data in a portable format; object to
+        processing based on legitimate interests; and withdraw consent where processing is based on
+        consent. You may exercise these rights by contacting us at arcatextapp@gmail.com. We will
+        respond within the timeframes required by law (generally one month, extendable in complex
+        cases).
+      </p>
+      <p className="font-medium">Right to complain</p>
+      <p>
+        You have the right to lodge a complaint with your local supervisory authority (data
+        protection authority) if you believe your rights have been violated.
+      </p>
+      <p className="font-medium">Representative</p>
+      <p>
+        Adalithic LLC has appointed a representative in the European Union under Article 27 of the
+        GDPR. The representative's name and contact details will be published here.
+      </p>
+      <p className="font-medium">International data transfers</p>
+      <p>
+        Your information may be transferred to the United States and other countries outside the
+        EEA/EFTA. We rely on Standard Contractual Clauses (SCCs) approved by the European Commission
+        as the primary transfer mechanism, together with appropriate supplementary measures (such as
+        encryption and access controls) where required.
+      </p>
+      <p className="font-medium">Retention and automated processing</p>
+      <p>
+        Retention periods are described in Section 9. Automated processing and improvement of
+        language models on user-submitted text is based on legitimate interests or consent (where
+        applicable) and is subject to the safeguards described in this Policy.
+      </p>
+
+      <p className="font-medium">Rider B — United Kingdom</p>
+      <p>
+        This Rider applies to consumers resident in the United Kingdom. The provisions in Rider A
+        apply with the following adaptations:
+      </p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>References to the GDPR are replaced with the UK GDPR.</li>
+        <li>The supervisory authority is the Information Commissioner's Office (ICO).</li>
+        <li>
+          Adalithic LLC has appointed a representative in the United Kingdom under Article 27 of the
+          UK GDPR; the representative's name and contact details will be published here.
+        </li>
+      </ul>
+
+      <p className="font-medium">Rider C — Switzerland</p>
+      <p>
+        This Rider applies to consumers resident in Switzerland. You have rights under the revised
+        Federal Act on Data Protection (nFADP), including rights of access, rectification, and
+        erasure. You may exercise these rights by contacting us at arcatextapp@gmail.com. Adalithic
+        LLC has appointed a representative in Switzerland under the revised Federal Act on Data
+        Protection; the representative's contact details will be published here.
+      </p>
+
+      <p className="font-medium">Rider D — Canada, including Québec</p>
+      <p>
+        This Rider applies to consumers resident in Canada, including Québec. You have rights under
+        PIPEDA and Québec's Law 25 to access and correct your personal information and to withdraw
+        consent to certain processing. You may exercise these rights by contacting us at
+        arcatextapp@gmail.com. A French-language version of this Privacy Policy is provided for
+        residents of Québec. In the event of a data breach posing a real risk of significant harm,
+        we will notify affected individuals and the relevant authorities as required by applicable
+        law.
+      </p>
+
+      <p className="font-medium">Rider E — United States</p>
+      <p>
+        This Rider applies to consumers resident in the United States. California residents have the
+        rights described in the California Privacy Notice in Section 15 above, including the rights
+        to know, delete, and correct personal information and to opt out of any sale or sharing.
+        Adalithic LLC does not sell or share your personal information for cross-context behavioral
+        advertising, and you will not be discriminated against for exercising your rights. Other U.S.
+        state privacy laws may apply depending on your state of residence, and we will honor
+        applicable rights where required. To exercise these rights, contact us at
+        arcatextapp@gmail.com.
+      </p>
+
+      <p className="font-medium">Rider F — Other Countries and Regions</p>
+      <p>
+        This Rider applies to consumers resident in all other countries and regions where Arcatext
+        is offered (excluding sanctioned or embargoed jurisdictions). Where local law grants you
+        additional non-waivable privacy rights (for example under laws such as Brazil's LGPD or
+        privacy laws in Japan, South Korea, Australia, India, and other jurisdictions), those rights
+        apply. You may contact us at arcatextapp@gmail.com to exercise any such rights, and we will
+        respond in accordance with applicable local law.
       </p>
     </div>
   );

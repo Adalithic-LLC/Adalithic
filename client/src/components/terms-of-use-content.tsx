@@ -43,8 +43,9 @@ export function TermsOfUseContent() {
           </li>
           <li>
             These Terms require most disputes to be resolved by individual arbitration and waive
-            class actions and jury trials. You may opt out of arbitration within 30 days as
-            described in the Dispute Resolution section.
+            class actions and jury trials for users in jurisdictions where this is permitted. You may
+            opt out of arbitration within 30 days as described in the Dispute Resolution section.
+            Different rules may apply depending on where you live (see Region-Specific Terms below).
           </li>
         </ul>
       </div>
@@ -188,8 +189,11 @@ export function TermsOfUseContent() {
         process, transmit, reproduce, modify, and display Submitted Content solely as necessary to
         provide, maintain, secure, troubleshoot, improve, and support Arcatext, including by
         transmitting Submitted Content to the third-party service providers described in our Privacy
-        Policy. Any use of Submitted Content for improvement, analytics, retention, storage,
-        deletion, or similar purposes is subject to our Privacy Policy.
+        Policy. These service providers may only use Submitted Content to provide services to
+        Arcatext on our behalf. We do not sell your Submitted Content, and we do not share it with
+        third parties for their own purposes. Any use of Submitted Content for improvement,
+        analytics, retention, storage, deletion, or similar purposes is subject to our Privacy
+        Policy.
       </p>
       <p>
         Subject to these Terms, you may use Output for your lawful personal or internal business
@@ -408,19 +412,21 @@ export function TermsOfUseContent() {
       <h3 className="font-semibold text-secondary pt-2">14. Disclaimer of Warranties</h3>
       <p>
         Arcatext is provided on an "as is" and "as available" basis, without warranties of any kind,
-        whether express, implied, statutory, or otherwise.
+        whether express, implied, statutory, or otherwise, except to the extent prohibited by
+        applicable consumer protection law.
       </p>
       <p>
         To the fullest extent permitted by law, Adalithic disclaims all warranties, including
         implied warranties of merchantability, fitness for a particular purpose, accuracy,
         non-infringement, quiet enjoyment, and any warranties arising out of course of dealing or
-        usage of trade.
+        usage of trade, except to the extent prohibited by applicable consumer protection law.
       </p>
       <p>
         We do not warrant that Arcatext will be uninterrupted, secure, error-free, accurate,
         reliable, available, or suitable for your intended purpose, or that Arcatext will preserve
         the meaning, tone, formality, cultural context, or intent of any text. You understand and
-        agree that you use Arcatext and any output at your own risk.
+        agree that you use Arcatext and any output at your own risk, except to the extent prohibited
+        by applicable consumer protection law.
       </p>
 
       <h3 className="font-semibold text-secondary pt-2">15. Limitation of Liability</h3>
@@ -432,14 +438,15 @@ export function TermsOfUseContent() {
         other intangible losses, arising out of or related to your use of, or inability to use,
         Arcatext. This limitation applies to damages arising from Arcatext output, including
         translations or other output that are incorrect, inaccurate, incomplete, misleading,
-        confusing, offensive, culturally inappropriate, or unsuitable for your intended purpose.
+        confusing, offensive, culturally inappropriate, or unsuitable for your intended purpose,
+        except to the extent prohibited by applicable consumer protection law.
       </p>
       <p>
         To the fullest extent permitted by applicable law, the total aggregate liability of
         Adalithic arising out of or relating to these Terms or your use of Arcatext will not exceed
         the greater of (a) the total amount you paid to Adalithic for Arcatext in the twelve (12)
         months preceding the event giving rise to the claim, or (b) one hundred U.S. dollars
-        (US$100).
+        (US$100), except to the extent prohibited by applicable consumer protection law.
       </p>
       <p>
         The limitations in this section apply whether a claim is based on warranty, contract, tort,
@@ -494,23 +501,24 @@ export function TermsOfUseContent() {
       </p>
       <p>
         Termination of access does not automatically entitle you to a refund unless required by law
-        or by the platform through which you purchased. Sections that by their nature should survive
-        termination will survive, including sections related to Submitted Content, Output,
-        intellectual property, privacy, disclaimers, limitations of liability, indemnification,
-        governing law, dispute resolution and arbitration, and payment obligations.
+        or by the platform through which you purchased, except where mandatory consumer law requires
+        otherwise. Sections that by their nature should survive termination will survive, including
+        sections related to Submitted Content, Output, intellectual property, privacy, disclaimers,
+        limitations of liability, indemnification, governing law, dispute resolution and arbitration,
+        and payment obligations.
       </p>
 
       <h3 className="font-semibold text-secondary pt-2">18. Governing Law</h3>
       <p>
-        These Terms are governed by the laws of the State of Delaware, without regard to its
-        conflict-of-laws principles, except where applicable consumer protection law requires
-        otherwise. Subject to any rights you may have under applicable consumer protection laws, and
-        except for disputes subject to arbitration under Section 19, any dispute arising out of or
-        relating to these Terms or your use of Arcatext will be brought in the state or federal
-        courts located in Delaware, and you consent to the personal jurisdiction of those courts.
-        The Federal Arbitration Act governs the interpretation and enforcement of the arbitration
-        provisions in Section 19. Nothing in this section limits rights that you may have under
-        applicable law that cannot be waived by contract.
+        Subject to the Region-Specific Terms below, these Terms are governed by the laws of the State
+        of Delaware, without regard to its conflict-of-laws principles, except where applicable
+        consumer protection law requires otherwise. Subject to any rights you may have under
+        applicable consumer protection laws, and except for disputes subject to arbitration under
+        Section 19, any dispute arising out of or relating to these Terms or your use of Arcatext
+        will be brought in the state or federal courts located in Delaware, and you consent to the
+        personal jurisdiction of those courts. The Federal Arbitration Act governs the interpretation
+        and enforcement of the arbitration provisions in Section 19. Nothing in this section limits
+        rights that you may have under applicable law that cannot be waived by contract.
       </p>
 
       <h3 className="font-semibold text-secondary pt-2">
@@ -521,7 +529,7 @@ export function TermsOfUseContent() {
         DISPUTES BETWEEN YOU AND ADALITHIC LLC BE RESOLVED THROUGH INDIVIDUAL, BINDING ARBITRATION
         RATHER THAN IN COURT, AND IT WAIVES YOUR RIGHT TO A JURY TRIAL AND YOUR RIGHT TO PARTICIPATE
         IN A CLASS, COLLECTIVE, OR REPRESENTATIVE ACTION. YOU MAY OPT OUT OF ARBITRATION WITHIN 30
-        DAYS AS DESCRIBED BELOW.
+        DAYS AS DESCRIBED BELOW. THESE PROVISIONS ARE SUBJECT TO THE REGION-SPECIFIC TERMS BELOW.
       </p>
       <p>
         <span className="font-medium">A. Agreement to Arbitrate.</span> You and Adalithic LLC agree
@@ -700,6 +708,153 @@ export function TermsOfUseContent() {
         and understandings, whether written or oral. If any provision of these Terms is held to be
         invalid or unenforceable, the remaining provisions will remain in full force and effect.
       </p>
+
+      <h3 className="font-semibold text-secondary pt-2">Region-Specific Terms</h3>
+      <p>
+        The following Region-Specific Terms (Riders) apply to consumers resident in the listed
+        countries or regions. Where a Rider conflicts with the Global Core above, the Rider controls
+        for those consumers. Nothing in these Riders reduces any mandatory consumer protections you
+        have under local law that cannot be waived by contract.
+      </p>
+
+      <p className="font-medium">
+        Rider A — European Economic Area (EEA), European Union, and EFTA Countries
+      </p>
+      <p>
+        This Rider applies to consumers resident in: Austria, Belgium, Bulgaria, Croatia, Cyprus,
+        Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy,
+        Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia,
+        Slovenia, Spain, Sweden, Iceland, and Norway.
+      </p>
+      <p>For these consumers:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>
+          The binding arbitration agreement, class-action waiver, and exclusive Delaware court
+          jurisdiction in Sections 18 and 19 do not apply to the extent prohibited by applicable law.
+          You may bring proceedings in the courts of your country of residence.
+        </li>
+        <li>
+          You retain the benefit of the mandatory consumer protection laws and governing law of your
+          country of residence that cannot be waived by contract.
+        </li>
+        <li>
+          You have a statutory 14-day right to withdraw from distance contracts for digital content
+          or services. Where digital content or a digital service is supplied immediately or during
+          the withdrawal period, you expressly request and consent to immediate performance. You
+          acknowledge that by giving this consent you lose your right of withdrawal once performance
+          has begun.
+        </li>
+        <li>Where required by applicable law, the version of these Terms in your local language governs.</li>
+        <li>
+          Nothing in the "as is" disclaimer or Limitation of Liability sections limits your statutory
+          rights regarding conformity of digital content or services or other mandatory consumer
+          guarantees.
+        </li>
+      </ul>
+
+      <p className="font-medium">Rider B — United Kingdom</p>
+      <p>This Rider applies to consumers resident in the United Kingdom. For these consumers:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>
+          The binding arbitration agreement, class-action waiver, and exclusive Delaware court
+          jurisdiction in Sections 18 and 19 do not apply to the extent prohibited by applicable law.
+          You may bring proceedings in the courts of the United Kingdom.
+        </li>
+        <li>
+          You retain the benefit of the mandatory consumer protection laws (including the Consumer
+          Rights Act 2015) and governing law of the United Kingdom that cannot be waived by contract.
+        </li>
+        <li>
+          You have a statutory 14-day right to withdraw from distance contracts for digital content
+          or services. Where digital content or a digital service is supplied immediately or during
+          the withdrawal period, you expressly request and consent to immediate performance. You
+          acknowledge that by giving this consent you lose your right of withdrawal once performance
+          has begun.
+        </li>
+        <li>
+          Nothing in the "as is" disclaimer or Limitation of Liability sections limits your statutory
+          rights regarding conformity of digital content or services or other mandatory consumer
+          guarantees.
+        </li>
+      </ul>
+
+      <p className="font-medium">Rider C — Switzerland</p>
+      <p>This Rider applies to consumers resident in Switzerland. For these consumers:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>
+          The binding arbitration agreement and class-action waiver in Section 19 do not apply to the
+          extent prohibited by applicable Swiss law. You may bring proceedings in the competent Swiss
+          courts.
+        </li>
+        <li>
+          You retain the benefit of mandatory Swiss consumer protection and data-protection rules
+          (including the Swiss Federal Act on Data Protection) that cannot be waived by contract.
+        </li>
+        <li>Nothing in these Terms limits any non-waivable rights you have under Swiss law.</li>
+      </ul>
+
+      <p className="font-medium">Rider D — Canada (including Québec)</p>
+      <p>
+        This Rider applies to consumers resident in Canada, including Québec. For these consumers:
+      </p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>
+          The binding arbitration agreement and class-action waiver in Section 19 do not apply to the
+          extent prohibited by applicable Canadian or Québec consumer protection law. You may bring
+          proceedings in the competent courts of your province or territory.
+        </li>
+        <li>
+          You retain the benefit of mandatory consumer protection statutes (including those in
+          Québec) that cannot be waived by contract.
+        </li>
+        <li>
+          For consumers in Québec, a French-language version of these Terms is provided and, where
+          required by Québec law (including Bill 96), the French version governs.
+        </li>
+        <li>
+          Nothing in these Terms limits any non-waivable rights you have under Canadian federal or
+          provincial law, including PIPEDA and Québec's Law 25.
+        </li>
+      </ul>
+
+      <p className="font-medium">Rider E — United States</p>
+      <p>This Rider applies to consumers resident in the United States. For these consumers:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>
+          You remain subject to the full arbitration agreement, class-action waiver, jury-trial
+          waiver, and Delaware governing law set out in Sections 18 and 19 (subject to any
+          non-waivable consumer protection rights under applicable state law).
+        </li>
+        <li>
+          Your rights under the California Consumer Privacy Act (CCPA/CPRA) and other applicable
+          state consumer and privacy laws are preserved as described in our Privacy Policy.
+        </li>
+        <li>Nothing in these Terms limits any non-waivable rights you have under U.S. federal or state law.</li>
+      </ul>
+
+      <p className="font-medium">Rider F — Other Countries and Regions</p>
+      <p>
+        This Rider applies to consumers resident in every country or region not covered by Riders
+        A–E above where Arcatext is offered for download or paid subscription. Arcatext is not
+        offered in, and these Terms do not authorize its use from, any country or region subject to
+        comprehensive U.S. sanctions or export restrictions. For these consumers:
+      </p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>
+          Where mandatory local law grants you rights or protections that cannot be waived or limited
+          by contract (including rights regarding governing law, jurisdiction, dispute resolution,
+          consumer guarantees, or data protection), those rights prevail over any inconsistent
+          provision in these Terms.
+        </li>
+        <li>
+          Nothing in the arbitration agreement, class-action waiver, or governing-law provisions
+          deprives you of a non-waivable protection or forum that local law makes available.
+        </li>
+        <li>
+          The "as is" disclaimer and Limitation of Liability sections apply only to the extent
+          permitted by applicable mandatory local consumer law.
+        </li>
+      </ul>
     </div>
   );
 }
