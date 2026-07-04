@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "language": "Språk"
+  },
+  "footer": {
+    "tagline": "Vi revolusjonerer språklæring og kommunikasjon med KI-drevet teknologi.",
+    "quickLinks": "Hurtiglenker",
+    "home": "Arcatext",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "legal": "Juridisk",
+    "privacy": "Personvernerklæring",
+    "terms": "Bruksvilkår",
+    "rights": "© 2025 Adalithic. Med enerett."
+  },
+  "hero": {
+    "title": "Møt <brand>Arcatext</brand>.",
+    "tagline": "Brukerstyrt språklæring",
+    "description": "Vi forvandler ekte samtaler, historier og hverdagsskriving til en brukerstyrt språklæringsreise som utvikler seg med deg – ved å kombinere kontekstnær oversettelse og målbar fremgang, slik at du kan kommunisere på tvers av språk med selvtillit.",
+    "learnMore": "Les mer",
+    "getInTouch": "Ta kontakt",
+    "typewriter": [
+      "Lær et språk",
+      "Kommuniser i næringslivet",
+      "Chat med venner fra hele verden"
+    ]
+  },
+  "legalPages": {
+    "privacyTitle": "Personvernerklæring",
+    "termsTitle": "Bruksvilkår",
+    "convenienceNotice": "Denne oversettelsen er levert for din bekvemmelighet. Den engelske versjonen av dette dokumentet er den juridisk bindende versjonen; ved eventuelle avvik har den engelske versjonen forrang."
+  },
+  "about": {
+    "title": "Om Adalithic",
+    "p1": "Adalithic er en teknologioppstart som fokuserer på å gi folk nye verktøy og teknikker for å lære språk og lette kommunikasjon på tvers av språk.",
+    "p2": "Vi mener at språkbarrierer aldri bør begrense menneskelig kontakt og samarbeid. Vårt oppdrag er å skape verktøy som gjør tverrkulturell kommunikasjon enkel og engasjerende, slik at folk kan knytte kontakter globalt mens de lærer på en naturlig måte.",
+    "privacyDialogTitle": "Arcatext personvernerklæring",
+    "termsDialogTitle": "Arcatext bruksvilkår"
+  },
+  "contact": {
+    "title": "Ta kontakt",
+    "subtitle": "Har du spørsmål om Arcatext eller er du interessert i samarbeid? Vi vil gjerne høre fra deg.",
+    "formTitle": "Send oss en melding",
+    "firstName": "Fornavn",
+    "lastName": "Etternavn",
+    "email": "E-postadresse",
+    "company": "Firma (valgfritt)",
+    "message": "Melding",
+    "phCompany": "Firmaet ditt",
+    "phMessage": "Fortell oss om interessen din for Arcatext...",
+    "send": "Send melding",
+    "sending": "Sender...",
+    "supportEmail": "Support-e-post",
+    "toastSuccessTitle": "Meldingen ble sendt!",
+    "toastSuccessDesc": "Vi tar kontakt innen 24 timer.",
+    "toastErrorTitle": "Feil ved sending av meldingen"
+  },
+  "portfolio": {
+    "privacyLink": "Personvernerklæring"
+  }
+}

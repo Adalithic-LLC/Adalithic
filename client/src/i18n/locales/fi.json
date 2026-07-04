@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "Tietoa meistä",
+    "contact": "Yhteystiedot",
+    "language": "Kieli"
+  },
+  "footer": {
+    "tagline": "Mullistamme kielten oppimisen ja viestinnän tekoälypohjaisella teknologialla.",
+    "quickLinks": "Pikalinkit",
+    "home": "Arcatext",
+    "about": "Tietoa meistä",
+    "contact": "Yhteystiedot",
+    "legal": "Oikeudelliset tiedot",
+    "privacy": "Tietosuojakäytäntö",
+    "terms": "Käyttöehdot",
+    "rights": "© 2025 Adalithic. Kaikki oikeudet pidätetään."
+  },
+  "hero": {
+    "title": "Tutustu <brand>Arcatext</brand>iin.",
+    "tagline": "Käyttäjän ohjaama kielten oppiminen",
+    "description": "Muutamme aidot keskustelut, tarinat ja arkisen kirjoittamisen käyttäjän ohjaamaksi kielten oppimismatkaksi, joka kehittyy kanssasi – yhdistämällä asiayhteyteen uskollisen käännöksen ja mitattavan edistymisen, jotta voit viestiä kielten välillä itsevarmasti.",
+    "learnMore": "Lue lisää",
+    "getInTouch": "Ota yhteyttä",
+    "typewriter": [
+      "Opi kieli",
+      "Viesti liike-elämässä",
+      "Keskustele ystävien kanssa ympäri maailmaa"
+    ]
+  },
+  "legalPages": {
+    "privacyTitle": "Tietosuojakäytäntö",
+    "termsTitle": "Käyttöehdot",
+    "convenienceNotice": "Tämä käännös on tarjottu käyttömukavuutesi vuoksi. Tämän asiakirjan englanninkielinen versio on oikeudellisesti sitova versio; mahdollisten ristiriitojen tapauksessa englanninkielinen versio on määräävä."
+  },
+  "about": {
+    "title": "Tietoa Adalithicista",
+    "p1": "Adalithic on teknologia-alan startup, joka keskittyy tarjoamaan ihmisille uusia työkaluja ja tekniikoita kielten oppimiseen ja kielten välisen viestinnän helpottamiseen.",
+    "p2": "Uskomme, että kielimuurit eivät saa koskaan rajoittaa ihmisten välistä yhteyttä ja yhteistyötä. Tehtävämme on luoda työkaluja, jotka tekevät kulttuurien välisestä viestinnästä vaivatonta ja kiinnostavaa, ja antavat ihmisille mahdollisuuden luoda yhteyksiä maailmanlaajuisesti oppien samalla luonnollisesti.",
+    "privacyDialogTitle": "Arcatextin tietosuojakäytäntö",
+    "termsDialogTitle": "Arcatextin käyttöehdot"
+  },
+  "contact": {
+    "title": "Ota yhteyttä",
+    "subtitle": "Onko sinulla kysyttävää Arcatextista tai oletko kiinnostunut yhteistyöstä? Kuulemme mielellämme sinusta.",
+    "formTitle": "Lähetä meille viesti",
+    "firstName": "Etunimi",
+    "lastName": "Sukunimi",
+    "email": "Sähköpostiosoite",
+    "company": "Yritys (valinnainen)",
+    "message": "Viesti",
+    "phCompany": "Yrityksesi",
+    "phMessage": "Kerro meille kiinnostuksestasi Arcatextia kohtaan...",
+    "send": "Lähetä viesti",
+    "sending": "Lähetetään...",
+    "supportEmail": "Tukisähköposti",
+    "toastSuccessTitle": "Viesti lähetetty onnistuneesti!",
+    "toastSuccessDesc": "Vastaamme sinulle 24 tunnin kuluessa.",
+    "toastErrorTitle": "Virhe viestin lähettämisessä"
+  },
+  "portfolio": {
+    "privacyLink": "Tietosuojakäytäntö"
+  }
+}

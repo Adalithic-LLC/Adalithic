@@ -20,6 +20,10 @@ import sv from "./locales/sv.json";
 import cs from "./locales/cs.json";
 import ro from "./locales/ro.json";
 import hu from "./locales/hu.json";
+import da from "./locales/da.json";
+import fi from "./locales/fi.json";
+import no from "./locales/no.json";
+import bg from "./locales/bg.json";
 import { DEFAULT_LOCALE, getLocaleFromPath } from "@/lib/locale";
 
 // The active language is driven by the URL path (path-based locales), so we seed
@@ -52,6 +56,10 @@ i18n.use(initReactI18next).init({
     cs: { translation: cs },
     ro: { translation: ro },
     hu: { translation: hu },
+    da: { translation: da },
+    fi: { translation: fi },
+    no: { translation: no },
+    bg: { translation: bg },
   },
   lng: initialLng,
   fallbackLng: DEFAULT_LOCALE,
