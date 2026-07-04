@@ -3,8 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail } from "lucide-react";
 import type { Project } from "@shared/schema";
 
-// Import the Arcatext logo
-const arcatextLogo = "Arcatext%20logo.png";
+// Import the Arcatext logo (absolute path so it resolves from any URL depth)
+const arcatextLogo = "/Arcatext%20logo.png";
 
 export default function Portfolio() {
   const { data: projects = [], isLoading } = useQuery<Project[]>({

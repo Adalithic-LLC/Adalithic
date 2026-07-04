@@ -1,17 +1,20 @@
 import { useState, useEffect, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import TypewriterAnimation from "./typewriter-animation";
-// Import the hero images from public directory
-const heroImageOriginal = "Hero%20image%2001.png";
-const heroImage01 = "copy.png";
-const heroImage02 = "homographs.png";
-const heroImage03 = "pasteview.png";
-const heroImage04 = "reverse-translations.png";
-const heroImage05 = "reword-options.png";
-const heroImage06 = "synonyms.png";
+// Import the hero images from public directory (absolute paths so they resolve
+// from any URL depth, e.g. /es/... locale routes).
+const heroImageOriginal = "/Hero%20image%2001.png";
+const heroImage01 = "/copy.png";
+const heroImage02 = "/homographs.png";
+const heroImage03 = "/pasteview.png";
+const heroImage04 = "/reverse-translations.png";
+const heroImage05 = "/reword-options.png";
+const heroImage06 = "/synonyms.png";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const desktopScrollRef = useRef<HTMLDivElement>(null);
   const mobileScrollRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -81,11 +84,13 @@ export default function Hero() {
         <div className="text-center space-y-12">
           <div className="space-y-8 animate-slide-up">
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-secondary leading-tight max-w-4xl mx-auto">
-              Meet {" "}
-              <span className="text-[#0040DD]">Arcatext</span>.
+              <Trans
+                i18nKey="hero.title"
+                components={{ brand: <span className="text-[#0040DD]" /> }}
+              />
             </h1>
-            <p className="text-xl md:text-2xl font-bold text-secondary">User-driven Language Learning</p>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Turning real conversations, stories, and everyday writing into a user-driven language learning journey that evolves with you—combining context-accurate translation and measurable progress so you can communicate across languages with confidence.</p>
+            <p className="text-xl md:text-2xl font-bold text-secondary">{t("hero.tagline")}</p>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">{t("hero.description")}</p>
             <div className="flex justify-center my-8">
               <TypewriterAnimation />
             </div>
@@ -95,7 +100,7 @@ export default function Hero() {
                 onClick={() => scrollToSection("products")}
                 className="bg-primary hover:bg-[#0036BB] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
                 data-testid="button-learn-more"
-              >Learn more</Button>
+              >{t("hero.learnMore")}</Button>
               <Button
                 variant="outline"
                 size="lg"
@@ -103,7 +108,7 @@ export default function Hero() {
                 className="border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 hover:text-gray-700 transition-colors duration-200"
                 data-testid="button-get-in-touch"
               >
-                Get in touch
+                {t("hero.getInTouch")}
               </Button>
             </div>
           </div>

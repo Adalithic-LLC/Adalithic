@@ -11,7 +11,10 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
-  base: "./",
+  // Absolute base so bundled assets resolve from the site root regardless of
+  // URL depth. Required now that locale routes are nested (e.g. /es/privacy) —
+  // a relative "./" base would resolve ./script.js against /es/ and 404.
+  base: "/",
   root: path.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),

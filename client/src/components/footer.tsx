@@ -1,6 +1,11 @@
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
+import { useLocale } from "@/lib/locale";
 
 export default function Footer() {
+  const { t } = useTranslation();
+  const { withLocale } = useLocale();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -9,14 +14,14 @@ export default function Footer() {
   };
 
   const quickLinks = [
-    { id: "home", label: "Arcatext" },
-    { id: "about", label: "About" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: t("footer.home") },
+    { id: "about", label: t("footer.about") },
+    { id: "contact", label: t("footer.contact") },
   ];
 
   const legalLinks = [
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Use" },
+    { href: "/privacy", label: t("footer.privacy") },
+    { href: "/terms", label: t("footer.terms") },
   ];
 
   return (
@@ -25,14 +30,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Adalithic</h3>
-            <p className="text-gray-400 mb-4">
-              Revolutionizing language learning and communication through AI-powered technology.
-            </p>
+            <p className="text-gray-400 mb-4">{t("footer.tagline")}</p>
 
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">{t("footer.quickLinks")}</h4>
             <ul className="space-y-2 text-gray-400">
               {quickLinks.map((link) => (
                 <li key={link.id}>
@@ -48,12 +51,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <h4 className="text-lg font-semibold mb-4">{t("footer.legal")}</h4>
             <ul className="space-y-2 text-gray-400">
               {legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={withLocale(link.href)}
                     onClick={() => window.scrollTo({ top: 0 })}
                     className="hover:text-white transition-colors duration-200"
                   >
@@ -66,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Adalithic. All rights reserved.</p>
+          <p>{t("footer.rights")}</p>
         </div>
       </div>
     </footer>

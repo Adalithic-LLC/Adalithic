@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "footer": {
+    "tagline": "Revolutionizing language learning and communication through AI-powered technology.",
+    "quickLinks": "Quick Links",
+    "home": "Arcatext",
+    "about": "About",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "rights": "© 2025 Adalithic. All rights reserved."
+  },
+  "hero": {
+    "title": "Meet <brand>Arcatext</brand>.",
+    "tagline": "User-driven Language Learning",
+    "description": "Turning real conversations, stories, and everyday writing into a user-driven language learning journey that evolves with you—combining context-accurate translation and measurable progress so you can communicate across languages with confidence.",
+    "learnMore": "Learn more",
+    "getInTouch": "Get in touch"
+  },
+  "legalPages": {
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms of Use"
+  }
+}

@@ -36,14 +36,15 @@ jobs:
       # the footer link to) would otherwise 404.
       #
       # Two layers:
-      # 1. Real terms.html / privacy.html so GitHub Pages serves /terms and
-      #    /privacy as true HTTP 200s (important: these URLs are linked from the
-      #    app and submitted to the App Store / Google Play, which can flag a
-      #    404-status URL). Flat .html files serve at the extensionless path with
-      #    no trailing slash, so wouter matches and the relative asset base
-      #    (vite `base: "./"`) keeps ./script.js resolving to /script.js.
+      # 1. Real terms.html / privacy.html (and per-locale copies) so GitHub Pages
+      #    serves /terms, /privacy, /es/privacy, ... as true HTTP 200s (important:
+      #    these URLs are linked from the app and submitted to the App Store /
+      #    Google Play, which can flag a 404-status URL). Assets load via the
+      #    absolute vite `base: "/"`, so a copy of index.html works at any depth.
       # 2. 404.html as a catch-all for any other client route (renders the app
       #    with a 404 status; browsers still route it correctly).
+      #
+      # LOCALES must stay in sync with PREFIX_LOCALES in client/src/lib/locale.ts.
       - name: Add CNAME, .nojekyll, and SPA fallbacks
         run: |
           echo "adalithic.com" > dist/public/CNAME
@@ -51,6 +52,12 @@ jobs:
           cp dist/public/index.html dist/public/404.html
           cp dist/public/index.html dist/public/terms.html
           cp dist/public/index.html dist/public/privacy.html
+          for L in es fr de ja; do
+            mkdir -p "dist/public/$L"
+            cp dist/public/index.html "dist/public/$L/index.html"
+            cp dist/public/index.html "dist/public/$L/privacy.html"
+            cp dist/public/index.html "dist/public/$L/terms.html"
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/public

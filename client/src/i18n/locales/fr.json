@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "about": "À propos",
+    "contact": "Contact",
+    "language": "Langue"
+  },
+  "footer": {
+    "tagline": "Nous révolutionnons l'apprentissage des langues et la communication grâce à une technologie propulsée par l'IA.",
+    "quickLinks": "Liens rapides",
+    "home": "Arcatext",
+    "about": "À propos",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "rights": "© 2025 Adalithic. Tous droits réservés."
+  },
+  "hero": {
+    "title": "Découvrez <brand>Arcatext</brand>.",
+    "tagline": "Apprentissage des langues guidé par l'utilisateur",
+    "description": "Nous transformons les vraies conversations, les histoires et l'écriture du quotidien en un parcours d'apprentissage des langues guidé par vous et qui évolue avec vous, en combinant une traduction fidèle au contexte et des progrès mesurables pour que vous puissiez communiquer entre les langues en toute confiance.",
+    "learnMore": "En savoir plus",
+    "getInTouch": "Nous contacter"
+  },
+  "legalPages": {
+    "privacyTitle": "Politique de confidentialité",
+    "termsTitle": "Conditions d'utilisation"
+  }
+}

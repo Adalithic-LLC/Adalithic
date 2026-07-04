@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "about": "概要",
+    "contact": "お問い合わせ",
+    "language": "言語"
+  },
+  "footer": {
+    "tagline": "AIを活用したテクノロジーで、言語学習とコミュニケーションに革新をもたらします。",
+    "quickLinks": "クイックリンク",
+    "home": "Arcatext",
+    "about": "概要",
+    "contact": "お問い合わせ",
+    "legal": "法的情報",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "rights": "© 2025 Adalithic. All rights reserved."
+  },
+  "hero": {
+    "title": "<brand>Arcatext</brand> のご紹介",
+    "tagline": "ユーザー主導の言語学習",
+    "description": "実際の会話、物語、日常の文章を、あなたと共に進化するユーザー主導の言語学習の旅へと変えます。文脈に忠実な翻訳と測定可能な進捗を組み合わせ、言語の壁を越えて自信を持ってコミュニケーションできるようにします。",
+    "learnMore": "詳しく見る",
+    "getInTouch": "お問い合わせ"
+  },
+  "legalPages": {
+    "privacyTitle": "プライバシーポリシー",
+    "termsTitle": "利用規約"
+  }
+}

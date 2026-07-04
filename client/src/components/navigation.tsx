@@ -1,13 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useLocation } from "wouter";
+import LanguageSwitcher from "@/components/language-switcher";
+import { useLocale } from "@/lib/locale";
 
-// Import the Adalithic logo
-const adalithicLogo = "Adalithic%20logo.png";
+// Import the Adalithic logo (absolute path so it resolves from any URL depth)
+const adalithicLogo = "/Adalithic%20logo.png";
 
 export default function Navigation() {
+  const { t } = useTranslation();
+  const { withLocale } = useLocale();
+  const homePath = withLocale("/");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [intendedSection, setIntendedSection] = useState("home"); // User's click intent - drives underline
@@ -109,8 +115,8 @@ export default function Navigation() {
     }, 1200);
     
     // If not on homepage, navigate to homepage first
-    if (location !== "/") {
-      navigate("/");
+    if (location !== homePath) {
+      navigate(homePath);
       // Wait for navigation to complete, then scroll
       setTimeout(() => {
         const element = document.getElementById(sectionId);
@@ -130,8 +136,8 @@ export default function Navigation() {
 
   const scrollToTop = () => {
     // If not on homepage, navigate to homepage first
-    if (location !== "/") {
-      navigate("/");
+    if (location !== homePath) {
+      navigate(homePath);
       // Wait for navigation to complete, then scroll to top
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -144,8 +150,8 @@ export default function Navigation() {
 
   const navItems = [
     { id: "home", label: "Arcatext" },
-    { id: "about", label: "About" },
-    { id: "contact", label: "Contact" },
+    { id: "about", label: t("nav.about") },
+    { id: "contact", label: t("nav.contact") },
   ];
 
   return (
@@ -184,7 +190,7 @@ export default function Navigation() {
               ))}
               {/* Animated underline */}
               {underlineStyle.width > 0 && (
-                <div 
+                <div
                   className="absolute bottom-0 h-0.5 bg-[#0040DD] transition-all duration-300 ease-out"
                   style={{
                     left: `${underlineStyle.left}px`,
@@ -193,6 +199,11 @@ export default function Navigation() {
                 />
               )}
             </div>
+          </div>
+
+          {/* Desktop language switcher */}
+          <div className="hidden md:block">
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Navigation */}
@@ -214,6 +225,9 @@ export default function Navigation() {
                       {item.label}
                     </button>
                   ))}
+                  <div className="pt-2">
+                    <LanguageSwitcher />
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

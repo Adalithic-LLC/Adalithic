@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "language": "Sprache"
+  },
+  "footer": {
+    "tagline": "Wir revolutionieren das Sprachenlernen und die Kommunikation durch KI-gestützte Technologie.",
+    "quickLinks": "Schnelllinks",
+    "home": "Arcatext",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "rights": "© 2025 Adalithic. Alle Rechte vorbehalten."
+  },
+  "hero": {
+    "title": "Das ist <brand>Arcatext</brand>.",
+    "tagline": "Nutzergesteuertes Sprachenlernen",
+    "description": "Wir verwandeln echte Gespräche, Geschichten und alltägliches Schreiben in eine nutzergesteuerte Sprachlernreise, die sich mit dir weiterentwickelt – mit kontextgenauer Übersetzung und messbarem Fortschritt, damit du sprachübergreifend selbstbewusst kommunizieren kannst.",
+    "learnMore": "Mehr erfahren",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "legalPages": {
+    "privacyTitle": "Datenschutzrichtlinie",
+    "termsTitle": "Nutzungsbedingungen"
+  }
+}
