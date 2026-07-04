@@ -31,7 +31,8 @@ export default function LanguageSwitcher() {
           <span className="hidden sm:inline">{LOCALE_LABELS[locale]}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      {/* Cap the list to ~10 rows and scroll the rest (there are 30+ locales). */}
+      <DropdownMenuContent align="end" className="max-h-[22rem] overflow-y-auto">
         {LOCALES.map((l) => (
           <DropdownMenuItem
             key={l}
