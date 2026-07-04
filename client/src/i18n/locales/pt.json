@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "contact": "Contato",
+    "language": "Idioma"
+  },
+  "footer": {
+    "tagline": "Revolucionamos o aprendizado de idiomas e a comunicação por meio de tecnologia baseada em IA.",
+    "quickLinks": "Links rápidos",
+    "home": "Arcatext",
+    "about": "Sobre",
+    "contact": "Contato",
+    "legal": "Jurídico",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "rights": "© 2025 Adalithic. Todos os direitos reservados."
+  },
+  "hero": {
+    "title": "Conheça o <brand>Arcatext</brand>.",
+    "tagline": "Aprendizado de idiomas guiado pelo usuário",
+    "description": "Transformamos conversas reais, histórias e a escrita do dia a dia em uma jornada de aprendizado de idiomas guiada por você e que evolui com você, combinando tradução fiel ao contexto e progresso mensurável para que você se comunique entre idiomas com confiança.",
+    "learnMore": "Saiba mais",
+    "getInTouch": "Fale conosco",
+    "typewriter": [
+      "Aprenda um idioma",
+      "Comunique-se para negócios",
+      "Converse com amigos do mundo todo"
+    ]
+  },
+  "legalPages": {
+    "privacyTitle": "Política de Privacidade",
+    "termsTitle": "Termos de Uso",
+    "convenienceNotice": "Esta tradução é fornecida para sua conveniência. A versão em inglês deste documento é a versão juridicamente vinculativa; em caso de qualquer divergência, prevalece a versão em inglês."
+  },
+  "about": {
+    "title": "Sobre a Adalithic",
+    "p1": "A Adalithic é uma startup de tecnologia focada em oferecer às pessoas novas ferramentas e técnicas para aprender idiomas e facilitar a comunicação entre idiomas.",
+    "p2": "Acreditamos que as barreiras linguísticas nunca devem limitar a conexão e a colaboração entre as pessoas. Nossa missão é criar ferramentas que tornem a comunicação intercultural simples e envolvente, permitindo que as pessoas se conectem globalmente enquanto aprendem de forma natural.",
+    "privacyDialogTitle": "Política de Privacidade do Arcatext",
+    "termsDialogTitle": "Termos de Uso do Arcatext"
+  },
+  "contact": {
+    "title": "Fale conosco",
+    "subtitle": "Tem dúvidas sobre o Arcatext ou interesse em parcerias? Adoraríamos ouvir você.",
+    "formTitle": "Envie-nos uma mensagem",
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "email": "Endereço de e-mail",
+    "company": "Empresa (opcional)",
+    "message": "Mensagem",
+    "phCompany": "Sua empresa",
+    "phMessage": "Conte-nos sobre seu interesse no Arcatext...",
+    "send": "Enviar mensagem",
+    "sending": "Enviando...",
+    "supportEmail": "E-mail de suporte",
+    "toastSuccessTitle": "Mensagem enviada com sucesso!",
+    "toastSuccessDesc": "Retornaremos em até 24 horas.",
+    "toastErrorTitle": "Erro ao enviar a mensagem"
+  },
+  "portfolio": {
+    "privacyLink": "Política de Privacidade"
+  }
+}

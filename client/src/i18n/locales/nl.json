@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "Over ons",
+    "contact": "Contact",
+    "language": "Taal"
+  },
+  "footer": {
+    "tagline": "Wij revolutioneren het leren van talen en communicatie met AI-gestuurde technologie.",
+    "quickLinks": "Snelle links",
+    "home": "Arcatext",
+    "about": "Over ons",
+    "contact": "Contact",
+    "legal": "Juridisch",
+    "privacy": "Privacybeleid",
+    "terms": "Gebruiksvoorwaarden",
+    "rights": "© 2025 Adalithic. Alle rechten voorbehouden."
+  },
+  "hero": {
+    "title": "Maak kennis met <brand>Arcatext</brand>.",
+    "tagline": "Door de gebruiker gestuurd talen leren",
+    "description": "We veranderen echte gesprekken, verhalen en dagelijks schrijven in een door jou gestuurde taalleerreis die met je meegroeit — met contextnauwkeurige vertaling en meetbare voortgang, zodat je met vertrouwen tussen talen kunt communiceren.",
+    "learnMore": "Meer informatie",
+    "getInTouch": "Neem contact op",
+    "typewriter": [
+      "Leer een taal",
+      "Communiceer voor zaken",
+      "Chat met internationale vrienden"
+    ]
+  },
+  "legalPages": {
+    "privacyTitle": "Privacybeleid",
+    "termsTitle": "Gebruiksvoorwaarden",
+    "convenienceNotice": "Deze vertaling wordt voor uw gemak aangeboden. De Engelse versie van dit document is de juridisch bindende versie; bij eventuele verschillen prevaleert de Engelse versie."
+  },
+  "about": {
+    "title": "Over Adalithic",
+    "p1": "Adalithic is een technologiestart-up die zich richt op het bieden van nieuwe hulpmiddelen en technieken om talen te leren en communicatie tussen talen te vergemakkelijken.",
+    "p2": "Wij geloven dat taalbarrières menselijke verbinding en samenwerking nooit mogen beperken. Onze missie is om hulpmiddelen te maken die interculturele communicatie moeiteloos en boeiend maken, zodat mensen wereldwijd in contact kunnen komen terwijl ze op een natuurlijke manier leren.",
+    "privacyDialogTitle": "Privacybeleid van Arcatext",
+    "termsDialogTitle": "Gebruiksvoorwaarden van Arcatext"
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "subtitle": "Heb je vragen over Arcatext of interesse in samenwerking? We horen graag van je.",
+    "formTitle": "Stuur ons een bericht",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mailadres",
+    "company": "Bedrijf (optioneel)",
+    "message": "Bericht",
+    "phCompany": "Je bedrijf",
+    "phMessage": "Vertel ons over je interesse in Arcatext...",
+    "send": "Bericht verzenden",
+    "sending": "Verzenden...",
+    "supportEmail": "Support-e-mail",
+    "toastSuccessTitle": "Bericht succesvol verzonden!",
+    "toastSuccessDesc": "We nemen binnen 24 uur contact met je op.",
+    "toastErrorTitle": "Fout bij het verzenden van het bericht"
+  },
+  "portfolio": {
+    "privacyLink": "Privacybeleid"
+  }
+}

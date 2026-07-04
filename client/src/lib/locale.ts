@@ -2,9 +2,11 @@ import { useLocation } from "wouter";
 
 // Supported website locales. English is the source/authoritative language and
 // lives at the root ("/"); the others are served under a path prefix
-// ("/es", "/fr/privacy", ...). This set matches the languages the Arcatext app
-// itself ships in, i.e. the markets we commit to serving.
-export const LOCALES = ["en", "es", "fr", "de", "ja"] as const;
+// ("/es", "/fr/privacy", ...). The core set (es/fr/de/ja) matches the languages
+// the Arcatext app ships in; it/pl/nl/pt are added for markets whose law
+// requires consumer/legal docs in the local language (Italy, Poland, the
+// Netherlands/Belgium, Brazil/Portugal).
+export const LOCALES = ["en", "es", "fr", "de", "ja", "it", "pl", "nl", "pt"] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = "en";
@@ -18,6 +20,10 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   fr: "Français",
   de: "Deutsch",
   ja: "日本語",
+  it: "Italiano",
+  pl: "Polski",
+  nl: "Nederlands",
+  pt: "Português",
 };
 
 export function isPrefixLocale(value: string | undefined): value is Locale {

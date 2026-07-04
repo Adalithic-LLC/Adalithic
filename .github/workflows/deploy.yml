@@ -52,7 +52,7 @@ jobs:
           cp dist/public/index.html dist/public/404.html
           cp dist/public/index.html dist/public/terms.html
           cp dist/public/index.html dist/public/privacy.html
-          for L in es fr de ja; do
+          for L in es fr de ja it pl nl pt; do
             mkdir -p "dist/public/$L"
             cp dist/public/index.html "dist/public/$L/index.html"
             cp dist/public/index.html "dist/public/$L/privacy.html"
