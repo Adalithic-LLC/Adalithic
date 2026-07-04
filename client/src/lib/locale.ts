@@ -11,6 +11,7 @@ export const LOCALES = [
   "ar", "he", "sv", "cs", "ro", "hu", "da", "fi", "no", "bg",
   "vi", "th", "id", "hi",
   "ru", "uk", "zh-Hant", "bn", "ta", "te", "mr", "ur", "fa",
+  "ms", "fil", "sw", "pa",
 ] as const;
 export type Locale = (typeof LOCALES)[number];
 
@@ -63,6 +64,10 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   mr: "मराठी",
   ur: "اردو",
   fa: "فارسی",
+  ms: "Bahasa Melayu",
+  fil: "Filipino",
+  sw: "Kiswahili",
+  pa: "ਪੰਜਾਬੀ",
 };
 
 export function isPrefixLocale(value: string | undefined): value is Locale {

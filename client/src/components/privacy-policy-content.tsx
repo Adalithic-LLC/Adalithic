@@ -40,6 +40,10 @@ import { PrivacyTe } from "@/components/legal/privacy/te";
 import { PrivacyMr } from "@/components/legal/privacy/mr";
 import { PrivacyUr } from "@/components/legal/privacy/ur";
 import { PrivacyFa } from "@/components/legal/privacy/fa";
+import { PrivacyMs } from "@/components/legal/privacy/ms";
+import { PrivacyFil } from "@/components/legal/privacy/fil";
+import { PrivacySw } from "@/components/legal/privacy/sw";
+import { PrivacyPa } from "@/components/legal/privacy/pa";
 
 export function PrivacyPolicyContent() {
   const { locale } = useLocale();
@@ -287,6 +291,34 @@ export function PrivacyPolicyContent() {
         <>
           <ConvenienceBanner />
           <PrivacyFa />
+        </>
+      );
+    case "ms":
+      return (
+        <>
+          <ConvenienceBanner />
+          <PrivacyMs />
+        </>
+      );
+    case "fil":
+      return (
+        <>
+          <ConvenienceBanner />
+          <PrivacyFil />
+        </>
+      );
+    case "sw":
+      return (
+        <>
+          <ConvenienceBanner />
+          <PrivacySw />
+        </>
+      );
+    case "pa":
+      return (
+        <>
+          <ConvenienceBanner />
+          <PrivacyPa />
         </>
       );
     default:

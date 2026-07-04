@@ -40,6 +40,10 @@ import { TermsTe } from "@/components/legal/terms/te";
 import { TermsMr } from "@/components/legal/terms/mr";
 import { TermsUr } from "@/components/legal/terms/ur";
 import { TermsFa } from "@/components/legal/terms/fa";
+import { TermsMs } from "@/components/legal/terms/ms";
+import { TermsFil } from "@/components/legal/terms/fil";
+import { TermsSw } from "@/components/legal/terms/sw";
+import { TermsPa } from "@/components/legal/terms/pa";
 
 export function TermsOfUseContent() {
   const { locale } = useLocale();
@@ -287,6 +291,34 @@ export function TermsOfUseContent() {
         <>
           <ConvenienceBanner />
           <TermsFa />
+        </>
+      );
+    case "ms":
+      return (
+        <>
+          <ConvenienceBanner />
+          <TermsMs />
+        </>
+      );
+    case "fil":
+      return (
+        <>
+          <ConvenienceBanner />
+          <TermsFil />
+        </>
+      );
+    case "sw":
+      return (
+        <>
+          <ConvenienceBanner />
+          <TermsSw />
+        </>
+      );
+    case "pa":
+      return (
+        <>
+          <ConvenienceBanner />
+          <TermsPa />
         </>
       );
     default:

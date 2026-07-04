@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "Kutuhusu",
+    "contact": "Wasiliana",
+    "language": "Lugha"
+  },
+  "footer": {
+    "tagline": "Tunaleta mapinduzi katika ujifunzaji wa lugha na mawasiliano kupitia teknolojia inayoendeshwa na AI.",
+    "quickLinks": "Viungo vya Haraka",
+    "home": "Arcatext",
+    "about": "Kutuhusu",
+    "contact": "Wasiliana",
+    "legal": "Kisheria",
+    "privacy": "Sera ya Faragha",
+    "terms": "Masharti ya Matumizi",
+    "rights": "© 2025 Adalithic. Haki zote zimehifadhiwa."
+  },
+  "hero": {
+    "title": "Kutana na <brand>Arcatext</brand>.",
+    "tagline": "Ujifunzaji wa lugha unaoongozwa na mtumiaji",
+    "description": "Tunageuza mazungumzo halisi, hadithi, na uandishi wa kila siku kuwa safari ya kujifunza lugha unayoiongoza wewe na inayokua pamoja nawe — kwa kuchanganya tafsiri sahihi kulingana na muktadha na maendeleo yanayoweza kupimika ili uweze kuwasiliana kati ya lugha kwa kujiamini.",
+    "learnMore": "Jifunze zaidi",
+    "getInTouch": "Wasiliana nasi",
+    "typewriter": [
+      "Jifunze lugha",
+      "Wasiliana kwa ajili ya biashara",
+      "Piga gumzo na marafiki wa kimataifa"
+    ]
+  },
+  "legalPages": {
+    "privacyTitle": "Sera ya Faragha",
+    "termsTitle": "Masharti ya Matumizi",
+    "convenienceNotice": "Tafsiri hii imetolewa kwa urahisi wako. Toleo la Kiingereza la hati hii ndilo toleo linalofunga kisheria; iwapo kutakuwa na tofauti yoyote, toleo la Kiingereza litatawala."
+  },
+  "about": {
+    "title": "Kuhusu Adalithic",
+    "p1": "Adalithic ni kampuni changa ya teknolojia inayolenga kuwapa watu zana na mbinu mpya za kujifunza lugha na kurahisisha mawasiliano kati ya lugha.",
+    "p2": "Tunaamini kwamba vizuizi vya lugha havipaswi kamwe kupunguza uhusiano na ushirikiano wa binadamu. Dhamira yetu ni kutengeneza zana zinazofanya mawasiliano ya tamaduni mbalimbali kuwa rahisi na ya kuvutia, kuwawezesha watu kuunganika kimataifa huku wakijifunza kwa njia ya asili.",
+    "privacyDialogTitle": "Sera ya Faragha ya Arcatext",
+    "termsDialogTitle": "Masharti ya Matumizi ya Arcatext"
+  },
+  "contact": {
+    "title": "Wasiliana nasi",
+    "subtitle": "Una maswali kuhusu Arcatext au unavutiwa na ushirikiano? Tungependa kusikia kutoka kwako.",
+    "formTitle": "Tutumie ujumbe",
+    "firstName": "Jina la kwanza",
+    "lastName": "Jina la ukoo",
+    "email": "Anwani ya barua pepe",
+    "company": "Kampuni (hiari)",
+    "message": "Ujumbe",
+    "phCompany": "Kampuni yako",
+    "phMessage": "Tuambie kuhusu shauku yako kwa Arcatext...",
+    "send": "Tuma ujumbe",
+    "sending": "Inatuma...",
+    "supportEmail": "Barua pepe ya usaidizi",
+    "toastSuccessTitle": "Ujumbe umetumwa kwa mafanikio!",
+    "toastSuccessDesc": "Tutakujibu ndani ya saa 24.",
+    "toastErrorTitle": "Hitilafu wakati wa kutuma ujumbe"
+  },
+  "portfolio": {
+    "privacyLink": "Sera ya Faragha"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "Tungkol Sa Amin",
+    "contact": "Makipag-ugnayan",
+    "language": "Wika"
+  },
+  "footer": {
+    "tagline": "Binabago namin ang pag-aaral ng wika at komunikasyon sa pamamagitan ng teknolohiyang pinapagana ng AI.",
+    "quickLinks": "Mabilisang Link",
+    "home": "Arcatext",
+    "about": "Tungkol Sa Amin",
+    "contact": "Makipag-ugnayan",
+    "legal": "Legal",
+    "privacy": "Patakaran sa Privacy",
+    "terms": "Mga Tuntunin ng Paggamit",
+    "rights": "© 2025 Adalithic. Nakalaan ang lahat ng karapatan."
+  },
+  "hero": {
+    "title": "Kilalanin ang <brand>Arcatext</brand>.",
+    "tagline": "Pag-aaral ng wika na pinamumunuan ng user",
+    "description": "Ginagawa naming isang paglalakbay sa pag-aaral ng wika — na pinamumunuan mo at umuunlad kasama mo — ang mga totoong usapan, kuwento, at pang-araw-araw na pagsulat, na pinagsasama ang tumpak-sa-konteksto na pagsasalin at nasusukat na pag-unlad upang makapag-usap ka nang may kumpiyansa sa iba't ibang wika.",
+    "learnMore": "Matuto pa",
+    "getInTouch": "Makipag-ugnayan sa amin",
+    "typewriter": [
+      "Matuto ng isang wika",
+      "Makipag-usap para sa negosyo",
+      "Makipag-chat sa mga kaibigan sa buong mundo"
+    ]
+  },
+  "legalPages": {
+    "privacyTitle": "Patakaran sa Privacy",
+    "termsTitle": "Mga Tuntunin ng Paggamit",
+    "convenienceNotice": "Ang pagsasaling ito ay ibinibigay para sa iyong kaginhawaan. Ang bersyong Ingles ng dokumentong ito ang legal na may bisang bersyon; sa anumang pagkakaiba, mananaig ang bersyong Ingles."
+  },
+  "about": {
+    "title": "Tungkol sa Adalithic",
+    "p1": "Ang Adalithic ay isang tech startup na nakatuon sa pagbibigay sa mga tao ng mga bagong kasangkapan at teknik para matuto ng mga wika at mapadali ang komunikasyon sa iba't ibang wika.",
+    "p2": "Naniniwala kaming ang mga hadlang sa wika ay hindi dapat kailanman maglimita sa koneksyon at pagtutulungan ng mga tao. Misyon naming lumikha ng mga kasangkapan na nagpapadali at nagpapaganda ng komunikasyong sali't-kultura, na nagbibigay-daan sa mga tao na kumonekta sa buong mundo habang natututo nang natural.",
+    "privacyDialogTitle": "Patakaran sa Privacy ng Arcatext",
+    "termsDialogTitle": "Mga Tuntunin ng Paggamit ng Arcatext"
+  },
+  "contact": {
+    "title": "Makipag-ugnayan sa amin",
+    "subtitle": "May mga tanong ka ba tungkol sa Arcatext o interesado sa pakikipagtulungan? Gusto naming marinig ang tungkol sa iyo.",
+    "formTitle": "Magpadala sa amin ng mensahe",
+    "firstName": "Pangalan",
+    "lastName": "Apelyido",
+    "email": "Email address",
+    "company": "Kompanya (opsyonal)",
+    "message": "Mensahe",
+    "phCompany": "Ang iyong kompanya",
+    "phMessage": "Sabihin sa amin ang tungkol sa iyong interes sa Arcatext...",
+    "send": "Ipadala ang mensahe",
+    "sending": "Ipinapadala...",
+    "supportEmail": "Email ng suporta",
+    "toastSuccessTitle": "Matagumpay na naipadala ang mensahe!",
+    "toastSuccessDesc": "Babalikan ka namin sa loob ng 24 na oras.",
+    "toastErrorTitle": "May error sa pagpapadala ng mensahe"
+  },
+  "portfolio": {
+    "privacyLink": "Patakaran sa Privacy"
+  }
+}
