@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "language": "Ngôn ngữ"
+  },
+  "footer": {
+    "tagline": "Chúng tôi cách mạng hóa việc học ngôn ngữ và giao tiếp bằng công nghệ dựa trên trí tuệ nhân tạo.",
+    "quickLinks": "Liên kết nhanh",
+    "home": "Arcatext",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "legal": "Pháp lý",
+    "privacy": "Chính sách quyền riêng tư",
+    "terms": "Điều khoản sử dụng",
+    "rights": "© 2025 Adalithic. Bảo lưu mọi quyền."
+  },
+  "hero": {
+    "title": "Gặp gỡ <brand>Arcatext</brand>.",
+    "tagline": "Học ngôn ngữ do người dùng dẫn dắt",
+    "description": "Chúng tôi biến những cuộc trò chuyện thực tế, câu chuyện và việc viết lách hằng ngày thành một hành trình học ngôn ngữ do bạn dẫn dắt và phát triển cùng bạn – kết hợp bản dịch trung thực với ngữ cảnh và tiến bộ có thể đo lường để bạn tự tin giao tiếp giữa các ngôn ngữ.",
+    "learnMore": "Tìm hiểu thêm",
+    "getInTouch": "Liên hệ với chúng tôi",
+    "typewriter": [
+      "Học một ngôn ngữ",
+      "Giao tiếp trong công việc",
+      "Trò chuyện với bạn bè quốc tế"
+    ]
+  },
+  "legalPages": {
+    "privacyTitle": "Chính sách quyền riêng tư",
+    "termsTitle": "Điều khoản sử dụng",
+    "convenienceNotice": "Bản dịch này được cung cấp nhằm thuận tiện cho bạn. Phiên bản tiếng Anh của tài liệu này là phiên bản có giá trị ràng buộc về mặt pháp lý; trong trường hợp có bất kỳ khác biệt nào, phiên bản tiếng Anh sẽ được ưu tiên áp dụng."
+  },
+  "about": {
+    "title": "Giới thiệu về Adalithic",
+    "p1": "Adalithic là một công ty khởi nghiệp công nghệ tập trung vào việc mang đến cho mọi người các công cụ và kỹ thuật mới để học ngôn ngữ và tạo thuận lợi cho giao tiếp giữa các ngôn ngữ.",
+    "p2": "Chúng tôi tin rằng rào cản ngôn ngữ không bao giờ nên giới hạn sự kết nối và hợp tác của con người. Sứ mệnh của chúng tôi là tạo ra các công cụ giúp giao tiếp liên văn hóa trở nên dễ dàng và hấp dẫn, giúp mọi người kết nối trên toàn cầu trong khi học một cách tự nhiên.",
+    "privacyDialogTitle": "Chính sách quyền riêng tư của Arcatext",
+    "termsDialogTitle": "Điều khoản sử dụng của Arcatext"
+  },
+  "contact": {
+    "title": "Liên hệ với chúng tôi",
+    "subtitle": "Bạn có câu hỏi về Arcatext hoặc quan tâm đến hợp tác? Chúng tôi rất mong nhận được phản hồi từ bạn.",
+    "formTitle": "Gửi tin nhắn cho chúng tôi",
+    "firstName": "Tên",
+    "lastName": "Họ",
+    "email": "Địa chỉ email",
+    "company": "Công ty (không bắt buộc)",
+    "message": "Tin nhắn",
+    "phCompany": "Công ty của bạn",
+    "phMessage": "Hãy cho chúng tôi biết về sự quan tâm của bạn đối với Arcatext...",
+    "send": "Gửi tin nhắn",
+    "sending": "Đang gửi...",
+    "supportEmail": "Email hỗ trợ",
+    "toastSuccessTitle": "Đã gửi tin nhắn thành công!",
+    "toastSuccessDesc": "Chúng tôi sẽ phản hồi bạn trong vòng 24 giờ.",
+    "toastErrorTitle": "Lỗi khi gửi tin nhắn"
+  },
+  "portfolio": {
+    "privacyLink": "Chính sách quyền riêng tư"
+  }
+}

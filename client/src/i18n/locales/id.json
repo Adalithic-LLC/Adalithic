@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "Tentang",
+    "contact": "Kontak",
+    "language": "Bahasa"
+  },
+  "footer": {
+    "tagline": "Kami merevolusi pembelajaran bahasa dan komunikasi melalui teknologi berbasis AI.",
+    "quickLinks": "Tautan cepat",
+    "home": "Arcatext",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "legal": "Hukum",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Ketentuan Penggunaan",
+    "rights": "© 2025 Adalithic. Seluruh hak cipta dilindungi."
+  },
+  "hero": {
+    "title": "Kenali <brand>Arcatext</brand>.",
+    "tagline": "Pembelajaran bahasa yang dipandu pengguna",
+    "description": "Kami mengubah percakapan nyata, cerita, dan tulisan sehari-hari menjadi perjalanan belajar bahasa yang Anda pandu dan berkembang bersama Anda — memadukan terjemahan yang setia pada konteks dan kemajuan yang terukur agar Anda dapat berkomunikasi antarbahasa dengan percaya diri.",
+    "learnMore": "Pelajari selengkapnya",
+    "getInTouch": "Hubungi kami",
+    "typewriter": [
+      "Pelajari sebuah bahasa",
+      "Berkomunikasi untuk bisnis",
+      "Mengobrol dengan teman dari seluruh dunia"
+    ]
+  },
+  "legalPages": {
+    "privacyTitle": "Kebijakan Privasi",
+    "termsTitle": "Ketentuan Penggunaan",
+    "convenienceNotice": "Terjemahan ini disediakan untuk kenyamanan Anda. Versi bahasa Inggris dari dokumen ini adalah versi yang mengikat secara hukum; jika terjadi perbedaan, versi bahasa Inggris yang berlaku."
+  },
+  "about": {
+    "title": "Tentang Adalithic",
+    "p1": "Adalithic adalah startup teknologi yang berfokus pada memberikan orang-orang alat dan teknik baru untuk belajar bahasa serta memfasilitasi komunikasi antarbahasa.",
+    "p2": "Kami percaya bahwa hambatan bahasa tidak boleh membatasi koneksi dan kolaborasi antarmanusia. Misi kami adalah menciptakan alat yang membuat komunikasi lintas budaya menjadi mudah dan menarik, sehingga memungkinkan orang untuk terhubung secara global sambil belajar dengan cara yang alami.",
+    "privacyDialogTitle": "Kebijakan Privasi Arcatext",
+    "termsDialogTitle": "Ketentuan Penggunaan Arcatext"
+  },
+  "contact": {
+    "title": "Hubungi kami",
+    "subtitle": "Punya pertanyaan tentang Arcatext atau tertarik dengan kemitraan? Kami senang mendengar dari Anda.",
+    "formTitle": "Kirimi kami pesan",
+    "firstName": "Nama depan",
+    "lastName": "Nama belakang",
+    "email": "Alamat email",
+    "company": "Perusahaan (opsional)",
+    "message": "Pesan",
+    "phCompany": "Perusahaan Anda",
+    "phMessage": "Beri tahu kami tentang ketertarikan Anda pada Arcatext...",
+    "send": "Kirim pesan",
+    "sending": "Mengirim...",
+    "supportEmail": "Email dukungan",
+    "toastSuccessTitle": "Pesan berhasil dikirim!",
+    "toastSuccessDesc": "Kami akan menghubungi Anda dalam 24 jam.",
+    "toastErrorTitle": "Kesalahan saat mengirim pesan"
+  },
+  "portfolio": {
+    "privacyLink": "Kebijakan Privasi"
+  }
+}
