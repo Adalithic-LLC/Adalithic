@@ -2,7 +2,9 @@
   "nav": {
     "about": "Tietoa meistä",
     "contact": "Yhteystiedot",
-    "language": "Kieli"
+    "language": "Kieli",
+    "features": "Ominaisuudet",
+    "cta": "Ota yhteyttä"
   },
   "footer": {
     "tagline": "Mullistamme kielten oppimisen ja viestinnän tekoälypohjaisella teknologialla.",
@@ -13,19 +15,95 @@
     "legal": "Oikeudelliset tiedot",
     "privacy": "Tietosuojakäytäntö",
     "terms": "Käyttöehdot",
-    "rights": "© 2025 Adalithic. Kaikki oikeudet pidätetään."
+    "rights": "© 2025 Adalithic. Kaikki oikeudet pidätetään.",
+    "features": "Ominaisuudet"
   },
   "hero": {
     "title": "Tutustu <brand>Arcatext</brand>iin.",
     "tagline": "Käyttäjän ohjaama kielten oppiminen",
     "description": "Muutamme aidot keskustelut, tarinat ja arkisen kirjoittamisen käyttäjän ohjaamaksi kielten oppimismatkaksi, joka kehittyy kanssasi – yhdistämällä asiayhteyteen uskollisen käännöksen ja mitattavan edistymisen, jotta voit viestiä kielten välillä itsevarmasti.",
-    "learnMore": "Lue lisää",
+    "learnMore": "Katso, miten se toimii",
     "getInTouch": "Ota yhteyttä",
+    "eyebrow": "Tekoälynäppäimistö aitoihin keskusteluihin",
+    "imageAlt": "Arcatext-näppäimistö kääntää ja korjaa viestiä chat-sovelluksessa.",
     "typewriter": [
       "Opi kieli",
       "Viesti liike-elämässä",
       "Keskustele ystävien kanssa ympäri maailmaa"
     ]
+  },
+  "features": {
+    "eyebrow": "Yksi sovellus, keskustelun jokaiseen osaan",
+    "title": "Kaikki, mitä tarvitset viestiäksesi kielten välillä",
+    "subtitle": "Arcatext on tekoälynäppäimistö, joka toimii suoraan jo käyttämiesi sovellusten sisällä. Jokainen ominaisuus on rakennettu aidon keskustelun yhden hetken ympärille – jotta voit keskittyä siihen, mitä haluat sanoa, etkä siihen, miten sen sanot.",
+    "items": {
+      "receive": {
+        "eyebrow": "Ymmärrä vastaukset",
+        "title": "Ymmärrä jokainen vastaus poistumatta näppäimistöltä",
+        "description": "Liitä saamasi viesti, ja Arcatext kääntää sen suoraan paikan päällä – täydellisen sana sanalta -erittelyn ja sananmukaisen version kera – jotta tavoitat vivahteet, et vain pääsisältöä.",
+        "bullets": [
+          "Käännä saapuvat viestit heti siellä, missä kirjoitat",
+          "Näe sana sanalta -erittely",
+          "Vertaa sananmukaista ja luontevaa merkitystä rinnakkain"
+        ],
+        "alt": "Arcatext kääntää saapuneen viestin erittely- ja sananmukaisine vaihtoehtoineen."
+      },
+      "homographs": {
+        "eyebrow": "Sano, mitä tarkoitat",
+        "title": "Sano juuri se, mitä tarkoitat",
+        "description": "Kun sanalla on useampi merkitys, Arcatext huomaa sen ja antaa sinun valita oikean merkityksen – niin että „kuusi“ tarkoittaa puuta eikä numeroa.",
+        "bullets": [
+          "Automaattinen homografien tunnistus",
+          "Valitse tarkoittamasi merkitys",
+          "Vältä kiusalliset käännösvirheet ennen lähettämistä"
+        ],
+        "alt": "Arcatext tunnistaa homografin ja tarjoaa tarkoitettua merkitystä."
+      },
+      "reverse": {
+        "eyebrow": "Tarkista itsesi",
+        "title": "Tarkista käännös omalla kielelläsi",
+        "description": "Näe viestisi käännettynä takaisin äidinkielellesi ennen kuin painat lähetä, jotta tiedät aina tarkalleen, mitä toinen osapuoli lukee.",
+        "bullets": [
+          "Välitön takaisinkäännös",
+          "Vahvista aikomuksesi ennen lähettämistä",
+          "Opi luonnollisesti matkan varrella"
+        ],
+        "alt": "Arcatext varmistaa käännöksen näyttämällä sen takaisin käyttäjän äidinkielellä."
+      },
+      "recipient": {
+        "eyebrow": "Huomioi kontekstin",
+        "title": "Käännöksiä, jotka sopivat sille, kenen kanssa puhut",
+        "description": "Kerro Arcatextille, kenelle kirjoitat, niin se mukauttaa muodollisuuden, sukupuolen ja jopa kirjoitusjärjestelmän – Kanji, Hiragana tai latinalaistettu – sopimaan hetkeen.",
+        "bullets": [
+          "Sukupuolen ja ryhmän huomioiva sanamuoto",
+          "Valitse haluamasi aakkosto tai kirjoitusjärjestelmä",
+          "Kontekstin mukaan tarkka joka kerta"
+        ],
+        "alt": "Arcatextin uudelleenmuotoiluvaihtoehdot vastaanottajan sukupuolen, ryhmächatin ja japanilaisen aakkoston mukaan."
+      },
+      "synonyms": {
+        "eyebrow": "Kasvata sanavarastoasi",
+        "title": "Kasvata sanavarastoasi keskustellessasi",
+        "description": "Jokaisen käännöksen mukana tulee synonyymivaihtoehtoja, joten tutustut uusiin tapoihin sanoa sama asia ja omaksut kielen luonnollisesti – viesti kerrallaan.",
+        "bullets": [
+          "Useita tapoja muotoilla jokainen viesti",
+          "Löydä rikkaampi, luontevampi sanavarasto",
+          "Aitoa edistymistä aidoista keskusteluista"
+        ],
+        "alt": "Arcatext tarjoaa synonyymivaihtoehtoja käännetylle viestille."
+      },
+      "copy": {
+        "eyebrow": "Pysy samalla aaltopituudella",
+        "title": "Pidä koko keskusteluketju asiayhteydessä",
+        "description": "Lisää automaattisesti kopio viestistäsi omalla kielelläsi, jotta molemmat osapuolet voivat aina seurata keskustelua – ei kadonnutta kontekstia, ei sekaannuksia.",
+        "bullets": [
+          "Lähetä automaattisesti kopio äidinkielelläsi",
+          "Älä koskaan menetä keskustelun lankaa",
+          "Vaivattomia kaksikielisiä keskusteluja"
+        ],
+        "alt": "Arcatext lähettää kopion viestistä käyttäjän äidinkielellä."
+      }
+    }
   },
   "legalPages": {
     "privacyTitle": "Tietosuojakäytäntö",
@@ -33,11 +111,18 @@
     "convenienceNotice": "Tämä käännös on tarjottu käyttömukavuutesi vuoksi. Tämän asiakirjan englanninkielinen versio on oikeudellisesti sitova versio; mahdollisten ristiriitojen tapauksessa englanninkielinen versio on määräävä."
   },
   "about": {
-    "title": "Tietoa Adalithicista",
+    "title": "Murramme kielimuurit",
     "p1": "Adalithic on teknologia-alan startup, joka keskittyy tarjoamaan ihmisille uusia työkaluja ja tekniikoita kielten oppimiseen ja kielten välisen viestinnän helpottamiseen.",
     "p2": "Uskomme, että kielimuurit eivät saa koskaan rajoittaa ihmisten välistä yhteyttä ja yhteistyötä. Tehtävämme on luoda työkaluja, jotka tekevät kulttuurien välisestä viestinnästä vaivatonta ja kiinnostavaa, ja antavat ihmisille mahdollisuuden luoda yhteyksiä maailmanlaajuisesti oppien samalla luonnollisesti.",
     "privacyDialogTitle": "Arcatextin tietosuojakäytäntö",
-    "termsDialogTitle": "Arcatextin käyttöehdot"
+    "termsDialogTitle": "Arcatextin käyttöehdot",
+    "eyebrow": "Tietoa Adalithicista",
+    "v1Title": "Viesti maailmanlaajuisesti",
+    "v1Desc": "Puhu kenen tahansa kanssa, missä tahansa, jo käyttämissäsi sovelluksissa – vaihtamatta työkalua tai katkaisematta työn imua.",
+    "v2Title": "Opi matkan varrella",
+    "v2Desc": "Jokainen viesti on tilaisuus omaksua uutta sanastoa ja ilmaisuja, jolloin arkisista keskusteluista tulee todellista edistymistä.",
+    "v3Title": "Rakennettu aitoa yhteyttä varten",
+    "v3Desc": "Suunnittelemme aitoja ihmisten välisiä keskusteluja varten, jotta vivahteet ja merkitys eivät koskaan katoa käännöksessä."
   },
   "contact": {
     "title": "Ota yhteyttä",
@@ -55,7 +140,10 @@
     "supportEmail": "Tukisähköposti",
     "toastSuccessTitle": "Viesti lähetetty onnistuneesti!",
     "toastSuccessDesc": "Vastaamme sinulle 24 tunnin kuluessa.",
-    "toastErrorTitle": "Virhe viestin lähettämisessä"
+    "toastErrorTitle": "Virhe viestin lähettämisessä",
+    "eyebrow": "Ota yhteyttä",
+    "infoTitle": "Jutellaan",
+    "infoDesc": "Olitpa sitten utelias käyttäjä, mahdollinen kumppani tai median edustaja, tiimimme lukee jokaisen viestin ja vastaa yleensä päivän kuluessa."
   },
   "portfolio": {
     "privacyLink": "Tietosuojakäytäntö"

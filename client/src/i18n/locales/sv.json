@@ -2,7 +2,9 @@
   "nav": {
     "about": "Om oss",
     "contact": "Kontakt",
-    "language": "Språk"
+    "language": "Språk",
+    "features": "Funktioner",
+    "cta": "Kontakta oss"
   },
   "footer": {
     "tagline": "Vi revolutionerar språkinlärning och kommunikation med AI-driven teknik.",
@@ -13,13 +15,16 @@
     "legal": "Juridik",
     "privacy": "Integritetspolicy",
     "terms": "Användarvillkor",
-    "rights": "© 2025 Adalithic. Med ensamrätt."
+    "rights": "© 2025 Adalithic. Med ensamrätt.",
+    "features": "Funktioner"
   },
   "hero": {
     "title": "Möt <brand>Arcatext</brand>.",
     "tagline": "Användarstyrd språkinlärning",
     "description": "Vi förvandlar verkliga samtal, berättelser och vardagligt skrivande till en användarstyrd språkinlärningsresa som utvecklas med dig – genom att kombinera kontextnära översättning och mätbara framsteg så att du kan kommunicera mellan språk med självförtroende.",
-    "learnMore": "Läs mer",
+    "eyebrow": "AI-tangentbordet för verkliga samtal",
+    "imageAlt": "Arcatext-tangentbordet som översätter och korrigerar ett meddelande i en chattapp.",
+    "learnMore": "Se hur det fungerar",
     "getInTouch": "Kontakta oss",
     "typewriter": [
       "Lär dig ett språk",
@@ -27,17 +32,97 @@
       "Chatta med vänner världen över"
     ]
   },
+  "features": {
+    "eyebrow": "En app, varje del av samtalet",
+    "title": "Allt du behöver för att prata över språkgränserna",
+    "subtitle": "Arcatext är ett AI-tangentbord som finns inuti apparna du redan använder. Varje funktion är byggd kring ett enda ögonblick i ett verkligt samtal – så att du kan fokusera på vad du vill säga, inte hur du ska säga det.",
+    "items": {
+      "receive": {
+        "eyebrow": "Förstå svaren",
+        "title": "Förstå varje svar utan att lämna tangentbordet",
+        "description": "Klistra in ett meddelande du fått så översätter Arcatext det direkt – med en fullständig ord-för-ord-uppdelning och en bokstavlig version – så att du fångar nyansen, inte bara innebörden.",
+        "bullets": [
+          "Översätt inkommande meddelanden precis där du skriver",
+          "Se en ord-för-ord-uppdelning",
+          "Jämför den bokstavliga och naturliga betydelsen sida vid sida"
+        ],
+        "alt": "Arcatext översätter ett mottaget meddelande med uppdelning och bokstavliga alternativ."
+      },
+      "homographs": {
+        "eyebrow": "Säg vad du menar",
+        "title": "Säg precis vad du menar",
+        "description": "När ett ord har fler än en betydelse upptäcker Arcatext det och låter dig välja rätt innebörd – så att \"får\" blir djuret, inte verbet.",
+        "bullets": [
+          "Automatisk igenkänning av homografer",
+          "Välj den betydelse du menade",
+          "Undvik klumpiga felöversättningar innan du skickar"
+        ],
+        "alt": "Arcatext identifierar en homograf och erbjuder den avsedda betydelsen."
+      },
+      "reverse": {
+        "eyebrow": "Dubbelkolla dig själv",
+        "title": "Dubbelkolla översättningen på ditt eget språk",
+        "description": "Se ditt meddelande översatt tillbaka till ditt modersmål innan du trycker på skicka, så att du alltid vet exakt vad den andra personen kommer att läsa.",
+        "bullets": [
+          "Omedelbar återöversättning",
+          "Bekräfta din avsikt innan du skickar",
+          "Lär dig naturligt längs vägen"
+        ],
+        "alt": "Arcatext validerar en översättning genom att visa den tillbaka på användarens modersmål."
+      },
+      "recipient": {
+        "eyebrow": "Kontextmedveten",
+        "title": "Översättningar som passar den du pratar med",
+        "description": "Berätta för Arcatext vem du skriver till, så anpassar det formalitet, kön och till och med skriftsystemet – Kanji, Hiragana eller romaniserat – för att passa stunden.",
+        "bullets": [
+          "Formuleringar som tar hänsyn till kön och grupp",
+          "Välj det alfabet eller skriftsystem du vill ha",
+          "Kontextuellt korrekt varje gång"
+        ],
+        "alt": "Arcatext omformuleringsalternativ för mottagarens kön, gruppchatt och japanskt alfabet."
+      },
+      "synonyms": {
+        "eyebrow": "Utöka ditt ordförråd",
+        "title": "Utöka ditt ordförråd medan du chattar",
+        "description": "Varje översättning kommer med synonymalternativ, så att du möter nya sätt att säga samma sak och plockar upp språket naturligt – ett meddelande i taget.",
+        "bullets": [
+          "Flera sätt att formulera varje meddelande",
+          "Upptäck ett rikare, mer naturligt ordförråd",
+          "Verkliga framsteg från verkliga samtal"
+        ],
+        "alt": "Arcatext erbjuder synonymalternativ för ett översatt meddelande."
+      },
+      "copy": {
+        "eyebrow": "Håll dig synkroniserad",
+        "title": "Håll hela konversationen i sitt sammanhang",
+        "description": "Lägg automatiskt till en kopia av ditt meddelande på ditt eget språk, så att båda sidor alltid kan följa samtalet – inget förlorat sammanhang, ingen förvirring.",
+        "bullets": [
+          "Skicka automatiskt en kopia på modersmålet",
+          "Tappa aldrig bort tråden",
+          "Obesvärade tvåspråkiga samtal"
+        ],
+        "alt": "Arcatext skickar en kopia av meddelandet på användarens modersmål."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Integritetspolicy",
     "termsTitle": "Användarvillkor",
     "convenienceNotice": "Denna översättning tillhandahålls för din bekvämlighet. Den engelska versionen av detta dokument är den juridiskt bindande versionen; vid eventuella avvikelser gäller den engelska versionen."
   },
   "about": {
-    "title": "Om Adalithic",
+    "title": "Vi river språkbarriärer",
     "p1": "Adalithic är ett teknikstartup som fokuserar på att ge människor nya verktyg och metoder för att lära sig språk och underlätta kommunikation mellan språk.",
     "p2": "Vi tror att språkbarriärer aldrig ska begränsa mänsklig kontakt och samarbete. Vårt uppdrag är att skapa verktyg som gör tvärkulturell kommunikation enkel och engagerande, så att människor kan knyta kontakter globalt samtidigt som de lär sig på ett naturligt sätt.",
     "privacyDialogTitle": "Arcatext integritetspolicy",
-    "termsDialogTitle": "Arcatext användarvillkor"
+    "termsDialogTitle": "Arcatext användarvillkor",
+    "eyebrow": "Om Adalithic",
+    "v1Title": "Kommunicera globalt",
+    "v1Desc": "Prata med vem som helst, var som helst, i apparna du redan använder – utan att byta verktyg eller bryta ditt flöde.",
+    "v2Title": "Lär dig längs vägen",
+    "v2Desc": "Varje meddelande är en chans att plocka upp nya ord och uttryck, vilket förvandlar vardagliga samtal till verkliga framsteg.",
+    "v3Title": "Byggt för äkta kontakt",
+    "v3Desc": "Vi designar för genuina mänskliga samtal, så att nyans och mening aldrig går förlorade i översättningen."
   },
   "contact": {
     "title": "Kontakta oss",
@@ -55,7 +140,10 @@
     "supportEmail": "Support-e-post",
     "toastSuccessTitle": "Meddelandet har skickats!",
     "toastSuccessDesc": "Vi återkommer inom 24 timmar.",
-    "toastErrorTitle": "Fel vid sändning av meddelandet"
+    "toastErrorTitle": "Fel vid sändning av meddelandet",
+    "eyebrow": "Kontakta oss",
+    "infoTitle": "Låt oss prata",
+    "infoDesc": "Oavsett om du är en nyfiken användare, en potentiell partner eller press läser vårt team varje meddelande och svarar oftast inom en dag."
   },
   "portfolio": {
     "privacyLink": "Integritetspolicy"

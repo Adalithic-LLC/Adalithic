@@ -2,12 +2,15 @@
   "nav": {
     "about": "À propos",
     "contact": "Contact",
+    "features": "Fonctionnalités",
+    "cta": "Nous contacter",
     "language": "Langue"
   },
   "footer": {
     "tagline": "Nous révolutionnons l'apprentissage des langues et la communication grâce à une technologie propulsée par l'IA.",
     "quickLinks": "Liens rapides",
     "home": "Arcatext",
+    "features": "Fonctionnalités",
     "about": "À propos",
     "contact": "Contact",
     "legal": "Mentions légales",
@@ -16,10 +19,12 @@
     "rights": "© 2025 Adalithic. Tous droits réservés."
   },
   "hero": {
+    "eyebrow": "Le clavier IA pour de vraies conversations",
     "title": "Découvrez <brand>Arcatext</brand>.",
     "tagline": "Apprentissage des langues guidé par l'utilisateur",
     "description": "Nous transformons les vraies conversations, les histoires et l'écriture du quotidien en un parcours d'apprentissage des langues guidé par vous et qui évolue avec vous, en combinant une traduction fidèle au contexte et des progrès mesurables pour que vous puissiez communiquer entre les langues en toute confiance.",
-    "learnMore": "En savoir plus",
+    "imageAlt": "Le clavier Arcatext traduisant et corrigeant un message dans une application de messagerie.",
+    "learnMore": "Découvrez comment ça marche",
     "getInTouch": "Nous contacter",
     "typewriter": [
       "Apprenez une langue",
@@ -27,22 +32,105 @@
       "Discutez avec des amis du monde entier"
     ]
   },
+  "features": {
+    "eyebrow": "Une seule application, chaque étape de la conversation",
+    "title": "Tout ce qu'il vous faut pour parler d'une langue à l'autre",
+    "subtitle": "Arcatext est un clavier IA qui s'intègre aux applications que vous utilisez déjà. Chaque fonctionnalité est pensée autour d'un moment précis d'une vraie conversation, pour que vous puissiez vous concentrer sur ce que vous voulez dire, et non sur la façon de le dire.",
+    "items": {
+      "receive": {
+        "eyebrow": "Comprenez les réponses",
+        "title": "Comprenez chaque réponse sans quitter le clavier",
+        "description": "Collez un message que vous avez reçu et Arcatext le traduit directement, avec une décomposition complète mot à mot et une version littérale, pour que vous saisissiez la nuance, et pas seulement l'idée générale.",
+        "bullets": [
+          "Traduisez les messages entrants là où vous écrivez",
+          "Consultez une décomposition mot à mot",
+          "Comparez le sens littéral et le sens naturel côte à côte"
+        ],
+        "alt": "Arcatext traduisant un message reçu avec des options de décomposition et de traduction littérale."
+      },
+      "homographs": {
+        "eyebrow": "Dites ce que vous pensez",
+        "title": "Dites exactement ce que vous voulez dire",
+        "description": "Quand un mot a plusieurs sens, Arcatext le repère et vous laisse choisir le bon, pour que \"avocat\" désigne le fruit et non l'homme de loi.",
+        "bullets": [
+          "Détection automatique des homographes",
+          "Choisissez le sens que vous aviez en tête",
+          "Évitez les traductions maladroites avant d'envoyer"
+        ],
+        "alt": "Arcatext identifiant un homographe et proposant le sens voulu."
+      },
+      "reverse": {
+        "eyebrow": "Vérifiez-vous",
+        "title": "Revérifiez la traduction dans votre propre langue",
+        "description": "Voyez votre message retraduit dans votre langue maternelle avant de l'envoyer, pour toujours savoir exactement ce que l'autre personne va lire.",
+        "bullets": [
+          "Traduction inverse instantanée",
+          "Confirmez votre intention avant d'envoyer",
+          "Apprenez naturellement au fil du temps"
+        ],
+        "alt": "Arcatext validant une traduction en la réaffichant dans la langue maternelle de l'utilisateur."
+      },
+      "recipient": {
+        "eyebrow": "Sensible au contexte",
+        "title": "Des traductions adaptées à votre interlocuteur",
+        "description": "Indiquez à Arcatext à qui vous écrivez et il adapte le niveau de formalité, le genre et même le système d'écriture (Kanji, Hiragana ou romanisé) au moment présent.",
+        "bullets": [
+          "Formulation adaptée au genre et au groupe",
+          "Choisissez l'alphabet ou l'écriture souhaités",
+          "Une justesse contextuelle à chaque fois"
+        ],
+        "alt": "Options de reformulation d'Arcatext selon le genre du destinataire, la discussion de groupe et l'alphabet japonais."
+      },
+      "synonyms": {
+        "eyebrow": "Enrichissez votre vocabulaire",
+        "title": "Enrichissez votre vocabulaire au fil de vos discussions",
+        "description": "Chaque traduction s'accompagne de synonymes, pour que vous découvriez de nouvelles façons de dire la même chose et appreniez la langue naturellement, un message à la fois.",
+        "bullets": [
+          "Plusieurs façons de formuler chaque message",
+          "Découvrez un vocabulaire plus riche et plus naturel",
+          "De vrais progrès à partir de vraies conversations"
+        ],
+        "alt": "Arcatext proposant des options de synonymes pour un message traduit."
+      },
+      "copy": {
+        "eyebrow": "Restez synchronisés",
+        "title": "Gardez tout le fil dans son contexte",
+        "description": "Ajoutez automatiquement une copie de votre message dans votre propre langue, pour que les deux parties puissent toujours suivre la conversation : aucun contexte perdu, aucune confusion.",
+        "bullets": [
+          "Envoyez automatiquement une copie dans votre langue maternelle",
+          "Ne perdez jamais le fil de la conversation",
+          "Des conversations bilingues sans effort"
+        ],
+        "alt": "Arcatext envoyant une copie du message dans la langue maternelle de l'utilisateur."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Politique de confidentialité",
     "termsTitle": "Conditions d'utilisation",
     "convenienceNotice": "Cette traduction est fournie à titre indicatif. La version anglaise de ce document constitue la version juridiquement contraignante ; en cas de divergence, la version anglaise prévaut."
   },
   "about": {
-    "title": "À propos d'Adalithic",
+    "eyebrow": "À propos d'Adalithic",
+    "title": "Faire tomber les barrières linguistiques",
     "p1": "Adalithic est une startup technologique qui se consacre à offrir aux gens de nouveaux outils et techniques pour apprendre les langues et faciliter la communication entre les langues.",
     "p2": "Nous pensons que les barrières linguistiques ne devraient jamais limiter les liens humains et la collaboration. Notre mission est de créer des outils qui rendent la communication interculturelle simple et engageante, permettant aux gens de se connecter à l'échelle mondiale tout en apprenant naturellement.",
+    "v1Title": "Communiquez à l'échelle mondiale",
+    "v1Desc": "Parlez avec n'importe qui, où que vous soyez, dans les applications que vous utilisez déjà, sans changer d'outil ni interrompre votre élan.",
+    "v2Title": "Apprenez en cours de route",
+    "v2Desc": "Chaque message est l'occasion d'acquérir du nouveau vocabulaire et de nouvelles tournures, transformant les échanges du quotidien en véritables progrès.",
+    "v3Title": "Conçu pour une vraie connexion",
+    "v3Desc": "Nous concevons pour une véritable conversation humaine, afin que la nuance et le sens ne se perdent jamais dans la traduction.",
     "privacyDialogTitle": "Politique de confidentialité d'Arcatext",
     "termsDialogTitle": "Conditions d'utilisation d'Arcatext"
   },
   "contact": {
+    "eyebrow": "Nous contacter",
     "title": "Contactez-nous",
     "subtitle": "Vous avez des questions sur Arcatext ou vous êtes intéressé par un partenariat ? Nous serions ravis de vous entendre.",
     "formTitle": "Envoyez-nous un message",
+    "infoTitle": "Parlons-en",
+    "infoDesc": "Que vous soyez un utilisateur curieux, un partenaire potentiel ou un journaliste, notre équipe lit chaque message et répond généralement en une journée.",
     "firstName": "Prénom",
     "lastName": "Nom",
     "email": "Adresse e-mail",

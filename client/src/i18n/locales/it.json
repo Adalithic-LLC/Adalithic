@@ -2,12 +2,15 @@
   "nav": {
     "about": "Chi siamo",
     "contact": "Contatti",
+    "features": "Funzionalità",
+    "cta": "Contattaci",
     "language": "Lingua"
   },
   "footer": {
     "tagline": "Rivoluzioniamo l'apprendimento delle lingue e la comunicazione grazie alla tecnologia basata sull'IA.",
     "quickLinks": "Link rapidi",
     "home": "Arcatext",
+    "features": "Funzionalità",
     "about": "Chi siamo",
     "contact": "Contatti",
     "legal": "Note legali",
@@ -16,10 +19,12 @@
     "rights": "© 2025 Adalithic. Tutti i diritti riservati."
   },
   "hero": {
+    "eyebrow": "La tastiera con IA per conversazioni reali",
     "title": "Ecco <brand>Arcatext</brand>.",
     "tagline": "Apprendimento linguistico guidato dall'utente",
     "description": "Trasformiamo conversazioni reali, storie e scrittura quotidiana in un percorso di apprendimento delle lingue guidato da te e che si evolve con te, combinando una traduzione fedele al contesto e progressi misurabili per farti comunicare tra le lingue con sicurezza.",
-    "learnMore": "Scopri di più",
+    "imageAlt": "La tastiera Arcatext traduce e corregge un messaggio in un'app di chat.",
+    "learnMore": "Scopri come funziona",
     "getInTouch": "Contattaci",
     "typewriter": [
       "Impara una lingua",
@@ -27,22 +32,105 @@
       "Chatta con amici di tutto il mondo"
     ]
   },
+  "features": {
+    "eyebrow": "Un'unica app, ogni parte della conversazione",
+    "title": "Tutto ciò che ti serve per parlare tra lingue diverse",
+    "subtitle": "Arcatext è una tastiera con IA che vive dentro le app che usi già. Ogni funzionalità è costruita attorno a un momento preciso di una conversazione reale, così puoi concentrarti su ciò che vuoi dire, non su come dirlo.",
+    "items": {
+      "receive": {
+        "eyebrow": "Comprendi le risposte",
+        "title": "Comprendi ogni risposta senza lasciare la tastiera",
+        "description": "Incolla un messaggio che hai ricevuto e Arcatext lo traduce direttamente, con una scomposizione completa parola per parola e una versione letterale, così cogli le sfumature e non solo il senso generale.",
+        "bullets": [
+          "Traduci i messaggi in arrivo proprio dove scrivi",
+          "Consulta una scomposizione parola per parola",
+          "Confronta il significato letterale e quello naturale fianco a fianco"
+        ],
+        "alt": "Arcatext traduce un messaggio ricevuto con opzioni di scomposizione e traduzione letterale."
+      },
+      "homographs": {
+        "eyebrow": "Di' ciò che pensi",
+        "title": "Di' esattamente ciò che intendi",
+        "description": "Quando una parola ha più di un significato, Arcatext lo riconosce e ti lascia scegliere quello giusto, così \"pesca\" è il frutto e non l'attività di chi va a pescare.",
+        "bullets": [
+          "Rilevamento automatico degli omografi",
+          "Scegli il significato che intendevi",
+          "Evita traduzioni imbarazzanti prima di inviare"
+        ],
+        "alt": "Arcatext individua un omografo e propone il significato desiderato."
+      },
+      "reverse": {
+        "eyebrow": "Controllati",
+        "title": "Ricontrolla la traduzione nella tua lingua",
+        "description": "Vedi il tuo messaggio ritradotto nella tua lingua madre prima di premere invio, così sai sempre esattamente cosa leggerà l'altra persona.",
+        "bullets": [
+          "Traduzione inversa istantanea",
+          "Conferma la tua intenzione prima di inviare",
+          "Impara in modo naturale strada facendo"
+        ],
+        "alt": "Arcatext convalida una traduzione mostrandola di nuovo nella lingua madre dell'utente."
+      },
+      "recipient": {
+        "eyebrow": "Consapevole del contesto",
+        "title": "Traduzioni su misura per il tuo interlocutore",
+        "description": "Indica ad Arcatext a chi stai scrivendo e adatterà la formalità, il genere e persino il sistema di scrittura (Kanji, Hiragana o romanizzato) al momento giusto.",
+        "bullets": [
+          "Formulazioni in base a genere e gruppo",
+          "Scegli l'alfabeto o la scrittura che preferisci",
+          "Precisione contestuale ogni singola volta"
+        ],
+        "alt": "Opzioni di riformulazione di Arcatext in base al genere del destinatario, alla chat di gruppo e all'alfabeto giapponese."
+      },
+      "synonyms": {
+        "eyebrow": "Amplia il tuo vocabolario",
+        "title": "Amplia il tuo vocabolario mentre chatti",
+        "description": "Ogni traduzione include opzioni di sinonimi, così scopri nuovi modi di dire la stessa cosa e apprendi la lingua in modo naturale, un messaggio alla volta.",
+        "bullets": [
+          "Più modi di formulare ogni messaggio",
+          "Scopri un vocabolario più ricco e naturale",
+          "Progressi reali da conversazioni reali"
+        ],
+        "alt": "Arcatext propone opzioni di sinonimi per un messaggio tradotto."
+      },
+      "copy": {
+        "eyebrow": "Restate allineati",
+        "title": "Mantieni tutta la conversazione nel suo contesto",
+        "description": "Aggiungi automaticamente una copia del tuo messaggio nella tua lingua, così entrambe le parti possono sempre seguire la conversazione: nessun contesto perso, nessuna confusione.",
+        "bullets": [
+          "Invia automaticamente una copia nella tua lingua madre",
+          "Non perdere mai il filo della conversazione",
+          "Conversazioni bilingui senza sforzo"
+        ],
+        "alt": "Arcatext invia una copia del messaggio nella lingua madre dell'utente."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Informativa sulla privacy",
     "termsTitle": "Termini di utilizzo",
     "convenienceNotice": "Questa traduzione è fornita per tua comodità. La versione in inglese di questo documento è quella giuridicamente vincolante; in caso di discrepanze, prevale la versione in inglese."
   },
   "about": {
-    "title": "Informazioni su Adalithic",
+    "eyebrow": "Informazioni su Adalithic",
+    "title": "Abbattere le barriere linguistiche",
     "p1": "Adalithic è una startup tecnologica dedicata a offrire alle persone nuovi strumenti e tecniche per imparare le lingue e facilitare la comunicazione tra lingue diverse.",
     "p2": "Crediamo che le barriere linguistiche non debbano mai limitare i legami umani e la collaborazione. La nostra missione è creare strumenti che rendano la comunicazione interculturale semplice e coinvolgente, permettendo alle persone di connettersi a livello globale imparando in modo naturale.",
+    "v1Title": "Comunica a livello globale",
+    "v1Desc": "Parla con chiunque, ovunque, nelle app che usi già, senza cambiare strumento né interrompere il tuo ritmo.",
+    "v2Title": "Impara strada facendo",
+    "v2Desc": "Ogni messaggio è un'occasione per acquisire nuovo vocabolario ed espressioni, trasformando le chiacchierate di ogni giorno in progressi reali.",
+    "v3Title": "Pensato per una connessione autentica",
+    "v3Desc": "Progettiamo per la vera conversazione umana, così sfumature e significato non si perdono mai nella traduzione.",
     "privacyDialogTitle": "Informativa sulla privacy di Arcatext",
     "termsDialogTitle": "Termini di utilizzo di Arcatext"
   },
   "contact": {
+    "eyebrow": "Contattaci",
     "title": "Mettiti in contatto",
     "subtitle": "Hai domande su Arcatext o sei interessato a collaborazioni? Ci piacerebbe sentirti.",
     "formTitle": "Inviaci un messaggio",
+    "infoTitle": "Parliamone",
+    "infoDesc": "Che tu sia un utente curioso, un potenziale partner o un giornalista, il nostro team legge ogni messaggio e di solito risponde entro un giorno.",
     "firstName": "Nome",
     "lastName": "Cognome",
     "email": "Indirizzo e-mail",

@@ -2,6 +2,8 @@
   "nav": {
     "about": "Tungkol Sa Amin",
     "contact": "Makipag-ugnayan",
+    "features": "Mga Feature",
+    "cta": "Makipag-ugnayan",
     "language": "Wika"
   },
   "footer": {
@@ -10,6 +12,7 @@
     "home": "Arcatext",
     "about": "Tungkol Sa Amin",
     "contact": "Makipag-ugnayan",
+    "features": "Mga Feature",
     "legal": "Legal",
     "privacy": "Patakaran sa Privacy",
     "terms": "Mga Tuntunin ng Paggamit",
@@ -17,9 +20,11 @@
   },
   "hero": {
     "title": "Kilalanin ang <brand>Arcatext</brand>.",
+    "eyebrow": "Ang AI keyboard para sa totoong mga usapan",
     "tagline": "Pag-aaral ng wika na pinamumunuan ng user",
     "description": "Ginagawa naming isang paglalakbay sa pag-aaral ng wika — na pinamumunuan mo at umuunlad kasama mo — ang mga totoong usapan, kuwento, at pang-araw-araw na pagsulat, na pinagsasama ang tumpak-sa-konteksto na pagsasalin at nasusukat na pag-unlad upang makapag-usap ka nang may kumpiyansa sa iba't ibang wika.",
-    "learnMore": "Matuto pa",
+    "imageAlt": "Ang Arcatext keyboard na nagsasalin at nagwawasto ng isang mensahe sa isang chat app.",
+    "learnMore": "Tingnan kung paano ito gumagana",
     "getInTouch": "Makipag-ugnayan sa amin",
     "typewriter": [
       "Matuto ng isang wika",
@@ -27,19 +32,102 @@
       "Makipag-chat sa mga kaibigan sa buong mundo"
     ]
   },
+  "features": {
+    "eyebrow": "Isang app, bawat bahagi ng usapan",
+    "title": "Lahat ng kailangan mo para makapag-usap sa iba't ibang wika",
+    "subtitle": "Ang Arcatext ay isang AI keyboard na nasa loob mismo ng mga app na ginagamit mo na. Ang bawat feature ay binuo sa paligid ng isang sandali sa totoong usapan—para makapag-focus ka sa gusto mong sabihin, hindi kung paano ito sasabihin.",
+    "items": {
+      "receive": {
+        "eyebrow": "Unawain ang mga sagot",
+        "title": "Unawain ang bawat sagot, nang hindi umaalis sa keyboard",
+        "description": "I-paste ang isang mensaheng natanggap mo at isasalin ito ng Arcatext nang inline—may kumpletong salita-por-salitang breakdown at literal na bersyon—para matukoy mo ang nuance, hindi lang ang buod.",
+        "bullets": [
+          "Isalin ang mga papasok na mensahe mismo kung saan ka nagta-type",
+          "Tingnan ang salita-por-salitang breakdown",
+          "Ihambing nang magkatabi ang literal at natural na kahulugan"
+        ],
+        "alt": "Isinasalin ng Arcatext ang isang natanggap na mensahe na may breakdown at literal na mga opsyon."
+      },
+      "homographs": {
+        "eyebrow": "Sabihin ang ibig mong sabihin",
+        "title": "Sabihin nang eksakto ang ibig mong sabihin",
+        "description": "Kapag ang isang salita ay may higit sa isang kahulugan, natutukoy ito ng Arcatext at hinahayaan kang piliin ang tamang kahulugan—para ang \"baka\" ay ang hayop, hindi ang pag-aalinlangan.",
+        "bullets": [
+          "Awtomatikong pagtukoy ng homograph",
+          "Piliin ang kahulugang ninanais mo",
+          "Iwasan ang nakakahiyang maling salin bago mo ipadala"
+        ],
+        "alt": "Tinutukoy ng Arcatext ang isang homograph at inaalok ang ninanais na kahulugan."
+      },
+      "reverse": {
+        "eyebrow": "Suriin ang sarili",
+        "title": "Suriing muli ang salin sa sarili mong wika",
+        "description": "Tingnan ang iyong mensaheng isinalin pabalik sa iyong sariling wika bago mo pindutin ang send, para palagi mong alam nang eksakto ang mababasa ng kausap mo.",
+        "bullets": [
+          "Agarang reverse translation",
+          "Kumpirmahin ang iyong intensyon bago magpadala",
+          "Matuto nang natural habang nag-uusap"
+        ],
+        "alt": "Bine-validate ng Arcatext ang isang salin sa pamamagitan ng pagpapakita nito pabalik sa sariling wika ng user."
+      },
+      "recipient": {
+        "eyebrow": "May kamalayan sa konteksto",
+        "title": "Mga saling akma sa taong kausap mo",
+        "description": "Sabihin sa Arcatext kung sino ang tine-text mo at iaakma nito ang pormalidad, kasarian, at maging ang sistema ng pagsulat—Kanji, Hiragana, o romanized—para tumugma sa sandali.",
+        "bullets": [
+          "Pananalitang may kamalayan sa kasarian at grupo",
+          "Piliin ang alpabeto o script na gusto mo",
+          "Tumpak sa konteksto sa bawat pagkakataon"
+        ],
+        "alt": "Mga opsyon sa muling pagbabalangkas ng Arcatext para sa kasarian ng tatanggap, group chat, at alpabetong Hapon."
+      },
+      "synonyms": {
+        "eyebrow": "Palaguin ang iyong bokabularyo",
+        "title": "Palaguin ang iyong bokabularyo habang nag-uusap",
+        "description": "May kasamang mga opsyon sa kasingkahulugan ang bawat salin, para malantad ka sa mga bagong paraan ng pagsasabi ng parehong bagay at natural mong matutuhan ang wika—isang mensahe sa bawat pagkakataon.",
+        "bullets": [
+          "Maraming paraan para sabihin ang bawat mensahe",
+          "Tuklasin ang mas mayaman at mas natural na bokabularyo",
+          "Tunay na pag-unlad mula sa tunay na usapan"
+        ],
+        "alt": "Nag-aalok ang Arcatext ng mga opsyon sa kasingkahulugan para sa isang isinaling mensahe."
+      },
+      "copy": {
+        "eyebrow": "Manatiling sabay",
+        "title": "Panatilihin sa konteksto ang buong usapan",
+        "description": "Awtomatikong magdagdag ng kopya ng iyong mensahe sa sarili mong wika, para palaging masundan ng magkabilang panig ang usapan—walang nawawalang konteksto, walang kalituhan.",
+        "bullets": [
+          "Awtomatikong magpadala ng kopya sa sariling wika",
+          "Hindi kailanman mawawala sa usapan",
+          "Walang-hirap na dalawahang-wikang pag-uusap"
+        ],
+        "alt": "Nagpapadala ang Arcatext ng kopya ng mensahe sa sariling wika ng user."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Patakaran sa Privacy",
     "termsTitle": "Mga Tuntunin ng Paggamit",
     "convenienceNotice": "Ang pagsasaling ito ay ibinibigay para sa iyong kaginhawaan. Ang bersyong Ingles ng dokumentong ito ang legal na may bisang bersyon; sa anumang pagkakaiba, mananaig ang bersyong Ingles."
   },
   "about": {
-    "title": "Tungkol sa Adalithic",
+    "eyebrow": "Tungkol sa Adalithic",
+    "title": "Pagwasak sa mga hadlang sa wika",
+    "v1Title": "Makipag-usap sa buong mundo",
+    "v1Desc": "Makipag-usap kahit kanino, kahit saan, sa mga app na ginagamit mo na—nang hindi nagpapalit ng tool o nakakaabala sa iyong daloy.",
+    "v2Title": "Matuto habang nag-uusap",
+    "v2Desc": "Ang bawat mensahe ay pagkakataong makakuha ng bagong bokabularyo at pananalita, na nagiging tunay na pag-unlad ang pang-araw-araw na usapan.",
+    "v3Title": "Ginawa para sa tunay na koneksyon",
+    "v3Desc": "Dinisenyo namin ito para sa tunay na usapan ng tao, para hindi kailanman mawala ang nuance at kahulugan sa pagsasalin.",
     "p1": "Ang Adalithic ay isang tech startup na nakatuon sa pagbibigay sa mga tao ng mga bagong kasangkapan at teknik para matuto ng mga wika at mapadali ang komunikasyon sa iba't ibang wika.",
     "p2": "Naniniwala kaming ang mga hadlang sa wika ay hindi dapat kailanman maglimita sa koneksyon at pagtutulungan ng mga tao. Misyon naming lumikha ng mga kasangkapan na nagpapadali at nagpapaganda ng komunikasyong sali't-kultura, na nagbibigay-daan sa mga tao na kumonekta sa buong mundo habang natututo nang natural.",
     "privacyDialogTitle": "Patakaran sa Privacy ng Arcatext",
     "termsDialogTitle": "Mga Tuntunin ng Paggamit ng Arcatext"
   },
   "contact": {
+    "eyebrow": "Makipag-ugnayan",
+    "infoTitle": "Mag-usap tayo",
+    "infoDesc": "Ikaw man ay isang mausisang user, isang potensyal na kasosyo, o ang press, binabasa ng aming team ang bawat mensahe at karaniwang tumutugon sa loob ng isang araw.",
     "title": "Makipag-ugnayan sa amin",
     "subtitle": "May mga tanong ka ba tungkol sa Arcatext o interesado sa pakikipagtulungan? Gusto naming marinig ang tungkol sa iyo.",
     "formTitle": "Magpadala sa amin ng mensahe",

@@ -2,6 +2,8 @@
   "nav": {
     "about": "Giới thiệu",
     "contact": "Liên hệ",
+    "features": "Tính năng",
+    "cta": "Liên hệ",
     "language": "Ngôn ngữ"
   },
   "footer": {
@@ -10,6 +12,7 @@
     "home": "Arcatext",
     "about": "Giới thiệu",
     "contact": "Liên hệ",
+    "features": "Tính năng",
     "legal": "Pháp lý",
     "privacy": "Chính sách quyền riêng tư",
     "terms": "Điều khoản sử dụng",
@@ -17,9 +20,11 @@
   },
   "hero": {
     "title": "Gặp gỡ <brand>Arcatext</brand>.",
+    "eyebrow": "Bàn phím AI cho những cuộc trò chuyện thực sự",
     "tagline": "Học ngôn ngữ do người dùng dẫn dắt",
     "description": "Chúng tôi biến những cuộc trò chuyện thực tế, câu chuyện và việc viết lách hằng ngày thành một hành trình học ngôn ngữ do bạn dẫn dắt và phát triển cùng bạn – kết hợp bản dịch trung thực với ngữ cảnh và tiến bộ có thể đo lường để bạn tự tin giao tiếp giữa các ngôn ngữ.",
-    "learnMore": "Tìm hiểu thêm",
+    "imageAlt": "Bàn phím Arcatext đang dịch và chỉnh sửa một tin nhắn trong ứng dụng trò chuyện.",
+    "learnMore": "Xem cách hoạt động",
     "getInTouch": "Liên hệ với chúng tôi",
     "typewriter": [
       "Học một ngôn ngữ",
@@ -27,19 +32,102 @@
       "Trò chuyện với bạn bè quốc tế"
     ]
   },
+  "features": {
+    "eyebrow": "Một ứng dụng, cho mọi phần của cuộc trò chuyện",
+    "title": "Mọi thứ bạn cần để trò chuyện xuyên ngôn ngữ",
+    "subtitle": "Arcatext là một bàn phím AI hoạt động ngay bên trong các ứng dụng bạn đang dùng. Mỗi tính năng được xây dựng xoay quanh một khoảnh khắc cụ thể trong cuộc trò chuyện thực tế—để bạn tập trung vào điều muốn nói, chứ không phải cách nói.",
+    "items": {
+      "receive": {
+        "eyebrow": "Hiểu các phản hồi",
+        "title": "Hiểu mọi câu trả lời, ngay trên bàn phím",
+        "description": "Dán một tin nhắn bạn nhận được và Arcatext dịch ngay tại chỗ—kèm phân tích chi tiết từng từ và một bản dịch sát nghĩa—để bạn nắm được sắc thái, chứ không chỉ ý chính.",
+        "bullets": [
+          "Dịch tin nhắn đến ngay nơi bạn đang gõ",
+          "Xem phân tích từng từ một",
+          "So sánh nghĩa sát và nghĩa tự nhiên cạnh nhau"
+        ],
+        "alt": "Arcatext đang dịch một tin nhắn nhận được kèm tùy chọn phân tích và bản dịch sát nghĩa."
+      },
+      "homographs": {
+        "eyebrow": "Nói đúng ý bạn",
+        "title": "Nói chính xác điều bạn muốn",
+        "description": "Khi một từ có nhiều nghĩa, Arcatext phát hiện và cho bạn chọn đúng nghĩa—để \"đường\" là lối đi, chứ không phải thứ để ăn.",
+        "bullets": [
+          "Tự động phát hiện từ đồng âm, đồng tự",
+          "Chọn đúng nghĩa bạn muốn",
+          "Tránh những lỗi dịch khó xử trước khi gửi"
+        ],
+        "alt": "Arcatext đang nhận diện một từ nhiều nghĩa và đưa ra nghĩa bạn muốn dùng."
+      },
+      "reverse": {
+        "eyebrow": "Tự kiểm tra",
+        "title": "Kiểm tra lại bản dịch bằng chính ngôn ngữ của bạn",
+        "description": "Xem tin nhắn của bạn được dịch ngược lại sang tiếng mẹ đẻ trước khi nhấn gửi, để bạn luôn biết chính xác người kia sẽ đọc được gì.",
+        "bullets": [
+          "Dịch ngược tức thì",
+          "Xác nhận đúng ý trước khi gửi",
+          "Học một cách tự nhiên khi trò chuyện"
+        ],
+        "alt": "Arcatext đang xác thực bản dịch bằng cách hiển thị lại bằng tiếng mẹ đẻ của người dùng."
+      },
+      "recipient": {
+        "eyebrow": "Nhận biết ngữ cảnh",
+        "title": "Bản dịch phù hợp với người bạn đang trò chuyện",
+        "description": "Cho Arcatext biết bạn đang nhắn tin với ai và nó sẽ điều chỉnh mức độ trang trọng, giới tính, và thậm chí cả hệ chữ viết—Kanji, Hiragana hay chữ La-tinh—cho phù hợp với hoàn cảnh.",
+        "bullets": [
+          "Cách diễn đạt nhận biết giới tính và nhóm",
+          "Chọn bảng chữ cái hoặc hệ chữ bạn muốn",
+          "Chính xác theo ngữ cảnh mọi lúc"
+        ],
+        "alt": "Các tùy chọn diễn đạt lại của Arcatext theo giới tính người nhận, nhóm trò chuyện và bảng chữ cái tiếng Nhật."
+      },
+      "synonyms": {
+        "eyebrow": "Mở rộng vốn từ",
+        "title": "Mở rộng vốn từ ngay khi trò chuyện",
+        "description": "Mỗi bản dịch đều đi kèm các từ đồng nghĩa, để bạn tiếp xúc với nhiều cách diễn đạt cùng một ý và tiếp thu ngôn ngữ một cách tự nhiên—từng tin nhắn một.",
+        "bullets": [
+          "Nhiều cách diễn đạt cho mỗi tin nhắn",
+          "Khám phá vốn từ phong phú và tự nhiên hơn",
+          "Tiến bộ thực sự từ những cuộc trò chuyện thực tế"
+        ],
+        "alt": "Arcatext đang đưa ra các tùy chọn từ đồng nghĩa cho một tin nhắn đã dịch."
+      },
+      "copy": {
+        "eyebrow": "Luôn đồng bộ",
+        "title": "Giữ cho cả cuộc trò chuyện luôn có ngữ cảnh",
+        "description": "Tự động thêm một bản sao tin nhắn bằng ngôn ngữ của bạn, để cả hai bên luôn theo dõi được cuộc trò chuyện—không mất ngữ cảnh, không nhầm lẫn.",
+        "bullets": [
+          "Tự động gửi bản sao bằng tiếng mẹ đẻ",
+          "Không bao giờ mất mạch trò chuyện",
+          "Trò chuyện song ngữ dễ dàng"
+        ],
+        "alt": "Arcatext đang gửi một bản sao tin nhắn bằng ngôn ngữ mẹ đẻ của người dùng."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Chính sách quyền riêng tư",
     "termsTitle": "Điều khoản sử dụng",
     "convenienceNotice": "Bản dịch này được cung cấp nhằm thuận tiện cho bạn. Phiên bản tiếng Anh của tài liệu này là phiên bản có giá trị ràng buộc về mặt pháp lý; trong trường hợp có bất kỳ khác biệt nào, phiên bản tiếng Anh sẽ được ưu tiên áp dụng."
   },
   "about": {
-    "title": "Giới thiệu về Adalithic",
+    "eyebrow": "Về Adalithic",
+    "title": "Phá bỏ rào cản ngôn ngữ",
+    "v1Title": "Giao tiếp toàn cầu",
+    "v1Desc": "Trò chuyện với bất kỳ ai, ở bất cứ đâu, ngay trong các ứng dụng bạn đang dùng—không cần chuyển đổi công cụ hay gián đoạn mạch giao tiếp.",
+    "v2Title": "Học ngay khi trò chuyện",
+    "v2Desc": "Mỗi tin nhắn là một cơ hội để tiếp thu từ vựng và cách diễn đạt mới, biến những cuộc trò chuyện thường ngày thành tiến bộ thực sự.",
+    "v3Title": "Được tạo ra cho sự kết nối thực sự",
+    "v3Desc": "Chúng tôi thiết kế cho những cuộc trò chuyện đích thực của con người, để sắc thái và ý nghĩa không bao giờ bị mất đi trong bản dịch.",
     "p1": "Adalithic là một công ty khởi nghiệp công nghệ tập trung vào việc mang đến cho mọi người các công cụ và kỹ thuật mới để học ngôn ngữ và tạo thuận lợi cho giao tiếp giữa các ngôn ngữ.",
     "p2": "Chúng tôi tin rằng rào cản ngôn ngữ không bao giờ nên giới hạn sự kết nối và hợp tác của con người. Sứ mệnh của chúng tôi là tạo ra các công cụ giúp giao tiếp liên văn hóa trở nên dễ dàng và hấp dẫn, giúp mọi người kết nối trên toàn cầu trong khi học một cách tự nhiên.",
     "privacyDialogTitle": "Chính sách quyền riêng tư của Arcatext",
     "termsDialogTitle": "Điều khoản sử dụng của Arcatext"
   },
   "contact": {
+    "eyebrow": "Liên hệ",
+    "infoTitle": "Hãy trò chuyện",
+    "infoDesc": "Dù bạn là người dùng tò mò, đối tác tiềm năng hay báo chí, đội ngũ của chúng tôi đọc mọi tin nhắn và thường phản hồi trong vòng một ngày.",
     "title": "Liên hệ với chúng tôi",
     "subtitle": "Bạn có câu hỏi về Arcatext hoặc quan tâm đến hợp tác? Chúng tôi rất mong nhận được phản hồi từ bạn.",
     "formTitle": "Gửi tin nhắn cho chúng tôi",

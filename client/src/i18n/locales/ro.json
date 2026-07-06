@@ -2,7 +2,9 @@
   "nav": {
     "about": "Despre noi",
     "contact": "Contact",
-    "language": "Limbă"
+    "language": "Limbă",
+    "features": "Funcționalități",
+    "cta": "Contactați-ne"
   },
   "footer": {
     "tagline": "Revoluționăm învățarea limbilor și comunicarea prin tehnologie bazată pe inteligență artificială.",
@@ -13,19 +15,95 @@
     "legal": "Informații legale",
     "privacy": "Politica de confidențialitate",
     "terms": "Termeni de utilizare",
-    "rights": "© 2025 Adalithic. Toate drepturile rezervate."
+    "rights": "© 2025 Adalithic. Toate drepturile rezervate.",
+    "features": "Funcționalități"
   },
   "hero": {
     "title": "Faceți cunoștință cu <brand>Arcatext</brand>.",
     "tagline": "Învățarea limbilor ghidată de utilizator",
     "description": "Transformăm conversațiile reale, poveștile și scrisul de zi cu zi într-o călătorie de învățare a limbilor pe care o ghidați dumneavoastră și care evoluează odată cu voi, combinând traducerea fidelă contextului cu progrese măsurabile, ca să comunicați între limbi cu încredere.",
-    "learnMore": "Aflați mai multe",
+    "learnMore": "Vedeți cum funcționează",
     "getInTouch": "Contactați-ne",
+    "eyebrow": "Tastatura cu inteligență artificială pentru conversații reale",
+    "imageAlt": "Tastatura Arcatext traduce și corectează un mesaj într-o aplicație de chat.",
     "typewriter": [
       "Învățați o limbă",
       "Comunicați în afaceri",
       "Discutați cu prieteni din întreaga lume"
     ]
+  },
+  "features": {
+    "eyebrow": "O singură aplicație, pentru fiecare parte a conversației",
+    "title": "Tot ce vă trebuie ca să vorbiți în orice limbă",
+    "subtitle": "Arcatext este o tastatură cu inteligență artificială care funcționează direct în aplicațiile pe care le folosiți deja. Fiecare funcționalitate este construită în jurul unui singur moment dintr-o conversație reală, ca să vă puteți concentra pe ceea ce vreți să spuneți, nu pe cum să spuneți.",
+    "items": {
+      "receive": {
+        "eyebrow": "Înțelegeți răspunsurile",
+        "title": "Înțelegeți fiecare răspuns, fără să părăsiți tastatura",
+        "description": "Lipiți un mesaj primit, iar Arcatext îl traduce pe loc – cu o analiză completă, cuvânt cu cuvânt, și cu o versiune literală – ca să prindeți nuanța, nu doar ideea generală.",
+        "bullets": [
+          "Traduceți mesajele primite chiar acolo unde scrieți",
+          "Vedeți o analiză cuvânt cu cuvânt",
+          "Comparați sensul literal și cel natural, unul lângă altul"
+        ],
+        "alt": "Arcatext traduce un mesaj primit, cu opțiuni de analiză și traducere literală."
+      },
+      "homographs": {
+        "eyebrow": "Spuneți ce vreți să spuneți",
+        "title": "Spuneți exact ce vreți să spuneți",
+        "description": "Când un cuvânt are mai multe sensuri, Arcatext îl detectează și vă lasă să alegeți sensul corect – astfel încât „broască” să fie animalul, nu cea de la ușă.",
+        "bullets": [
+          "Detectare automată a omografelor",
+          "Alegeți sensul pe care l-ați avut în minte",
+          "Evitați traducerile greșite și stânjenitoare înainte de a trimite"
+        ],
+        "alt": "Arcatext identifică un omograf și oferă sensul dorit."
+      },
+      "reverse": {
+        "eyebrow": "Verificați-vă",
+        "title": "Verificați traducerea în propria limbă",
+        "description": "Vedeți mesajul tradus înapoi în limba dumneavoastră maternă înainte de a apăsa trimite, ca să știți întotdeauna exact ce va citi cealaltă persoană.",
+        "bullets": [
+          "Traducere inversă instantanee",
+          "Confirmați-vă intenția înainte de a trimite",
+          "Învățați natural, pe măsură ce comunicați"
+        ],
+        "alt": "Arcatext validează o traducere afișând-o din nou în limba maternă a utilizatorului."
+      },
+      "recipient": {
+        "eyebrow": "Conștient de context",
+        "title": "Traduceri potrivite pentru cel cu care vorbiți",
+        "description": "Spuneți-i lui Arcatext cui îi scrieți, iar acesta adaptează gradul de formalitate, genul și chiar sistemul de scriere – Kanji, Hiragana sau romanizat – ca să se potrivească momentului.",
+        "bullets": [
+          "Formulări adaptate în funcție de gen și de grup",
+          "Alegeți alfabetul sau scrierea dorită",
+          "Corect din punct de vedere contextual, de fiecare dată"
+        ],
+        "alt": "Opțiuni de reformulare Arcatext în funcție de genul destinatarului, conversația de grup și alfabetul japonez."
+      },
+      "synonyms": {
+        "eyebrow": "Îmbogățiți-vă vocabularul",
+        "title": "Îmbogățiți-vă vocabularul în timp ce discutați",
+        "description": "Fiecare traducere vine cu opțiuni de sinonime, așa că descoperiți noi moduri de a spune același lucru și învățați limba natural – câte un mesaj pe rând.",
+        "bullets": [
+          "Mai multe moduri de a formula fiecare mesaj",
+          "Descoperiți un vocabular mai bogat și mai natural",
+          "Progres real din conversații reale"
+        ],
+        "alt": "Arcatext oferă opțiuni de sinonime pentru un mesaj tradus."
+      },
+      "copy": {
+        "eyebrow": "Rămâneți sincronizați",
+        "title": "Păstrați întregul fir de discuție în context",
+        "description": "Adăugați automat o copie a mesajului în propria limbă, astfel încât ambele părți să poată urmări mereu conversația – fără context pierdut, fără confuzie.",
+        "bullets": [
+          "Trimiteți automat o copie în limba maternă",
+          "Nu pierdeți niciodată firul discuției",
+          "Conversații bilingve fără efort"
+        ],
+        "alt": "Arcatext trimite o copie a mesajului în limba maternă a utilizatorului."
+      }
+    }
   },
   "legalPages": {
     "privacyTitle": "Politica de confidențialitate",
@@ -33,11 +111,18 @@
     "convenienceNotice": "Această traducere este furnizată pentru comoditatea dumneavoastră. Versiunea în limba engleză a acestui document este versiunea obligatorie din punct de vedere juridic; în caz de neconcordanță, prevalează versiunea în limba engleză."
   },
   "about": {
-    "title": "Despre Adalithic",
+    "title": "Eliminăm barierele lingvistice",
     "p1": "Adalithic este un startup tehnologic axat pe a oferi oamenilor noi instrumente și tehnici pentru învățarea limbilor și facilitarea comunicării între limbi.",
     "p2": "Credem că barierele lingvistice nu ar trebui să limiteze niciodată conexiunea umană și colaborarea. Misiunea noastră este să creăm instrumente care fac comunicarea interculturală simplă și captivantă, permițând oamenilor să se conecteze la nivel global în timp ce învață în mod natural.",
     "privacyDialogTitle": "Politica de confidențialitate Arcatext",
-    "termsDialogTitle": "Termeni de utilizare Arcatext"
+    "termsDialogTitle": "Termeni de utilizare Arcatext",
+    "eyebrow": "Despre Adalithic",
+    "v1Title": "Comunicați global",
+    "v1Desc": "Vorbiți cu oricine, oriunde, în aplicațiile pe care le folosiți deja – fără să schimbați instrumentele și fără să vă întrerupeți ritmul.",
+    "v2Title": "Învățați pe parcurs",
+    "v2Desc": "Fiecare mesaj este o șansă de a învăța vocabular și exprimări noi, transformând discuțiile de zi cu zi în progres real.",
+    "v3Title": "Creat pentru conexiuni autentice",
+    "v3Desc": "Proiectăm pentru conversații umane autentice, astfel încât nuanța și sensul să nu se piardă niciodată în traducere."
   },
   "contact": {
     "title": "Contactați-ne",
@@ -55,7 +140,10 @@
     "supportEmail": "E-mail de asistență",
     "toastSuccessTitle": "Mesajul a fost trimis cu succes!",
     "toastSuccessDesc": "Vă vom răspunde în termen de 24 de ore.",
-    "toastErrorTitle": "Eroare la trimiterea mesajului"
+    "toastErrorTitle": "Eroare la trimiterea mesajului",
+    "eyebrow": "Contactați-ne",
+    "infoTitle": "Să discutăm",
+    "infoDesc": "Fie că sunteți un utilizator curios, un potențial partener sau reprezentant al presei, echipa noastră citește fiecare mesaj și de obicei răspunde în termen de o zi."
   },
   "portfolio": {
     "privacyLink": "Politica de confidențialitate"

@@ -2,12 +2,15 @@
   "nav": {
     "about": "Über uns",
     "contact": "Kontakt",
+    "features": "Funktionen",
+    "cta": "Kontakt aufnehmen",
     "language": "Sprache"
   },
   "footer": {
     "tagline": "Wir revolutionieren das Sprachenlernen und die Kommunikation durch KI-gestützte Technologie.",
     "quickLinks": "Schnelllinks",
     "home": "Arcatext",
+    "features": "Funktionen",
     "about": "Über uns",
     "contact": "Kontakt",
     "legal": "Rechtliches",
@@ -16,10 +19,12 @@
     "rights": "© 2025 Adalithic. Alle Rechte vorbehalten."
   },
   "hero": {
+    "eyebrow": "Die KI-Tastatur für echte Gespräche",
     "title": "Das ist <brand>Arcatext</brand>.",
     "tagline": "Nutzergesteuertes Sprachenlernen",
     "description": "Wir verwandeln echte Gespräche, Geschichten und alltägliches Schreiben in eine nutzergesteuerte Sprachlernreise, die sich mit dir weiterentwickelt – mit kontextgenauer Übersetzung und messbarem Fortschritt, damit du sprachübergreifend selbstbewusst kommunizieren kannst.",
-    "learnMore": "Mehr erfahren",
+    "imageAlt": "Die Arcatext-Tastatur übersetzt und korrigiert eine Nachricht in einer Chat-App.",
+    "learnMore": "So funktioniert's",
     "getInTouch": "Kontakt aufnehmen",
     "typewriter": [
       "Lerne eine Sprache",
@@ -27,22 +32,105 @@
       "Chatte mit internationalen Freunden"
     ]
   },
+  "features": {
+    "eyebrow": "Eine App, jeder Teil des Gesprächs",
+    "title": "Alles, was du brauchst, um über Sprachgrenzen hinweg zu sprechen",
+    "subtitle": "Arcatext ist eine KI-Tastatur, die in den Apps lebt, die du bereits nutzt. Jede Funktion dreht sich um einen bestimmten Moment in einem echten Gespräch – damit du dich darauf konzentrieren kannst, was du sagen willst, und nicht wie.",
+    "items": {
+      "receive": {
+        "eyebrow": "Antworten verstehen",
+        "title": "Verstehe jede Antwort, ohne die Tastatur zu verlassen",
+        "description": "Füge eine empfangene Nachricht ein und Arcatext übersetzt sie direkt – mit einer vollständigen Wort-für-Wort-Aufschlüsselung und einer wörtlichen Version –, damit du die Nuancen erfasst und nicht nur das Wesentliche.",
+        "bullets": [
+          "Übersetze eingehende Nachrichten genau dort, wo du tippst",
+          "Sieh dir eine Wort-für-Wort-Aufschlüsselung an",
+          "Vergleiche die wörtliche und die natürliche Bedeutung nebeneinander"
+        ],
+        "alt": "Arcatext übersetzt eine empfangene Nachricht mit Aufschlüsselungs- und wörtlichen Optionen."
+      },
+      "homographs": {
+        "eyebrow": "Sag, was du meinst",
+        "title": "Sag genau, was du meinst",
+        "description": "Wenn ein Wort mehrere Bedeutungen hat, erkennt Arcatext das und lässt dich die richtige wählen – damit die \"Bank\" zum Sitzen ist und nicht die fürs Geld.",
+        "bullets": [
+          "Automatische Erkennung von Homografen",
+          "Wähle die Bedeutung, die du gemeint hast",
+          "Vermeide unangenehme Fehlübersetzungen vor dem Senden"
+        ],
+        "alt": "Arcatext erkennt einen Homografen und bietet die gemeinte Bedeutung an."
+      },
+      "reverse": {
+        "eyebrow": "Überprüfe dich selbst",
+        "title": "Überprüfe die Übersetzung in deiner eigenen Sprache",
+        "description": "Sieh dir deine Nachricht zurück in deine Muttersprache übersetzt an, bevor du auf Senden tippst, damit du immer genau weißt, was die andere Person liest.",
+        "bullets": [
+          "Sofortige Rückübersetzung",
+          "Bestätige deine Absicht vor dem Senden",
+          "Lerne ganz natürlich nebenbei"
+        ],
+        "alt": "Arcatext bestätigt eine Übersetzung, indem es sie in der Muttersprache des Nutzers zurückzeigt."
+      },
+      "recipient": {
+        "eyebrow": "Kontextbewusst",
+        "title": "Übersetzungen, die zu deinem Gegenüber passen",
+        "description": "Sag Arcatext, wem du schreibst, und es passt Förmlichkeit, Geschlecht und sogar das Schriftsystem an – Kanji, Hiragana oder romanisiert – passend zum Moment.",
+        "bullets": [
+          "Formulierungen je nach Geschlecht und Gruppe",
+          "Wähle das gewünschte Alphabet oder die Schrift",
+          "Jedes Mal kontextuell treffend"
+        ],
+        "alt": "Arcatext-Umformulierungsoptionen für Geschlecht des Empfängers, Gruppenchat und japanisches Alphabet."
+      },
+      "synonyms": {
+        "eyebrow": "Erweitere deinen Wortschatz",
+        "title": "Erweitere deinen Wortschatz beim Chatten",
+        "description": "Jede Übersetzung kommt mit Synonymoptionen, sodass du neue Arten kennenlernst, dasselbe zu sagen, und die Sprache ganz natürlich aufnimmst – eine Nachricht nach der anderen.",
+        "bullets": [
+          "Mehrere Möglichkeiten, jede Nachricht zu formulieren",
+          "Entdecke einen reicheren, natürlicheren Wortschatz",
+          "Echter Fortschritt aus echten Gesprächen"
+        ],
+        "alt": "Arcatext bietet Synonymoptionen für eine übersetzte Nachricht."
+      },
+      "copy": {
+        "eyebrow": "Bleibt im Gleichklang",
+        "title": "Behalte den ganzen Verlauf im Kontext",
+        "description": "Füge automatisch eine Kopie deiner Nachricht in deiner eigenen Sprache hinzu, damit beide Seiten dem Gespräch immer folgen können – kein verlorener Kontext, keine Verwirrung.",
+        "bullets": [
+          "Sende automatisch eine Kopie in deiner Muttersprache",
+          "Verliere nie den Faden des Gesprächs",
+          "Mühelose zweisprachige Gespräche"
+        ],
+        "alt": "Arcatext sendet eine Kopie der Nachricht in der Muttersprache des Nutzers."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Datenschutzrichtlinie",
     "termsTitle": "Nutzungsbedingungen",
     "convenienceNotice": "Diese Übersetzung wird zu Ihrer Erleichterung bereitgestellt. Die englische Fassung dieses Dokuments ist die rechtsverbindliche Fassung; im Falle von Abweichungen ist die englische Fassung maßgeblich."
   },
   "about": {
-    "title": "Über Adalithic",
+    "eyebrow": "Über Adalithic",
+    "title": "Sprachbarrieren abbauen",
     "p1": "Adalithic ist ein Tech-Startup, das sich darauf konzentriert, Menschen neue Werkzeuge und Techniken zum Sprachenlernen und zur sprachübergreifenden Kommunikation zu bieten.",
     "p2": "Wir sind überzeugt, dass Sprachbarrieren die menschliche Verbindung und Zusammenarbeit niemals einschränken sollten. Unsere Mission ist es, Werkzeuge zu schaffen, die interkulturelle Kommunikation mühelos und ansprechend machen und es Menschen ermöglichen, sich weltweit zu vernetzen und dabei ganz natürlich zu lernen.",
+    "v1Title": "Kommuniziere weltweit",
+    "v1Desc": "Sprich mit jedem, überall, in den Apps, die du bereits nutzt – ohne das Tool zu wechseln oder deinen Flow zu unterbrechen.",
+    "v2Title": "Lerne ganz nebenbei",
+    "v2Desc": "Jede Nachricht ist eine Gelegenheit, neues Vokabular und neue Formulierungen aufzuschnappen und alltägliche Chats in echten Fortschritt zu verwandeln.",
+    "v3Title": "Für echte Verbindung gemacht",
+    "v3Desc": "Wir gestalten für echte menschliche Gespräche, damit Nuancen und Bedeutung nie in der Übersetzung verloren gehen.",
     "privacyDialogTitle": "Datenschutzrichtlinie von Arcatext",
     "termsDialogTitle": "Nutzungsbedingungen von Arcatext"
   },
   "contact": {
+    "eyebrow": "Kontakt aufnehmen",
     "title": "Kontakt aufnehmen",
     "subtitle": "Haben Sie Fragen zu Arcatext oder Interesse an einer Partnerschaft? Wir würden gerne von Ihnen hören.",
     "formTitle": "Schreiben Sie uns eine Nachricht",
+    "infoTitle": "Sprechen wir",
+    "infoDesc": "Ob neugieriger Nutzer, potenzieller Partner oder Pressevertreter – unser Team liest jede Nachricht und antwortet in der Regel innerhalb eines Tages.",
     "firstName": "Vorname",
     "lastName": "Nachname",
     "email": "E-Mail-Adresse",

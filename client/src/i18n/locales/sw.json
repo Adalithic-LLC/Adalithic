@@ -2,6 +2,8 @@
   "nav": {
     "about": "Kutuhusu",
     "contact": "Wasiliana",
+    "features": "Vipengele",
+    "cta": "Wasiliana nasi",
     "language": "Lugha"
   },
   "footer": {
@@ -10,6 +12,7 @@
     "home": "Arcatext",
     "about": "Kutuhusu",
     "contact": "Wasiliana",
+    "features": "Vipengele",
     "legal": "Kisheria",
     "privacy": "Sera ya Faragha",
     "terms": "Masharti ya Matumizi",
@@ -17,9 +20,11 @@
   },
   "hero": {
     "title": "Kutana na <brand>Arcatext</brand>.",
+    "eyebrow": "Kibodi ya AI kwa mazungumzo halisi",
     "tagline": "Ujifunzaji wa lugha unaoongozwa na mtumiaji",
     "description": "Tunageuza mazungumzo halisi, hadithi, na uandishi wa kila siku kuwa safari ya kujifunza lugha unayoiongoza wewe na inayokua pamoja nawe — kwa kuchanganya tafsiri sahihi kulingana na muktadha na maendeleo yanayoweza kupimika ili uweze kuwasiliana kati ya lugha kwa kujiamini.",
-    "learnMore": "Jifunze zaidi",
+    "imageAlt": "Kibodi ya Arcatext ikitafsiri na kusahihisha ujumbe katika programu ya gumzo.",
+    "learnMore": "Ona jinsi inavyofanya kazi",
     "getInTouch": "Wasiliana nasi",
     "typewriter": [
       "Jifunze lugha",
@@ -27,19 +32,102 @@
       "Piga gumzo na marafiki wa kimataifa"
     ]
   },
+  "features": {
+    "eyebrow": "Programu moja, kila sehemu ya mazungumzo",
+    "title": "Kila kitu unachohitaji ili kuzungumza kati ya lugha",
+    "subtitle": "Arcatext ni kibodi ya AI inayoishi ndani ya programu ambazo tayari unazitumia. Kila kipengele kimejengwa kuzunguka wakati mmoja katika mazungumzo halisi—ili uweze kuzingatia unachotaka kusema, si jinsi ya kukisema.",
+    "items": {
+      "receive": {
+        "eyebrow": "Elewa majibu",
+        "title": "Elewa kila jibu, bila kuondoka kwenye kibodi",
+        "description": "Bandika ujumbe uliopokea na Arcatext huutafsiri papo hapo—ikiwa na uchambuzi wa neno kwa neno na toleo la moja kwa moja—ili unase maana halisi, si maelezo ya jumla tu.",
+        "bullets": [
+          "Tafsiri ujumbe unaoingia pale unapoandika",
+          "Ona uchambuzi wa neno kwa neno",
+          "Linganisha maana ya moja kwa moja na ya asili kando kwa kando"
+        ],
+        "alt": "Arcatext ikitafsiri ujumbe uliopokelewa ikiwa na chaguo za uchambuzi na toleo la moja kwa moja."
+      },
+      "homographs": {
+        "eyebrow": "Sema unachomaanisha",
+        "title": "Sema hasa unachomaanisha",
+        "description": "Neno linapokuwa na maana zaidi ya moja, Arcatext hulitambua na kukuruhusu kuchagua maana sahihi—ili neno \"paa\" limaanishe mnyama, si paa la nyumba.",
+        "bullets": [
+          "Utambuzi otomatiki wa maneno yenye maana nyingi",
+          "Chagua maana uliyokusudia",
+          "Epuka tafsiri potofu za aibu kabla ya kutuma"
+        ],
+        "alt": "Arcatext ikitambua neno lenye maana nyingi na kutoa maana iliyokusudiwa."
+      },
+      "reverse": {
+        "eyebrow": "Jihakikishie",
+        "title": "Hakiki tafsiri kwa lugha yako mwenyewe",
+        "description": "Ona ujumbe wako ukitafsiriwa tena kwa lugha yako ya asili kabla ya kubonyeza tuma, ili kila mara ujue hasa kile ambacho mtu mwingine atasoma.",
+        "bullets": [
+          "Tafsiri ya kurudi papo hapo",
+          "Thibitisha nia yako kabla ya kutuma",
+          "Jifunze kwa njia ya asili unavyoendelea"
+        ],
+        "alt": "Arcatext ikithibitisha tafsiri kwa kuionyesha tena kwa lugha ya asili ya mtumiaji."
+      },
+      "recipient": {
+        "eyebrow": "Inayozingatia muktadha",
+        "title": "Tafsiri zinazomfaa mtu unayezungumza naye",
+        "description": "Mwambie Arcatext unayemtumia ujumbe naye hurekebisha kiwango cha heshima, jinsia, na hata mfumo wa uandishi—Kanji, Hiragana, au herufi za Kirumi—ili uendane na hali.",
+        "bullets": [
+          "Msemo unaozingatia jinsia na kikundi",
+          "Chagua alfabeti au maandishi unayotaka",
+          "Sahihi kimuktadha kila mara"
+        ],
+        "alt": "Chaguo za Arcatext za kuandika upya kulingana na jinsia ya mpokeaji, gumzo la kikundi, na alfabeti ya Kijapani."
+      },
+      "synonyms": {
+        "eyebrow": "Kuza msamiati wako",
+        "title": "Kuza msamiati wako unapopiga gumzo",
+        "description": "Kila tafsiri huja na chaguo za visawe, ili ufahamishwe njia mpya za kusema jambo lile lile na kunyakua lugha kwa njia ya asili—ujumbe mmoja kwa wakati.",
+        "bullets": [
+          "Njia nyingi za kuandika kila ujumbe",
+          "Gundua msamiati wenye utajiri na wa asili zaidi",
+          "Maendeleo halisi kutoka kwa mazungumzo halisi"
+        ],
+        "alt": "Arcatext ikitoa chaguo za visawe kwa ujumbe uliotafsiriwa."
+      },
+      "copy": {
+        "eyebrow": "Bakia sambamba",
+        "title": "Weka mazungumzo yote katika muktadha",
+        "description": "Ongeza kiotomatiki nakala ya ujumbe wako kwa lugha yako mwenyewe, ili pande zote mbili ziweze kufuatilia mazungumzo kila mara—bila kupoteza muktadha, bila mkanganyiko.",
+        "bullets": [
+          "Tuma kiotomatiki nakala ya lugha ya asili",
+          "Usipoteze mwelekeo wa mazungumzo kamwe",
+          "Mazungumzo ya lugha mbili bila usumbufu"
+        ],
+        "alt": "Arcatext ikituma nakala ya ujumbe kwa lugha ya asili ya mtumiaji."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Sera ya Faragha",
     "termsTitle": "Masharti ya Matumizi",
     "convenienceNotice": "Tafsiri hii imetolewa kwa urahisi wako. Toleo la Kiingereza la hati hii ndilo toleo linalofunga kisheria; iwapo kutakuwa na tofauti yoyote, toleo la Kiingereza litatawala."
   },
   "about": {
-    "title": "Kuhusu Adalithic",
+    "eyebrow": "Kuhusu Adalithic",
+    "title": "Kuvunja vizuizi vya lugha",
+    "v1Title": "Wasiliana kimataifa",
+    "v1Desc": "Zungumza na yeyote, popote, katika programu ambazo tayari unazitumia—bila kubadilisha zana au kukatiza mtiririko wako.",
+    "v2Title": "Jifunze unavyoendelea",
+    "v2Desc": "Kila ujumbe ni fursa ya kupata msamiati na misemo mipya, ukigeuza mazungumzo ya kila siku kuwa maendeleo halisi.",
+    "v3Title": "Imejengwa kwa ajili ya uhusiano halisi",
+    "v3Desc": "Tunabuni kwa ajili ya mazungumzo ya kweli ya kibinadamu, ili maana na hisia zisipotee kamwe katika tafsiri.",
     "p1": "Adalithic ni kampuni changa ya teknolojia inayolenga kuwapa watu zana na mbinu mpya za kujifunza lugha na kurahisisha mawasiliano kati ya lugha.",
     "p2": "Tunaamini kwamba vizuizi vya lugha havipaswi kamwe kupunguza uhusiano na ushirikiano wa binadamu. Dhamira yetu ni kutengeneza zana zinazofanya mawasiliano ya tamaduni mbalimbali kuwa rahisi na ya kuvutia, kuwawezesha watu kuunganika kimataifa huku wakijifunza kwa njia ya asili.",
     "privacyDialogTitle": "Sera ya Faragha ya Arcatext",
     "termsDialogTitle": "Masharti ya Matumizi ya Arcatext"
   },
   "contact": {
+    "eyebrow": "Wasiliana nasi",
+    "infoTitle": "Tuzungumze",
+    "infoDesc": "Iwe wewe ni mtumiaji mdadisi, mshirika mtarajiwa, au vyombo vya habari, timu yetu husoma kila ujumbe na kwa kawaida hujibu ndani ya siku moja.",
     "title": "Wasiliana nasi",
     "subtitle": "Una maswali kuhusu Arcatext au unavutiwa na ushirikiano? Tungependa kusikia kutoka kwako.",
     "formTitle": "Tutumie ujumbe",

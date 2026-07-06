@@ -2,7 +2,9 @@
   "nav": {
     "about": "Hakkımızda",
     "contact": "İletişim",
-    "language": "Dil"
+    "language": "Dil",
+    "features": "Özellikler",
+    "cta": "Bize ulaşın"
   },
   "footer": {
     "tagline": "Yapay zeka destekli teknolojiyle dil öğrenimini ve iletişimi kökten değiştiriyoruz.",
@@ -10,6 +12,7 @@
     "home": "Arcatext",
     "about": "Hakkımızda",
     "contact": "İletişim",
+    "features": "Özellikler",
     "legal": "Yasal",
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Koşulları",
@@ -19,7 +22,9 @@
     "title": "<brand>Arcatext</brand> ile tanışın.",
     "tagline": "Kullanıcı odaklı dil öğrenimi",
     "description": "Gerçek sohbetleri, hikâyeleri ve günlük yazışmaları, sizin yönlendirdiğiniz ve sizinle birlikte gelişen bir dil öğrenme yolculuğuna dönüştürüyoruz; bağlama sadık çeviriyi ve ölçülebilir ilerlemeyi birleştirerek diller arasında güvenle iletişim kurmanızı sağlıyoruz.",
-    "learnMore": "Daha fazla bilgi",
+    "eyebrow": "Gerçek sohbetler için yapay zeka klavyesi",
+    "imageAlt": "Arcatext klavyesi bir sohbet uygulamasında bir mesajı çevirip düzeltirken.",
+    "learnMore": "Nasıl çalıştığını görün",
     "getInTouch": "Bize ulaşın",
     "typewriter": [
       "Bir dil öğrenin",
@@ -27,13 +32,93 @@
       "Dünyanın dört bir yanından arkadaşlarla sohbet edin"
     ]
   },
+  "features": {
+    "eyebrow": "Tek uygulama, sohbetin her anı için",
+    "title": "Diller arasında konuşmak için ihtiyacınız olan her şey",
+    "subtitle": "Arcatext, zaten kullandığınız uygulamaların içinde yaşayan bir yapay zeka klavyesidir. Her özellik, gerçek bir sohbetteki tek bir an etrafında tasarlanmıştır—böylece nasıl söyleyeceğinize değil, ne söylemek istediğinize odaklanabilirsiniz.",
+    "items": {
+      "receive": {
+        "eyebrow": "Yanıtları anlayın",
+        "title": "Klavyeden çıkmadan her yanıtı anlayın",
+        "description": "Aldığınız bir mesajı yapıştırın, Arcatext onu olduğu yerde çevirsin—kelime kelime çözümleme ve birebir çeviriyle—böylece yalnızca genel anlamı değil, incelikleri de yakalayın.",
+        "bullets": [
+          "Gelen mesajları tam yazdığınız yerde çevirin",
+          "Kelime kelime çözümlemeyi görün",
+          "Birebir ve doğal anlamı yan yana karşılaştırın"
+        ],
+        "alt": "Arcatext, alınan bir mesajı çözümleme ve birebir çeviri seçenekleriyle çevirirken."
+      },
+      "homographs": {
+        "eyebrow": "Demek istediğinizi söyleyin",
+        "title": "Tam olarak demek istediğinizi söyleyin",
+        "description": "Bir kelimenin birden fazla anlamı olduğunda Arcatext bunu fark eder ve doğru anlamı seçmenizi sağlar—böylece \"yüz\" bir sayı değil, surat olur.",
+        "bullets": [
+          "Otomatik eş yazımlı kelime tespiti",
+          "Kastettiğiniz anlamı seçin",
+          "Göndermeden önce yanlış çevirilerden kaçının"
+        ],
+        "alt": "Arcatext, eş yazımlı bir kelimeyi belirleyip kastedilen anlamı önerirken."
+      },
+      "reverse": {
+        "eyebrow": "Kendinizi kontrol edin",
+        "title": "Çeviriyi kendi dilinizde bir kez daha kontrol edin",
+        "description": "Göndermeden önce mesajınızı ana dilinize geri çevrilmiş olarak görün; böylece karşınızdakinin tam olarak ne okuyacağını her zaman bilin.",
+        "bullets": [
+          "Anında ters çeviri",
+          "Göndermeden önce niyetinizi doğrulayın",
+          "İlerledikçe doğal biçimde öğrenin"
+        ],
+        "alt": "Arcatext, bir çeviriyi kullanıcının ana dilinde geri göstererek doğrularken."
+      },
+      "recipient": {
+        "eyebrow": "Bağlama duyarlı",
+        "title": "Konuştuğunuz kişiye uygun çeviriler",
+        "description": "Arcatext'e kime yazdığınızı söyleyin; resmiyeti, cinsiyeti ve hatta yazı sistemini—Kanji, Hiragana veya Latin harfleri—o ana uyacak şekilde ayarlasın.",
+        "bullets": [
+          "Cinsiyete ve gruba duyarlı ifade",
+          "İstediğiniz alfabeyi veya yazıyı seçin",
+          "Her seferinde bağlama uygun ve doğru"
+        ],
+        "alt": "Arcatext'in alıcının cinsiyeti, grup sohbeti ve Japon alfabesi için yeniden ifade seçenekleri."
+      },
+      "synonyms": {
+        "eyebrow": "Kelime dağarcığınızı geliştirin",
+        "title": "Sohbet ederken kelime dağarcığınızı geliştirin",
+        "description": "Her çeviri eş anlamlı seçeneklerle gelir; böylece aynı şeyi söylemenin yeni yollarıyla tanışır ve dili doğal biçimde—her seferinde bir mesajla—öğrenirsiniz.",
+        "bullets": [
+          "Her mesajı ifade etmenin birden çok yolu",
+          "Daha zengin, daha doğal kelimeler keşfedin",
+          "Gerçek sohbetlerden gerçek ilerleme"
+        ],
+        "alt": "Arcatext, çevrilmiş bir mesaj için eş anlamlı seçenekler sunarken."
+      },
+      "copy": {
+        "eyebrow": "Uyumda kalın",
+        "title": "Tüm sohbeti bağlam içinde tutun",
+        "description": "Mesajınızın kendi dilinizdeki bir kopyasını otomatik olarak ekleyin; böylece her iki taraf da sohbeti her zaman takip edebilsin—bağlam kaybı ve karışıklık olmadan.",
+        "bullets": [
+          "Ana dilde kopyayı otomatik gönderin",
+          "Sohbetin akışını asla kaybetmeyin",
+          "Zahmetsiz iki dilli sohbetler"
+        ],
+        "alt": "Arcatext, mesajın bir kopyasını kullanıcının ana dilinde gönderirken."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Gizlilik Politikası",
     "termsTitle": "Kullanım Koşulları",
     "convenienceNotice": "Bu çeviri yalnızca kolaylık sağlamak amacıyla sunulmuştur. Bu belgenin hukuken bağlayıcı sürümü İngilizce sürümüdür; herhangi bir tutarsızlık durumunda İngilizce sürüm geçerlidir."
   },
   "about": {
-    "title": "Adalithic Hakkında",
+    "title": "Dil engellerini yıkıyoruz",
+    "eyebrow": "Adalithic Hakkında",
+    "v1Title": "Küresel iletişim kurun",
+    "v1Desc": "Zaten kullandığınız uygulamalarda, herkesle, her yerde konuşun—araç değiştirmeden ya da akışınızı bozmadan.",
+    "v2Title": "İlerledikçe öğrenin",
+    "v2Desc": "Her mesaj yeni kelimeler ve ifadeler öğrenmek için bir fırsattır; böylece gündelik sohbetler gerçek bir ilerlemeye dönüşür.",
+    "v3Title": "Gerçek bağ için tasarlandı",
+    "v3Desc": "Gerçek insani sohbet için tasarlıyoruz; böylece incelikler ve anlam çeviride asla kaybolmaz.",
     "p1": "Adalithic, insanlara dil öğrenmeleri ve diller arası iletişimi kolaylaştırmaları için yeni araçlar ve teknikler sunmaya odaklanan bir teknoloji girişimidir.",
     "p2": "Dil engellerinin insani bağları ve iş birliğini asla kısıtlamaması gerektiğine inanıyoruz. Misyonumuz, kültürler arası iletişimi zahmetsiz ve keyifli hâle getiren araçlar yaratarak insanların doğal biçimde öğrenirken küresel ölçekte bağ kurmalarını sağlamaktır.",
     "privacyDialogTitle": "Arcatext Gizlilik Politikası",
@@ -42,6 +127,9 @@
   "contact": {
     "title": "Bize ulaşın",
     "subtitle": "Arcatext hakkında sorularınız mı var ya da iş birliğiyle mi ilgileniyorsunuz? Sizden haber almaktan memnuniyet duyarız.",
+    "eyebrow": "Bize ulaşın",
+    "infoTitle": "Konuşalım",
+    "infoDesc": "İster meraklı bir kullanıcı, ister potansiyel bir iş ortağı ya da basın mensubu olun; ekibimiz her mesajı okur ve genellikle bir gün içinde yanıtlar.",
     "formTitle": "Bize bir mesaj gönderin",
     "firstName": "Ad",
     "lastName": "Soyad",

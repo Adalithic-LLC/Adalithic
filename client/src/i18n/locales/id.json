@@ -2,6 +2,8 @@
   "nav": {
     "about": "Tentang",
     "contact": "Kontak",
+    "features": "Fitur",
+    "cta": "Hubungi kami",
     "language": "Bahasa"
   },
   "footer": {
@@ -10,6 +12,7 @@
     "home": "Arcatext",
     "about": "Tentang",
     "contact": "Kontak",
+    "features": "Fitur",
     "legal": "Hukum",
     "privacy": "Kebijakan Privasi",
     "terms": "Ketentuan Penggunaan",
@@ -17,9 +20,11 @@
   },
   "hero": {
     "title": "Kenali <brand>Arcatext</brand>.",
+    "eyebrow": "Keyboard AI untuk percakapan yang sesungguhnya",
     "tagline": "Pembelajaran bahasa yang dipandu pengguna",
     "description": "Kami mengubah percakapan nyata, cerita, dan tulisan sehari-hari menjadi perjalanan belajar bahasa yang Anda pandu dan berkembang bersama Anda — memadukan terjemahan yang setia pada konteks dan kemajuan yang terukur agar Anda dapat berkomunikasi antarbahasa dengan percaya diri.",
-    "learnMore": "Pelajari selengkapnya",
+    "imageAlt": "Keyboard Arcatext menerjemahkan dan mengoreksi sebuah pesan di aplikasi obrolan.",
+    "learnMore": "Lihat cara kerjanya",
     "getInTouch": "Hubungi kami",
     "typewriter": [
       "Pelajari sebuah bahasa",
@@ -27,19 +32,102 @@
       "Mengobrol dengan teman dari seluruh dunia"
     ]
   },
+  "features": {
+    "eyebrow": "Satu aplikasi, setiap bagian percakapan",
+    "title": "Semua yang Anda butuhkan untuk berbincang lintas bahasa",
+    "subtitle": "Arcatext adalah keyboard AI yang hidup di dalam aplikasi yang sudah Anda gunakan. Setiap fitur dibangun di sekitar satu momen dalam percakapan nyata—sehingga Anda bisa fokus pada apa yang ingin Anda katakan, bukan bagaimana mengatakannya.",
+    "items": {
+      "receive": {
+        "eyebrow": "Pahami balasan",
+        "title": "Pahami setiap balasan, tanpa meninggalkan keyboard",
+        "description": "Tempel pesan yang Anda terima dan Arcatext menerjemahkannya secara langsung—lengkap dengan uraian kata demi kata dan versi harfiah—sehingga Anda menangkap nuansanya, bukan sekadar intinya.",
+        "bullets": [
+          "Terjemahkan pesan masuk langsung di tempat Anda mengetik",
+          "Lihat uraian kata demi kata",
+          "Bandingkan makna harfiah dan makna alami secara berdampingan"
+        ],
+        "alt": "Arcatext menerjemahkan pesan yang diterima dengan opsi uraian dan versi harfiah."
+      },
+      "homographs": {
+        "eyebrow": "Katakan yang Anda maksud",
+        "title": "Katakan persis seperti yang Anda maksud",
+        "description": "Ketika sebuah kata memiliki lebih dari satu makna, Arcatext mendeteksinya dan membiarkan Anda memilih makna yang tepat—sehingga \"bisa\" berarti mampu, bukan racun ular.",
+        "bullets": [
+          "Deteksi homograf otomatis",
+          "Pilih makna yang Anda maksudkan",
+          "Hindari salah terjemah yang canggung sebelum mengirim"
+        ],
+        "alt": "Arcatext mengenali sebuah homograf dan menawarkan makna yang dimaksudkan."
+      },
+      "reverse": {
+        "eyebrow": "Periksa sendiri",
+        "title": "Periksa ulang terjemahan dalam bahasa Anda sendiri",
+        "description": "Lihat pesan Anda diterjemahkan kembali ke bahasa ibu Anda sebelum menekan kirim, sehingga Anda selalu tahu persis apa yang akan dibaca lawan bicara.",
+        "bullets": [
+          "Terjemahan balik seketika",
+          "Pastikan maksud Anda sebelum mengirim",
+          "Belajar secara alami sambil jalan"
+        ],
+        "alt": "Arcatext memvalidasi terjemahan dengan menampilkannya kembali dalam bahasa ibu pengguna."
+      },
+      "recipient": {
+        "eyebrow": "Peka konteks",
+        "title": "Terjemahan yang pas dengan lawan bicara Anda",
+        "description": "Beri tahu Arcatext dengan siapa Anda berkirim pesan, dan ia menyesuaikan tingkat formalitas, gender, bahkan sistem penulisan—Kanji, Hiragana, atau romanisasi—agar cocok dengan situasinya.",
+        "bullets": [
+          "Ungkapan yang peka gender dan grup",
+          "Pilih alfabet atau aksara yang Anda inginkan",
+          "Akurat secara kontekstual setiap saat"
+        ],
+        "alt": "Opsi penyusunan ulang Arcatext untuk gender penerima, obrolan grup, dan alfabet Jepang."
+      },
+      "synonyms": {
+        "eyebrow": "Perkaya kosakata Anda",
+        "title": "Perkaya kosakata Anda sambil mengobrol",
+        "description": "Setiap terjemahan disertai opsi sinonim, sehingga Anda mengenal beragam cara mengungkapkan hal yang sama dan menyerap bahasa secara alami—satu pesan setiap kali.",
+        "bullets": [
+          "Beragam cara mengungkapkan setiap pesan",
+          "Temukan kosakata yang lebih kaya dan alami",
+          "Kemajuan nyata dari percakapan nyata"
+        ],
+        "alt": "Arcatext menawarkan opsi sinonim untuk pesan yang telah diterjemahkan."
+      },
+      "copy": {
+        "eyebrow": "Tetap selaras",
+        "title": "Jaga seluruh percakapan tetap dalam konteks",
+        "description": "Otomatis menambahkan salinan pesan Anda dalam bahasa Anda sendiri, sehingga kedua pihak selalu bisa mengikuti percakapan—tanpa konteks yang hilang, tanpa kebingungan.",
+        "bullets": [
+          "Kirim otomatis salinan dalam bahasa ibu",
+          "Tak pernah kehilangan alur percakapan",
+          "Percakapan dwibahasa tanpa repot"
+        ],
+        "alt": "Arcatext mengirim salinan pesan dalam bahasa ibu pengguna."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Kebijakan Privasi",
     "termsTitle": "Ketentuan Penggunaan",
     "convenienceNotice": "Terjemahan ini disediakan untuk kenyamanan Anda. Versi bahasa Inggris dari dokumen ini adalah versi yang mengikat secara hukum; jika terjadi perbedaan, versi bahasa Inggris yang berlaku."
   },
   "about": {
-    "title": "Tentang Adalithic",
+    "eyebrow": "Tentang Adalithic",
+    "title": "Meruntuhkan hambatan bahasa",
+    "v1Title": "Berkomunikasi secara global",
+    "v1Desc": "Berbincang dengan siapa pun, di mana pun, dalam aplikasi yang sudah Anda gunakan—tanpa berpindah alat atau memutus alur Anda.",
+    "v2Title": "Belajar sambil jalan",
+    "v2Desc": "Setiap pesan adalah kesempatan untuk memungut kosakata dan ungkapan baru, mengubah obrolan sehari-hari menjadi kemajuan nyata.",
+    "v3Title": "Dibuat untuk koneksi yang sesungguhnya",
+    "v3Desc": "Kami merancang untuk percakapan manusia yang tulus, sehingga nuansa dan makna tidak pernah hilang dalam terjemahan.",
     "p1": "Adalithic adalah startup teknologi yang berfokus pada memberikan orang-orang alat dan teknik baru untuk belajar bahasa serta memfasilitasi komunikasi antarbahasa.",
     "p2": "Kami percaya bahwa hambatan bahasa tidak boleh membatasi koneksi dan kolaborasi antarmanusia. Misi kami adalah menciptakan alat yang membuat komunikasi lintas budaya menjadi mudah dan menarik, sehingga memungkinkan orang untuk terhubung secara global sambil belajar dengan cara yang alami.",
     "privacyDialogTitle": "Kebijakan Privasi Arcatext",
     "termsDialogTitle": "Ketentuan Penggunaan Arcatext"
   },
   "contact": {
+    "eyebrow": "Hubungi kami",
+    "infoTitle": "Mari bicara",
+    "infoDesc": "Baik Anda pengguna yang penasaran, calon mitra, maupun media, tim kami membaca setiap pesan dan biasanya membalas dalam sehari.",
     "title": "Hubungi kami",
     "subtitle": "Punya pertanyaan tentang Arcatext atau tertarik dengan kemitraan? Kami senang mendengar dari Anda.",
     "formTitle": "Kirimi kami pesan",

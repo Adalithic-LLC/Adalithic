@@ -2,7 +2,9 @@
   "nav": {
     "about": "Rólunk",
     "contact": "Kapcsolat",
-    "language": "Nyelv"
+    "language": "Nyelv",
+    "features": "Funkciók",
+    "cta": "Lépj kapcsolatba velünk"
   },
   "footer": {
     "tagline": "Mesterséges intelligenciára épülő technológiával forradalmasítjuk a nyelvtanulást és a kommunikációt.",
@@ -13,19 +15,95 @@
     "legal": "Jogi tudnivalók",
     "privacy": "Adatvédelmi irányelvek",
     "terms": "Felhasználási feltételek",
-    "rights": "© 2025 Adalithic. Minden jog fenntartva."
+    "rights": "© 2025 Adalithic. Minden jog fenntartva.",
+    "features": "Funkciók"
   },
   "hero": {
     "title": "Ismerd meg az <brand>Arcatext</brand>et.",
     "tagline": "Felhasználó által vezérelt nyelvtanulás",
     "description": "A valódi beszélgetéseket, történeteket és a mindennapi írást olyan, általad vezérelt nyelvtanulási úttá alakítjuk, amely veled együtt fejlődik – a kontextushű fordítást és a mérhető fejlődést ötvözve, hogy magabiztosan kommunikálhass a nyelvek között.",
-    "learnMore": "Tudj meg többet",
+    "learnMore": "Nézd meg, hogyan működik",
     "getInTouch": "Lépj kapcsolatba velünk",
+    "eyebrow": "A mesterséges intelligenciára épülő billentyűzet valódi beszélgetésekhez",
+    "imageAlt": "Az Arcatext billentyűzet egy üzenetet fordít és javít egy csevegőalkalmazásban.",
     "typewriter": [
       "Tanulj meg egy nyelvet",
       "Kommunikálj üzleti ügyekben",
       "Csevegj a világ minden tájáról származó barátokkal"
     ]
+  },
+  "features": {
+    "eyebrow": "Egyetlen alkalmazás a beszélgetés minden részéhez",
+    "title": "Minden, amire szükséged van a nyelvek közötti kommunikációhoz",
+    "subtitle": "Az Arcatext egy mesterséges intelligenciára épülő billentyűzet, amely a már használt alkalmazásaidon belül működik. Minden funkció egy valódi beszélgetés egyetlen pillanata köré épül – így arra összpontosíthatsz, amit mondani szeretnél, nem pedig arra, hogyan mondd.",
+    "items": {
+      "receive": {
+        "eyebrow": "Értsd meg a válaszokat",
+        "title": "Értsd meg minden választ anélkül, hogy elhagynád a billentyűzetet",
+        "description": "Illessz be egy kapott üzenetet, és az Arcatext helyben lefordítja – teljes, szóról szóra bontással és szó szerinti változattal együtt –, hogy ne csak a lényeget, hanem az árnyalatokat is elkapd.",
+        "bullets": [
+          "Fordítsd le a beérkező üzeneteket pontosan ott, ahol gépelsz",
+          "Nézd meg a szóról szóra bontást",
+          "Hasonlítsd össze a szó szerinti és a természetes jelentést egymás mellett"
+        ],
+        "alt": "Az Arcatext egy kapott üzenetet fordít bontással és szó szerinti opciókkal."
+      },
+      "homographs": {
+        "eyebrow": "Mondd azt, amit gondolsz",
+        "title": "Mondd pontosan azt, amit gondolsz",
+        "description": "Ha egy szónak több jelentése van, az Arcatext észreveszi, és hagyja, hogy a megfelelő jelentést válaszd – így a „körte“ a gyümölcs lesz, nem pedig a villanykörte.",
+        "bullets": [
+          "Automatikus homográfészlelés",
+          "Válaszd ki a szándékolt jelentést",
+          "Kerüld el a kínos félrefordításokat, mielőtt elküldenéd"
+        ],
+        "alt": "Az Arcatext azonosít egy homográfot, és felkínálja a szándékolt jelentést."
+      },
+      "reverse": {
+        "eyebrow": "Ellenőrizd magad",
+        "title": "Ellenőrizd a fordítást a saját nyelveden",
+        "description": "Küldés előtt lásd az üzenetedet visszafordítva az anyanyelvedre, így mindig pontosan tudod, mit fog olvasni a másik fél.",
+        "bullets": [
+          "Azonnali visszafordítás",
+          "Erősítsd meg a szándékodat küldés előtt",
+          "Tanulj természetes módon, ahogy haladsz"
+        ],
+        "alt": "Az Arcatext úgy ellenőrzi a fordítást, hogy visszamutatja azt a felhasználó anyanyelvén."
+      },
+      "recipient": {
+        "eyebrow": "Kontextusérzékeny",
+        "title": "Fordítások, amelyek ahhoz illenek, akivel beszélsz",
+        "description": "Mondd meg az Arcatextnek, kinek írsz, és igazodik a formalitáshoz, a nemhez, sőt még az írásrendszerhez is – Kanji, Hiragana vagy latin betűs átírás –, hogy illjen az adott pillanathoz.",
+        "bullets": [
+          "Nemet és csoportot figyelembe vevő megfogalmazás",
+          "Válaszd ki a kívánt ábécét vagy írást",
+          "Minden alkalommal kontextuálisan pontos"
+        ],
+        "alt": "Az Arcatext átfogalmazási lehetőségei a címzett neme, a csoportos csevegés és a japán ábécé szerint."
+      },
+      "synonyms": {
+        "eyebrow": "Bővítsd a szókincsedet",
+        "title": "Bővítsd a szókincsedet csevegés közben",
+        "description": "Minden fordításhoz szinonimaopciók járnak, így új módokat ismersz meg ugyanannak a kifejezésére, és természetes módon sajátítod el a nyelvet – üzenetről üzenetre.",
+        "bullets": [
+          "Több mód minden üzenet megfogalmazására",
+          "Fedezz fel gazdagabb, természetesebb szókincset",
+          "Valódi fejlődés valódi beszélgetésekből"
+        ],
+        "alt": "Az Arcatext szinonimaopciókat kínál egy lefordított üzenethez."
+      },
+      "copy": {
+        "eyebrow": "Maradj szinkronban",
+        "title": "Tartsd az egész beszélgetést kontextusban",
+        "description": "Automatikusan add hozzá az üzeneted egy másolatát a saját nyelveden, hogy mindkét fél mindig követni tudja a beszélgetést – nincs elveszett kontextus, nincs félreértés.",
+        "bullets": [
+          "Automatikusan küldj el egy anyanyelvi másolatot",
+          "Soha ne veszítsd el a beszélgetés fonalát",
+          "Erőfeszítés nélküli kétnyelvű beszélgetések"
+        ],
+        "alt": "Az Arcatext elküldi az üzenet egy másolatát a felhasználó anyanyelvén."
+      }
+    }
   },
   "legalPages": {
     "privacyTitle": "Adatvédelmi irányelvek",
@@ -33,11 +111,18 @@
     "convenienceNotice": "Ezt a fordítást az Ön kényelme érdekében biztosítjuk. A dokumentum jogilag kötelező érvényű változata az angol nyelvű változat; bármilyen eltérés esetén az angol nyelvű változat az irányadó."
   },
   "about": {
-    "title": "Az Adalithicről",
+    "title": "Ledöntjük a nyelvi akadályokat",
     "p1": "Az Adalithic egy technológiai startup, amely arra összpontosít, hogy új eszközöket és technikákat adjon az embereknek a nyelvtanuláshoz és a nyelvek közötti kommunikáció megkönnyítéséhez.",
     "p2": "Hisszük, hogy a nyelvi akadályok soha nem korlátozhatják az emberi kapcsolatokat és az együttműködést. Küldetésünk olyan eszközök megalkotása, amelyek a kultúrák közötti kommunikációt könnyeddé és vonzóvá teszik, lehetővé téve az emberek számára, hogy globálisan kapcsolódjanak, miközben természetes módon tanulnak.",
     "privacyDialogTitle": "Arcatext adatvédelmi irányelvek",
-    "termsDialogTitle": "Arcatext felhasználási feltételek"
+    "termsDialogTitle": "Arcatext felhasználási feltételek",
+    "eyebrow": "Az Adalithicről",
+    "v1Title": "Kommunikálj globálisan",
+    "v1Desc": "Beszélj bárkivel, bárhol, a már használt alkalmazásaidban – anélkül, hogy eszközt kellene váltanod vagy megszakadna a lendületed.",
+    "v2Title": "Tanulj útközben",
+    "v2Desc": "Minden üzenet lehetőség új szavak és kifejezések elsajátítására, így a mindennapi csevegésekből valódi fejlődés lesz.",
+    "v3Title": "Valódi kapcsolatokra tervezve",
+    "v3Desc": "Az igazi emberi beszélgetésekre tervezünk, így az árnyalatok és a jelentés soha nem vész el a fordításban."
   },
   "contact": {
     "title": "Lépj kapcsolatba velünk",
@@ -55,7 +140,10 @@
     "supportEmail": "Támogatási e-mail",
     "toastSuccessTitle": "Az üzenet sikeresen elküldve!",
     "toastSuccessDesc": "24 órán belül válaszolunk.",
-    "toastErrorTitle": "Hiba történt az üzenet küldésekor"
+    "toastErrorTitle": "Hiba történt az üzenet küldésekor",
+    "eyebrow": "Lépj kapcsolatba velünk",
+    "infoTitle": "Beszéljünk",
+    "infoDesc": "Akár kíváncsi felhasználó, akár lehetséges partner vagy a sajtó képviselője vagy, csapatunk minden üzenetet elolvas, és általában egy napon belül válaszol."
   },
   "portfolio": {
     "privacyLink": "Adatvédelmi irányelvek"

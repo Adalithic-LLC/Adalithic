@@ -2,7 +2,9 @@
   "nav": {
     "about": "Over ons",
     "contact": "Contact",
-    "language": "Taal"
+    "language": "Taal",
+    "features": "Functies",
+    "cta": "Neem contact op"
   },
   "footer": {
     "tagline": "Wij revolutioneren het leren van talen en communicatie met AI-gestuurde technologie.",
@@ -13,13 +15,16 @@
     "legal": "Juridisch",
     "privacy": "Privacybeleid",
     "terms": "Gebruiksvoorwaarden",
-    "rights": "© 2025 Adalithic. Alle rechten voorbehouden."
+    "rights": "© 2025 Adalithic. Alle rechten voorbehouden.",
+    "features": "Functies"
   },
   "hero": {
     "title": "Maak kennis met <brand>Arcatext</brand>.",
     "tagline": "Door de gebruiker gestuurd talen leren",
     "description": "We veranderen echte gesprekken, verhalen en dagelijks schrijven in een door jou gestuurde taalleerreis die met je meegroeit — met contextnauwkeurige vertaling en meetbare voortgang, zodat je met vertrouwen tussen talen kunt communiceren.",
-    "learnMore": "Meer informatie",
+    "eyebrow": "Het AI-toetsenbord voor echte gesprekken",
+    "imageAlt": "Het Arcatext-toetsenbord dat een bericht in een chat-app vertaalt en corrigeert.",
+    "learnMore": "Ontdek hoe het werkt",
     "getInTouch": "Neem contact op",
     "typewriter": [
       "Leer een taal",
@@ -27,17 +32,97 @@
       "Chat met internationale vrienden"
     ]
   },
+  "features": {
+    "eyebrow": "Eén app, elk onderdeel van het gesprek",
+    "title": "Alles wat je nodig hebt om talen te overbruggen",
+    "subtitle": "Arcatext is een AI-toetsenbord dat leeft binnen de apps die je al gebruikt. Elke functie is opgebouwd rond één moment in een echt gesprek—zodat je je kunt richten op wat je wilt zeggen, niet op hoe je het zegt.",
+    "items": {
+      "receive": {
+        "eyebrow": "Begrijp antwoorden",
+        "title": "Begrijp elk antwoord, zonder het toetsenbord te verlaten",
+        "description": "Plak een bericht dat je hebt ontvangen en Arcatext vertaalt het direct—met een volledige woord-voor-woord-analyse en een letterlijke versie—zodat je de nuance oppikt, niet alleen de kern.",
+        "bullets": [
+          "Vertaal binnenkomende berichten precies waar je typt",
+          "Bekijk een woord-voor-woord-analyse",
+          "Vergelijk de letterlijke en natuurlijke betekenis naast elkaar"
+        ],
+        "alt": "Arcatext vertaalt een ontvangen bericht met analyse- en letterlijke opties."
+      },
+      "homographs": {
+        "eyebrow": "Zeg wat je bedoelt",
+        "title": "Zeg precies wat je bedoelt",
+        "description": "Wanneer een woord meerdere betekenissen heeft, herkent Arcatext dit en laat je de juiste betekenis kiezen—zodat \"bank\" de zitbank wordt en niet de geldinstelling.",
+        "bullets": [
+          "Automatische herkenning van homoniemen",
+          "Kies de betekenis die je bedoelde",
+          "Voorkom onhandige vertaalfouten voordat je verstuurt"
+        ],
+        "alt": "Arcatext identificeert een homoniem en biedt de bedoelde betekenis."
+      },
+      "reverse": {
+        "eyebrow": "Controleer jezelf",
+        "title": "Controleer de vertaling in je eigen taal",
+        "description": "Zie je bericht teruggezet in je moedertaal voordat je op verzenden drukt, zodat je altijd precies weet wat de ander zal lezen.",
+        "bullets": [
+          "Directe terugvertaling",
+          "Bevestig je bedoeling voordat je verstuurt",
+          "Leer al doende op een natuurlijke manier"
+        ],
+        "alt": "Arcatext valideert een vertaling door deze terug te tonen in de moedertaal van de gebruiker."
+      },
+      "recipient": {
+        "eyebrow": "Contextbewust",
+        "title": "Vertalingen die passen bij met wie je praat",
+        "description": "Vertel Arcatext met wie je chat en het past de mate van formaliteit, het geslacht en zelfs het schrift aan—Kanji, Hiragana of geromaniseerd—om bij het moment te passen.",
+        "bullets": [
+          "Geslachts- en groepsbewuste formulering",
+          "Kies het alfabet of schrift dat je wilt",
+          "Elke keer contextueel accuraat"
+        ],
+        "alt": "Arcatext-herformuleeropties voor het geslacht van de ontvanger, groepschat en Japans alfabet."
+      },
+      "synonyms": {
+        "eyebrow": "Vergroot je woordenschat",
+        "title": "Vergroot je woordenschat terwijl je chat",
+        "description": "Elke vertaling komt met synoniemopties, zodat je kennismaakt met nieuwe manieren om hetzelfde te zeggen en de taal op een natuurlijke manier oppikt—één bericht tegelijk.",
+        "bullets": [
+          "Meerdere manieren om elk bericht te formuleren",
+          "Ontdek rijkere, natuurlijkere woordenschat",
+          "Echte vooruitgang uit echte gesprekken"
+        ],
+        "alt": "Arcatext biedt synoniemopties voor een vertaald bericht."
+      },
+      "copy": {
+        "eyebrow": "Blijf synchroon",
+        "title": "Houd het hele gesprek in context",
+        "description": "Voeg automatisch een kopie van je bericht in je eigen taal toe, zodat beide kanten het gesprek altijd kunnen volgen—geen verloren context, geen verwarring.",
+        "bullets": [
+          "Verstuur automatisch een kopie in de moedertaal",
+          "Verlies de draad van het gesprek nooit",
+          "Moeiteloze tweetalige gesprekken"
+        ],
+        "alt": "Arcatext verstuurt een kopie van het bericht in de moedertaal van de gebruiker."
+      }
+    }
+  },
   "legalPages": {
     "privacyTitle": "Privacybeleid",
     "termsTitle": "Gebruiksvoorwaarden",
     "convenienceNotice": "Deze vertaling wordt voor uw gemak aangeboden. De Engelse versie van dit document is de juridisch bindende versie; bij eventuele verschillen prevaleert de Engelse versie."
   },
   "about": {
-    "title": "Over Adalithic",
+    "title": "Taalbarrières doorbreken",
     "p1": "Adalithic is een technologiestart-up die zich richt op het bieden van nieuwe hulpmiddelen en technieken om talen te leren en communicatie tussen talen te vergemakkelijken.",
     "p2": "Wij geloven dat taalbarrières menselijke verbinding en samenwerking nooit mogen beperken. Onze missie is om hulpmiddelen te maken die interculturele communicatie moeiteloos en boeiend maken, zodat mensen wereldwijd in contact kunnen komen terwijl ze op een natuurlijke manier leren.",
     "privacyDialogTitle": "Privacybeleid van Arcatext",
-    "termsDialogTitle": "Gebruiksvoorwaarden van Arcatext"
+    "termsDialogTitle": "Gebruiksvoorwaarden van Arcatext",
+    "eyebrow": "Over Adalithic",
+    "v1Title": "Communiceer wereldwijd",
+    "v1Desc": "Praat met iedereen, waar dan ook, in de apps die je al gebruikt—zonder van tool te wisselen of je flow te onderbreken.",
+    "v2Title": "Leer al doende",
+    "v2Desc": "Elk bericht is een kans om nieuwe woorden en uitdrukkingen op te pikken, waardoor alledaagse gesprekken echte vooruitgang worden.",
+    "v3Title": "Gemaakt voor echte verbinding",
+    "v3Desc": "Wij ontwerpen voor echt menselijk gesprek, zodat nuance en betekenis nooit verloren gaan in de vertaling."
   },
   "contact": {
     "title": "Neem contact op",
@@ -55,7 +140,10 @@
     "supportEmail": "Support-e-mail",
     "toastSuccessTitle": "Bericht succesvol verzonden!",
     "toastSuccessDesc": "We nemen binnen 24 uur contact met je op.",
-    "toastErrorTitle": "Fout bij het verzenden van het bericht"
+    "toastErrorTitle": "Fout bij het verzenden van het bericht",
+    "eyebrow": "Neem contact op",
+    "infoTitle": "Laten we praten",
+    "infoDesc": "Of je nu een nieuwsgierige gebruiker, een potentiële partner of de pers bent—ons team leest elk bericht en reageert meestal binnen een dag."
   },
   "portfolio": {
     "privacyLink": "Privacybeleid"

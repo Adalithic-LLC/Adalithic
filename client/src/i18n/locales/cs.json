@@ -2,7 +2,9 @@
   "nav": {
     "about": "O nás",
     "contact": "Kontakt",
-    "language": "Jazyk"
+    "language": "Jazyk",
+    "features": "Funkce",
+    "cta": "Kontaktujte nás"
   },
   "footer": {
     "tagline": "Přinášíme revoluci do výuky jazyků a komunikace pomocí technologií využívajících umělou inteligenci.",
@@ -13,19 +15,95 @@
     "legal": "Právní informace",
     "privacy": "Zásady ochrany osobních údajů",
     "terms": "Podmínky použití",
-    "rights": "© 2025 Adalithic. Všechna práva vyhrazena."
+    "rights": "© 2025 Adalithic. Všechna práva vyhrazena.",
+    "features": "Funkce"
   },
   "hero": {
     "title": "Seznamte se s <brand>Arcatext</brand>.",
     "tagline": "Výuka jazyků řízená uživatelem",
     "description": "Proměňujeme skutečné konverzace, příběhy a každodenní psaní v cestu za učením jazyků, kterou řídíte vy a která se vyvíjí spolu s vámi – kombinujeme překlad věrný kontextu a měřitelný pokrok, abyste mohli sebevědomě komunikovat napříč jazyky.",
-    "learnMore": "Zjistit více",
+    "learnMore": "Podívejte se, jak to funguje",
     "getInTouch": "Kontaktujte nás",
+    "eyebrow": "Klávesnice s umělou inteligencí pro skutečné konverzace",
+    "imageAlt": "Klávesnice Arcatext překládá a opravuje zprávu v chatovací aplikaci.",
     "typewriter": [
       "Naučte se jazyk",
       "Komunikujte v byznysu",
       "Chatujte s přáteli z celého světa"
     ]
+  },
+  "features": {
+    "eyebrow": "Jedna aplikace pro každou část konverzace",
+    "title": "Vše, co potřebujete ke komunikaci napříč jazyky",
+    "subtitle": "Arcatext je klávesnice s umělou inteligencí, která funguje přímo v aplikacích, jež už používáte. Každá funkce je postavená kolem jednoho okamžiku skutečné konverzace – abyste se mohli soustředit na to, co chcete říct, a ne na to, jak to říct.",
+    "items": {
+      "receive": {
+        "eyebrow": "Porozumějte odpovědím",
+        "title": "Porozumějte každé odpovědi, aniž byste opustili klávesnici",
+        "description": "Vložte zprávu, kterou jste dostali, a Arcatext ji přeloží přímo na místě – s kompletním rozborem slovo po slovu a doslovnou verzí – takže zachytíte nejen smysl, ale i nuance.",
+        "bullets": [
+          "Překládejte příchozí zprávy přímo tam, kde píšete",
+          "Prohlédněte si rozbor slovo po slovu",
+          "Porovnejte doslovný a přirozený význam vedle sebe"
+        ],
+        "alt": "Arcatext překládá přijatou zprávu s rozborem a doslovnými možnostmi."
+      },
+      "homographs": {
+        "eyebrow": "Řekněte, co máte na mysli",
+        "title": "Řekněte přesně to, co myslíte",
+        "description": "Když má slovo více významů, Arcatext to pozná a nechá vás vybrat ten správný – takže „list“ bude ten ze stromu, a ne papírový.",
+        "bullets": [
+          "Automatické rozpoznání homonym",
+          "Vyberte význam, který jste zamýšleli",
+          "Vyhněte se trapným chybám v překladu ještě před odesláním"
+        ],
+        "alt": "Arcatext rozpoznává homonymum a nabízí zamýšlený význam."
+      },
+      "reverse": {
+        "eyebrow": "Zkontrolujte se",
+        "title": "Ověřte si překlad ve svém vlastním jazyce",
+        "description": "Než zprávu odešlete, uvidíte ji přeloženou zpět do svého rodného jazyka, takže vždy přesně víte, co si druhá strana přečte.",
+        "bullets": [
+          "Okamžitý zpětný překlad",
+          "Potvrďte svůj záměr před odesláním",
+          "Učte se přirozeně za pochodu"
+        ],
+        "alt": "Arcatext ověřuje překlad tím, že jej zobrazí zpět v rodném jazyce uživatele."
+      },
+      "recipient": {
+        "eyebrow": "Zohledňuje kontext",
+        "title": "Překlady, které sedí tomu, s kým mluvíte",
+        "description": "Řekněte Arcatextu, komu píšete, a on přizpůsobí míru formálnosti, rod i systém písma – Kanji, Hiragana nebo latinku – aby odpovídal dané chvíli.",
+        "bullets": [
+          "Formulace zohledňující rod i skupinu",
+          "Vyberte si abecedu nebo písmo, které chcete",
+          "Kontextově přesné pokaždé"
+        ],
+        "alt": "Možnosti přeformulování v Arcatextu podle rodu příjemce, skupinového chatu a japonské abecedy."
+      },
+      "synonyms": {
+        "eyebrow": "Rozšiřte si slovní zásobu",
+        "title": "Rozšiřujte si slovní zásobu během chatování",
+        "description": "Ke každému překladu dostanete možnosti synonym, takže poznáváte nové způsoby, jak vyjádřit totéž, a jazyk se učíte přirozeně – zprávu po zprávě.",
+        "bullets": [
+          "Více způsobů, jak formulovat každou zprávu",
+          "Objevujte bohatší a přirozenější slovní zásobu",
+          "Skutečný pokrok ze skutečných konverzací"
+        ],
+        "alt": "Arcatext nabízí možnosti synonym pro přeloženou zprávu."
+      },
+      "copy": {
+        "eyebrow": "Zůstaňte v souladu",
+        "title": "Udržujte celé vlákno v kontextu",
+        "description": "Automaticky přidejte kopii své zprávy ve vlastním jazyce, aby obě strany mohly vždy sledovat konverzaci – žádný ztracený kontext, žádné zmatky.",
+        "bullets": [
+          "Automaticky odešlete kopii v rodném jazyce",
+          "Nikdy neztraťte přehled o vláknu",
+          "Snadné dvojjazyčné konverzace"
+        ],
+        "alt": "Arcatext odesílá kopii zprávy v rodném jazyce uživatele."
+      }
+    }
   },
   "legalPages": {
     "privacyTitle": "Zásady ochrany osobních údajů",
@@ -33,11 +111,18 @@
     "convenienceNotice": "Tento překlad je poskytován pouze pro vaše pohodlí. Právně závaznou verzí tohoto dokumentu je anglická verze; v případě jakéhokoli rozporu má přednost anglická verze."
   },
   "about": {
-    "title": "O společnosti Adalithic",
+    "title": "Boříme jazykové bariéry",
     "p1": "Adalithic je technologický startup zaměřený na to, aby lidem poskytoval nové nástroje a techniky pro učení jazyků a usnadňoval komunikaci mezi jazyky.",
     "p2": "Věříme, že jazykové bariéry by nikdy neměly omezovat mezilidské spojení a spolupráci. Naším posláním je vytvářet nástroje, které činí mezikulturní komunikaci snadnou a poutavou, a umožňují lidem propojovat se celosvětově a zároveň se přirozeně učit.",
     "privacyDialogTitle": "Zásady ochrany osobních údajů Arcatext",
-    "termsDialogTitle": "Podmínky použití Arcatext"
+    "termsDialogTitle": "Podmínky použití Arcatext",
+    "eyebrow": "O společnosti Adalithic",
+    "v1Title": "Komunikujte globálně",
+    "v1Desc": "Mluvte s kýmkoli, kdekoli, v aplikacích, které už používáte – bez přepínání nástrojů a bez narušení vašeho toku.",
+    "v2Title": "Učte se za pochodu",
+    "v2Desc": "Každá zpráva je příležitostí osvojit si novou slovní zásobu a obraty, a proměnit tak každodenní konverzace ve skutečný pokrok.",
+    "v3Title": "Vytvořeno pro skutečné spojení",
+    "v3Desc": "Navrhujeme pro opravdové lidské konverzace, takže se nuance a význam nikdy neztratí v překladu."
   },
   "contact": {
     "title": "Kontaktujte nás",
@@ -55,7 +140,10 @@
     "supportEmail": "E-mail podpory",
     "toastSuccessTitle": "Zpráva byla úspěšně odeslána!",
     "toastSuccessDesc": "Ozveme se vám do 24 hodin.",
-    "toastErrorTitle": "Chyba při odesílání zprávy"
+    "toastErrorTitle": "Chyba při odesílání zprávy",
+    "eyebrow": "Kontaktujte nás",
+    "infoTitle": "Pojďme si promluvit",
+    "infoDesc": "Ať už jste zvědavý uživatel, potenciální partner, nebo novinář, náš tým čte každou zprávu a obvykle odpovídá do jednoho dne."
   },
   "portfolio": {
     "privacyLink": "Zásady ochrany osobních údajů"
