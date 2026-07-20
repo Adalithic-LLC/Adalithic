@@ -21,7 +21,7 @@
   "hero": {
     "title": "Meet <brand>Arcatext</brand>.",
     "tagline": "User-driven Language Learning",
-    "description": "Turning real conversations, stories, and everyday writing into a user-driven language learning journey that evolves with you—combining context-accurate translation and measurable progress so you can communicate across languages with confidence.",
+    "description": "Turning real conversations into a user-driven language learning journey that evolves with you.",
     "imageAlt": "The Arcatext keyboard translating and correcting a message in a chat app.",
     "learnMore": "See how it works",
     "getInTouch": "Get in touch",
@@ -34,12 +34,12 @@
   "features": {
     "eyebrow": "One app, every part of the conversation",
     "title": "Everything you need to talk across languages",
-    "subtitle": "Arcatext is an AI keyboard that lives inside the apps you already use. Each feature is built around a single moment in a real conversation—so you can focus on what you want to say, not how to say it.",
+    "subtitle": "Arcatext is an AI keyboard that lives inside the apps you already use and covers all aspects of sending and receiving messages during a conversation.",
     "items": {
       "receive": {
         "eyebrow": "Understand replies",
         "title": "Understand every reply, without leaving the keyboard",
-        "description": "Paste a message you received and Arcatext translates it inline—with a full word-by-word breakdown and a literal version—so you catch the nuance, not just the gist.",
+        "description": "Paste messages you receive and Arcatext translates it within the app, so you never need to leave the conversation.",
         "bullets": [
           "Translate incoming messages right where you type",
           "See a word-by-word breakdown",
@@ -49,8 +49,8 @@
       },
       "homographs": {
         "eyebrow": "Say what you mean",
-        "title": "Say exactly what you mean",
-        "description": "When a word has more than one meaning, Arcatext spots it and lets you pick the right sense—so \"trunk\" becomes the elephant's, not the car's.",
+        "title": "Disambiguate homographs",
+        "description": "When a word has more than one meaning, Arcatext spots it and lets you pick the correct variant, so your message is clear everytime.",
         "bullets": [
           "Automatic homograph detection",
           "Choose the meaning you intended",
@@ -59,7 +59,7 @@
         "alt": "Arcatext identifying a homograph and offering the intended meaning."
       },
       "reverse": {
-        "eyebrow": "Check yourself",
+        "eyebrow": "Verify intention",
         "title": "Double-check the translation in your own language",
         "description": "See your message translated back into your native language before you hit send, so you always know exactly what the other person will read.",
         "bullets": [
@@ -72,7 +72,7 @@
       "recipient": {
         "eyebrow": "Context aware",
         "title": "Translations that fit who you're talking to",
-        "description": "Tell Arcatext who you're texting and it adapts formality, gender, and even the writing system—Kanji, Hiragana, or romanized—to match the moment.",
+        "description": "Get accurate translations by choosing the correct gender of who you're talking to. Choose the writing system you feel comfortable reading, whether that's a native script or romanization.",
         "bullets": [
           "Gender- and group-aware phrasing",
           "Pick the alphabet or script you want",
@@ -83,7 +83,7 @@
       "synonyms": {
         "eyebrow": "Grow your vocabulary",
         "title": "Grow your vocabulary as you chat",
-        "description": "Every translation comes with synonym options, so you're exposed to new ways of saying the same thing and pick up the language naturally—one message at a time.",
+        "description": "Every translation comes with synonym options, so you're exposed to new ways of saying the same thing and pick up the language naturally, one message at a time.",
         "bullets": [
           "Multiple ways to phrase every message",
           "Discover richer, more natural vocabulary",
@@ -94,7 +94,7 @@
       "copy": {
         "eyebrow": "Stay in sync",
         "title": "Keep the whole thread in context",
-        "description": "Automatically add a copy of your message in your own language, so both sides can always follow the conversation—no lost context, no confusion.",
+        "description": "Include a copy of each message in your own language, so you never get lost in the conversations or have to re-translate messages.",
         "bullets": [
           "Auto-send a native-language copy",
           "Never lose track of the thread",
