@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Conheça o <brand>Arcatext</brand>.",
-    "tagline": "Aprendizado de idiomas guiado pelo usuário",
+    "tagline": "Aprenda idiomas com conversas reais",
     "imageAlt": "O teclado Arcatext traduzindo e corrigindo uma mensagem em um app de chat.",
     "learnMore": "Veja como funciona",
     "getInTouch": "Fale conosco",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Um app, cada parte da conversa",
     "title": "Tudo o que você precisa para conversar entre idiomas",
-    "subtitle": "O Arcatext é um teclado com IA que vive dentro dos apps que você já usa. Cada recurso é construído em torno de um momento específico de uma conversa real, para que você possa se concentrar no que quer dizer, não em como dizer.",
+    "subtitle": "O Arcatext é um teclado com IA que vive dentro dos apps que você já usa e cobre todos os aspectos de enviar e receber mensagens durante uma conversa.",
     "items": {
       "receive": {
         "eyebrow": "Entenda as respostas",
         "title": "Entenda cada resposta sem sair do teclado",
-        "description": "Cole uma mensagem que você recebeu e o Arcatext a traduz na hora, com um detalhamento completo palavra por palavra e uma versão literal, para você captar a nuance, não apenas a ideia geral.",
+        "description": "Cole as mensagens que você recebe e o Arcatext as traduz dentro do próprio app, para você nunca precisar sair da conversa.",
         "bullets": [
           "Traduza mensagens recebidas ali mesmo onde você digita",
           "Veja um detalhamento palavra por palavra",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Diga o que você pensa",
-        "title": "Diga exatamente o que você quer dizer",
-        "description": "Quando uma palavra tem mais de um significado, o Arcatext percebe e deixa você escolher o sentido certo, para que \"manga\" seja a fruta e não a da camisa.",
+        "title": "Desambigue homógrafos",
+        "description": "Quando uma palavra tem mais de um significado, o Arcatext percebe e deixa você escolher a variante correta, para que sua mensagem seja sempre clara.",
         "bullets": [
           "Detecção automática de homógrafos",
           "Escolha o significado que você pretendia",
@@ -58,7 +58,7 @@
         "alt": "Arcatext identificando um homógrafo e oferecendo o significado pretendido."
       },
       "reverse": {
-        "eyebrow": "Confira você mesmo",
+        "eyebrow": "Verifique a intenção",
         "title": "Confira a tradução no seu próprio idioma",
         "description": "Veja sua mensagem traduzida de volta para o seu idioma nativo antes de enviar, para você sempre saber exatamente o que a outra pessoa vai ler.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Ciente do contexto",
         "title": "Traduções que combinam com quem você está falando",
-        "description": "Diga ao Arcatext com quem você está conversando e ele adapta a formalidade, o gênero e até o sistema de escrita (Kanji, Hiragana ou romanizado) para combinar com o momento.",
+        "description": "Obtenha traduções precisas escolhendo o gênero correto da pessoa com quem você fala. Escolha o sistema de escrita que você lê com mais conforto, seja uma escrita nativa ou a romanização.",
         "bullets": [
           "Frases adaptadas ao gênero e ao grupo",
           "Escolha o alfabeto ou a escrita que quiser",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Fiquem em sintonia",
         "title": "Mantenha toda a conversa no contexto",
-        "description": "Adicione automaticamente uma cópia da sua mensagem no seu próprio idioma, para que os dois lados possam sempre acompanhar a conversa: sem contexto perdido, sem confusão.",
+        "description": "Inclua uma cópia de cada mensagem no seu próprio idioma, para você nunca se perder nas conversas nem precisar traduzir as mensagens de novo.",
         "bullets": [
           "Envie automaticamente uma cópia no seu idioma nativo",
           "Nunca perca o fio da conversa",

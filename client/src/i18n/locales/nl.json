@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Maak kennis met <brand>Arcatext</brand>.",
-    "tagline": "Door de gebruiker gestuurd talen leren",
+    "tagline": "Leer talen via echte gesprekken",
     "imageAlt": "Het Arcatext-toetsenbord dat een bericht in een chat-app vertaalt en corrigeert.",
     "learnMore": "Ontdek hoe het werkt",
     "getInTouch": "Neem contact op",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Eén app, elk onderdeel van het gesprek",
     "title": "Alles wat je nodig hebt om talen te overbruggen",
-    "subtitle": "Arcatext is een AI-toetsenbord dat leeft binnen de apps die je al gebruikt. Elke functie is opgebouwd rond één moment in een echt gesprek—zodat je je kunt richten op wat je wilt zeggen, niet op hoe je het zegt.",
+    "subtitle": "Arcatext is een AI-toetsenbord dat leeft binnen de apps die je al gebruikt en alle aspecten van het versturen en ontvangen van berichten tijdens een gesprek dekt.",
     "items": {
       "receive": {
         "eyebrow": "Begrijp antwoorden",
         "title": "Begrijp elk antwoord, zonder het toetsenbord te verlaten",
-        "description": "Plak een bericht dat je hebt ontvangen en Arcatext vertaalt het direct—met een volledige woord-voor-woord-analyse en een letterlijke versie—zodat je de nuance oppikt, niet alleen de kern.",
+        "description": "Plak berichten die je ontvangt en Arcatext vertaalt ze direct binnen de app, zodat je het gesprek nooit hoeft te verlaten.",
         "bullets": [
           "Vertaal binnenkomende berichten precies waar je typt",
           "Bekijk een woord-voor-woord-analyse",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Zeg wat je bedoelt",
-        "title": "Zeg precies wat je bedoelt",
-        "description": "Wanneer een woord meerdere betekenissen heeft, herkent Arcatext dit en laat je de juiste betekenis kiezen—zodat \"bank\" de zitbank wordt en niet de geldinstelling.",
+        "title": "Homoniemen onderscheiden",
+        "description": "Wanneer een woord meerdere betekenissen heeft, herkent Arcatext dit en laat je de juiste variant kiezen, zodat je bericht elke keer duidelijk is.",
         "bullets": [
           "Automatische herkenning van homoniemen",
           "Kies de betekenis die je bedoelde",
@@ -58,7 +58,7 @@
         "alt": "Arcatext identificeert een homoniem en biedt de bedoelde betekenis."
       },
       "reverse": {
-        "eyebrow": "Controleer jezelf",
+        "eyebrow": "Bedoeling verifiëren",
         "title": "Controleer de vertaling in je eigen taal",
         "description": "Zie je bericht teruggezet in je moedertaal voordat je op verzenden drukt, zodat je altijd precies weet wat de ander zal lezen.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Contextbewust",
         "title": "Vertalingen die passen bij met wie je praat",
-        "description": "Vertel Arcatext met wie je chat en het past de mate van formaliteit, het geslacht en zelfs het schrift aan—Kanji, Hiragana of geromaniseerd—om bij het moment te passen.",
+        "description": "Krijg accurate vertalingen door het juiste geslacht te kiezen van de persoon met wie je praat. Kies het schrift dat je prettig vindt om te lezen, of dat nu een oorspronkelijk schrift of romanisering is.",
         "bullets": [
           "Geslachts- en groepsbewuste formulering",
           "Kies het alfabet of schrift dat je wilt",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Blijf synchroon",
         "title": "Houd het hele gesprek in context",
-        "description": "Voeg automatisch een kopie van je bericht in je eigen taal toe, zodat beide kanten het gesprek altijd kunnen volgen—geen verloren context, geen verwarring.",
+        "description": "Voeg een kopie van elk bericht in je eigen taal toe, zodat je nooit de draad kwijtraakt in gesprekken of berichten opnieuw hoeft te vertalen.",
         "bullets": [
           "Verstuur automatisch een kopie in de moedertaal",
           "Verlies de draad van het gesprek nooit",

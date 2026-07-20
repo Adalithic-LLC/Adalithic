@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "<brand>Arcatext</brand> ile tanışın.",
-    "tagline": "Kullanıcı odaklı dil öğrenimi",
+    "tagline": "Gerçek sohbetler yoluyla dil öğrenin",
     "imageAlt": "Arcatext klavyesi bir sohbet uygulamasında bir mesajı çevirip düzeltirken.",
     "learnMore": "Nasıl çalıştığını görün",
     "getInTouch": "Bize ulaşın",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Tek uygulama, sohbetin her anı için",
     "title": "Diller arasında konuşmak için ihtiyacınız olan her şey",
-    "subtitle": "Arcatext, zaten kullandığınız uygulamaların içinde yaşayan bir yapay zeka klavyesidir. Her özellik, gerçek bir sohbetteki tek bir an etrafında tasarlanmıştır—böylece nasıl söyleyeceğinize değil, ne söylemek istediğinize odaklanabilirsiniz.",
+    "subtitle": "Arcatext, zaten kullandığınız uygulamaların içinde yaşayan ve bir sohbet sırasında mesaj gönderip almanın her yönünü kapsayan bir yapay zeka klavyesidir.",
     "items": {
       "receive": {
         "eyebrow": "Yanıtları anlayın",
         "title": "Klavyeden çıkmadan her yanıtı anlayın",
-        "description": "Aldığınız bir mesajı yapıştırın, Arcatext onu olduğu yerde çevirsin—kelime kelime çözümleme ve birebir çeviriyle—böylece yalnızca genel anlamı değil, incelikleri de yakalayın.",
+        "description": "Aldığınız mesajları yapıştırın, Arcatext onları uygulamanın içinde hemen çevirsin; böylece sohbetten hiç ayrılmanıza gerek kalmasın.",
         "bullets": [
           "Gelen mesajları tam yazdığınız yerde çevirin",
           "Kelime kelime çözümlemeyi görün",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Demek istediğinizi söyleyin",
-        "title": "Tam olarak demek istediğinizi söyleyin",
-        "description": "Bir kelimenin birden fazla anlamı olduğunda Arcatext bunu fark eder ve doğru anlamı seçmenizi sağlar—böylece \"yüz\" bir sayı değil, surat olur.",
+        "title": "Eş yazımlıları netleştirin",
+        "description": "Bir kelimenin birden fazla anlamı olduğunda Arcatext bunu fark eder ve doğru seçeneği seçmenizi sağlar; böylece mesajınız her seferinde açık olur.",
         "bullets": [
           "Otomatik eş yazımlı kelime tespiti",
           "Kastettiğiniz anlamı seçin",
@@ -58,7 +58,7 @@
         "alt": "Arcatext, eş yazımlı bir kelimeyi belirleyip kastedilen anlamı önerirken."
       },
       "reverse": {
-        "eyebrow": "Kendinizi kontrol edin",
+        "eyebrow": "Niyeti doğrulayın",
         "title": "Çeviriyi kendi dilinizde bir kez daha kontrol edin",
         "description": "Göndermeden önce mesajınızı ana dilinize geri çevrilmiş olarak görün; böylece karşınızdakinin tam olarak ne okuyacağını her zaman bilin.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Bağlama duyarlı",
         "title": "Konuştuğunuz kişiye uygun çeviriler",
-        "description": "Arcatext'e kime yazdığınızı söyleyin; resmiyeti, cinsiyeti ve hatta yazı sistemini—Kanji, Hiragana veya Latin harfleri—o ana uyacak şekilde ayarlasın.",
+        "description": "Konuştuğunuz kişinin doğru cinsiyetini seçerek isabetli çeviriler alın. İster özgün bir yazı ister Latin harfleriyle yazım olsun, rahatça okuyabildiğiniz yazı sistemini seçin.",
         "bullets": [
           "Cinsiyete ve gruba duyarlı ifade",
           "İstediğiniz alfabeyi veya yazıyı seçin",
@@ -82,7 +82,7 @@
       "synonyms": {
         "eyebrow": "Kelime dağarcığınızı geliştirin",
         "title": "Sohbet ederken kelime dağarcığınızı geliştirin",
-        "description": "Her çeviri eş anlamlı seçeneklerle gelir; böylece aynı şeyi söylemenin yeni yollarıyla tanışır ve dili doğal biçimde—her seferinde bir mesajla—öğrenirsiniz.",
+        "description": "Her çeviri eş anlamlı seçeneklerle gelir; böylece aynı şeyi söylemenin yeni yollarıyla tanışır ve dili doğal biçimde, her seferinde bir mesajla öğrenirsiniz.",
         "bullets": [
           "Her mesajı ifade etmenin birden çok yolu",
           "Daha zengin, daha doğal kelimeler keşfedin",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Uyumda kalın",
         "title": "Tüm sohbeti bağlam içinde tutun",
-        "description": "Mesajınızın kendi dilinizdeki bir kopyasını otomatik olarak ekleyin; böylece her iki taraf da sohbeti her zaman takip edebilsin—bağlam kaybı ve karışıklık olmadan.",
+        "description": "Her mesajın kendi dilinizdeki bir kopyasını ekleyin; böylece sohbetlerde asla kaybolmayın ya da mesajları yeniden çevirmek zorunda kalmayın.",
         "bullets": [
           "Ana dilde kopyayı otomatik gönderin",
           "Sohbetin akışını asla kaybetmeyin",

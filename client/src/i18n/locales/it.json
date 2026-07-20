@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Ecco <brand>Arcatext</brand>.",
-    "tagline": "Apprendimento linguistico guidato dall'utente",
+    "tagline": "Impara le lingue con conversazioni reali",
     "imageAlt": "La tastiera Arcatext traduce e corregge un messaggio in un'app di chat.",
     "learnMore": "Scopri come funziona",
     "getInTouch": "Contattaci",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Un'unica app, ogni parte della conversazione",
     "title": "Tutto ciò che ti serve per parlare tra lingue diverse",
-    "subtitle": "Arcatext è una tastiera con IA che vive dentro le app che usi già. Ogni funzionalità è costruita attorno a un momento preciso di una conversazione reale, così puoi concentrarti su ciò che vuoi dire, non su come dirlo.",
+    "subtitle": "Arcatext è una tastiera con IA che vive dentro le app che usi già e copre ogni aspetto dell'invio e della ricezione dei messaggi durante una conversazione.",
     "items": {
       "receive": {
         "eyebrow": "Comprendi le risposte",
         "title": "Comprendi ogni risposta senza lasciare la tastiera",
-        "description": "Incolla un messaggio che hai ricevuto e Arcatext lo traduce direttamente, con una scomposizione completa parola per parola e una versione letterale, così cogli le sfumature e non solo il senso generale.",
+        "description": "Incolla i messaggi che ricevi e Arcatext li traduce direttamente nell'app, così non devi mai lasciare la conversazione.",
         "bullets": [
           "Traduci i messaggi in arrivo proprio dove scrivi",
           "Consulta una scomposizione parola per parola",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Di' ciò che pensi",
-        "title": "Di' esattamente ciò che intendi",
-        "description": "Quando una parola ha più di un significato, Arcatext lo riconosce e ti lascia scegliere quello giusto, così \"pesca\" è il frutto e non l'attività di chi va a pescare.",
+        "title": "Disambigua gli omografi",
+        "description": "Quando una parola ha più di un significato, Arcatext lo rileva e ti lascia scegliere la variante corretta, così il tuo messaggio è sempre chiaro.",
         "bullets": [
           "Rilevamento automatico degli omografi",
           "Scegli il significato che intendevi",
@@ -58,7 +58,7 @@
         "alt": "Arcatext individua un omografo e propone il significato desiderato."
       },
       "reverse": {
-        "eyebrow": "Controllati",
+        "eyebrow": "Verifica l'intenzione",
         "title": "Ricontrolla la traduzione nella tua lingua",
         "description": "Vedi il tuo messaggio ritradotto nella tua lingua madre prima di premere invio, così sai sempre esattamente cosa leggerà l'altra persona.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Consapevole del contesto",
         "title": "Traduzioni su misura per il tuo interlocutore",
-        "description": "Indica ad Arcatext a chi stai scrivendo e adatterà la formalità, il genere e persino il sistema di scrittura (Kanji, Hiragana o romanizzato) al momento giusto.",
+        "description": "Ottieni traduzioni accurate scegliendo il genere corretto della persona con cui parli. Scegli il sistema di scrittura che ti è più comodo leggere, che sia una scrittura nativa o la sua romanizzazione.",
         "bullets": [
           "Formulazioni in base a genere e gruppo",
           "Scegli l'alfabeto o la scrittura che preferisci",
@@ -82,7 +82,7 @@
       "synonyms": {
         "eyebrow": "Amplia il tuo vocabolario",
         "title": "Amplia il tuo vocabolario mentre chatti",
-        "description": "Ogni traduzione include opzioni di sinonimi, così scopri nuovi modi di dire la stessa cosa e apprendi la lingua in modo naturale, un messaggio alla volta.",
+        "description": "Ogni traduzione include opzioni di sinonimi, così scopri nuovi modi di dire la stessa cosa e impari la lingua in modo naturale, un messaggio alla volta.",
         "bullets": [
           "Più modi di formulare ogni messaggio",
           "Scopri un vocabolario più ricco e naturale",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Restate allineati",
         "title": "Mantieni tutta la conversazione nel suo contesto",
-        "description": "Aggiungi automaticamente una copia del tuo messaggio nella tua lingua, così entrambe le parti possono sempre seguire la conversazione: nessun contesto perso, nessuna confusione.",
+        "description": "Includi una copia di ogni messaggio nella tua lingua, così non ti perdi mai nelle conversazioni e non devi ritradurre i messaggi.",
         "bullets": [
           "Invia automaticamente una copia nella tua lingua madre",
           "Non perdere mai il filo della conversazione",

@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Découvrez <brand>Arcatext</brand>.",
-    "tagline": "Apprentissage des langues guidé par l'utilisateur",
+    "tagline": "Apprenez les langues au fil de vraies conversations",
     "imageAlt": "Le clavier Arcatext traduisant et corrigeant un message dans une application de messagerie.",
     "learnMore": "Découvrez comment ça marche",
     "getInTouch": "Nous contacter",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Une seule application, chaque étape de la conversation",
     "title": "Tout ce qu'il vous faut pour parler d'une langue à l'autre",
-    "subtitle": "Arcatext est un clavier IA qui s'intègre aux applications que vous utilisez déjà. Chaque fonctionnalité est pensée autour d'un moment précis d'une vraie conversation, pour que vous puissiez vous concentrer sur ce que vous voulez dire, et non sur la façon de le dire.",
+    "subtitle": "Arcatext est un clavier IA qui s'intègre aux applications que vous utilisez déjà et couvre tous les aspects de l'envoi et de la réception de messages au cours d'une conversation.",
     "items": {
       "receive": {
         "eyebrow": "Comprenez les réponses",
         "title": "Comprenez chaque réponse sans quitter le clavier",
-        "description": "Collez un message que vous avez reçu et Arcatext le traduit directement, avec une décomposition complète mot à mot et une version littérale, pour que vous saisissiez la nuance, et pas seulement l'idée générale.",
+        "description": "Collez les messages que vous recevez et Arcatext les traduit directement dans l'application, pour que vous n'ayez jamais à quitter la conversation.",
         "bullets": [
           "Traduisez les messages entrants là où vous écrivez",
           "Consultez une décomposition mot à mot",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Dites ce que vous pensez",
-        "title": "Dites exactement ce que vous voulez dire",
-        "description": "Quand un mot a plusieurs sens, Arcatext le repère et vous laisse choisir le bon, pour que \"avocat\" désigne le fruit et non l'homme de loi.",
+        "title": "Désambiguïser les homographes",
+        "description": "Quand un mot a plusieurs sens, Arcatext le repère et vous laisse choisir la bonne variante, pour que votre message soit clair à chaque fois.",
         "bullets": [
           "Détection automatique des homographes",
           "Choisissez le sens que vous aviez en tête",
@@ -58,7 +58,7 @@
         "alt": "Arcatext identifiant un homographe et proposant le sens voulu."
       },
       "reverse": {
-        "eyebrow": "Vérifiez-vous",
+        "eyebrow": "Vérifiez l'intention",
         "title": "Revérifiez la traduction dans votre propre langue",
         "description": "Voyez votre message retraduit dans votre langue maternelle avant de l'envoyer, pour toujours savoir exactement ce que l'autre personne va lire.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Sensible au contexte",
         "title": "Des traductions adaptées à votre interlocuteur",
-        "description": "Indiquez à Arcatext à qui vous écrivez et il adapte le niveau de formalité, le genre et même le système d'écriture (Kanji, Hiragana ou romanisé) au moment présent.",
+        "description": "Obtenez des traductions justes en choisissant le bon genre de votre interlocuteur. Choisissez le système d'écriture que vous préférez lire, qu'il s'agisse d'une écriture native ou d'une romanisation.",
         "bullets": [
           "Formulation adaptée au genre et au groupe",
           "Choisissez l'alphabet ou l'écriture souhaités",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Restez synchronisés",
         "title": "Gardez tout le fil dans son contexte",
-        "description": "Ajoutez automatiquement une copie de votre message dans votre propre langue, pour que les deux parties puissent toujours suivre la conversation : aucun contexte perdu, aucune confusion.",
+        "description": "Incluez une copie de chaque message dans votre propre langue, pour ne jamais vous perdre dans les conversations ni avoir à retraduire des messages.",
         "bullets": [
           "Envoyez automatiquement une copie dans votre langue maternelle",
           "Ne perdez jamais le fil de la conversation",

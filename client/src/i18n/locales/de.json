@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Das ist <brand>Arcatext</brand>.",
-    "tagline": "Nutzergesteuertes Sprachenlernen",
+    "tagline": "Sprachen lernen durch echte Gespräche",
     "imageAlt": "Die Arcatext-Tastatur übersetzt und korrigiert eine Nachricht in einer Chat-App.",
     "learnMore": "So funktioniert's",
     "getInTouch": "Kontakt aufnehmen",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Eine App, jeder Teil des Gesprächs",
     "title": "Alles, was du brauchst, um über Sprachgrenzen hinweg zu sprechen",
-    "subtitle": "Arcatext ist eine KI-Tastatur, die in den Apps lebt, die du bereits nutzt. Jede Funktion dreht sich um einen bestimmten Moment in einem echten Gespräch – damit du dich darauf konzentrieren kannst, was du sagen willst, und nicht wie.",
+    "subtitle": "Arcatext ist eine KI-Tastatur, die in den Apps lebt, die du bereits nutzt, und alle Aspekte des Sendens und Empfangens von Nachrichten während eines Gesprächs abdeckt.",
     "items": {
       "receive": {
         "eyebrow": "Antworten verstehen",
         "title": "Verstehe jede Antwort, ohne die Tastatur zu verlassen",
-        "description": "Füge eine empfangene Nachricht ein und Arcatext übersetzt sie direkt – mit einer vollständigen Wort-für-Wort-Aufschlüsselung und einer wörtlichen Version –, damit du die Nuancen erfasst und nicht nur das Wesentliche.",
+        "description": "Füge empfangene Nachrichten ein und Arcatext übersetzt sie direkt in der App, sodass du das Gespräch nie verlassen musst.",
         "bullets": [
           "Übersetze eingehende Nachrichten genau dort, wo du tippst",
           "Sieh dir eine Wort-für-Wort-Aufschlüsselung an",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Sag, was du meinst",
-        "title": "Sag genau, was du meinst",
-        "description": "Wenn ein Wort mehrere Bedeutungen hat, erkennt Arcatext das und lässt dich die richtige wählen – damit die \"Bank\" zum Sitzen ist und nicht die fürs Geld.",
+        "title": "Homografen unterscheiden",
+        "description": "Wenn ein Wort mehrere Bedeutungen hat, erkennt Arcatext das und lässt dich die richtige Variante wählen, damit deine Nachricht jedes Mal klar ist.",
         "bullets": [
           "Automatische Erkennung von Homografen",
           "Wähle die Bedeutung, die du gemeint hast",
@@ -58,7 +58,7 @@
         "alt": "Arcatext erkennt einen Homografen und bietet die gemeinte Bedeutung an."
       },
       "reverse": {
-        "eyebrow": "Überprüfe dich selbst",
+        "eyebrow": "Absicht überprüfen",
         "title": "Überprüfe die Übersetzung in deiner eigenen Sprache",
         "description": "Sieh dir deine Nachricht zurück in deine Muttersprache übersetzt an, bevor du auf Senden tippst, damit du immer genau weißt, was die andere Person liest.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Kontextbewusst",
         "title": "Übersetzungen, die zu deinem Gegenüber passen",
-        "description": "Sag Arcatext, wem du schreibst, und es passt Förmlichkeit, Geschlecht und sogar das Schriftsystem an – Kanji, Hiragana oder romanisiert – passend zum Moment.",
+        "description": "Erhalte präzise Übersetzungen, indem du das richtige Geschlecht der Person wählst, mit der du sprichst. Wähle das Schriftsystem, das du am liebsten liest, ob native Schrift oder Romanisierung.",
         "bullets": [
           "Formulierungen je nach Geschlecht und Gruppe",
           "Wähle das gewünschte Alphabet oder die Schrift",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Bleibt im Gleichklang",
         "title": "Behalte den ganzen Verlauf im Kontext",
-        "description": "Füge automatisch eine Kopie deiner Nachricht in deiner eigenen Sprache hinzu, damit beide Seiten dem Gespräch immer folgen können – kein verlorener Kontext, keine Verwirrung.",
+        "description": "Füge eine Kopie jeder Nachricht in deiner eigenen Sprache hinzu, damit du in Gesprächen nie den Faden verlierst oder Nachrichten erneut übersetzen musst.",
         "bullets": [
           "Sende automatisch eine Kopie in deiner Muttersprache",
           "Verliere nie den Faden des Gesprächs",

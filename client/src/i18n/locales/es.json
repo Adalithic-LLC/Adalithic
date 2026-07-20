@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Conoce <brand>Arcatext</brand>.",
-    "tagline": "Aprendizaje de idiomas impulsado por el usuario",
+    "tagline": "Aprende idiomas con conversaciones reales",
     "imageAlt": "El teclado Arcatext traduciendo y corrigiendo un mensaje en una app de chat.",
     "learnMore": "Descubre cómo funciona",
     "getInTouch": "Contáctanos",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Una sola app, cada parte de la conversación",
     "title": "Todo lo que necesitas para hablar entre idiomas",
-    "subtitle": "Arcatext es un teclado con IA que vive dentro de las apps que ya usas. Cada función se centra en un momento concreto de una conversación real, para que puedas concentrarte en lo que quieres decir, no en cómo decirlo.",
+    "subtitle": "Arcatext es un teclado con IA que vive dentro de las apps que ya usas y cubre todos los aspectos de enviar y recibir mensajes durante una conversación.",
     "items": {
       "receive": {
         "eyebrow": "Entiende las respuestas",
         "title": "Entiende cada respuesta sin salir del teclado",
-        "description": "Pega un mensaje que hayas recibido y Arcatext lo traduce al instante, con un desglose completo palabra por palabra y una versión literal, para que captes los matices y no solo la idea general.",
+        "description": "Pega los mensajes que recibes y Arcatext los traduce dentro de la propia app, para que nunca tengas que salir de la conversación.",
         "bullets": [
           "Traduce los mensajes entrantes justo donde escribes",
           "Consulta un desglose palabra por palabra",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Di lo que quieres decir",
-        "title": "Di exactamente lo que quieres decir",
-        "description": "Cuando una palabra tiene más de un significado, Arcatext lo detecta y te deja elegir el sentido correcto, para que \"banco\" sea el del parque y no el del dinero.",
+        "title": "Desambigua homógrafos",
+        "description": "Cuando una palabra tiene más de un significado, Arcatext lo detecta y te deja elegir la variante correcta, para que tu mensaje sea claro siempre.",
         "bullets": [
           "Detección automática de homógrafos",
           "Elige el significado que pretendías",
@@ -58,7 +58,7 @@
         "alt": "Arcatext identificando un homógrafo y ofreciendo el significado deseado."
       },
       "reverse": {
-        "eyebrow": "Verifícate",
+        "eyebrow": "Verifica la intención",
         "title": "Verifica la traducción en tu propio idioma",
         "description": "Consulta tu mensaje traducido de nuevo a tu idioma nativo antes de enviarlo, para que siempre sepas exactamente lo que leerá la otra persona.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Consciente del contexto",
         "title": "Traducciones que se adaptan a con quién hablas",
-        "description": "Dile a Arcatext con quién estás chateando y adaptará la formalidad, el género e incluso el sistema de escritura (Kanji, Hiragana o romanizado) para encajar en cada momento.",
+        "description": "Obtén traducciones precisas eligiendo el género correcto de la persona con la que hablas. Elige el sistema de escritura con el que te sientas cómodo leyendo, ya sea una escritura nativa o su romanización.",
         "bullets": [
           "Redacción según el género y el grupo",
           "Elige el alfabeto o la escritura que prefieras",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Mantente sincronizado",
         "title": "Mantén todo el hilo en contexto",
-        "description": "Añade automáticamente una copia de tu mensaje en tu propio idioma, para que ambas partes puedan seguir siempre la conversación: sin contexto perdido, sin confusiones.",
+        "description": "Incluye una copia de cada mensaje en tu propio idioma, para que nunca te pierdas en las conversaciones ni tengas que volver a traducir mensajes.",
         "bullets": [
           "Envía automáticamente una copia en tu idioma nativo",
           "Nunca pierdas el hilo de la conversación",

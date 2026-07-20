@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Poznaj <brand>Arcatext</brand>.",
-    "tagline": "Nauka języków sterowana przez użytkownika",
+    "tagline": "Ucz się języków dzięki prawdziwym rozmowom",
     "imageAlt": "Klawiatura Arcatext tłumacząca i poprawiająca wiadomość w aplikacji do czatowania.",
     "learnMore": "Zobacz, jak to działa",
     "getInTouch": "Skontaktuj się",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Jedna aplikacja, każda część rozmowy",
     "title": "Wszystko, czego potrzebujesz, by rozmawiać w różnych językach",
-    "subtitle": "Arcatext to klawiatura oparta na sztucznej inteligencji, która działa wewnątrz aplikacji, których już używasz. Każda funkcja jest zbudowana wokół jednego momentu prawdziwej rozmowy—dzięki czemu możesz skupić się na tym, co chcesz powiedzieć, a nie na tym, jak to powiedzieć.",
+    "subtitle": "Arcatext to klawiatura oparta na sztucznej inteligencji, która działa wewnątrz aplikacji, których już używasz, i obejmuje wszystkie aspekty wysyłania i odbierania wiadomości podczas rozmowy.",
     "items": {
       "receive": {
         "eyebrow": "Zrozum odpowiedzi",
         "title": "Zrozum każdą odpowiedź bez opuszczania klawiatury",
-        "description": "Wklej otrzymaną wiadomość, a Arcatext przetłumaczy ją na miejscu—z pełną analizą słowo po słowie i wersją dosłowną—dzięki czemu wychwycisz niuanse, a nie tylko ogólny sens.",
+        "description": "Wklej otrzymane wiadomości, a Arcatext przetłumaczy je bezpośrednio w aplikacji, więc nigdy nie musisz opuszczać rozmowy.",
         "bullets": [
           "Tłumacz przychodzące wiadomości dokładnie tam, gdzie piszesz",
           "Zobacz analizę słowo po słowie",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Mów to, co masz na myśli",
-        "title": "Mów dokładnie to, co masz na myśli",
-        "description": "Gdy słowo ma więcej niż jedno znaczenie, Arcatext to wykrywa i pozwala wybrać właściwy sens—tak by „zamek” stał się budowlą, a nie zapięciem.",
+        "title": "Rozróżniaj homografy",
+        "description": "Gdy słowo ma więcej niż jedno znaczenie, Arcatext to wykrywa i pozwala wybrać właściwy wariant, dzięki czemu Twoja wiadomość jest zawsze jasna.",
         "bullets": [
           "Automatyczne wykrywanie homografów",
           "Wybierz znaczenie, które masz na myśli",
@@ -58,7 +58,7 @@
         "alt": "Arcatext identyfikujący homograf i proponujący zamierzone znaczenie."
       },
       "reverse": {
-        "eyebrow": "Sprawdź siebie",
+        "eyebrow": "Zweryfikuj intencję",
         "title": "Sprawdź tłumaczenie w swoim własnym języku",
         "description": "Zobacz swoją wiadomość przetłumaczoną z powrotem na ojczysty język, zanim ją wyślesz, dzięki czemu zawsze wiesz dokładnie, co przeczyta druga osoba.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Świadomość kontekstu",
         "title": "Tłumaczenia dopasowane do tego, z kim rozmawiasz",
-        "description": "Powiedz Arcatext, do kogo piszesz, a dostosuje formalność, rodzaj gramatyczny, a nawet system pisma—Kanji, Hiragana czy zapis łaciński—do danej chwili.",
+        "description": "Otrzymuj trafne tłumaczenia, wybierając właściwą płeć osoby, z którą rozmawiasz. Wybierz system pisma, który wygodnie Ci się czyta—rodzime pismo albo zapis łaciński.",
         "bullets": [
           "Sformułowania uwzględniające płeć i grupę",
           "Wybierz alfabet lub pismo, które chcesz",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Bądź na bieżąco",
         "title": "Utrzymaj całą rozmowę w kontekście",
-        "description": "Automatycznie dodawaj kopię swojej wiadomości we własnym języku, aby obie strony zawsze mogły śledzić rozmowę—żadnego utraconego kontekstu, żadnych nieporozumień.",
+        "description": "Dołączaj kopię każdej wiadomości we własnym języku, dzięki czemu nigdy nie gubisz się w rozmowach ani nie musisz ponownie tłumaczyć wiadomości.",
         "bullets": [
           "Automatyczne wysyłanie kopii w języku ojczystym",
           "Nigdy nie gub wątku rozmowy",

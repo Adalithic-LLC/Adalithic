@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Tutustu <brand>Arcatext</brand>iin.",
-    "tagline": "Käyttäjän ohjaama kielten oppiminen",
+    "tagline": "Opi kieliä aitojen keskustelujen kautta",
     "learnMore": "Katso, miten se toimii",
     "getInTouch": "Ota yhteyttä",
     "imageAlt": "Arcatext-näppäimistö kääntää ja korjaa viestiä chat-sovelluksessa.",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Yksi sovellus, keskustelun jokaiseen osaan",
     "title": "Kaikki, mitä tarvitset viestiäksesi kielten välillä",
-    "subtitle": "Arcatext on tekoälynäppäimistö, joka toimii suoraan jo käyttämiesi sovellusten sisällä. Jokainen ominaisuus on rakennettu aidon keskustelun yhden hetken ympärille – jotta voit keskittyä siihen, mitä haluat sanoa, etkä siihen, miten sen sanot.",
+    "subtitle": "Arcatext on tekoälynäppäimistö, joka toimii suoraan jo käyttämiesi sovellusten sisällä ja kattaa kaikki viestien lähettämisen ja vastaanottamisen puolet keskustelun aikana.",
     "items": {
       "receive": {
         "eyebrow": "Ymmärrä vastaukset",
         "title": "Ymmärrä jokainen vastaus poistumatta näppäimistöltä",
-        "description": "Liitä saamasi viesti, ja Arcatext kääntää sen suoraan paikan päällä – täydellisen sana sanalta -erittelyn ja sananmukaisen version kera – jotta tavoitat vivahteet, et vain pääsisältöä.",
+        "description": "Liitä saamasi viestit, niin Arcatext kääntää ne suoraan sovelluksessa, jotta sinun ei koskaan tarvitse poistua keskustelusta.",
         "bullets": [
           "Käännä saapuvat viestit heti siellä, missä kirjoitat",
           "Näe sana sanalta -erittely",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Sano, mitä tarkoitat",
-        "title": "Sano juuri se, mitä tarkoitat",
-        "description": "Kun sanalla on useampi merkitys, Arcatext huomaa sen ja antaa sinun valita oikean merkityksen – niin että „kuusi“ tarkoittaa puuta eikä numeroa.",
+        "title": "Selvennä homografit",
+        "description": "Kun sanalla on useampi kuin yksi merkitys, Arcatext huomaa sen ja antaa sinun valita oikean vaihtoehdon, jotta viestisi on aina selkeä.",
         "bullets": [
           "Automaattinen homografien tunnistus",
           "Valitse tarkoittamasi merkitys",
@@ -58,7 +58,7 @@
         "alt": "Arcatext tunnistaa homografin ja tarjoaa tarkoitettua merkitystä."
       },
       "reverse": {
-        "eyebrow": "Tarkista itsesi",
+        "eyebrow": "Vahvista aikomus",
         "title": "Tarkista käännös omalla kielelläsi",
         "description": "Näe viestisi käännettynä takaisin äidinkielellesi ennen kuin painat lähetä, jotta tiedät aina tarkalleen, mitä toinen osapuoli lukee.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Huomioi kontekstin",
         "title": "Käännöksiä, jotka sopivat sille, kenen kanssa puhut",
-        "description": "Kerro Arcatextille, kenelle kirjoitat, niin se mukauttaa muodollisuuden, sukupuolen ja jopa kirjoitusjärjestelmän – Kanji, Hiragana tai latinalaistettu – sopimaan hetkeen.",
+        "description": "Saat tarkkoja käännöksiä valitsemalla oikean sukupuolen henkilölle, jonka kanssa puhut. Valitse kirjoitusjärjestelmä, jota luet mielelläsi, oli se sitten alkuperäinen kirjoitus tai latinalaistus.",
         "bullets": [
           "Sukupuolen ja ryhmän huomioiva sanamuoto",
           "Valitse haluamasi aakkosto tai kirjoitusjärjestelmä",
@@ -82,7 +82,7 @@
       "synonyms": {
         "eyebrow": "Kasvata sanavarastoasi",
         "title": "Kasvata sanavarastoasi keskustellessasi",
-        "description": "Jokaisen käännöksen mukana tulee synonyymivaihtoehtoja, joten tutustut uusiin tapoihin sanoa sama asia ja omaksut kielen luonnollisesti – viesti kerrallaan.",
+        "description": "Jokaisen käännöksen mukana tulee synonyymivaihtoehtoja, joten tutustut uusiin tapoihin sanoa sama asia ja omaksut kielen luonnollisesti, viesti kerrallaan.",
         "bullets": [
           "Useita tapoja muotoilla jokainen viesti",
           "Löydä rikkaampi, luontevampi sanavarasto",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Pysy samalla aaltopituudella",
         "title": "Pidä koko keskusteluketju asiayhteydessä",
-        "description": "Lisää automaattisesti kopio viestistäsi omalla kielelläsi, jotta molemmat osapuolet voivat aina seurata keskustelua – ei kadonnutta kontekstia, ei sekaannuksia.",
+        "description": "Lisää kopio jokaisesta viestistä omalla kielelläsi, jotta et koskaan eksy keskusteluissa etkä joudu kääntämään viestejä uudelleen.",
         "bullets": [
           "Lähetä automaattisesti kopio äidinkielelläsi",
           "Älä koskaan menetä keskustelun lankaa",

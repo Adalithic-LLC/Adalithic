@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Ismerd meg az <brand>Arcatext</brand>et.",
-    "tagline": "Felhasználó által vezérelt nyelvtanulás",
+    "tagline": "Tanulj nyelveket valódi beszélgetéseken keresztül",
     "learnMore": "Nézd meg, hogyan működik",
     "getInTouch": "Lépj kapcsolatba velünk",
     "imageAlt": "Az Arcatext billentyűzet egy üzenetet fordít és javít egy csevegőalkalmazásban.",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Egyetlen alkalmazás a beszélgetés minden részéhez",
     "title": "Minden, amire szükséged van a nyelvek közötti kommunikációhoz",
-    "subtitle": "Az Arcatext egy mesterséges intelligenciára épülő billentyűzet, amely a már használt alkalmazásaidon belül működik. Minden funkció egy valódi beszélgetés egyetlen pillanata köré épül – így arra összpontosíthatsz, amit mondani szeretnél, nem pedig arra, hogyan mondd.",
+    "subtitle": "Az Arcatext egy mesterséges intelligenciára épülő billentyűzet, amely a már használt alkalmazásaidon belül működik, és lefedi az üzenetek küldésének és fogadásának minden oldalát egy beszélgetés során.",
     "items": {
       "receive": {
         "eyebrow": "Értsd meg a válaszokat",
         "title": "Értsd meg minden választ anélkül, hogy elhagynád a billentyűzetet",
-        "description": "Illessz be egy kapott üzenetet, és az Arcatext helyben lefordítja – teljes, szóról szóra bontással és szó szerinti változattal együtt –, hogy ne csak a lényeget, hanem az árnyalatokat is elkapd.",
+        "description": "Illeszd be a kapott üzeneteket, és az Arcatext egyből az alkalmazáson belül lefordítja őket, így soha nem kell elhagynod a beszélgetést.",
         "bullets": [
           "Fordítsd le a beérkező üzeneteket pontosan ott, ahol gépelsz",
           "Nézd meg a szóról szóra bontást",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Mondd azt, amit gondolsz",
-        "title": "Mondd pontosan azt, amit gondolsz",
-        "description": "Ha egy szónak több jelentése van, az Arcatext észreveszi, és hagyja, hogy a megfelelő jelentést válaszd – így a „körte“ a gyümölcs lesz, nem pedig a villanykörte.",
+        "title": "Homográfok egyértelműsítése",
+        "description": "Ha egy szónak több jelentése van, az Arcatext észreveszi, és hagyja, hogy a megfelelő változatot válaszd, így az üzeneted minden alkalommal érthető.",
         "bullets": [
           "Automatikus homográfészlelés",
           "Válaszd ki a szándékolt jelentést",
@@ -58,7 +58,7 @@
         "alt": "Az Arcatext azonosít egy homográfot, és felkínálja a szándékolt jelentést."
       },
       "reverse": {
-        "eyebrow": "Ellenőrizd magad",
+        "eyebrow": "Szándék ellenőrzése",
         "title": "Ellenőrizd a fordítást a saját nyelveden",
         "description": "Küldés előtt lásd az üzenetedet visszafordítva az anyanyelvedre, így mindig pontosan tudod, mit fog olvasni a másik fél.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Kontextusérzékeny",
         "title": "Fordítások, amelyek ahhoz illenek, akivel beszélsz",
-        "description": "Mondd meg az Arcatextnek, kinek írsz, és igazodik a formalitáshoz, a nemhez, sőt még az írásrendszerhez is – Kanji, Hiragana vagy latin betűs átírás –, hogy illjen az adott pillanathoz.",
+        "description": "Pontos fordításokat kapsz, ha kiválasztod annak a személynek a helyes nemét, akivel beszélsz. Válaszd ki azt az írásrendszert, amelyet kényelmesen olvasol, legyen az egy natív írás vagy latin betűs átírás.",
         "bullets": [
           "Nemet és csoportot figyelembe vevő megfogalmazás",
           "Válaszd ki a kívánt ábécét vagy írást",
@@ -82,7 +82,7 @@
       "synonyms": {
         "eyebrow": "Bővítsd a szókincsedet",
         "title": "Bővítsd a szókincsedet csevegés közben",
-        "description": "Minden fordításhoz szinonimaopciók járnak, így új módokat ismersz meg ugyanannak a kifejezésére, és természetes módon sajátítod el a nyelvet – üzenetről üzenetre.",
+        "description": "Minden fordításhoz szinonimaopciók járnak, így új módokat ismersz meg ugyanannak a kifejezésére, és természetes módon sajátítod el a nyelvet, üzenetről üzenetre.",
         "bullets": [
           "Több mód minden üzenet megfogalmazására",
           "Fedezz fel gazdagabb, természetesebb szókincset",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Maradj szinkronban",
         "title": "Tartsd az egész beszélgetést kontextusban",
-        "description": "Automatikusan add hozzá az üzeneted egy másolatát a saját nyelveden, hogy mindkét fél mindig követni tudja a beszélgetést – nincs elveszett kontextus, nincs félreértés.",
+        "description": "Csatold minden üzenet egy másolatát a saját nyelveden, így soha nem veszel el a beszélgetésekben, és nem kell újrafordítanod az üzeneteket.",
         "bullets": [
           "Automatikusan küldj el egy anyanyelvi másolatot",
           "Soha ne veszítsd el a beszélgetés fonalát",

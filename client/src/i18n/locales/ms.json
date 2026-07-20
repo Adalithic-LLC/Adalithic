@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Temui <brand>Arcatext</brand>.",
-    "tagline": "Pembelajaran bahasa dipacu pengguna",
+    "tagline": "Belajar Bahasa Melalui Perbualan Sebenar",
     "imageAlt": "Papan kekunci Arcatext sedang menterjemah dan membetulkan mesej dalam aplikasi sembang.",
     "learnMore": "Lihat cara ia berfungsi",
     "getInTouch": "Hubungi kami",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Satu aplikasi, setiap bahagian perbualan",
     "title": "Segala yang anda perlukan untuk berbual merentas bahasa",
-    "subtitle": "Arcatext ialah papan kekunci AI yang hidup di dalam aplikasi yang anda sudah gunakan. Setiap ciri dibina berdasarkan satu detik dalam perbualan sebenar—supaya anda boleh menumpukan pada apa yang mahu dikatakan, bukan cara mengatakannya.",
+    "subtitle": "Arcatext ialah papan kekunci AI yang hidup di dalam aplikasi yang anda sudah gunakan dan merangkumi setiap aspek menghantar dan menerima mesej sepanjang perbualan.",
     "items": {
       "receive": {
         "eyebrow": "Fahami balasan",
         "title": "Fahami setiap balasan, tanpa meninggalkan papan kekunci",
-        "description": "Tampal mesej yang anda terima dan Arcatext menterjemahkannya secara terus—lengkap dengan pecahan perkataan demi perkataan dan versi harfiah—supaya anda menangkap nuansanya, bukan sekadar intipatinya.",
+        "description": "Tampal mesej yang anda terima dan Arcatext menterjemahkannya terus di dalam aplikasi, supaya anda tidak perlu meninggalkan perbualan.",
         "bullets": [
           "Terjemah mesej masuk terus di tempat anda menaip",
           "Lihat pecahan perkataan demi perkataan",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Katakan apa yang anda maksudkan",
-        "title": "Katakan tepat apa yang anda maksudkan",
-        "description": "Apabila sesuatu perkataan mempunyai lebih daripada satu makna, Arcatext mengesannya dan membiarkan anda memilih makna yang betul—supaya \"bunga\" bermaksud kembang, bukan faedah wang.",
+        "title": "Perjelas homograf",
+        "description": "Apabila sesuatu perkataan mempunyai lebih daripada satu makna, Arcatext mengesannya dan membiarkan anda memilih varian yang betul, supaya mesej anda sentiasa jelas.",
         "bullets": [
           "Pengesanan homograf secara automatik",
           "Pilih makna yang anda maksudkan",
@@ -58,7 +58,7 @@
         "alt": "Arcatext mengenal pasti homograf dan menawarkan makna yang dimaksudkan."
       },
       "reverse": {
-        "eyebrow": "Semak sendiri",
+        "eyebrow": "Sahkan niat",
         "title": "Semak semula terjemahan dalam bahasa anda sendiri",
         "description": "Lihat mesej anda diterjemah semula ke bahasa ibunda anda sebelum menekan hantar, supaya anda sentiasa tahu dengan tepat apa yang akan dibaca oleh orang lain.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Peka konteks",
         "title": "Terjemahan yang sesuai dengan orang yang anda ajak berbual",
-        "description": "Beritahu Arcatext dengan siapa anda menghantar mesej dan ia menyesuaikan tahap keformalan, jantina, dan juga sistem tulisan—Kanji, Hiragana, atau rumi—untuk padan dengan keadaan.",
+        "description": "Dapatkan terjemahan yang tepat dengan memilih jantina yang betul bagi orang yang anda ajak berbual. Pilih sistem tulisan yang selesa anda baca, sama ada tulisan asli atau rumi.",
         "bullets": [
           "Ungkapan peka jantina dan kumpulan",
           "Pilih abjad atau tulisan yang anda mahu",
@@ -82,7 +82,7 @@
       "synonyms": {
         "eyebrow": "Perkaya perbendaharaan kata anda",
         "title": "Perkaya perbendaharaan kata anda sambil berbual",
-        "description": "Setiap terjemahan disertakan pilihan sinonim, supaya anda didedahkan kepada pelbagai cara menyatakan perkara yang sama dan menyerap bahasa secara semula jadi—satu mesej pada satu masa.",
+        "description": "Setiap terjemahan disertakan pilihan sinonim, supaya anda didedahkan kepada pelbagai cara menyatakan perkara yang sama dan menyerap bahasa secara semula jadi, satu mesej pada satu masa.",
         "bullets": [
           "Pelbagai cara untuk menyusun setiap mesej",
           "Temui perbendaharaan kata yang lebih kaya dan semula jadi",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Kekal seiring",
         "title": "Kekalkan seluruh perbualan dalam konteks",
-        "description": "Secara automatik menambah salinan mesej anda dalam bahasa anda sendiri, supaya kedua-dua pihak sentiasa boleh mengikuti perbualan—tiada konteks yang hilang, tiada kekeliruan.",
+        "description": "Sertakan salinan setiap mesej dalam bahasa anda sendiri, supaya anda tidak pernah hilang arah dalam perbualan atau terpaksa menterjemah semula mesej.",
         "bullets": [
           "Hantar salinan bahasa ibunda secara automatik",
           "Tidak pernah hilang jejak perbualan",

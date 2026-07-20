@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Faceți cunoștință cu <brand>Arcatext</brand>.",
-    "tagline": "Învățarea limbilor ghidată de utilizator",
+    "tagline": "Învățați limbi prin conversații reale",
     "learnMore": "Vedeți cum funcționează",
     "getInTouch": "Contactați-ne",
     "imageAlt": "Tastatura Arcatext traduce și corectează un mesaj într-o aplicație de chat.",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "O singură aplicație, pentru fiecare parte a conversației",
     "title": "Tot ce vă trebuie ca să vorbiți în orice limbă",
-    "subtitle": "Arcatext este o tastatură cu inteligență artificială care funcționează direct în aplicațiile pe care le folosiți deja. Fiecare funcționalitate este construită în jurul unui singur moment dintr-o conversație reală, ca să vă puteți concentra pe ceea ce vreți să spuneți, nu pe cum să spuneți.",
+    "subtitle": "Arcatext este o tastatură cu inteligență artificială care funcționează direct în aplicațiile pe care le folosiți deja și acoperă toate aspectele trimiterii și primirii mesajelor într-o conversație.",
     "items": {
       "receive": {
         "eyebrow": "Înțelegeți răspunsurile",
         "title": "Înțelegeți fiecare răspuns, fără să părăsiți tastatura",
-        "description": "Lipiți un mesaj primit, iar Arcatext îl traduce pe loc – cu o analiză completă, cuvânt cu cuvânt, și cu o versiune literală – ca să prindeți nuanța, nu doar ideea generală.",
+        "description": "Lipiți mesajele pe care le primiți, iar Arcatext le traduce chiar în aplicație, ca să nu fie nevoie să părăsiți niciodată conversația.",
         "bullets": [
           "Traduceți mesajele primite chiar acolo unde scrieți",
           "Vedeți o analiză cuvânt cu cuvânt",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Spuneți ce vreți să spuneți",
-        "title": "Spuneți exact ce vreți să spuneți",
-        "description": "Când un cuvânt are mai multe sensuri, Arcatext îl detectează și vă lasă să alegeți sensul corect – astfel încât „broască” să fie animalul, nu cea de la ușă.",
+        "title": "Dezambiguizați omografele",
+        "description": "Când un cuvânt are mai multe sensuri, Arcatext îl detectează și vă lasă să alegeți varianta corectă, ca mesajul dumneavoastră să fie clar de fiecare dată.",
         "bullets": [
           "Detectare automată a omografelor",
           "Alegeți sensul pe care l-ați avut în minte",
@@ -58,7 +58,7 @@
         "alt": "Arcatext identifică un omograf și oferă sensul dorit."
       },
       "reverse": {
-        "eyebrow": "Verificați-vă",
+        "eyebrow": "Verificați intenția",
         "title": "Verificați traducerea în propria limbă",
         "description": "Vedeți mesajul tradus înapoi în limba dumneavoastră maternă înainte de a apăsa trimite, ca să știți întotdeauna exact ce va citi cealaltă persoană.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Conștient de context",
         "title": "Traduceri potrivite pentru cel cu care vorbiți",
-        "description": "Spuneți-i lui Arcatext cui îi scrieți, iar acesta adaptează gradul de formalitate, genul și chiar sistemul de scriere – Kanji, Hiragana sau romanizat – ca să se potrivească momentului.",
+        "description": "Obțineți traduceri exacte alegând genul corect al persoanei cu care vorbiți. Alegeți sistemul de scriere pe care vă simțiți confortabil să îl citiți, fie că este o scriere nativă, fie o romanizare.",
         "bullets": [
           "Formulări adaptate în funcție de gen și de grup",
           "Alegeți alfabetul sau scrierea dorită",
@@ -82,7 +82,7 @@
       "synonyms": {
         "eyebrow": "Îmbogățiți-vă vocabularul",
         "title": "Îmbogățiți-vă vocabularul în timp ce discutați",
-        "description": "Fiecare traducere vine cu opțiuni de sinonime, așa că descoperiți noi moduri de a spune același lucru și învățați limba natural – câte un mesaj pe rând.",
+        "description": "Fiecare traducere vine cu opțiuni de sinonime, ca să descoperiți noi moduri de a spune același lucru și să învățați limba natural, câte un mesaj pe rând.",
         "bullets": [
           "Mai multe moduri de a formula fiecare mesaj",
           "Descoperiți un vocabular mai bogat și mai natural",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Rămâneți sincronizați",
         "title": "Păstrați întregul fir de discuție în context",
-        "description": "Adăugați automat o copie a mesajului în propria limbă, astfel încât ambele părți să poată urmări mereu conversația – fără context pierdut, fără confuzie.",
+        "description": "Includeți o copie a fiecărui mesaj în propria limbă, ca să nu vă pierdeți niciodată în conversații și să nu fie nevoie să retraduceți mesaje.",
         "bullets": [
           "Trimiteți automat o copie în limba maternă",
           "Nu pierdeți niciodată firul discuției",

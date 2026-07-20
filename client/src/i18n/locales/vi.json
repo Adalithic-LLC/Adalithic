@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Gặp gỡ <brand>Arcatext</brand>.",
-    "tagline": "Học ngôn ngữ do người dùng dẫn dắt",
+    "tagline": "Học ngôn ngữ qua những cuộc trò chuyện thực tế",
     "imageAlt": "Bàn phím Arcatext đang dịch và chỉnh sửa một tin nhắn trong ứng dụng trò chuyện.",
     "learnMore": "Xem cách hoạt động",
     "getInTouch": "Liên hệ với chúng tôi",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Một ứng dụng, cho mọi phần của cuộc trò chuyện",
     "title": "Mọi thứ bạn cần để trò chuyện xuyên ngôn ngữ",
-    "subtitle": "Arcatext là một bàn phím AI hoạt động ngay bên trong các ứng dụng bạn đang dùng. Mỗi tính năng được xây dựng xoay quanh một khoảnh khắc cụ thể trong cuộc trò chuyện thực tế—để bạn tập trung vào điều muốn nói, chứ không phải cách nói.",
+    "subtitle": "Arcatext là một bàn phím AI hoạt động ngay bên trong các ứng dụng bạn đang dùng, bao quát mọi khía cạnh của việc gửi và nhận tin nhắn trong một cuộc trò chuyện.",
     "items": {
       "receive": {
         "eyebrow": "Hiểu các phản hồi",
         "title": "Hiểu mọi câu trả lời, ngay trên bàn phím",
-        "description": "Dán một tin nhắn bạn nhận được và Arcatext dịch ngay tại chỗ—kèm phân tích chi tiết từng từ và một bản dịch sát nghĩa—để bạn nắm được sắc thái, chứ không chỉ ý chính.",
+        "description": "Dán những tin nhắn bạn nhận được và Arcatext dịch ngay trong ứng dụng, để bạn không bao giờ phải rời khỏi cuộc trò chuyện.",
         "bullets": [
           "Dịch tin nhắn đến ngay nơi bạn đang gõ",
           "Xem phân tích từng từ một",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Nói đúng ý bạn",
-        "title": "Nói chính xác điều bạn muốn",
-        "description": "Khi một từ có nhiều nghĩa, Arcatext phát hiện và cho bạn chọn đúng nghĩa—để \"đường\" là lối đi, chứ không phải thứ để ăn.",
+        "title": "Phân biệt từ đồng tự",
+        "description": "Khi một từ có nhiều nghĩa, Arcatext phát hiện và cho bạn chọn đúng biến thể, để tin nhắn của bạn luôn rõ ràng mọi lúc.",
         "bullets": [
           "Tự động phát hiện từ đồng âm, đồng tự",
           "Chọn đúng nghĩa bạn muốn",
@@ -58,7 +58,7 @@
         "alt": "Arcatext đang nhận diện một từ nhiều nghĩa và đưa ra nghĩa bạn muốn dùng."
       },
       "reverse": {
-        "eyebrow": "Tự kiểm tra",
+        "eyebrow": "Xác nhận ý định",
         "title": "Kiểm tra lại bản dịch bằng chính ngôn ngữ của bạn",
         "description": "Xem tin nhắn của bạn được dịch ngược lại sang tiếng mẹ đẻ trước khi nhấn gửi, để bạn luôn biết chính xác người kia sẽ đọc được gì.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Nhận biết ngữ cảnh",
         "title": "Bản dịch phù hợp với người bạn đang trò chuyện",
-        "description": "Cho Arcatext biết bạn đang nhắn tin với ai và nó sẽ điều chỉnh mức độ trang trọng, giới tính, và thậm chí cả hệ chữ viết—Kanji, Hiragana hay chữ La-tinh—cho phù hợp với hoàn cảnh.",
+        "description": "Nhận bản dịch chính xác bằng cách chọn đúng giới tính của người bạn đang trò chuyện. Chọn hệ chữ viết bạn thấy dễ đọc, dù đó là chữ bản địa hay chữ La-tinh hóa.",
         "bullets": [
           "Cách diễn đạt nhận biết giới tính và nhóm",
           "Chọn bảng chữ cái hoặc hệ chữ bạn muốn",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Luôn đồng bộ",
         "title": "Giữ cho cả cuộc trò chuyện luôn có ngữ cảnh",
-        "description": "Tự động thêm một bản sao tin nhắn bằng ngôn ngữ của bạn, để cả hai bên luôn theo dõi được cuộc trò chuyện—không mất ngữ cảnh, không nhầm lẫn.",
+        "description": "Kèm theo một bản sao của mỗi tin nhắn bằng ngôn ngữ của bạn, để bạn không bao giờ lạc trong cuộc trò chuyện hay phải dịch lại tin nhắn.",
         "bullets": [
           "Tự động gửi bản sao bằng tiếng mẹ đẻ",
           "Không bao giờ mất mạch trò chuyện",

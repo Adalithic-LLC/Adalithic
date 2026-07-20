@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Kutana na <brand>Arcatext</brand>.",
-    "tagline": "Ujifunzaji wa lugha unaoongozwa na mtumiaji",
+    "tagline": "Jifunze Lugha Kupitia Mazungumzo Halisi",
     "imageAlt": "Kibodi ya Arcatext ikitafsiri na kusahihisha ujumbe katika programu ya gumzo.",
     "learnMore": "Ona jinsi inavyofanya kazi",
     "getInTouch": "Wasiliana nasi",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Programu moja, kila sehemu ya mazungumzo",
     "title": "Kila kitu unachohitaji ili kuzungumza kati ya lugha",
-    "subtitle": "Arcatext ni kibodi ya AI inayoishi ndani ya programu ambazo tayari unazitumia. Kila kipengele kimejengwa kuzunguka wakati mmoja katika mazungumzo halisi—ili uweze kuzingatia unachotaka kusema, si jinsi ya kukisema.",
+    "subtitle": "Arcatext ni kibodi ya AI inayoishi ndani ya programu ambazo tayari unazitumia na inashughulikia kila kipengele cha kutuma na kupokea ujumbe wakati wa mazungumzo.",
     "items": {
       "receive": {
         "eyebrow": "Elewa majibu",
         "title": "Elewa kila jibu, bila kuondoka kwenye kibodi",
-        "description": "Bandika ujumbe uliopokea na Arcatext huutafsiri papo hapo—ikiwa na uchambuzi wa neno kwa neno na toleo la moja kwa moja—ili unase maana halisi, si maelezo ya jumla tu.",
+        "description": "Bandika ujumbe unaopokea na Arcatext huutafsiri papo hapo ndani ya programu, ili usihitaji kamwe kuondoka kwenye mazungumzo.",
         "bullets": [
           "Tafsiri ujumbe unaoingia pale unapoandika",
           "Ona uchambuzi wa neno kwa neno",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Sema unachomaanisha",
-        "title": "Sema hasa unachomaanisha",
-        "description": "Neno linapokuwa na maana zaidi ya moja, Arcatext hulitambua na kukuruhusu kuchagua maana sahihi—ili neno \"paa\" limaanishe mnyama, si paa la nyumba.",
+        "title": "Fafanua maneno yenye maana nyingi",
+        "description": "Neno linapokuwa na maana zaidi ya moja, Arcatext hulitambua na kukuruhusu kuchagua toleo sahihi, ili ujumbe wako uwe wazi kila mara.",
         "bullets": [
           "Utambuzi otomatiki wa maneno yenye maana nyingi",
           "Chagua maana uliyokusudia",
@@ -58,7 +58,7 @@
         "alt": "Arcatext ikitambua neno lenye maana nyingi na kutoa maana iliyokusudiwa."
       },
       "reverse": {
-        "eyebrow": "Jihakikishie",
+        "eyebrow": "Thibitisha nia",
         "title": "Hakiki tafsiri kwa lugha yako mwenyewe",
         "description": "Ona ujumbe wako ukitafsiriwa tena kwa lugha yako ya asili kabla ya kubonyeza tuma, ili kila mara ujue hasa kile ambacho mtu mwingine atasoma.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Inayozingatia muktadha",
         "title": "Tafsiri zinazomfaa mtu unayezungumza naye",
-        "description": "Mwambie Arcatext unayemtumia ujumbe naye hurekebisha kiwango cha heshima, jinsia, na hata mfumo wa uandishi—Kanji, Hiragana, au herufi za Kirumi—ili uendane na hali.",
+        "description": "Pata tafsiri sahihi kwa kuchagua jinsia sahihi ya mtu unayezungumza naye. Chagua mfumo wa uandishi unaojisikia vizuri kuusoma, iwe ni maandishi ya asili au herufi za Kirumi.",
         "bullets": [
           "Msemo unaozingatia jinsia na kikundi",
           "Chagua alfabeti au maandishi unayotaka",
@@ -82,7 +82,7 @@
       "synonyms": {
         "eyebrow": "Kuza msamiati wako",
         "title": "Kuza msamiati wako unapopiga gumzo",
-        "description": "Kila tafsiri huja na chaguo za visawe, ili ufahamishwe njia mpya za kusema jambo lile lile na kunyakua lugha kwa njia ya asili—ujumbe mmoja kwa wakati.",
+        "description": "Kila tafsiri huja na chaguo za visawe, ili ufahamishwe njia mpya za kusema jambo lile lile na kunyakua lugha kwa njia ya asili, ujumbe mmoja kwa wakati.",
         "bullets": [
           "Njia nyingi za kuandika kila ujumbe",
           "Gundua msamiati wenye utajiri na wa asili zaidi",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Bakia sambamba",
         "title": "Weka mazungumzo yote katika muktadha",
-        "description": "Ongeza kiotomatiki nakala ya ujumbe wako kwa lugha yako mwenyewe, ili pande zote mbili ziweze kufuatilia mazungumzo kila mara—bila kupoteza muktadha, bila mkanganyiko.",
+        "description": "Jumuisha nakala ya kila ujumbe kwa lugha yako mwenyewe, ili usipotee kamwe katika mazungumzo au kulazimika kutafsiri upya ujumbe.",
         "bullets": [
           "Tuma kiotomatiki nakala ya lugha ya asili",
           "Usipoteze mwelekeo wa mazungumzo kamwe",

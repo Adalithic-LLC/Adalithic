@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Mød <brand>Arcatext</brand>.",
-    "tagline": "Brugerstyret sprogindlæring",
+    "tagline": "Lær sprog gennem virkelige samtaler",
     "imageAlt": "Arcatext-tastaturet, der oversætter og retter en besked i en chat-app.",
     "learnMore": "Se, hvordan det virker",
     "getInTouch": "Kontakt os",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Én app, hver del af samtalen",
     "title": "Alt, hvad du har brug for til at tale på tværs af sprog",
-    "subtitle": "Arcatext er et AI-tastatur, der lever inde i de apps, du allerede bruger. Hver funktion er bygget op omkring ét øjeblik i en virkelig samtale – så du kan fokusere på, hvad du vil sige, ikke hvordan du siger det.",
+    "subtitle": "Arcatext er et AI-tastatur, der lever inde i de apps, du allerede bruger, og dækker alle aspekter af at sende og modtage beskeder under en samtale.",
     "items": {
       "receive": {
         "eyebrow": "Forstå svarene",
         "title": "Forstå hvert svar uden at forlade tastaturet",
-        "description": "Indsæt en besked, du har modtaget, og Arcatext oversætter den med det samme – med en fuld ord-for-ord-opdeling og en bogstavelig version – så du fanger nuancen, ikke bare det store billede.",
+        "description": "Indsæt beskeder, du modtager, og Arcatext oversætter dem direkte i appen, så du aldrig behøver at forlade samtalen.",
         "bullets": [
           "Oversæt indgående beskeder præcis der, hvor du skriver",
           "Se en ord-for-ord-opdeling",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Sig, hvad du mener",
-        "title": "Sig præcis, hvad du mener",
-        "description": "Når et ord har mere end én betydning, opdager Arcatext det og lader dig vælge den rigtige mening – så \"får\" bliver dyret, ikke udsagnsordet.",
+        "title": "Skeln mellem homografer",
+        "description": "Når et ord har mere end én betydning, opdager Arcatext det og lader dig vælge den rigtige variant, så din besked er tydelig hver gang.",
         "bullets": [
           "Automatisk genkendelse af homografer",
           "Vælg den betydning, du mente",
@@ -58,7 +58,7 @@
         "alt": "Arcatext identificerer en homograf og tilbyder den tilsigtede betydning."
       },
       "reverse": {
-        "eyebrow": "Tjek dig selv",
+        "eyebrow": "Bekræft hensigt",
         "title": "Dobbelttjek oversættelsen på dit eget sprog",
         "description": "Se din besked oversat tilbage til dit modersmål, før du trykker send, så du altid ved præcis, hvad den anden person kommer til at læse.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "Kontekstbevidst",
         "title": "Oversættelser, der passer til den, du taler med",
-        "description": "Fortæl Arcatext, hvem du skriver til, og det tilpasser formalitet, køn og endda skriftsystemet – Kanji, Hiragana eller romaniseret – så det passer til øjeblikket.",
+        "description": "Få præcise oversættelser ved at vælge det korrekte køn på den person, du taler med. Vælg det skriftsystem, du har det bedst med at læse, hvad enten det er en oprindelig skrift eller romanisering.",
         "bullets": [
           "Formuleringer, der tager højde for køn og gruppe",
           "Vælg det alfabet eller skriftsystem, du vil have",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Hold dig synkroniseret",
         "title": "Hold hele tråden i kontekst",
-        "description": "Tilføj automatisk en kopi af din besked på dit eget sprog, så begge parter altid kan følge samtalen – ingen tabt kontekst, ingen forvirring.",
+        "description": "Inkludér en kopi af hver besked på dit eget sprog, så du aldrig mister tråden i samtaler eller er nødt til at genoversætte beskeder.",
         "bullets": [
           "Send automatisk en kopi på modersmålet",
           "Mist aldrig tråden i samtalen",

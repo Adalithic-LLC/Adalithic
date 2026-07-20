@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Kilalanin ang <brand>Arcatext</brand>.",
-    "tagline": "Pag-aaral ng wika na pinamumunuan ng user",
+    "tagline": "Matuto ng Wika sa Pamamagitan ng Tunay na Usapan",
     "imageAlt": "Ang Arcatext keyboard na nagsasalin at nagwawasto ng isang mensahe sa isang chat app.",
     "learnMore": "Tingnan kung paano ito gumagana",
     "getInTouch": "Makipag-ugnayan sa amin",
@@ -33,12 +33,12 @@
   "features": {
     "eyebrow": "Isang app, bawat bahagi ng usapan",
     "title": "Lahat ng kailangan mo para makapag-usap sa iba't ibang wika",
-    "subtitle": "Ang Arcatext ay isang AI keyboard na nasa loob mismo ng mga app na ginagamit mo na. Ang bawat feature ay binuo sa paligid ng isang sandali sa totoong usapan—para makapag-focus ka sa gusto mong sabihin, hindi kung paano ito sasabihin.",
+    "subtitle": "Ang Arcatext ay isang AI keyboard na nasa loob mismo ng mga app na ginagamit mo na at sumasaklaw sa lahat ng aspeto ng pagpapadala at pagtanggap ng mga mensahe sa isang usapan.",
     "items": {
       "receive": {
         "eyebrow": "Unawain ang mga sagot",
         "title": "Unawain ang bawat sagot, nang hindi umaalis sa keyboard",
-        "description": "I-paste ang isang mensaheng natanggap mo at isasalin ito ng Arcatext nang inline—may kumpletong salita-por-salitang breakdown at literal na bersyon—para matukoy mo ang nuance, hindi lang ang buod.",
+        "description": "I-paste ang mga mensaheng natatanggap mo at isasalin ito ng Arcatext mismo sa loob ng app, para hindi mo na kailangang umalis sa usapan.",
         "bullets": [
           "Isalin ang mga papasok na mensahe mismo kung saan ka nagta-type",
           "Tingnan ang salita-por-salitang breakdown",
@@ -48,8 +48,8 @@
       },
       "homographs": {
         "eyebrow": "Sabihin ang ibig mong sabihin",
-        "title": "Sabihin nang eksakto ang ibig mong sabihin",
-        "description": "Kapag ang isang salita ay may higit sa isang kahulugan, natutukoy ito ng Arcatext at hinahayaan kang piliin ang tamang kahulugan—para ang \"baka\" ay ang hayop, hindi ang pag-aalinlangan.",
+        "title": "Linawin ang mga homograph",
+        "description": "Kapag ang isang salita ay may higit sa isang kahulugan, natutukoy ito ng Arcatext at hinahayaan kang piliin ang tamang bersyon, para malinaw ang iyong mensahe sa tuwina.",
         "bullets": [
           "Awtomatikong pagtukoy ng homograph",
           "Piliin ang kahulugang ninanais mo",
@@ -58,7 +58,7 @@
         "alt": "Tinutukoy ng Arcatext ang isang homograph at inaalok ang ninanais na kahulugan."
       },
       "reverse": {
-        "eyebrow": "Suriin ang sarili",
+        "eyebrow": "Tiyakin ang intensyon",
         "title": "Suriing muli ang salin sa sarili mong wika",
         "description": "Tingnan ang iyong mensaheng isinalin pabalik sa iyong sariling wika bago mo pindutin ang send, para palagi mong alam nang eksakto ang mababasa ng kausap mo.",
         "bullets": [
@@ -71,7 +71,7 @@
       "recipient": {
         "eyebrow": "May kamalayan sa konteksto",
         "title": "Mga saling akma sa taong kausap mo",
-        "description": "Sabihin sa Arcatext kung sino ang tine-text mo at iaakma nito ang pormalidad, kasarian, at maging ang sistema ng pagsulat—Kanji, Hiragana, o romanized—para tumugma sa sandali.",
+        "description": "Kumuha ng tumpak na mga salin sa pamamagitan ng pagpili ng tamang kasarian ng taong kausap mo. Piliin ang sistema ng pagsulat na komportable mong basahin, script man ng katutubo o romanized.",
         "bullets": [
           "Pananalitang may kamalayan sa kasarian at grupo",
           "Piliin ang alpabeto o script na gusto mo",
@@ -82,7 +82,7 @@
       "synonyms": {
         "eyebrow": "Palaguin ang iyong bokabularyo",
         "title": "Palaguin ang iyong bokabularyo habang nag-uusap",
-        "description": "May kasamang mga opsyon sa kasingkahulugan ang bawat salin, para malantad ka sa mga bagong paraan ng pagsasabi ng parehong bagay at natural mong matutuhan ang wika—isang mensahe sa bawat pagkakataon.",
+        "description": "May kasamang mga opsyon sa kasingkahulugan ang bawat salin, para malantad ka sa mga bagong paraan ng pagsasabi ng parehong bagay at natural mong matutuhan ang wika, isang mensahe sa bawat pagkakataon.",
         "bullets": [
           "Maraming paraan para sabihin ang bawat mensahe",
           "Tuklasin ang mas mayaman at mas natural na bokabularyo",
@@ -93,7 +93,7 @@
       "copy": {
         "eyebrow": "Manatiling sabay",
         "title": "Panatilihin sa konteksto ang buong usapan",
-        "description": "Awtomatikong magdagdag ng kopya ng iyong mensahe sa sarili mong wika, para palaging masundan ng magkabilang panig ang usapan—walang nawawalang konteksto, walang kalituhan.",
+        "description": "Magsama ng kopya ng bawat mensahe sa sarili mong wika, para hindi ka kailanman mawala sa usapan o kailangang muling isalin ang mga mensahe.",
         "bullets": [
           "Awtomatikong magpadala ng kopya sa sariling wika",
           "Hindi kailanman mawawala sa usapan",
