@@ -237,16 +237,16 @@ export default function ArcatextIntro({
       await wait(200);
       if (cancelled) return;
 
-      // 6) Click down: darken + squish.
-      iconEl.style.transition = "filter 0.12s ease-in, transform 0.12s ease-in";
-      iconEl.style.filter = "brightness(0.58)";
-      iconEl.style.transform = "translate(-50%, -50%) scale(0.82)";
+      // 6) Click down: squish. (No brightness/darken — the icon is an opaque
+      //    white-background PNG composited with multiply, so darkening it would
+      //    turn the white box grey and paint a visible dark square.)
+      iconEl.style.transition = "transform 0.12s ease-in";
+      iconEl.style.transform = "translate(-50%, -50%) scale(0.78)";
       await wait(150);
       if (cancelled) return;
 
-      // 7) Release: back to normal colour + scale.
-      iconEl.style.transition = "filter 0.16s ease-out, transform 0.16s ease-out";
-      iconEl.style.filter = "brightness(1)";
+      // 7) Release: back to normal scale.
+      iconEl.style.transition = "transform 0.16s ease-out";
       iconEl.style.transform = "translate(-50%, -50%) scale(1)";
       await wait(180);
       if (cancelled) return;
