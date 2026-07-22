@@ -84,8 +84,9 @@ const MOBILE_DRIFT = 0.6;
 // are gone — this is just the conversation, input bar and keyboard.
 const DESIGN_W = 402;
 const SURFACE_H = 700;
-// Where a lifted-off bubble starts, roughly the top of the conversation area.
-const FLOAT_TOP = 22;
+// Where a lifted-off bubble starts — roughly where the top bubble of the
+// bottom-aligned thread sits, so it detaches from the top of the stack.
+const FLOAT_TOP = 66;
 
 function EllipsisCircle() {
   return (
@@ -163,15 +164,14 @@ export default function HeroKeyboardAnimation() {
   const threadRef = useRef<Msg[]>([]);
   const floatTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
-  // Responsive scale so the surface fits the hero at every breakpoint. Scaled
-  // up ~2x from the original phone mock, but clamped so it never overflows the
-  // viewport width on small screens.
-  const [scale, setScale] = useState(1.2);
+  // Responsive scale so the floating keyboard fits the hero at every
+  // breakpoint, clamped so it never overflows the viewport width.
+  const [scale, setScale] = useState(0.6);
   const [isDesktop, setIsDesktop] = useState(true);
   useEffect(() => {
     const compute = () => {
       const w = window.innerWidth;
-      const base = w < 480 ? 0.92 : w < 640 ? 1.04 : w < 1024 ? 1.16 : 1.28;
+      const base = w < 480 ? 0.46 : w < 640 ? 0.52 : w < 1024 ? 0.58 : 0.64;
       const fit = (w - 32) / DESIGN_W;
       setScale(Math.min(base, fit));
       setIsDesktop(w >= 1024);
@@ -306,11 +306,9 @@ export default function HeroKeyboardAnimation() {
           transformOrigin: "top left",
         }}
       >
-        {/* Frameless surface: just the conversation, input bar and keyboard. */}
-        <div
-          className="relative flex h-full w-full flex-col overflow-hidden bg-white"
-          style={{ borderRadius: 30, boxShadow: "0 24px 60px -22px rgba(20,10,40,0.35)" }}
-        >
+        {/* Transparent stage — no card. Just floating bubbles, the input bar
+            and the keyboard, over the hero background. */}
+        <div className="relative flex h-full w-full flex-col">
           {/* Conversation — sent (green, right) and received (gray, left)
               bubbles in chronological order. */}
           <div className="flex flex-1 flex-col justify-end gap-1.5 overflow-hidden px-3 pb-2 pt-4">
@@ -370,8 +368,13 @@ export default function HeroKeyboardAnimation() {
             )}
           </div>
 
-          {/* Keyboard */}
-          <div style={{ backgroundColor: C.toolbarBar }} className="px-[5px] pb-1 pt-2">
+          {/* Floating keyboard panel (rounded + shadow so it reads as its own
+              element now that there is no surrounding card) */}
+          <div
+            className="overflow-hidden"
+            style={{ borderRadius: 22, boxShadow: "0 18px 44px -16px rgba(20,10,40,0.4)" }}
+          >
+            <div style={{ backgroundColor: C.toolbarBar }} className="px-[5px] pb-1 pt-2">
             {/* Toolbar */}
             <div className="mb-2 flex items-center" style={{ height: 50, gap: 8 }}>
               <div className="relative ml-2 mr-[3px]">
@@ -471,14 +474,15 @@ export default function HeroKeyboardAnimation() {
             </div>
           </div>
 
-          {/* Bottom utility strip */}
-          <div style={{ backgroundColor: C.toolbarBar }} className="flex items-center justify-between px-5 pb-2 pt-1">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="9.2" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
-              <ellipse cx="12" cy="12" rx="4" ry="9.2" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
-              <path d="M3 12h18M4.5 7.5h15M4.5 16.5h15" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
-            </svg>
-            <Mic className="h-6 w-6" style={{ color: "rgba(0,0,0,0.82)" }} strokeWidth={2} />
+            {/* Bottom utility strip */}
+            <div style={{ backgroundColor: C.toolbarBar }} className="flex items-center justify-between px-5 pb-2 pt-1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9.2" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
+                <ellipse cx="12" cy="12" rx="4" ry="9.2" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
+                <path d="M3 12h18M4.5 7.5h15M4.5 16.5h15" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
+              </svg>
+              <Mic className="h-6 w-6" style={{ color: "rgba(0,0,0,0.82)" }} strokeWidth={2} />
+            </div>
           </div>
         </div>
 
