@@ -1,13 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
-import {
-  ChevronLeft,
-  ChevronRight,
-  ChevronDown,
-  Plus,
-  ArrowUp,
-  Mic,
-} from "lucide-react";
+import { ChevronDown, Plus, ArrowUp, Mic } from "lucide-react";
 
 /**
  * HeroKeyboardAnimation
@@ -87,12 +80,12 @@ const DIRS = [
 // smaller phone, so the displacement is scaled down there.
 const MOBILE_DRIFT = 0.6;
 
-// Phone geometry (design pixels), matching the prototype.
+// Surface geometry (design pixels). The device frame and status/contact header
+// are gone — this is just the conversation, input bar and keyboard.
 const DESIGN_W = 402;
-const SCREEN_H = 874;
-const BEZEL = 12;
-const OUTER_W = DESIGN_W + BEZEL * 2;
-const OUTER_H = SCREEN_H + BEZEL * 2;
+const SURFACE_H = 700;
+// Where a lifted-off bubble starts, roughly the top of the conversation area.
+const FLOAT_TOP = 22;
 
 function EllipsisCircle() {
   return (
@@ -170,12 +163,18 @@ export default function HeroKeyboardAnimation() {
   const threadRef = useRef<Msg[]>([]);
   const floatTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
-  // Responsive scale so the phone fits the hero at every breakpoint.
-  const [scale, setScale] = useState(0.6);
+  // Responsive scale so the surface fits the hero at every breakpoint. Scaled
+  // up ~2x from the original phone mock, but clamped so it never overflows the
+  // viewport width on small screens.
+  const [scale, setScale] = useState(1.2);
+  const [isDesktop, setIsDesktop] = useState(true);
   useEffect(() => {
     const compute = () => {
       const w = window.innerWidth;
-      setScale(w < 480 ? 0.46 : w < 640 ? 0.52 : w < 1024 ? 0.58 : 0.64);
+      const base = w < 480 ? 0.92 : w < 640 ? 1.04 : w < 1024 ? 1.16 : 1.28;
+      const fit = (w - 32) / DESIGN_W;
+      setScale(Math.min(base, fit));
+      setIsDesktop(w >= 1024);
     };
     compute();
     window.addEventListener("resize", compute);
@@ -283,7 +282,6 @@ export default function HeroKeyboardAnimation() {
 
   // ── derived ──
   const hasText = text.length > 0;
-  const showChat = messages.length > 0;
 
   // ── keyboard rows ──
   const lower = text === "";
@@ -295,87 +293,27 @@ export default function HeroKeyboardAnimation() {
   return (
     <div
       className="animate-float"
-      style={{ width: OUTER_W * scale, height: OUTER_H * scale }}
+      style={{ width: DESIGN_W * scale, height: SURFACE_H * scale }}
       role="img"
-      aria-label="The Arcatext keyboard typing a message, translating it with one tap, and sending it in a chat app."
+      aria-label="The Arcatext keyboard typing a message, translating it with one tap, and sending it as a chat bubble."
     >
       <div
-        className="relative bg-black"
+        className="relative"
         style={{
-          width: OUTER_W,
-          height: OUTER_H,
-          padding: BEZEL,
-          borderRadius: 56,
+          width: DESIGN_W,
+          height: SURFACE_H,
           transform: `scale(${scale})`,
           transformOrigin: "top left",
-          boxShadow: "0 30px 60px -20px rgba(20,10,40,0.5)",
         }}
       >
+        {/* Frameless surface: just the conversation, input bar and keyboard. */}
         <div
-          className="relative flex flex-col overflow-hidden bg-white"
-          style={{ width: DESIGN_W, height: SCREEN_H, borderRadius: 44 }}
+          className="relative flex h-full w-full flex-col overflow-hidden bg-white"
+          style={{ borderRadius: 30, boxShadow: "0 24px 60px -22px rgba(20,10,40,0.35)" }}
         >
-          {/* Status bar */}
-          <div className="relative flex h-11 items-center justify-between px-7 pt-1 text-black">
-            <span className="text-[15px] font-semibold">12:11</span>
-            <div className="absolute left-1/2 top-2 h-7 w-[100px] -translate-x-1/2 rounded-full bg-black" />
-            <div className="flex items-center gap-1.5">
-              <div className="flex items-end gap-[2px]">
-                {[6, 9, 12, 15].map((h, i) => (
-                  <span key={i} className="w-[3px] rounded-[1px] bg-black" style={{ height: h }} />
-                ))}
-              </div>
-              <svg width="17" height="13" viewBox="0 0 17 13" fill="none">
-                <path
-                  d="M8.5 2.2c2.5 0 4.8 1 6.5 2.6l-1.3 1.4A7.7 7.7 0 008.5 4.1 7.7 7.7 0 003.3 6.2L2 4.8A9.5 9.5 0 018.5 2.2zm0 3.6c1.5 0 2.9.6 3.9 1.6l-1.4 1.4a3.5 3.5 0 00-5 0L4.6 7.4A5.5 5.5 0 018.5 5.8zm0 3.5c.7 0 1.3.3 1.8.8L8.5 12 6.7 10.1c.5-.5 1.1-.8 1.8-.8z"
-                  fill="black"
-                />
-              </svg>
-              <div className="ml-[1px] flex h-[13px] w-[24px] items-center rounded-[3px] border border-black/40 p-[1.5px]">
-                <div className="h-full w-full rounded-[1px] bg-black" />
-              </div>
-            </div>
-          </div>
-
-          {/* Header */}
-          <div className="flex flex-col items-center border-b border-black/5 px-4 pb-3 pt-1">
-            <div className="flex w-full items-center justify-between">
-              <ChevronLeft className="h-7 w-7" style={{ color: C.send }} strokeWidth={2.4} />
-              <div className="w-7" />
-            </div>
-            <div className="-mt-5 flex flex-col items-center gap-1">
-              <div
-                className="grid h-12 w-12 place-items-center rounded-full text-sm font-semibold text-white"
-                style={{ background: "linear-gradient(160deg,#8e9bd6,#6f7fc4)" }}
-              >
-                JA
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="text-[15px] font-semibold text-black">+1 (888) 555-1212</span>
-                <ChevronRight className="h-4 w-4 text-black/50" strokeWidth={2.4} />
-              </div>
-            </div>
-          </div>
-
-          {/* Conversation */}
-          <div className="flex flex-1 flex-col justify-end gap-1.5 overflow-hidden px-3 pb-2">
-            {showChat && (
-              <>
-                <div className="text-center text-[13px] font-medium text-black/40">iMessage</div>
-                <div className="mb-1 flex items-center justify-center gap-1 text-[12px] text-black/40">
-                  <svg width="9" height="11" viewBox="0 0 9 11" fill="none">
-                    <rect x="0.6" y="4.6" width="7.8" height="6" rx="1.6" fill="currentColor" />
-                    <path d="M2 4.5V3a2.5 2.5 0 015 0v1.5" stroke="currentColor" strokeWidth="1.1" fill="none" />
-                  </svg>
-                  Encrypted
-                </div>
-                <div className="mb-1 text-center text-[12px] text-black/45">
-                  Today <span className="font-medium">12:12 AM</span>
-                </div>
-              </>
-            )}
-            {/* Conversation — sent (green, right) and received (gray, left)
-                bubbles in chronological order. */}
+          {/* Conversation — sent (green, right) and received (gray, left)
+              bubbles in chronological order. */}
+          <div className="flex flex-1 flex-col justify-end gap-1.5 overflow-hidden px-3 pb-2 pt-4">
             {messages.map((m, i) =>
               m.side === "sent" ? (
                 <div key={m.id} className="flex flex-col items-end">
@@ -544,25 +482,25 @@ export default function HeroKeyboardAnimation() {
           </div>
         </div>
 
-        {/* Floater layer — bubbles that have lifted off the top of the screen.
-            It sits above the screen and bezel with overflow visible, so each
-            one drifts clear of the device before fading. Rendered in the phone's
-            scaled coordinate space so the drift matches the on-screen bubbles. */}
+        {/* Floater layer — bubbles that have lifted off the top of the surface.
+            It sits above the surface with overflow visible, so each one drifts
+            clear of it before fading. Rendered in the same scaled coordinate
+            space so the drift matches the on-screen bubbles. */}
         <div
           className="pointer-events-none absolute"
-          style={{ top: BEZEL, left: BEZEL, width: DESIGN_W, height: SCREEN_H, overflow: "visible" }}
+          style={{ top: 0, left: 0, width: DESIGN_W, height: SURFACE_H, overflow: "visible" }}
           aria-hidden
         >
           {floaters.map((f) => {
             // DIRS are the intended on-screen displacement; the floater lives in
-            // the phone's scaled space, so divide by `scale` to hit that target
-            // once the frame's transform re-applies it. Full drift on desktop,
-            // reduced below the desktop breakpoint.
-            const drift = scale >= 0.62 ? 1 : MOBILE_DRIFT;
+            // the surface's scaled space, so divide by `scale` to hit that target
+            // once the transform re-applies it. Full drift on desktop, reduced
+            // on smaller screens.
+            const drift = isDesktop ? 1 : MOBILE_DRIFT;
             const fx = (f.dir.dx * drift) / scale;
             const fy = (f.dir.dy * drift) / scale;
             const style: React.CSSProperties & Record<string, string | number> = {
-              top: 184,
+              top: FLOAT_TOP,
               maxWidth: DESIGN_W * 0.78,
               "--fx": `${fx}px`,
               "--fy": `${fy}px`,
