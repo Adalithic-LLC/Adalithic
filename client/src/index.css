@@ -166,51 +166,6 @@ html {
   }
 }
 
-/* Message bubbles in the hero keyboard animation pop in as they are sent. */
-@keyframes bubbleIn {
-  0% { transform: scale(0.7) translateY(8px); opacity: 0; }
-  60% { transform: scale(1.04); }
-  100% { transform: scale(1) translateY(0); opacity: 1; }
-}
-
-.hero-kb-bubble {
-  transform-origin: bottom;
-  animation: bubbleIn 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-kb-bubble {
-    animation: none;
-  }
-}
-
-/* Once a bubble reaches the top of the phone it lifts off the device and
-   drifts away. Each floater is given its own direction (--fx/--fy/--fr) but
-   they all run for the same duration, so every message fades at the same rate. */
-@keyframes floatOff {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(var(--fx, 0), var(--fy, -240px));
-    opacity: 0;
-  }
-}
-
-.hero-kb-floater {
-  animation: floatOff var(--float-ms, 4500ms) cubic-bezier(0.33, 0.12, 0.3, 1) forwards;
-  will-change: transform, opacity;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-kb-floater {
-    display: none;
-  }
-}
-
 .bg-gradient-primary {
   background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(220, 90%, 40%) 100%);
 }

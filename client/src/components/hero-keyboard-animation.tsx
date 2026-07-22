@@ -6,16 +6,13 @@ import { ChevronDown, Plus, ArrowUp, Mic } from "lucide-react";
  * HeroKeyboardAnimation
  *
  * The hero visual for the Adalithic site: a live recreation of the Arcatext
- * keyboard + toolbar inside an iPhone Messages screen. Instead of a static
- * screenshot, it auto-plays the core loop — type a message in your native
- * language, tap Reword to translate it in place, then tap send and watch the
- * translated message drop into the conversation as a bubble. It runs a short
- * two-message exchange (with a reply) on a continuous loop.
+ * keyboard + toolbar, floating over the page background (no device frame).
+ * It auto-plays the core loop — type a message, tap Reword to translate it in
+ * place, then send it — and every sent/received bubble drifts up and away as
+ * newer messages arrive, so the conversation continuously bubbles upward.
  *
- * The phone chrome, keyboard, toolbar colors and layout are reused from the
- * interactive keyboard prototype in the product-design portfolio
- * (ArcatextKeyboard.tsx), pared down to just the visual + the send loop.
- * Colors come from the iOS asset catalog / StandardToolbar.swift.
+ * The keyboard/toolbar colors and layout are reused from the interactive
+ * keyboard prototype in the product-design portfolio (ArcatextKeyboard.tsx).
  */
 
 // ── Colors (light appearance, from the asset catalog) ────────────────────────
@@ -32,16 +29,15 @@ const C = {
   keyText: "#000000",
   send: "#0A7AFF",
   sendPressed: "#0862CC",
-  smsGreen: "#34C759",
+  sentBubble: "#0A7AFF", // sent bubbles use the same blue as the send button
   recvGray: "#E9E9EB",
 };
 
 // A demo back-and-forth conversation. Each sent message is typed in the user's
 // native language, then Reworded (translated) in place before being sent; the
-// received messages arrive as replies. Kept short and natural so the whole
-// exchange plays out on a loop inside the hero.
+// received messages type themselves out as replies.
 type Step =
-  | { kind: "sent"; native: string; reworded: string; typeMs?: number }
+  | { kind: "sent"; native: string; reworded: string }
   | { kind: "recv"; text: string };
 
 const SCRIPT: Step[] = [
@@ -55,38 +51,33 @@ const SCRIPT: Step[] = [
   { kind: "recv", text: "了解！楽しみにしてるね。" },
 ];
 
-type Msg = { id: number; side: "sent" | "recv"; text: string };
-type Floater = Msg & { dir: { dx: number; dy: number } };
+type Bubble = {
+  id: number;
+  side: "sent" | "recv";
+  text: string;
+  shown: number; // characters revealed (received types out; sent shows all)
+  age: number; // number of messages that have arrived after this one
+  entered: boolean; // false for one frame so a sent bubble can slide up in
+};
 
-// How many messages stay in the thread before the oldest lifts off the top.
-const MAX_VISIBLE = 6;
-// Uniform lift-off duration — every bubble fades at the same rate.
-const FLOAT_MS = 4500;
-
-// Per-message drift vectors, expressed as the intended on-screen displacement
-// in CSS px (dy is upward). Cycled by message id so each bubble that leaves the
-// screen floats a different way, yet they all fade on the same clock. Magnitudes
-// are ~200px so, on desktop, bubbles drift roughly 200px off the device. There
-// is no rotation — bubbles keep their orientation as they float.
-const DIRS = [
-  { dx: -96, dy: -176 },
-  { dx: 110, dy: -167 },
-  { dx: -20, dy: -199 },
-  { dx: 68, dy: -188 },
-  { dx: -132, dy: -150 },
-  { dx: 40, dy: -196 },
-];
-// Below the desktop breakpoint the same drift would fling bubbles off a much
-// smaller phone, so the displacement is scaled down there.
-const MOBILE_DRIFT = 0.6;
-
-// Surface geometry (design pixels). The device frame and status/contact header
-// are gone — this is just the conversation, input bar and keyboard.
+// Surface geometry (design pixels). No device frame — just the floating
+// bubbles, input bar and keyboard.
 const DESIGN_W = 402;
-const SURFACE_H = 700;
-// Where a lifted-off bubble starts — roughly where the top bubble of the
-// bottom-aligned thread sits, so it detaches from the top of the stack.
-const FLOAT_TOP = 66;
+const SURFACE_H = 560;
+
+// Bubble motion. Each new message ages the older ones by one step; a bubble is
+// fully faded (and removed) once 3 messages exist after it (age 3).
+const RISE = 53; // upward travel per age step — ~41px bubble + 12px gap
+const SIDE_PAD = 12; // sent/received sit 12px in from the edge
+const BASE_BOTTOM = 4; // newest bubble sits just above the input bar
+const ENTER_OFFSET = 30; // a just-sent bubble slides up this far into place
+const TRANSITION_MS = 780; // one staged float step / the slide-in
+// Per-bubble horizontal drift (px per age step), cycled by id so each bubble
+// takes a similar-but-different path. Sent drift right, received drift left.
+const DRIFTX = [15, 24, 10, 20, 28, 13];
+
+const TYPE_MS = 1000; // total typing duration (both input and received bubbles)
+const perChar = (len: number) => Math.max(18, Math.round(TYPE_MS / Math.max(1, len)));
 
 function EllipsisCircle() {
   return (
@@ -154,20 +145,16 @@ export default function HeroKeyboardAnimation() {
 
   // ── visual state driven by the timeline ──
   const [text, setText] = useState("");
-  const [messages, setMessages] = useState<Msg[]>([]);
-  const [floaters, setFloaters] = useState<Floater[]>([]);
+  const [bubbles, setBubbles] = useState<Bubble[]>([]);
   const [rewordLoading, setRewordLoading] = useState(false);
   const [pressed, setPressed] = useState<"reword" | "send" | null>(null);
 
-  // The thread is kept in a ref so appends + evictions resolve synchronously
-  // (no stale-closure races inside the timeline engine).
-  const threadRef = useRef<Msg[]>([]);
-  const floatTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const bubbleId = useRef(1);
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   // Responsive scale so the floating keyboard fits the hero at every
   // breakpoint, clamped so it never overflows the viewport width.
   const [scale, setScale] = useState(0.9);
-  const [isDesktop, setIsDesktop] = useState(true);
   useEffect(() => {
     const compute = () => {
       const w = window.innerWidth;
@@ -175,109 +162,130 @@ export default function HeroKeyboardAnimation() {
       const base = w < 480 ? 0.69 : w < 640 ? 0.78 : w < 1024 ? 0.87 : 0.96;
       const fit = (w - 32) / DESIGN_W;
       setScale(Math.min(base, fit));
-      setIsDesktop(w >= 1024);
     };
     compute();
     window.addEventListener("resize", compute);
     return () => window.removeEventListener("resize", compute);
   }, []);
 
-  const bubbleId = useRef(1);
-
   // Build the continuously looping timeline. Rebuilt only when reduced-motion
   // changes.
   useEffect(() => {
-    // Reduced motion: skip the animation and show the latest of the thread.
+    // Reduced motion: skip the animation, show the last few messages statically.
     if (reduceMotion) {
       setText("");
       let id = 1;
-      const all: Msg[] = SCRIPT.map((s) => ({
+      const last = SCRIPT.slice(-4).map((s) => ({
         id: id++,
-        side: s.kind === "sent" ? "sent" : "recv",
+        side: (s.kind === "sent" ? "sent" : "recv") as "sent" | "recv",
         text: s.kind === "sent" ? s.reworded : s.text,
+        shown: (s.kind === "sent" ? s.reworded : s.text).length,
+        age: 0,
+        entered: true,
       }));
-      setMessages(all.slice(-MAX_VISIBLE));
+      setBubbles(last);
       return;
     }
 
-    // Add a message to the thread. Once the thread is full, the oldest bubble
-    // is evicted and released as a floater that drifts off the top and fades.
-    const append = (side: "sent" | "recv", text: string) => {
-      const msg: Msg = { id: bubbleId.current++, side, text };
-      const next = [...threadRef.current, msg];
-      let evicted: Msg | null = null;
-      if (next.length > MAX_VISIBLE) evicted = next.shift() ?? null;
-      threadRef.current = next;
-      setMessages(next);
-      if (evicted) {
-        const dir = DIRS[evicted.id % DIRS.length];
-        const floater: Floater = { ...evicted, dir };
-        setFloaters((prev) => [...prev, floater]);
-        const t = setTimeout(() => {
-          setFloaters((prev) => prev.filter((f) => f.id !== floater.id));
-        }, FLOAT_MS + 120);
-        floatTimers.current.push(t);
-      }
+    // Age every existing bubble by one and drop the ones that have fully faded
+    // (an age-3 bubble is at opacity 0; it lingers one extra step then leaves).
+    const ageAll = (prev: Bubble[]) =>
+      prev.map((b) => ({ ...b, age: b.age + 1 })).filter((b) => b.age <= 3);
+
+    // A sent bubble drops in below its resting spot, then slides up into place.
+    const spawnSent = (msg: string) => {
+      const id = bubbleId.current++;
+      setBubbles((prev) => [
+        ...ageAll(prev),
+        { id, side: "sent", text: msg, shown: msg.length, age: 0, entered: false },
+      ]);
+      const t = setTimeout(
+        () => setBubbles((prev) => prev.map((b) => (b.id === id ? { ...b, entered: true } : b))),
+        50,
+      );
+      timers.current.push(t);
     };
+
+    // A received bubble appears in place and types itself out.
+    const spawnRecv = () => {
+      const id = bubbleId.current++;
+      setBubbles((prev) => [...ageAll(prev), { id, side: "recv", text: "", shown: 0, age: 0, entered: true }]);
+      return id;
+    };
+    const setRecvText = (full: string, n: number) =>
+      setBubbles((prev) => {
+        const a = prev.slice();
+        for (let i = a.length - 1; i >= 0; i--) {
+          if (a[i].side === "recv" && a[i].age === 0) {
+            a[i] = { ...a[i], text: full, shown: n };
+            break;
+          }
+        }
+        return a;
+      });
 
     const beats: { fn: () => void; ms: number }[] = [];
     const b = (fn: () => void, ms: number) => beats.push({ fn, ms });
 
-    // The thread starts empty and is never reset — the script simply loops, so
-    // messages keep streaming in and the oldest keep lifting off the top. A
-    // short lull sits at the loop seam.
-    b(() => {}, 600);
+    b(() => {}, 600); // loop-seam lull
 
-    SCRIPT.forEach((step, idx) => {
-      if (step.kind === "recv") {
-        // A reply arrives after a natural beat.
-        b(() => append("recv", step.text), idx === 0 ? 900 : 1400);
-        return;
+    SCRIPT.forEach((step) => {
+      if (step.kind === "sent") {
+        const { native, reworded } = step;
+        b(() => setText(""), 40);
+        // 1) type the message in the input over ~1s
+        const per = perChar(native.length);
+        for (let i = 1; i <= native.length; i++) {
+          const s = native.slice(0, i);
+          b(() => setText(s), per);
+        }
+        // 2) tap Reword immediately; 3) loading state lasts 0.5s
+        b(() => {
+          setPressed("reword");
+          setRewordLoading(true);
+        }, 500);
+        // 4) show the translation in the field (timing unchanged) …
+        b(() => {
+          setRewordLoading(false);
+          setPressed(null);
+          setText(reworded);
+        }, 900);
+        // … tap send (timing unchanged) …
+        b(() => setPressed("send"), 340);
+        // … send it: the bubble slides up. Then wait 1s before the reply.
+        b(() => {
+          setPressed(null);
+          spawnSent(reworded);
+          setText("");
+        }, 1000);
+      } else {
+        // received: appears 1s after the send (the previous beat's 1000ms),
+        // then types itself out over ~1s, then joins the float.
+        const full = step.text;
+        const per = perChar(full.length);
+        b(() => spawnRecv(), per);
+        for (let i = 1; i <= full.length; i++) {
+          b(() => setRecvText(full, i), per);
+        }
+        b(() => {}, 320); // brief settle before the next message
       }
-
-      // Sent message: type in the native language …
-      b(() => setText(""), 500);
-      const typeMs = step.typeMs ?? 46;
-      for (let i = 1; i <= step.native.length; i++) {
-        const s = step.native.slice(0, i);
-        b(() => setText(s), typeMs);
-      }
-      b(() => {}, 600);
-      // … tap Reword to translate it in place …
-      b(() => {
-        setPressed("reword");
-        setRewordLoading(true);
-      }, 340);
-      b(() => setPressed(null), 1150);
-      b(() => {
-        setRewordLoading(false);
-        setText(step.reworded);
-      }, 900);
-      // … then tap send and drop it into the conversation.
-      b(() => setPressed("send"), 340);
-      b(() => {
-        setPressed(null);
-        append("sent", step.reworded);
-        setText("");
-      }, 700);
     });
 
-    // Brief lull, then the script loops and the stream keeps flowing.
-    b(() => {}, 2200);
+    b(() => {}, 1200); // loop lull
 
     let i = 0;
     let timer: ReturnType<typeof setTimeout>;
-    const tick = () => {
+    const run = () => {
       const beat = beats[i];
       beat.fn();
       i = (i + 1) % beats.length;
-      timer = setTimeout(tick, beat.ms);
+      timer = setTimeout(run, beat.ms);
     };
-    tick();
+    run();
     return () => {
       clearTimeout(timer);
-      floatTimers.current.forEach(clearTimeout);
-      floatTimers.current = [];
+      timers.current.forEach(clearTimeout);
+      timers.current = [];
     };
   }, [reduceMotion]);
 
@@ -296,7 +304,7 @@ export default function HeroKeyboardAnimation() {
       className="animate-float"
       style={{ width: DESIGN_W * scale, height: SURFACE_H * scale }}
       role="img"
-      aria-label="The Arcatext keyboard typing a message, translating it with one tap, and sending it as a chat bubble."
+      aria-label="The Arcatext keyboard typing a message, translating it with one tap, and sending it as a chat bubble that floats away."
     >
       <div
         className="relative"
@@ -307,36 +315,46 @@ export default function HeroKeyboardAnimation() {
           transformOrigin: "top left",
         }}
       >
-        {/* Transparent stage — no card. Just floating bubbles, the input bar
-            and the keyboard, over the hero background. */}
+        {/* Transparent stage — no card. Floating bubbles, the input bar and the
+            keyboard, over the hero background. */}
         <div className="relative flex h-full w-full flex-col">
-          {/* Conversation — sent (green, right) and received (gray, left)
-              bubbles in chronological order. */}
-          <div className="flex flex-1 flex-col justify-end gap-1.5 overflow-hidden px-3 pb-2 pt-4">
-            {messages.map((m, i) =>
-              m.side === "sent" ? (
-                <div key={m.id} className="flex flex-col items-end">
+          {/* Bubble stage: each message drifts up/out and fades as newer ones
+              arrive. Overflow visible so bubbles can float clear as they fade. */}
+          <div className="relative flex-1" style={{ overflow: "visible" }}>
+            {bubbles.map((bub) => {
+              const isSent = bub.side === "sent";
+              const driftX = DRIFTX[bub.id % DRIFTX.length] * bub.age * (isSent ? 1 : -1);
+              const enterY = bub.entered ? 0 : ENTER_OFFSET;
+              const ty = -(bub.age * RISE) + enterY;
+              const op = bub.entered ? Math.max(0, 1 - bub.age / 3) : 0;
+              const style: React.CSSProperties = {
+                bottom: BASE_BOTTOM,
+                maxWidth: DESIGN_W * 0.74,
+                transform: `translate(${driftX}px, ${ty}px)`,
+                opacity: op,
+                transition: `transform ${TRANSITION_MS}ms cubic-bezier(0.22,0.61,0.36,1), opacity ${TRANSITION_MS}ms ease-out`,
+                willChange: "transform, opacity",
+              };
+              if (isSent) style.right = SIDE_PAD;
+              else style.left = SIDE_PAD;
+              const showCaret = !isSent && bub.shown < bub.text.length;
+              return (
+                <div key={bub.id} className="absolute" style={style}>
                   <div
-                    className="hero-kb-bubble max-w-[78%] rounded-[20px] px-3.5 py-2 text-[17px] text-white"
-                    style={{ background: C.smsGreen }}
+                    className="rounded-[20px] px-3.5 py-2 text-[17px]"
+                    style={isSent ? { background: C.sentBubble, color: "#fff" } : { background: C.recvGray, color: "#000" }}
                   >
-                    {m.text}
-                  </div>
-                  {i === messages.length - 1 && (
-                    <span className="mr-1 mt-0.5 text-[11px] text-black/45">Delivered</span>
-                  )}
-                </div>
-              ) : (
-                <div key={m.id} className="flex justify-start">
-                  <div
-                    className="hero-kb-bubble max-w-[78%] rounded-[20px] px-3.5 py-2 text-[17px] text-black"
-                    style={{ background: C.recvGray }}
-                  >
-                    {m.text}
+                    {isSent ? bub.text : bub.text.slice(0, bub.shown)}
+                    {showCaret && (
+                      <span
+                        className="ml-[1px] inline-block h-[18px] w-[2px] animate-pulse align-middle"
+                        style={{ background: "rgba(0,0,0,0.55)" }}
+                      />
+                    )}
                   </div>
                 </div>
-              ),
-            )}
+              );
+            })}
           </div>
 
           {/* Input bar */}
@@ -376,104 +394,105 @@ export default function HeroKeyboardAnimation() {
             style={{ borderRadius: 22, boxShadow: "0 18px 44px -16px rgba(20,10,40,0.4)" }}
           >
             <div style={{ backgroundColor: C.toolbarBar }} className="px-[5px] pb-1 pt-2">
-            {/* Toolbar */}
-            <div className="mb-2 flex items-center" style={{ height: 50, gap: 8 }}>
-              <div className="relative ml-2 mr-[3px]">
+              {/* Toolbar */}
+              <div className="mb-2 flex items-center" style={{ height: 50, gap: 8 }}>
+                <div className="relative ml-2 mr-[3px]">
+                  <div
+                    className="grid place-items-center rounded-[12px]"
+                    style={{ width: 57, height: 50, backgroundColor: C.toolButtonBg }}
+                  >
+                    <EllipsisCircle />
+                  </div>
+                </div>
+                <div className="relative mr-[3px]">
+                  <div
+                    className="grid place-items-center rounded-[12px]"
+                    style={{ width: 57, height: 50, backgroundColor: C.toolButtonBg }}
+                  >
+                    <PasteGlyph />
+                  </div>
+                </div>
+                <div className="relative">
+                  <div
+                    className="grid place-items-center rounded-[12px]"
+                    style={{ width: 68, height: 50, backgroundColor: C.checkBg }}
+                  >
+                    <span className="text-[16px] font-medium" style={{ color: C.checkText }}>
+                      Check
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1" />
                 <div
-                  className="grid place-items-center rounded-[12px]"
-                  style={{ width: 57, height: 50, backgroundColor: C.toolButtonBg }}
+                  className="relative mr-2 flex items-stretch overflow-hidden rounded-[12px] transition-transform"
+                  style={{
+                    height: 50,
+                    backgroundColor: pressed === "reword" ? C.rewordPressed : C.rewordBg,
+                    transform: pressed === "reword" ? "scale(0.96)" : "scale(1)",
+                  }}
                 >
-                  <EllipsisCircle />
+                  {/* Fixed-width label so the button doesn't resize while loading */}
+                  <div className="relative flex items-center justify-center" style={{ width: 90 }}>
+                    {rewordLoading ? (
+                      <span className="block h-5 w-5 animate-spin rounded-full border-2 border-white/40 border-t-white" />
+                    ) : (
+                      <span className="text-[16px] font-medium text-white">Reword</span>
+                    )}
+                  </div>
+                  <div className="self-center" style={{ width: 1, height: 20, backgroundColor: "rgba(255,255,255,0.5)" }} />
+                  <div className="relative grid place-items-center" style={{ width: 40 }}>
+                    <ChevronDown className="h-4 w-4 text-white" strokeWidth={2.4} />
+                  </div>
                 </div>
               </div>
-              <div className="relative mr-[3px]">
-                <div
-                  className="grid place-items-center rounded-[12px]"
-                  style={{ width: 57, height: 50, backgroundColor: C.toolButtonBg }}
-                >
-                  <PasteGlyph />
-                </div>
-              </div>
-              <div className="relative">
-                <div
-                  className="grid place-items-center rounded-[12px]"
-                  style={{ width: 68, height: 50, backgroundColor: C.checkBg }}
-                >
-                  <span className="text-[16px] font-medium" style={{ color: C.checkText }}>
-                    Check
-                  </span>
-                </div>
-              </div>
-              <div className="flex-1" />
-              <div
-                className="relative mr-2 flex items-stretch overflow-hidden rounded-[12px] transition-transform"
-                style={{
-                  height: 50,
-                  backgroundColor: pressed === "reword" ? C.rewordPressed : C.rewordBg,
-                  transform: pressed === "reword" ? "scale(0.96)" : "scale(1)",
-                }}
-              >
-                <div className="relative flex items-center px-3">
-                  {rewordLoading ? (
-                    <span className="block h-5 w-5 animate-spin rounded-full border-2 border-white/40 border-t-white" />
-                  ) : (
-                    <span className="text-[16px] font-medium text-white">Reword</span>
-                  )}
-                </div>
-                <div className="self-center" style={{ width: 1, height: 20, backgroundColor: "rgba(255,255,255,0.5)" }} />
-                <div className="relative grid place-items-center" style={{ width: 40 }}>
-                  <ChevronDown className="h-4 w-4 text-white" strokeWidth={2.4} />
-                </div>
-              </div>
-            </div>
 
-            {/* Rows */}
-            <div className="mb-[8px] flex gap-[5px]">
-              {row1.map((l, i) => (
-                <Key key={l} label={lower ? l : l.toUpperCase()} num={nums[i]} />
-              ))}
+              {/* Rows */}
+              <div className="mb-[8px] flex gap-[5px]">
+                {row1.map((l, i) => (
+                  <Key key={l} label={lower ? l : l.toUpperCase()} num={nums[i]} />
+                ))}
+              </div>
+              <div className="mb-[8px] flex gap-[5px] px-[18px]">
+                {row2.map((l) => (
+                  <Key key={l} label={lower ? l : l.toUpperCase()} />
+                ))}
+              </div>
+              <div className="mb-[8px] flex gap-[5px]">
+                <Key bg={C.actionKey} grow={1.5}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 4l7 7h-4v6H9v-6H5l7-7z" fill="rgba(0,0,0,0.82)" />
+                  </svg>
+                </Key>
+                {row3.map((l) => (
+                  <Key key={l} label={lower ? l : l.toUpperCase()} />
+                ))}
+                <Key bg={C.actionKey} grow={1.5}>
+                  <svg width="22" height="20" viewBox="0 0 26 22" fill="none">
+                    <path
+                      d="M8.2 3h13a2 2 0 012 2v12a2 2 0 01-2 2h-13a2 2 0 01-1.5-.7L1 11l5.7-7.3A2 2 0 018.2 3z"
+                      stroke="rgba(0,0,0,0.82)"
+                      strokeWidth="1.6"
+                      fill="none"
+                    />
+                    <path d="M11 8l6 6M17 8l-6 6" stroke="rgba(0,0,0,0.82)" strokeWidth="1.6" strokeLinecap="round" />
+                  </svg>
+                </Key>
+              </div>
+              <div className="mb-2 flex gap-[5px]">
+                <Key bg={C.actionKey} grow={1.6} fontSize={15}>
+                  123
+                </Key>
+                <Key bg={C.actionKey} grow={1.2} fontSize={17}>
+                  文
+                </Key>
+                <Key grow={5} fontSize={15}>
+                  <span className="text-black/85">space</span>
+                </Key>
+                <Key bg={C.actionKey} grow={1.6} fontSize={18}>
+                  ↵
+                </Key>
+              </div>
             </div>
-            <div className="mb-[8px] flex gap-[5px] px-[18px]">
-              {row2.map((l) => (
-                <Key key={l} label={lower ? l : l.toUpperCase()} />
-              ))}
-            </div>
-            <div className="mb-[8px] flex gap-[5px]">
-              <Key bg={C.actionKey} grow={1.5}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 4l7 7h-4v6H9v-6H5l7-7z" fill="rgba(0,0,0,0.82)" />
-                </svg>
-              </Key>
-              {row3.map((l) => (
-                <Key key={l} label={lower ? l : l.toUpperCase()} />
-              ))}
-              <Key bg={C.actionKey} grow={1.5}>
-                <svg width="22" height="20" viewBox="0 0 26 22" fill="none">
-                  <path
-                    d="M8.2 3h13a2 2 0 012 2v12a2 2 0 01-2 2h-13a2 2 0 01-1.5-.7L1 11l5.7-7.3A2 2 0 018.2 3z"
-                    stroke="rgba(0,0,0,0.82)"
-                    strokeWidth="1.6"
-                    fill="none"
-                  />
-                  <path d="M11 8l6 6M17 8l-6 6" stroke="rgba(0,0,0,0.82)" strokeWidth="1.6" strokeLinecap="round" />
-                </svg>
-              </Key>
-            </div>
-            <div className="mb-2 flex gap-[5px]">
-              <Key bg={C.actionKey} grow={1.6} fontSize={15}>
-                123
-              </Key>
-              <Key bg={C.actionKey} grow={1.2} fontSize={17}>
-                文
-              </Key>
-              <Key grow={5} fontSize={15}>
-                <span className="text-black/85">space</span>
-              </Key>
-              <Key bg={C.actionKey} grow={1.6} fontSize={18}>
-                ↵
-              </Key>
-            </div>
-          </div>
 
             {/* Bottom utility strip */}
             <div style={{ backgroundColor: C.toolbarBar }} className="flex items-center justify-between px-5 pb-2 pt-1">
@@ -485,49 +504,6 @@ export default function HeroKeyboardAnimation() {
               <Mic className="h-6 w-6" style={{ color: "rgba(0,0,0,0.82)" }} strokeWidth={2} />
             </div>
           </div>
-        </div>
-
-        {/* Floater layer — bubbles that have lifted off the top of the surface.
-            It sits above the surface with overflow visible, so each one drifts
-            clear of it before fading. Rendered in the same scaled coordinate
-            space so the drift matches the on-screen bubbles. */}
-        <div
-          className="pointer-events-none absolute"
-          style={{ top: 0, left: 0, width: DESIGN_W, height: SURFACE_H, overflow: "visible" }}
-          aria-hidden
-        >
-          {floaters.map((f) => {
-            // DIRS are the intended on-screen displacement; the floater lives in
-            // the surface's scaled space, so divide by `scale` to hit that target
-            // once the transform re-applies it. Full drift on desktop, reduced
-            // on smaller screens.
-            const drift = isDesktop ? 1 : MOBILE_DRIFT;
-            const fx = (f.dir.dx * drift) / scale;
-            const fy = (f.dir.dy * drift) / scale;
-            const style: React.CSSProperties & Record<string, string | number> = {
-              top: FLOAT_TOP,
-              maxWidth: DESIGN_W * 0.78,
-              "--fx": `${fx}px`,
-              "--fy": `${fy}px`,
-              "--float-ms": `${FLOAT_MS}ms`,
-            };
-            if (f.side === "sent") style.right = 12;
-            else style.left = 12;
-            return (
-              <div key={f.id} className="hero-kb-floater absolute" style={style}>
-                <div
-                  className="rounded-[20px] px-3.5 py-2 text-[17px]"
-                  style={
-                    f.side === "sent"
-                      ? { background: C.smsGreen, color: "#fff" }
-                      : { background: C.recvGray, color: "#000" }
-                  }
-                >
-                  {f.text}
-                </div>
-              </div>
-            );
-          })}
         </div>
       </div>
     </div>
