@@ -166,12 +166,13 @@ export default function HeroKeyboardAnimation() {
 
   // Responsive scale so the floating keyboard fits the hero at every
   // breakpoint, clamped so it never overflows the viewport width.
-  const [scale, setScale] = useState(0.6);
+  const [scale, setScale] = useState(0.9);
   const [isDesktop, setIsDesktop] = useState(true);
   useEffect(() => {
     const compute = () => {
       const w = window.innerWidth;
-      const base = w < 480 ? 0.46 : w < 640 ? 0.52 : w < 1024 ? 0.58 : 0.64;
+      // ~1.5x the original size (matches the "150% zoom" that looked right).
+      const base = w < 480 ? 0.69 : w < 640 ? 0.78 : w < 1024 ? 0.87 : 0.96;
       const fit = (w - 32) / DESIGN_W;
       setScale(Math.min(base, fit));
       setIsDesktop(w >= 1024);
