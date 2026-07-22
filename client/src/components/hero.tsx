@@ -5,12 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TypewriterAnimation from "./typewriter-animation";
 import ArcatextIntro from "./arcatext-intro";
+import HeroKeyboardAnimation from "./hero-keyboard-animation";
 import { introBus } from "@/lib/intro-bus";
-
-// The flagship product screenshot (absolute path so it resolves from any URL
-// depth, e.g. /es/... locale routes). The remaining screenshots are each given
-// their own focused section in the Features component below the hero.
-const heroImage = "/Hero%20image%2001.png";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -126,22 +122,17 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Single flagship screenshot — each additional value gets its own
-              dedicated section below, rather than crowding the hero. */}
+          {/* Live keyboard animation — replaces the flagship screenshot. It
+              types a message, taps Reword to translate it in place, then sends
+              it, showing each translated message land in the conversation.
+              Each additional value gets its own dedicated section below. */}
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
             className="mt-16 flex justify-center"
           >
-            <div className="animate-float rounded-[2.25rem] bg-cream p-3 shadow-2xl shadow-blue-900/15 ring-1 ring-black/5">
-              <img
-                src={heroImage}
-                alt={t("hero.imageAlt")}
-                className="w-auto h-[520px] md:h-[600px] rounded-[1.6rem] object-contain"
-                fetchPriority="high"
-              />
-            </div>
+            <HeroKeyboardAnimation />
           </motion.div>
         </div>
       </div>
