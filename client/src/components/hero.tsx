@@ -12,6 +12,7 @@ export default function Hero() {
 
   // --- Page-load intro animation orchestration ---
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const taglineRef = useRef<HTMLParagraphElement>(null);
   const fieldRef = useRef<HTMLDivElement>(null);
   const [typingActive, setTypingActive] = useState(false);
   const [fieldHighlight, setFieldHighlight] = useState(false);
@@ -86,7 +87,9 @@ export default function Hero() {
               />
             </h1>
 
-            <p className="text-xl md:text-2xl font-bold text-secondary">{t("hero.tagline")}</p>
+            <p ref={taglineRef} className="text-xl md:text-2xl font-bold text-secondary">
+              {t("hero.tagline")}
+            </p>
           </motion.div>
 
           {/* Live keyboard animation — moved up into the space the CTA buttons
@@ -99,7 +102,13 @@ export default function Hero() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
             className="mt-8 flex justify-center"
           >
-            <HeroKeyboardAnimation active={typingActive} focused={fieldHighlight} inputRef={fieldRef} />
+            <HeroKeyboardAnimation
+              active={typingActive}
+              focused={fieldHighlight}
+              inputRef={fieldRef}
+              taglineRef={taglineRef}
+              titleRef={titleRef}
+            />
           </motion.div>
 
           {/* CTA buttons — now below the animation. */}

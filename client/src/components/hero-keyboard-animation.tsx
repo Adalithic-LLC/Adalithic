@@ -37,13 +37,15 @@ const C = {
 // native language, then Reworded (translated) in place before being sent; the
 // received messages type themselves out as replies.
 type Step =
-  | { kind: "sent"; native: string; reworded: string }
+  // A sent message with no `reworded` types and sends in the native language
+  // (no Reword step); with `reworded` it types, Rewords, then sends in Japanese.
+  | { kind: "sent"; native: string; reworded?: string }
   | { kind: "recv"; text: string };
 
 const SCRIPT: Step[] = [
-  { kind: "sent", native: "Learn a language", reworded: "言語を学ぶ" },
-  { kind: "sent", native: "Cross-language communication for business", reworded: "ビジネスでの多言語コミュニケーション" },
-  { kind: "sent", native: "Chat with international friends", reworded: "海外の友達とチャットする" },
+  { kind: "sent", native: "Learn a language" },
+  { kind: "sent", native: "Cross-language communication for business" },
+  { kind: "sent", native: "Chat with international friends" },
   { kind: "recv", text: "それ、すごくいいね！" },
   {
     kind: "sent",
@@ -83,25 +85,24 @@ type Bubble = {
   side: "sent" | "recv";
   text: string;
   shown: number; // characters revealed (received types out; sent shows all)
-  age: number; // number of messages that have arrived after this one
   floating: boolean; // received bubbles hold still until they finish typing
 };
+
+// Measured, in design px: how far up a bubble rises at each waypoint and how
+// far it swings out to clear the centered hero copy.
+type FloatGeo = { ya: number; yb: number; yhead: number; clearX: number };
+const DEFAULT_GEO: FloatGeo = { ya: 150, yb: 300, yhead: 720, clearX: 230 };
 
 // Surface geometry (design pixels). No device frame — just the floating
 // bubbles, input bar and keyboard.
 const DESIGN_W = 402;
 const SURFACE_H = 560;
 
-// Bubble motion. Each bubble drifts continuously up and away (a little to the
-// right) and fades over its lifetime, staying visible until the 4th message
-// after it arrives — at which point it is removed (age > 3).
 const SIDE_PAD = 12; // sent/received sit 12px in from the edge
 const BASE_BOTTOM = 4; // a new bubble starts just above the input bar
-// Per-bubble travel vectors (design px), cycled by id so each bubble takes a
-// similar-but-different path up and to the right. Tuned in the keyframes'
-// duration to reach the top / full fade right around the 4th later message.
-const UPS = [190, 208, 196, 214, 184, 202];
-const RIGHTS = [52, 70, 46, 62, 76, 56];
+const FLOAT_MS = 11000; // time for a bubble to travel from the field to the headline
+// Slight per-bubble variation so each takes a similar-but-different path.
+const VARY = [1, 0.9, 1.08, 0.96, 1.05, 0.93];
 
 const TYPE_MS = 1000; // total typing duration (both input and received bubbles)
 const perChar = (len: number) => Math.max(18, Math.round(TYPE_MS / Math.max(1, len)));
@@ -174,12 +175,18 @@ interface HeroKeyboardAnimationProps {
   focused?: boolean;
   /** Ref to the input field so the intro can fly the logo into it. */
   inputRef?: React.Ref<HTMLDivElement>;
+  /** The centered tagline the floating bubbles must route around. */
+  taglineRef?: React.RefObject<HTMLElement | null>;
+  /** The headline — bubbles fully fade in line with it. */
+  titleRef?: React.RefObject<HTMLElement | null>;
 }
 
 export default function HeroKeyboardAnimation({
   active = true,
   focused = false,
   inputRef,
+  taglineRef,
+  titleRef,
 }: HeroKeyboardAnimationProps) {
   const reduceMotion = useReducedMotion();
 
@@ -190,6 +197,8 @@ export default function HeroKeyboardAnimation({
   const [pressed, setPressed] = useState<"reword" | "send" | null>(null);
 
   const bubbleId = useRef(1);
+  const bubbleAreaRef = useRef<HTMLDivElement>(null);
+  const [geo, setGeo] = useState<FloatGeo>(DEFAULT_GEO);
 
   // Responsive scale so the floating keyboard fits the hero at every
   // breakpoint, clamped so it never overflows the viewport width.
@@ -207,6 +216,46 @@ export default function HeroKeyboardAnimation({
     return () => window.removeEventListener("resize", compute);
   }, []);
 
+  // Measure the route the bubbles take: rise far enough to fade in line with
+  // the headline, and swing out far enough to clear the centered tagline.
+  useEffect(() => {
+    const measure = () => {
+      const area = bubbleAreaRef.current?.getBoundingClientRect();
+      const tag = taglineRef?.current?.getBoundingClientRect();
+      const head = titleRef?.current?.getBoundingClientRect();
+      if (!area || !tag || !head || !scale) return;
+      const baseY = area.bottom; // bubbles start near here
+      const yTagBottom = (baseY - tag.bottom) / scale;
+      const yTagTop = (baseY - tag.top) / scale;
+      const yHead = (baseY - (head.top + head.height * 0.55)) / scale;
+      // Move out far enough that the widest bubble (up to 0.74 of the surface)
+      // clears the tagline's edge, plus a margin. Uses the tagline's actual
+      // left edge, with a floor so it always swings out somewhat.
+      const clearScreen = Math.max(
+        area.width * 0.46,
+        area.left + area.width * 0.86 - tag.left + 44,
+      );
+      setGeo({
+        // Finish the sideways swing well below the tagline so even a tall
+        // (multi-line) bubble is fully clear before it rises into the band.
+        ya: Math.max(30, yTagBottom * 0.22),
+        yb: Math.max(60, yTagBottom * 0.44),
+        yhead: Math.max(yTagTop + 80, yHead),
+        clearX: clearScreen / scale,
+      });
+    };
+    measure();
+    const raf = requestAnimationFrame(measure);
+    // Re-measure after the hero's entrance animation has settled.
+    const timers = [400, 1000, 1800].map((ms) => setTimeout(measure, ms));
+    window.addEventListener("resize", measure);
+    return () => {
+      cancelAnimationFrame(raf);
+      timers.forEach(clearTimeout);
+      window.removeEventListener("resize", measure);
+    };
+  }, [scale, taglineRef, titleRef]);
+
   // Build the continuously looping timeline. Rebuilt only when reduced-motion
   // changes.
   useEffect(() => {
@@ -217,9 +266,8 @@ export default function HeroKeyboardAnimation({
       const last = SCRIPT.slice(-4).map((s) => ({
         id: id++,
         side: (s.kind === "sent" ? "sent" : "recv") as "sent" | "recv",
-        text: s.kind === "sent" ? s.reworded : s.text,
-        shown: (s.kind === "sent" ? s.reworded : s.text).length,
-        age: 0,
+        text: s.kind === "sent" ? s.reworded ?? s.native : s.text,
+        shown: (s.kind === "sent" ? s.reworded ?? s.native : s.text).length,
         floating: false,
       }));
       setBubbles(last);
@@ -230,26 +278,18 @@ export default function HeroKeyboardAnimation({
     // first message starts typing.
     if (!active) return;
 
-    // Age every existing bubble by one and drop the ones past their lifetime.
-    // A bubble stays visible until the 4th message after it arrives (age 4),
-    // so we keep ages 0–3 and remove on the step that would make it 4.
-    const ageAll = (prev: Bubble[]) =>
-      prev.map((b) => ({ ...b, age: b.age + 1 })).filter((b) => b.age <= 3);
-
-    // A sent bubble appears and immediately starts drifting up and away.
+    // A sent bubble appears and immediately starts floating up and away. It is
+    // removed when its float animation ends (onAnimationEnd in the render).
     const spawnSent = (msg: string) => {
       const id = bubbleId.current++;
-      setBubbles((prev) => [
-        ...ageAll(prev),
-        { id, side: "sent", text: msg, shown: msg.length, age: 0, floating: true },
-      ]);
+      setBubbles((prev) => [...prev, { id, side: "sent", text: msg, shown: msg.length, floating: true }]);
     };
 
     // A received bubble appears in place and types itself out; it only starts
     // drifting once typing finishes (startRecvFloat).
     const spawnRecv = () => {
       const id = bubbleId.current++;
-      setBubbles((prev) => [...ageAll(prev), { id, side: "recv", text: "", shown: 0, age: 0, floating: false }]);
+      setBubbles((prev) => [...prev, { id, side: "recv", text: "", shown: 0, floating: false }]);
       return id;
     };
     const setRecvText = (full: string, n: number) =>
@@ -290,25 +330,33 @@ export default function HeroKeyboardAnimation({
           const s = native.slice(0, i);
           b(() => setText(s), per);
         }
-        // 2) tap Reword immediately; 3) loading state lasts 0.5s
-        b(() => {
-          setPressed("reword");
-          setRewordLoading(true);
-        }, 500);
-        // 4) show the translation in the field (timing unchanged) …
-        b(() => {
-          setRewordLoading(false);
-          setPressed(null);
-          setText(reworded);
-        }, 900);
-        // … tap send (timing unchanged) …
-        b(() => setPressed("send"), 340);
-        // … send it: the bubble slides up. Then wait 1s before the reply.
-        b(() => {
-          setPressed(null);
-          spawnSent(reworded);
-          setText("");
-        }, 1000);
+        if (reworded) {
+          // 2) tap Reword; loading lasts 0.5s; 3) show the translation; 4) send.
+          b(() => {
+            setPressed("reword");
+            setRewordLoading(true);
+          }, 500);
+          b(() => {
+            setRewordLoading(false);
+            setPressed(null);
+            setText(reworded);
+          }, 900);
+          b(() => setPressed("send"), 340);
+          b(() => {
+            setPressed(null);
+            spawnSent(reworded);
+            setText("");
+          }, 1000);
+        } else {
+          // No Reword — send exactly what was typed (English for now).
+          b(() => {}, 450);
+          b(() => setPressed("send"), 340);
+          b(() => {
+            setPressed(null);
+            spawnSent(native);
+            setText("");
+          }, 1000);
+        }
       } else {
         // received: appears 1s after the send (the previous beat's 1000ms),
         // then types itself out over ~1s, then starts drifting like a sent one.
@@ -336,6 +384,9 @@ export default function HeroKeyboardAnimation({
     return () => clearTimeout(timer);
   }, [reduceMotion, active]);
 
+  // Remove a bubble once its float animation reaches the headline.
+  const removeBubble = (id: number) => setBubbles((prev) => prev.filter((b) => b.id !== id));
+
   // ── derived ──
   const hasText = text.length > 0;
 
@@ -354,7 +405,7 @@ export default function HeroKeyboardAnimation({
       aria-label="The Arcatext keyboard typing a message, translating it with one tap, and sending it as a chat bubble that floats away."
     >
       <div
-        className="relative"
+        className="relative text-left"
         style={{
           width: DESIGN_W,
           height: SURFACE_H,
@@ -365,10 +416,10 @@ export default function HeroKeyboardAnimation({
         {/* Transparent stage — no card. Floating bubbles, the input bar and the
             keyboard, over the hero background. */}
         <div className="relative flex h-full w-full flex-col">
-          {/* Bubble stage: each message drifts continuously up and away, fading
-              out, until the 4th later message arrives. Overflow visible so they
+          {/* Bubble stage: each message floats up, curves out around the hero
+              copy, and fades in line with the headline. Overflow visible so they
               float clear of the keyboard. */}
-          <div className="relative flex-1" style={{ overflow: "visible" }}>
+          <div ref={bubbleAreaRef} className="relative flex-1" style={{ overflow: "visible" }}>
             {reduceMotion
               ? // Static, bottom-aligned stack for reduced motion.
                 bubbles.length > 0 && (
@@ -393,22 +444,31 @@ export default function HeroKeyboardAnimation({
                   const isSent = bub.side === "sent";
                   // Don't show a received bubble until its first character types.
                   if (!isSent && bub.shown === 0) return null;
-                  // Sent bubbles drift up and right; received drift up and left.
-                  const rx = RIGHTS[bub.id % RIGHTS.length] * (isSent ? 1 : -1);
+                  // Sent bubbles curve out to the right; received to the left.
+                  const vary = VARY[bub.id % VARY.length];
+                  const cx = geo.clearX * vary * (isSent ? 1 : -1);
                   const style: React.CSSProperties & Record<string, string | number> = {
                     bottom: BASE_BOTTOM,
                     maxWidth: DESIGN_W * 0.74,
-                    "--rx": `${rx}px`,
-                    "--ry": `-${UPS[bub.id % UPS.length]}px`,
+                    "--cx": `${cx}px`,
+                    "--ya": `-${geo.ya}px`,
+                    "--yb": `-${geo.yb}px`,
+                    "--yhead": `-${geo.yhead * (0.98 + (vary - 1) * 0.4)}px`,
+                    "--dur": `${FLOAT_MS}ms`,
                   };
                   if (isSent) style.right = SIDE_PAD;
                   else style.left = SIDE_PAD;
                   // Sent bubbles float from the start; received hold still until
                   // they've finished typing themselves out.
-                  const floatClass = isSent ? "hero-float-sent" : bub.floating ? "hero-float-recv" : "";
+                  const floating = isSent || bub.floating;
                   const showCaret = !isSent && bub.shown < bub.text.length;
                   return (
-                    <div key={bub.id} className={`absolute ${floatClass}`} style={style}>
+                    <div
+                      key={bub.id}
+                      className={`absolute ${floating ? "hero-float" : ""}`}
+                      style={style}
+                      onAnimationEnd={floating ? () => removeBubble(bub.id) : undefined}
+                    >
                       <div
                         className="rounded-[20px] px-3.5 py-2 text-[17px]"
                         style={isSent ? { background: C.sentBubble, color: "#fff" } : { background: C.recvGray, color: "#000" }}
@@ -426,42 +486,41 @@ export default function HeroKeyboardAnimation({
                 })}
           </div>
 
-          {/* Input bar */}
-          <div className="flex items-center gap-2 px-3 pb-2 pt-1">
+          {/* Input bar. The field wraps long text and grows in height (bottom
+              aligned) and the send button is always visible. */}
+          <div className="flex items-end gap-2 px-3 pb-2 pt-1">
             <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#e6e8ec]">
               <Plus className="h-5 w-5 text-[#6b7280]" strokeWidth={2.6} />
             </div>
             <div
               ref={inputRef}
-              className="flex h-9 min-w-0 flex-1 items-center rounded-full border pl-4 pr-2 transition-colors"
+              className="flex min-h-9 min-w-0 flex-1 items-center rounded-[18px] border py-1.5 pl-4 pr-3 transition-colors"
               style={{
                 borderColor: focused ? C.send : "rgba(0,0,0,0.15)",
                 background: focused ? "rgba(10,122,255,0.06)" : "transparent",
               }}
             >
-              <div className="flex min-w-0 flex-1 items-center overflow-hidden">
-                {hasText ? (
-                  <span className="whitespace-nowrap text-[15px] text-black">{text}</span>
-                ) : (
-                  <span className="text-[15px]" style={{ color: "#9aa0a6" }}>
-                    iMessage
-                  </span>
-                )}
-                <span className="ml-[1px] inline-block h-4 w-[2px] shrink-0 animate-pulse" style={{ background: C.send }} />
-              </div>
-              {!hasText && <Mic className="ml-2 h-5 w-5 shrink-0" style={{ color: "#9aa0a6" }} strokeWidth={2} />}
+              {hasText ? (
+                <span className="min-w-0 flex-1 whitespace-pre-wrap break-words text-[15px] leading-snug text-black">
+                  {text}
+                  <span className="ml-[1px] inline-block h-[15px] w-[2px] translate-y-[2px] animate-pulse align-baseline" style={{ background: C.send }} />
+                </span>
+              ) : (
+                <span className="min-w-0 flex-1 text-[15px]" style={{ color: "#9aa0a6" }}>
+                  iMessage
+                  <span className="ml-[1px] inline-block h-[15px] w-[2px] translate-y-[2px] animate-pulse" style={{ background: C.send }} />
+                </span>
+              )}
             </div>
-            {hasText && (
-              <div
-                className="grid h-9 w-9 shrink-0 place-items-center rounded-full transition-transform"
-                style={{
-                  backgroundColor: pressed === "send" ? C.sendPressed : C.send,
-                  transform: pressed === "send" ? "scale(0.86)" : "scale(1)",
-                }}
-              >
-                <ArrowUp className="h-5 w-5 text-white" strokeWidth={2.8} />
-              </div>
-            )}
+            <div
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full transition-transform"
+              style={{
+                backgroundColor: pressed === "send" ? C.sendPressed : C.send,
+                transform: pressed === "send" ? "scale(0.86)" : "scale(1)",
+              }}
+            >
+              <ArrowUp className="h-5 w-5 text-white" strokeWidth={2.8} />
+            </div>
           </div>
 
           {/* Floating keyboard panel (rounded + shadow so it reads as its own
