@@ -44,7 +44,7 @@ type Step =
 
 const SCRIPT: Step[] = [
   { kind: "sent", native: "Learn a language" },
-  { kind: "sent", native: "Cross-language communication for business" },
+  { kind: "sent", native: "Communicate with clients" },
   { kind: "sent", native: "Chat with international friends" },
   { kind: "recv", text: "それ、すごくいいね！" },
   {
@@ -86,23 +86,75 @@ type Bubble = {
   text: string;
   shown: number; // characters revealed (received types out; sent shows all)
   floating: boolean; // received bubbles hold still until they finish typing
+  startAt?: number; // performance.now() when the bubble began floating
 };
 
-// Measured, in design px: how far up a bubble rises at each waypoint and how
-// far it swings out to clear the centered hero copy.
-type FloatGeo = { ya: number; yb: number; yhead: number; clearX: number };
-const DEFAULT_GEO: FloatGeo = { ya: 150, yb: 300, yhead: 720, clearX: 230 };
+// Measured, in design px: how far up a bubble rises and how far it swings out
+// to clear the centered hero copy on its way to fading by the headline.
+type FloatGeo = { yb: number; yhead: number; clearX: number };
+const DEFAULT_GEO: FloatGeo = { yb: 100, yhead: 620, clearX: 260 };
+
+// Build an arc-length lookup table for the float curve (design px, right side).
+// A bubble walks this at a constant rate, so the motion never accelerates or
+// jerks. The cubic Bézier bows out to the side (clearing the tagline) and keeps
+// widening up to the headline, matching the intended path.
+type LutPoint = { s: number; x: number; y: number };
+function buildLut(geo: FloatGeo): LutPoint[] {
+  const cx = geo.clearX;
+  // Dash out to the side channel first (p1 is nearly full-width but only a
+  // little up), so the bubble clears the parked row's horizontal span while
+  // still low, THEN rises straight up the margin past the tagline/headline —
+  // the "curve to the side to clear the width, then go up" path.
+  const p0 = [0, 0];
+  const p1 = [cx * 1.02, -geo.yb];
+  const p2 = [cx * 1.12, -geo.yhead * 0.5];
+  const p3 = [cx * 1.06, -geo.yhead];
+  const bez = (t: number): [number, number] => {
+    const u = 1 - t;
+    return [
+      u * u * u * p0[0] + 3 * u * u * t * p1[0] + 3 * u * t * t * p2[0] + t * t * t * p3[0],
+      u * u * u * p0[1] + 3 * u * u * t * p1[1] + 3 * u * t * t * p2[1] + t * t * t * p3[1],
+    ];
+  };
+  const N = 72;
+  const pts: LutPoint[] = [];
+  let prev = bez(0);
+  let cum = 0;
+  pts.push({ s: 0, x: prev[0], y: prev[1] });
+  for (let i = 1; i <= N; i++) {
+    const p = bez(i / N);
+    cum += Math.hypot(p[0] - prev[0], p[1] - prev[1]);
+    pts.push({ s: cum, x: p[0], y: p[1] });
+    prev = p;
+  }
+  for (const pt of pts) pt.s = cum ? pt.s / cum : 0;
+  return pts;
+}
+// Position at a given arc-length fraction (0–1) of the curve, mirrored by side.
+function posAt(lut: LutPoint[], progress: number, dir: number): { x: number; y: number } {
+  const p = progress <= 0 ? 0 : progress >= 1 ? 1 : progress;
+  let i = 0;
+  while (i < lut.length - 2 && lut[i + 1].s < p) i++;
+  const a = lut[i];
+  const b = lut[i + 1] ?? a;
+  const f = b.s > a.s ? (p - a.s) / (b.s - a.s) : 0;
+  return { x: (a.x + (b.x - a.x) * f) * dir, y: a.y + (b.y - a.y) * f };
+}
+// Gentle fade: stays readable past the tagline, gone by the headline.
+function opacityAt(p: number): number {
+  if (p >= 1) return 0;
+  return Math.max(0, 1 - Math.pow(p, 1.5));
+}
 
 // Surface geometry (design pixels). No device frame — just the floating
-// bubbles, input bar and keyboard.
+// bubbles, input bar and keyboard. The short bubble area sits the keyboard
+// closer to the tagline; bubbles float out beyond it (overflow visible).
 const DESIGN_W = 402;
-const SURFACE_H = 560;
+const SURFACE_H = 500;
 
 const SIDE_PAD = 12; // sent/received sit 12px in from the edge
 const BASE_BOTTOM = 4; // a new bubble starts just above the input bar
 const FLOAT_MS = 11000; // time for a bubble to travel from the field to the headline
-// Slight per-bubble variation so each takes a similar-but-different path.
-const VARY = [1, 0.9, 1.08, 0.96, 1.05, 0.93];
 
 const TYPE_MS = 1000; // total typing duration (both input and received bubbles)
 const perChar = (len: number) => Math.max(18, Math.round(TYPE_MS / Math.max(1, len)));
@@ -179,6 +231,14 @@ interface HeroKeyboardAnimationProps {
   taglineRef?: React.RefObject<HTMLElement | null>;
   /** The headline — bubbles fully fade in line with it. */
   titleRef?: React.RefObject<HTMLElement | null>;
+  /** The landed row of parked bubbles — floating messages must clear it too. */
+  landedRowRef?: React.RefObject<HTMLElement | null>;
+  /**
+   * The first three messages don't float away — they rise up and park in a
+   * permanent row below the tagline. This hands each one off (by stable id) to
+   * the parent, which renders the landed row.
+   */
+  onLandMessage?: (id: number, text: string) => void;
 }
 
 export default function HeroKeyboardAnimation({
@@ -187,6 +247,8 @@ export default function HeroKeyboardAnimation({
   inputRef,
   taglineRef,
   titleRef,
+  landedRowRef,
+  onLandMessage,
 }: HeroKeyboardAnimationProps) {
   const reduceMotion = useReducedMotion();
 
@@ -199,6 +261,47 @@ export default function HeroKeyboardAnimation({
   const bubbleId = useRef(1);
   const bubbleAreaRef = useRef<HTMLDivElement>(null);
   const [geo, setGeo] = useState<FloatGeo>(DEFAULT_GEO);
+
+  // Mirror of `bubbles` and the bubble DOM nodes for the rAF driver, plus the
+  // arc-length curve to walk. Kept in refs so the loop always sees latest state.
+  const bubblesRef = useRef<Bubble[]>([]);
+  bubblesRef.current = bubbles;
+  const elMap = useRef<Map<number, HTMLDivElement>>(new Map());
+  // Keep the land callback in a ref so the timeline effect (rebuilt only on
+  // reduced-motion / active changes) always calls the latest one.
+  const onLandRef = useRef(onLandMessage);
+  onLandRef.current = onLandMessage;
+  const lutRef = useRef<LutPoint[]>(buildLut(DEFAULT_GEO));
+  useEffect(() => {
+    lutRef.current = buildLut(geo);
+  }, [geo]);
+
+  // Drive every floating bubble along its curve at a constant rate (rAF), then
+  // remove it when it reaches the headline. Direct DOM writes avoid re-rendering
+  // 60x/second.
+  useEffect(() => {
+    if (reduceMotion) return;
+    let raf = 0;
+    const tick = () => {
+      const now = performance.now();
+      let done: number[] | null = null;
+      for (const b of bubblesRef.current) {
+        if (!b.floating || b.startAt == null) continue;
+        const progress = (now - b.startAt) / FLOAT_MS;
+        const el = elMap.current.get(b.id);
+        if (el) {
+          const { x, y } = posAt(lutRef.current, progress, b.side === "sent" ? 1 : -1);
+          el.style.transform = `translate(${x}px, ${y}px)`;
+          el.style.opacity = String(opacityAt(progress));
+        }
+        if (progress >= 1) (done ??= []).push(b.id);
+      }
+      if (done) setBubbles((prev) => prev.filter((b) => !done!.includes(b.id)));
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [reduceMotion]);
 
   // Responsive scale so the floating keyboard fits the hero at every
   // breakpoint, clamped so it never overflows the viewport width.
@@ -228,40 +331,64 @@ export default function HeroKeyboardAnimation({
       const yTagBottom = (baseY - tag.bottom) / scale;
       const yTagTop = (baseY - tag.top) / scale;
       const yHead = (baseY - (head.top + head.height * 0.55)) / scale;
-      // Move out far enough that the widest bubble (up to 0.74 of the surface)
-      // clears the tagline's edge, plus a margin. Uses the tagline's actual
-      // left edge, with a floor so it always swings out somewhat.
+
+      // The parked "landed" row sits between the keyboard and the tagline, so a
+      // floating message reaches it BEFORE the tagline and must already be swung
+      // clear by then. Measure the actual parked bubbles (the row container is
+      // full-width; its children are not) to find the band to clear.
+      let yLandBottom = yTagBottom * 0.5; // sensible default before any land
+      let landLeft = tag.left;
+      const landEl = landedRowRef?.current;
+      if (landEl) {
+        const kids = Array.from(landEl.children).map((c) => c.getBoundingClientRect());
+        if (kids.length) {
+          const bottom = Math.max(...kids.map((k) => k.bottom));
+          landLeft = Math.min(...kids.map((k) => k.left));
+          yLandBottom = (baseY - bottom) / scale;
+        }
+      }
+
+      // Move out far enough that the widest bubble clears the tagline AND the
+      // parked row's left edge, plus a margin.
       const clearScreen = Math.max(
-        area.width * 0.46,
-        area.left + area.width * 0.86 - tag.left + 44,
+        area.width * 0.5,
+        area.left + area.width * 0.92 - Math.min(tag.left, landLeft) + 112,
       );
       setGeo({
-        // Finish the sideways swing well below the tagline so even a tall
-        // (multi-line) bubble is fully clear before it rises into the band.
-        ya: Math.max(30, yTagBottom * 0.22),
-        yb: Math.max(60, yTagBottom * 0.44),
+        // Finish the sideways dash low — below (parked-row bottom minus a tall
+        // bubble's height) — so even a multi-line message is out in the side
+        // channel before it rises into the row's band.
+        yb: Math.max(24, Math.min(yTagBottom * 0.42, yLandBottom - 118)),
         yhead: Math.max(yTagTop + 80, yHead),
         clearX: clearScreen / scale,
       });
     };
     measure();
     const raf = requestAnimationFrame(measure);
-    // Re-measure after the hero's entrance animation has settled.
+    // Re-measure after the hero's entrance animation has settled and whenever
+    // the parked row grows (a new message lands and re-centers it).
     const timers = [400, 1000, 1800].map((ms) => setTimeout(measure, ms));
     window.addEventListener("resize", measure);
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(measure) : null;
+    if (ro && landedRowRef?.current) ro.observe(landedRowRef.current);
     return () => {
       cancelAnimationFrame(raf);
       timers.forEach(clearTimeout);
       window.removeEventListener("resize", measure);
+      ro?.disconnect();
     };
-  }, [scale, taglineRef, titleRef]);
+  }, [scale, taglineRef, titleRef, landedRowRef]);
 
   // Build the continuously looping timeline. Rebuilt only when reduced-motion
   // changes.
   useEffect(() => {
-    // Reduced motion: skip the animation, show the last few messages statically.
+    // Reduced motion: skip the animation, park the first three in the landed
+    // row and show the last few messages statically.
     if (reduceMotion) {
       setText("");
+      SCRIPT.slice(0, 3).forEach((s, idx) => {
+        if (s.kind === "sent") onLandRef.current?.(idx + 1, s.native);
+      });
       let id = 1;
       const last = SCRIPT.slice(-4).map((s) => ({
         id: id++,
@@ -278,11 +405,14 @@ export default function HeroKeyboardAnimation({
     // first message starts typing.
     if (!active) return;
 
-    // A sent bubble appears and immediately starts floating up and away. It is
-    // removed when its float animation ends (onAnimationEnd in the render).
+    // A sent bubble appears and immediately starts floating up and away. The
+    // rAF driver walks it along the curve and removes it at the headline.
     const spawnSent = (msg: string) => {
       const id = bubbleId.current++;
-      setBubbles((prev) => [...prev, { id, side: "sent", text: msg, shown: msg.length, floating: true }]);
+      setBubbles((prev) => [
+        ...prev,
+        { id, side: "sent", text: msg, shown: msg.length, floating: true, startAt: performance.now() },
+      ]);
     };
 
     // A received bubble appears in place and types itself out; it only starts
@@ -308,7 +438,7 @@ export default function HeroKeyboardAnimation({
         const a = prev.slice();
         for (let i = a.length - 1; i >= 0; i--) {
           if (a[i].side === "recv" && !a[i].floating) {
-            a[i] = { ...a[i], floating: true };
+            a[i] = { ...a[i], floating: true, startAt: performance.now() };
             break;
           }
         }
@@ -320,7 +450,16 @@ export default function HeroKeyboardAnimation({
 
     b(() => {}, 600); // loop-seam lull
 
-    SCRIPT.forEach((step) => {
+    // The beat index the loop restarts at: the first three messages type once
+    // and land permanently in the row below the tagline, so the loop resumes at
+    // message four and never re-types the first three.
+    let loopStart = 0;
+
+    SCRIPT.forEach((step, idx) => {
+      // First three messages land in the row instead of floating away; the loop
+      // begins just after them.
+      if (idx === 3) loopStart = beats.length;
+      const landing = idx < 3;
       if (step.kind === "sent") {
         const { native, reworded } = step;
         b(() => setText(""), 40);
@@ -330,7 +469,17 @@ export default function HeroKeyboardAnimation({
           const s = native.slice(0, i);
           b(() => setText(s), per);
         }
-        if (reworded) {
+        if (landing) {
+          // First three: type in English, tap send, then hand the bubble off to
+          // the parent, which rises it up and parks it in the landed row.
+          b(() => {}, 450);
+          b(() => setPressed("send"), 340);
+          b(() => {
+            setPressed(null);
+            onLandRef.current?.(idx + 1, native);
+            setText("");
+          }, 1000);
+        } else if (reworded) {
           // 2) tap Reword; loading lasts 0.5s; 3) show the translation; 4) send.
           b(() => {
             setPressed("reword");
@@ -377,15 +526,14 @@ export default function HeroKeyboardAnimation({
     const run = () => {
       const beat = beats[i];
       beat.fn();
-      i = (i + 1) % beats.length;
+      i += 1;
+      // Loop back to message four, leaving the first three parked in the row.
+      if (i >= beats.length) i = loopStart;
       timer = setTimeout(run, beat.ms);
     };
     run();
     return () => clearTimeout(timer);
   }, [reduceMotion, active]);
-
-  // Remove a bubble once its float animation reaches the headline.
-  const removeBubble = (id: number) => setBubbles((prev) => prev.filter((b) => b.id !== id));
 
   // ── derived ──
   const hasText = text.length > 0;
@@ -444,30 +592,25 @@ export default function HeroKeyboardAnimation({
                   const isSent = bub.side === "sent";
                   // Don't show a received bubble until its first character types.
                   if (!isSent && bub.shown === 0) return null;
-                  // Sent bubbles curve out to the right; received to the left.
-                  const vary = VARY[bub.id % VARY.length];
-                  const cx = geo.clearX * vary * (isSent ? 1 : -1);
-                  const style: React.CSSProperties & Record<string, string | number> = {
+                  const floating = isSent || bub.floating;
+                  // Position + fade are written imperatively by the rAF driver,
+                  // so keep transform/opacity OUT of the JSX style.
+                  const style: React.CSSProperties = {
                     bottom: BASE_BOTTOM,
-                    maxWidth: DESIGN_W * 0.74,
-                    "--cx": `${cx}px`,
-                    "--ya": `-${geo.ya}px`,
-                    "--yb": `-${geo.yb}px`,
-                    "--yhead": `-${geo.yhead * (0.98 + (vary - 1) * 0.4)}px`,
-                    "--dur": `${FLOAT_MS}ms`,
+                    maxWidth: DESIGN_W * 0.62,
                   };
                   if (isSent) style.right = SIDE_PAD;
                   else style.left = SIDE_PAD;
-                  // Sent bubbles float from the start; received hold still until
-                  // they've finished typing themselves out.
-                  const floating = isSent || bub.floating;
                   const showCaret = !isSent && bub.shown < bub.text.length;
                   return (
                     <div
                       key={bub.id}
+                      ref={(el) => {
+                        if (el) elMap.current.set(bub.id, el);
+                        else elMap.current.delete(bub.id);
+                      }}
                       className={`absolute ${floating ? "hero-float" : ""}`}
                       style={style}
-                      onAnimationEnd={floating ? () => removeBubble(bub.id) : undefined}
                     >
                       <div
                         className="rounded-[20px] px-3.5 py-2 text-[17px]"

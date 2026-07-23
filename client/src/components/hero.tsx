@@ -1,6 +1,6 @@
 import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ArcatextIntro from "./arcatext-intro";
@@ -13,10 +13,20 @@ export default function Hero() {
   // --- Page-load intro animation orchestration ---
   const titleRef = useRef<HTMLHeadingElement>(null);
   const taglineRef = useRef<HTMLParagraphElement>(null);
+  const landedRowRef = useRef<HTMLDivElement>(null);
   const fieldRef = useRef<HTMLDivElement>(null);
   const [typingActive, setTypingActive] = useState(false);
   const [fieldHighlight, setFieldHighlight] = useState(false);
   const introTimers = useRef<number[]>([]);
+
+  // The first three keyboard messages don't float away — they rise up and park
+  // permanently in a centered row below the tagline. As each lands, the row
+  // re-centers (framer-motion `layout`), so bubble 2 pushes bubble 1 left and
+  // bubble 3 pushes both left, the group staying centered.
+  const [landed, setLanded] = useState<{ id: number; text: string }[]>([]);
+  const handleLandMessage = useCallback((id: number, text: string) => {
+    setLanded((prev) => (prev.some((m) => m.id === id) ? prev : [...prev, { id, text }]));
+  }, []);
 
   // Announce to the nav that an intro will play (so its logo waits to build),
   // and reset on unmount.
@@ -92,6 +102,28 @@ export default function Hero() {
             </p>
           </motion.div>
 
+          {/* Landed row: the first three keyboard messages rise up from the
+              keyboard and snap into a permanent, centered row here (they do not
+              fade). Each new arrival re-centers the group. min-height reserves
+              the space so the keyboard below doesn't jump as they land. */}
+          <div ref={landedRowRef} className="mt-6 flex min-h-[44px] flex-wrap items-center justify-center gap-3">
+            <AnimatePresence>
+              {landed.map((m) => (
+                <motion.div
+                  key={m.id}
+                  layout
+                  initial={{ opacity: 1, y: 96, scale: 0.92 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ type: "spring", stiffness: 460, damping: 26 }}
+                  className="rounded-[20px] px-3.5 py-2 text-[15px] md:text-[17px] font-medium text-white shadow-sm"
+                  style={{ background: "#0A7AFF" }}
+                >
+                  {m.text}
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+
           {/* Live keyboard animation — moved up into the space the CTA buttons
               used to occupy. The page-load logo flies into its text field and,
               on "click", the first message begins typing; from there it types,
@@ -108,6 +140,8 @@ export default function Hero() {
               inputRef={fieldRef}
               taglineRef={taglineRef}
               titleRef={titleRef}
+              landedRowRef={landedRowRef}
+              onLandMessage={handleLandMessage}
             />
           </motion.div>
 
