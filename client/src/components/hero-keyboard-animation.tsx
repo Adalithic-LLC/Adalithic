@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown, Plus, ArrowUp, Mic } from "lucide-react";
 
@@ -102,7 +102,7 @@ const SURFACE_H = 600; // taller surface gives the message stack room to scroll 
 const SIDE_PAD = 12; // sent/received sit 12px in from the edge
 const BASE_BOTTOM = 4; // a new bubble starts just above the input bar
 const STACK_GAP = 8; // vertical gap between stacked messages (design px)
-const INPUT_MIN_H = 48; // input bar height at its min (36px field + 12px padding)
+const FIELD_GAP = 24; // gap between the input field's top and the lowest bubble
 const BASE_OFFSET_DEFAULT = 408; // fallback until the keyboard panel is measured
 const FADE_CAP_DEFAULT = 200; // fallback fade-out height until measured (design px)
 const NEWEST_CLEAR = 60; // px reserved at the base so the newest message stays fully opaque
@@ -213,10 +213,19 @@ export default function HeroKeyboardAnimation({
   const bubbleId = useRef(1);
   const bubbleAreaRef = useRef<HTMLDivElement>(null);
   const keyboardPanelRef = useRef<HTMLDivElement>(null);
-  const inputBarRef = useRef<HTMLDivElement>(null);
-  // The tallest the input bar has grown to (design px). The stack is pinned
-  // above this so the input never overlaps a message when it wraps long text.
-  const maxInputRef = useRef(INPUT_MIN_H);
+  // The input field element, tracked here (and mirrored to the forwarded
+  // inputRef) so the stack can measure the field's top and keep a fixed gap
+  // above it, pushing up as the field grows.
+  const fieldElRef = useRef<HTMLDivElement | null>(null);
+  const setFieldRef = useCallback(
+    (el: HTMLDivElement | null) => {
+      fieldElRef.current = el;
+      if (typeof inputRef === "function") inputRef(el);
+      else if (inputRef && "current" in inputRef)
+        (inputRef as React.MutableRefObject<HTMLDivElement | null>).current = el;
+    },
+    [inputRef],
+  );
   // The message-stack layer is pinned this many design px above the surface
   // bottom — the keyboard panel plus a min-height input bar — so the messages
   // stay put even when the input field grows to wrap a long message.
@@ -301,28 +310,31 @@ export default function HeroKeyboardAnimation({
     return () => window.removeEventListener("resize", compute);
   }, []);
 
-  // Measure the vertical budget: pin the stack above the keyboard, and fade
-  // messages out just below the parked row so they never overlap it.
+  // Keep the stack a fixed FIELD_GAP above the input field's top, measured from
+  // the field itself so the gap stays exact as the field grows or shrinks. Run
+  // synchronously (before paint) on every text change so the whole stack pushes
+  // up in lockstep with the growing field rather than lagging behind it.
+  const syncBaseOffset = useCallback(() => {
+    const kb = keyboardPanelRef.current;
+    const f = fieldElRef.current;
+    if (!kb || !f || !scale) return;
+    // How far the field's top sits above the keyboard panel's top (design px).
+    const fieldAboveKb = (kb.getBoundingClientRect().top - f.getBoundingClientRect().top) / scale;
+    setBaseOffset(kb.offsetHeight + fieldAboveKb + FIELD_GAP - BASE_BOTTOM);
+  }, [scale]);
+  useLayoutEffect(() => {
+    syncBaseOffset();
+  }, [text, syncBaseOffset]);
+
+  // Measure the fade budget: fade messages out just below the subheader so a
+  // rising message is gone before it reaches it.
   useEffect(() => {
     const measure = () => {
-      // Pin the stack layer above the keyboard + the input bar. The keyboard
-      // panel's own box height (offsetHeight) is stable; the input bar grows as
-      // it wraps long text, so track its tallest extent (never shrinking, so the
-      // stack never drops back down onto a shorter input) and keep the stack
-      // clear of it — a growing input never overlaps the messages above it.
-      const kb = keyboardPanelRef.current;
-      const ib = inputBarRef.current?.offsetHeight ?? INPUT_MIN_H;
-      maxInputRef.current = Math.max(maxInputRef.current, ib);
-      // A little extra clearance beyond the tallest input so a message never
-      // touches the field even mid-wrap (before the overlay eases up).
-      if (kb) setBaseOffset(kb.offsetHeight + maxInputRef.current + 20);
-
+      syncBaseOffset();
       const area = bubbleAreaRef.current?.getBoundingClientRect();
       if (!area || !scale) return;
       const baseY = area.bottom; // messages stack up from here
 
-      // Fade messages out just below the subheader's bottom edge, so a rising
-      // message is gone before it reaches the subheader.
       const tag = taglineRef?.current?.getBoundingClientRect();
       if (tag) {
         const clearLine = tag.bottom + 24; // opacity reaches 0 a little below the subheader
@@ -339,17 +351,12 @@ export default function HeroKeyboardAnimation({
     // subheader has flown into place.
     const timers = [400, 1000, 1800, 3000].map((ms) => setTimeout(measure, ms));
     window.addEventListener("resize", measure);
-    // The input bar grows as the message being typed wraps — re-measure so the
-    // stack stays clear of it.
-    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(measure) : null;
-    if (ro && inputBarRef.current) ro.observe(inputBarRef.current);
     return () => {
       cancelAnimationFrame(raf);
       timers.forEach(clearTimeout);
       window.removeEventListener("resize", measure);
-      ro?.disconnect();
     };
-  }, [scale, taglineRef, titleRef]);
+  }, [scale, taglineRef, titleRef, syncBaseOffset]);
 
   // Build the continuously looping timeline. Rebuilt only when reduced-motion
   // changes.
@@ -523,7 +530,7 @@ export default function HeroKeyboardAnimation({
           <div
             ref={bubbleAreaRef}
             className="pointer-events-none absolute inset-x-0 top-0"
-            style={{ bottom: baseOffset, overflow: "visible", transition: "bottom 0.3s ease" }}
+            style={{ bottom: baseOffset, overflow: "visible" }}
           >
             {reduceMotion
               ? // Static, bottom-aligned stack for reduced motion.
@@ -593,12 +600,12 @@ export default function HeroKeyboardAnimation({
           <div className="absolute inset-x-0 bottom-0 flex flex-col">
           {/* Input bar. The field wraps long text and grows in height (bottom
               aligned) and the send button is always visible. */}
-          <div ref={inputBarRef} className="flex items-end gap-2 px-3 pb-2 pt-1">
+          <div className="flex items-end gap-2 px-3 pb-2 pt-1">
             <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#e6e8ec]">
               <Plus className="h-5 w-5 text-[#6b7280]" strokeWidth={2.6} />
             </div>
             <div
-              ref={inputRef}
+              ref={setFieldRef}
               className="flex min-h-9 min-w-0 flex-1 items-center rounded-[18px] border py-1.5 pl-4 pr-3 transition-colors"
               style={{
                 borderColor: focused ? C.send : "rgba(0,0,0,0.15)",
