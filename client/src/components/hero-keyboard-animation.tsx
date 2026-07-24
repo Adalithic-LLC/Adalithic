@@ -6,7 +6,6 @@ import menuUrl from "@/assets/keyboard/menu.svg";
 import pasteUrl from "@/assets/keyboard/paste.svg";
 import shiftUrl from "@/assets/keyboard/shift.svg";
 import backspaceUrl from "@/assets/keyboard/backspace.svg";
-import localesUrl from "@/assets/keyboard/locales.svg";
 import checkUrl from "@/assets/keyboard/check.svg";
 
 /**
@@ -703,21 +702,34 @@ export default function HeroKeyboardAnimation({
                   <img src={backspaceUrl} alt="backspace" style={{ width: 23, height: 17 }} />
                 </Key>
               </div>
+              {/* Bottom row: 123, wide space, return — 123 and return are equal
+                  width (no locale key here; the locale switcher is the globe in
+                  the utility strip below). */}
               <div className="mb-2 flex gap-[5px]">
-                <Key bg={C.actionKey} grow={1.6} fontSize={15}>
+                <Key bg={C.actionKey} grow={2} fontSize={15}>
                   123
                 </Key>
-                {/* Locale switcher (between 123 and space). Native 14×17. */}
-                <Key bg={C.actionKey} grow={1.2} fontSize={17}>
-                  <img src={localesUrl} alt="switch language" style={{ width: 14, height: 17 }} />
-                </Key>
-                <Key grow={5} fontSize={15}>
+                <Key grow={4.5} fontSize={15}>
                   <span className="text-black/85">space</span>
                 </Key>
-                {/* The Arcatext keyboard has no custom return arrow — KeyboardKit
-                    renders the localized word "return" (iOS default). */}
-                <Key bg={C.actionKey} grow={1.6} fontSize={14}>
-                  <span className="text-black/85">return</span>
+                <Key bg={C.actionKey} grow={2}>
+                  {/* Return arrow (↵). */}
+                  <svg width="24" height="22" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M19 7v4a2 2 0 0 1-2 2H7"
+                      stroke="rgba(0,0,0,0.82)"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M11 9l-4 4 4 4"
+                      stroke="rgba(0,0,0,0.82)"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </Key>
               </div>
             </div>
