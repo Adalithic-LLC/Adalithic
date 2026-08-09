@@ -31,7 +31,14 @@ function FeatureRow({
   const bullets = t(`${base}.bullets`, { returnObjects: true }) as string[];
 
   return (
-    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+    // The text column slides in from ±40px outside its own column. Without a
+    // clip that overhang sits beyond the page's right edge from first paint —
+    // every row below the fold still holds its `initial` offset, so the whole
+    // document gains ~24px of scrollable width and the page pans sideways until
+    // you scroll far enough for `whileInView` to fire. Clip on the x axis only
+    // (overflow-y stays `visible`) so the screenshot's soft shadow still bleeds
+    // above and below the row.
+    <div className="grid grid-cols-1 items-center gap-12 overflow-x-clip lg:grid-cols-2 lg:gap-20">
       {/* Text column */}
       <motion.div
         initial={{ opacity: 0, x: reversed ? 40 : -40 }}
