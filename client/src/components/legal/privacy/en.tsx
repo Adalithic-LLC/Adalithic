@@ -4,7 +4,7 @@ export function PrivacyEn() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operated by Adalithic LLC</p>
-      <p>Last Updated: July 3, 2026</p>
+      <p>Last Updated: August 11, 2026</p>
       <p>
         Arcatext is a custom keyboard and language application designed to help users write,
         translate, reword, and better understand messages across languages. This Privacy Policy
@@ -34,7 +34,7 @@ export function PrivacyEn() {
           <li>Arcatext does not sell your data to anyone.</li>
           <li>We only track messages that are Reworded (you have to tap the Reword button, so if you type with the keyboard without tapping Reword, no messages are tracked or stored).</li>
           <li>We use data to better understand your language proficiency, to deliver learning features. We're not personally interested in what you text, but only want to help accelerate your language learning!</li>
-          <li>We filter out certain Reworded text and do not store it (for example, passwords, card numbers, and codes — see the complete list in Section 7).</li>
+          <li>We filter out certain Reworded text and do not store it (for example, passwords, card numbers, and codes; see the complete list in Section 7).</li>
           <li>You can turn Reword tracking off or on at any time (in the main Arcatext app). We default to the 'on' state so we can deliver learning features.</li>
         </ol>
       </div>
@@ -156,7 +156,48 @@ export function PrivacyEn() {
         <li>Whether a feature was opened, completed, or failed</li>
       </ul>
       <p>Where possible, this information is collected in a way that does not directly identify you.</p>
-      <p className="font-medium">G. Information We Do Not Intentionally Collect</p>
+      <p className="font-medium">G. Anonymous Typing and Glide-Quality Diagnostics</p>
+      <p>
+        To measure and improve autocorrect and glide (swipe) typing, Arcatext collects anonymous,
+        aggregate diagnostics about how well those features perform. This information is tied to a
+        random per-installation identifier that is not linked to your account, name, email, or
+        device identity.
+      </p>
+      <p>For autocorrect, this includes:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>How often automatic corrections are kept or undone</li>
+        <li>Aggregate counts of which letter was changed to which other letter</li>
+        <li>The number of key taps</li>
+        <li>Anonymous tap-accuracy measurements (how close taps land to key centers)</li>
+        <li>The app's current correction settings</li>
+      </ul>
+      <p>For glide typing, this includes:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>How many swipes produced a word</li>
+        <li>How often you chose a different suggestion, or deleted the result</li>
+        <li>How far down the suggestion list the intended word appeared</li>
+        <li>
+          Anonymous measurements of swipe geometry, such as typical speed, smoothness, and how far
+          swipes land from key centers
+        </li>
+        <li>The app's current glide settings</li>
+      </ul>
+      <p>
+        Both also include your app version, operating-system version, and active keyboard language.
+      </p>
+      <p>
+        Neither ever includes the words, letters, or messages you type. No typed content of any
+        kind is collected. Aggregate letter-change and swipe-geometry counts cannot be used to
+        reconstruct anything you have written. This information is used solely to measure and
+        improve typing quality. It is not sold, not shared for advertising, and not used to track
+        you across other companies' apps or websites.
+      </p>
+      <p>
+        You can turn this off at any time in the main Arcatext app, in the Reword data storage
+        settings. It is on by default, and that single control covers both autocorrect and glide
+        diagnostics.
+      </p>
+      <p className="font-medium">H. Information We Do Not Intentionally Collect</p>
       <p>Arcatext does not intentionally collect:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Your precise location</li>
@@ -317,7 +358,7 @@ export function PrivacyEn() {
       </h3>
       <p>
         To protect you, Arcatext automatically screens text on your device before any Reworded
-        entry is stored. When it detects anything sensitive, it discards the entire entry — it
+        entry is stored. When it detects anything sensitive, it discards the entire entry. It
         does not store a shortened or redacted version, and nothing is linked to your profile.
       </p>
       <p>A Reworded entry is NOT stored when:</p>
@@ -351,9 +392,9 @@ export function PrivacyEn() {
       <p>When in doubt, Arcatext errs on the side of not storing.</p>
       <p>
         <span className="font-medium">Server logs.</span> Our servers never log the content of
-        your messages. Logs record only operational metadata — an account identifier, request
-        status, timing, and an opaque request ID — used to keep the service reliable and to
-        diagnose problems.
+        your messages. Logs record only operational metadata such as an account identifier,
+        request status, timing, and an opaque request ID, used to keep the service reliable and
+        to diagnose problems.
       </p>
       <p>
         <span className="font-medium">Your control.</span> You can turn off Reword storage

@@ -4,7 +4,7 @@ export function PrivacyFi() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Palvelun tarjoaa Adalithic LLC</p>
-      <p>Viimeksi päivitetty: July 3, 2026</p>
+      <p>Viimeksi päivitetty: August 11, 2026</p>
       <p>
         Arcatext on mukautettu näppäimistö- ja kielisovellus, joka on suunniteltu auttamaan käyttäjiä
         kirjoittamaan, kääntämään, muotoilemaan uudelleen ja ymmärtämään paremmin viestejä eri kielten
@@ -157,7 +157,30 @@ export function PrivacyFi() {
         <li>Avattiinko, suoritettiinko vai epäonnistuiko jokin toiminto</li>
       </ul>
       <p>Mahdollisuuksien mukaan nämä tiedot kerätään tavalla, joka ei tunnista sinua suoraan.</p>
-      <p className="font-medium">G. Tiedot, joita emme tarkoituksellisesti kerää</p>
+      <p className="font-medium">G. Nimetön kirjoitus- ja Glide-laadun diagnostiikka</p>
+      <p>
+        Automaattisen korjauksen ja Glide-kirjoituksen (pyyhkäisyn) mittaamiseksi ja parantamiseksi Arcatext kerää nimettömiä, koostettuja diagnostiikkatietoja siitä, kuinka hyvin nämä ominaisuudet toimivat. Tiedot on yhdistetty satunnaiseen asennuskohtaiseen tunnisteeseen, jota ei ole liitetty tiliisi, nimeesi, sähköpostiosoitteeseesi tai laitteesi henkilöllisyyteen.
+      </p>
+      <p>Automaattisen korjauksen osalta tämä sisältää:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Kuinka usein automaattiset korjaukset säilytetään tai kumotaan</li>
+        <li>Koostetut laskennat siitä, mikä kirjain muutettiin miksikin toiseksi kirjaimeksi</li>
+        <li>Näppäilyjen määrän</li>
+        <li>Nimettömät näppäilytarkkuuden mittaukset (kuinka lähelle näppäimen keskustaa näppäilyt osuvat)</li>
+        <li>Sovelluksen nykyiset korjausasetukset</li>
+      </ul>
+      <p>Glide-kirjoituksen osalta tämä sisältää:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Kuinka monta pyyhkäisyä tuotti sanan</li>
+        <li>Kuinka usein valitsit toisen ehdotuksen tai poistit tuloksen</li>
+        <li>Kuinka alhaalla ehdotusluettelossa tarkoitettu sana oli</li>
+        <li>Nimettömät pyyhkäisyn geometrian mittaukset, kuten tyypillinen nopeus, tasaisuus ja kuinka kaukaa näppäinten keskustasta pyyhkäisyt kulkevat</li>
+        <li>Sovelluksen nykyiset Glide-asetukset</li>
+      </ul>
+      <p>Molemmat sisältävät myös sovelluksesi version, käyttöjärjestelmäsi version ja käytössä olevan näppäimistön kielen.</p>
+      <p>Kumpikaan ei koskaan sisällä kirjoittamiasi sanoja, kirjaimia tai viestejä. Mitään kirjoitettua sisältöä ei kerätä. Koostettuja kirjainmuutosten ja pyyhkäisygeometrian laskentoja ei voi käyttää kirjoittamasi sisällön palauttamiseen. Näitä tietoja käytetään yksinomaan kirjoituslaadun mittaamiseen ja parantamiseen. Niitä ei myydä, ei jaeta mainontaa varten eikä käytetä seuraamaan sinua muiden yritysten sovelluksissa tai verkkosivustoilla.</p>
+      <p>Voit poistaa tämän käytöstä milloin tahansa Arcatextin pääsovelluksessa Reword-tietojen tallennusasetuksista. Se on oletuksena käytössä, ja tämä yksi asetus kattaa sekä automaattisen korjauksen että Gliden diagnostiikan.</p>
+      <p className="font-medium">H. Tiedot, joita emme tarkoituksellisesti kerää</p>
       <p>Arcatext ei tarkoituksellisesti kerää:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Tarkkaa sijaintiasi</li>

@@ -4,7 +4,7 @@ export function PrivacyFr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Exploité par Adalithic LLC</p>
-      <p>Dernière mise à jour : July 3, 2026</p>
+      <p>Dernière mise à jour : August 11, 2026</p>
       <p>
         Arcatext est un clavier personnalisé et une application linguistique conçus pour aider les
         utilisateurs à écrire, traduire, reformuler et mieux comprendre les messages dans
@@ -161,7 +161,30 @@ export function PrivacyFr() {
         <li>Le fait qu'une fonctionnalité ait été ouverte, complétée ou ait échoué</li>
       </ul>
       <p>Dans la mesure du possible, ces informations sont collectées de manière à ne pas vous identifier directement.</p>
-      <p className="font-medium">G. Informations que nous ne collectons pas intentionnellement</p>
+      <p className="font-medium">G. Diagnostics anonymes de qualité de la saisie et du Glide</p>
+      <p>
+        Pour mesurer et améliorer la correction automatique et la saisie Glide (par balayage), Arcatext recueille des diagnostics anonymes et agrégés sur la performance de ces fonctionnalités. Ces informations sont associées à un identifiant aléatoire propre à chaque installation, qui n'est lié ni à votre compte, ni à votre nom, ni à votre adresse e-mail, ni à l'identité de votre appareil.
+      </p>
+      <p>Pour la correction automatique, cela comprend :</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>La fréquence à laquelle les corrections automatiques sont conservées ou annulées</li>
+        <li>Des décomptes agrégés indiquant quelle lettre a été remplacée par quelle autre lettre</li>
+        <li>Le nombre de frappes</li>
+        <li>Des mesures anonymes de précision de frappe (à quelle distance du centre des touches les frappes se situent)</li>
+        <li>Les réglages de correction actuels de l'application</li>
+      </ul>
+      <p>Pour la saisie Glide, cela comprend :</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Le nombre de balayages ayant produit un mot</li>
+        <li>La fréquence à laquelle vous avez choisi une autre suggestion ou supprimé le résultat</li>
+        <li>La position du mot voulu dans la liste de suggestions</li>
+        <li>Des mesures anonymes de la géométrie du balayage, telles que la vitesse habituelle, la régularité et la distance entre les balayages et le centre des touches</li>
+        <li>Les réglages Glide actuels de l'application</li>
+      </ul>
+      <p>Les deux incluent également la version de votre application, la version de votre système d'exploitation et la langue de clavier active.</p>
+      <p>Ni l'un ni l'autre n'inclut jamais les mots, les lettres ou les messages que vous tapez. Aucun contenu saisi n'est collecté. Les décomptes agrégés de changements de lettres et de géométrie de balayage ne permettent pas de reconstituer ce que vous avez écrit. Ces informations servent uniquement à mesurer et à améliorer la qualité de la saisie. Elles ne sont pas vendues, ne sont pas partagées à des fins publicitaires et ne servent pas à vous suivre sur les applications ou les sites web d'autres entreprises.</p>
+      <p>Vous pouvez désactiver cette option à tout moment dans l'application principale Arcatext, dans les paramètres de stockage des données de Reformulation. Elle est activée par défaut, et ce réglage unique couvre à la fois les diagnostics de correction automatique et ceux du Glide.</p>
+      <p className="font-medium">H. Informations que nous ne collectons pas intentionnellement</p>
       <p>Arcatext ne collecte pas intentionnellement :</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Votre localisation précise</li>

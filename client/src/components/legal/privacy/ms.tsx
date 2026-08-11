@@ -4,7 +4,7 @@ export function PrivacyMs() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Dikendalikan oleh Adalithic LLC</p>
-      <p>Dikemas Kini Terakhir: July 3, 2026</p>
+      <p>Dikemas Kini Terakhir: August 11, 2026</p>
       <p>
         Arcatext ialah papan kekunci tersuai dan aplikasi bahasa yang direka untuk membantu pengguna menulis,
         menterjemah, mengubah semula perkataan, dan lebih memahami mesej merentasi bahasa. Dasar Privasi ini
@@ -156,7 +156,30 @@ export function PrivacyMs() {
         <li>Sama ada sesuatu ciri dibuka, diselesaikan, atau gagal</li>
       </ul>
       <p>Di mana mungkin, maklumat ini dikumpulkan dengan cara yang tidak mengenal pasti anda secara langsung.</p>
-      <p className="font-medium">G. Maklumat Yang Kami Tidak Kumpulkan Secara Sengaja</p>
+      <p className="font-medium">G. Diagnostik tanpa nama bagi kualiti menaip dan Glide</p>
+      <p>
+        Untuk mengukur dan menambah baik pembetulan automatik serta menaip Glide (leretan), Arcatext mengumpulkan data diagnostik tanpa nama dan teragregat tentang sejauh mana ciri-ciri ini berfungsi. Maklumat ini dikaitkan dengan pengecam rawak bagi setiap pemasangan yang tidak dipautkan kepada akaun, nama, e-mel atau identiti peranti anda.
+      </p>
+      <p>Bagi pembetulan automatik, ini termasuk:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Berapa kerap pembetulan automatik dikekalkan atau dibatalkan</li>
+        <li>Kiraan teragregat tentang huruf mana yang ditukar kepada huruf lain</li>
+        <li>Bilangan ketikan kekunci</li>
+        <li>Ukuran tanpa nama bagi ketepatan ketikan (sejauh mana ketikan mendarat berhampiran pusat kekunci)</li>
+        <li>Tetapan pembetulan semasa aplikasi</li>
+      </ul>
+      <p>Bagi menaip Glide, ini termasuk:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Berapa banyak leretan yang menghasilkan perkataan</li>
+        <li>Berapa kerap anda memilih cadangan lain atau memadam hasilnya</li>
+        <li>Di kedudukan mana dalam senarai cadangan perkataan yang dimaksudkan muncul</li>
+        <li>Ukuran tanpa nama bagi geometri leretan, seperti kelajuan biasa, kelancaran dan sejauh mana leretan melintas dari pusat kekunci</li>
+        <li>Tetapan Glide semasa aplikasi</li>
+      </ul>
+      <p>Kedua-duanya turut merangkumi versi aplikasi anda, versi sistem pengendalian anda dan bahasa papan kekunci yang aktif.</p>
+      <p>Kedua-duanya tidak pernah merangkumi perkataan, huruf atau mesej yang anda taip. Tiada kandungan yang ditaip dikumpulkan. Kiraan teragregat bagi perubahan huruf dan geometri leretan tidak boleh digunakan untuk membina semula apa-apa yang anda tulis. Maklumat ini digunakan semata-mata untuk mengukur dan menambah baik kualiti menaip. Ia tidak dijual, tidak dikongsi untuk pengiklanan dan tidak digunakan untuk menjejaki anda merentas aplikasi atau tapak web syarikat lain.</p>
+      <p>Anda boleh mematikannya pada bila-bila masa dalam aplikasi utama Arcatext, dalam tetapan penyimpanan data Reword. Ia dihidupkan secara lalai, dan kawalan tunggal itu merangkumi diagnostik pembetulan automatik dan juga Glide.</p>
+      <p className="font-medium">H. Maklumat Yang Kami Tidak Kumpulkan Secara Sengaja</p>
       <p>Arcatext tidak secara sengaja mengumpul:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Lokasi tepat anda</li>

@@ -4,7 +4,7 @@ export function PrivacyId() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Dioperasikan oleh Adalithic LLC</p>
-      <p>Terakhir Diperbarui: July 3, 2026</p>
+      <p>Terakhir Diperbarui: August 11, 2026</p>
       <p>
         Arcatext adalah aplikasi keyboard khusus dan bahasa yang dirancang untuk membantu pengguna menulis,
         menerjemahkan, menyusun ulang kata, dan lebih memahami pesan di berbagai bahasa. Kebijakan Privasi ini
@@ -156,7 +156,30 @@ export function PrivacyId() {
         <li>Apakah suatu fitur dibuka, diselesaikan, atau gagal</li>
       </ul>
       <p>Jika memungkinkan, informasi ini dikumpulkan dengan cara yang tidak mengidentifikasi Anda secara langsung.</p>
-      <p className="font-medium">G. Informasi yang Tidak Kami Kumpulkan Secara Sengaja</p>
+      <p className="font-medium">G. Diagnostik anonim kualitas pengetikan dan Glide</p>
+      <p>
+        Untuk mengukur dan meningkatkan koreksi otomatis serta pengetikan Glide (geser), Arcatext mengumpulkan data diagnostik anonim dan teragregasi tentang seberapa baik fitur-fitur tersebut bekerja. Informasi ini terkait dengan pengenal acak per pemasangan yang tidak terhubung dengan akun, nama, email, atau identitas perangkat Anda.
+      </p>
+      <p>Untuk koreksi otomatis, ini mencakup:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Seberapa sering koreksi otomatis dipertahankan atau dibatalkan</li>
+        <li>Hitungan teragregasi tentang huruf mana yang diubah menjadi huruf lain</li>
+        <li>Jumlah ketukan tombol</li>
+        <li>Pengukuran anonim ketepatan ketukan (seberapa dekat ketukan mendarat ke pusat tombol)</li>
+        <li>Pengaturan koreksi aplikasi saat ini</li>
+      </ul>
+      <p>Untuk pengetikan Glide, ini mencakup:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Berapa banyak gesekan yang menghasilkan sebuah kata</li>
+        <li>Seberapa sering Anda memilih saran lain atau menghapus hasilnya</li>
+        <li>Pada urutan keberapa dalam daftar saran kata yang dimaksud muncul</li>
+        <li>Pengukuran anonim geometri gesekan, seperti kecepatan umum, kehalusan, dan seberapa jauh gesekan melintas dari pusat tombol</li>
+        <li>Pengaturan Glide aplikasi saat ini</li>
+      </ul>
+      <p>Keduanya juga mencakup versi aplikasi Anda, versi sistem operasi Anda, dan bahasa keyboard yang aktif.</p>
+      <p>Keduanya tidak pernah menyertakan kata, huruf, atau pesan yang Anda ketik. Tidak ada konten yang diketik yang dikumpulkan. Hitungan teragregasi perubahan huruf dan geometri gesekan tidak dapat digunakan untuk merekonstruksi apa pun yang telah Anda tulis. Informasi ini digunakan semata-mata untuk mengukur dan meningkatkan kualitas pengetikan. Informasi ini tidak dijual, tidak dibagikan untuk iklan, dan tidak digunakan untuk melacak Anda di aplikasi atau situs web perusahaan lain.</p>
+      <p>Anda dapat menonaktifkannya kapan saja di aplikasi utama Arcatext, pada pengaturan penyimpanan data Reword. Fitur ini aktif secara bawaan, dan satu kontrol tersebut mencakup diagnostik koreksi otomatis maupun Glide.</p>
+      <p className="font-medium">H. Informasi yang Tidak Kami Kumpulkan Secara Sengaja</p>
       <p>Arcatext tidak secara sengaja mengumpulkan:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Lokasi persis Anda</li>

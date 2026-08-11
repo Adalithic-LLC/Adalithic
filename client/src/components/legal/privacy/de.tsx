@@ -4,7 +4,7 @@ export function PrivacyDe() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Betrieben von Adalithic LLC</p>
-      <p>Zuletzt aktualisiert: July 3, 2026</p>
+      <p>Zuletzt aktualisiert: August 11, 2026</p>
       <p>
         Arcatext ist eine benutzerdefinierte Tastatur- und Sprachanwendung, die Nutzern helfen soll,
         Nachrichten über Sprachgrenzen hinweg zu schreiben, zu übersetzen, umzuformulieren und besser
@@ -160,7 +160,30 @@ export function PrivacyDe() {
         <li>Ob eine Funktion geöffnet, abgeschlossen oder fehlgeschlagen ist</li>
       </ul>
       <p>Wo möglich, werden diese Informationen so erfasst, dass sie Sie nicht direkt identifizieren.</p>
-      <p className="font-medium">G. Informationen, die wir nicht absichtlich erfassen</p>
+      <p className="font-medium">G. Anonyme Diagnosedaten zur Tipp- und Glide-Qualität</p>
+      <p>
+        Um die automatische Korrektur und das Glide-Tippen (Wischen) zu messen und zu verbessern, erfasst Arcatext anonyme, aggregierte Diagnosedaten darüber, wie gut diese Funktionen arbeiten. Diese Informationen sind mit einer zufälligen Kennung pro Installation verknüpft, die nicht mit Ihrem Konto, Ihrem Namen, Ihrer E-Mail-Adresse oder Ihrer Geräteidentität verbunden ist.
+      </p>
+      <p>Für die automatische Korrektur umfasst dies:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Wie oft automatische Korrekturen beibehalten oder rückgängig gemacht werden</li>
+        <li>Aggregierte Zählungen, welcher Buchstabe in welchen anderen Buchstaben geändert wurde</li>
+        <li>Die Anzahl der Tastenanschläge</li>
+        <li>Anonyme Messungen der Tippgenauigkeit (wie nah Tippvorgänge an der Tastenmitte landen)</li>
+        <li>Die aktuellen Korrektureinstellungen der App</li>
+      </ul>
+      <p>Für das Glide-Tippen umfasst dies:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Wie viele Wischbewegungen ein Wort ergeben haben</li>
+        <li>Wie oft Sie einen anderen Vorschlag gewählt oder das Ergebnis gelöscht haben</li>
+        <li>An welcher Stelle der Vorschlagsliste das beabsichtigte Wort erschien</li>
+        <li>Anonyme Messungen der Wischgeometrie, etwa typische Geschwindigkeit, Gleichmäßigkeit und wie weit Wischbewegungen von der Tastenmitte entfernt liegen</li>
+        <li>Die aktuellen Glide-Einstellungen der App</li>
+      </ul>
+      <p>Beide enthalten außerdem Ihre App-Version, Ihre Betriebssystemversion und die aktive Tastatursprache.</p>
+      <p>Keines von beiden enthält jemals die Wörter, Buchstaben oder Nachrichten, die Sie tippen. Es werden keinerlei getippte Inhalte erfasst. Aggregierte Zählungen von Buchstabenänderungen und Wischgeometrie können nicht dazu verwendet werden, Geschriebenes zu rekonstruieren. Diese Informationen dienen ausschließlich dazu, die Tippqualität zu messen und zu verbessern. Sie werden nicht verkauft, nicht für Werbung weitergegeben und nicht dazu verwendet, Sie über Apps oder Websites anderer Unternehmen hinweg zu verfolgen.</p>
+      <p>Sie können dies jederzeit in der Arcatext-Hauptapp in den Einstellungen zur Reword-Datenspeicherung deaktivieren. Die Funktion ist standardmäßig aktiviert, und diese eine Einstellung gilt sowohl für die Diagnosedaten der automatischen Korrektur als auch für die von Glide.</p>
+      <p className="font-medium">H. Informationen, die wir nicht absichtlich erfassen</p>
       <p>Arcatext erfasst nicht absichtlich:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Ihren genauen Standort</li>

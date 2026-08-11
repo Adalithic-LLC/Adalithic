@@ -4,7 +4,7 @@ export function PrivacyRo() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operat de Adalithic LLC</p>
-      <p>Ultima actualizare: July 3, 2026</p>
+      <p>Ultima actualizare: August 11, 2026</p>
       <p>
         Arcatext este o tastatură personalizată și o aplicație lingvistică concepută pentru a ajuta
         utilizatorii să scrie, să traducă, să reformuleze și să înțeleagă mai bine mesaje în diferite
@@ -159,7 +159,30 @@ export function PrivacyRo() {
         <li>Dacă o funcție a fost deschisă, finalizată sau a eșuat</li>
       </ul>
       <p>Acolo unde este posibil, aceste informații sunt colectate într-un mod care nu vă identifică direct.</p>
-      <p className="font-medium">G. Informații pe care Nu le Colectăm Intenționat</p>
+      <p className="font-medium">G. Diagnostice anonime privind calitatea scrierii și a funcției Glide</p>
+      <p>
+        Pentru a măsura și îmbunătăți corectarea automată și scrierea Glide (prin glisare), Arcatext colectează date de diagnostic anonime și agregate despre cât de bine funcționează aceste funcții. Aceste informații sunt asociate cu un identificator aleatoriu per instalare, care nu este legat de contul dumneavoastră, de nume, de adresa de e-mail sau de identitatea dispozitivului.
+      </p>
+      <p>În cazul corectării automate, acestea includ:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Cât de des sunt păstrate sau anulate corecturile automate</li>
+        <li>Numărători agregate privind ce literă a fost schimbată cu ce altă literă</li>
+        <li>Numărul de apăsări de taste</li>
+        <li>Măsurători anonime ale preciziei atingerilor (cât de aproape de centrul tastei ajung atingerile)</li>
+        <li>Setările actuale de corectare ale aplicației</li>
+      </ul>
+      <p>În cazul scrierii Glide, acestea includ:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Câte glisări au produs un cuvânt</li>
+        <li>Cât de des ați ales o altă sugestie sau ați șters rezultatul</li>
+        <li>Pe ce poziție din lista de sugestii a apărut cuvântul dorit</li>
+        <li>Măsurători anonime ale geometriei glisării, precum viteza obișnuită, uniformitatea și cât de departe de centrul tastelor trec glisările</li>
+        <li>Setările Glide actuale ale aplicației</li>
+      </ul>
+      <p>Ambele includ, de asemenea, versiunea aplicației, versiunea sistemului de operare și limba activă a tastaturii.</p>
+      <p>Niciuna dintre acestea nu include vreodată cuvintele, literele sau mesajele pe care le scrieți. Nu se colectează niciun conținut tastat. Numărătorile agregate privind schimbările de litere și geometria glisărilor nu pot fi folosite pentru a reconstitui ceva ce ați scris. Aceste informații sunt folosite exclusiv pentru a măsura și îmbunătăți calitatea scrierii. Nu sunt vândute, nu sunt partajate în scopuri publicitare și nu sunt folosite pentru a vă urmări în aplicațiile sau pe site-urile altor companii.</p>
+      <p>Puteți dezactiva acest lucru oricând în aplicația principală Arcatext, în setările de stocare a datelor Reword. Este activat implicit, iar acest singur control acoperă atât diagnosticele corectării automate, cât și pe cele ale funcției Glide.</p>
+      <p className="font-medium">H. Informații pe care Nu le Colectăm Intenționat</p>
       <p>Arcatext nu colectează intenționat:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Locația dumneavoastră exactă</li>

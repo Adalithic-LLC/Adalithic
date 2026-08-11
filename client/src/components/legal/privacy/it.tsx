@@ -4,7 +4,7 @@ export function PrivacyIt() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Gestito da Adalithic LLC</p>
-      <p>Ultimo aggiornamento: July 3, 2026</p>
+      <p>Ultimo aggiornamento: August 11, 2026</p>
       <p>
         Arcatext è una tastiera personalizzata e un'applicazione linguistica progettata per aiutare
         gli utenti a scrivere, tradurre, riformulare e comprendere meglio i messaggi tra lingue
@@ -159,7 +159,30 @@ export function PrivacyIt() {
         <li>Se una funzionalità è stata aperta, completata o fallita</li>
       </ul>
       <p>Ove possibile, queste informazioni sono raccolte in modo da non identificarti direttamente.</p>
-      <p className="font-medium">G. Informazioni Che Non Raccogliamo Intenzionalmente</p>
+      <p className="font-medium">G. Diagnostica anonima sulla qualità della digitazione e del Glide</p>
+      <p>
+        Per misurare e migliorare la correzione automatica e la digitazione Glide (a scorrimento), Arcatext raccoglie dati diagnostici anonimi e aggregati sulle prestazioni di queste funzioni. Queste informazioni sono associate a un identificatore casuale per installazione che non è collegato al suo account, al suo nome, al suo indirizzo e-mail o all'identità del suo dispositivo.
+      </p>
+      <p>Per la correzione automatica, questo include:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Con quale frequenza le correzioni automatiche vengono mantenute o annullate</li>
+        <li>Conteggi aggregati di quale lettera è stata sostituita con quale altra lettera</li>
+        <li>Il numero di tocchi sui tasti</li>
+        <li>Misurazioni anonime della precisione dei tocchi (quanto i tocchi cadono vicino al centro dei tasti)</li>
+        <li>Le impostazioni di correzione attuali dell'app</li>
+      </ul>
+      <p>Per la digitazione Glide, questo include:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Quanti scorrimenti hanno prodotto una parola</li>
+        <li>Con quale frequenza ha scelto un suggerimento diverso o ha eliminato il risultato</li>
+        <li>In quale posizione dell'elenco dei suggerimenti è comparsa la parola desiderata</li>
+        <li>Misurazioni anonime della geometria dello scorrimento, come velocità tipica, fluidità e quanto gli scorrimenti passano lontano dal centro dei tasti</li>
+        <li>Le impostazioni Glide attuali dell'app</li>
+      </ul>
+      <p>Entrambi includono inoltre la versione della sua app, la versione del sistema operativo e la lingua della tastiera attiva.</p>
+      <p>Nessuno dei due include mai le parole, le lettere o i messaggi che lei digita. Non viene raccolto alcun contenuto digitato. I conteggi aggregati dei cambi di lettera e della geometria degli scorrimenti non possono essere utilizzati per ricostruire ciò che lei ha scritto. Queste informazioni servono esclusivamente a misurare e migliorare la qualità della digitazione. Non vengono vendute, non vengono condivise a scopi pubblicitari e non vengono utilizzate per tracciarla nelle app o nei siti web di altre aziende.</p>
+      <p>Può disattivarla in qualsiasi momento nell'app principale Arcatext, nelle impostazioni di archiviazione dei dati di Riformulazione. È attiva per impostazione predefinita e questo singolo comando copre sia la diagnostica della correzione automatica sia quella del Glide.</p>
+      <p className="font-medium">H. Informazioni Che Non Raccogliamo Intenzionalmente</p>
       <p>Arcatext non raccoglie intenzionalmente:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>La tua posizione precisa</li>

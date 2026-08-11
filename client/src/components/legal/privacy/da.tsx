@@ -4,7 +4,7 @@ export function PrivacyDa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Drives af Adalithic LLC</p>
-      <p>Sidst opdateret: July 3, 2026</p>
+      <p>Sidst opdateret: August 11, 2026</p>
       <p>
         Arcatext er et brugerdefineret tastatur og en sprogapplikation designet til at hjælpe brugere med at skrive,
         oversætte, omformulere og bedre forstå beskeder på tværs af sprog. Denne privatlivspolitik
@@ -156,7 +156,30 @@ export function PrivacyDa() {
         <li>Hvorvidt en funktion blev åbnet, fuldført eller mislykkedes</li>
       </ul>
       <p>Hvor det er muligt, indsamles disse oplysninger på en måde, der ikke direkte identificerer dig.</p>
-      <p className="font-medium">G. Oplysninger vi ikke bevidst indsamler</p>
+      <p className="font-medium">G. Anonym diagnostik om skrive- og Glide-kvalitet</p>
+      <p>
+        For at måle og forbedre autokorrektur og Glide-skrivning (strygning) indsamler Arcatext anonym, aggregeret diagnostik om, hvor godt disse funktioner fungerer. Oplysningerne er knyttet til en tilfældig identifikator pr. installation, som ikke er knyttet til din konto, dit navn, din e-mailadresse eller din enhedsidentitet.
+      </p>
+      <p>For autokorrektur omfatter dette:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hvor ofte automatiske rettelser bevares eller fortrydes</li>
+        <li>Aggregerede optællinger af, hvilket bogstav der blev ændret til hvilket andet bogstav</li>
+        <li>Antallet af tastetryk</li>
+        <li>Anonyme målinger af tastenøjagtighed (hvor tæt på tastens midte tryk lander)</li>
+        <li>Appens nuværende rettelsesindstillinger</li>
+      </ul>
+      <p>For Glide-skrivning omfatter dette:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hvor mange strygninger der gav et ord</li>
+        <li>Hvor ofte du valgte et andet forslag eller slettede resultatet</li>
+        <li>Hvor langt nede på forslagslisten det ønskede ord stod</li>
+        <li>Anonyme målinger af strygningens geometri, såsom typisk hastighed, jævnhed og hvor langt fra tasternes midte strygningerne passerer</li>
+        <li>Appens nuværende Glide-indstillinger</li>
+      </ul>
+      <p>Begge omfatter også din appversion, din operativsystemversion og det aktive tastatursprog.</p>
+      <p>Ingen af dem indeholder nogensinde de ord, bogstaver eller beskeder, du skriver. Der indsamles ikke noget skrevet indhold. Aggregerede optællinger af bogstavændringer og strygningsgeometri kan ikke bruges til at rekonstruere noget, du har skrevet. Oplysningerne bruges udelukkende til at måle og forbedre skrivekvaliteten. De sælges ikke, deles ikke til annoncering og bruges ikke til at spore dig på andre virksomheders apps eller websteder.</p>
+      <p>Du kan slå dette fra når som helst i hovedappen Arcatext under indstillingerne for lagring af Reword-data. Det er slået til som standard, og den ene indstilling dækker både autokorrekturens og Glides diagnostik.</p>
+      <p className="font-medium">H. Oplysninger vi ikke bevidst indsamler</p>
       <p>Arcatext indsamler ikke bevidst:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Din præcise placering</li>

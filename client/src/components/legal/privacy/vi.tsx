@@ -4,7 +4,7 @@ export function PrivacyVi() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Được vận hành bởi Adalithic LLC</p>
-      <p>Cập Nhật Lần Cuối: July 3, 2026</p>
+      <p>Cập Nhật Lần Cuối: August 11, 2026</p>
       <p>
         Arcatext là một ứng dụng bàn phím tùy chỉnh và ngôn ngữ được thiết kế để giúp người dùng viết,
         dịch, diễn đạt lại và hiểu rõ hơn các tin nhắn qua nhiều ngôn ngữ. Chính Sách Quyền Riêng Tư này
@@ -156,7 +156,30 @@ export function PrivacyVi() {
         <li>Liệu một tính năng đã được mở, hoàn thành hay thất bại</li>
       </ul>
       <p>Ở những nơi có thể, thông tin này được thu thập theo cách không trực tiếp xác định danh tính của bạn.</p>
-      <p className="font-medium">G. Thông Tin Chúng Tôi Không Cố Ý Thu Thập</p>
+      <p className="font-medium">G. Dữ liệu chẩn đoán ẩn danh về chất lượng gõ phím và Glide</p>
+      <p>
+        Để đo lường và cải thiện tính năng tự động sửa lỗi và gõ Glide (vuốt), Arcatext thu thập dữ liệu chẩn đoán ẩn danh, được tổng hợp về mức độ hoạt động của các tính năng này. Thông tin này được gắn với một mã nhận dạng ngẫu nhiên theo từng lượt cài đặt, không liên kết với tài khoản, tên, email hay danh tính thiết bị của bạn.
+      </p>
+      <p>Đối với tính năng tự động sửa lỗi, thông tin này bao gồm:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Tần suất các lượt sửa tự động được giữ lại hoặc bị hoàn tác</li>
+        <li>Số liệu tổng hợp về chữ cái nào đã được đổi thành chữ cái nào</li>
+        <li>Số lần chạm phím</li>
+        <li>Các phép đo ẩn danh về độ chính xác khi chạm (điểm chạm cách tâm phím bao xa)</li>
+        <li>Cài đặt sửa lỗi hiện tại của ứng dụng</li>
+      </ul>
+      <p>Đối với gõ Glide, thông tin này bao gồm:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Bao nhiêu lượt vuốt đã tạo ra một từ</li>
+        <li>Tần suất bạn chọn một gợi ý khác hoặc xóa kết quả</li>
+        <li>Từ mong muốn xuất hiện ở vị trí nào trong danh sách gợi ý</li>
+        <li>Các phép đo ẩn danh về hình dạng đường vuốt, chẳng hạn như tốc độ thông thường, độ mượt và khoảng cách từ đường vuốt đến tâm các phím</li>
+        <li>Cài đặt Glide hiện tại của ứng dụng</li>
+      </ul>
+      <p>Cả hai cũng bao gồm phiên bản ứng dụng, phiên bản hệ điều hành và ngôn ngữ bàn phím đang dùng của bạn.</p>
+      <p>Cả hai đều không bao giờ chứa các từ, chữ cái hay tin nhắn mà bạn gõ. Không có nội dung đã gõ nào được thu thập. Các số liệu tổng hợp về thay đổi chữ cái và hình dạng đường vuốt không thể được dùng để khôi phục bất cứ điều gì bạn đã viết. Thông tin này chỉ được dùng để đo lường và cải thiện chất lượng gõ phím. Thông tin này không được bán, không được chia sẻ cho mục đích quảng cáo và không được dùng để theo dõi bạn trên các ứng dụng hoặc trang web của công ty khác.</p>
+      <p>Bạn có thể tắt tính năng này bất cứ lúc nào trong ứng dụng Arcatext chính, tại phần cài đặt lưu trữ dữ liệu Reword. Tính năng được bật theo mặc định và một tùy chọn duy nhất đó áp dụng cho cả dữ liệu chẩn đoán của tự động sửa lỗi lẫn của Glide.</p>
+      <p className="font-medium">H. Thông Tin Chúng Tôi Không Cố Ý Thu Thập</p>
       <p>Arcatext không cố ý thu thập:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Vị trí chính xác của bạn</li>
