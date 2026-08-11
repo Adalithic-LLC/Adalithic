@@ -4,7 +4,7 @@ export function PrivacySv() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Drivs av Adalithic LLC</p>
-      <p>Senast uppdaterad: July 3, 2026</p>
+      <p>Senast uppdaterad: August 11, 2026</p>
       <p>
         Arcatext är ett anpassat tangentbord och en språkapplikation som är utformad för att hjälpa
         användare att skriva, översätta, omformulera och bättre förstå meddelanden på olika språk.
@@ -156,7 +156,30 @@ export function PrivacySv() {
         <li>Huruvida en funktion öppnades, slutfördes eller misslyckades</li>
       </ul>
       <p>Där det är möjligt samlas denna information in på ett sätt som inte direkt identifierar dig.</p>
-      <p className="font-medium">G. Information vi inte avsiktligt samlar in</p>
+      <p className="font-medium">G. Anonym diagnostik om skriv- och Glide-kvalitet</p>
+      <p>
+        För att mäta och förbättra autokorrigering och Glide-skrivning (svepning) samlar Arcatext in anonym, aggregerad diagnostik om hur väl dessa funktioner fungerar. Informationen är kopplad till en slumpmässig identifierare per installation som inte är kopplad till ditt konto, ditt namn, din e-postadress eller din enhetsidentitet.
+      </p>
+      <p>För autokorrigering omfattar detta:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hur ofta automatiska korrigeringar behålls eller ångras</li>
+        <li>Aggregerade räkningar av vilken bokstav som ändrades till vilken annan bokstav</li>
+        <li>Antalet tangenttryckningar</li>
+        <li>Anonyma mätningar av träffsäkerhet (hur nära tangentens mitt tryckningarna hamnar)</li>
+        <li>Appens nuvarande korrigeringsinställningar</li>
+      </ul>
+      <p>För Glide-skrivning omfattar detta:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hur många svepningar som gav ett ord</li>
+        <li>Hur ofta du valde ett annat förslag eller raderade resultatet</li>
+        <li>Hur långt ner i förslagslistan det avsedda ordet fanns</li>
+        <li>Anonyma mätningar av svepningens geometri, såsom typisk hastighet, jämnhet och hur långt från tangenternas mitt svepningarna passerar</li>
+        <li>Appens nuvarande Glide-inställningar</li>
+      </ul>
+      <p>Båda innehåller även din appversion, din operativsystemversion och det aktiva tangentbordsspråket.</p>
+      <p>Ingen av dem innehåller någonsin de ord, bokstäver eller meddelanden du skriver. Inget skrivet innehåll samlas in. Aggregerade räkningar av bokstavsändringar och svepgeometri kan inte användas för att rekonstruera något du har skrivit. Informationen används enbart för att mäta och förbättra skrivkvaliteten. Den säljs inte, delas inte för annonsering och används inte för att spåra dig i andra företags appar eller webbplatser.</p>
+      <p>Du kan stänga av detta när som helst i huvudappen Arcatext, under inställningarna för lagring av Reword-data. Det är påslaget som standard, och den enda inställningen omfattar både autokorrigeringens och Glides diagnostik.</p>
+      <p className="font-medium">H. Information vi inte avsiktligt samlar in</p>
       <p>Arcatext samlar inte avsiktligt in:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Din exakta plats</li>

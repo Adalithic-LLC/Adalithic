@@ -4,7 +4,7 @@ export function PrivacySw() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Inaendeshwa na Adalithic LLC</p>
-      <p>Ilisasishwa Mwisho: July 3, 2026</p>
+      <p>Ilisasishwa Mwisho: August 11, 2026</p>
       <p>
         Arcatext ni kibodi maalum na programu ya lugha iliyoundwa kuwasaidia watumiaji kuandika,
         kutafsiri, kubadilisha maneno, na kuelewa vizuri zaidi ujumbe katika lugha mbalimbali. Sera
@@ -158,7 +158,30 @@ export function PrivacySw() {
         <li>Iwapo kipengele kilifunguliwa, kilikamilishwa, au kilishindwa</li>
       </ul>
       <p>Pale inapowezekana, taarifa hii hukusanywa kwa njia isiyokutambua wewe moja kwa moja.</p>
-      <p className="font-medium">G. Taarifa Tusizokusanya kwa Makusudi</p>
+      <p className="font-medium">G. Taarifa za uchunguzi zisizo na utambulisho kuhusu ubora wa kuandika na wa Glide</p>
+      <p>
+        Ili kupima na kuboresha usahihishaji otomatiki na uandishi wa Glide (kutelezesha kidole), Arcatext hukusanya taarifa za uchunguzi zisizo na utambulisho na zilizojumlishwa kuhusu jinsi vipengele hivi vinavyofanya kazi. Taarifa hizi zimeunganishwa na kitambulisho cha nasibu cha kila usakinishaji ambacho hakihusishwi na akaunti yako, jina lako, barua pepe yako wala utambulisho wa kifaa chako.
+      </p>
+      <p>Kwa usahihishaji otomatiki, hii inajumuisha:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Mara ngapi masahihisho ya otomatiki yamehifadhiwa au kutenguliwa</li>
+        <li>Hesabu zilizojumlishwa za herufi ipi ilibadilishwa kuwa herufi ipi nyingine</li>
+        <li>Idadi ya mibofyo ya vitufe</li>
+        <li>Vipimo visivyo na utambulisho vya usahihi wa mibofyo (mibofyo hutua karibu kiasi gani na katikati ya kitufe)</li>
+        <li>Mipangilio ya sasa ya usahihishaji ya programu</li>
+      </ul>
+      <p>Kwa uandishi wa Glide, hii inajumuisha:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Ni mitelezo mingapi ilizalisha neno</li>
+        <li>Mara ngapi ulichagua pendekezo tofauti au ulifuta matokeo</li>
+        <li>Neno lililokusudiwa lilionekana katika nafasi ipi kwenye orodha ya mapendekezo</li>
+        <li>Vipimo visivyo na utambulisho vya umbo la mtelezo, kama vile kasi ya kawaida, ulaini, na umbali wa mitelezo kutoka katikati ya vitufe</li>
+        <li>Mipangilio ya sasa ya Glide ya programu</li>
+      </ul>
+      <p>Vyote viwili pia hujumuisha toleo la programu yako, toleo la mfumo wako wa uendeshaji, na lugha ya kibodi inayotumika.</p>
+      <p>Hakuna hata kimoja kinachojumuisha maneno, herufi au ujumbe unaoandika. Hakuna maudhui yoyote yaliyoandikwa yanayokusanywa. Hesabu zilizojumlishwa za mabadiliko ya herufi na umbo la mitelezo haziwezi kutumika kuunda upya chochote ulichoandika. Taarifa hizi hutumika kwa kupima na kuboresha ubora wa kuandika pekee. Haziuzwi, hazishirikiwi kwa matangazo, na hazitumiki kukufuatilia katika programu au tovuti za kampuni nyingine.</p>
+      <p>Unaweza kuzima hii wakati wowote katika programu kuu ya Arcatext, katika mipangilio ya kuhifadhi data ya Reword. Imewashwa kwa chaguo-msingi, na kidhibiti hicho kimoja kinahusu taarifa za uchunguzi za usahihishaji otomatiki na za Glide pia.</p>
+      <p className="font-medium">H. Taarifa Tusizokusanya kwa Makusudi</p>
       <p>Arcatext haikusanyi kwa makusudi:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Eneo lako halisi</li>

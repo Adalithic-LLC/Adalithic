@@ -4,7 +4,7 @@ export function PrivacyTr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC tarafından işletilmektedir</p>
-      <p>Son Güncelleme: July 3, 2026</p>
+      <p>Son Güncelleme: August 11, 2026</p>
       <p>
         Arcatext, kullanıcıların diller arasında mesaj yazmasına, çevirmesine, yeniden
         ifade etmesine ve mesajları daha iyi anlamasına yardımcı olmak için tasarlanmış özel bir
@@ -159,7 +159,30 @@ export function PrivacyTr() {
         <li>Bir özelliğin açılıp açılmadığı, tamamlanıp tamamlanmadığı veya başarısız olup olmadığı</li>
       </ul>
       <p>Mümkün olduğunda, bu bilgiler sizi doğrudan tanımlamayacak şekilde toplanır.</p>
-      <p className="font-medium">G. Kasıtlı Olarak Toplamadığımız Bilgiler</p>
+      <p className="font-medium">G. Anonim yazım ve Glide kalitesi tanılamaları</p>
+      <p>
+        Otomatik düzeltmeyi ve Glide (kaydırarak) yazmayı ölçmek ve iyileştirmek için Arcatext, bu özelliklerin ne kadar iyi çalıştığına dair anonim, toplu tanılama verileri toplar. Bu bilgiler, hesabınıza, adınıza, e-posta adresinize veya cihaz kimliğinize bağlı olmayan, kuruluma özgü rastgele bir tanımlayıcıyla ilişkilendirilir.
+      </p>
+      <p>Otomatik düzeltme için bu şunları içerir:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Otomatik düzeltmelerin ne sıklıkta korunduğu veya geri alındığı</li>
+        <li>Hangi harfin hangi başka harfle değiştirildiğine dair toplu sayımlar</li>
+        <li>Tuş vuruşu sayısı</li>
+        <li>Anonim dokunma isabet ölçümleri (dokunuşların tuş merkezine ne kadar yakın düştüğü)</li>
+        <li>Uygulamanın mevcut düzeltme ayarları</li>
+      </ul>
+      <p>Glide yazımı için bu şunları içerir:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Kaç kaydırmanın bir kelime ürettiği</li>
+        <li>Ne sıklıkta farklı bir öneri seçtiğiniz veya sonucu sildiğiniz</li>
+        <li>İstenen kelimenin öneri listesinde kaçıncı sırada göründüğü</li>
+        <li>Kaydırma geometrisine dair anonim ölçümler; örneğin tipik hız, düzgünlük ve kaydırmaların tuş merkezlerinden ne kadar uzaktan geçtiği</li>
+        <li>Uygulamanın mevcut Glide ayarları</li>
+      </ul>
+      <p>Her ikisi de ayrıca uygulama sürümünüzü, işletim sistemi sürümünüzü ve etkin klavye dilinizi içerir.</p>
+      <p>Hiçbiri, yazdığınız kelimeleri, harfleri veya mesajları asla içermez. Hiçbir şekilde yazılan içerik toplanmaz. Toplu harf değişikliği ve kaydırma geometrisi sayımları, yazdığınız hiçbir şeyi yeniden oluşturmak için kullanılamaz. Bu bilgiler yalnızca yazım kalitesini ölçmek ve iyileştirmek için kullanılır. Satılmaz, reklam amacıyla paylaşılmaz ve sizi diğer şirketlerin uygulamaları veya web siteleri genelinde izlemek için kullanılmaz.</p>
+      <p>Bunu istediğiniz zaman ana Arcatext uygulamasında, Reword veri depolama ayarlarından kapatabilirsiniz. Varsayılan olarak açıktır ve bu tek denetim hem otomatik düzeltme hem de Glide tanılamalarını kapsar.</p>
+      <p className="font-medium">H. Kasıtlı Olarak Toplamadığımız Bilgiler</p>
       <p>Arcatext kasıtlı olarak şunları toplamaz:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Kesin konumunuz</li>

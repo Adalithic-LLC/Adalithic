@@ -4,7 +4,7 @@ export function PrivacyZhHant() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">由 Adalithic LLC 營運</p>
-      <p>最後更新：July 3, 2026</p>
+      <p>最後更新：August 11, 2026</p>
       <p>
         Arcatext 是一款自訂鍵盤與語言應用程式，旨在協助使用者跨語言撰寫、
         翻譯、重新措辭及更深入地理解訊息。本隱私政策
@@ -154,7 +154,30 @@ export function PrivacyZhHant() {
         <li>功能是否被開啟、完成或失敗</li>
       </ul>
       <p>在可能的情況下，此資訊會以不直接識別您身分的方式收集。</p>
-      <p className="font-medium">G. 我們不會刻意收集的資訊</p>
+      <p className="font-medium">G. 關於輸入品質與 Glide 品質的匿名診斷資訊</p>
+      <p>
+        為了衡量並改進自動更正與 Glide（滑行）輸入，Arcatext 會收集有關這些功能表現的匿名彙總診斷資訊。這些資訊與每次安裝產生的隨機識別碼相關聯，該識別碼不會與您的帳戶、姓名、電子郵件或裝置身分相關聯。
+      </p>
+      <p>就自動更正而言，這包括：</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>自動更正被保留或被撤銷的頻率</li>
+        <li>哪個字母被改成了哪個字母的彙總計數</li>
+        <li>按鍵次數</li>
+        <li>匿名的點按精確度測量值（點按落點距離按鍵中心有多近）</li>
+        <li>應用程式目前的更正設定</li>
+      </ul>
+      <p>就 Glide 輸入而言，這包括：</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>有多少次滑行產生了詞語</li>
+        <li>您選擇其他候選詞或刪除結果的頻率</li>
+        <li>目標詞在候選清單中出現的位置</li>
+        <li>關於滑行軌跡的匿名測量值，例如通常的速度、平滑程度，以及滑行距離按鍵中心有多遠</li>
+        <li>應用程式目前的 Glide 設定</li>
+      </ul>
+      <p>兩者也都包括您的應用程式版本、作業系統版本以及目前使用的鍵盤語言。</p>
+      <p>兩者都絕不會包含您輸入的字詞、字母或訊息。不會收集任何輸入內容。彙總的字母變更計數與滑行軌跡測量值無法用於還原您寫過的任何內容。這些資訊僅用於衡量與改進輸入品質。它們不會被出售，不會為廣告目的而分享，也不會用於在其他公司的應用程式或網站上追蹤您。</p>
+      <p>您可以隨時在 Arcatext 主應用程式的 Reword 資料儲存設定中關閉此功能。該功能預設為開啟，且這一項設定同時涵蓋自動更正與 Glide 的診斷資訊。</p>
+      <p className="font-medium">H. 我們不會刻意收集的資訊</p>
       <p>Arcatext 不會刻意收集：</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>您的精確位置</li>

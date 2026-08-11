@@ -4,7 +4,7 @@ export function PrivacyHu() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Üzemelteti: Adalithic LLC</p>
-      <p>Utolsó frissítés: July 3, 2026</p>
+      <p>Utolsó frissítés: August 11, 2026</p>
       <p>
         Az Arcatext egy egyéni billentyűzet és nyelvi alkalmazás, amelyet arra terveztek, hogy
         segítsen a felhasználóknak üzeneteket írni, fordítani, átfogalmazni és jobban megérteni a
@@ -160,7 +160,30 @@ export function PrivacyHu() {
         <li>Hogy egy funkció meg lett-e nyitva, be lett-e fejezve vagy sikertelen volt-e</li>
       </ul>
       <p>Ahol lehetséges, ezeket az információkat olyan módon gyűjtjük, amely nem azonosítja Önt közvetlenül.</p>
-      <p className="font-medium">G. Információk, amelyeket szándékosan nem gyűjtünk</p>
+      <p className="font-medium">G. Névtelen gépelési és Glide-minőségi diagnosztika</p>
+      <p>
+        Az automatikus javítás és a Glide (húzásos) gépelés mérése és fejlesztése érdekében az Arcatext névtelen, összesített diagnosztikai adatokat gyűjt arról, hogy ezek a funkciók mennyire jól működnek. Ezek az információk egy telepítésenkénti véletlenszerű azonosítóhoz kapcsolódnak, amely nincs összekapcsolva a fiókjával, nevével, e-mail-címével vagy eszközazonosságával.
+      </p>
+      <p>Az automatikus javítás esetében ez a következőket tartalmazza:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Milyen gyakran maradnak meg vagy lesznek visszavonva az automatikus javítások</li>
+        <li>Összesített darabszámok arról, melyik betű melyik másik betűre változott</li>
+        <li>A billentyűleütések számát</li>
+        <li>Névtelen érintéspontossági méréseket (mennyire közel érkeznek az érintések a billentyű közepéhez)</li>
+        <li>Az alkalmazás aktuális javítási beállításait</li>
+      </ul>
+      <p>A Glide gépelés esetében ez a következőket tartalmazza:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hány húzás eredményezett szót</li>
+        <li>Milyen gyakran választott másik javaslatot vagy törölte az eredményt</li>
+        <li>A javaslatlistában milyen mélyen jelent meg a kívánt szó</li>
+        <li>Névtelen méréseket a húzás geometriájáról, például a jellemző sebességről, egyenletességről és arról, milyen messze halad a húzás a billentyűk közepétől</li>
+        <li>Az alkalmazás aktuális Glide-beállításait</li>
+      </ul>
+      <p>Mindkettő tartalmazza az alkalmazás verzióját, az operációs rendszer verzióját és az aktív billentyűzetnyelvet is.</p>
+      <p>Egyik sem tartalmazza soha az Ön által begépelt szavakat, betűket vagy üzeneteket. Semmilyen begépelt tartalmat nem gyűjtünk. Az összesített betűcsere- és húzásgeometria-adatokból nem rekonstruálható semmi abból, amit írt. Ezeket az információkat kizárólag a gépelési minőség mérésére és javítására használjuk. Nem adjuk el, nem osztjuk meg hirdetési célból, és nem használjuk arra, hogy más cégek alkalmazásain vagy webhelyein nyomon kövessük Önt.</p>
+      <p>Ezt bármikor kikapcsolhatja az Arcatext fő alkalmazásában, a Reword adattárolási beállításai között. Alapértelmezés szerint be van kapcsolva, és ez az egyetlen beállítás mind az automatikus javítás, mind a Glide diagnosztikájára vonatkozik.</p>
+      <p className="font-medium">H. Információk, amelyeket szándékosan nem gyűjtünk</p>
       <p>Az Arcatext szándékosan nem gyűjti:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Az Ön pontos helyzetét</li>

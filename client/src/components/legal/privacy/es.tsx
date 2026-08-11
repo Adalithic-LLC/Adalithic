@@ -4,7 +4,7 @@ export function PrivacyEs() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operado por Adalithic LLC</p>
-      <p>Última actualización: July 3, 2026</p>
+      <p>Última actualización: August 11, 2026</p>
       <p>
         Arcatext es un teclado personalizado y una aplicación de idiomas diseñada para ayudar a los
         usuarios a escribir, traducir, reformular y comprender mejor los mensajes en distintos
@@ -160,7 +160,30 @@ export function PrivacyEs() {
         <li>Si una función se abrió, completó o falló</li>
       </ul>
       <p>Cuando es posible, esta información se recopila de una manera que no lo identifica directamente.</p>
-      <p className="font-medium">G. Información Que No Recopilamos Intencionadamente</p>
+      <p className="font-medium">G. Diagnósticos anónimos de calidad de escritura y de Glide</p>
+      <p>
+        Para medir y mejorar la corrección automática y la escritura Glide (deslizando), Arcatext recopila diagnósticos anónimos y agregados sobre el rendimiento de estas funciones. Esta información se asocia a un identificador aleatorio por instalación que no está vinculado a su cuenta, su nombre, su correo electrónico ni la identidad de su dispositivo.
+      </p>
+      <p>En el caso de la corrección automática, esto incluye:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Con qué frecuencia se mantienen o se deshacen las correcciones automáticas</li>
+        <li>Recuentos agregados de qué letra se cambió por qué otra letra</li>
+        <li>El número de pulsaciones de teclas</li>
+        <li>Mediciones anónimas de precisión de pulsación (a qué distancia del centro de la tecla caen las pulsaciones)</li>
+        <li>Los ajustes de corrección actuales de la aplicación</li>
+      </ul>
+      <p>En el caso de la escritura Glide, esto incluye:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Cuántos deslizamientos produjeron una palabra</li>
+        <li>Con qué frecuencia eligió una sugerencia distinta o borró el resultado</li>
+        <li>En qué posición de la lista de sugerencias apareció la palabra deseada</li>
+        <li>Mediciones anónimas de la geometría del deslizamiento, como la velocidad habitual, la suavidad y la distancia a la que los deslizamientos pasan del centro de las teclas</li>
+        <li>Los ajustes de Glide actuales de la aplicación</li>
+      </ul>
+      <p>Ambos incluyen además la versión de su aplicación, la versión de su sistema operativo y el idioma de teclado activo.</p>
+      <p>Ninguno de los dos incluye jamás las palabras, letras o mensajes que usted escribe. No se recopila ningún contenido escrito. Los recuentos agregados de cambios de letras y de geometría de deslizamiento no permiten reconstruir nada de lo que usted haya escrito. Esta información se utiliza únicamente para medir y mejorar la calidad de la escritura. No se vende, no se comparte con fines publicitarios y no se utiliza para rastrearle en aplicaciones o sitios web de otras empresas.</p>
+      <p>Puede desactivarlo en cualquier momento en la aplicación principal de Arcatext, en los ajustes de almacenamiento de datos de Reformulación. Está activado de forma predeterminada, y ese único control cubre tanto los diagnósticos de corrección automática como los de Glide.</p>
+      <p className="font-medium">H. Información Que No Recopilamos Intencionadamente</p>
       <p>Arcatext no recopila intencionadamente:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Su ubicación precisa</li>

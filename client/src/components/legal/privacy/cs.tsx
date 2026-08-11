@@ -4,7 +4,7 @@ export function PrivacyCs() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Provozováno společností Adalithic LLC</p>
-      <p>Poslední aktualizace: July 3, 2026</p>
+      <p>Poslední aktualizace: August 11, 2026</p>
       <p>
         Arcatext je vlastní klávesnice a jazyková aplikace navržená tak, aby uživatelům pomáhala psát,
         překládat, přeformulovávat a lépe rozumět zprávám napříč jazyky. Tyto Zásady ochrany osobních údajů
@@ -156,7 +156,30 @@ export function PrivacyCs() {
         <li>Zda byla funkce otevřena, dokončena nebo selhala</li>
       </ul>
       <p>Kde je to možné, jsou tyto informace shromažďovány způsobem, který vás přímo neidentifikuje.</p>
-      <p className="font-medium">G. Informace, které záměrně neshromažďujeme</p>
+      <p className="font-medium">G. Anonymní diagnostika kvality psaní a funkce Glide</p>
+      <p>
+        Aby bylo možné měřit a zlepšovat automatické opravy a psaní Glide (tažením prstu), shromažďuje Arcatext anonymní souhrnná diagnostická data o tom, jak dobře tyto funkce fungují. Tyto informace jsou spojeny s náhodným identifikátorem pro danou instalaci, který není propojen s vaším účtem, jménem, e-mailem ani identitou zařízení.
+      </p>
+      <p>U automatických oprav to zahrnuje:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Jak často jsou automatické opravy ponechány nebo vráceny zpět</li>
+        <li>Souhrnné počty toho, které písmeno bylo změněno na které jiné písmeno</li>
+        <li>Počet stisků kláves</li>
+        <li>Anonymní měření přesnosti dotyků (jak blízko středu klávesy dotyky dopadají)</li>
+        <li>Aktuální nastavení oprav v aplikaci</li>
+      </ul>
+      <p>U psaní Glide to zahrnuje:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Kolik tahů prstem vytvořilo slovo</li>
+        <li>Jak často jste zvolili jiný návrh nebo výsledek smazali</li>
+        <li>Jak hluboko v seznamu návrhů se zamýšlené slovo objevilo</li>
+        <li>Anonymní měření geometrie tahu, například typickou rychlost, plynulost a jak daleko od středu kláves tahy procházejí</li>
+        <li>Aktuální nastavení Glide v aplikaci</li>
+      </ul>
+      <p>Obojí zahrnuje také verzi vaší aplikace, verzi operačního systému a aktivní jazyk klávesnice.</p>
+      <p>Ani jedno nikdy neobsahuje slova, písmena ani zprávy, které píšete. Žádný napsaný obsah se neshromažďuje. Souhrnné počty změn písmen a geometrie tahů nelze použít k rekonstrukci čehokoli, co jste napsali. Tyto informace slouží výhradně k měření a zlepšování kvality psaní. Neprodávají se, nesdílejí se pro reklamní účely a nepoužívají se ke sledování napříč aplikacemi nebo weby jiných společností.</p>
+      <p>Můžete to kdykoli vypnout v hlavní aplikaci Arcatext v nastavení ukládání dat Reword. Ve výchozím nastavení je zapnuto a toto jediné nastavení pokrývá diagnostiku automatických oprav i funkce Glide.</p>
+      <p className="font-medium">H. Informace, které záměrně neshromažďujeme</p>
       <p>Arcatext záměrně neshromažďuje:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Vaši přesnou polohu</li>

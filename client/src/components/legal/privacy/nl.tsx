@@ -4,7 +4,7 @@ export function PrivacyNl() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Beheerd door Adalithic LLC</p>
-      <p>Laatst bijgewerkt: July 3, 2026</p>
+      <p>Laatst bijgewerkt: August 11, 2026</p>
       <p>
         Arcatext is een aangepast toetsenbord en taalapplicatie ontworpen om gebruikers te helpen
         bij het schrijven, vertalen, herformuleren en beter begrijpen van berichten in verschillende
@@ -159,7 +159,30 @@ export function PrivacyNl() {
         <li>Of een functie werd geopend, voltooid of mislukt</li>
       </ul>
       <p>Waar mogelijk wordt deze informatie verzameld op een manier die u niet direct identificeert.</p>
-      <p className="font-medium">G. Informatie Die We Niet Opzettelijk Verzamelen</p>
+      <p className="font-medium">G. Anonieme diagnostiek over typ- en Glide-kwaliteit</p>
+      <p>
+        Om autocorrectie en Glide-typen (vegen) te meten en te verbeteren, verzamelt Arcatext anonieme, geaggregeerde diagnostische gegevens over hoe goed deze functies werken. Deze informatie is gekoppeld aan een willekeurige identificatiecode per installatie die niet is gekoppeld aan uw account, naam, e-mailadres of apparaatidentiteit.
+      </p>
+      <p>Voor autocorrectie omvat dit:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hoe vaak automatische correcties worden behouden of ongedaan gemaakt</li>
+        <li>Geaggregeerde tellingen van welke letter in welke andere letter is veranderd</li>
+        <li>Het aantal toetsaanslagen</li>
+        <li>Anonieme metingen van tiknauwkeurigheid (hoe dicht bij het midden van een toets uw tikken terechtkomen)</li>
+        <li>De huidige correctie-instellingen van de app</li>
+      </ul>
+      <p>Voor Glide-typen omvat dit:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hoeveel veegbewegingen een woord hebben opgeleverd</li>
+        <li>Hoe vaak u een andere suggestie koos of het resultaat verwijderde</li>
+        <li>Op welke plaats in de suggestielijst het bedoelde woord stond</li>
+        <li>Anonieme metingen van de veeggeometrie, zoals typische snelheid, vloeiendheid en hoe ver veegbewegingen van het midden van toetsen af liggen</li>
+        <li>De huidige Glide-instellingen van de app</li>
+      </ul>
+      <p>Beide bevatten ook uw app-versie, uw besturingssysteemversie en de actieve toetsenbordtaal.</p>
+      <p>Geen van beide bevat ooit de woorden, letters of berichten die u typt. Er wordt geen enkele getypte inhoud verzameld. Geaggregeerde tellingen van letterwijzigingen en veeggeometrie kunnen niet worden gebruikt om te reconstrueren wat u hebt geschreven. Deze informatie wordt uitsluitend gebruikt om de typkwaliteit te meten en te verbeteren. Ze wordt niet verkocht, niet gedeeld voor advertenties en niet gebruikt om u te volgen op apps of websites van andere bedrijven.</p>
+      <p>U kunt dit op elk moment uitschakelen in de hoofdapp van Arcatext, bij de instellingen voor opslag van Reword-gegevens. Het staat standaard aan, en die ene instelling geldt zowel voor de diagnostiek van autocorrectie als voor die van Glide.</p>
+      <p className="font-medium">H. Informatie Die We Niet Opzettelijk Verzamelen</p>
       <p>Arcatext verzamelt niet opzettelijk:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Uw exacte locatie</li>

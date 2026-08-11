@@ -4,7 +4,7 @@ export function PrivacyFil() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Pinapatakbo ng Adalithic LLC</p>
-      <p>Huling Na-update: July 3, 2026</p>
+      <p>Huling Na-update: August 11, 2026</p>
       <p>
         Ang Arcatext ay isang custom na keyboard at aplikasyon ng wika na dinisenyo upang tulungan
         ang mga user na sumulat, magsalin, mag-reword, at mas maunawaan ang mga mensahe sa iba't
@@ -160,7 +160,30 @@ export function PrivacyFil() {
         <li>Kung ang isang tampok ay nabuksan, natapos, o nabigo</li>
       </ul>
       <p>Kung saan posible, ang impormasyong ito ay kinokolekta sa paraang hindi direktang tumutukoy sa iyo.</p>
-      <p className="font-medium">G. Impormasyong Hindi Namin Sinasadyang Kinokolekta</p>
+      <p className="font-medium">G. Hindi nagpapakilalang diagnostics sa kalidad ng pag-type at ng Glide</p>
+      <p>
+        Upang masukat at mapabuti ang autocorrect at ang Glide (swipe) na pag-type, nangongolekta ang Arcatext ng hindi nagpapakilala at pinagsama-samang diagnostics tungkol sa kung gaano kahusay gumana ang mga tampok na ito. Ang impormasyong ito ay nakaugnay sa isang random na identifier bawat pag-install na hindi nakaugnay sa iyong account, pangalan, email, o pagkakakilanlan ng device.
+      </p>
+      <p>Para sa autocorrect, kabilang dito ang:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Kung gaano kadalas pinapanatili o binabawi ang mga awtomatikong pagwawasto</li>
+        <li>Pinagsama-samang bilang kung aling titik ang pinalitan ng aling ibang titik</li>
+        <li>Ang bilang ng mga pagpindot sa key</li>
+        <li>Hindi nagpapakilalang pagsukat ng katumpakan ng pagpindot (kung gaano kalapit sa gitna ng key bumababa ang mga pindot)</li>
+        <li>Ang kasalukuyang mga setting ng pagwawasto ng app</li>
+      </ul>
+      <p>Para sa Glide na pag-type, kabilang dito ang:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Kung ilang swipe ang nakabuo ng salita</li>
+        <li>Kung gaano kadalas ka pumili ng ibang suhestiyon o nagbura ng resulta</li>
+        <li>Kung pang-ilan sa listahan ng mga suhestiyon lumitaw ang nilalayong salita</li>
+        <li>Hindi nagpapakilalang pagsukat ng geometry ng swipe, gaya ng karaniwang bilis, kinis, at kung gaano kalayo sa gitna ng mga key dumadaan ang mga swipe</li>
+        <li>Ang kasalukuyang mga setting ng Glide ng app</li>
+      </ul>
+      <p>Kasama rin sa dalawa ang bersyon ng iyong app, bersyon ng iyong operating system, at ang aktibong wika ng keyboard.</p>
+      <p>Wala sa dalawa ang kailanman naglalaman ng mga salita, titik, o mensaheng tina-type mo. Walang anumang na-type na nilalaman ang kinokolekta. Ang pinagsama-samang bilang ng pagpapalit ng titik at geometry ng swipe ay hindi magagamit upang buuing muli ang anumang isinulat mo. Ginagamit lamang ang impormasyong ito upang sukatin at pabutihin ang kalidad ng pag-type. Hindi ito ibinebenta, hindi ibinabahagi para sa advertising, at hindi ginagamit upang subaybayan ka sa mga app o website ng ibang kumpanya.</p>
+      <p>Maaari mo itong i-off anumang oras sa pangunahing Arcatext app, sa mga setting ng pag-imbak ng Reword data. Naka-on ito bilang default, at sakop ng iisang kontrol na iyon ang diagnostics ng autocorrect at ng Glide.</p>
+      <p className="font-medium">H. Impormasyong Hindi Namin Sinasadyang Kinokolekta</p>
       <p>Ang Arcatext ay hindi sinasadyang kinokolekta ang:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Ang iyong eksaktong lokasyon</li>

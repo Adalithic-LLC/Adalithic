@@ -4,7 +4,7 @@ export function PrivacyPl() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Obsługiwane przez Adalithic LLC</p>
-      <p>Ostatnia aktualizacja: July 3, 2026</p>
+      <p>Ostatnia aktualizacja: August 11, 2026</p>
       <p>
         Arcatext to niestandardowa klawiatura i aplikacja językowa zaprojektowana, aby pomagać użytkownikom pisać,
         tłumaczyć, przeformułowywać i lepiej rozumieć wiadomości w różnych językach. Niniejsza Polityka Prywatności
@@ -156,7 +156,30 @@ export function PrivacyPl() {
         <li>Informacje o tym, czy funkcja została otwarta, ukończona lub zakończona niepowodzeniem</li>
       </ul>
       <p>W miarę możliwości informacje te są zbierane w sposób, który nie identyfikuje Cię bezpośrednio.</p>
-      <p className="font-medium">G. Informacje, których celowo nie zbieramy</p>
+      <p className="font-medium">G. Anonimowa diagnostyka jakości pisania i funkcji Glide</p>
+      <p>
+        Aby mierzyć i ulepszać autokorektę oraz pisanie Glide (przesuwaniem palca), Arcatext zbiera anonimowe, zbiorcze dane diagnostyczne o tym, jak dobrze działają te funkcje. Informacje te są powiązane z losowym identyfikatorem przypisanym do instalacji, który nie jest powiązany z Twoim kontem, imieniem i nazwiskiem, adresem e-mail ani tożsamością urządzenia.
+      </p>
+      <p>W przypadku autokorekty obejmuje to:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Jak często automatyczne poprawki są zachowywane lub cofane</li>
+        <li>Zbiorcze zestawienia tego, która litera została zmieniona na którą inną literę</li>
+        <li>Liczbę naciśnięć klawiszy</li>
+        <li>Anonimowe pomiary celności dotknięć (jak blisko środka klawisza trafiają dotknięcia)</li>
+        <li>Bieżące ustawienia korekty w aplikacji</li>
+      </ul>
+      <p>W przypadku pisania Glide obejmuje to:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Ile przesunięć palcem dało słowo</li>
+        <li>Jak często wybierano inną podpowiedź lub usuwano wynik</li>
+        <li>Na której pozycji listy podpowiedzi pojawiło się zamierzone słowo</li>
+        <li>Anonimowe pomiary geometrii przesunięcia, takie jak typowa prędkość, płynność oraz odległość przesunięć od środka klawiszy</li>
+        <li>Bieżące ustawienia Glide w aplikacji</li>
+      </ul>
+      <p>Oba zestawy zawierają również wersję aplikacji, wersję systemu operacyjnego oraz aktywny język klawiatury.</p>
+      <p>Żaden z nich nigdy nie zawiera słów, liter ani wiadomości, które piszesz. Nie są zbierane żadne wpisywane treści. Zbiorcze zestawienia zmian liter i geometrii przesunięć nie pozwalają odtworzyć niczego, co napisałeś. Informacje te służą wyłącznie do mierzenia i poprawy jakości pisania. Nie są sprzedawane, nie są udostępniane w celach reklamowych i nie służą do śledzenia Cię w aplikacjach ani witrynach innych firm.</p>
+      <p>Możesz to wyłączyć w dowolnym momencie w głównej aplikacji Arcatext, w ustawieniach przechowywania danych Reword. Funkcja jest domyślnie włączona, a to jedno ustawienie obejmuje zarówno diagnostykę autokorekty, jak i funkcji Glide.</p>
+      <p className="font-medium">H. Informacje, których celowo nie zbieramy</p>
       <p>Arcatext celowo nie zbiera:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Twojej dokładnej lokalizacji</li>

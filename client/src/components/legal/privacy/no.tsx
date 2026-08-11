@@ -4,7 +4,7 @@ export function PrivacyNo() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Drevet av Adalithic LLC</p>
-      <p>Sist oppdatert: July 3, 2026</p>
+      <p>Sist oppdatert: August 11, 2026</p>
       <p>
         Arcatext er et tilpasset tastatur og en språkapplikasjon utformet for å hjelpe brukere med å skrive,
         oversette, omformulere og bedre forstå meldinger på tvers av språk. Denne personvernerklæringen
@@ -156,7 +156,30 @@ export function PrivacyNo() {
         <li>Om en funksjon ble åpnet, fullført eller mislyktes</li>
       </ul>
       <p>Der det er mulig, samles denne informasjonen inn på en måte som ikke identifiserer deg direkte.</p>
-      <p className="font-medium">G. Informasjon vi ikke bevisst samler inn</p>
+      <p className="font-medium">G. Anonym diagnostikk om skrive- og Glide-kvalitet</p>
+      <p>
+        For å måle og forbedre autokorrektur og Glide-skriving (sveiping) samler Arcatext inn anonym, aggregert diagnostikk om hvor godt disse funksjonene fungerer. Opplysningene er knyttet til en tilfeldig identifikator per installasjon som ikke er knyttet til kontoen din, navnet ditt, e-postadressen din eller enhetsidentiteten din.
+      </p>
+      <p>For autokorrektur omfatter dette:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hvor ofte automatiske rettelser beholdes eller angres</li>
+        <li>Aggregerte opptellinger av hvilken bokstav som ble endret til hvilken annen bokstav</li>
+        <li>Antall tastetrykk</li>
+        <li>Anonyme målinger av treffsikkerhet (hvor nær tastens midte trykkene lander)</li>
+        <li>Appens nåværende rettingsinnstillinger</li>
+      </ul>
+      <p>For Glide-skriving omfatter dette:</p>
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Hvor mange sveip som ga et ord</li>
+        <li>Hvor ofte du valgte et annet forslag eller slettet resultatet</li>
+        <li>Hvor langt ned i forslagslisten det tiltenkte ordet stod</li>
+        <li>Anonyme målinger av sveipets geometri, som typisk hastighet, jevnhet og hvor langt fra tastenes midte sveipene går</li>
+        <li>Appens nåværende Glide-innstillinger</li>
+      </ul>
+      <p>Begge inkluderer også appversjonen din, operativsystemversjonen din og det aktive tastaturspråket.</p>
+      <p>Ingen av dem inneholder noen gang ordene, bokstavene eller meldingene du skriver. Det samles ikke inn noe skrevet innhold. Aggregerte opptellinger av bokstavendringer og sveipgeometri kan ikke brukes til å rekonstruere noe du har skrevet. Opplysningene brukes utelukkende til å måle og forbedre skrivekvaliteten. De selges ikke, deles ikke for annonsering og brukes ikke til å spore deg på andre selskapers apper eller nettsteder.</p>
+      <p>Du kan slå dette av når som helst i hovedappen Arcatext, under innstillingene for lagring av Reword-data. Det er på som standard, og den ene innstillingen dekker både autokorrekturens og Glides diagnostikk.</p>
+      <p className="font-medium">H. Informasjon vi ikke bevisst samler inn</p>
       <p>Arcatext samler ikke bevisst inn:</p>
       <ul className="list-disc pl-6 space-y-1">
         <li>Din nøyaktige posisjon</li>
