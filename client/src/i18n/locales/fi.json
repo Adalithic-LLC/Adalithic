@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Tutustu <brand>Arcatext</brand>iin.",
-    "tagline": "Opi kieliä aitojen keskustelujen kautta",
+    "tagline": "Tekoälynäppäimistö, joka vie aitoja keskusteluja eteenpäin",
     "learnMore": "Katso, miten se toimii",
     "getInTouch": "Ota yhteyttä",
     "imageAlt": "Arcatext-näppäimistö kääntää ja korjaa viestiä chat-sovelluksessa.",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "Yksi sovellus, keskustelun jokaiseen osaan",
+    "eyebrow": "Yksi näppäimistö, keskustelun jokaiseen osaan",
     "title": "Kaikki, mitä tarvitset viestiäksesi kielten välillä",
     "subtitle": "Arcatext on tekoälynäppäimistö, joka toimii suoraan jo käyttämiesi sovellusten sisällä ja kattaa kaikki viestien lähettämisen ja vastaanottamisen puolet keskustelun aikana.",
     "items": {

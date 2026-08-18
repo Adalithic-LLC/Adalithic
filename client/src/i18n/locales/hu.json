@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Ismerd meg az <brand>Arcatext</brand>et.",
-    "tagline": "Tanulj nyelveket valódi beszélgetéseken keresztül",
+    "tagline": "A mesterséges intelligenciára épülő billentyűzet, amely valódi beszélgetéseket hajt",
     "learnMore": "Nézd meg, hogyan működik",
     "getInTouch": "Lépj kapcsolatba velünk",
     "imageAlt": "Az Arcatext billentyűzet egy üzenetet fordít és javít egy csevegőalkalmazásban.",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "Egyetlen alkalmazás a beszélgetés minden részéhez",
+    "eyebrow": "Egyetlen billentyűzet a beszélgetés minden részéhez",
     "title": "Minden, amire szükséged van a nyelvek közötti kommunikációhoz",
     "subtitle": "Az Arcatext egy mesterséges intelligenciára épülő billentyűzet, amely a már használt alkalmazásaidon belül működik, és lefedi az üzenetek küldésének és fogadásának minden oldalát egy beszélgetés során.",
     "items": {

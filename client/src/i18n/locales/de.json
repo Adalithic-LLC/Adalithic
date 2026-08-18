@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Das ist <brand>Arcatext</brand>.",
-    "tagline": "Sprachen lernen durch echte Gespräche",
+    "tagline": "Die KI-Tastatur, die echte Gespräche antreibt",
     "imageAlt": "Die Arcatext-Tastatur übersetzt und korrigiert eine Nachricht in einer Chat-App.",
     "learnMore": "So funktioniert's",
     "getInTouch": "Kontakt aufnehmen",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "Eine App, jeder Teil des Gesprächs",
+    "eyebrow": "Eine Tastatur, jeder Teil des Gesprächs",
     "title": "Alles, was du brauchst, um über Sprachgrenzen hinweg zu sprechen",
     "subtitle": "Arcatext ist eine KI-Tastatur, die in den Apps lebt, die du bereits nutzt, und alle Aspekte des Sendens und Empfangens von Nachrichten während eines Gesprächs abdeckt.",
     "items": {

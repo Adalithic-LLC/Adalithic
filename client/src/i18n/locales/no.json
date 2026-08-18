@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Møt <brand>Arcatext</brand>.",
-    "tagline": "Lær språk gjennom ekte samtaler",
+    "tagline": "KI-tastaturet som driver ekte samtaler",
     "imageAlt": "Arcatext-tastaturet som oversetter og retter en melding i en chat-app.",
     "learnMore": "Se hvordan det fungerer",
     "getInTouch": "Ta kontakt",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "Én app, hver del av samtalen",
+    "eyebrow": "Ett tastatur, hver del av samtalen",
     "title": "Alt du trenger for å snakke på tvers av språk",
     "subtitle": "Arcatext er et KI-tastatur som lever inne i appene du allerede bruker, og dekker alle sider ved å sende og motta meldinger under en samtale.",
     "items": {

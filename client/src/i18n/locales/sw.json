@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Kutana na <brand>Arcatext</brand>.",
-    "tagline": "Jifunze Lugha Kupitia Mazungumzo Halisi",
+    "tagline": "Kibodi ya AI inayoendesha mazungumzo halisi",
     "imageAlt": "Kibodi ya Arcatext ikitafsiri na kusahihisha ujumbe katika programu ya gumzo.",
     "learnMore": "Ona jinsi inavyofanya kazi",
     "getInTouch": "Wasiliana nasi",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "Programu moja, kila sehemu ya mazungumzo",
+    "eyebrow": "Kibodi moja, kila sehemu ya mazungumzo",
     "title": "Kila kitu unachohitaji ili kuzungumza kati ya lugha",
     "subtitle": "Arcatext ni kibodi ya AI inayoishi ndani ya programu ambazo tayari unazitumia na inashughulikia kila kipengele cha kutuma na kupokea ujumbe wakati wa mazungumzo.",
     "items": {

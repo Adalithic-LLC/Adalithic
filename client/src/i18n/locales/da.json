@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Mød <brand>Arcatext</brand>.",
-    "tagline": "Lær sprog gennem virkelige samtaler",
+    "tagline": "AI-tastaturet, der driver virkelige samtaler",
     "imageAlt": "Arcatext-tastaturet, der oversætter og retter en besked i en chat-app.",
     "learnMore": "Se, hvordan det virker",
     "getInTouch": "Kontakt os",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "Én app, hver del af samtalen",
+    "eyebrow": "Ét tastatur, hver del af samtalen",
     "title": "Alt, hvad du har brug for til at tale på tværs af sprog",
     "subtitle": "Arcatext er et AI-tastatur, der lever inde i de apps, du allerede bruger, og dækker alle aspekter af at sende og modtage beskeder under en samtale.",
     "items": {

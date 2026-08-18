@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Meet <brand>Arcatext</brand>.",
-    "tagline": "Learn Languages Through Real Conversations",
+    "tagline": "The AI Keyboard Powering Real Conversations",
     "imageAlt": "The Arcatext keyboard translating and correcting a message in a chat app.",
     "learnMore": "See how it works",
     "getInTouch": "Get in touch",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "One app, every part of the conversation",
+    "eyebrow": "One keyboard, every part of the conversation",
     "title": "Everything you need to talk across languages",
     "subtitle": "Arcatext is an AI keyboard that lives inside the apps you already use and covers all aspects of sending and receiving messages during a conversation.",
     "items": {

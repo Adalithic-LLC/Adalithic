@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Conheça o <brand>Arcatext</brand>.",
-    "tagline": "Aprenda idiomas com conversas reais",
+    "tagline": "O teclado com IA que impulsiona conversas reais",
     "imageAlt": "O teclado Arcatext traduzindo e corrigindo uma mensagem em um app de chat.",
     "learnMore": "Veja como funciona",
     "getInTouch": "Fale conosco",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "Um app, cada parte da conversa",
+    "eyebrow": "Um teclado, cada parte da conversa",
     "title": "Tudo o que você precisa para conversar entre idiomas",
     "subtitle": "O Arcatext é um teclado com IA que vive dentro dos apps que você já usa e cobre todos os aspectos de enviar e receber mensagens durante uma conversa.",
     "items": {

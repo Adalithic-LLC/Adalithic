@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Möt <brand>Arcatext</brand>.",
-    "tagline": "Lär dig språk genom verkliga samtal",
+    "tagline": "AI-tangentbordet som driver verkliga samtal",
     "imageAlt": "Arcatext-tangentbordet som översätter och korrigerar ett meddelande i en chattapp.",
     "learnMore": "Se hur det fungerar",
     "getInTouch": "Kontakta oss",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "En app, varje del av samtalet",
+    "eyebrow": "Ett tangentbord, varje del av samtalet",
     "title": "Allt du behöver för att prata över språkgränserna",
     "subtitle": "Arcatext är ett AI-tangentbord som finns inuti apparna du redan använder och täcker alla aspekter av att skicka och ta emot meddelanden under ett samtal.",
     "items": {

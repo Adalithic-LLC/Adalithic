@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Poznaj <brand>Arcatext</brand>.",
-    "tagline": "Ucz się języków dzięki prawdziwym rozmowom",
+    "tagline": "Klawiatura ze sztuczną inteligencją, która napędza prawdziwe rozmowy",
     "imageAlt": "Klawiatura Arcatext tłumacząca i poprawiająca wiadomość w aplikacji do czatowania.",
     "learnMore": "Zobacz, jak to działa",
     "getInTouch": "Skontaktuj się",
@@ -31,7 +31,7 @@
     ]
   },
   "features": {
-    "eyebrow": "Jedna aplikacja, każda część rozmowy",
+    "eyebrow": "Jedna klawiatura, każda część rozmowy",
     "title": "Wszystko, czego potrzebujesz, by rozmawiać w różnych językach",
     "subtitle": "Arcatext to klawiatura oparta na sztucznej inteligencji, która działa wewnątrz aplikacji, których już używasz, i obejmuje wszystkie aspekty wysyłania i odbierania wiadomości podczas rozmowy.",
     "items": {
