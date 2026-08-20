@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
+import Redeem from "@/pages/redeem";
 import NotFound from "@/pages/not-found";
 import { getLocaleFromPath, isPrefixLocale, isRtl } from "@/lib/locale";
 import { useSeo } from "@/lib/seo";
@@ -36,6 +37,10 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
+      {/* Arcatext promo redemption. English-only and deliberately not
+          locale-prefixed: codes are handed out with this exact URL, and the
+          app never links here (guideline 3.1.1(a) anti-steering). */}
+      <Route path="/redeem" component={Redeem} />
       {/* Prefixed locales: /es, /es/privacy, /fr/terms, ... An unknown prefix
           (e.g. /xx/privacy) falls through to NotFound. Order matters — the
           bare "/:lang" catch must come after the more specific routes. */}
