@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Integritetspolicy"
+  },
+  "redeem": {
+    "title": "Lös in en kampanjkod",
+    "subtitle": "Ange din e-postadress för att logga in eller skapa ett Arcatext-konto och lös sedan in din kod.",
+    "email": {
+      "label": "E-postadress",
+      "placeholder": "du@exempel.com",
+      "hint": "Vi skickar en 6-siffrig kod. Inget lösenord behövs.",
+      "cta": "Fortsätt"
+    },
+    "otp": {
+      "label": "Ange din 6-siffriga kod",
+      "sentTo": "Vi har skickat en kod till {{email}}.",
+      "cta": "Verifiera",
+      "resend": "Skicka koden igen",
+      "resent": "Vi har skickat en ny kod.",
+      "changeEmail": "Använd en annan e-postadress"
+    },
+    "code": {
+      "label": "Kampanjkod",
+      "placeholder": "Ange din kod",
+      "cta": "Lös in"
+    },
+    "done": {
+      "title": "Din kod är aktiv.",
+      "tokens": "{{tokens}} tokens har lagts till på ditt konto.",
+      "expires": "Giltig till och med {{date}}.",
+      "nextTitle": "Nästa steg",
+      "nextBody": "Öppna Arcatext och logga in med {{email}} — samma adress som du använde här. Dina tokens finns redan där.",
+      "download": "Ladda ner Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Vi kunde inte skicka din kod. Kontrollera adressen och försök igen.",
+      "badOtp": "Koden stämmer inte. Kontrollera den och försök igen, eller begär en ny.",
+      "invalidCode": "Ange en giltig kod.",
+      "sessionExpired": "Din session har gått ut. Logga in igen.",
+      "network": "Vi kunde inte nå servern. Din kod har inte använts — försök igen.",
+      "notConfigured": "Inlösen är tillfälligt otillgänglig. Försök igen senare."
+    }
   }
 }

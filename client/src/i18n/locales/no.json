@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Personvernerklæring"
+  },
+  "redeem": {
+    "title": "Løs inn en kampanjekode",
+    "subtitle": "Skriv inn e-postadressen din for å logge inn eller opprette en Arcatext-konto, og løs deretter inn koden.",
+    "email": {
+      "label": "E-postadresse",
+      "placeholder": "deg@eksempel.com",
+      "hint": "Vi sender deg en 6-sifret kode. Du trenger ikke passord.",
+      "cta": "Fortsett"
+    },
+    "otp": {
+      "label": "Skriv inn den 6-sifrede koden",
+      "sentTo": "Vi har sendt en kode til {{email}}.",
+      "cta": "Bekreft",
+      "resend": "Send koden på nytt",
+      "resent": "Vi har sendt en ny kode.",
+      "changeEmail": "Bruk en annen e-postadresse"
+    },
+    "code": {
+      "label": "Kampanjekode",
+      "placeholder": "Skriv inn koden din",
+      "cta": "Løs inn"
+    },
+    "done": {
+      "title": "Koden din er aktiv.",
+      "tokens": "{{tokens}} tokens er lagt til på kontoen din.",
+      "expires": "Gyldig til og med {{date}}.",
+      "nextTitle": "Neste steg",
+      "nextBody": "Åpne Arcatext og logg inn med {{email}} — samme adresse som du brukte her. Tokenene dine er allerede der.",
+      "download": "Last ned Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Vi klarte ikke å sende koden din. Sjekk adressen og prøv igjen.",
+      "badOtp": "Koden stemmer ikke. Sjekk den og prøv igjen, eller be om en ny.",
+      "invalidCode": "Skriv inn en gyldig kode.",
+      "sessionExpired": "Økten din er utløpt. Logg inn igjen.",
+      "network": "Vi fikk ikke kontakt med serveren. Koden din er ikke brukt — prøv igjen.",
+      "notConfigured": "Innløsing er midlertidig utilgjengelig. Prøv igjen senere."
+    }
   }
 }

@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Política de Privacidade"
+  },
+  "redeem": {
+    "title": "Resgatar um código promocional",
+    "subtitle": "Introduza o seu email para iniciar sessão ou criar uma conta Arcatext e depois aplique o seu código.",
+    "email": {
+      "label": "Endereço de email",
+      "placeholder": "voce@exemplo.com",
+      "hint": "Enviaremos um código de 6 dígitos. Não precisa de palavra-passe.",
+      "cta": "Continuar"
+    },
+    "otp": {
+      "label": "Introduza o seu código de 6 dígitos",
+      "sentTo": "Enviámos um código para {{email}}.",
+      "cta": "Verificar",
+      "resend": "Reenviar código",
+      "resent": "Enviámos outro código.",
+      "changeEmail": "Usar outro email"
+    },
+    "code": {
+      "label": "Código promocional",
+      "placeholder": "Introduza o seu código",
+      "cta": "Resgatar"
+    },
+    "done": {
+      "title": "O seu código está ativo.",
+      "tokens": "{{tokens}} tokens adicionados à sua conta.",
+      "expires": "Válido até {{date}}.",
+      "nextTitle": "Passo seguinte",
+      "nextBody": "Abra o Arcatext e inicie sessão com {{email}}, o mesmo endereço que usou aqui. Os seus tokens já lá estarão.",
+      "download": "Transferir o Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Não foi possível enviar o seu código. Verifique o endereço e tente novamente.",
+      "badOtp": "Esse código não corresponde. Verifique-o e tente novamente, ou peça um novo.",
+      "invalidCode": "Introduza um código válido.",
+      "sessionExpired": "A sua sessão expirou. Inicie sessão novamente.",
+      "network": "Não foi possível contactar o servidor. O seu código não foi usado — tente novamente.",
+      "notConfigured": "O resgate está temporariamente indisponível. Tente novamente mais tarde."
+    }
   }
 }

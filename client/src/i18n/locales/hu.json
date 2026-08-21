@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Adatvédelmi irányelvek"
+  },
+  "redeem": {
+    "title": "Promóciós kód beváltása",
+    "subtitle": "Add meg az e-mail-címed a bejelentkezéshez vagy egy Arcatext-fiók létrehozásához, majd váltsd be a kódod.",
+    "email": {
+      "label": "E-mail-cím",
+      "placeholder": "te@pelda.com",
+      "hint": "Küldünk egy 6 jegyű kódot. Jelszó nem szükséges.",
+      "cta": "Tovább"
+    },
+    "otp": {
+      "label": "Add meg a 6 jegyű kódot",
+      "sentTo": "Kódot küldtünk a következő címre: {{email}}.",
+      "cta": "Ellenőrzés",
+      "resend": "Kód újraküldése",
+      "resent": "Új kódot küldtünk.",
+      "changeEmail": "Másik e-mail-cím használata"
+    },
+    "code": {
+      "label": "Promóciós kód",
+      "placeholder": "Add meg a kódod",
+      "cta": "Beváltás"
+    },
+    "done": {
+      "title": "A kódod aktív.",
+      "tokens": "{{tokens}} token került a fiókodba.",
+      "expires": "Érvényes eddig: {{date}}.",
+      "nextTitle": "Következő lépés",
+      "nextBody": "Nyisd meg az Arcatextet, és jelentkezz be a(z) {{email}} címmel — ugyanazzal, amit itt használtál. A tokenjeid már ott lesznek.",
+      "download": "Arcatext letöltése"
+    },
+    "errors": {
+      "sendFailed": "Nem sikerült elküldeni a kódot. Ellenőrizd a címet, és próbáld újra.",
+      "badOtp": "Ez a kód nem egyezik. Ellenőrizd, és próbáld újra, vagy kérj újat.",
+      "invalidCode": "Adj meg egy érvényes kódot.",
+      "sessionExpired": "A munkameneted lejárt. Jelentkezz be újra.",
+      "network": "Nem sikerült elérni a kiszolgálót. A kódod nem lett felhasználva — próbáld újra.",
+      "notConfigured": "A beváltás átmenetileg nem érhető el. Próbáld később."
+    }
   }
 }

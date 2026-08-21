@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Chính sách quyền riêng tư"
+  },
+  "redeem": {
+    "title": "Sử dụng mã khuyến mãi",
+    "subtitle": "Nhập email của bạn để đăng nhập hoặc tạo tài khoản Arcatext, sau đó áp dụng mã của bạn.",
+    "email": {
+      "label": "Địa chỉ email",
+      "placeholder": "ban@vidu.com",
+      "hint": "Chúng tôi sẽ gửi cho bạn mã gồm 6 chữ số. Không cần mật khẩu.",
+      "cta": "Tiếp tục"
+    },
+    "otp": {
+      "label": "Nhập mã 6 chữ số của bạn",
+      "sentTo": "Chúng tôi đã gửi mã tới {{email}}.",
+      "cta": "Xác minh",
+      "resend": "Gửi lại mã",
+      "resent": "Chúng tôi đã gửi mã mới.",
+      "changeEmail": "Dùng email khác"
+    },
+    "code": {
+      "label": "Mã khuyến mãi",
+      "placeholder": "Nhập mã của bạn",
+      "cta": "Sử dụng"
+    },
+    "done": {
+      "title": "Mã của bạn đã được kích hoạt.",
+      "tokens": "Đã thêm {{tokens}} token vào tài khoản của bạn.",
+      "expires": "Có hiệu lực đến {{date}}.",
+      "nextTitle": "Bước tiếp theo",
+      "nextBody": "Mở Arcatext và đăng nhập bằng {{email}} — chính địa chỉ bạn đã dùng ở đây. Token của bạn sẽ có sẵn ở đó.",
+      "download": "Tải Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Chúng tôi không gửi được mã của bạn. Hãy kiểm tra địa chỉ và thử lại.",
+      "badOtp": "Mã không khớp. Hãy kiểm tra và thử lại, hoặc yêu cầu mã mới.",
+      "invalidCode": "Vui lòng nhập mã hợp lệ.",
+      "sessionExpired": "Phiên của bạn đã hết hạn. Vui lòng đăng nhập lại.",
+      "network": "Không kết nối được với máy chủ. Mã của bạn chưa được sử dụng — vui lòng thử lại.",
+      "notConfigured": "Hiện chưa thể sử dụng mã. Vui lòng thử lại sau."
+    }
   }
 }

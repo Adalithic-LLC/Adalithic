@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Zásady ochrany osobních údajů"
+  },
+  "redeem": {
+    "title": "Uplatnit promo kód",
+    "subtitle": "Zadejte svůj e-mail, abyste se přihlásili nebo si vytvořili účet Arcatext, a poté uplatněte svůj kód.",
+    "email": {
+      "label": "E-mailová adresa",
+      "placeholder": "vy@priklad.com",
+      "hint": "Pošleme vám 6místný kód. Heslo není potřeba.",
+      "cta": "Pokračovat"
+    },
+    "otp": {
+      "label": "Zadejte svůj 6místný kód",
+      "sentTo": "Poslali jsme kód na {{email}}.",
+      "cta": "Ověřit",
+      "resend": "Poslat kód znovu",
+      "resent": "Poslali jsme nový kód.",
+      "changeEmail": "Použít jiný e-mail"
+    },
+    "code": {
+      "label": "Promo kód",
+      "placeholder": "Zadejte svůj kód",
+      "cta": "Uplatnit"
+    },
+    "done": {
+      "title": "Váš kód je aktivní.",
+      "tokens": "Na váš účet bylo přidáno {{tokens}} tokenů.",
+      "expires": "Platí do {{date}}.",
+      "nextTitle": "Další krok",
+      "nextBody": "Otevřete Arcatext a přihlaste se pomocí {{email}} — stejné adresy, kterou jste použili zde. Vaše tokeny tam už budou.",
+      "download": "Stáhnout Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Nepodařilo se odeslat váš kód. Zkontrolujte adresu a zkuste to znovu.",
+      "badOtp": "Tento kód nesouhlasí. Zkontrolujte jej a zkuste to znovu, nebo si vyžádejte nový.",
+      "invalidCode": "Zadejte platný kód.",
+      "sessionExpired": "Vaše relace vypršela. Přihlaste se znovu.",
+      "network": "Nepodařilo se spojit se serverem. Váš kód nebyl použit — zkuste to znovu.",
+      "notConfigured": "Uplatnění kódů je dočasně nedostupné. Zkuste to prosím později."
+    }
   }
 }

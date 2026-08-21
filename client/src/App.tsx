@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
+import Redeem from "@/pages/redeem";
 import NotFound from "@/pages/not-found";
 import { getLocaleFromPath, isPrefixLocale, isRtl } from "@/lib/locale";
 import { useSeo } from "@/lib/seo";
@@ -36,6 +37,13 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
+      {/* Arcatext promo redemption. Codes are handed out with the unprefixed
+          URL, but detect-locale rewrites an unprefixed path to the visitor's
+          browser locale on first visit — so /redeem becomes /es/redeem before
+          React mounts, and the prefixed route below is what actually renders
+          for most non-English visitors. The app never links here either way
+          (guideline 3.1.1(a) anti-steering). */}
+      <Route path="/redeem" component={Redeem} />
       {/* Prefixed locales: /es, /es/privacy, /fr/terms, ... An unknown prefix
           (e.g. /xx/privacy) falls through to NotFound. Order matters — the
           bare "/:lang" catch must come after the more specific routes. */}
@@ -44,6 +52,9 @@ function Router() {
       </Route>
       <Route path="/:lang/terms">
         {(params) => (isPrefixLocale(params.lang) ? <Terms /> : <NotFound />)}
+      </Route>
+      <Route path="/:lang/redeem">
+        {(params) => (isPrefixLocale(params.lang) ? <Redeem /> : <NotFound />)}
       </Route>
       <Route path="/:lang">
         {(params) => (isPrefixLocale(params.lang) ? <Home /> : <NotFound />)}

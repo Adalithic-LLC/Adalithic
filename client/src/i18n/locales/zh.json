@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "隐私政策"
+  },
+  "redeem": {
+    "title": "兑换促销码",
+    "subtitle": "输入你的电子邮件以登录或创建 Arcatext 账户，然后使用你的兑换码。",
+    "email": {
+      "label": "电子邮件地址",
+      "placeholder": "you@example.com",
+      "hint": "我们会向你发送一个 6 位数验证码。无需密码。",
+      "cta": "继续"
+    },
+    "otp": {
+      "label": "输入你的 6 位数验证码",
+      "sentTo": "我们已向 {{email}} 发送了验证码。",
+      "cta": "验证",
+      "resend": "重新发送验证码",
+      "resent": "我们已发送新的验证码。",
+      "changeEmail": "使用其他电子邮件"
+    },
+    "code": {
+      "label": "促销码",
+      "placeholder": "输入你的兑换码",
+      "cta": "兑换"
+    },
+    "done": {
+      "title": "你的兑换码已生效。",
+      "tokens": "已向你的账户添加 {{tokens}} 个代币。",
+      "expires": "有效期至 {{date}}。",
+      "nextTitle": "下一步",
+      "nextBody": "打开 Arcatext，并使用你在此处所用的同一地址 {{email}} 登录。你的代币已经在那里了。",
+      "download": "下载 Arcatext"
+    },
+    "errors": {
+      "sendFailed": "无法发送验证码。请检查地址后重试。",
+      "badOtp": "验证码不匹配。请检查后重试，或请求一个新的验证码。",
+      "invalidCode": "请输入有效的兑换码。",
+      "sessionExpired": "你的会话已过期。请重新登录。",
+      "network": "无法连接到服务器。你的兑换码尚未被使用，请重试。",
+      "notConfigured": "兑换服务暂时不可用。请稍后再试。"
+    }
   }
 }

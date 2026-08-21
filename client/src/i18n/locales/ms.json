@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Dasar Privasi"
+  },
+  "redeem": {
+    "title": "Tebus kod promosi",
+    "subtitle": "Masukkan e-mel anda untuk log masuk atau membuat akaun Arcatext, kemudian tebus kod anda.",
+    "email": {
+      "label": "Alamat e-mel",
+      "placeholder": "anda@contoh.com",
+      "hint": "Kami akan menghantar kod 6 digit. Kata laluan tidak diperlukan.",
+      "cta": "Teruskan"
+    },
+    "otp": {
+      "label": "Masukkan kod 6 digit anda",
+      "sentTo": "Kami telah menghantar kod ke {{email}}.",
+      "cta": "Sahkan",
+      "resend": "Hantar semula kod",
+      "resent": "Kami telah menghantar kod baharu.",
+      "changeEmail": "Guna e-mel lain"
+    },
+    "code": {
+      "label": "Kod promosi",
+      "placeholder": "Masukkan kod anda",
+      "cta": "Tebus"
+    },
+    "done": {
+      "title": "Kod anda telah aktif.",
+      "tokens": "{{tokens}} token telah ditambah ke akaun anda.",
+      "expires": "Sah sehingga {{date}}.",
+      "nextTitle": "Langkah seterusnya",
+      "nextBody": "Buka Arcatext dan log masuk dengan {{email}} — alamat yang sama yang anda gunakan di sini. Token anda sudah pun ada.",
+      "download": "Muat turun Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Kami tidak dapat menghantar kod anda. Semak alamat dan cuba lagi.",
+      "badOtp": "Kod itu tidak sepadan. Semak dan cuba lagi, atau minta kod baharu.",
+      "invalidCode": "Sila masukkan kod yang sah.",
+      "sessionExpired": "Sesi anda telah tamat. Sila log masuk semula.",
+      "network": "Kami tidak dapat menghubungi pelayan. Kod anda belum digunakan — sila cuba lagi.",
+      "notConfigured": "Penebusan tidak tersedia buat sementara waktu. Cuba lagi nanti."
+    }
   }
 }

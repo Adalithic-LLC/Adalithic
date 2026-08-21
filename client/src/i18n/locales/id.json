@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Kebijakan Privasi"
+  },
+  "redeem": {
+    "title": "Tukarkan kode promo",
+    "subtitle": "Masukkan email Anda untuk masuk atau membuat akun Arcatext, lalu gunakan kode Anda.",
+    "email": {
+      "label": "Alamat email",
+      "placeholder": "anda@contoh.com",
+      "hint": "Kami akan mengirimkan kode 6 digit. Tidak perlu kata sandi.",
+      "cta": "Lanjutkan"
+    },
+    "otp": {
+      "label": "Masukkan kode 6 digit Anda",
+      "sentTo": "Kami telah mengirim kode ke {{email}}.",
+      "cta": "Verifikasi",
+      "resend": "Kirim ulang kode",
+      "resent": "Kami telah mengirim kode baru.",
+      "changeEmail": "Gunakan email lain"
+    },
+    "code": {
+      "label": "Kode promo",
+      "placeholder": "Masukkan kode Anda",
+      "cta": "Tukarkan"
+    },
+    "done": {
+      "title": "Kode Anda aktif.",
+      "tokens": "{{tokens}} token telah ditambahkan ke akun Anda.",
+      "expires": "Berlaku hingga {{date}}.",
+      "nextTitle": "Langkah berikutnya",
+      "nextBody": "Buka Arcatext dan masuk dengan {{email}} — alamat yang sama dengan yang Anda gunakan di sini. Token Anda sudah ada di sana.",
+      "download": "Unduh Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Kami tidak dapat mengirim kode Anda. Periksa alamatnya dan coba lagi.",
+      "badOtp": "Kode tidak cocok. Periksa dan coba lagi, atau minta kode baru.",
+      "invalidCode": "Masukkan kode yang valid.",
+      "sessionExpired": "Sesi Anda telah berakhir. Silakan masuk lagi.",
+      "network": "Kami tidak dapat menghubungi server. Kode Anda belum digunakan — silakan coba lagi.",
+      "notConfigured": "Penukaran sementara tidak tersedia. Coba lagi nanti."
+    }
   }
 }

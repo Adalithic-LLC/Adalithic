@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Gizlilik Politikası"
+  },
+  "redeem": {
+    "title": "Promosyon kodu kullan",
+    "subtitle": "Giriş yapmak veya Arcatext hesabı oluşturmak için e-posta adresinizi girin, ardından kodunuzu kullanın.",
+    "email": {
+      "label": "E-posta adresi",
+      "placeholder": "siz@ornek.com",
+      "hint": "Size 6 haneli bir kod göndereceğiz. Parola gerekmez.",
+      "cta": "Devam"
+    },
+    "otp": {
+      "label": "6 haneli kodunuzu girin",
+      "sentTo": "{{email}} adresine bir kod gönderdik.",
+      "cta": "Doğrula",
+      "resend": "Kodu tekrar gönder",
+      "resent": "Yeni bir kod gönderdik.",
+      "changeEmail": "Farklı bir e-posta kullan"
+    },
+    "code": {
+      "label": "Promosyon kodu",
+      "placeholder": "Kodunuzu girin",
+      "cta": "Kullan"
+    },
+    "done": {
+      "title": "Kodunuz etkin.",
+      "tokens": "Hesabınıza {{tokens}} token eklendi.",
+      "expires": "{{date}} tarihine kadar geçerli.",
+      "nextTitle": "Sonraki adım",
+      "nextBody": "Arcatext'i açın ve burada kullandığınız adresle, {{email}} ile giriş yapın. Tokenleriniz zaten orada olacak.",
+      "download": "Arcatext'i indir"
+    },
+    "errors": {
+      "sendFailed": "Kodunuzu gönderemedik. Adresi kontrol edip tekrar deneyin.",
+      "badOtp": "Bu kod eşleşmiyor. Kontrol edip tekrar deneyin veya yeni bir kod isteyin.",
+      "invalidCode": "Lütfen geçerli bir kod girin.",
+      "sessionExpired": "Oturumunuzun süresi doldu. Lütfen tekrar giriş yapın.",
+      "network": "Sunucuya ulaşamadık. Kodunuz kullanılmadı — lütfen tekrar deneyin.",
+      "notConfigured": "Kod kullanımı geçici olarak kullanılamıyor. Daha sonra tekrar deneyin."
+    }
   }
 }

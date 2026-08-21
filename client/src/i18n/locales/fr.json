@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Politique de confidentialité"
+  },
+  "redeem": {
+    "title": "Utiliser un code promo",
+    "subtitle": "Saisissez votre adresse e-mail pour vous connecter ou créer un compte Arcatext, puis appliquez votre code.",
+    "email": {
+      "label": "Adresse e-mail",
+      "placeholder": "vous@exemple.com",
+      "hint": "Nous vous enverrons un code à 6 chiffres. Aucun mot de passe requis.",
+      "cta": "Continuer"
+    },
+    "otp": {
+      "label": "Saisissez votre code à 6 chiffres",
+      "sentTo": "Nous avons envoyé un code à {{email}}.",
+      "cta": "Vérifier",
+      "resend": "Renvoyer le code",
+      "resent": "Nous avons envoyé un nouveau code.",
+      "changeEmail": "Utiliser une autre adresse"
+    },
+    "code": {
+      "label": "Code promo",
+      "placeholder": "Saisissez votre code",
+      "cta": "Utiliser"
+    },
+    "done": {
+      "title": "Votre code est actif.",
+      "tokens": "{{tokens}} jetons ajoutés à votre compte.",
+      "expires": "Valable jusqu'au {{date}}.",
+      "nextTitle": "Étape suivante",
+      "nextBody": "Ouvrez Arcatext et connectez-vous avec {{email}}, la même adresse que celle utilisée ici. Vos jetons y seront déjà.",
+      "download": "Télécharger Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Impossible d'envoyer votre code. Vérifiez l'adresse et réessayez.",
+      "badOtp": "Ce code ne correspond pas. Vérifiez-le et réessayez, ou demandez-en un nouveau.",
+      "invalidCode": "Veuillez saisir un code valide.",
+      "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter.",
+      "network": "Impossible de joindre le serveur. Votre code n'a pas été utilisé, veuillez réessayer.",
+      "notConfigured": "L'utilisation des codes est momentanément indisponible. Réessayez plus tard."
+    }
   }
 }

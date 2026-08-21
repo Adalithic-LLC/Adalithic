@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Privacy policy"
+  },
+  "redeem": {
+    "title": "Redeem a promo code",
+    "subtitle": "Enter your email to sign in or create an Arcatext account, then apply your code.",
+    "email": {
+      "label": "Email address",
+      "placeholder": "you@example.com",
+      "hint": "We'll send you a 6-digit code. No password needed.",
+      "cta": "Continue"
+    },
+    "otp": {
+      "label": "Enter your 6-digit code",
+      "sentTo": "We sent a code to {{email}}.",
+      "cta": "Verify",
+      "resend": "Resend code",
+      "resent": "We sent another code.",
+      "changeEmail": "Use a different email"
+    },
+    "code": {
+      "label": "Promo code",
+      "placeholder": "Enter your code",
+      "cta": "Redeem"
+    },
+    "done": {
+      "title": "Your code is active.",
+      "tokens": "{{tokens}} tokens added to your account.",
+      "expires": "Valid through {{date}}.",
+      "nextTitle": "Next step",
+      "nextBody": "Open Arcatext and sign in with {{email}} — the same address you used here. Your tokens will already be there.",
+      "download": "Download Arcatext"
+    },
+    "errors": {
+      "sendFailed": "We couldn't send your code. Check the address and try again.",
+      "badOtp": "That code didn't match. Check it and try again, or request a new one.",
+      "invalidCode": "Please enter a valid code.",
+      "sessionExpired": "Your session expired. Please sign in again.",
+      "network": "We couldn't reach the server. Your code has not been used — please try again.",
+      "notConfigured": "Redemption is temporarily unavailable. Please try again later."
+    }
   }
 }

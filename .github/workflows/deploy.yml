@@ -34,7 +34,16 @@ jobs:
           node-version: "20"
           cache: npm
       - run: npm ci
+      # /redeem talks to Supabase from the browser. Both values are PUBLIC (the
+      # anon key is a publishable key constrained by RLS, and the same pair
+      # ships inside the Arcatext iOS binary) but they are injected here rather
+      # than committed, because this repo is public and a key in git history is
+      # painful to rotate. Set them as either repository secrets or repository
+      # variables — the fallback below accepts whichever exists.
       - run: npx vite build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || vars.VITE_SUPABASE_ANON_KEY }}
       # Preserve the custom domain, disable Jekyll processing, and add SPA
       # fallbacks. GitHub Pages has no server-side routing, so a direct hit on a
       # client-only route (e.g. /terms, /privacy — the URLs the Arcatext app and
@@ -57,11 +66,17 @@ jobs:
           cp dist/public/index.html dist/public/404.html
           cp dist/public/index.html dist/public/terms.html
           cp dist/public/index.html dist/public/privacy.html
+          # Promo redemption. Needs the per-locale copies below as well as this
+          # one: detect-locale rewrites an unprefixed path to the visitor's
+          # browser locale, so a Spanish visitor handed /redeem lands on
+          # /es/redeem and would 404 without a real file there.
+          cp dist/public/index.html dist/public/redeem.html
           for L in es fr de ja it pl nl pt zh ko tr el ar he sv cs ro hu da fi no bg vi th id hi ru uk zh-Hant bn ta te mr ur fa ms fil sw pa; do
             mkdir -p "dist/public/$L"
             cp dist/public/index.html "dist/public/$L/index.html"
             cp dist/public/index.html "dist/public/$L/privacy.html"
             cp dist/public/index.html "dist/public/$L/terms.html"
+            cp dist/public/index.html "dist/public/$L/redeem.html"
           done
       - uses: actions/upload-pages-artifact@v3
         with:
