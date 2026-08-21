@@ -66,15 +66,17 @@ jobs:
           cp dist/public/index.html dist/public/404.html
           cp dist/public/index.html dist/public/terms.html
           cp dist/public/index.html dist/public/privacy.html
-          # Promo redemption. English-only and not locale-prefixed on purpose:
-          # codes are handed out with this exact URL, and the app never links
-          # here (guideline 3.1.1(a) anti-steering — see client/src/pages/redeem.tsx).
+          # Promo redemption. Needs the per-locale copies below as well as this
+          # one: detect-locale rewrites an unprefixed path to the visitor's
+          # browser locale, so a Spanish visitor handed /redeem lands on
+          # /es/redeem and would 404 without a real file there.
           cp dist/public/index.html dist/public/redeem.html
           for L in es fr de ja it pl nl pt zh ko tr el ar he sv cs ro hu da fi no bg vi th id hi ru uk zh-Hant bn ta te mr ur fa ms fil sw pa; do
             mkdir -p "dist/public/$L"
             cp dist/public/index.html "dist/public/$L/index.html"
             cp dist/public/index.html "dist/public/$L/privacy.html"
             cp dist/public/index.html "dist/public/$L/terms.html"
+            cp dist/public/index.html "dist/public/$L/redeem.html"
           done
       - uses: actions/upload-pages-artifact@v3
         with:

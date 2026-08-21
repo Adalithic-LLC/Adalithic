@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Tietosuojakäytäntö"
+  },
+  "redeem": {
+    "title": "Lunasta tarjouskoodi",
+    "subtitle": "Kirjoita sähköpostiosoitteesi kirjautuaksesi sisään tai luodaksesi Arcatext-tilin ja lunasta sitten koodisi.",
+    "email": {
+      "label": "Sähköpostiosoite",
+      "placeholder": "sina@esimerkki.com",
+      "hint": "Lähetämme sinulle 6-numeroisen koodin. Salasanaa ei tarvita.",
+      "cta": "Jatka"
+    },
+    "otp": {
+      "label": "Anna 6-numeroinen koodisi",
+      "sentTo": "Lähetimme koodin osoitteeseen {{email}}.",
+      "cta": "Vahvista",
+      "resend": "Lähetä koodi uudelleen",
+      "resent": "Lähetimme uuden koodin.",
+      "changeEmail": "Käytä toista sähköpostiosoitetta"
+    },
+    "code": {
+      "label": "Tarjouskoodi",
+      "placeholder": "Anna koodisi",
+      "cta": "Lunasta"
+    },
+    "done": {
+      "title": "Koodisi on aktiivinen.",
+      "tokens": "Tilillesi lisättiin {{tokens}} tokenia.",
+      "expires": "Voimassa {{date}} asti.",
+      "nextTitle": "Seuraava vaihe",
+      "nextBody": "Avaa Arcatext ja kirjaudu sisään osoitteella {{email}} — samalla osoitteella, jota käytit täällä. Tokenisi ovat jo siellä.",
+      "download": "Lataa Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Koodin lähettäminen ei onnistunut. Tarkista osoite ja yritä uudelleen.",
+      "badOtp": "Koodi ei täsmää. Tarkista se ja yritä uudelleen tai pyydä uusi.",
+      "invalidCode": "Anna kelvollinen koodi.",
+      "sessionExpired": "Istuntosi vanheni. Kirjaudu sisään uudelleen.",
+      "network": "Palvelimeen ei saatu yhteyttä. Koodiasi ei ole käytetty — yritä uudelleen.",
+      "notConfigured": "Lunastus ei ole juuri nyt käytettävissä. Yritä myöhemmin uudelleen."
+    }
   }
 }

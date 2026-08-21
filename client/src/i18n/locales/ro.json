@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Politica de confidențialitate"
+  },
+  "redeem": {
+    "title": "Revendică un cod promo",
+    "subtitle": "Introdu adresa de e-mail pentru a te conecta sau a crea un cont Arcatext, apoi aplică-ți codul.",
+    "email": {
+      "label": "Adresă de e-mail",
+      "placeholder": "tu@exemplu.com",
+      "hint": "Îți vom trimite un cod din 6 cifre. Nu ai nevoie de parolă.",
+      "cta": "Continuă"
+    },
+    "otp": {
+      "label": "Introdu codul din 6 cifre",
+      "sentTo": "Am trimis un cod la {{email}}.",
+      "cta": "Verifică",
+      "resend": "Retrimite codul",
+      "resent": "Am trimis un cod nou.",
+      "changeEmail": "Folosește altă adresă de e-mail"
+    },
+    "code": {
+      "label": "Cod promo",
+      "placeholder": "Introdu codul tău",
+      "cta": "Revendică"
+    },
+    "done": {
+      "title": "Codul tău este activ.",
+      "tokens": "{{tokens}} tokenuri au fost adăugate în contul tău.",
+      "expires": "Valabil până la {{date}}.",
+      "nextTitle": "Pasul următor",
+      "nextBody": "Deschide Arcatext și conectează-te cu {{email}} — aceeași adresă folosită aici. Tokenurile tale vor fi deja acolo.",
+      "download": "Descarcă Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Nu am putut trimite codul. Verifică adresa și încearcă din nou.",
+      "badOtp": "Codul nu se potrivește. Verifică-l și încearcă din nou sau cere unul nou.",
+      "invalidCode": "Introdu un cod valid.",
+      "sessionExpired": "Sesiunea ta a expirat. Conectează-te din nou.",
+      "network": "Nu am putut contacta serverul. Codul tău nu a fost folosit — încearcă din nou.",
+      "notConfigured": "Revendicarea este temporar indisponibilă. Încearcă mai târziu."
+    }
   }
 }

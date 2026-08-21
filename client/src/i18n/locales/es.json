@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Política de privacidad"
+  },
+  "redeem": {
+    "title": "Canjear un código promocional",
+    "subtitle": "Introduce tu correo electrónico para iniciar sesión o crear una cuenta de Arcatext y luego aplica tu código.",
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "tu@ejemplo.com",
+      "hint": "Te enviaremos un código de 6 dígitos. No necesitas contraseña.",
+      "cta": "Continuar"
+    },
+    "otp": {
+      "label": "Introduce tu código de 6 dígitos",
+      "sentTo": "Hemos enviado un código a {{email}}.",
+      "cta": "Verificar",
+      "resend": "Reenviar código",
+      "resent": "Hemos enviado otro código.",
+      "changeEmail": "Usar otro correo electrónico"
+    },
+    "code": {
+      "label": "Código promocional",
+      "placeholder": "Introduce tu código",
+      "cta": "Canjear"
+    },
+    "done": {
+      "title": "Tu código está activo.",
+      "tokens": "Se han añadido {{tokens}} tokens a tu cuenta.",
+      "expires": "Válido hasta el {{date}}.",
+      "nextTitle": "Siguiente paso",
+      "nextBody": "Abre Arcatext e inicia sesión con {{email}}, la misma dirección que has usado aquí. Tus tokens ya estarán ahí.",
+      "download": "Descargar Arcatext"
+    },
+    "errors": {
+      "sendFailed": "No hemos podido enviar tu código. Comprueba la dirección e inténtalo de nuevo.",
+      "badOtp": "Ese código no coincide. Compruébalo e inténtalo de nuevo, o solicita uno nuevo.",
+      "invalidCode": "Introduce un código válido.",
+      "sessionExpired": "Tu sesión ha caducado. Vuelve a iniciar sesión.",
+      "network": "No hemos podido conectar con el servidor. Tu código no se ha usado; inténtalo de nuevo.",
+      "notConfigured": "El canje no está disponible temporalmente. Inténtalo de nuevo más tarde."
+    }
   }
 }

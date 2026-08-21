@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Privacybeleid"
+  },
+  "redeem": {
+    "title": "Een promocode gebruiken",
+    "subtitle": "Voer je e-mailadres in om in te loggen of een Arcatext-account aan te maken en gebruik daarna je code.",
+    "email": {
+      "label": "E-mailadres",
+      "placeholder": "jij@voorbeeld.com",
+      "hint": "We sturen je een code van 6 cijfers. Geen wachtwoord nodig.",
+      "cta": "Doorgaan"
+    },
+    "otp": {
+      "label": "Voer je code van 6 cijfers in",
+      "sentTo": "We hebben een code naar {{email}} gestuurd.",
+      "cta": "Verifiëren",
+      "resend": "Code opnieuw versturen",
+      "resent": "We hebben nog een code gestuurd.",
+      "changeEmail": "Ander e-mailadres gebruiken"
+    },
+    "code": {
+      "label": "Promocode",
+      "placeholder": "Voer je code in",
+      "cta": "Inwisselen"
+    },
+    "done": {
+      "title": "Je code is actief.",
+      "tokens": "{{tokens}} tokens toegevoegd aan je account.",
+      "expires": "Geldig tot en met {{date}}.",
+      "nextTitle": "Volgende stap",
+      "nextBody": "Open Arcatext en log in met {{email}} — hetzelfde adres dat je hier hebt gebruikt. Je tokens staan er al.",
+      "download": "Arcatext downloaden"
+    },
+    "errors": {
+      "sendFailed": "We konden je code niet versturen. Controleer het adres en probeer het opnieuw.",
+      "badOtp": "Die code klopt niet. Controleer hem en probeer het opnieuw, of vraag een nieuwe aan.",
+      "invalidCode": "Voer een geldige code in.",
+      "sessionExpired": "Je sessie is verlopen. Log opnieuw in.",
+      "network": "We konden de server niet bereiken. Je code is niet gebruikt — probeer het opnieuw.",
+      "notConfigured": "Inwisselen is tijdelijk niet beschikbaar. Probeer het later opnieuw."
+    }
   }
 }

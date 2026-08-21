@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Datenschutzrichtlinie"
+  },
+  "redeem": {
+    "title": "Promo-Code einlösen",
+    "subtitle": "Gib deine E-Mail-Adresse ein, um dich anzumelden oder ein Arcatext-Konto zu erstellen, und löse dann deinen Code ein.",
+    "email": {
+      "label": "E-Mail-Adresse",
+      "placeholder": "du@beispiel.com",
+      "hint": "Wir senden dir einen 6-stelligen Code. Kein Passwort nötig.",
+      "cta": "Weiter"
+    },
+    "otp": {
+      "label": "Gib deinen 6-stelligen Code ein",
+      "sentTo": "Wir haben einen Code an {{email}} gesendet.",
+      "cta": "Bestätigen",
+      "resend": "Code erneut senden",
+      "resent": "Wir haben einen neuen Code gesendet.",
+      "changeEmail": "Andere E-Mail-Adresse verwenden"
+    },
+    "code": {
+      "label": "Promo-Code",
+      "placeholder": "Code eingeben",
+      "cta": "Einlösen"
+    },
+    "done": {
+      "title": "Dein Code ist aktiv.",
+      "tokens": "{{tokens}} Tokens wurden deinem Konto gutgeschrieben.",
+      "expires": "Gültig bis {{date}}.",
+      "nextTitle": "Nächster Schritt",
+      "nextBody": "Öffne Arcatext und melde dich mit {{email}} an – derselben Adresse, die du hier verwendet hast. Deine Tokens sind bereits da.",
+      "download": "Arcatext herunterladen"
+    },
+    "errors": {
+      "sendFailed": "Wir konnten deinen Code nicht senden. Prüfe die Adresse und versuche es erneut.",
+      "badOtp": "Dieser Code stimmt nicht. Prüfe ihn und versuche es erneut oder fordere einen neuen an.",
+      "invalidCode": "Bitte gib einen gültigen Code ein.",
+      "sessionExpired": "Deine Sitzung ist abgelaufen. Bitte melde dich erneut an.",
+      "network": "Wir konnten den Server nicht erreichen. Dein Code wurde nicht verwendet – bitte versuche es erneut.",
+      "notConfigured": "Das Einlösen ist vorübergehend nicht verfügbar. Bitte versuche es später erneut."
+    }
   }
 }

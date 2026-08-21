@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Polityka prywatności"
+  },
+  "redeem": {
+    "title": "Zrealizuj kod promocyjny",
+    "subtitle": "Podaj swój adres e-mail, aby się zalogować lub utworzyć konto Arcatext, a następnie zrealizuj kod.",
+    "email": {
+      "label": "Adres e-mail",
+      "placeholder": "ty@przyklad.com",
+      "hint": "Wyślemy Ci 6-cyfrowy kod. Hasło nie jest potrzebne.",
+      "cta": "Dalej"
+    },
+    "otp": {
+      "label": "Wpisz 6-cyfrowy kod",
+      "sentTo": "Wysłaliśmy kod na adres {{email}}.",
+      "cta": "Zweryfikuj",
+      "resend": "Wyślij kod ponownie",
+      "resent": "Wysłaliśmy nowy kod.",
+      "changeEmail": "Użyj innego adresu e-mail"
+    },
+    "code": {
+      "label": "Kod promocyjny",
+      "placeholder": "Wpisz swój kod",
+      "cta": "Zrealizuj"
+    },
+    "done": {
+      "title": "Twój kod jest aktywny.",
+      "tokens": "Do Twojego konta dodano {{tokens}} tokenów.",
+      "expires": "Ważny do {{date}}.",
+      "nextTitle": "Następny krok",
+      "nextBody": "Otwórz Arcatext i zaloguj się przy użyciu {{email}} — tego samego adresu, którego użyłeś tutaj. Twoje tokeny już tam będą.",
+      "download": "Pobierz Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Nie udało się wysłać kodu. Sprawdź adres i spróbuj ponownie.",
+      "badOtp": "Ten kod się nie zgadza. Sprawdź go i spróbuj ponownie lub poproś o nowy.",
+      "invalidCode": "Wpisz prawidłowy kod.",
+      "sessionExpired": "Twoja sesja wygasła. Zaloguj się ponownie.",
+      "network": "Nie udało się połączyć z serwerem. Twój kod nie został użyty — spróbuj ponownie.",
+      "notConfigured": "Realizacja kodów jest chwilowo niedostępna. Spróbuj później."
+    }
   }
 }

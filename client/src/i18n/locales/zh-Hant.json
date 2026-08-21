@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "隱私權政策"
+  },
+  "redeem": {
+    "title": "兌換促銷碼",
+    "subtitle": "輸入你的電子郵件以登入或建立 Arcatext 帳戶，然後使用你的兌換碼。",
+    "email": {
+      "label": "電子郵件地址",
+      "placeholder": "you@example.com",
+      "hint": "我們會傳送一組 6 位數驗證碼給你。不需要密碼。",
+      "cta": "繼續"
+    },
+    "otp": {
+      "label": "輸入你的 6 位數驗證碼",
+      "sentTo": "我們已將驗證碼傳送至 {{email}}。",
+      "cta": "驗證",
+      "resend": "重新傳送驗證碼",
+      "resent": "我們已傳送新的驗證碼。",
+      "changeEmail": "使用其他電子郵件"
+    },
+    "code": {
+      "label": "促銷碼",
+      "placeholder": "輸入你的兌換碼",
+      "cta": "兌換"
+    },
+    "done": {
+      "title": "你的兌換碼已生效。",
+      "tokens": "已將 {{tokens}} 個代幣加入你的帳戶。",
+      "expires": "有效期至 {{date}}。",
+      "nextTitle": "下一步",
+      "nextBody": "開啟 Arcatext，並使用你在此處所用的同一組地址 {{email}} 登入。你的代幣已經在那裡了。",
+      "download": "下載 Arcatext"
+    },
+    "errors": {
+      "sendFailed": "無法傳送驗證碼。請檢查地址後再試一次。",
+      "badOtp": "驗證碼不符。請檢查後再試一次，或要求新的驗證碼。",
+      "invalidCode": "請輸入有效的兌換碼。",
+      "sessionExpired": "你的工作階段已過期。請重新登入。",
+      "network": "無法連線到伺服器。你的兌換碼尚未被使用，請再試一次。",
+      "notConfigured": "兌換服務暫時無法使用。請稍後再試。"
+    }
   }
 }

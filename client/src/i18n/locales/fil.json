@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Patakaran sa Privacy"
+  },
+  "redeem": {
+    "title": "I-redeem ang promo code",
+    "subtitle": "Ilagay ang iyong email para mag-sign in o gumawa ng Arcatext account, pagkatapos ay i-apply ang iyong code.",
+    "email": {
+      "label": "Email address",
+      "placeholder": "ikaw@halimbawa.com",
+      "hint": "Magpapadala kami ng 6-digit na code. Hindi kailangan ng password.",
+      "cta": "Magpatuloy"
+    },
+    "otp": {
+      "label": "Ilagay ang iyong 6-digit na code",
+      "sentTo": "Nagpadala kami ng code sa {{email}}.",
+      "cta": "I-verify",
+      "resend": "Ipadala muli ang code",
+      "resent": "Nagpadala kami ng bagong code.",
+      "changeEmail": "Gumamit ng ibang email"
+    },
+    "code": {
+      "label": "Promo code",
+      "placeholder": "Ilagay ang iyong code",
+      "cta": "I-redeem"
+    },
+    "done": {
+      "title": "Aktibo na ang iyong code.",
+      "tokens": "{{tokens}} token ang naidagdag sa iyong account.",
+      "expires": "Balido hanggang {{date}}.",
+      "nextTitle": "Susunod na hakbang",
+      "nextBody": "Buksan ang Arcatext at mag-sign in gamit ang {{email}} — ang parehong address na ginamit mo rito. Nandoon na ang iyong mga token.",
+      "download": "I-download ang Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Hindi namin naipadala ang iyong code. Suriin ang address at subukan muli.",
+      "badOtp": "Hindi tugma ang code na iyon. Suriin ito at subukan muli, o humiling ng bago.",
+      "invalidCode": "Maglagay ng balidong code.",
+      "sessionExpired": "Nag-expire na ang iyong session. Mag-sign in muli.",
+      "network": "Hindi namin maabot ang server. Hindi pa nagagamit ang iyong code — subukan muli.",
+      "notConfigured": "Pansamantalang hindi available ang pag-redeem. Subukan muli mamaya."
+    }
   }
 }

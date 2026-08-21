@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Sera ya Faragha"
+  },
+  "redeem": {
+    "title": "Tumia msimbo wa ofa",
+    "subtitle": "Weka barua pepe yako ili kuingia au kufungua akaunti ya Arcatext, kisha utumie msimbo wako.",
+    "email": {
+      "label": "Anwani ya barua pepe",
+      "placeholder": "wewe@mfano.com",
+      "hint": "Tutakutumia msimbo wa tarakimu 6. Hakuna nenosiri linalohitajika.",
+      "cta": "Endelea"
+    },
+    "otp": {
+      "label": "Weka msimbo wako wa tarakimu 6",
+      "sentTo": "Tumetuma msimbo kwa {{email}}.",
+      "cta": "Thibitisha",
+      "resend": "Tuma msimbo tena",
+      "resent": "Tumetuma msimbo mpya.",
+      "changeEmail": "Tumia barua pepe nyingine"
+    },
+    "code": {
+      "label": "Msimbo wa ofa",
+      "placeholder": "Weka msimbo wako",
+      "cta": "Tumia"
+    },
+    "done": {
+      "title": "Msimbo wako umeanza kutumika.",
+      "tokens": "Tokeni {{tokens}} zimeongezwa kwenye akaunti yako.",
+      "expires": "Unatumika hadi {{date}}.",
+      "nextTitle": "Hatua inayofuata",
+      "nextBody": "Fungua Arcatext na uingie kwa {{email}} — anwani ile ile uliyotumia hapa. Tokeni zako tayari zitakuwepo.",
+      "download": "Pakua Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Hatukuweza kutuma msimbo wako. Angalia anwani kisha ujaribu tena.",
+      "badOtp": "Msimbo huo haulingani. Uangalie kisha ujaribu tena, au uombe mpya.",
+      "invalidCode": "Tafadhali weka msimbo halali.",
+      "sessionExpired": "Kipindi chako kimeisha. Tafadhali ingia tena.",
+      "network": "Hatukuweza kufikia seva. Msimbo wako haujatumika — tafadhali jaribu tena.",
+      "notConfigured": "Kutumia msimbo hakupatikani kwa sasa. Jaribu baadaye."
+    }
   }
 }

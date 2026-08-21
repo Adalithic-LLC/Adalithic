@@ -145,5 +145,44 @@
   },
   "portfolio": {
     "privacyLink": "Privatlivspolitik"
+  },
+  "redeem": {
+    "title": "Indløs en kampagnekode",
+    "subtitle": "Indtast din e-mailadresse for at logge ind eller oprette en Arcatext-konto, og indløs derefter din kode.",
+    "email": {
+      "label": "E-mailadresse",
+      "placeholder": "dig@eksempel.com",
+      "hint": "Vi sender dig en 6-cifret kode. Ingen adgangskode nødvendig.",
+      "cta": "Fortsæt"
+    },
+    "otp": {
+      "label": "Indtast din 6-cifrede kode",
+      "sentTo": "Vi har sendt en kode til {{email}}.",
+      "cta": "Bekræft",
+      "resend": "Send koden igen",
+      "resent": "Vi har sendt en ny kode.",
+      "changeEmail": "Brug en anden e-mailadresse"
+    },
+    "code": {
+      "label": "Kampagnekode",
+      "placeholder": "Indtast din kode",
+      "cta": "Indløs"
+    },
+    "done": {
+      "title": "Din kode er aktiv.",
+      "tokens": "{{tokens}} tokens er føjet til din konto.",
+      "expires": "Gyldig til og med {{date}}.",
+      "nextTitle": "Næste trin",
+      "nextBody": "Åbn Arcatext og log ind med {{email}} — den samme adresse, du brugte her. Dine tokens er der allerede.",
+      "download": "Download Arcatext"
+    },
+    "errors": {
+      "sendFailed": "Vi kunne ikke sende din kode. Tjek adressen, og prøv igen.",
+      "badOtp": "Koden passer ikke. Tjek den, og prøv igen, eller bed om en ny.",
+      "invalidCode": "Indtast en gyldig kode.",
+      "sessionExpired": "Din session er udløbet. Log ind igen.",
+      "network": "Vi kunne ikke nå serveren. Din kode er ikke brugt — prøv igen.",
+      "notConfigured": "Indløsning er midlertidigt utilgængelig. Prøv igen senere."
+    }
   }
 }

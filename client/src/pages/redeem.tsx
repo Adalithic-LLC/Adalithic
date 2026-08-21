@@ -329,8 +329,11 @@ export default function Redeem() {
 
                   {result?.monthlyTokens != null && (
                     <p className="text-secondary">
+                      {/* No `count` here on purpose: passing it makes i18next
+                          look for plural variants (tokens_one / tokens_other)
+                          in all 40 locales, which none of them define. The
+                          number is already formatted for the locale. */}
                       {t("redeem.done.tokens", {
-                        count: result.monthlyTokens,
                         tokens: result.monthlyTokens.toLocaleString(i18n.language),
                       })}
                     </p>
