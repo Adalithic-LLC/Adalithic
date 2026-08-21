@@ -173,7 +173,7 @@
       "tokens": "{{tokens}} トークンがアカウントに追加されました。",
       "expires": "{{date}} まで有効です。",
       "nextTitle": "次のステップ",
-      "nextBody": "Arcatext を開き、ここで使用したものと同じ {{email}} でログインしてください。トークンはすでに反映されています。",
+      "nextBody": "Arcatext を開き、\"{{email}}\" でログインして、そのままお使いください。まだ登録は不要です！",
       "download": "Arcatext をダウンロード"
     },
     "errors": {

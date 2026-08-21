@@ -173,7 +173,7 @@
       "tokens": "Tilillesi lisättiin {{tokens}} tokenia.",
       "expires": "Voimassa {{date}} asti.",
       "nextTitle": "Seuraava vaihe",
-      "nextBody": "Avaa Arcatext ja kirjaudu sisään osoitteella {{email}} — samalla osoitteella, jota käytit täällä. Tokenisi ovat jo siellä.",
+      "nextBody": "Avaa Arcatext, kirjaudu sisään osoitteella \"{{email}}\" ja aloita käyttö. Tilausta ei tarvita vielä!",
       "download": "Lataa Arcatext"
     },
     "errors": {

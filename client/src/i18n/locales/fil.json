@@ -173,7 +173,7 @@
       "tokens": "{{tokens}} token ang naidagdag sa iyong account.",
       "expires": "Balido hanggang {{date}}.",
       "nextTitle": "Susunod na hakbang",
-      "nextBody": "Buksan ang Arcatext at mag-sign in gamit ang {{email}} — ang parehong address na ginamit mo rito. Nandoon na ang iyong mga token.",
+      "nextBody": "Buksan ang Arcatext, mag-sign in gamit ang \"{{email}}\", at simulan nang gamitin ang app. Hindi mo pa kailangang mag-subscribe!",
       "download": "I-download ang Arcatext"
     },
     "errors": {

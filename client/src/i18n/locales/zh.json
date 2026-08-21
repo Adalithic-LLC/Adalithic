@@ -173,7 +173,7 @@
       "tokens": "已向你的账户添加 {{tokens}} 个代币。",
       "expires": "有效期至 {{date}}。",
       "nextTitle": "下一步",
-      "nextBody": "打开 Arcatext，并使用你在此处所用的同一地址 {{email}} 登录。你的代币已经在那里了。",
+      "nextBody": "打开 Arcatext，使用 \"{{email}}\" 登录，即可开始使用。暂时无需订阅！",
       "download": "下载 Arcatext"
     },
     "errors": {

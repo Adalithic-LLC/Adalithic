@@ -173,7 +173,7 @@
       "tokens": "{{tokens}} tokens toegevoegd aan je account.",
       "expires": "Geldig tot en met {{date}}.",
       "nextTitle": "Volgende stap",
-      "nextBody": "Open Arcatext en log in met {{email}} — hetzelfde adres dat je hier hebt gebruikt. Je tokens staan er al.",
+      "nextBody": "Open Arcatext, log in met \"{{email}}\" en ga aan de slag. Je hoeft nog geen abonnement te nemen!",
       "download": "Arcatext downloaden"
     },
     "errors": {

@@ -173,7 +173,7 @@
       "tokens": "Na váš účet bylo přidáno {{tokens}} tokenů.",
       "expires": "Platí do {{date}}.",
       "nextTitle": "Další krok",
-      "nextBody": "Otevřete Arcatext a přihlaste se pomocí {{email}} — stejné adresy, kterou jste použili zde. Vaše tokeny tam už budou.",
+      "nextBody": "Otevřete Arcatext, přihlaste se pomocí \"{{email}}\" a začněte aplikaci používat. Předplatné zatím nepotřebujete!",
       "download": "Stáhnout Arcatext"
     },
     "errors": {

@@ -173,7 +173,7 @@
       "tokens": "{{tokens}} token telah ditambahkan ke akun Anda.",
       "expires": "Berlaku hingga {{date}}.",
       "nextTitle": "Langkah berikutnya",
-      "nextBody": "Buka Arcatext dan masuk dengan {{email}} — alamat yang sama dengan yang Anda gunakan di sini. Token Anda sudah ada di sana.",
+      "nextBody": "Buka Arcatext, masuk dengan \"{{email}}\", dan mulai gunakan aplikasinya. Belum perlu berlangganan!",
       "download": "Unduh Arcatext"
     },
     "errors": {

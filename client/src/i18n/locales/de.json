@@ -173,7 +173,7 @@
       "tokens": "{{tokens}} Tokens wurden deinem Konto gutgeschrieben.",
       "expires": "Gültig bis {{date}}.",
       "nextTitle": "Nächster Schritt",
-      "nextBody": "Öffne Arcatext und melde dich mit {{email}} an – derselben Adresse, die du hier verwendet hast. Deine Tokens sind bereits da.",
+      "nextBody": "Öffne Arcatext, melde dich mit \"{{email}}\" an und leg direkt los. Ein Abo brauchst du noch nicht!",
       "download": "Arcatext herunterladen"
     },
     "errors": {

@@ -173,7 +173,7 @@
       "tokens": "Se han añadido {{tokens}} tokens a tu cuenta.",
       "expires": "Válido hasta el {{date}}.",
       "nextTitle": "Siguiente paso",
-      "nextBody": "Abre Arcatext e inicia sesión con {{email}}, la misma dirección que has usado aquí. Tus tokens ya estarán ahí.",
+      "nextBody": "Abre Arcatext, inicia sesión con \"{{email}}\" y empieza a usar la app. ¡Aún no hace falta suscribirse!",
       "download": "Descargar Arcatext"
     },
     "errors": {

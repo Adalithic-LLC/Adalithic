@@ -173,7 +173,7 @@
       "tokens": "{{tokens}} jetons ajoutés à votre compte.",
       "expires": "Valable jusqu'au {{date}}.",
       "nextTitle": "Étape suivante",
-      "nextBody": "Ouvrez Arcatext et connectez-vous avec {{email}}, la même adresse que celle utilisée ici. Vos jetons y seront déjà.",
+      "nextBody": "Ouvrez Arcatext, connectez-vous avec \"{{email}}\" et commencez à utiliser l'application. Pas besoin de vous abonner pour l'instant !",
       "download": "Télécharger Arcatext"
     },
     "errors": {
