@@ -27,9 +27,10 @@ import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 // (shouldCreateUser: true), so "redeem before you have an account" and "redeem
 // after" are the same code path.
 
-// Set this once the App Store listing URL is known; the download button is
-// hidden while it is empty rather than shipping a dead link.
-const ARCATEXT_APP_STORE_URL = "";
+// Arcatext's App Store listing (Apple ID 6760385360). The download button is
+// conditional on this being non-empty, so clearing it hides the button rather
+// than shipping a dead link.
+const ARCATEXT_APP_STORE_URL = "https://apps.apple.com/app/id6760385360";
 
 type Step = "email" | "otp" | "code" | "done";
 
@@ -127,17 +128,28 @@ export default function Redeem() {
       );
 
       if (fnError) {
-        // supabase-js surfaces a non-2xx as an error with the response tucked
-        // into context. 401 means the short-lived session lapsed — recoverable
-        // by signing in again, which is a different message from a dead server.
-        const status = (fnError as { context?: Response }).context?.status;
+        // supabase-js surfaces a non-2xx as an error with the Response tucked
+        // into `context`. Read the body before falling back to a generic
+        // message: the function answers 400/500 with a real { error } string,
+        // and discarding it reports a live-but-unhappy server as unreachable —
+        // which is what "Not signed in" from a stale deployment looked like.
+        const ctx = (fnError as { context?: Response }).context;
+        const status = ctx?.status;
+
         if (status === 401) {
           setStep("email");
           setOtp("");
           setError(t("redeem.errors.sessionExpired"));
           return;
         }
-        setError(t("redeem.errors.network"));
+
+        let body: { error?: string } | null = null;
+        try {
+          body = ctx ? await ctx.clone().json() : null;
+        } catch {
+          /* not JSON — fall through to the generic message */
+        }
+        setError(body?.error || t("redeem.errors.network"));
         return;
       }
 
