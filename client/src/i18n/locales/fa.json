@@ -174,7 +174,8 @@
       "expires": "معتبر تا {{date}}.",
       "nextTitle": "گام بعدی",
       "nextBody": "Arcatext را باز کنید، با \"{{email}}\" وارد شوید و شروع به استفاده کنید. هنوز نیازی به اشتراک نیست!",
-      "download": "دانلود Arcatext"
+      "download": "دانلود Arcatext",
+      "mobileOnly": "‏Arcatext یک برنامه iPhone است. App Store را روی iPhone خود باز کنید و Arcatext را جستجو کنید."
     },
     "errors": {
       "sendFailed": "نتوانستیم کد شما را بفرستیم. نشانی را بررسی کنید و دوباره تلاش کنید.",

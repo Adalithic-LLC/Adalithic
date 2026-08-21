@@ -174,7 +174,8 @@
       "expires": "Érvényes eddig: {{date}}.",
       "nextTitle": "Következő lépés",
       "nextBody": "Nyisd meg az Arcatextet, jelentkezz be a(z) \"{{email}}\" címmel, és kezdd el használni az appot. Előfizetésre egyelőre nincs szükség!",
-      "download": "Arcatext letöltése"
+      "download": "Arcatext letöltése",
+      "mobileOnly": "Az Arcatext iPhone-alkalmazás. Nyisd meg az App Store-t az iPhone-odon, és keress rá az Arcatextre."
     },
     "errors": {
       "sendFailed": "Nem sikerült elküldeni a kódot. Ellenőrizd a címet, és próbáld újra.",

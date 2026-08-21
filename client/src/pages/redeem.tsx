@@ -32,6 +32,24 @@ import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 // than shipping a dead link.
 const ARCATEXT_APP_STORE_URL = "https://apps.apple.com/app/id6760385360";
 
+// Arcatext is an iPhone keyboard, so the App Store link only *installs* anything
+// on iOS. On a desktop browser it opens a web listing the visitor cannot install
+// from — a "Download" button that cannot download. Redemption itself is very
+// often done on a desktop (the code arrives by email), so this is the common
+// case, not the edge case: show the button on iOS and a plain instruction
+// everywhere else.
+//
+// iPadOS 13+ reports itself as "Macintosh", so a bare userAgent test misses
+// iPads; the touch-point check is what separates them from real Macs. Guarded
+// for the no-navigator case and defaults to FALSE — showing the instruction to
+// an iPhone user is a mild annoyance, showing a dead button is a broken flow.
+function isIOSDevice(): boolean {
+  if (typeof navigator === "undefined") return false;
+  const ua = navigator.userAgent || "";
+  if (/iPhone|iPod|iPad/i.test(ua)) return true;
+  return /Macintosh/i.test(ua) && (navigator.maxTouchPoints ?? 0) > 1;
+}
+
 type Step = "email" | "otp" | "code" | "done";
 
 interface RedeemResult {
@@ -50,6 +68,8 @@ export default function Redeem() {
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [result, setResult] = useState<RedeemResult | null>(null);
+  // Stable for the life of the page; the platform cannot change mid-visit.
+  const [isIOS] = useState(isIOSDevice);
 
   const emailTrimmed = email.trim();
   const codeTrimmed = code.trim();
@@ -370,17 +390,22 @@ export default function Redeem() {
                     </p>
                   </div>
 
-                  {ARCATEXT_APP_STORE_URL && (
-                    <Button asChild className="w-full">
-                      <a
-                        href={ARCATEXT_APP_STORE_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {t("redeem.done.download")}
-                      </a>
-                    </Button>
-                  )}
+                  {ARCATEXT_APP_STORE_URL &&
+                    (isIOS ? (
+                      <Button asChild className="w-full">
+                        <a
+                          href={ARCATEXT_APP_STORE_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {t("redeem.done.download")}
+                        </a>
+                      </Button>
+                    ) : (
+                      <p className="text-sm text-gray-600">
+                        {t("redeem.done.mobileOnly")}
+                      </p>
+                    ))}
                 </div>
               )}
 

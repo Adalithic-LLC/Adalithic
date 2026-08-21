@@ -174,7 +174,8 @@
       "expires": "בתוקף עד {{date}}.",
       "nextTitle": "השלב הבא",
       "nextBody": "פתחו את Arcatext, התחברו עם \"{{email}}\" והתחילו להשתמש באפליקציה. עדיין אין צורך במנוי!",
-      "download": "הורדת Arcatext"
+      "download": "הורדת Arcatext",
+      "mobileOnly": "‏Arcatext היא אפליקציית iPhone. פתחו את App Store ב-iPhone וחפשו את Arcatext."
     },
     "errors": {
       "sendFailed": "לא הצלחנו לשלוח את הקוד. בדקו את הכתובת ונסו שוב.",

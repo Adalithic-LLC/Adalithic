@@ -174,7 +174,8 @@
       "expires": "{{date}} পর্যন্ত বৈধ।",
       "nextTitle": "পরবর্তী ধাপ",
       "nextBody": "Arcatext খুলুন, \"{{email}}\" দিয়ে সাইন ইন করুন এবং অ্যাপ ব্যবহার করা শুরু করুন। এখনই সাবস্ক্রাইব করার দরকার নেই!",
-      "download": "Arcatext ডাউনলোড করুন"
+      "download": "Arcatext ডাউনলোড করুন",
+      "mobileOnly": "Arcatext একটি iPhone অ্যাপ। আপনার iPhone-এ App Store খুলে Arcatext খুঁজুন।"
     },
     "errors": {
       "sendFailed": "আমরা আপনার কোড পাঠাতে পারিনি। ঠিকানাটি দেখে আবার চেষ্টা করুন।",

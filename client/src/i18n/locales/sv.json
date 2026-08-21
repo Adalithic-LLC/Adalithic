@@ -174,7 +174,8 @@
       "expires": "Giltig till och med {{date}}.",
       "nextTitle": "Nästa steg",
       "nextBody": "Öppna Arcatext, logga in med \"{{email}}\" och sätt igång. Du behöver inte prenumerera än!",
-      "download": "Ladda ner Arcatext"
+      "download": "Ladda ner Arcatext",
+      "mobileOnly": "Arcatext är en iPhone-app. Öppna App Store på din iPhone och sök efter Arcatext."
     },
     "errors": {
       "sendFailed": "Vi kunde inte skicka din kod. Kontrollera adressen och försök igen.",

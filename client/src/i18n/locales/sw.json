@@ -174,7 +174,8 @@
       "expires": "Unatumika hadi {{date}}.",
       "nextTitle": "Hatua inayofuata",
       "nextBody": "Fungua Arcatext, ingia kwa \"{{email}}\", na uanze kutumia programu. Bado huhitaji kujiandikisha!",
-      "download": "Pakua Arcatext"
+      "download": "Pakua Arcatext",
+      "mobileOnly": "Arcatext ni programu ya iPhone. Fungua App Store kwenye iPhone yako na utafute Arcatext."
     },
     "errors": {
       "sendFailed": "Hatukuweza kutuma msimbo wako. Angalia anwani kisha ujaribu tena.",

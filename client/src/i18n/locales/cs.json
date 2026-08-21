@@ -174,7 +174,8 @@
       "expires": "Platí do {{date}}.",
       "nextTitle": "Další krok",
       "nextBody": "Otevřete Arcatext, přihlaste se pomocí \"{{email}}\" a začněte aplikaci používat. Předplatné zatím nepotřebujete!",
-      "download": "Stáhnout Arcatext"
+      "download": "Stáhnout Arcatext",
+      "mobileOnly": "Arcatext je aplikace pro iPhone. Otevřete App Store na svém iPhonu a vyhledejte Arcatext."
     },
     "errors": {
       "sendFailed": "Nepodařilo se odeslat váš kód. Zkontrolujte adresu a zkuste to znovu.",

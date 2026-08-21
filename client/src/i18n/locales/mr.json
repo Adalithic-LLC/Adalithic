@@ -174,7 +174,8 @@
       "expires": "{{date}} पर्यंत वैध.",
       "nextTitle": "पुढील पायरी",
       "nextBody": "Arcatext उघडा, \"{{email}}\" ने साइन इन करा आणि अ‍ॅप वापरायला सुरुवात करा. अजून सबस्क्राइब करण्याची गरज नाही!",
-      "download": "Arcatext डाउनलोड करा"
+      "download": "Arcatext डाउनलोड करा",
+      "mobileOnly": "Arcatext हे iPhone अ‍ॅप आहे. तुमच्या iPhone वर App Store उघडा आणि Arcatext शोधा."
     },
     "errors": {
       "sendFailed": "आम्ही तुमचा कोड पाठवू शकलो नाही. पत्ता तपासा आणि पुन्हा प्रयत्न करा.",

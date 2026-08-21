@@ -174,7 +174,8 @@
       "expires": "{{date}} まで有効です。",
       "nextTitle": "次のステップ",
       "nextBody": "Arcatext を開き、\"{{email}}\" でログインして、そのままお使いください。まだ登録は不要です！",
-      "download": "Arcatext をダウンロード"
+      "download": "Arcatext をダウンロード",
+      "mobileOnly": "Arcatext は iPhone 用アプリです。iPhone で App Store を開き、Arcatext を検索してください。"
     },
     "errors": {
       "sendFailed": "コードを送信できませんでした。アドレスを確認してもう一度お試しください。",

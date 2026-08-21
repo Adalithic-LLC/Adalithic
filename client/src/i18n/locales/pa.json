@@ -174,7 +174,8 @@
       "expires": "{{date}} ਤੱਕ ਵੈਧ।",
       "nextTitle": "ਅਗਲਾ ਕਦਮ",
       "nextBody": "Arcatext ਖੋਲ੍ਹੋ, \"{{email}}\" ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ ਅਤੇ ਐਪ ਵਰਤਣੀ ਸ਼ੁਰੂ ਕਰੋ। ਹਾਲੇ ਸਬਸਕ੍ਰਾਈਬ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ!",
-      "download": "Arcatext ਡਾਊਨਲੋਡ ਕਰੋ"
+      "download": "Arcatext ਡਾਊਨਲੋਡ ਕਰੋ",
+      "mobileOnly": "Arcatext ਇੱਕ iPhone ਐਪ ਹੈ। ਆਪਣੇ iPhone 'ਤੇ App Store ਖੋਲ੍ਹੋ ਅਤੇ Arcatext ਲੱਭੋ।"
     },
     "errors": {
       "sendFailed": "ਅਸੀਂ ਤੁਹਾਡਾ ਕੋਡ ਨਹੀਂ ਭੇਜ ਸਕੇ। ਪਤਾ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",

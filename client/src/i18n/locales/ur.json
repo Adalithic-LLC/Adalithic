@@ -174,7 +174,8 @@
       "expires": "{{date}} تک کارآمد۔",
       "nextTitle": "اگلا مرحلہ",
       "nextBody": "Arcatext کھولیں، \"{{email}}\" سے لاگ ان کریں اور ایپ استعمال کرنا شروع کریں۔ ابھی سبسکرائب کرنے کی ضرورت نہیں!",
-      "download": "Arcatext ڈاؤن لوڈ کریں"
+      "download": "Arcatext ڈاؤن لوڈ کریں",
+      "mobileOnly": "‏Arcatext ایک iPhone ایپ ہے۔ اپنے iPhone پر App Store کھولیں اور Arcatext تلاش کریں۔"
     },
     "errors": {
       "sendFailed": "ہم آپ کا کوڈ نہیں بھیج سکے۔ پتہ جانچیں اور دوبارہ کوشش کریں۔",

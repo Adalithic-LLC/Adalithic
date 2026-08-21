@@ -174,7 +174,8 @@
       "expires": "Balido hanggang {{date}}.",
       "nextTitle": "Susunod na hakbang",
       "nextBody": "Buksan ang Arcatext, mag-sign in gamit ang \"{{email}}\", at simulan nang gamitin ang app. Hindi mo pa kailangang mag-subscribe!",
-      "download": "I-download ang Arcatext"
+      "download": "I-download ang Arcatext",
+      "mobileOnly": "Ang Arcatext ay isang iPhone app. Buksan ang App Store sa iyong iPhone at hanapin ang Arcatext."
     },
     "errors": {
       "sendFailed": "Hindi namin naipadala ang iyong code. Suriin ang address at subukan muli.",

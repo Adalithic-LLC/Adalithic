@@ -174,7 +174,8 @@
       "expires": "Voimassa {{date}} asti.",
       "nextTitle": "Seuraava vaihe",
       "nextBody": "Avaa Arcatext, kirjaudu sisään osoitteella \"{{email}}\" ja aloita käyttö. Tilausta ei tarvita vielä!",
-      "download": "Lataa Arcatext"
+      "download": "Lataa Arcatext",
+      "mobileOnly": "Arcatext on iPhone-sovellus. Avaa App Store iPhonessasi ja hae Arcatext."
     },
     "errors": {
       "sendFailed": "Koodin lähettäminen ei onnistunut. Tarkista osoite ja yritä uudelleen.",

@@ -174,7 +174,8 @@
       "expires": "{{date}} tarihine kadar geçerli.",
       "nextTitle": "Sonraki adım",
       "nextBody": "Arcatext'i açın, \"{{email}}\" ile giriş yapın ve uygulamayı kullanmaya başlayın. Henüz abone olmanıza gerek yok!",
-      "download": "Arcatext'i indir"
+      "download": "Arcatext'i indir",
+      "mobileOnly": "Arcatext bir iPhone uygulamasıdır. iPhone'unuzda App Store'u açın ve Arcatext'i arayın."
     },
     "errors": {
       "sendFailed": "Kodunuzu gönderemedik. Adresi kontrol edip tekrar deneyin.",

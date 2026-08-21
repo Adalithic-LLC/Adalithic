@@ -174,7 +174,8 @@
       "expires": "Berlaku hingga {{date}}.",
       "nextTitle": "Langkah berikutnya",
       "nextBody": "Buka Arcatext, masuk dengan \"{{email}}\", dan mulai gunakan aplikasinya. Belum perlu berlangganan!",
-      "download": "Unduh Arcatext"
+      "download": "Unduh Arcatext",
+      "mobileOnly": "Arcatext adalah aplikasi iPhone. Buka App Store di iPhone Anda dan cari Arcatext."
     },
     "errors": {
       "sendFailed": "Kami tidak dapat mengirim kode Anda. Periksa alamatnya dan coba lagi.",

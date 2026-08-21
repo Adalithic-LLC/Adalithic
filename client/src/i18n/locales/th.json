@@ -174,7 +174,8 @@
       "expires": "ใช้ได้ถึง {{date}}",
       "nextTitle": "ขั้นตอนถัดไป",
       "nextBody": "เปิด Arcatext เข้าสู่ระบบด้วย \"{{email}}\" แล้วเริ่มใช้งานได้เลย ยังไม่ต้องสมัครสมาชิก!",
-      "download": "ดาวน์โหลด Arcatext"
+      "download": "ดาวน์โหลด Arcatext",
+      "mobileOnly": "Arcatext เป็นแอปสำหรับ iPhone เปิด App Store บน iPhone ของคุณแล้วค้นหา Arcatext"
     },
     "errors": {
       "sendFailed": "เราไม่สามารถส่งรหัสของคุณได้ กรุณาตรวจสอบที่อยู่แล้วลองใหม่",

@@ -174,7 +174,8 @@
       "expires": "有效期至 {{date}}。",
       "nextTitle": "下一步",
       "nextBody": "開啟 Arcatext，使用 \"{{email}}\" 登入即可開始使用。暫時不需要訂閱！",
-      "download": "下載 Arcatext"
+      "download": "下載 Arcatext",
+      "mobileOnly": "Arcatext 是一款 iPhone 應用程式。請在 iPhone 上開啟 App Store 並搜尋 Arcatext。"
     },
     "errors": {
       "sendFailed": "無法傳送驗證碼。請檢查地址後再試一次。",
