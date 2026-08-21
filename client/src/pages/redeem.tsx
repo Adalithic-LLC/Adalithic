@@ -27,9 +27,10 @@ import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 // (shouldCreateUser: true), so "redeem before you have an account" and "redeem
 // after" are the same code path.
 
-// Set this once the App Store listing URL is known; the download button is
-// hidden while it is empty rather than shipping a dead link.
-const ARCATEXT_APP_STORE_URL = "";
+// Arcatext's App Store listing (Apple ID 6760385360). The download button is
+// conditional on this being non-empty, so clearing it hides the button rather
+// than shipping a dead link.
+const ARCATEXT_APP_STORE_URL = "https://apps.apple.com/app/id6760385360";
 
 type Step = "email" | "otp" | "code" | "done";
 
