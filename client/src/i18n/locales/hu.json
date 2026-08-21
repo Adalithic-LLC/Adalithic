@@ -173,7 +173,7 @@
       "tokens": "{{tokens}} token került a fiókodba.",
       "expires": "Érvényes eddig: {{date}}.",
       "nextTitle": "Következő lépés",
-      "nextBody": "Nyisd meg az Arcatextet, és jelentkezz be a(z) {{email}} címmel — ugyanazzal, amit itt használtál. A tokenjeid már ott lesznek.",
+      "nextBody": "Nyisd meg az Arcatextet, jelentkezz be a(z) \"{{email}}\" címmel, és kezdd el használni az appot. Előfizetésre egyelőre nincs szükség!",
       "download": "Arcatext letöltése"
     },
     "errors": {

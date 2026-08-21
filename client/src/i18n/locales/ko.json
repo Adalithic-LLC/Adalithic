@@ -173,7 +173,7 @@
       "tokens": "{{tokens}}개의 토큰이 계정에 추가되었습니다.",
       "expires": "{{date}}까지 유효합니다.",
       "nextTitle": "다음 단계",
-      "nextBody": "Arcatext를 열고 여기에서 사용한 것과 같은 {{email}}(으)로 로그인하세요. 토큰이 이미 적용되어 있습니다.",
+      "nextBody": "Arcatext를 열고 \"{{email}}\"(으)로 로그인한 뒤 바로 사용하세요. 아직 구독하지 않아도 됩니다!",
       "download": "Arcatext 다운로드"
     },
     "errors": {

@@ -173,7 +173,7 @@
       "tokens": "已將 {{tokens}} 個代幣加入你的帳戶。",
       "expires": "有效期至 {{date}}。",
       "nextTitle": "下一步",
-      "nextBody": "開啟 Arcatext，並使用你在此處所用的同一組地址 {{email}} 登入。你的代幣已經在那裡了。",
+      "nextBody": "開啟 Arcatext，使用 \"{{email}}\" 登入即可開始使用。暫時不需要訂閱！",
       "download": "下載 Arcatext"
     },
     "errors": {

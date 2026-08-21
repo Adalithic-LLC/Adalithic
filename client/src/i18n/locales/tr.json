@@ -173,7 +173,7 @@
       "tokens": "Hesabınıza {{tokens}} token eklendi.",
       "expires": "{{date}} tarihine kadar geçerli.",
       "nextTitle": "Sonraki adım",
-      "nextBody": "Arcatext'i açın ve burada kullandığınız adresle, {{email}} ile giriş yapın. Tokenleriniz zaten orada olacak.",
+      "nextBody": "Arcatext'i açın, \"{{email}}\" ile giriş yapın ve uygulamayı kullanmaya başlayın. Henüz abone olmanıza gerek yok!",
       "download": "Arcatext'i indir"
     },
     "errors": {

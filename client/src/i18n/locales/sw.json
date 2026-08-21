@@ -173,7 +173,7 @@
       "tokens": "Tokeni {{tokens}} zimeongezwa kwenye akaunti yako.",
       "expires": "Unatumika hadi {{date}}.",
       "nextTitle": "Hatua inayofuata",
-      "nextBody": "Fungua Arcatext na uingie kwa {{email}} — anwani ile ile uliyotumia hapa. Tokeni zako tayari zitakuwepo.",
+      "nextBody": "Fungua Arcatext, ingia kwa \"{{email}}\", na uanze kutumia programu. Bado huhitaji kujiandikisha!",
       "download": "Pakua Arcatext"
     },
     "errors": {

@@ -173,7 +173,7 @@
       "tokens": "{{tokens}} tokenuri au fost adăugate în contul tău.",
       "expires": "Valabil până la {{date}}.",
       "nextTitle": "Pasul următor",
-      "nextBody": "Deschide Arcatext și conectează-te cu {{email}} — aceeași adresă folosită aici. Tokenurile tale vor fi deja acolo.",
+      "nextBody": "Deschide Arcatext, conectează-te cu \"{{email}}\" și începe să folosești aplicația. Deocamdată nu e nevoie de abonament!",
       "download": "Descarcă Arcatext"
     },
     "errors": {
