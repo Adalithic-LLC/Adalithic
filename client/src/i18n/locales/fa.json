@@ -172,10 +172,13 @@
       "title": "کد شما فعال شد.",
       "tokens": "{{tokens}} توکن به حساب شما افزوده شد.",
       "expires": "معتبر تا {{date}}.",
-      "nextTitle": "گام بعدی",
-      "nextBody": "Arcatext را باز کنید، با \"{{email}}\" وارد شوید و شروع به استفاده کنید. هنوز نیازی به اشتراک نیست!",
+      "nextTitle": "گام‌های بعدی",
       "download": "دانلود Arcatext",
-      "mobileOnly": "‏Arcatext یک برنامه iPhone است. App Store را روی iPhone خود باز کنید و Arcatext را جستجو کنید."
+      "mobileOnly": "‏Arcatext یک برنامه iPhone است. App Store را روی iPhone خود باز کنید و Arcatext را جستجو کنید.",
+      "step1": "برنامه Arcatext را باز کنید",
+      "step2": "با \"{{email}}\" وارد شوید",
+      "step3": "شروع به استفاده از برنامه کنید",
+      "noSubscription": "تا پایان دوره تبلیغاتی به اشتراک نیازی ندارید."
     },
     "errors": {
       "sendFailed": "نتوانستیم کد شما را بفرستیم. نشانی را بررسی کنید و دوباره تلاش کنید.",

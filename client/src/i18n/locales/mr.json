@@ -172,10 +172,13 @@
       "title": "तुमचा कोड सक्रिय आहे.",
       "tokens": "तुमच्या खात्यात {{tokens}} टोकन जोडले गेले.",
       "expires": "{{date}} पर्यंत वैध.",
-      "nextTitle": "पुढील पायरी",
-      "nextBody": "Arcatext उघडा, \"{{email}}\" ने साइन इन करा आणि अ‍ॅप वापरायला सुरुवात करा. अजून सबस्क्राइब करण्याची गरज नाही!",
+      "nextTitle": "पुढील पायऱ्या",
       "download": "Arcatext डाउनलोड करा",
-      "mobileOnly": "Arcatext हे iPhone अ‍ॅप आहे. तुमच्या iPhone वर App Store उघडा आणि Arcatext शोधा."
+      "mobileOnly": "Arcatext हे iPhone अ‍ॅप आहे. तुमच्या iPhone वर App Store उघडा आणि Arcatext शोधा.",
+      "step1": "Arcatext अ‍ॅप उघडा",
+      "step2": "\"{{email}}\" ने साइन इन करा",
+      "step3": "अ‍ॅप वापरायला सुरुवात करा",
+      "noSubscription": "प्रोमो संपेपर्यंत तुम्हाला सबस्क्रिप्शनची गरज नाही."
     },
     "errors": {
       "sendFailed": "आम्ही तुमचा कोड पाठवू शकलो नाही. पत्ता तपासा आणि पुन्हा प्रयत्न करा.",

@@ -378,15 +378,21 @@ export default function Redeem() {
                     </p>
                   )}
 
-                  {/* The single most support-saving line on this page: a code
-                      redeemed here lands on THIS email's account, and signing
-                      into the app with a different address silently strands it. */}
+                  {/* Step 2 carries the single most support-saving detail on
+                      this page: a code redeemed here lands on THIS email's
+                      account, and signing into the app with a different address
+                      silently strands it. */}
                   <div className="rounded-md bg-gray-50 border border-gray-200 p-4">
-                    <p className="text-sm text-secondary font-medium mb-1">
+                    <p className="text-sm text-secondary font-medium mb-2">
                       {t("redeem.done.nextTitle")}
                     </p>
-                    <p className="text-sm text-gray-600">
-                      {t("redeem.done.nextBody", { email: emailTrimmed })}
+                    <ol className="list-decimal list-inside space-y-1 text-sm text-gray-600">
+                      <li>{t("redeem.done.step1")}</li>
+                      <li>{t("redeem.done.step2", { email: emailTrimmed })}</li>
+                      <li>{t("redeem.done.step3")}</li>
+                    </ol>
+                    <p className="text-sm text-gray-600 mt-3">
+                      {t("redeem.done.noSubscription")}
                     </p>
                   </div>
 

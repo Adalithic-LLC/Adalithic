@@ -172,10 +172,13 @@
       "title": "A kódod aktív.",
       "tokens": "{{tokens}} token került a fiókodba.",
       "expires": "Érvényes eddig: {{date}}.",
-      "nextTitle": "Következő lépés",
-      "nextBody": "Nyisd meg az Arcatextet, jelentkezz be a(z) \"{{email}}\" címmel, és kezdd el használni az appot. Előfizetésre egyelőre nincs szükség!",
+      "nextTitle": "Következő lépések",
       "download": "Arcatext letöltése",
-      "mobileOnly": "Az Arcatext iPhone-alkalmazás. Nyisd meg az App Store-t az iPhone-odon, és keress rá az Arcatextre."
+      "mobileOnly": "Az Arcatext iPhone-alkalmazás. Nyisd meg az App Store-t az iPhone-odon, és keress rá az Arcatextre.",
+      "step1": "Nyisd meg az Arcatext appot",
+      "step2": "Jelentkezz be a(z) \"{{email}}\" címmel",
+      "step3": "Kezdd el használni az appot",
+      "noSubscription": "Az akció lejártáig nincs szükséged előfizetésre."
     },
     "errors": {
       "sendFailed": "Nem sikerült elküldeni a kódot. Ellenőrizd a címet, és próbáld újra.",

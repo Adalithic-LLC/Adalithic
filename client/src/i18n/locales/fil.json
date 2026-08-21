@@ -172,10 +172,13 @@
       "title": "Aktibo na ang iyong code.",
       "tokens": "{{tokens}} token ang naidagdag sa iyong account.",
       "expires": "Balido hanggang {{date}}.",
-      "nextTitle": "Susunod na hakbang",
-      "nextBody": "Buksan ang Arcatext, mag-sign in gamit ang \"{{email}}\", at simulan nang gamitin ang app. Hindi mo pa kailangang mag-subscribe!",
+      "nextTitle": "Mga susunod na hakbang",
       "download": "I-download ang Arcatext",
-      "mobileOnly": "Ang Arcatext ay isang iPhone app. Buksan ang App Store sa iyong iPhone at hanapin ang Arcatext."
+      "mobileOnly": "Ang Arcatext ay isang iPhone app. Buksan ang App Store sa iyong iPhone at hanapin ang Arcatext.",
+      "step1": "Buksan ang Arcatext app",
+      "step2": "Mag-sign in gamit ang \"{{email}}\"",
+      "step3": "Simulan nang gamitin ang app",
+      "noSubscription": "Hindi mo kailangan ng subscription hanggang mag-expire ang promo."
     },
     "errors": {
       "sendFailed": "Hindi namin naipadala ang iyong code. Suriin ang address at subukan muli.",

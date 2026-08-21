@@ -172,10 +172,13 @@
       "title": "Kodunuz etkin.",
       "tokens": "Hesabınıza {{tokens}} token eklendi.",
       "expires": "{{date}} tarihine kadar geçerli.",
-      "nextTitle": "Sonraki adım",
-      "nextBody": "Arcatext'i açın, \"{{email}}\" ile giriş yapın ve uygulamayı kullanmaya başlayın. Henüz abone olmanıza gerek yok!",
+      "nextTitle": "Sonraki adımlar",
       "download": "Arcatext'i indir",
-      "mobileOnly": "Arcatext bir iPhone uygulamasıdır. iPhone'unuzda App Store'u açın ve Arcatext'i arayın."
+      "mobileOnly": "Arcatext bir iPhone uygulamasıdır. iPhone'unuzda App Store'u açın ve Arcatext'i arayın.",
+      "step1": "Arcatext uygulamasını açın",
+      "step2": "\"{{email}}\" ile giriş yapın",
+      "step3": "Uygulamayı kullanmaya başlayın",
+      "noSubscription": "Promosyon bitene kadar aboneliğe ihtiyacınız yok."
     },
     "errors": {
       "sendFailed": "Kodunuzu gönderemedik. Adresi kontrol edip tekrar deneyin.",

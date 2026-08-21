@@ -172,10 +172,13 @@
       "title": "Koodisi on aktiivinen.",
       "tokens": "Tilillesi lisättiin {{tokens}} tokenia.",
       "expires": "Voimassa {{date}} asti.",
-      "nextTitle": "Seuraava vaihe",
-      "nextBody": "Avaa Arcatext, kirjaudu sisään osoitteella \"{{email}}\" ja aloita käyttö. Tilausta ei tarvita vielä!",
+      "nextTitle": "Seuraavat vaiheet",
       "download": "Lataa Arcatext",
-      "mobileOnly": "Arcatext on iPhone-sovellus. Avaa App Store iPhonessasi ja hae Arcatext."
+      "mobileOnly": "Arcatext on iPhone-sovellus. Avaa App Store iPhonessasi ja hae Arcatext.",
+      "step1": "Avaa Arcatext-sovellus",
+      "step2": "Kirjaudu sisään osoitteella \"{{email}}\"",
+      "step3": "Aloita käyttö",
+      "noSubscription": "Et tarvitse tilausta ennen kuin tarjous päättyy."
     },
     "errors": {
       "sendFailed": "Koodin lähettäminen ei onnistunut. Tarkista osoite ja yritä uudelleen.",

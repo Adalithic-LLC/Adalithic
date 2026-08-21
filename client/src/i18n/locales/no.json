@@ -173,9 +173,12 @@
       "tokens": "{{tokens}} tokens er lagt til på kontoen din.",
       "expires": "Gyldig til og med {{date}}.",
       "nextTitle": "Neste steg",
-      "nextBody": "Åpne Arcatext, logg inn med \"{{email}}\" og sett i gang. Du trenger ikke abonnere ennå!",
       "download": "Last ned Arcatext",
-      "mobileOnly": "Arcatext er en iPhone-app. Åpne App Store på iPhonen din og søk etter Arcatext."
+      "mobileOnly": "Arcatext er en iPhone-app. Åpne App Store på iPhonen din og søk etter Arcatext.",
+      "step1": "Åpne Arcatext-appen",
+      "step2": "Logg inn med \"{{email}}\"",
+      "step3": "Sett i gang",
+      "noSubscription": "Du trenger ikke abonnement før kampanjen utløper."
     },
     "errors": {
       "sendFailed": "Vi klarte ikke å sende koden din. Sjekk adressen og prøv igjen.",

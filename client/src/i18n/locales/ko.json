@@ -173,9 +173,12 @@
       "tokens": "{{tokens}}개의 토큰이 계정에 추가되었습니다.",
       "expires": "{{date}}까지 유효합니다.",
       "nextTitle": "다음 단계",
-      "nextBody": "Arcatext를 열고 \"{{email}}\"(으)로 로그인한 뒤 바로 사용하세요. 아직 구독하지 않아도 됩니다!",
       "download": "Arcatext 다운로드",
-      "mobileOnly": "Arcatext는 iPhone 앱입니다. iPhone에서 App Store를 열고 Arcatext를 검색하세요."
+      "mobileOnly": "Arcatext는 iPhone 앱입니다. iPhone에서 App Store를 열고 Arcatext를 검색하세요.",
+      "step1": "Arcatext 앱 열기",
+      "step2": "\"{{email}}\"(으)로 로그인",
+      "step3": "앱 사용 시작",
+      "noSubscription": "프로모션이 만료될 때까지 구독하지 않아도 됩니다."
     },
     "errors": {
       "sendFailed": "코드를 보내지 못했습니다. 주소를 확인한 후 다시 시도해 주세요.",

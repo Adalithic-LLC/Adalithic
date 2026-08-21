@@ -172,10 +172,13 @@
       "title": "رمزك مُفعَّل الآن.",
       "tokens": "تمت إضافة {{tokens}} رمز مميز إلى حسابك.",
       "expires": "صالح حتى {{date}}.",
-      "nextTitle": "الخطوة التالية",
-      "nextBody": "افتح Arcatext وسجّل الدخول باستخدام \"{{email}}\" وابدأ باستخدام التطبيق. لا حاجة للاشتراك بعد!",
+      "nextTitle": "الخطوات التالية",
       "download": "تنزيل Arcatext",
-      "mobileOnly": "‏Arcatext تطبيق لأجهزة iPhone. افتح App Store على جهاز iPhone وابحث عن Arcatext."
+      "mobileOnly": "‏Arcatext تطبيق لأجهزة iPhone. افتح App Store على جهاز iPhone وابحث عن Arcatext.",
+      "step1": "افتح تطبيق Arcatext",
+      "step2": "سجّل الدخول باستخدام \"{{email}}\"",
+      "step3": "ابدأ باستخدام التطبيق",
+      "noSubscription": "لا تحتاج إلى اشتراك حتى ينتهي العرض الترويجي."
     },
     "errors": {
       "sendFailed": "تعذّر إرسال رمزك. تحقّق من العنوان وحاول مرة أخرى.",

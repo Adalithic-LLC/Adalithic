@@ -172,10 +172,13 @@
       "title": "ਤੁਹਾਡਾ ਕੋਡ ਚਾਲੂ ਹੈ।",
       "tokens": "ਤੁਹਾਡੇ ਖਾਤੇ ਵਿੱਚ {{tokens}} ਟੋਕਨ ਸ਼ਾਮਲ ਕੀਤੇ ਗਏ।",
       "expires": "{{date}} ਤੱਕ ਵੈਧ।",
-      "nextTitle": "ਅਗਲਾ ਕਦਮ",
-      "nextBody": "Arcatext ਖੋਲ੍ਹੋ, \"{{email}}\" ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ ਅਤੇ ਐਪ ਵਰਤਣੀ ਸ਼ੁਰੂ ਕਰੋ। ਹਾਲੇ ਸਬਸਕ੍ਰਾਈਬ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ!",
+      "nextTitle": "ਅਗਲੇ ਕਦਮ",
       "download": "Arcatext ਡਾਊਨਲੋਡ ਕਰੋ",
-      "mobileOnly": "Arcatext ਇੱਕ iPhone ਐਪ ਹੈ। ਆਪਣੇ iPhone 'ਤੇ App Store ਖੋਲ੍ਹੋ ਅਤੇ Arcatext ਲੱਭੋ।"
+      "mobileOnly": "Arcatext ਇੱਕ iPhone ਐਪ ਹੈ। ਆਪਣੇ iPhone 'ਤੇ App Store ਖੋਲ੍ਹੋ ਅਤੇ Arcatext ਲੱਭੋ।",
+      "step1": "Arcatext ਐਪ ਖੋਲ੍ਹੋ",
+      "step2": "\"{{email}}\" ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ",
+      "step3": "ਐਪ ਵਰਤਣੀ ਸ਼ੁਰੂ ਕਰੋ",
+      "noSubscription": "ਪ੍ਰੋਮੋ ਖਤਮ ਹੋਣ ਤੱਕ ਤੁਹਾਨੂੰ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਦੀ ਲੋੜ ਨਹੀਂ।"
     },
     "errors": {
       "sendFailed": "ਅਸੀਂ ਤੁਹਾਡਾ ਕੋਡ ਨਹੀਂ ਭੇਜ ਸਕੇ। ਪਤਾ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",

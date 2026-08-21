@@ -172,10 +172,13 @@
       "title": "Msimbo wako umeanza kutumika.",
       "tokens": "Tokeni {{tokens}} zimeongezwa kwenye akaunti yako.",
       "expires": "Unatumika hadi {{date}}.",
-      "nextTitle": "Hatua inayofuata",
-      "nextBody": "Fungua Arcatext, ingia kwa \"{{email}}\", na uanze kutumia programu. Bado huhitaji kujiandikisha!",
+      "nextTitle": "Hatua zinazofuata",
       "download": "Pakua Arcatext",
-      "mobileOnly": "Arcatext ni programu ya iPhone. Fungua App Store kwenye iPhone yako na utafute Arcatext."
+      "mobileOnly": "Arcatext ni programu ya iPhone. Fungua App Store kwenye iPhone yako na utafute Arcatext.",
+      "step1": "Fungua programu ya Arcatext",
+      "step2": "Ingia kwa \"{{email}}\"",
+      "step3": "Anza kutumia programu",
+      "noSubscription": "Huhitaji usajili hadi ofa itakapoisha."
     },
     "errors": {
       "sendFailed": "Hatukuweza kutuma msimbo wako. Angalia anwani kisha ujaribu tena.",

@@ -172,10 +172,13 @@
       "title": "הקוד שלכם פעיל.",
       "tokens": "{{tokens}} טוקנים נוספו לחשבונכם.",
       "expires": "בתוקף עד {{date}}.",
-      "nextTitle": "השלב הבא",
-      "nextBody": "פתחו את Arcatext, התחברו עם \"{{email}}\" והתחילו להשתמש באפליקציה. עדיין אין צורך במנוי!",
+      "nextTitle": "השלבים הבאים",
       "download": "הורדת Arcatext",
-      "mobileOnly": "‏Arcatext היא אפליקציית iPhone. פתחו את App Store ב-iPhone וחפשו את Arcatext."
+      "mobileOnly": "‏Arcatext היא אפליקציית iPhone. פתחו את App Store ב-iPhone וחפשו את Arcatext.",
+      "step1": "פתחו את אפליקציית Arcatext",
+      "step2": "התחברו עם \"{{email}}\"",
+      "step3": "התחילו להשתמש באפליקציה",
+      "noSubscription": "אינכם זקוקים למנוי עד שתוקף המבצע יפוג."
     },
     "errors": {
       "sendFailed": "לא הצלחנו לשלוח את הקוד. בדקו את הכתובת ונסו שוב.",

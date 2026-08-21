@@ -172,10 +172,13 @@
       "title": "Váš kód je aktivní.",
       "tokens": "Na váš účet bylo přidáno {{tokens}} tokenů.",
       "expires": "Platí do {{date}}.",
-      "nextTitle": "Další krok",
-      "nextBody": "Otevřete Arcatext, přihlaste se pomocí \"{{email}}\" a začněte aplikaci používat. Předplatné zatím nepotřebujete!",
+      "nextTitle": "Další kroky",
       "download": "Stáhnout Arcatext",
-      "mobileOnly": "Arcatext je aplikace pro iPhone. Otevřete App Store na svém iPhonu a vyhledejte Arcatext."
+      "mobileOnly": "Arcatext je aplikace pro iPhone. Otevřete App Store na svém iPhonu a vyhledejte Arcatext.",
+      "step1": "Otevřete aplikaci Arcatext",
+      "step2": "Přihlaste se pomocí \"{{email}}\"",
+      "step3": "Začněte aplikaci používat",
+      "noSubscription": "Do konce akce nepotřebujete předplatné."
     },
     "errors": {
       "sendFailed": "Nepodařilo se odeslat váš kód. Zkontrolujte adresu a zkuste to znovu.",

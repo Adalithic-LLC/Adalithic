@@ -173,9 +173,12 @@
       "tokens": "เพิ่ม {{tokens}} โทเค็นเข้าบัญชีของคุณแล้ว",
       "expires": "ใช้ได้ถึง {{date}}",
       "nextTitle": "ขั้นตอนถัดไป",
-      "nextBody": "เปิด Arcatext เข้าสู่ระบบด้วย \"{{email}}\" แล้วเริ่มใช้งานได้เลย ยังไม่ต้องสมัครสมาชิก!",
       "download": "ดาวน์โหลด Arcatext",
-      "mobileOnly": "Arcatext เป็นแอปสำหรับ iPhone เปิด App Store บน iPhone ของคุณแล้วค้นหา Arcatext"
+      "mobileOnly": "Arcatext เป็นแอปสำหรับ iPhone เปิด App Store บน iPhone ของคุณแล้วค้นหา Arcatext",
+      "step1": "เปิดแอป Arcatext",
+      "step2": "เข้าสู่ระบบด้วย \"{{email}}\"",
+      "step3": "เริ่มใช้งานแอป",
+      "noSubscription": "คุณยังไม่ต้องสมัครสมาชิกจนกว่าโปรโมชันจะหมดอายุ"
     },
     "errors": {
       "sendFailed": "เราไม่สามารถส่งรหัสของคุณได้ กรุณาตรวจสอบที่อยู่แล้วลองใหม่",

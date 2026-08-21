@@ -172,10 +172,13 @@
       "title": "你的兌換碼已生效。",
       "tokens": "已將 {{tokens}} 個代幣加入你的帳戶。",
       "expires": "有效期至 {{date}}。",
-      "nextTitle": "下一步",
-      "nextBody": "開啟 Arcatext，使用 \"{{email}}\" 登入即可開始使用。暫時不需要訂閱！",
+      "nextTitle": "後續步驟",
       "download": "下載 Arcatext",
-      "mobileOnly": "Arcatext 是一款 iPhone 應用程式。請在 iPhone 上開啟 App Store 並搜尋 Arcatext。"
+      "mobileOnly": "Arcatext 是一款 iPhone 應用程式。請在 iPhone 上開啟 App Store 並搜尋 Arcatext。",
+      "step1": "開啟 Arcatext 應用程式",
+      "step2": "使用 \"{{email}}\" 登入",
+      "step3": "開始使用應用程式",
+      "noSubscription": "促銷到期之前，你不需要訂閱。"
     },
     "errors": {
       "sendFailed": "無法傳送驗證碼。請檢查地址後再試一次。",

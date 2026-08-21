@@ -172,10 +172,13 @@
       "title": "你的兑换码已生效。",
       "tokens": "已向你的账户添加 {{tokens}} 个代币。",
       "expires": "有效期至 {{date}}。",
-      "nextTitle": "下一步",
-      "nextBody": "打开 Arcatext，使用 \"{{email}}\" 登录，即可开始使用。暂时无需订阅！",
+      "nextTitle": "后续步骤",
       "download": "下载 Arcatext",
-      "mobileOnly": "Arcatext 是一款 iPhone 应用。请在 iPhone 上打开 App Store 并搜索 Arcatext。"
+      "mobileOnly": "Arcatext 是一款 iPhone 应用。请在 iPhone 上打开 App Store 并搜索 Arcatext。",
+      "step1": "打开 Arcatext 应用",
+      "step2": "使用 \"{{email}}\" 登录",
+      "step3": "开始使用应用",
+      "noSubscription": "促销到期之前，你无需订阅。"
     },
     "errors": {
       "sendFailed": "无法发送验证码。请检查地址后重试。",

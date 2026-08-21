@@ -172,10 +172,13 @@
       "title": "Tu código está activo.",
       "tokens": "Se han añadido {{tokens}} tokens a tu cuenta.",
       "expires": "Válido hasta el {{date}}.",
-      "nextTitle": "Siguiente paso",
-      "nextBody": "Abre Arcatext, inicia sesión con \"{{email}}\" y empieza a usar la app. ¡Aún no hace falta suscribirse!",
+      "nextTitle": "Siguientes pasos",
       "download": "Descargar Arcatext",
-      "mobileOnly": "Arcatext es una app para iPhone. Abre la App Store en tu iPhone y busca Arcatext."
+      "mobileOnly": "Arcatext es una app para iPhone. Abre la App Store en tu iPhone y busca Arcatext.",
+      "step1": "Abre la app Arcatext",
+      "step2": "Inicia sesión con \"{{email}}\"",
+      "step3": "Empieza a usar la app",
+      "noSubscription": "No necesitas suscripción hasta que caduque la promoción."
     },
     "errors": {
       "sendFailed": "No hemos podido enviar tu código. Comprueba la dirección e inténtalo de nuevo.",

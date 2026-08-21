@@ -173,9 +173,12 @@
       "tokens": "{{tokens}} トークンがアカウントに追加されました。",
       "expires": "{{date}} まで有効です。",
       "nextTitle": "次のステップ",
-      "nextBody": "Arcatext を開き、\"{{email}}\" でログインして、そのままお使いください。まだ登録は不要です！",
       "download": "Arcatext をダウンロード",
-      "mobileOnly": "Arcatext は iPhone 用アプリです。iPhone で App Store を開き、Arcatext を検索してください。"
+      "mobileOnly": "Arcatext は iPhone 用アプリです。iPhone で App Store を開き、Arcatext を検索してください。",
+      "step1": "Arcatext アプリを開く",
+      "step2": "\"{{email}}\" でログインする",
+      "step3": "アプリを使い始める",
+      "noSubscription": "プロモーションが終了するまで、登録は必要ありません。"
     },
     "errors": {
       "sendFailed": "コードを送信できませんでした。アドレスを確認してもう一度お試しください。",

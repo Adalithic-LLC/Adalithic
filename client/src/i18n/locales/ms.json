@@ -173,9 +173,12 @@
       "tokens": "{{tokens}} token telah ditambah ke akaun anda.",
       "expires": "Sah sehingga {{date}}.",
       "nextTitle": "Langkah seterusnya",
-      "nextBody": "Buka Arcatext, log masuk dengan \"{{email}}\", dan mula gunakan apl. Anda belum perlu melanggan!",
       "download": "Muat turun Arcatext",
-      "mobileOnly": "Arcatext ialah apl iPhone. Buka App Store pada iPhone anda dan cari Arcatext."
+      "mobileOnly": "Arcatext ialah apl iPhone. Buka App Store pada iPhone anda dan cari Arcatext.",
+      "step1": "Buka apl Arcatext",
+      "step2": "Log masuk dengan \"{{email}}\"",
+      "step3": "Mula gunakan apl",
+      "noSubscription": "Anda tidak perlu melanggan sehingga promosi tamat."
     },
     "errors": {
       "sendFailed": "Kami tidak dapat menghantar kod anda. Semak alamat dan cuba lagi.",

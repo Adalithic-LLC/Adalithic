@@ -172,10 +172,13 @@
       "title": "Twój kod jest aktywny.",
       "tokens": "Do Twojego konta dodano {{tokens}} tokenów.",
       "expires": "Ważny do {{date}}.",
-      "nextTitle": "Następny krok",
-      "nextBody": "Otwórz Arcatext, zaloguj się przy użyciu \"{{email}}\" i zacznij korzystać z aplikacji. Nie musisz jeszcze wykupywać subskrypcji!",
+      "nextTitle": "Następne kroki",
       "download": "Pobierz Arcatext",
-      "mobileOnly": "Arcatext to aplikacja na iPhone'a. Otwórz App Store na swoim iPhonie i wyszukaj Arcatext."
+      "mobileOnly": "Arcatext to aplikacja na iPhone'a. Otwórz App Store na swoim iPhonie i wyszukaj Arcatext.",
+      "step1": "Otwórz aplikację Arcatext",
+      "step2": "Zaloguj się przy użyciu \"{{email}}\"",
+      "step3": "Zacznij korzystać z aplikacji",
+      "noSubscription": "Nie potrzebujesz subskrypcji, dopóki promocja nie wygaśnie."
     },
     "errors": {
       "sendFailed": "Nie udało się wysłać kodu. Sprawdź adres i spróbuj ponownie.",

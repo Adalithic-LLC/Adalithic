@@ -172,10 +172,13 @@
       "title": "Je code is actief.",
       "tokens": "{{tokens}} tokens toegevoegd aan je account.",
       "expires": "Geldig tot en met {{date}}.",
-      "nextTitle": "Volgende stap",
-      "nextBody": "Open Arcatext, log in met \"{{email}}\" en ga aan de slag. Je hoeft nog geen abonnement te nemen!",
+      "nextTitle": "Volgende stappen",
       "download": "Arcatext downloaden",
-      "mobileOnly": "Arcatext is een iPhone-app. Open de App Store op je iPhone en zoek naar Arcatext."
+      "mobileOnly": "Arcatext is een iPhone-app. Open de App Store op je iPhone en zoek naar Arcatext.",
+      "step1": "Open de Arcatext-app",
+      "step2": "Log in met \"{{email}}\"",
+      "step3": "Ga aan de slag",
+      "noSubscription": "Je hebt geen abonnement nodig tot de actie verloopt."
     },
     "errors": {
       "sendFailed": "We konden je code niet versturen. Controleer het adres en probeer het opnieuw.",

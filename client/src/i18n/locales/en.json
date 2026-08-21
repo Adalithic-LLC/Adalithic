@@ -172,10 +172,13 @@
       "title": "Your code is active.",
       "tokens": "{{tokens}} tokens added to your account.",
       "expires": "Valid through {{date}}.",
-      "nextTitle": "Next step",
-      "nextBody": "Open Arcatext, sign in with \"{{email}}\", and start using the app. No need to subscribe yet!",
+      "nextTitle": "Next steps",
       "download": "Download Arcatext",
-      "mobileOnly": "Arcatext is an iPhone app. Open the App Store on your iPhone and search for Arcatext."
+      "mobileOnly": "Arcatext is an iPhone app. Open the App Store on your iPhone and search for Arcatext.",
+      "step1": "Open Arcatext app",
+      "step2": "Sign in with \"{{email}}\"",
+      "step3": "Start using the app",
+      "noSubscription": "You don't need a subscription until the promo expires."
     },
     "errors": {
       "sendFailed": "We couldn't send your code. Check the address and try again.",

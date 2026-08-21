@@ -172,10 +172,13 @@
       "title": "Mã của bạn đã được kích hoạt.",
       "tokens": "Đã thêm {{tokens}} token vào tài khoản của bạn.",
       "expires": "Có hiệu lực đến {{date}}.",
-      "nextTitle": "Bước tiếp theo",
-      "nextBody": "Mở Arcatext, đăng nhập bằng \"{{email}}\" và bắt đầu sử dụng ứng dụng. Bạn chưa cần đăng ký gói nào!",
+      "nextTitle": "Các bước tiếp theo",
       "download": "Tải Arcatext",
-      "mobileOnly": "Arcatext là ứng dụng cho iPhone. Mở App Store trên iPhone của bạn và tìm Arcatext."
+      "mobileOnly": "Arcatext là ứng dụng cho iPhone. Mở App Store trên iPhone của bạn và tìm Arcatext.",
+      "step1": "Mở ứng dụng Arcatext",
+      "step2": "Đăng nhập bằng \"{{email}}\"",
+      "step3": "Bắt đầu sử dụng ứng dụng",
+      "noSubscription": "Bạn không cần gói đăng ký cho đến khi khuyến mãi hết hạn."
     },
     "errors": {
       "sendFailed": "Chúng tôi không gửi được mã của bạn. Hãy kiểm tra địa chỉ và thử lại.",
