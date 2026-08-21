@@ -127,17 +127,28 @@ export default function Redeem() {
       );
 
       if (fnError) {
-        // supabase-js surfaces a non-2xx as an error with the response tucked
-        // into context. 401 means the short-lived session lapsed — recoverable
-        // by signing in again, which is a different message from a dead server.
-        const status = (fnError as { context?: Response }).context?.status;
+        // supabase-js surfaces a non-2xx as an error with the Response tucked
+        // into `context`. Read the body before falling back to a generic
+        // message: the function answers 400/500 with a real { error } string,
+        // and discarding it reports a live-but-unhappy server as unreachable —
+        // which is what "Not signed in" from a stale deployment looked like.
+        const ctx = (fnError as { context?: Response }).context;
+        const status = ctx?.status;
+
         if (status === 401) {
           setStep("email");
           setOtp("");
           setError(t("redeem.errors.sessionExpired"));
           return;
         }
-        setError(t("redeem.errors.network"));
+
+        let body: { error?: string } | null = null;
+        try {
+          body = ctx ? await ctx.clone().json() : null;
+        } catch {
+          /* not JSON — fall through to the generic message */
+        }
+        setError(body?.error || t("redeem.errors.network"));
         return;
       }
 
