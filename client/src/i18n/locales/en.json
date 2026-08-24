@@ -103,7 +103,14 @@
           "Confirm your intent before sending",
           "Learn naturally as you go"
         ],
-        "alt": "Arcatext validating a translation by showing it back in the user's native language."
+        "alt": "Arcatext validating a translation by showing it back in the user's native language.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Meet me at the station café.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Shall we meet at the café by the station?"
+        }
       },
       "recipient": {
         "title": "Translations that fit who you're talking to",
@@ -235,6 +242,10 @@
     "detectedInMessage": "DETECTED IN YOUR MESSAGE",
     "experimental": "Experimental",
     "genderSubtext": "Words that change depending on gender.",
-    "checkGenderedWords": "Check gendered words"
+    "checkGenderedWords": "Check gendered words",
+    "rewordIntentCheck": "REWORD INTENT CHECK",
+    "rewordIntentSubtext": "Verify that Reword captured your intent.",
+    "currentReword": "CURRENT REWORD",
+    "originalMessage": "ORIGINAL MESSAGE"
   }
 }
