@@ -3,6 +3,8 @@
 // its animation loop (HeroKeyboardAnimation); the Reword feature section
 // renders the same chrome as a still frame (RewordKeyboard). Keeping one copy
 // means the keyboard on the features page can never drift from the hero's.
+import { useLayoutEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ChevronDown, Plus, ArrowUp, Mic } from "lucide-react";
 // Keyboard glyphs, from the design assets (accurate to the Arcatext app).
 import menuUrl from "@/assets/keyboard/menu.svg";
@@ -29,8 +31,11 @@ export const C = {
   recvGray: "#E9E9EB",
 };
 
-/** Design width of the keyboard surface, in layout pixels before scaling. */
+/** Design size of the keyboard surface, in layout pixels before scaling. The
+ *  still frames in the features section are drawn to the same size as the hero
+ *  so the visuals read as one device across the page. */
 export const DESIGN_W = 402;
+export const DESIGN_H = 600;
 
 export function Key({
   label,
@@ -62,7 +67,10 @@ export function Key({
       }}
     >
       {num && (
-        <span className="absolute right-[5px] top-[3px]" style={{ fontSize: 9, color: "rgba(0,0,0,0.4)" }}>
+        <span
+          className="absolute right-[5px] top-[3px]"
+          style={{ fontSize: 9, color: "rgba(0,0,0,0.4)" }}
+        >
           {num}
         </span>
       )}
@@ -94,15 +102,22 @@ export function KeyboardPanel({
   rewordPressed?: boolean;
   rewordLoading?: boolean;
 }) {
+  const { t } = useTranslation();
   const cap = (l: string) => (uppercase ? l.toUpperCase() : l);
 
   return (
     <div
       ref={panelRef}
       className="overflow-hidden"
-      style={{ borderRadius: 22, boxShadow: "0 18px 44px -16px rgba(20,10,40,0.4)" }}
+      style={{
+        borderRadius: 22,
+        boxShadow: "0 18px 44px -16px rgba(20,10,40,0.4)",
+      }}
     >
-      <div style={{ backgroundColor: C.toolbarBar }} className="px-[5px] pb-1 pt-2">
+      <div
+        style={{ backgroundColor: C.toolbarBar }}
+        className="px-[5px] pb-1 pt-2"
+      >
         {/* Toolbar */}
         <div className="mb-2 flex items-center" style={{ height: 50, gap: 8 }}>
           <div className="relative ml-2 mr-[3px]">
@@ -142,15 +157,30 @@ export function KeyboardPanel({
             }}
           >
             {/* Fixed-width label so the button doesn't resize while loading */}
-            <div className="relative flex items-center justify-center" style={{ width: 90 }}>
+            <div
+              className="relative flex items-center justify-center"
+              style={{ width: 90 }}
+            >
               {rewordLoading ? (
                 <span className="block h-5 w-5 animate-spin rounded-full border-2 border-white/40 border-t-white" />
               ) : (
-                <span className="text-[16px] font-medium text-white">Reword</span>
+                <span className="text-[16px] font-medium text-white">
+                  {t("appUi.reword")}
+                </span>
               )}
             </div>
-            <div className="self-center" style={{ width: 1, height: 20, backgroundColor: "rgba(255,255,255,0.5)" }} />
-            <div className="relative grid place-items-center" style={{ width: 40 }}>
+            <div
+              className="self-center"
+              style={{
+                width: 1,
+                height: 20,
+                backgroundColor: "rgba(255,255,255,0.5)",
+              }}
+            />
+            <div
+              className="relative grid place-items-center"
+              style={{ width: 40 }}
+            >
               <ChevronDown className="h-4 w-4 text-white" strokeWidth={2.4} />
             </div>
           </div>
@@ -175,7 +205,11 @@ export function KeyboardPanel({
             <Key key={l} label={cap(l)} />
           ))}
           <Key bg={C.actionKey} grow={1.5}>
-            <img src={backspaceUrl} alt="backspace" style={{ width: 23, height: 17 }} />
+            <img
+              src={backspaceUrl}
+              alt="backspace"
+              style={{ width: 23, height: 17 }}
+            />
           </Key>
         </div>
         {/* Bottom row: 123, wide space, return — 123 and return are equal
@@ -211,14 +245,38 @@ export function KeyboardPanel({
       </div>
 
       {/* Bottom utility strip */}
-      <div style={{ backgroundColor: C.toolbarBar }} className="flex items-center justify-between px-5 pb-2 pt-1">
+      <div
+        style={{ backgroundColor: C.toolbarBar }}
+        className="flex items-center justify-between px-5 pb-2 pt-1"
+      >
         {/* iOS system keyboard switcher (unchanged globe). */}
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="9.2" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
-          <ellipse cx="12" cy="12" rx="4" ry="9.2" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
-          <path d="M3 12h18M4.5 7.5h15M4.5 16.5h15" stroke="rgba(0,0,0,0.82)" strokeWidth="1.5" />
+          <circle
+            cx="12"
+            cy="12"
+            r="9.2"
+            stroke="rgba(0,0,0,0.82)"
+            strokeWidth="1.5"
+          />
+          <ellipse
+            cx="12"
+            cy="12"
+            rx="4"
+            ry="9.2"
+            stroke="rgba(0,0,0,0.82)"
+            strokeWidth="1.5"
+          />
+          <path
+            d="M3 12h18M4.5 7.5h15M4.5 16.5h15"
+            stroke="rgba(0,0,0,0.82)"
+            strokeWidth="1.5"
+          />
         </svg>
-        <Mic className="h-6 w-6" style={{ color: "rgba(0,0,0,0.82)" }} strokeWidth={2} />
+        <Mic
+          className="h-6 w-6"
+          style={{ color: "rgba(0,0,0,0.82)" }}
+          strokeWidth={2}
+        />
       </div>
     </div>
   );
@@ -232,7 +290,7 @@ export function KeyboardPanel({
 export function InputBar({
   fieldRef,
   text = "",
-  placeholder = "Type something",
+  placeholder,
   focused = false,
   sendPressed = false,
   caret = true,
@@ -244,7 +302,9 @@ export function InputBar({
   sendPressed?: boolean;
   caret?: boolean;
 }) {
+  const { t } = useTranslation();
   const hasText = text.length > 0;
+  const hint = placeholder ?? t("appUi.typePlaceholder");
 
   return (
     <div className="flex items-end gap-2 px-3 pb-2 pt-1">
@@ -270,8 +330,11 @@ export function InputBar({
             )}
           </span>
         ) : (
-          <span className="min-w-0 flex-1 text-[15px]" style={{ color: "#9aa0a6" }}>
-            {placeholder}
+          <span
+            className="min-w-0 flex-1 text-[15px]"
+            style={{ color: "#9aa0a6" }}
+          >
+            {hint}
             {caret && (
               <span
                 className="ml-[1px] inline-block h-[15px] w-[2px] translate-y-[2px] animate-pulse"
@@ -289,6 +352,81 @@ export function InputBar({
         }}
       >
         <ArrowUp className="h-5 w-5 text-white" strokeWidth={2.8} />
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Lays out a fixed-size design (drawn at `width` design pixels) scaled to fit
+ * the column it lands in. `transform: scale()` leaves the layout box unscaled,
+ * so the natural height is measured and the wrapper given the scaled size —
+ * otherwise the row reserves full-size space for a scaled visual.
+ *
+ * Shared by the coded still frames in the features section; they are DOM, not
+ * screenshots, so their copy localizes with the rest of the page.
+ */
+export function ScaledSurface({
+  width = DESIGN_W,
+  maxHeight,
+  maxScale = 1.3,
+  label,
+  children,
+}: {
+  width?: number;
+  /** Caps the rendered height, to keep the feature rows on an even rhythm. */
+  maxHeight?: number;
+  maxScale?: number;
+  /** Announced to assistive tech in place of the drawing. */
+  label: string;
+  children: React.ReactNode;
+}) {
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+  const [naturalH, setNaturalH] = useState(0);
+
+  useLayoutEffect(() => {
+    const wrap = wrapRef.current;
+    const inner = innerRef.current;
+    if (!wrap || !inner) return;
+    const measure = () => {
+      // offsetHeight/offsetWidth report layout size and ignore CSS transforms.
+      // getBoundingClientRect would return the *scaled* box here, so the
+      // measurement would feed back into the scale it sets and settle short.
+      const h = inner.offsetHeight;
+      const avail = wrap.offsetWidth;
+      setNaturalH(h);
+      if (avail <= 0) return;
+      let s = Math.min(maxScale, avail / width);
+      if (maxHeight && h > 0) s = Math.min(s, maxHeight / h);
+      setScale(s);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(wrap);
+    ro.observe(inner);
+    return () => ro.disconnect();
+  }, [width, maxHeight, maxScale]);
+
+  return (
+    <div ref={wrapRef} className="flex w-full justify-center">
+      <div
+        style={{ width: width * scale, height: naturalH * scale }}
+        role="img"
+        aria-label={label}
+      >
+        <div
+          ref={innerRef}
+          className="text-left"
+          style={{
+            width,
+            transform: `scale(${scale})`,
+            transformOrigin: "top left",
+          }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );

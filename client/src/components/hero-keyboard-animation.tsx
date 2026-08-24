@@ -2,7 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react
 import { motion, useReducedMotion } from "framer-motion";
 // The keyboard chrome itself is shared with the Reword feature section, which
 // renders the same surface as a still frame.
-import { C, DESIGN_W, InputBar, KeyboardPanel } from "@/components/keyboard-surface";
+import { C, DESIGN_H, DESIGN_W, InputBar, KeyboardPanel } from "@/components/keyboard-surface";
 
 /**
  * HeroKeyboardAnimation
@@ -80,7 +80,9 @@ type Placement = { y: number };
 // Surface geometry (design pixels). No device frame — just the message stack,
 // input bar and keyboard. Messages stack just above the input bar and are
 // pushed straight up by newer messages, fading out before the parked row.
-const SURFACE_H = 600; // taller surface gives the message stack room to scroll up and fade
+// The surface is taller than the keyboard so the message stack has room to
+// scroll up and fade; the features stills are drawn to the same size.
+const SURFACE_H = DESIGN_H;
 
 const SIDE_PAD = 12; // sent/received sit 12px in from the edge
 const BASE_BOTTOM = 4; // a new bubble starts just above the input bar

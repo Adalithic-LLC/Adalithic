@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import RewordKeyboard from "@/components/reword-keyboard";
+import PasteViewDemo from "@/components/paste-view-demo";
 
 // Each feature focuses on a single value Arcatext delivers, paired with the
 // visual that demonstrates it. Most rows use an in-app screenshot from the
@@ -19,7 +20,7 @@ type Feature = {
 
 const FEATURES: Feature[] = [
   { key: "reword", visual: () => <RewordKeyboard /> },
-  { key: "receive", image: "/pasteview.png" },
+  { key: "receive", visual: () => <PasteViewDemo /> },
   { key: "homographs", image: "/homographs.png" },
   { key: "reverse", image: "/reverse-translations.png" },
   { key: "recipient", image: "/reword-options.png" },

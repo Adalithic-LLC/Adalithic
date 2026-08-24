@@ -52,7 +52,12 @@
           "See a word-by-word breakdown",
           "Compare the literal and natural meaning side by side"
         ],
-        "alt": "Arcatext translating a received message with breakdown and literal options."
+        "alt": "Arcatext translating a received message with breakdown and literal options.",
+        "demo": {
+          "sent": "Free this weekend?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "I'm doing great! Let's go to that spot by the coast you mentioned last time."
+        }
       },
       "homographs": {
         "title": "Disambiguate homographs",
@@ -191,5 +196,14 @@
       "network": "We couldn't reach the server. Your code has not been used — please try again.",
       "notConfigured": "Redemption is temporarily unavailable. Please try again later."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Translate Received Messages",
+    "tabOriginal": "Original",
+    "tabSentences": "Sentences",
+    "paste": "Paste",
+    "language": "English",
+    "reword": "Reword",
+    "typePlaceholder": "Type something"
   }
 }
