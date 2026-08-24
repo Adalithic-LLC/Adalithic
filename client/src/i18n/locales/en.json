@@ -139,12 +139,12 @@
         ],
         "alt": "Arcatext offering synonym options for a translated message.",
         "demo": {
-          "sent": "Hi!",
-          "recv": "今夜、時間ある？",
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
           "options": [
-            "今夜は都合が悪いので、明日にしませんか。",
-            "今晩はちょっと忙しいから、また明日にしよう。",
-            "今夜は時間が取れないので、明日ではどうでしょうか。"
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
           ]
         }
       },
