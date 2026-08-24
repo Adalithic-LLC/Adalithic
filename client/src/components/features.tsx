@@ -1,30 +1,41 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import RewordKeyboard from "@/components/reword-keyboard";
 
 // Each feature focuses on a single value Arcatext delivers, paired with the
-// in-app screenshot that demonstrates it. The screenshots live in the public
-// directory (absolute paths so they resolve from any locale URL depth). Copy is
-// pulled from i18n under `features.items.<key>`; missing translations fall back
-// to English (the authoritative source language).
-const FEATURES = [
+// visual that demonstrates it. Most rows use an in-app screenshot from the
+// public directory (absolute paths so they resolve from any locale URL depth);
+// the opening Reword row instead renders the keyboard surface itself, shared
+// with the hero. Copy is pulled from i18n under `features.items.<key>`; missing
+// translations fall back to English (the authoritative source language).
+type Feature = {
+  key: string;
+  /** Screenshot path, or omitted when the row renders its own visual. */
+  image?: string;
+  /** Rendered in place of the screenshot. */
+  visual?: () => JSX.Element;
+  /** Rows without an eyebrow just lead with the headline. */
+  noEyebrow?: boolean;
+};
+
+const FEATURES: Feature[] = [
+  { key: "reword", visual: () => <RewordKeyboard />, noEyebrow: true },
   { key: "receive", image: "/pasteview.png" },
   { key: "homographs", image: "/homographs.png" },
   { key: "reverse", image: "/reverse-translations.png" },
   { key: "recipient", image: "/reword-options.png" },
   { key: "synonyms", image: "/synonyms.png" },
   { key: "copy", image: "/copy.png" },
-] as const;
+];
 
 function FeatureRow({
   featureKey,
   image,
+  visual,
+  noEyebrow,
   index,
-}: {
-  featureKey: string;
-  image: string;
-  index: number;
-}) {
+}: Omit<Feature, "key"> & { featureKey: string; index: number }) {
   const { t } = useTranslation();
   const reversed = index % 2 === 1;
   const base = `features.items.${featureKey}`;
@@ -47,10 +58,12 @@ function FeatureRow({
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={reversed ? "lg:order-2" : "lg:order-1"}
       >
-        <span className="text-sm font-semibold uppercase tracking-wider text-brand">
-          {t(`${base}.eyebrow`)}
-        </span>
-        <h3 className="mt-3 text-3xl md:text-4xl font-bold text-secondary leading-tight">
+        {!noEyebrow && (
+          <span className="text-sm font-semibold uppercase tracking-wider text-brand">
+            {t(`${base}.eyebrow`)}
+          </span>
+        )}
+        <h3 className={`${noEyebrow ? "" : "mt-3 "}text-3xl md:text-4xl font-bold text-secondary leading-tight`}>
           {t(`${base}.title`)}
         </h3>
         <p className="mt-5 text-lg text-gray-600 leading-relaxed">
@@ -77,14 +90,18 @@ function FeatureRow({
         transition={{ duration: 0.65, ease: "easeOut" }}
         className={`flex justify-center ${reversed ? "lg:order-1" : "lg:order-2"}`}
       >
-        <div className="rounded-[2rem] bg-cream p-3 shadow-2xl shadow-blue-900/10 ring-1 ring-black/5">
-          <img
-            src={image}
-            alt={t(`${base}.alt`)}
-            loading="lazy"
-            className="w-auto h-[460px] md:h-[560px] rounded-[1.4rem] object-contain"
-          />
-        </div>
+        {visual ? (
+          visual()
+        ) : (
+          <div className="rounded-[2rem] bg-cream p-3 shadow-2xl shadow-blue-900/10 ring-1 ring-black/5">
+            <img
+              src={image}
+              alt={t(`${base}.alt`)}
+              loading="lazy"
+              className="w-auto h-[460px] md:h-[560px] rounded-[1.4rem] object-contain"
+            />
+          </div>
+        )}
       </motion.div>
     </div>
   );
@@ -122,6 +139,8 @@ export default function Features() {
               key={feature.key}
               featureKey={feature.key}
               image={feature.image}
+              visual={feature.visual}
+              noEyebrow={feature.noEyebrow}
               index={index}
             />
           ))}

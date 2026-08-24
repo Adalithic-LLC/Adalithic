@@ -35,6 +35,16 @@
     "title": "Everything you need to talk across languages",
     "subtitle": "Arcatext is an AI keyboard that lives inside the apps you already use and covers all aspects of sending and receiving messages during a conversation.",
     "items": {
+      "reword": {
+        "title": "Write it your way, send it in theirs",
+        "description": "Type the message however it comes out — rushed, half-punctuated, in your own language. One tap on Reword translates it and cleans up the spelling, grammar and phrasing at the same time, right inside the text field. Nothing to copy, nothing to paste, no other app to open.",
+        "bullets": [
+          "Translate and correct in a single tap",
+          "Spelling, grammar and phrasing fixed as it translates",
+          "Right in the text field, in whatever app you're already using"
+        ],
+        "alt": "The Arcatext keyboard with a message in the text field, ready to be reworded."
+      },
       "receive": {
         "eyebrow": "Understand replies",
         "title": "Understand every reply, without leaving the keyboard",
