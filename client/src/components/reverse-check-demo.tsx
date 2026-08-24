@@ -1,9 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { ChevronRight } from "lucide-react";
-import CheckViewSurface, {
-  K,
-  SectionLabel,
-} from "@/components/check-view-surface";
+import PanelSurface, { K, SectionLabel } from "@/components/panel-surface";
 
 /**
  * A still frame of the Arcatext check view scrolled to the top, where the
@@ -68,8 +65,9 @@ export default function ReverseCheckDemo() {
   const demo = `features.items.reverse.demo`;
 
   return (
-    <CheckViewSurface
+    <PanelSurface
       label={t("features.items.reverse.alt")}
+      title={t("appUi.checkTitle")}
       sent={t(`${demo}.sent`)}
       recv={t(`${demo}.recv`)}
       field={t(`${demo}.reword`)}
@@ -129,6 +127,6 @@ export default function ReverseCheckDemo() {
           </div>
         </div>
       </div>
-    </CheckViewSurface>
+    </PanelSurface>
   );
 }

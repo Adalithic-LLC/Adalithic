@@ -120,7 +120,14 @@
           "Pick the alphabet or script you want",
           "Contextually accurate every single time"
         ],
-        "alt": "Arcatext reword options for recipient gender, group chat, and Japanese alphabet."
+        "alt": "Arcatext reword options for recipient gender, group chat, and Japanese alphabet.",
+        "demo": {
+          "sent": "Hi!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Grow your vocabulary as you chat",
@@ -246,6 +253,12 @@
     "rewordIntentCheck": "REWORD INTENT CHECK",
     "rewordIntentSubtext": "Verify that Reword captured your intent.",
     "currentReword": "CURRENT REWORD",
-    "originalMessage": "ORIGINAL MESSAGE"
+    "originalMessage": "ORIGINAL MESSAGE",
+    "rewordOptions": "Reword Options",
+    "whoAreYouTexting": "Who are you texting?",
+    "groupChat": "Group Chat",
+    "genderMale": "Male",
+    "genderFemale": "Female",
+    "rewordScript": "REWORD SCRIPT"
   }
 }

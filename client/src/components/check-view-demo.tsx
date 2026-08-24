@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import CheckViewSurface, { K } from "@/components/check-view-surface";
+import PanelSurface, { K } from "@/components/panel-surface";
 
 /**
  * A still frame of the Arcatext check view scrolled down to the "Detected in
@@ -22,8 +22,9 @@ export default function CheckViewDemo() {
   const meanings = t(`${demo}.meanings`, { returnObjects: true }) as Meaning[];
 
   return (
-    <CheckViewSurface
+    <PanelSurface
       label={t("features.items.homographs.alt")}
+      title={t("appUi.checkTitle")}
       sent={t(`${demo}.sent`)}
       recv={t(`${demo}.recv`)}
       field={t(`${demo}.reword`)}
@@ -118,6 +119,6 @@ export default function CheckViewDemo() {
           </div>
         </div>
       </div>
-    </CheckViewSurface>
+    </PanelSurface>
   );
 }
