@@ -28,7 +28,51 @@
       "言語を学ぶ",
       "ビジネスでコミュニケーション",
       "海外の友達とチャット"
-    ]
+    ],
+    "script": {
+      "native": [
+        "うん、言語を学びたいんだ。だからスペイン語に翻訳してる。",
+        "もちろん！いつから始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そう思う。メッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、声に出しても言える。",
+        "絶対気に入るよ。全部が変わるから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！そこに住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？",
+        "一番のお気に入りはどこだった？",
+        "写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "reworded": [
+        "Sí, quiero aprender un idioma. Por eso traduzco al español.",
+        "¡Claro! ¿Cuándo empezaste?",
+        "Yo igual, quizá un poco más.",
+        "Creo que sí, y me encanta practicar por mensajes.",
+        "Escribir me da tiempo para leer y pensar.",
+        "¡Te va a encantar! Lo cambia todo.",
+        "No, estoy en Estados Unidos. ¿Y tú?",
+        "¡Vaya! Vivir allí debe de ser increíble.",
+        "¿Has recorrido el país?",
+        "¿Por ejemplo?",
+        "¿Cuál fue tu favorito?",
+        "He visto fotos. Qué lugar tan bonito."
+      ],
+      "recv": [
+        "¡Qué bien!",
+        "¡Yo también estudio! Practiquemos por mensaje.",
+        "Empecé hace un año, así que aún me cuesta.",
+        "Perfecto, estamos a un nivel parecido.",
+        "¿Por qué?",
+        "Ya veo. Es la primera vez que uso este teclado.",
+        "Por cierto, ¿vives allí?",
+        "¡Yo sí! Quería sumergirme en el idioma.",
+        "Me encanta. Y la comida es increíble.",
+        "Sí, he ido a muchos sitios.",
+        "Sí, pero he visto mucho más.",
+        "Sin duda el parque nacional."
+      ]
+    }
   },
   "features": {
     "eyebrow": "ひとつのキーボードで、会話のあらゆる場面に",
@@ -43,7 +87,12 @@
           "単語ごとの解説を表示",
           "直訳と自然な意味を並べて比較"
         ],
-        "alt": "受信メッセージを解説と直訳オプション付きで翻訳するArcatext。"
+        "alt": "受信メッセージを解説と直訳オプション付きで翻訳するArcatext。",
+        "demo": {
+          "sent": "今週末空いてる？",
+          "received": "¡Estoy muy bien! Vamos a ese sitio de la costa que mencionaste.",
+          "translation": "元気だよ！この前話してた海辺のあの店に行こう。"
+        }
       },
       "homographs": {
         "title": "多義語を判別",
@@ -53,7 +102,27 @@
           "意図した意味を自分で選択",
           "送信前に不自然な誤訳を回避"
         ],
-        "alt": "多義語を判別し、意図した意味を提示するArcatext。"
+        "alt": "多義語を判別し、意図した意味を提示するArcatext。",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "金融機関"
+            },
+            {
+              "title": "riverbank",
+              "description": "川べりの土地"
+            },
+            {
+              "title": "tilt",
+              "description": "傾く、かたむける"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "翻訳を自分の言語で再確認",
@@ -63,7 +132,14 @@
           "送信前に意図を確認",
           "使いながら自然に学べる"
         ],
-        "alt": "翻訳をユーザーの母語で再表示して検証するArcatext。"
+        "alt": "翻訳をユーザーの母語で再表示して検証するArcatext。",
+        "demo": {
+          "sent": "おはよう！",
+          "recv": "¡Buenos días! ¿Qué hacemos hoy?",
+          "original": "駅のカフェで会おう。",
+          "reword": "Vemos en el café junto a la estación.",
+          "reverse": "駅のそばのカフェで会いませんか？"
+        }
       },
       "recipient": {
         "title": "話す相手に合わせた翻訳",
@@ -73,7 +149,14 @@
           "使いたい文字や表記を選択",
           "毎回、文脈にぴったりの正確さ"
         ],
-        "alt": "相手の性別、グループチャット、日本語の表記に応じた言い換えオプションを示すArcatext。"
+        "alt": "相手の性別、グループチャット、日本語の表記に応じた言い換えオプションを示すArcatext。",
+        "demo": {
+          "sent": "やあ！",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "チャットしながら語彙を増やす",
@@ -83,7 +166,16 @@
           "より豊かで自然な語彙に出会える",
           "実際の会話から生まれる確かな上達"
         ],
-        "alt": "翻訳したメッセージに類義語の選択肢を提示するArcatext。"
+        "alt": "翻訳したメッセージに類義語の選択肢を提示するArcatext。",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "スレッド全体の文脈を保つ",
@@ -93,7 +185,20 @@
           "スレッドを見失わない",
           "手間いらずのバイリンガル会話"
         ],
-        "alt": "ユーザーの母語でメッセージのコピーを送信するArcatext。"
+        "alt": "ユーザーの母語でメッセージのコピーを送信するArcatext。",
+        "demo": {
+          "recv": "¿Ya decidiste el plan de mañana?",
+          "reword": "Vemos en el café junto a la estación.",
+          "copy": "駅のそばのカフェで会いましょう。"
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "¡Cuánto tiempo! ¿Cómo has estado?",
+          "sent1": "¡Muy bien! ¿Y tú?",
+          "recv2": "¡Yo también! Deberíamos vernos pronto.",
+          "draft": "今週末、会える？"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "サーバーに接続できませんでした。コードは使用されていません。もう一度お試しください。",
       "notConfigured": "現在ご利用いただけません。しばらくしてからお試しください。"
     }
+  },
+  "appUi": {
+    "pasteTitle": "受信メッセージを翻訳",
+    "tabOriginal": "原文",
+    "tabSentences": "文章",
+    "paste": "ペースト",
+    "reword": "変換",
+    "checkTitle": "確認",
+    "detectedInMessage": "メッセージ内で検出",
+    "experimental": "実験的",
+    "genderSubtext": "文法上の性によって変化する語。",
+    "checkGenderedWords": "性で変化する語を確認",
+    "rewordIntentCheck": "変換内容の確認",
+    "rewordIntentSubtext": "変換内容が意図どおりか確認します。",
+    "currentReword": "現在の変換",
+    "originalMessage": "元のメッセージ",
+    "rewordOptions": "変換オプション",
+    "whoAreYouTexting": "誰にメッセージを送りますか？",
+    "groupChat": "グループチャット",
+    "genderMale": "男性",
+    "genderFemale": "女性",
+    "rewordScript": "翻訳先の文字体系",
+    "synonyms": "類義語",
+    "language": "日本語",
+    "typePlaceholder": "何か入力"
   }
 }

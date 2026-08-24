@@ -55,6 +55,7 @@ export function Bubble({
   return (
     <div className={`flex ${sent ? "justify-end" : "justify-start"}`}>
       <div
+        dir="auto"
         className="max-w-[74%] rounded-[20px] px-3.5 py-2 text-[17px]"
         style={
           sent
@@ -351,7 +352,10 @@ export function InputBar({
         }}
       >
         {hasText ? (
-          <span className="min-w-0 flex-1 whitespace-pre-wrap break-words text-[15px] leading-snug text-black">
+          <span
+            dir="auto"
+            className="min-w-0 flex-1 whitespace-pre-wrap break-words text-[15px] leading-snug text-black"
+          >
             {text}
             {caret && (
               <span

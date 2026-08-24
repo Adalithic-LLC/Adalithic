@@ -28,7 +28,51 @@
       "Leer een taal",
       "Communiceer voor zaken",
       "Chat met internationale vrienden"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Ja, ik wil een taal leren. Daarom vertaal ik naar het Japans.",
+        "Zeker! Wanneer ben je begonnen?",
+        "Ik ook, misschien iets langer.",
+        "Ik denk het, en ik oefen graag via berichten.",
+        "Schrijven geeft me tijd om te lezen en denken, zelfs hardop te zeggen.",
+        "Je gaat het geweldig vinden. Het verandert alles!",
+        "Nee, ik zit in de VS. En jij?",
+        "Wauw! In Japan wonen moet ongelooflijk zijn.",
+        "Heb je het land verkend?",
+        "Zoals waar? Tokio?",
+        "Wat was je favoriet?",
+        "Ik heb foto's van Nikko gezien. Wat een mooie plek."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Eén toetsenbord, elk onderdeel van het gesprek",
@@ -43,7 +87,12 @@
           "Bekijk een woord-voor-woord-analyse",
           "Vergelijk de letterlijke en natuurlijke betekenis naast elkaar"
         ],
-        "alt": "Arcatext vertaalt een ontvangen bericht met analyse- en letterlijke opties."
+        "alt": "Arcatext vertaalt een ontvangen bericht met analyse- en letterlijke opties.",
+        "demo": {
+          "sent": "Dit weekend vrij?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Prima! Laten we naar die plek aan de kust gaan."
+        }
       },
       "homographs": {
         "title": "Homoniemen onderscheiden",
@@ -53,7 +102,27 @@
           "Kies de betekenis die je bedoelde",
           "Voorkom onhandige vertaalfouten voordat je verstuurt"
         ],
-        "alt": "Arcatext identificeert een homoniem en biedt de bedoelde betekenis."
+        "alt": "Arcatext identificeert een homoniem en biedt de bedoelde betekenis.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Financiële instelling"
+            },
+            {
+              "title": "riverbank",
+              "description": "Land langs een rivier"
+            },
+            {
+              "title": "tilt",
+              "description": "Hellen of kantelen"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Controleer de vertaling in je eigen taal",
@@ -63,7 +132,14 @@
           "Bevestig je bedoeling voordat je verstuurt",
           "Leer al doende op een natuurlijke manier"
         ],
-        "alt": "Arcatext valideert een vertaling door deze terug te tonen in de moedertaal van de gebruiker."
+        "alt": "Arcatext valideert een vertaling door deze terug te tonen in de moedertaal van de gebruiker.",
+        "demo": {
+          "sent": "Goedemorgen!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Zie je in het stationscafé.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Zullen we afspreken in het café bij het station?"
+        }
       },
       "recipient": {
         "title": "Vertalingen die passen bij met wie je praat",
@@ -73,7 +149,14 @@
           "Kies het alfabet of schrift dat je wilt",
           "Elke keer contextueel accuraat"
         ],
-        "alt": "Arcatext-herformuleeropties voor het geslacht van de ontvanger, groepschat en Japans alfabet."
+        "alt": "Arcatext-herformuleeropties voor het geslacht van de ontvanger, groepschat en Japans alfabet.",
+        "demo": {
+          "sent": "Hoi!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Vergroot je woordenschat terwijl je chat",
@@ -83,7 +166,16 @@
           "Ontdek rijkere, natuurlijkere woordenschat",
           "Echte vooruitgang uit echte gesprekken"
         ],
-        "alt": "Arcatext biedt synoniemopties voor een vertaald bericht."
+        "alt": "Arcatext biedt synoniemopties voor een vertaald bericht.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Houd het hele gesprek in context",
@@ -93,7 +185,20 @@
           "Verlies de draad van het gesprek nooit",
           "Moeiteloze tweetalige gesprekken"
         ],
-        "alt": "Arcatext verstuurt een kopie van het bericht in de moedertaal van de gebruiker."
+        "alt": "Arcatext verstuurt een kopie van het bericht in de moedertaal van de gebruiker.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Laten we afspreken in het café bij het station."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Heb je dit weekend tijd?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "We konden de server niet bereiken. Je code is niet gebruikt — probeer het opnieuw.",
       "notConfigured": "Inwisselen is tijdelijk niet beschikbaar. Probeer het later opnieuw."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Ontvangen berichten vertalen",
+    "tabOriginal": "Origineel",
+    "tabSentences": "Zinnen",
+    "paste": "Plakken",
+    "reword": "Herschrijf",
+    "checkTitle": "Controle",
+    "detectedInMessage": "GEDETECTEERD IN JE BERICHT",
+    "experimental": "Experimenteel",
+    "genderSubtext": "Woorden die veranderen afhankelijk van het geslacht.",
+    "checkGenderedWords": "Gendergevoelige woorden controleren",
+    "rewordIntentCheck": "CONTROLE VAN HERFORMULEERBEDOELING",
+    "rewordIntentSubtext": "Controleer of Herformuleren je bedoeling goed heeft weergegeven.",
+    "currentReword": "HUIDIGE HERFORMULERING",
+    "originalMessage": "ORIGINEEL BERICHT",
+    "rewordOptions": "Herformuleeropties",
+    "whoAreYouTexting": "Naar wie stuur je een bericht?",
+    "groupChat": "Groepschat",
+    "genderMale": "Mannelijk",
+    "genderFemale": "Vrouwelijk",
+    "rewordScript": "SCHRIFT VAN DE DOELTAAL",
+    "synonyms": "SYNONIEMEN",
+    "language": "Nederlands",
+    "typePlaceholder": "Typ iets"
   }
 }

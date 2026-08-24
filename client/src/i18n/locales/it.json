@@ -28,7 +28,51 @@
       "Impara una lingua",
       "Comunica per lavoro",
       "Chatta con amici di tutto il mondo"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Sì, voglio imparare una lingua. Per questo traduco in giapponese.",
+        "Certo! Quando hai iniziato?",
+        "Anche io, forse un po' di più.",
+        "Credo di sì, e adoro allenarmi scrivendo.",
+        "Scrivere mi dà tempo per leggere e pensare, anche dirlo ad alta voce.",
+        "Ti piacerà. Cambia tutto!",
+        "No, sono negli Stati Uniti. E tu?",
+        "Wow! Vivere in Giappone dev'essere incredibile.",
+        "Hai girato il paese?",
+        "Tipo dove? Tokyo?",
+        "Qual è stato il tuo preferito?",
+        "Ho visto foto di Nikko. Che posto bellissimo."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Un'unica tastiera, ogni parte della conversazione",
@@ -43,7 +87,12 @@
           "Consulta una scomposizione parola per parola",
           "Confronta il significato letterale e quello naturale fianco a fianco"
         ],
-        "alt": "Arcatext traduce un messaggio ricevuto con opzioni di scomposizione e traduzione letterale."
+        "alt": "Arcatext traduce un messaggio ricevuto con opzioni di scomposizione e traduzione letterale.",
+        "demo": {
+          "sent": "Libero nel weekend?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Sto benissimo! Andiamo in quel posto sulla costa che dicevi."
+        }
       },
       "homographs": {
         "title": "Disambigua gli omografi",
@@ -53,7 +102,27 @@
           "Scegli il significato che intendevi",
           "Evita traduzioni imbarazzanti prima di inviare"
         ],
-        "alt": "Arcatext individua un omografo e propone il significato desiderato."
+        "alt": "Arcatext individua un omografo e propone il significato desiderato.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Istituto finanziario"
+            },
+            {
+              "title": "riverbank",
+              "description": "Terreno lungo un fiume"
+            },
+            {
+              "title": "tilt",
+              "description": "Inclinarsi o pendere"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Ricontrolla la traduzione nella tua lingua",
@@ -63,7 +132,14 @@
           "Conferma la tua intenzione prima di inviare",
           "Impara in modo naturale strada facendo"
         ],
-        "alt": "Arcatext convalida una traduzione mostrandola di nuovo nella lingua madre dell'utente."
+        "alt": "Arcatext convalida una traduzione mostrandola di nuovo nella lingua madre dell'utente.",
+        "demo": {
+          "sent": "Buongiorno!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Ci vediamo al bar della stazione.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Ci vediamo al bar vicino alla stazione?"
+        }
       },
       "recipient": {
         "title": "Traduzioni su misura per il tuo interlocutore",
@@ -73,7 +149,14 @@
           "Scegli l'alfabeto o la scrittura che preferisci",
           "Precisione contestuale ogni singola volta"
         ],
-        "alt": "Opzioni di riformulazione di Arcatext in base al genere del destinatario, alla chat di gruppo e all'alfabeto giapponese."
+        "alt": "Opzioni di riformulazione di Arcatext in base al genere del destinatario, alla chat di gruppo e all'alfabeto giapponese.",
+        "demo": {
+          "sent": "Ciao!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Amplia il tuo vocabolario mentre chatti",
@@ -83,7 +166,16 @@
           "Scopri un vocabolario più ricco e naturale",
           "Progressi reali da conversazioni reali"
         ],
-        "alt": "Arcatext propone opzioni di sinonimi per un messaggio tradotto."
+        "alt": "Arcatext propone opzioni di sinonimi per un messaggio tradotto.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Mantieni tutta la conversazione nel suo contesto",
@@ -93,7 +185,20 @@
           "Non perdere mai il filo della conversazione",
           "Conversazioni bilingui senza sforzo"
         ],
-        "alt": "Arcatext invia una copia del messaggio nella lingua madre dell'utente."
+        "alt": "Arcatext invia una copia del messaggio nella lingua madre dell'utente.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Ci vediamo al bar vicino alla stazione."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Sei libero questo fine settimana?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Non siamo riusciti a contattare il server. Il tuo codice non è stato usato: riprova.",
       "notConfigured": "Il riscatto non è disponibile al momento. Riprova più tardi."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Traduci i messaggi ricevuti",
+    "tabOriginal": "Originale",
+    "tabSentences": "Frasi",
+    "paste": "Incolla",
+    "reword": "Riscrivi",
+    "checkTitle": "Verifica",
+    "detectedInMessage": "RILEVATO NEL TUO MESSAGGIO",
+    "experimental": "Sperimentale",
+    "genderSubtext": "Parole che cambiano in base al genere grammaticale.",
+    "checkGenderedWords": "Verifica parole con genere grammaticale",
+    "rewordIntentCheck": "VERIFICA DELL’INTENTO DELLA RISCRITTURA",
+    "rewordIntentSubtext": "Verifica che la riscrittura abbia colto il tuo intento.",
+    "currentReword": "RISCRITTURA ATTUALE",
+    "originalMessage": "MESSAGGIO ORIGINALE",
+    "rewordOptions": "Opzioni di riscrittura",
+    "whoAreYouTexting": "A chi stai scrivendo?",
+    "groupChat": "Chat di gruppo",
+    "genderMale": "Maschio",
+    "genderFemale": "Femmina",
+    "rewordScript": "SCRITTURA DELLA LINGUA DI DESTINAZIONE",
+    "synonyms": "SINONIMI",
+    "language": "Italiano",
+    "typePlaceholder": "Scrivi qualcosa"
   }
 }

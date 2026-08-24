@@ -28,7 +28,51 @@
       "Bir dil öğrenin",
       "İş için iletişim kurun",
       "Dünyanın dört bir yanından arkadaşlarla sohbet edin"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Evet, bir dil öğrenmek istiyorum. Bu yüzden Japoncaya çeviriyorum.",
+        "Tabii! Ne zaman başladın?",
+        "Ben de, belki biraz daha uzun.",
+        "Sanırım öyle, mesajlaşarak pratik yapmayı çok seviyorum.",
+        "Yazmak bana okuyup düşünme, hatta sesli söyleme zamanı veriyor.",
+        "Bayılacaksın. Her şeyi değiştiriyor!",
+        "Hayır, Amerika'dayım. Ya sen?",
+        "Vay! Japonya'da yaşamak inanılmaz olmalı.",
+        "Ülkeyi gezdin mi?",
+        "Mesela nereleri? Tokyo?",
+        "En sevdiğin neresiydi?",
+        "Nikko'nun fotoğraflarını gördüm. Ne güzel bir yer."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Tek klavye, sohbetin her anı için",
@@ -43,7 +87,12 @@
           "Kelime kelime çözümlemeyi görün",
           "Birebir ve doğal anlamı yan yana karşılaştırın"
         ],
-        "alt": "Arcatext, alınan bir mesajı çözümleme ve birebir çeviri seçenekleriyle çevirirken."
+        "alt": "Arcatext, alınan bir mesajı çözümleme ve birebir çeviri seçenekleriyle çevirirken.",
+        "demo": {
+          "sent": "Hafta sonu boş musun?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Çok iyiyim! Bahsettiğin sahildeki o yere gidelim."
+        }
       },
       "homographs": {
         "title": "Eş yazımlıları netleştirin",
@@ -53,7 +102,27 @@
           "Kastettiğiniz anlamı seçin",
           "Göndermeden önce yanlış çevirilerden kaçının"
         ],
-        "alt": "Arcatext, eş yazımlı bir kelimeyi belirleyip kastedilen anlamı önerirken."
+        "alt": "Arcatext, eş yazımlı bir kelimeyi belirleyip kastedilen anlamı önerirken.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Finans kurumu"
+            },
+            {
+              "title": "riverbank",
+              "description": "Nehir kenarındaki arazi"
+            },
+            {
+              "title": "tilt",
+              "description": "Eğilmek veya yatmak"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Çeviriyi kendi dilinizde bir kez daha kontrol edin",
@@ -63,7 +132,14 @@
           "Göndermeden önce niyetinizi doğrulayın",
           "İlerledikçe doğal biçimde öğrenin"
         ],
-        "alt": "Arcatext, bir çeviriyi kullanıcının ana dilinde geri göstererek doğrularken."
+        "alt": "Arcatext, bir çeviriyi kullanıcının ana dilinde geri göstererek doğrularken.",
+        "demo": {
+          "sent": "Günaydın!",
+          "recv": "おはよう！今日どうする？",
+          "original": "İstasyondaki kafede buluşalım.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "İstasyonun yanındaki kafede buluşalım mı?"
+        }
       },
       "recipient": {
         "title": "Konuştuğunuz kişiye uygun çeviriler",
@@ -73,7 +149,14 @@
           "İstediğiniz alfabeyi veya yazıyı seçin",
           "Her seferinde bağlama uygun ve doğru"
         ],
-        "alt": "Arcatext'in alıcının cinsiyeti, grup sohbeti ve Japon alfabesi için yeniden ifade seçenekleri."
+        "alt": "Arcatext'in alıcının cinsiyeti, grup sohbeti ve Japon alfabesi için yeniden ifade seçenekleri.",
+        "demo": {
+          "sent": "Merhaba!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Sohbet ederken kelime dağarcığınızı geliştirin",
@@ -83,7 +166,16 @@
           "Daha zengin, daha doğal kelimeler keşfedin",
           "Gerçek sohbetlerden gerçek ilerleme"
         ],
-        "alt": "Arcatext, çevrilmiş bir mesaj için eş anlamlı seçenekler sunarken."
+        "alt": "Arcatext, çevrilmiş bir mesaj için eş anlamlı seçenekler sunarken.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Tüm sohbeti bağlam içinde tutun",
@@ -93,7 +185,20 @@
           "Sohbetin akışını asla kaybetmeyin",
           "Zahmetsiz iki dilli sohbetler"
         ],
-        "alt": "Arcatext, mesajın bir kopyasını kullanıcının ana dilinde gönderirken."
+        "alt": "Arcatext, mesajın bir kopyasını kullanıcının ana dilinde gönderirken.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "İstasyonun yanındaki kafede buluşalım."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Bu hafta sonu müsait misin?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Sunucuya ulaşamadık. Kodunuz kullanılmadı — lütfen tekrar deneyin.",
       "notConfigured": "Kod kullanımı geçici olarak kullanılamıyor. Daha sonra tekrar deneyin."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Alınan Mesajları Çevir",
+    "tabOriginal": "Orijinal",
+    "tabSentences": "Cümleler",
+    "paste": "Yapıştır",
+    "reword": "Düzenle",
+    "checkTitle": "Kontrol",
+    "detectedInMessage": "MESAJINIZDA ALGILANDI",
+    "experimental": "Deneysel",
+    "genderSubtext": "Cinsiyete göre değişen kelimeler.",
+    "checkGenderedWords": "Cinsiyete bağlı kelimeleri kontrol et",
+    "rewordIntentCheck": "DÜZENLEME NİYET KONTROLÜ",
+    "rewordIntentSubtext": "Düzenlenen metnin niyetinizi doğru yansıttığını doğrulayın.",
+    "currentReword": "GEÇERLİ DÜZENLEME",
+    "originalMessage": "ORİJİNAL MESAJ",
+    "rewordOptions": "Düzenleme seçenekleri",
+    "whoAreYouTexting": "Kime mesaj yazıyorsunuz?",
+    "groupChat": "Grup Sohbeti",
+    "genderMale": "Erkek",
+    "genderFemale": "Kadın",
+    "rewordScript": "HEDEF DİL YAZISI",
+    "synonyms": "EŞ ANLAMLILAR",
+    "language": "Türkçe",
+    "typePlaceholder": "Bir şeyler yaz"
   }
 }

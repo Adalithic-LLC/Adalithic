@@ -28,7 +28,51 @@
       "Învățați o limbă",
       "Comunicați în afaceri",
       "Discutați cu prieteni din întreaga lume"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Da, vreau să învăț o limbă. De aceea traduc în japoneză.",
+        "Sigur! Când ai început?",
+        "Și eu, poate puțin mai mult.",
+        "Cred că da, și îmi place mult să exersez prin mesaje.",
+        "Scrisul îmi dă timp să citesc și să gândesc, chiar să spun cu voce tare.",
+        "O să-ți placă. Schimbă totul!",
+        "Nu, sunt în Statele Unite. Tu?",
+        "Uau! Să trăiești în Japonia trebuie să fie incredibil.",
+        "Ai străbătut țara?",
+        "De exemplu unde? Tokyo?",
+        "Care a fost preferatul tău?",
+        "Am văzut poze din Nikko. Ce loc frumos."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "O singură tastatură, pentru fiecare parte a conversației",
@@ -43,7 +87,12 @@
           "Vedeți o analiză cuvânt cu cuvânt",
           "Comparați sensul literal și cel natural, unul lângă altul"
         ],
-        "alt": "Arcatext traduce un mesaj primit, cu opțiuni de analiză și traducere literală."
+        "alt": "Arcatext traduce un mesaj primit, cu opțiuni de analiză și traducere literală.",
+        "demo": {
+          "sent": "Liber în weekend?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Sunt foarte bine! Hai la locul acela de pe coastă."
+        }
       },
       "homographs": {
         "title": "Dezambiguizați omografele",
@@ -53,7 +102,27 @@
           "Alegeți sensul pe care l-ați avut în minte",
           "Evitați traducerile greșite și stânjenitoare înainte de a trimite"
         ],
-        "alt": "Arcatext identifică un omograf și oferă sensul dorit."
+        "alt": "Arcatext identifică un omograf și oferă sensul dorit.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Instituție financiară"
+            },
+            {
+              "title": "riverbank",
+              "description": "Teren de pe malul unui râu"
+            },
+            {
+              "title": "tilt",
+              "description": "A se înclina"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Verificați traducerea în propria limbă",
@@ -63,7 +132,14 @@
           "Confirmați-vă intenția înainte de a trimite",
           "Învățați natural, pe măsură ce comunicați"
         ],
-        "alt": "Arcatext validează o traducere afișând-o din nou în limba maternă a utilizatorului."
+        "alt": "Arcatext validează o traducere afișând-o din nou în limba maternă a utilizatorului.",
+        "demo": {
+          "sent": "Bună dimineața!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Ne vedem la cafeneaua din gară.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Ne vedem la cafeneaua de lângă gară?"
+        }
       },
       "recipient": {
         "title": "Traduceri potrivite pentru cel cu care vorbiți",
@@ -73,7 +149,14 @@
           "Alegeți alfabetul sau scrierea dorită",
           "Corect din punct de vedere contextual, de fiecare dată"
         ],
-        "alt": "Opțiuni de reformulare Arcatext în funcție de genul destinatarului, conversația de grup și alfabetul japonez."
+        "alt": "Opțiuni de reformulare Arcatext în funcție de genul destinatarului, conversația de grup și alfabetul japonez.",
+        "demo": {
+          "sent": "Salut!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Îmbogățiți-vă vocabularul în timp ce discutați",
@@ -83,7 +166,16 @@
           "Descoperiți un vocabular mai bogat și mai natural",
           "Progres real din conversații reale"
         ],
-        "alt": "Arcatext oferă opțiuni de sinonime pentru un mesaj tradus."
+        "alt": "Arcatext oferă opțiuni de sinonime pentru un mesaj tradus.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Păstrați întregul fir de discuție în context",
@@ -93,7 +185,20 @@
           "Nu pierdeți niciodată firul discuției",
           "Conversații bilingve fără efort"
         ],
-        "alt": "Arcatext trimite o copie a mesajului în limba maternă a utilizatorului."
+        "alt": "Arcatext trimite o copie a mesajului în limba maternă a utilizatorului.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Ne vedem la cafeneaua de lângă gară."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Ești liber în weekendul acesta?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Nu am putut contacta serverul. Codul tău nu a fost folosit — încearcă din nou.",
       "notConfigured": "Revendicarea este temporar indisponibilă. Încearcă mai târziu."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Traduce mesajele primite",
+    "tabOriginal": "Original",
+    "tabSentences": "Propoziții",
+    "paste": "Lipește",
+    "reword": "Rescrie",
+    "checkTitle": "Verificare",
+    "detectedInMessage": "DETECTATE ÎN MESAJUL TĂU",
+    "experimental": "Experimental",
+    "genderSubtext": "Cuvinte care se schimbă în funcție de gen.",
+    "checkGenderedWords": "Verifică cuvintele cu gen",
+    "rewordIntentCheck": "VERIFICAREA INTENȚIEI REFORMULĂRII",
+    "rewordIntentSubtext": "Verifică dacă reformularea ți-a surprins intenția.",
+    "currentReword": "REFORMULAREA CURENTĂ",
+    "originalMessage": "MESAJUL ORIGINAL",
+    "rewordOptions": "Opțiuni de reformulare",
+    "whoAreYouTexting": "Cui îi scrii?",
+    "groupChat": "Chat de grup",
+    "genderMale": "Masculin",
+    "genderFemale": "Feminin",
+    "rewordScript": "SCRIEREA LIMBII ȚINTĂ",
+    "synonyms": "SINONIME",
+    "language": "Română",
+    "typePlaceholder": "Scrie ceva"
   }
 }

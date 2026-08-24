@@ -28,7 +28,51 @@
       "Matuto ng isang wika",
       "Makipag-usap para sa negosyo",
       "Makipag-chat sa mga kaibigan sa buong mundo"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Oo, gusto kong matuto ng wika. Kaya nagsasalin ako sa Hapon.",
+        "Sige! Kailan ka nagsimula?",
+        "Ako rin, siguro medyo mas matagal.",
+        "Sa tingin ko oo, at gustong-gusto kong magsanay sa mensahe.",
+        "Ang pagsulat ay nagbibigay ng oras magbasa at mag-isip, pati sabihin nang malakas.",
+        "Magugustuhan mo. Binabago nito ang lahat!",
+        "Hindi, nasa Amerika ako. Ikaw?",
+        "Wow! Siguradong napakaganda tumira sa Japan.",
+        "Nalibot mo na ba ang bansa?",
+        "Halimbawa saan? Tokyo?",
+        "Ano ang paborito mo?",
+        "Nakakita na ako ng litrato ng Nikko. Ang gandang lugar."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Isang keyboard, bawat bahagi ng usapan",
@@ -43,7 +87,12 @@
           "Tingnan ang salita-por-salitang breakdown",
           "Ihambing nang magkatabi ang literal at natural na kahulugan"
         ],
-        "alt": "Isinasalin ng Arcatext ang isang natanggap na mensahe na may breakdown at literal na mga opsyon."
+        "alt": "Isinasalin ng Arcatext ang isang natanggap na mensahe na may breakdown at literal na mga opsyon.",
+        "demo": {
+          "sent": "Libre ka ba sa weekend?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Ayos lang ako! Puntahan natin 'yung lugar sa baybayin."
+        }
       },
       "homographs": {
         "title": "Linawin ang mga homograph",
@@ -53,7 +102,27 @@
           "Piliin ang kahulugang ninanais mo",
           "Iwasan ang nakakahiyang maling salin bago mo ipadala"
         ],
-        "alt": "Tinutukoy ng Arcatext ang isang homograph at inaalok ang ninanais na kahulugan."
+        "alt": "Tinutukoy ng Arcatext ang isang homograph at inaalok ang ninanais na kahulugan.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Institusyong pampinansyal"
+            },
+            {
+              "title": "riverbank",
+              "description": "Lupa sa tabi ng ilog"
+            },
+            {
+              "title": "tilt",
+              "description": "Kumiling o humilig"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Suriing muli ang salin sa sarili mong wika",
@@ -63,7 +132,14 @@
           "Kumpirmahin ang iyong intensyon bago magpadala",
           "Matuto nang natural habang nag-uusap"
         ],
-        "alt": "Bine-validate ng Arcatext ang isang salin sa pamamagitan ng pagpapakita nito pabalik sa sariling wika ng user."
+        "alt": "Bine-validate ng Arcatext ang isang salin sa pamamagitan ng pagpapakita nito pabalik sa sariling wika ng user.",
+        "demo": {
+          "sent": "Magandang umaga!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Magkita tayo sa cafe ng istasyon.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Magkita tayo sa cafe malapit sa istasyon?"
+        }
       },
       "recipient": {
         "title": "Mga saling akma sa taong kausap mo",
@@ -73,7 +149,14 @@
           "Piliin ang alpabeto o script na gusto mo",
           "Tumpak sa konteksto sa bawat pagkakataon"
         ],
-        "alt": "Mga opsyon sa muling pagbabalangkas ng Arcatext para sa kasarian ng tatanggap, group chat, at alpabetong Hapon."
+        "alt": "Mga opsyon sa muling pagbabalangkas ng Arcatext para sa kasarian ng tatanggap, group chat, at alpabetong Hapon.",
+        "demo": {
+          "sent": "Kumusta!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Palaguin ang iyong bokabularyo habang nag-uusap",
@@ -83,7 +166,16 @@
           "Tuklasin ang mas mayaman at mas natural na bokabularyo",
           "Tunay na pag-unlad mula sa tunay na usapan"
         ],
-        "alt": "Nag-aalok ang Arcatext ng mga opsyon sa kasingkahulugan para sa isang isinaling mensahe."
+        "alt": "Nag-aalok ang Arcatext ng mga opsyon sa kasingkahulugan para sa isang isinaling mensahe.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Panatilihin sa konteksto ang buong usapan",
@@ -93,7 +185,20 @@
           "Hindi kailanman mawawala sa usapan",
           "Walang-hirap na dalawahang-wikang pag-uusap"
         ],
-        "alt": "Nagpapadala ang Arcatext ng kopya ng mensahe sa sariling wika ng user."
+        "alt": "Nagpapadala ang Arcatext ng kopya ng mensahe sa sariling wika ng user.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Magkita tayo sa cafe malapit sa istasyon."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "May oras ka ba ngayong weekend?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Hindi namin maabot ang server. Hindi pa nagagamit ang iyong code — subukan muli.",
       "notConfigured": "Pansamantalang hindi available ang pag-redeem. Subukan muli mamaya."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Isalin ang mga natanggap na mensahe",
+    "tabOriginal": "Orihinal",
+    "tabSentences": "Mga pangungusap",
+    "paste": "I-paste",
+    "reword": "Ayusin",
+    "checkTitle": "Suriin",
+    "detectedInMessage": "NATUKOY SA IYONG MENSAHE",
+    "experimental": "Eksperimental",
+    "genderSubtext": "Mga salitang nagbabago depende sa kasarian.",
+    "checkGenderedWords": "Suriin ang mga salitang may kasarian",
+    "rewordIntentCheck": "PAGSUSURI NG INTENSYON NG REWORD",
+    "rewordIntentSubtext": "Tiyaking nakuha ng Reword ang iyong intensyon.",
+    "currentReword": "KASALUKUYANG REWORD",
+    "originalMessage": "ORIHINAL NA MENSAHE",
+    "rewordOptions": "Mga opsyon sa Reword",
+    "whoAreYouTexting": "Sino ang tine-text mo?",
+    "groupChat": "Group chat",
+    "genderMale": "Lalaki",
+    "genderFemale": "Babae",
+    "rewordScript": "ALPABETO NG WIKANG PINUPUNTAHAN",
+    "synonyms": "MGA KASINGKAHULUGAN",
+    "language": "Filipino",
+    "typePlaceholder": "Magsulat ng kahit ano"
   }
 }

@@ -90,10 +90,16 @@ export default function CheckViewDemo() {
                         color: selected ? K.accent : K.xMark,
                       }}
                     >
-                      <span className="truncate text-[16px] font-semibold">
+                      <span
+                        dir="auto"
+                        className="truncate text-[16px] font-semibold"
+                      >
                         {m.title}
                       </span>
-                      <span className="text-[16px] font-medium leading-normal">
+                      <span
+                        dir="auto"
+                        className="text-[16px] font-medium leading-normal"
+                      >
                         {m.description}
                       </span>
                     </div>

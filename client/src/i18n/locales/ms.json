@@ -28,7 +28,51 @@
       "Pelajari sesuatu bahasa",
       "Berkomunikasi untuk perniagaan",
       "Berbual dengan rakan antarabangsa"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Ya, saya mahu belajar bahasa. Sebab itu saya terjemah ke bahasa Jepun.",
+        "Sudah tentu! Bila awak mula?",
+        "Saya pun sama, mungkin lebih lama sedikit.",
+        "Saya rasa begitu, dan saya suka berlatih melalui mesej.",
+        "Menaip beri saya masa membaca dan berfikir, malah menyebutnya kuat.",
+        "Awak pasti suka. Ia mengubah segalanya!",
+        "Tidak, saya di Amerika. Awak?",
+        "Wah! Tinggal di Jepun tentu hebat.",
+        "Awak dah jelajah negara itu?",
+        "Contohnya di mana? Tokyo?",
+        "Mana yang paling awak suka?",
+        "Saya pernah lihat gambar Nikko. Tempat yang cantik."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Satu papan kekunci, setiap bahagian perbualan",
@@ -43,7 +87,12 @@
           "Lihat pecahan perkataan demi perkataan",
           "Bandingkan makna harfiah dan makna semula jadi bersebelahan"
         ],
-        "alt": "Arcatext menterjemah mesej yang diterima dengan pilihan pecahan dan versi harfiah."
+        "alt": "Arcatext menterjemah mesej yang diterima dengan pilihan pecahan dan versi harfiah.",
+        "demo": {
+          "sent": "Lapang hujung minggu?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Saya sihat! Jom ke tempat di pesisir yang awak sebut."
+        }
       },
       "homographs": {
         "title": "Perjelas homograf",
@@ -53,7 +102,27 @@
           "Pilih makna yang anda maksudkan",
           "Elakkan salah terjemah yang janggal sebelum menghantar"
         ],
-        "alt": "Arcatext mengenal pasti homograf dan menawarkan makna yang dimaksudkan."
+        "alt": "Arcatext mengenal pasti homograf dan menawarkan makna yang dimaksudkan.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Institusi kewangan"
+            },
+            {
+              "title": "riverbank",
+              "description": "Tanah di tebing sungai"
+            },
+            {
+              "title": "tilt",
+              "description": "Condong atau miring"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Semak semula terjemahan dalam bahasa anda sendiri",
@@ -63,7 +132,14 @@
           "Sahkan niat anda sebelum menghantar",
           "Belajar secara semula jadi sambil berbual"
         ],
-        "alt": "Arcatext mengesahkan terjemahan dengan memaparkannya semula dalam bahasa ibunda pengguna."
+        "alt": "Arcatext mengesahkan terjemahan dengan memaparkannya semula dalam bahasa ibunda pengguna.",
+        "demo": {
+          "sent": "Selamat pagi!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Jumpa di kafe stesen.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Nak jumpa di kafe berdekatan stesen?"
+        }
       },
       "recipient": {
         "title": "Terjemahan yang sesuai dengan orang yang anda ajak berbual",
@@ -73,7 +149,14 @@
           "Pilih abjad atau tulisan yang anda mahu",
           "Tepat mengikut konteks setiap kali"
         ],
-        "alt": "Pilihan susun semula Arcatext untuk jantina penerima, sembang kumpulan, dan abjad Jepun."
+        "alt": "Pilihan susun semula Arcatext untuk jantina penerima, sembang kumpulan, dan abjad Jepun.",
+        "demo": {
+          "sent": "Hai!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Perkaya perbendaharaan kata anda sambil berbual",
@@ -83,7 +166,16 @@
           "Temui perbendaharaan kata yang lebih kaya dan semula jadi",
           "Kemajuan sebenar daripada perbualan sebenar"
         ],
-        "alt": "Arcatext menawarkan pilihan sinonim untuk mesej yang telah diterjemah."
+        "alt": "Arcatext menawarkan pilihan sinonim untuk mesej yang telah diterjemah.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Kekalkan seluruh perbualan dalam konteks",
@@ -93,7 +185,20 @@
           "Tidak pernah hilang jejak perbualan",
           "Perbualan dwibahasa tanpa susah payah"
         ],
-        "alt": "Arcatext menghantar salinan mesej dalam bahasa ibunda pengguna."
+        "alt": "Arcatext menghantar salinan mesej dalam bahasa ibunda pengguna.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Jom jumpa di kafe berdekatan stesen."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Awak lapang hujung minggu ini?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Kami tidak dapat menghubungi pelayan. Kod anda belum digunakan — sila cuba lagi.",
       "notConfigured": "Penebusan tidak tersedia buat sementara waktu. Cuba lagi nanti."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Terjemah mesej diterima",
+    "tabOriginal": "Asal",
+    "tabSentences": "Ayat",
+    "paste": "Tampal",
+    "reword": "Olah",
+    "checkTitle": "Semak",
+    "detectedInMessage": "DIKESAN DALAM MESEJ ANDA",
+    "experimental": "Eksperimental",
+    "genderSubtext": "Perkataan yang berubah mengikut jantina.",
+    "checkGenderedWords": "Semak perkataan yang bergantung pada jantina",
+    "rewordIntentCheck": "SEMAKAN MAKSUD OLAH SEMULA",
+    "rewordIntentSubtext": "Pastikan olahan semula menangkap maksud anda.",
+    "currentReword": "OLAHAN SEMULA SEMASA",
+    "originalMessage": "MESEJ ASAL",
+    "rewordOptions": "Pilihan olah semula",
+    "whoAreYouTexting": "Kepada siapa anda menghantar mesej?",
+    "groupChat": "Sembang kumpulan",
+    "genderMale": "Lelaki",
+    "genderFemale": "Perempuan",
+    "rewordScript": "ABJAD BAHASA SASARAN",
+    "synonyms": "SINONIM",
+    "language": "Bahasa Melayu",
+    "typePlaceholder": "Tulis sesuatu"
   }
 }

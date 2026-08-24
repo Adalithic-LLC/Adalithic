@@ -28,7 +28,51 @@
       "Opi kieli",
       "Viesti liike-elämässä",
       "Keskustele ystävien kanssa ympäri maailmaa"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Kyllä, haluan oppia kielen. Siksi käännän japaniksi.",
+        "Toki! Milloin aloitit?",
+        "Sama täällä, ehkä vähän pidempään.",
+        "Uskon niin, ja rakastan harjoittelua viesteillä.",
+        "Kirjoittaminen antaa aikaa lukea ja ajatella, jopa sanoa ääneen.",
+        "Tulet rakastamaan sitä. Se muuttaa kaiken!",
+        "En, olen Yhdysvalloissa. Entä sinä?",
+        "Vau! Japanissa asuminen on varmasti uskomatonta.",
+        "Oletko kiertänyt maata?",
+        "Kuten missä? Tokio?",
+        "Mikä oli suosikkisi?",
+        "Olen nähnyt kuvia Nikkosta. Miten kaunis paikka."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Yksi näppäimistö, keskustelun jokaiseen osaan",
@@ -43,7 +87,12 @@
           "Näe sana sanalta -erittely",
           "Vertaa sananmukaista ja luontevaa merkitystä rinnakkain"
         ],
-        "alt": "Arcatext kääntää saapuneen viestin erittely- ja sananmukaisine vaihtoehtoineen."
+        "alt": "Arcatext kääntää saapuneen viestin erittely- ja sananmukaisine vaihtoehtoineen.",
+        "demo": {
+          "sent": "Vapaana viikonloppuna?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Voin hyvin! Mennään sinne rannikon paikkaan."
+        }
       },
       "homographs": {
         "title": "Selvennä homografit",
@@ -53,7 +102,27 @@
           "Valitse tarkoittamasi merkitys",
           "Vältä kiusalliset käännösvirheet ennen lähettämistä"
         ],
-        "alt": "Arcatext tunnistaa homografin ja tarjoaa tarkoitettua merkitystä."
+        "alt": "Arcatext tunnistaa homografin ja tarjoaa tarkoitettua merkitystä.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Rahoituslaitos"
+            },
+            {
+              "title": "riverbank",
+              "description": "Joen rannan maa"
+            },
+            {
+              "title": "tilt",
+              "description": "Kallistua"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Tarkista käännös omalla kielelläsi",
@@ -63,7 +132,14 @@
           "Vahvista aikomuksesi ennen lähettämistä",
           "Opi luonnollisesti matkan varrella"
         ],
-        "alt": "Arcatext varmistaa käännöksen näyttämällä sen takaisin käyttäjän äidinkielellä."
+        "alt": "Arcatext varmistaa käännöksen näyttämällä sen takaisin käyttäjän äidinkielellä.",
+        "demo": {
+          "sent": "Huomenta!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Nähdään aseman kahvilassa.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Tavataanko aseman vieressä olevassa kahvilassa?"
+        }
       },
       "recipient": {
         "title": "Käännöksiä, jotka sopivat sille, kenen kanssa puhut",
@@ -73,7 +149,14 @@
           "Valitse haluamasi aakkosto tai kirjoitusjärjestelmä",
           "Kontekstin mukaan tarkka joka kerta"
         ],
-        "alt": "Arcatextin uudelleenmuotoiluvaihtoehdot vastaanottajan sukupuolen, ryhmächatin ja japanilaisen aakkoston mukaan."
+        "alt": "Arcatextin uudelleenmuotoiluvaihtoehdot vastaanottajan sukupuolen, ryhmächatin ja japanilaisen aakkoston mukaan.",
+        "demo": {
+          "sent": "Moi!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Kasvata sanavarastoasi keskustellessasi",
@@ -83,7 +166,16 @@
           "Löydä rikkaampi, luontevampi sanavarasto",
           "Aitoa edistymistä aidoista keskusteluista"
         ],
-        "alt": "Arcatext tarjoaa synonyymivaihtoehtoja käännetylle viestille."
+        "alt": "Arcatext tarjoaa synonyymivaihtoehtoja käännetylle viestille.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Pidä koko keskusteluketju asiayhteydessä",
@@ -93,7 +185,20 @@
           "Älä koskaan menetä keskustelun lankaa",
           "Vaivattomia kaksikielisiä keskusteluja"
         ],
-        "alt": "Arcatext lähettää kopion viestistä käyttäjän äidinkielellä."
+        "alt": "Arcatext lähettää kopion viestistä käyttäjän äidinkielellä.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Tavataan aseman vieressä olevassa kahvilassa."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Onko sinulla aikaa tänä viikonloppuna?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Palvelimeen ei saatu yhteyttä. Koodiasi ei ole käytetty — yritä uudelleen.",
       "notConfigured": "Lunastus ei ole juuri nyt käytettävissä. Yritä myöhemmin uudelleen."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Käännä saapuneet viestit",
+    "tabOriginal": "Alkuperäinen",
+    "tabSentences": "Lauseet",
+    "paste": "Liitä",
+    "reword": "Muotoile",
+    "checkTitle": "Tarkista",
+    "detectedInMessage": "HAVAITTU VIESTISSÄSI",
+    "experimental": "Kokeellinen",
+    "genderSubtext": "Sanat, jotka muuttuvat sukupuolen mukaan.",
+    "checkGenderedWords": "Tarkista sukupuolen mukaan muuttuvat sanat",
+    "rewordIntentCheck": "UUDELLEENMUOTOILUN TARKOITUKSEN TARKISTUS",
+    "rewordIntentSubtext": "Varmista, että uudelleenmuotoilu vastaa tarkoitustasi.",
+    "currentReword": "NYKYINEN UUDELLEENMUOTOILU",
+    "originalMessage": "ALKUPERÄINEN VIESTI",
+    "rewordOptions": "Uudelleenmuotoilun asetukset",
+    "whoAreYouTexting": "Kenelle viestittelet?",
+    "groupChat": "Ryhmächat",
+    "genderMale": "Mies",
+    "genderFemale": "Nainen",
+    "rewordScript": "KOHDEKIELEN KIRJOITUSJÄRJESTELMÄ",
+    "synonyms": "SYNONYYMIT",
+    "language": "Suomi",
+    "typePlaceholder": "Kirjoita jotain"
   }
 }

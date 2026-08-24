@@ -28,7 +28,51 @@
       "Naučte se jazyk",
       "Komunikujte v byznysu",
       "Chatujte s přáteli z celého světa"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Ano, chci se naučit jazyk. Proto překládám do japonštiny.",
+        "Jasně! Kdy jsi začala?",
+        "Já taky, možná o něco déle.",
+        "Myslím, že ano, a moc rád trénuju psaním.",
+        "Psaní mi dává čas číst a přemýšlet, dokonce to říct nahlas.",
+        "Bude se ti to líbit. Změní to všechno!",
+        "Ne, jsem ve Spojených státech. A ty?",
+        "Páni! Žít v Japonsku musí být neuvěřitelné.",
+        "Procestovala jsi zemi?",
+        "Třeba kde? Tokio?",
+        "Co bylo tvoje nejoblíbenější?",
+        "Viděl jsem fotky Nikka. Jaké krásné místo."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Jedna klávesnice pro každou část konverzace",
@@ -43,7 +87,12 @@
           "Prohlédněte si rozbor slovo po slovu",
           "Porovnejte doslovný a přirozený význam vedle sebe"
         ],
-        "alt": "Arcatext překládá přijatou zprávu s rozborem a doslovnými možnostmi."
+        "alt": "Arcatext překládá přijatou zprávu s rozborem a doslovnými možnostmi.",
+        "demo": {
+          "sent": "Volno o víkendu?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Mám se skvěle! Pojďme na to místo u pobřeží."
+        }
       },
       "homographs": {
         "title": "Rozlište homonyma",
@@ -53,7 +102,27 @@
           "Vyberte význam, který jste zamýšleli",
           "Vyhněte se trapným chybám v překladu ještě před odesláním"
         ],
-        "alt": "Arcatext rozpoznává homonymum a nabízí zamýšlený význam."
+        "alt": "Arcatext rozpoznává homonymum a nabízí zamýšlený význam.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Finanční instituce"
+            },
+            {
+              "title": "riverbank",
+              "description": "Půda na břehu řeky"
+            },
+            {
+              "title": "tilt",
+              "description": "Naklánět se"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Ověřte si překlad ve svém vlastním jazyce",
@@ -63,7 +132,14 @@
           "Potvrďte svůj záměr před odesláním",
           "Učte se přirozeně za pochodu"
         ],
-        "alt": "Arcatext ověřuje překlad tím, že jej zobrazí zpět v rodném jazyce uživatele."
+        "alt": "Arcatext ověřuje překlad tím, že jej zobrazí zpět v rodném jazyce uživatele.",
+        "demo": {
+          "sent": "Dobré ráno!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Sejdeme se v kavárně na nádraží.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Sejdeme se v kavárně u nádraží?"
+        }
       },
       "recipient": {
         "title": "Překlady, které sedí tomu, s kým mluvíte",
@@ -73,7 +149,14 @@
           "Vyberte si abecedu nebo písmo, které chcete",
           "Kontextově přesné pokaždé"
         ],
-        "alt": "Možnosti přeformulování v Arcatextu podle rodu příjemce, skupinového chatu a japonské abecedy."
+        "alt": "Možnosti přeformulování v Arcatextu podle rodu příjemce, skupinového chatu a japonské abecedy.",
+        "demo": {
+          "sent": "Ahoj!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Rozšiřujte si slovní zásobu během chatování",
@@ -83,7 +166,16 @@
           "Objevujte bohatší a přirozenější slovní zásobu",
           "Skutečný pokrok ze skutečných konverzací"
         ],
-        "alt": "Arcatext nabízí možnosti synonym pro přeloženou zprávu."
+        "alt": "Arcatext nabízí možnosti synonym pro přeloženou zprávu.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Udržujte celé vlákno v kontextu",
@@ -93,7 +185,20 @@
           "Nikdy neztraťte přehled o vláknu",
           "Snadné dvojjazyčné konverzace"
         ],
-        "alt": "Arcatext odesílá kopii zprávy v rodném jazyce uživatele."
+        "alt": "Arcatext odesílá kopii zprávy v rodném jazyce uživatele.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Sejdeme se v kavárně u nádraží."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Máš čas tento víkend?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Nepodařilo se spojit se serverem. Váš kód nebyl použit — zkuste to znovu.",
       "notConfigured": "Uplatnění kódů je dočasně nedostupné. Zkuste to prosím později."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Přeložit přijaté zprávy",
+    "tabOriginal": "Originál",
+    "tabSentences": "Věty",
+    "paste": "Vložit",
+    "reword": "Přepsat",
+    "checkTitle": "Kontrola",
+    "detectedInMessage": "ZJIŠTĚNO VE VAŠÍ ZPRÁVĚ",
+    "experimental": "Experimentální",
+    "genderSubtext": "Slova, která se mění v závislosti na rodu.",
+    "checkGenderedWords": "Zkontrolovat slova závislá na rodu",
+    "rewordIntentCheck": "KONTROLA ZÁMĚRU PŘEFORMULOVÁNÍ",
+    "rewordIntentSubtext": "Ověřte, že přeformulování zachytilo váš záměr.",
+    "currentReword": "AKTUÁLNÍ PŘEFORMULOVÁNÍ",
+    "originalMessage": "PŮVODNÍ ZPRÁVA",
+    "rewordOptions": "Možnosti přeformulování",
+    "whoAreYouTexting": "Komu píšete?",
+    "groupChat": "Skupinový chat",
+    "genderMale": "Muž",
+    "genderFemale": "Žena",
+    "rewordScript": "PÍSMO CÍLOVÉHO JAZYKA",
+    "synonyms": "SYNONYMA",
+    "language": "Čeština",
+    "typePlaceholder": "Napište něco"
   }
 }

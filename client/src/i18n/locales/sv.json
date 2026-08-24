@@ -28,7 +28,51 @@
       "Lär dig ett språk",
       "Kommunicera i affärer",
       "Chatta med vänner världen över"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Ja, jag vill lära mig ett språk. Därför översätter jag till japanska.",
+        "Visst! När började du?",
+        "Samma här, kanske lite längre.",
+        "Jag tror det, och jag älskar att öva via meddelanden.",
+        "Att skriva ger mig tid att läsa och tänka, till och med säga det högt.",
+        "Du kommer älska det. Det förändrar allt!",
+        "Nej, jag är i USA. Och du?",
+        "Oj! Att bo i Japan måste vara otroligt.",
+        "Har du rest runt i landet?",
+        "Som var? Tokyo?",
+        "Vilket var din favorit?",
+        "Jag har sett bilder på Nikko. Vilken vacker plats."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Ett tangentbord, varje del av samtalet",
@@ -43,7 +87,12 @@
           "Se en ord-för-ord-uppdelning",
           "Jämför den bokstavliga och naturliga betydelsen sida vid sida"
         ],
-        "alt": "Arcatext översätter ett mottaget meddelande med uppdelning och bokstavliga alternativ."
+        "alt": "Arcatext översätter ett mottaget meddelande med uppdelning och bokstavliga alternativ.",
+        "demo": {
+          "sent": "Ledig i helgen?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Jag mår toppen! Vi går till det där stället vid kusten."
+        }
       },
       "homographs": {
         "title": "Särskilj homografer",
@@ -53,7 +102,27 @@
           "Välj den betydelse du menade",
           "Undvik klumpiga felöversättningar innan du skickar"
         ],
-        "alt": "Arcatext identifierar en homograf och erbjuder den avsedda betydelsen."
+        "alt": "Arcatext identifierar en homograf och erbjuder den avsedda betydelsen.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Finansinstitut"
+            },
+            {
+              "title": "riverbank",
+              "description": "Mark längs en flodstrand"
+            },
+            {
+              "title": "tilt",
+              "description": "Luta eller slutta"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Dubbelkolla översättningen på ditt eget språk",
@@ -63,7 +132,14 @@
           "Bekräfta din avsikt innan du skickar",
           "Lär dig naturligt längs vägen"
         ],
-        "alt": "Arcatext validerar en översättning genom att visa den tillbaka på användarens modersmål."
+        "alt": "Arcatext validerar en översättning genom att visa den tillbaka på användarens modersmål.",
+        "demo": {
+          "sent": "God morgon!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Vi ses på stationskaféet.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Ska vi ses på kaféet vid stationen?"
+        }
       },
       "recipient": {
         "title": "Översättningar som passar den du pratar med",
@@ -73,7 +149,14 @@
           "Välj det alfabet eller skriftsystem du vill ha",
           "Kontextuellt korrekt varje gång"
         ],
-        "alt": "Arcatext omformuleringsalternativ för mottagarens kön, gruppchatt och japanskt alfabet."
+        "alt": "Arcatext omformuleringsalternativ för mottagarens kön, gruppchatt och japanskt alfabet.",
+        "demo": {
+          "sent": "Hej!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Utöka ditt ordförråd medan du chattar",
@@ -83,7 +166,16 @@
           "Upptäck ett rikare, mer naturligt ordförråd",
           "Verkliga framsteg från verkliga samtal"
         ],
-        "alt": "Arcatext erbjuder synonymalternativ för ett översatt meddelande."
+        "alt": "Arcatext erbjuder synonymalternativ för ett översatt meddelande.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Håll hela konversationen i sitt sammanhang",
@@ -93,7 +185,20 @@
           "Tappa aldrig bort tråden",
           "Obesvärade tvåspråkiga samtal"
         ],
-        "alt": "Arcatext skickar en kopia av meddelandet på användarens modersmål."
+        "alt": "Arcatext skickar en kopia av meddelandet på användarens modersmål.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Vi ses på kaféet vid stationen."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Har du tid i helgen?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Vi kunde inte nå servern. Din kod har inte använts — försök igen.",
       "notConfigured": "Inlösen är tillfälligt otillgänglig. Försök igen senare."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Översätt mottagna meddelanden",
+    "tabOriginal": "Original",
+    "tabSentences": "Meningar",
+    "paste": "Klistra in",
+    "reword": "Skriv om",
+    "checkTitle": "Kontroll",
+    "detectedInMessage": "UPPTÄCKTA I DITT MEDDELANDE",
+    "experimental": "Experimentell",
+    "genderSubtext": "Ord som ändras beroende på kön.",
+    "checkGenderedWords": "Kontrollera könsböjda ord",
+    "rewordIntentCheck": "AVSIKTSKONTROLL FÖR OMFORMULERING",
+    "rewordIntentSubtext": "Verifiera att omformuleringen fångade din avsikt.",
+    "currentReword": "AKTUELL OMFORMULERING",
+    "originalMessage": "URSPRUNGLIGT MEDDELANDE",
+    "rewordOptions": "Omformuleringsalternativ",
+    "whoAreYouTexting": "Vem skriver du till?",
+    "groupChat": "Gruppchatt",
+    "genderMale": "Man",
+    "genderFemale": "Kvinna",
+    "rewordScript": "MÅLSPRÅKETS SKRIFT",
+    "synonyms": "SYNONYMER",
+    "language": "Svenska",
+    "typePlaceholder": "Skriv något"
   }
 }

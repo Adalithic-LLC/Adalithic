@@ -28,7 +28,51 @@
       "Learn a language",
       "Communicate for business",
       "Chat with international friends"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Yeah, I personally want to learn a language. That's why I'm translating to Japanese.",
+        "Sure! When did you start learning?",
+        "Same here, maybe a bit longer.",
+        "I think so, and I really love texting to practice.",
+        "Texting gives me time to read and think, even say each message out loud.",
+        "You'll love it. It's a game-changer!",
+        "No, I'm in the United States. And you?",
+        "Oh wow! Living in Japan must be incredible.",
+        "Have you explored the country?",
+        "Like where? Tokyo?",
+        "What was your favorite?",
+        "I've seen photos of Nikko. What a beautiful place."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "One keyboard, every part of the conversation",

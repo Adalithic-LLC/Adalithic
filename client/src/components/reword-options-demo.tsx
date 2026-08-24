@@ -121,6 +121,7 @@ export default function RewordOptionsDemo() {
             style={{ height: 48, background: K.cardBg }}
           >
             <span
+              dir="auto"
               className="text-[16px] font-medium"
               style={{ color: K.xMark }}
             >

@@ -42,6 +42,7 @@ export default function ReverseCheckDemo() {
             }}
           >
             <p
+              dir="auto"
               className="px-3 pb-1 pt-4 text-[16px] leading-relaxed"
               style={{ color: K.xMark }}
             >

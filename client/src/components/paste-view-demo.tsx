@@ -134,6 +134,7 @@ export default function PasteViewDemo() {
             <div className="flex items-start px-3">
               <div className="min-w-0 flex-1">
                 <p
+                  dir="auto"
                   className="text-[16px] leading-snug"
                   style={{ color: P.label, minHeight: 37 }}
                 >
@@ -146,6 +147,7 @@ export default function PasteViewDemo() {
                     style={{ width: 2, background: P.accent }}
                   />
                   <p
+                    dir="auto"
                     className="py-[2px] text-[16px] leading-snug"
                     style={{ color: P.label }}
                   >

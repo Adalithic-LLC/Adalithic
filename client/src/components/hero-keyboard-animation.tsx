@@ -1,8 +1,23 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 // The keyboard chrome itself is shared with the Reword feature section, which
 // renders the same surface as a still frame.
-import { C, DESIGN_H, DESIGN_W, InputBar, KeyboardPanel } from "@/components/keyboard-surface";
+import {
+  C,
+  DESIGN_H,
+  DESIGN_W,
+  InputBar,
+  KeyboardPanel,
+} from "@/components/keyboard-surface";
 
 /**
  * HeroKeyboardAnimation
@@ -30,40 +45,27 @@ type Step =
   | { kind: "sent"; native: string; reworded?: string }
   | { kind: "recv"; text: string };
 
-const SCRIPT: Step[] = [
-  { kind: "recv", text: "それ、すごくいいね！" },
-  {
-    kind: "sent",
-    native: "Yeah, I personally want to learn a language. That's why I'm translating to Japanese.",
-    reworded: "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
-  },
-  { kind: "recv", text: "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！" },
-  { kind: "sent", native: "Sure! When did you start learning?", reworded: "いいね！いつから勉強し始めたの？" },
-  { kind: "recv", text: "1年くらい前からだよ。だからまだ慣れてないんだ。" },
-  { kind: "sent", native: "Same here, maybe a bit longer.", reworded: "私も同じくらい、たぶんもう少し長いかな。" },
-  { kind: "recv", text: "完璧、たぶん似たようなレベルだね。" },
-  { kind: "sent", native: "I think so, and I really love texting to practice.", reworded: "そうだね、それにメッセージで練習するのが大好きなんだ。" },
-  { kind: "recv", text: "どうして？" },
-  {
-    kind: "sent",
-    native: "Texting gives me time to read and think, even say each message out loud.",
-    reworded: "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
-  },
-  { kind: "recv", text: "うん、なるほどね。このキーボードを使うのは初めてなんだ。" },
-  { kind: "sent", native: "You'll love it. It's a game-changer!", reworded: "絶対気に入るよ。まさに革命的だから！" },
-  { kind: "recv", text: "ところで、日本に住んでるの？" },
-  { kind: "sent", native: "No, I'm in the United States. And you?", reworded: "ううん、アメリカにいるよ。君は？" },
-  { kind: "recv", text: "私は日本に住んでるよ！言語に浸りたくてね。" },
-  { kind: "sent", native: "Oh wow! Living in Japan must be incredible.", reworded: "わあ！日本に住むなんて最高だろうね。" },
-  { kind: "recv", text: "本当に楽しいよ。食べ物も最高。" },
-  { kind: "sent", native: "Have you explored the country?", reworded: "国内はいろいろ回った？" },
-  { kind: "recv", text: "うん、あちこち行ったよ。" },
-  { kind: "sent", native: "Like where? Tokyo?", reworded: "例えばどこ？東京とか？" },
-  { kind: "recv", text: "うん、でももっといろんな所に行ったよ。" },
-  { kind: "sent", native: "What was your favorite?", reworded: "一番のお気に入りはどこだった？" },
-  { kind: "recv", text: "やっぱり日光国立公園かな。" },
-  { kind: "sent", native: "I've seen photos of Nikko. What a beautiful place.", reworded: "日光の写真を見たことあるよ。なんて美しい場所なんだ。" },
-];
+// The demo conversation now lives in i18n under `hero.script`, as three
+// index-aligned arrays: `native` (what the reader types, in their own
+// language), `reworded` (the same message after Reword, in the partner
+// language) and `recv` (the replies, also partner language). Building it here
+// keeps the timeline's shape while letting every line localize.
+function buildScript(t: TFunction): Step[] {
+  const arr = (k: string) => {
+    const v = t(`hero.script.${k}`, { returnObjects: true }) as unknown;
+    return Array.isArray(v) ? (v as string[]) : [];
+  };
+  const native = arr("native");
+  const reworded = arr("reworded");
+  const recv = arr("recv");
+  const steps: Step[] = [];
+  for (let i = 0; i < recv.length; i++) {
+    steps.push({ kind: "recv", text: recv[i] });
+    if (native[i])
+      steps.push({ kind: "sent", native: native[i], reworded: reworded[i] });
+  }
+  return steps;
+}
 
 type Bubble = {
   id: number;
@@ -93,7 +95,8 @@ const FADE_CAP_DEFAULT = 200; // fallback fade-out height until measured (design
 const NEWEST_CLEAR = 60; // px reserved at the base so the newest message stays fully opaque
 
 const TYPE_MS = 1000; // total typing duration (both input and received bubbles)
-const perChar = (len: number) => Math.max(18, Math.round(TYPE_MS / Math.max(1, len)));
+const perChar = (len: number) =>
+  Math.max(18, Math.round(TYPE_MS / Math.max(1, len)));
 
 interface HeroKeyboardAnimationProps {
   /** Held until the intro's logo "clicks" into the field; then typing begins. */
@@ -124,6 +127,7 @@ export default function HeroKeyboardAnimation({
   subheaderText = "",
   onSubheaderSend,
 }: HeroKeyboardAnimationProps) {
+  const { t, i18n } = useTranslation();
   const reduceMotion = useReducedMotion();
 
   // ── visual state driven by the timeline ──
@@ -146,7 +150,8 @@ export default function HeroKeyboardAnimation({
       fieldElRef.current = el;
       if (typeof inputRef === "function") inputRef(el);
       else if (inputRef && "current" in inputRef)
-        (inputRef as React.MutableRefObject<HTMLDivElement | null>).current = el;
+        (inputRef as React.MutableRefObject<HTMLDivElement | null>).current =
+          el;
     },
     [inputRef],
   );
@@ -191,7 +196,8 @@ export default function HeroKeyboardAnimation({
       cum += h + STACK_GAP;
     }
     setPlacement(next);
-    if (gone.length) setBubbles((prev) => prev.filter((b) => !gone.includes(b.id)));
+    if (gone.length)
+      setBubbles((prev) => prev.filter((b) => !gone.includes(b.id)));
   }, [bubbles, fadeCap, reduceMotion]);
 
   // Fade each message by its LIVE screen position (framer animates the push;
@@ -243,7 +249,8 @@ export default function HeroKeyboardAnimation({
     const f = fieldElRef.current;
     if (!kb || !f || !scale) return;
     // How far the field's top sits above the keyboard panel's top (design px).
-    const fieldAboveKb = (kb.getBoundingClientRect().top - f.getBoundingClientRect().top) / scale;
+    const fieldAboveKb =
+      (kb.getBoundingClientRect().top - f.getBoundingClientRect().top) / scale;
     setBaseOffset(kb.offsetHeight + fieldAboveKb + FIELD_GAP - BASE_BOTTOM);
   }, [scale]);
   useLayoutEffect(() => {
@@ -265,7 +272,10 @@ export default function HeroKeyboardAnimation({
         clearLineRef.current = clearLine;
         // Reserve a little space at the base so the newest message stays fully
         // opaque, then fade across the rest of the gap up to the clear line.
-        bandRef.current = Math.max(40, baseY - clearLine - NEWEST_CLEAR * scale);
+        bandRef.current = Math.max(
+          40,
+          baseY - clearLine - NEWEST_CLEAR * scale,
+        );
         setFadeCap(Math.max(70, (baseY - clearLine) / scale));
       }
     };
@@ -282,19 +292,21 @@ export default function HeroKeyboardAnimation({
     };
   }, [scale, taglineRef, titleRef, syncBaseOffset]);
 
-  // Build the continuously looping timeline. Rebuilt only when reduced-motion
-  // changes.
+  // Build the continuously looping timeline. Rebuilt when reduced-motion or the
+  // language changes — the script is localized, so switching locale restarts it
+  // in the new language.
+  const script = useMemo(() => buildScript(t), [t, i18n.language]);
   useEffect(() => {
     // Reduced motion: skip the animation and show the last few messages
     // statically (the hero reveals the subheader directly).
     if (reduceMotion) {
       setText("");
       let id = 1;
-      const last = SCRIPT.slice(-4).map((s) => ({
+      const last = script.slice(-4).map((s) => ({
         id: id++,
         side: (s.kind === "sent" ? "sent" : "recv") as "sent" | "recv",
-        text: s.kind === "sent" ? s.reworded ?? s.native : s.text,
-        shown: (s.kind === "sent" ? s.reworded ?? s.native : s.text).length,
+        text: s.kind === "sent" ? (s.reworded ?? s.native) : s.text,
+        shown: (s.kind === "sent" ? (s.reworded ?? s.native) : s.text).length,
       }));
       setBubbles(last);
       return;
@@ -307,7 +319,10 @@ export default function HeroKeyboardAnimation({
     // A sent bubble appears at the base of the stack, pushing older messages up.
     const spawnSent = (msg: string) => {
       const id = bubbleId.current++;
-      setBubbles((prev) => [...prev, { id, side: "sent", text: msg, shown: msg.length }]);
+      setBubbles((prev) => [
+        ...prev,
+        { id, side: "sent", text: msg, shown: msg.length },
+      ]);
     };
 
     // A received bubble appears at the base and types itself out; the next
@@ -322,7 +337,8 @@ export default function HeroKeyboardAnimation({
       setBubbles((prev) => {
         const a = prev.slice();
         const i = a.length - 1;
-        if (i >= 0 && a[i].side === "recv") a[i] = { ...a[i], text: full, shown: n };
+        if (i >= 0 && a[i].side === "recv")
+          a[i] = { ...a[i], text: full, shown: n };
         return a;
       });
 
@@ -349,7 +365,7 @@ export default function HeroKeyboardAnimation({
     // the conversation loops from here.
     const loopStart = beats.length;
 
-    SCRIPT.forEach((step) => {
+    script.forEach((step) => {
       if (step.kind === "sent") {
         const { native, reworded } = step;
         b(() => setText(""), 40);
@@ -415,7 +431,7 @@ export default function HeroKeyboardAnimation({
     };
     run();
     return () => clearTimeout(timer);
-  }, [reduceMotion, active, subheaderText]);
+  }, [reduceMotion, active, subheaderText, script]);
 
   // Shift state: the keys show caps only while the field is empty.
   const lower = text === "";
@@ -454,7 +470,10 @@ export default function HeroKeyboardAnimation({
                 bubbles.length > 0 && (
                   <div className="absolute inset-x-3 bottom-1 flex flex-col gap-3">
                     {bubbles.map((bub) => (
-                      <div key={bub.id} className={`flex ${bub.side === "sent" ? "justify-end" : "justify-start"}`}>
+                      <div
+                        key={bub.id}
+                        className={`flex ${bub.side === "sent" ? "justify-end" : "justify-start"}`}
+                      >
                         <div
                           className="max-w-[74%] rounded-[20px] px-3.5 py-2 text-[17px]"
                           style={
@@ -492,11 +511,19 @@ export default function HeroKeyboardAnimation({
                       style={style}
                       initial={{ y: 0 }}
                       animate={{ y: p ? -p.y : 0 }}
-                      transition={{ type: "tween", duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
+                      transition={{
+                        type: "tween",
+                        duration: 0.5,
+                        ease: [0.22, 0.61, 0.36, 1],
+                      }}
                     >
                       <div
                         className="rounded-[20px] px-3.5 py-2 text-[17px]"
-                        style={isSent ? { background: C.sentBubble, color: "#fff" } : { background: C.recvGray, color: "#000" }}
+                        style={
+                          isSent
+                            ? { background: C.sentBubble, color: "#fff" }
+                            : { background: C.recvGray, color: "#000" }
+                        }
                       >
                         {isSent ? bub.text : bub.text.slice(0, bub.shown)}
                         {showCaret && (

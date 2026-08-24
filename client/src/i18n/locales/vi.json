@@ -28,7 +28,51 @@
       "Học một ngôn ngữ",
       "Giao tiếp trong công việc",
       "Trò chuyện với bạn bè quốc tế"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Đúng vậy, mình muốn học một ngôn ngữ. Nên mình dịch sang tiếng Nhật.",
+        "Tất nhiên! Bạn bắt đầu khi nào?",
+        "Mình cũng vậy, có lẽ lâu hơn chút.",
+        "Mình nghĩ vậy, và mình rất thích luyện tập qua tin nhắn.",
+        "Nhắn tin cho mình thời gian đọc và nghĩ, thậm chí đọc to lên.",
+        "Bạn sẽ thích lắm. Nó thay đổi mọi thứ!",
+        "Không, mình ở Mỹ. Còn bạn?",
+        "Ồ! Sống ở Nhật chắc tuyệt lắm.",
+        "Bạn đã đi khắp đất nước chưa?",
+        "Ví dụ ở đâu? Tokyo?",
+        "Nơi nào bạn thích nhất?",
+        "Mình đã xem ảnh Nikko. Thật là một nơi đẹp."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Một bàn phím, cho mọi phần của cuộc trò chuyện",
@@ -43,7 +87,12 @@
           "Xem phân tích từng từ một",
           "So sánh nghĩa sát và nghĩa tự nhiên cạnh nhau"
         ],
-        "alt": "Arcatext đang dịch một tin nhắn nhận được kèm tùy chọn phân tích và bản dịch sát nghĩa."
+        "alt": "Arcatext đang dịch một tin nhắn nhận được kèm tùy chọn phân tích và bản dịch sát nghĩa.",
+        "demo": {
+          "sent": "Cuối tuần rảnh chứ?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Mình khỏe! Đi đến chỗ ven biển bạn nhắc đi."
+        }
       },
       "homographs": {
         "title": "Phân biệt từ đồng tự",
@@ -53,7 +102,27 @@
           "Chọn đúng nghĩa bạn muốn",
           "Tránh những lỗi dịch khó xử trước khi gửi"
         ],
-        "alt": "Arcatext đang nhận diện một từ nhiều nghĩa và đưa ra nghĩa bạn muốn dùng."
+        "alt": "Arcatext đang nhận diện một từ nhiều nghĩa và đưa ra nghĩa bạn muốn dùng.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Tổ chức tài chính"
+            },
+            {
+              "title": "riverbank",
+              "description": "Vùng đất ven sông"
+            },
+            {
+              "title": "tilt",
+              "description": "Nghiêng hoặc dốc"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Kiểm tra lại bản dịch bằng chính ngôn ngữ của bạn",
@@ -63,7 +132,14 @@
           "Xác nhận đúng ý trước khi gửi",
           "Học một cách tự nhiên khi trò chuyện"
         ],
-        "alt": "Arcatext đang xác thực bản dịch bằng cách hiển thị lại bằng tiếng mẹ đẻ của người dùng."
+        "alt": "Arcatext đang xác thực bản dịch bằng cách hiển thị lại bằng tiếng mẹ đẻ của người dùng.",
+        "demo": {
+          "sent": "Chào buổi sáng!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Gặp nhau ở quán cà phê nhà ga nhé.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Mình gặp ở quán cà phê cạnh nhà ga nhé?"
+        }
       },
       "recipient": {
         "title": "Bản dịch phù hợp với người bạn đang trò chuyện",
@@ -73,7 +149,14 @@
           "Chọn bảng chữ cái hoặc hệ chữ bạn muốn",
           "Chính xác theo ngữ cảnh mọi lúc"
         ],
-        "alt": "Các tùy chọn diễn đạt lại của Arcatext theo giới tính người nhận, nhóm trò chuyện và bảng chữ cái tiếng Nhật."
+        "alt": "Các tùy chọn diễn đạt lại của Arcatext theo giới tính người nhận, nhóm trò chuyện và bảng chữ cái tiếng Nhật.",
+        "demo": {
+          "sent": "Chào!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Mở rộng vốn từ ngay khi trò chuyện",
@@ -83,7 +166,16 @@
           "Khám phá vốn từ phong phú và tự nhiên hơn",
           "Tiến bộ thực sự từ những cuộc trò chuyện thực tế"
         ],
-        "alt": "Arcatext đang đưa ra các tùy chọn từ đồng nghĩa cho một tin nhắn đã dịch."
+        "alt": "Arcatext đang đưa ra các tùy chọn từ đồng nghĩa cho một tin nhắn đã dịch.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Giữ cho cả cuộc trò chuyện luôn có ngữ cảnh",
@@ -93,7 +185,20 @@
           "Không bao giờ mất mạch trò chuyện",
           "Trò chuyện song ngữ dễ dàng"
         ],
-        "alt": "Arcatext đang gửi một bản sao tin nhắn bằng ngôn ngữ mẹ đẻ của người dùng."
+        "alt": "Arcatext đang gửi một bản sao tin nhắn bằng ngôn ngữ mẹ đẻ của người dùng.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Gặp nhau ở quán cà phê cạnh nhà ga nhé."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Cuối tuần này bạn rảnh không?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Không kết nối được với máy chủ. Mã của bạn chưa được sử dụng — vui lòng thử lại.",
       "notConfigured": "Hiện chưa thể sử dụng mã. Vui lòng thử lại sau."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Dịch tin nhắn nhận được",
+    "tabOriginal": "Bản gốc",
+    "tabSentences": "Câu",
+    "paste": "Dán",
+    "reword": "Viết lại",
+    "checkTitle": "Kiểm tra",
+    "detectedInMessage": "ĐÃ PHÁT HIỆN TRONG TIN NHẮN CỦA BẠN",
+    "experimental": "Thử nghiệm",
+    "genderSubtext": "Các từ thay đổi tùy theo giới tính.",
+    "checkGenderedWords": "Kiểm tra từ theo giới tính",
+    "rewordIntentCheck": "KIỂM TRA Ý ĐỊNH DIỄN ĐẠT LẠI",
+    "rewordIntentSubtext": "Xác minh rằng phần diễn đạt lại đã nắm đúng ý định của bạn.",
+    "currentReword": "BẢN DIỄN ĐẠT LẠI HIỆN TẠI",
+    "originalMessage": "TIN NHẮN GỐC",
+    "rewordOptions": "Tùy chọn diễn đạt lại",
+    "whoAreYouTexting": "Bạn đang nhắn tin cho ai?",
+    "groupChat": "Trò chuyện nhóm",
+    "genderMale": "Nam",
+    "genderFemale": "Nữ",
+    "rewordScript": "BẢNG CHỮ NGÔN NGỮ ĐÍCH",
+    "synonyms": "TỪ ĐỒNG NGHĨA",
+    "language": "Tiếng Việt",
+    "typePlaceholder": "Nhập nội dung"
   }
 }

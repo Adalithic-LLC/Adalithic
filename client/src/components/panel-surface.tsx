@@ -95,6 +95,7 @@ export function OptionRow({
       }}
     >
       <p
+        dir="auto"
         className="min-w-0 flex-1 text-[16px] leading-relaxed"
         style={{ color: K.xMark }}
       >

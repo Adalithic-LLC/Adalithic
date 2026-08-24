@@ -28,7 +28,51 @@
       "Tanulj meg egy nyelvet",
       "Kommunikálj üzleti ügyekben",
       "Csevegj a világ minden tájáról származó barátokkal"
-    ]
+    ],
+    "script": {
+      "native": [
+        "Igen, szeretnék megtanulni egy nyelvet. Ezért fordítok japánra.",
+        "Persze! Mikor kezdted?",
+        "Én is, talán egy kicsit régebben.",
+        "Szerintem igen, és nagyon szeretek üzenetben gyakorolni.",
+        "Az írás időt ad olvasni és gondolkodni, sőt hangosan kimondani.",
+        "Imádni fogod. Mindent megváltoztat!",
+        "Nem, az Egyesült Államokban vagyok. És te?",
+        "Hűha! Japánban élni biztosan hihetetlen.",
+        "Bejártad az országot?",
+        "Például hol? Tokió?",
+        "Melyik volt a kedvenced?",
+        "Láttam képeket Nikkóról. Milyen gyönyörű hely."
+      ],
+      "reworded": [
+        "うん、個人的に言語を学びたいんだ。だから日本語に翻訳してるんだよ。",
+        "いいね！いつから勉強し始めたの？",
+        "私も同じくらい、たぶんもう少し長いかな。",
+        "そうだね、それにメッセージで練習するのが大好きなんだ。",
+        "メッセージだと読んで考える時間があるし、一つ一つ声に出して言えるんだ。",
+        "絶対気に入るよ。まさに革命的だから！",
+        "ううん、アメリカにいるよ。君は？",
+        "わあ！日本に住むなんて最高だろうね。",
+        "国内はいろいろ回った？",
+        "例えばどこ？東京とか？",
+        "一番のお気に入りはどこだった？",
+        "日光の写真を見たことあるよ。なんて美しい場所なんだ。"
+      ],
+      "recv": [
+        "それ、すごくいいね！",
+        "私も日本語を勉強してるんだ。一緒にチャットして練習しよう！",
+        "1年くらい前からだよ。だからまだ慣れてないんだ。",
+        "完璧、たぶん似たようなレベルだね。",
+        "どうして？",
+        "うん、なるほどね。このキーボードを使うのは初めてなんだ。",
+        "ところで、日本に住んでるの？",
+        "私は日本に住んでるよ！言語に浸りたくてね。",
+        "本当に楽しいよ。食べ物も最高。",
+        "うん、あちこち行ったよ。",
+        "うん、でももっといろんな所に行ったよ。",
+        "やっぱり日光国立公園かな。"
+      ]
+    }
   },
   "features": {
     "eyebrow": "Egyetlen billentyűzet a beszélgetés minden részéhez",
@@ -43,7 +87,12 @@
           "Nézd meg a szóról szóra bontást",
           "Hasonlítsd össze a szó szerinti és a természetes jelentést egymás mellett"
         ],
-        "alt": "Az Arcatext egy kapott üzenetet fordít bontással és szó szerinti opciókkal."
+        "alt": "Az Arcatext egy kapott üzenetet fordít bontással és szó szerinti opciókkal.",
+        "demo": {
+          "sent": "Szabad vagy hétvégén?",
+          "received": "元気だよ！この前話してた海辺のあの店に行こうよ。",
+          "translation": "Remekül vagyok! Menjünk arra a partmenti helyre."
+        }
       },
       "homographs": {
         "title": "Homográfok egyértelműsítése",
@@ -53,7 +102,27 @@
           "Válaszd ki a szándékolt jelentést",
           "Kerüld el a kínos félrefordításokat, mielőtt elküldenéd"
         ],
-        "alt": "Az Arcatext azonosít egy homográfot, és felkínálja a szándékolt jelentést."
+        "alt": "Az Arcatext azonosít egy homográfot, és felkínálja a szándékolt jelentést.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Pénzintézet"
+            },
+            {
+              "title": "riverbank",
+              "description": "Folyó menti part"
+            },
+            {
+              "title": "tilt",
+              "description": "Megdőlni"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Ellenőrizd a fordítást a saját nyelveden",
@@ -63,7 +132,14 @@
           "Erősítsd meg a szándékodat küldés előtt",
           "Tanulj természetes módon, ahogy haladsz"
         ],
-        "alt": "Az Arcatext úgy ellenőrzi a fordítást, hogy visszamutatja azt a felhasználó anyanyelvén."
+        "alt": "Az Arcatext úgy ellenőrzi a fordítást, hogy visszamutatja azt a felhasználó anyanyelvén.",
+        "demo": {
+          "sent": "Jó reggelt!",
+          "recv": "おはよう！今日どうする？",
+          "original": "Találkozzunk az állomás kávézójában.",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "reverse": "Találkozzunk az állomás melletti kávézóban?"
+        }
       },
       "recipient": {
         "title": "Fordítások, amelyek ahhoz illenek, akivel beszélsz",
@@ -73,7 +149,14 @@
           "Válaszd ki a kívánt ábécét vagy írást",
           "Minden alkalommal kontextuálisan pontos"
         ],
-        "alt": "Az Arcatext átfogalmazási lehetőségei a címzett neme, a csoportos csevegés és a japán ábécé szerint."
+        "alt": "Az Arcatext átfogalmazási lehetőségei a címzett neme, a csoportos csevegés és a japán ábécé szerint.",
+        "demo": {
+          "sent": "Szia!",
+          "recv": "नमस्ते! आज क्या चल रहा है?",
+          "reword": "मैं अभी काम खत्म कर रही हूँ।",
+          "scriptTitle": "देवनागरी",
+          "scriptSubtitle": "Devanāgarī"
+        }
       },
       "synonyms": {
         "title": "Bővítsd a szókincsedet csevegés közben",
@@ -83,7 +166,16 @@
           "Fedezz fel gazdagabb, természetesebb szókincset",
           "Valódi fejlődés valódi beszélgetésekből"
         ],
-        "alt": "Az Arcatext szinonimaopciókat kínál egy lefordított üzenethez."
+        "alt": "Az Arcatext szinonimaopciókat kínál egy lefordított üzenethez.",
+        "demo": {
+          "sent": "¡Hola!",
+          "recv": "¿Tienes tiempo esta noche?",
+          "options": [
+            "Esta noche no me viene bien, ¿lo dejamos para mañana?",
+            "Hoy por la noche estoy ocupado, mejor mañana.",
+            "Esta noche no puedo, ¿qué tal si quedamos mañana?"
+          ]
+        }
       },
       "copy": {
         "title": "Tartsd az egész beszélgetést kontextusban",
@@ -93,7 +185,20 @@
           "Soha ne veszítsd el a beszélgetés fonalát",
           "Erőfeszítés nélküli kétnyelvű beszélgetések"
         ],
-        "alt": "Az Arcatext elküldi az üzenet egy másolatát a felhasználó anyanyelvén."
+        "alt": "Az Arcatext elküldi az üzenet egy másolatát a felhasználó anyanyelvén.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Találkozzunk az állomás melletti kávézóban."
+        }
+      },
+      "reword": {
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Ráérsz a hétvégén?"
+        }
       }
     }
   },
@@ -182,5 +287,30 @@
       "network": "Nem sikerült elérni a kiszolgálót. A kódod nem lett felhasználva — próbáld újra.",
       "notConfigured": "A beváltás átmenetileg nem érhető el. Próbáld később."
     }
+  },
+  "appUi": {
+    "pasteTitle": "Kapott üzenetek fordítása",
+    "tabOriginal": "Eredeti",
+    "tabSentences": "Mondatok",
+    "paste": "Beillesztés",
+    "reword": "Írd át",
+    "checkTitle": "Ellenőrzés",
+    "detectedInMessage": "AZ ÜZENETEDBEN ÉSZLELVE",
+    "experimental": "Kísérleti",
+    "genderSubtext": "Nem szerint változó szavak.",
+    "checkGenderedWords": "Nem szerint változó szavak ellenőrzése",
+    "rewordIntentCheck": "ÁTFOGALMAZÁSI SZÁNDÉK ELLENŐRZÉSE",
+    "rewordIntentSubtext": "Ellenőrizd, hogy az átfogalmazás tükrözi-e a szándékodat.",
+    "currentReword": "JELENLEGI ÁTFOGALMAZÁS",
+    "originalMessage": "EREDETI ÜZENET",
+    "rewordOptions": "Átfogalmazási beállítások",
+    "whoAreYouTexting": "Kinek írsz?",
+    "groupChat": "Csoportos csevegés",
+    "genderMale": "Férfi",
+    "genderFemale": "Nő",
+    "rewordScript": "CÉLNYELV ÍRÁSRENDSZERE",
+    "synonyms": "SZINONIMÁK",
+    "language": "Magyar",
+    "typePlaceholder": "Írj valamit"
   }
 }
