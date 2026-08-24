@@ -36,7 +36,6 @@
     "subtitle": "Arcatext es un teclado con IA que vive dentro de las apps que ya usas y cubre todos los aspectos de enviar y recibir mensajes durante una conversación.",
     "items": {
       "receive": {
-        "eyebrow": "Entiende las respuestas",
         "title": "Entiende cada respuesta sin salir del teclado",
         "description": "Pega los mensajes que recibes y Arcatext los traduce dentro de la propia app, para que nunca tengas que salir de la conversación.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext traduciendo un mensaje recibido con opciones de desglose y traducción literal."
       },
       "homographs": {
-        "eyebrow": "Di lo que quieres decir",
         "title": "Desambigua homógrafos",
         "description": "Cuando una palabra tiene más de un significado, Arcatext lo detecta y te deja elegir la variante correcta, para que tu mensaje sea claro siempre.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext identificando un homógrafo y ofreciendo el significado deseado."
       },
       "reverse": {
-        "eyebrow": "Verifica la intención",
         "title": "Verifica la traducción en tu propio idioma",
         "description": "Consulta tu mensaje traducido de nuevo a tu idioma nativo antes de enviarlo, para que siempre sepas exactamente lo que leerá la otra persona.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext validando una traducción al mostrarla de nuevo en el idioma nativo del usuario."
       },
       "recipient": {
-        "eyebrow": "Consciente del contexto",
         "title": "Traducciones que se adaptan a con quién hablas",
         "description": "Obtén traducciones precisas eligiendo el género correcto de la persona con la que hablas. Elige el sistema de escritura con el que te sientas cómodo leyendo, ya sea una escritura nativa o su romanización.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Opciones de reformulación de Arcatext según el género del destinatario, el chat grupal y el alfabeto japonés."
       },
       "synonyms": {
-        "eyebrow": "Amplía tu vocabulario",
         "title": "Amplía tu vocabulario mientras chateas",
         "description": "Cada traducción incluye opciones de sinónimos, para que descubras nuevas formas de decir lo mismo y aprendas el idioma de forma natural, un mensaje a la vez.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext ofreciendo opciones de sinónimos para un mensaje traducido."
       },
       "copy": {
-        "eyebrow": "Mantente sincronizado",
         "title": "Mantén todo el hilo en contexto",
         "description": "Incluye una copia de cada mensaje en tu propio idioma, para que nunca te pierdas en las conversaciones ni tengas que volver a traducir mensajes.",
         "bullets": [

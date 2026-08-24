@@ -36,7 +36,6 @@
     "subtitle": "Arcatext on tekoälynäppäimistö, joka toimii suoraan jo käyttämiesi sovellusten sisällä ja kattaa kaikki viestien lähettämisen ja vastaanottamisen puolet keskustelun aikana.",
     "items": {
       "receive": {
-        "eyebrow": "Ymmärrä vastaukset",
         "title": "Ymmärrä jokainen vastaus poistumatta näppäimistöltä",
         "description": "Liitä saamasi viestit, niin Arcatext kääntää ne suoraan sovelluksessa, jotta sinun ei koskaan tarvitse poistua keskustelusta.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext kääntää saapuneen viestin erittely- ja sananmukaisine vaihtoehtoineen."
       },
       "homographs": {
-        "eyebrow": "Sano, mitä tarkoitat",
         "title": "Selvennä homografit",
         "description": "Kun sanalla on useampi kuin yksi merkitys, Arcatext huomaa sen ja antaa sinun valita oikean vaihtoehdon, jotta viestisi on aina selkeä.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext tunnistaa homografin ja tarjoaa tarkoitettua merkitystä."
       },
       "reverse": {
-        "eyebrow": "Vahvista aikomus",
         "title": "Tarkista käännös omalla kielelläsi",
         "description": "Näe viestisi käännettynä takaisin äidinkielellesi ennen kuin painat lähetä, jotta tiedät aina tarkalleen, mitä toinen osapuoli lukee.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext varmistaa käännöksen näyttämällä sen takaisin käyttäjän äidinkielellä."
       },
       "recipient": {
-        "eyebrow": "Huomioi kontekstin",
         "title": "Käännöksiä, jotka sopivat sille, kenen kanssa puhut",
         "description": "Saat tarkkoja käännöksiä valitsemalla oikean sukupuolen henkilölle, jonka kanssa puhut. Valitse kirjoitusjärjestelmä, jota luet mielelläsi, oli se sitten alkuperäinen kirjoitus tai latinalaistus.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Arcatextin uudelleenmuotoiluvaihtoehdot vastaanottajan sukupuolen, ryhmächatin ja japanilaisen aakkoston mukaan."
       },
       "synonyms": {
-        "eyebrow": "Kasvata sanavarastoasi",
         "title": "Kasvata sanavarastoasi keskustellessasi",
         "description": "Jokaisen käännöksen mukana tulee synonyymivaihtoehtoja, joten tutustut uusiin tapoihin sanoa sama asia ja omaksut kielen luonnollisesti, viesti kerrallaan.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext tarjoaa synonyymivaihtoehtoja käännetylle viestille."
       },
       "copy": {
-        "eyebrow": "Pysy samalla aaltopituudella",
         "title": "Pidä koko keskusteluketju asiayhteydessä",
         "description": "Lisää kopio jokaisesta viestistä omalla kielelläsi, jotta et koskaan eksy keskusteluissa etkä joudu kääntämään viestejä uudelleen.",
         "bullets": [

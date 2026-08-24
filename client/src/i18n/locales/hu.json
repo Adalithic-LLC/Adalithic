@@ -36,7 +36,6 @@
     "subtitle": "Az Arcatext egy mesterséges intelligenciára épülő billentyűzet, amely a már használt alkalmazásaidon belül működik, és lefedi az üzenetek küldésének és fogadásának minden oldalát egy beszélgetés során.",
     "items": {
       "receive": {
-        "eyebrow": "Értsd meg a válaszokat",
         "title": "Értsd meg minden választ anélkül, hogy elhagynád a billentyűzetet",
         "description": "Illeszd be a kapott üzeneteket, és az Arcatext egyből az alkalmazáson belül lefordítja őket, így soha nem kell elhagynod a beszélgetést.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Az Arcatext egy kapott üzenetet fordít bontással és szó szerinti opciókkal."
       },
       "homographs": {
-        "eyebrow": "Mondd azt, amit gondolsz",
         "title": "Homográfok egyértelműsítése",
         "description": "Ha egy szónak több jelentése van, az Arcatext észreveszi, és hagyja, hogy a megfelelő változatot válaszd, így az üzeneted minden alkalommal érthető.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Az Arcatext azonosít egy homográfot, és felkínálja a szándékolt jelentést."
       },
       "reverse": {
-        "eyebrow": "Szándék ellenőrzése",
         "title": "Ellenőrizd a fordítást a saját nyelveden",
         "description": "Küldés előtt lásd az üzenetedet visszafordítva az anyanyelvedre, így mindig pontosan tudod, mit fog olvasni a másik fél.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Az Arcatext úgy ellenőrzi a fordítást, hogy visszamutatja azt a felhasználó anyanyelvén."
       },
       "recipient": {
-        "eyebrow": "Kontextusérzékeny",
         "title": "Fordítások, amelyek ahhoz illenek, akivel beszélsz",
         "description": "Pontos fordításokat kapsz, ha kiválasztod annak a személynek a helyes nemét, akivel beszélsz. Válaszd ki azt az írásrendszert, amelyet kényelmesen olvasol, legyen az egy natív írás vagy latin betűs átírás.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Az Arcatext átfogalmazási lehetőségei a címzett neme, a csoportos csevegés és a japán ábécé szerint."
       },
       "synonyms": {
-        "eyebrow": "Bővítsd a szókincsedet",
         "title": "Bővítsd a szókincsedet csevegés közben",
         "description": "Minden fordításhoz szinonimaopciók járnak, így új módokat ismersz meg ugyanannak a kifejezésére, és természetes módon sajátítod el a nyelvet, üzenetről üzenetre.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Az Arcatext szinonimaopciókat kínál egy lefordított üzenethez."
       },
       "copy": {
-        "eyebrow": "Maradj szinkronban",
         "title": "Tartsd az egész beszélgetést kontextusban",
         "description": "Csatold minden üzenet egy másolatát a saját nyelveden, így soha nem veszel el a beszélgetésekben, és nem kell újrafordítanod az üzeneteket.",
         "bullets": [

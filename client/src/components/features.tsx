@@ -15,12 +15,10 @@ type Feature = {
   image?: string;
   /** Rendered in place of the screenshot. */
   visual?: () => JSX.Element;
-  /** Rows without an eyebrow just lead with the headline. */
-  noEyebrow?: boolean;
 };
 
 const FEATURES: Feature[] = [
-  { key: "reword", visual: () => <RewordKeyboard />, noEyebrow: true },
+  { key: "reword", visual: () => <RewordKeyboard /> },
   { key: "receive", image: "/pasteview.png" },
   { key: "homographs", image: "/homographs.png" },
   { key: "reverse", image: "/reverse-translations.png" },
@@ -33,7 +31,6 @@ function FeatureRow({
   featureKey,
   image,
   visual,
-  noEyebrow,
   index,
 }: Omit<Feature, "key"> & { featureKey: string; index: number }) {
   const { t } = useTranslation();
@@ -58,12 +55,7 @@ function FeatureRow({
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={reversed ? "lg:order-2" : "lg:order-1"}
       >
-        {!noEyebrow && (
-          <span className="text-sm font-semibold uppercase tracking-wider text-brand">
-            {t(`${base}.eyebrow`)}
-          </span>
-        )}
-        <h3 className={`${noEyebrow ? "" : "mt-3 "}text-3xl md:text-4xl font-bold text-secondary leading-tight`}>
+        <h3 className="text-3xl md:text-4xl font-bold text-secondary leading-tight">
           {t(`${base}.title`)}
         </h3>
         <p className="mt-5 text-lg text-gray-600 leading-relaxed">
@@ -140,7 +132,6 @@ export default function Features() {
               featureKey={feature.key}
               image={feature.image}
               visual={feature.visual}
-              noEyebrow={feature.noEyebrow}
               index={index}
             />
           ))}

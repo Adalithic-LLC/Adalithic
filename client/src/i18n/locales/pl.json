@@ -36,7 +36,6 @@
     "subtitle": "Arcatext to klawiatura oparta na sztucznej inteligencji, która działa wewnątrz aplikacji, których już używasz, i obejmuje wszystkie aspekty wysyłania i odbierania wiadomości podczas rozmowy.",
     "items": {
       "receive": {
-        "eyebrow": "Zrozum odpowiedzi",
         "title": "Zrozum każdą odpowiedź bez opuszczania klawiatury",
         "description": "Wklej otrzymane wiadomości, a Arcatext przetłumaczy je bezpośrednio w aplikacji, więc nigdy nie musisz opuszczać rozmowy.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext tłumaczący otrzymaną wiadomość z opcjami analizy i wersji dosłownej."
       },
       "homographs": {
-        "eyebrow": "Mów to, co masz na myśli",
         "title": "Rozróżniaj homografy",
         "description": "Gdy słowo ma więcej niż jedno znaczenie, Arcatext to wykrywa i pozwala wybrać właściwy wariant, dzięki czemu Twoja wiadomość jest zawsze jasna.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext identyfikujący homograf i proponujący zamierzone znaczenie."
       },
       "reverse": {
-        "eyebrow": "Zweryfikuj intencję",
         "title": "Sprawdź tłumaczenie w swoim własnym języku",
         "description": "Zobacz swoją wiadomość przetłumaczoną z powrotem na ojczysty język, zanim ją wyślesz, dzięki czemu zawsze wiesz dokładnie, co przeczyta druga osoba.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext weryfikujący tłumaczenie, pokazując je z powrotem w ojczystym języku użytkownika."
       },
       "recipient": {
-        "eyebrow": "Świadomość kontekstu",
         "title": "Tłumaczenia dopasowane do tego, z kim rozmawiasz",
         "description": "Otrzymuj trafne tłumaczenia, wybierając właściwą płeć osoby, z którą rozmawiasz. Wybierz system pisma, który wygodnie Ci się czyta—rodzime pismo albo zapis łaciński.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Opcje przeredagowania Arcatext dla płci odbiorcy, czatu grupowego i japońskiego alfabetu."
       },
       "synonyms": {
-        "eyebrow": "Poszerzaj słownictwo",
         "title": "Poszerzaj słownictwo, rozmawiając",
         "description": "Każde tłumaczenie zawiera opcje synonimów, dzięki czemu poznajesz nowe sposoby wyrażania tego samego i przyswajasz język w naturalny sposób—jedna wiadomość na raz.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext oferujący opcje synonimów dla przetłumaczonej wiadomości."
       },
       "copy": {
-        "eyebrow": "Bądź na bieżąco",
         "title": "Utrzymaj całą rozmowę w kontekście",
         "description": "Dołączaj kopię każdej wiadomości we własnym języku, dzięki czemu nigdy nie gubisz się w rozmowach ani nie musisz ponownie tłumaczyć wiadomości.",
         "bullets": [

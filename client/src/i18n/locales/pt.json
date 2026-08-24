@@ -36,7 +36,6 @@
     "subtitle": "O Arcatext é um teclado com IA que vive dentro dos apps que você já usa e cobre todos os aspectos de enviar e receber mensagens durante uma conversa.",
     "items": {
       "receive": {
-        "eyebrow": "Entenda as respostas",
         "title": "Entenda cada resposta sem sair do teclado",
         "description": "Cole as mensagens que você recebe e o Arcatext as traduz dentro do próprio app, para você nunca precisar sair da conversa.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext traduzindo uma mensagem recebida com opções de detalhamento e tradução literal."
       },
       "homographs": {
-        "eyebrow": "Diga o que você pensa",
         "title": "Desambigue homógrafos",
         "description": "Quando uma palavra tem mais de um significado, o Arcatext percebe e deixa você escolher a variante correta, para que sua mensagem seja sempre clara.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext identificando um homógrafo e oferecendo o significado pretendido."
       },
       "reverse": {
-        "eyebrow": "Verifique a intenção",
         "title": "Confira a tradução no seu próprio idioma",
         "description": "Veja sua mensagem traduzida de volta para o seu idioma nativo antes de enviar, para você sempre saber exatamente o que a outra pessoa vai ler.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext validando uma tradução ao mostrá-la de volta no idioma nativo do usuário."
       },
       "recipient": {
-        "eyebrow": "Ciente do contexto",
         "title": "Traduções que combinam com quem você está falando",
         "description": "Obtenha traduções precisas escolhendo o gênero correto da pessoa com quem você fala. Escolha o sistema de escrita que você lê com mais conforto, seja uma escrita nativa ou a romanização.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Opções de reformulação do Arcatext para gênero do destinatário, conversa em grupo e alfabeto japonês."
       },
       "synonyms": {
-        "eyebrow": "Amplie seu vocabulário",
         "title": "Amplie seu vocabulário enquanto conversa",
         "description": "Cada tradução vem com opções de sinônimos, para você conhecer novas formas de dizer a mesma coisa e absorver o idioma naturalmente, uma mensagem de cada vez.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext oferecendo opções de sinônimos para uma mensagem traduzida."
       },
       "copy": {
-        "eyebrow": "Fiquem em sintonia",
         "title": "Mantenha toda a conversa no contexto",
         "description": "Inclua uma cópia de cada mensagem no seu próprio idioma, para você nunca se perder nas conversas nem precisar traduzir as mensagens de novo.",
         "bullets": [

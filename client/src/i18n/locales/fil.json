@@ -36,7 +36,6 @@
     "subtitle": "Ang Arcatext ay isang AI keyboard na nasa loob mismo ng mga app na ginagamit mo na at sumasaklaw sa lahat ng aspeto ng pagpapadala at pagtanggap ng mga mensahe sa isang usapan.",
     "items": {
       "receive": {
-        "eyebrow": "Unawain ang mga sagot",
         "title": "Unawain ang bawat sagot, nang hindi umaalis sa keyboard",
         "description": "I-paste ang mga mensaheng natatanggap mo at isasalin ito ng Arcatext mismo sa loob ng app, para hindi mo na kailangang umalis sa usapan.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Isinasalin ng Arcatext ang isang natanggap na mensahe na may breakdown at literal na mga opsyon."
       },
       "homographs": {
-        "eyebrow": "Sabihin ang ibig mong sabihin",
         "title": "Linawin ang mga homograph",
         "description": "Kapag ang isang salita ay may higit sa isang kahulugan, natutukoy ito ng Arcatext at hinahayaan kang piliin ang tamang bersyon, para malinaw ang iyong mensahe sa tuwina.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Tinutukoy ng Arcatext ang isang homograph at inaalok ang ninanais na kahulugan."
       },
       "reverse": {
-        "eyebrow": "Tiyakin ang intensyon",
         "title": "Suriing muli ang salin sa sarili mong wika",
         "description": "Tingnan ang iyong mensaheng isinalin pabalik sa iyong sariling wika bago mo pindutin ang send, para palagi mong alam nang eksakto ang mababasa ng kausap mo.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Bine-validate ng Arcatext ang isang salin sa pamamagitan ng pagpapakita nito pabalik sa sariling wika ng user."
       },
       "recipient": {
-        "eyebrow": "May kamalayan sa konteksto",
         "title": "Mga saling akma sa taong kausap mo",
         "description": "Kumuha ng tumpak na mga salin sa pamamagitan ng pagpili ng tamang kasarian ng taong kausap mo. Piliin ang sistema ng pagsulat na komportable mong basahin, script man ng katutubo o romanized.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Mga opsyon sa muling pagbabalangkas ng Arcatext para sa kasarian ng tatanggap, group chat, at alpabetong Hapon."
       },
       "synonyms": {
-        "eyebrow": "Palaguin ang iyong bokabularyo",
         "title": "Palaguin ang iyong bokabularyo habang nag-uusap",
         "description": "May kasamang mga opsyon sa kasingkahulugan ang bawat salin, para malantad ka sa mga bagong paraan ng pagsasabi ng parehong bagay at natural mong matutuhan ang wika, isang mensahe sa bawat pagkakataon.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Nag-aalok ang Arcatext ng mga opsyon sa kasingkahulugan para sa isang isinaling mensahe."
       },
       "copy": {
-        "eyebrow": "Manatiling sabay",
         "title": "Panatilihin sa konteksto ang buong usapan",
         "description": "Magsama ng kopya ng bawat mensahe sa sarili mong wika, para hindi ka kailanman mawala sa usapan o kailangang muling isalin ang mga mensahe.",
         "bullets": [

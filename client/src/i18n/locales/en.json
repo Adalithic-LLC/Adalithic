@@ -45,7 +45,6 @@
         "alt": "The Arcatext keyboard with a message in the text field, ready to be reworded."
       },
       "receive": {
-        "eyebrow": "Understand replies",
         "title": "Understand every reply, without leaving the keyboard",
         "description": "Paste messages you receive and Arcatext translates it within the app, so you never need to leave the conversation.",
         "bullets": [
@@ -56,7 +55,6 @@
         "alt": "Arcatext translating a received message with breakdown and literal options."
       },
       "homographs": {
-        "eyebrow": "Say what you mean",
         "title": "Disambiguate homographs",
         "description": "When a word has more than one meaning, Arcatext spots it and lets you pick the correct variant, so your message is clear everytime.",
         "bullets": [
@@ -67,7 +65,6 @@
         "alt": "Arcatext identifying a homograph and offering the intended meaning."
       },
       "reverse": {
-        "eyebrow": "Verify intention",
         "title": "Double-check the translation in your own language",
         "description": "See your message translated back into your native language before you hit send, so you always know exactly what the other person will read.",
         "bullets": [
@@ -78,7 +75,6 @@
         "alt": "Arcatext validating a translation by showing it back in the user's native language."
       },
       "recipient": {
-        "eyebrow": "Context aware",
         "title": "Translations that fit who you're talking to",
         "description": "Get accurate translations by choosing the correct gender of who you're talking to. Choose the writing system you feel comfortable reading, whether that's a native script or romanization.",
         "bullets": [
@@ -89,7 +85,6 @@
         "alt": "Arcatext reword options for recipient gender, group chat, and Japanese alphabet."
       },
       "synonyms": {
-        "eyebrow": "Grow your vocabulary",
         "title": "Grow your vocabulary as you chat",
         "description": "Every translation comes with synonym options, so you're exposed to new ways of saying the same thing and pick up the language naturally, one message at a time.",
         "bullets": [
@@ -100,7 +95,6 @@
         "alt": "Arcatext offering synonym options for a translated message."
       },
       "copy": {
-        "eyebrow": "Stay in sync",
         "title": "Keep the whole thread in context",
         "description": "Include a copy of each message in your own language, so you never get lost in the conversations or have to re-translate messages.",
         "bullets": [

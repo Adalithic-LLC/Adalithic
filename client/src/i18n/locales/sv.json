@@ -36,7 +36,6 @@
     "subtitle": "Arcatext är ett AI-tangentbord som finns inuti apparna du redan använder och täcker alla aspekter av att skicka och ta emot meddelanden under ett samtal.",
     "items": {
       "receive": {
-        "eyebrow": "Förstå svaren",
         "title": "Förstå varje svar utan att lämna tangentbordet",
         "description": "Klistra in meddelanden du får så översätter Arcatext dem direkt i appen, så att du aldrig behöver lämna samtalet.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext översätter ett mottaget meddelande med uppdelning och bokstavliga alternativ."
       },
       "homographs": {
-        "eyebrow": "Säg vad du menar",
         "title": "Särskilj homografer",
         "description": "När ett ord har fler än en betydelse upptäcker Arcatext det och låter dig välja rätt variant, så att ditt meddelande är tydligt varje gång.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext identifierar en homograf och erbjuder den avsedda betydelsen."
       },
       "reverse": {
-        "eyebrow": "Bekräfta avsikt",
         "title": "Dubbelkolla översättningen på ditt eget språk",
         "description": "Se ditt meddelande översatt tillbaka till ditt modersmål innan du trycker på skicka, så att du alltid vet exakt vad den andra personen kommer att läsa.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext validerar en översättning genom att visa den tillbaka på användarens modersmål."
       },
       "recipient": {
-        "eyebrow": "Kontextmedveten",
         "title": "Översättningar som passar den du pratar med",
         "description": "Få korrekta översättningar genom att välja rätt kön på personen du pratar med. Välj det skriftsystem du känner dig bekväm med att läsa, oavsett om det är en ursprunglig skrift eller romanisering.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Arcatext omformuleringsalternativ för mottagarens kön, gruppchatt och japanskt alfabet."
       },
       "synonyms": {
-        "eyebrow": "Utöka ditt ordförråd",
         "title": "Utöka ditt ordförråd medan du chattar",
         "description": "Varje översättning kommer med synonymalternativ, så att du möter nya sätt att säga samma sak och plockar upp språket naturligt – ett meddelande i taget.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext erbjuder synonymalternativ för ett översatt meddelande."
       },
       "copy": {
-        "eyebrow": "Håll dig synkroniserad",
         "title": "Håll hela konversationen i sitt sammanhang",
         "description": "Inkludera en kopia av varje meddelande på ditt eget språk, så att du aldrig tappar bort dig i samtal eller måste översätta meddelanden på nytt.",
         "bullets": [

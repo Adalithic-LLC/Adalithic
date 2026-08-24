@@ -36,7 +36,6 @@
     "subtitle": "Arcatext, zaten kullandığınız uygulamaların içinde yaşayan ve bir sohbet sırasında mesaj gönderip almanın her yönünü kapsayan bir yapay zeka klavyesidir.",
     "items": {
       "receive": {
-        "eyebrow": "Yanıtları anlayın",
         "title": "Klavyeden çıkmadan her yanıtı anlayın",
         "description": "Aldığınız mesajları yapıştırın, Arcatext onları uygulamanın içinde hemen çevirsin; böylece sohbetten hiç ayrılmanıza gerek kalmasın.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext, alınan bir mesajı çözümleme ve birebir çeviri seçenekleriyle çevirirken."
       },
       "homographs": {
-        "eyebrow": "Demek istediğinizi söyleyin",
         "title": "Eş yazımlıları netleştirin",
         "description": "Bir kelimenin birden fazla anlamı olduğunda Arcatext bunu fark eder ve doğru seçeneği seçmenizi sağlar; böylece mesajınız her seferinde açık olur.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext, eş yazımlı bir kelimeyi belirleyip kastedilen anlamı önerirken."
       },
       "reverse": {
-        "eyebrow": "Niyeti doğrulayın",
         "title": "Çeviriyi kendi dilinizde bir kez daha kontrol edin",
         "description": "Göndermeden önce mesajınızı ana dilinize geri çevrilmiş olarak görün; böylece karşınızdakinin tam olarak ne okuyacağını her zaman bilin.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext, bir çeviriyi kullanıcının ana dilinde geri göstererek doğrularken."
       },
       "recipient": {
-        "eyebrow": "Bağlama duyarlı",
         "title": "Konuştuğunuz kişiye uygun çeviriler",
         "description": "Konuştuğunuz kişinin doğru cinsiyetini seçerek isabetli çeviriler alın. İster özgün bir yazı ister Latin harfleriyle yazım olsun, rahatça okuyabildiğiniz yazı sistemini seçin.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Arcatext'in alıcının cinsiyeti, grup sohbeti ve Japon alfabesi için yeniden ifade seçenekleri."
       },
       "synonyms": {
-        "eyebrow": "Kelime dağarcığınızı geliştirin",
         "title": "Sohbet ederken kelime dağarcığınızı geliştirin",
         "description": "Her çeviri eş anlamlı seçeneklerle gelir; böylece aynı şeyi söylemenin yeni yollarıyla tanışır ve dili doğal biçimde, her seferinde bir mesajla öğrenirsiniz.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext, çevrilmiş bir mesaj için eş anlamlı seçenekler sunarken."
       },
       "copy": {
-        "eyebrow": "Uyumda kalın",
         "title": "Tüm sohbeti bağlam içinde tutun",
         "description": "Her mesajın kendi dilinizdeki bir kopyasını ekleyin; böylece sohbetlerde asla kaybolmayın ya da mesajları yeniden çevirmek zorunda kalmayın.",
         "bullets": [

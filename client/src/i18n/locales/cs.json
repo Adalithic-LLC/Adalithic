@@ -36,7 +36,6 @@
     "subtitle": "Arcatext je klávesnice s umělou inteligencí, která funguje přímo v aplikacích, jež už používáte, a pokrývá všechny části odesílání i přijímání zpráv během konverzace.",
     "items": {
       "receive": {
-        "eyebrow": "Porozumějte odpovědím",
         "title": "Porozumějte každé odpovědi, aniž byste opustili klávesnici",
         "description": "Vložte zprávy, které dostanete, a Arcatext je přeloží přímo v aplikaci, takže nikdy nemusíte opustit konverzaci.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext překládá přijatou zprávu s rozborem a doslovnými možnostmi."
       },
       "homographs": {
-        "eyebrow": "Řekněte, co máte na mysli",
         "title": "Rozlište homonyma",
         "description": "Když má slovo více významů, Arcatext to pozná a nechá vás vybrat správnou variantu, takže vaše zpráva je pokaždé jasná.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext rozpoznává homonymum a nabízí zamýšlený význam."
       },
       "reverse": {
-        "eyebrow": "Ověřte svůj záměr",
         "title": "Ověřte si překlad ve svém vlastním jazyce",
         "description": "Než zprávu odešlete, uvidíte ji přeloženou zpět do svého rodného jazyka, takže vždy přesně víte, co si druhá strana přečte.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext ověřuje překlad tím, že jej zobrazí zpět v rodném jazyce uživatele."
       },
       "recipient": {
-        "eyebrow": "Zohledňuje kontext",
         "title": "Překlady, které sedí tomu, s kým mluvíte",
         "description": "Získejte přesné překlady výběrem správného rodu osoby, se kterou mluvíte. Vyberte si systém písma, který se vám čte pohodlně – ať už jde o původní písmo, nebo přepis do latinky.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Možnosti přeformulování v Arcatextu podle rodu příjemce, skupinového chatu a japonské abecedy."
       },
       "synonyms": {
-        "eyebrow": "Rozšiřte si slovní zásobu",
         "title": "Rozšiřujte si slovní zásobu během chatování",
         "description": "Ke každému překladu dostanete možnosti synonym, takže poznáváte nové způsoby, jak vyjádřit totéž, a jazyk se učíte přirozeně – zprávu po zprávě.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext nabízí možnosti synonym pro přeloženou zprávu."
       },
       "copy": {
-        "eyebrow": "Zůstaňte v souladu",
         "title": "Udržujte celé vlákno v kontextu",
         "description": "Přidejte ke každé zprávě kopii ve vlastním jazyce, takže se v konverzacích nikdy neztratíte a nemusíte zprávy znovu překládat.",
         "bullets": [

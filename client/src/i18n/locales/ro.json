@@ -36,7 +36,6 @@
     "subtitle": "Arcatext este o tastatură cu inteligență artificială care funcționează direct în aplicațiile pe care le folosiți deja și acoperă toate aspectele trimiterii și primirii mesajelor într-o conversație.",
     "items": {
       "receive": {
-        "eyebrow": "Înțelegeți răspunsurile",
         "title": "Înțelegeți fiecare răspuns, fără să părăsiți tastatura",
         "description": "Lipiți mesajele pe care le primiți, iar Arcatext le traduce chiar în aplicație, ca să nu fie nevoie să părăsiți niciodată conversația.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext traduce un mesaj primit, cu opțiuni de analiză și traducere literală."
       },
       "homographs": {
-        "eyebrow": "Spuneți ce vreți să spuneți",
         "title": "Dezambiguizați omografele",
         "description": "Când un cuvânt are mai multe sensuri, Arcatext îl detectează și vă lasă să alegeți varianta corectă, ca mesajul dumneavoastră să fie clar de fiecare dată.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext identifică un omograf și oferă sensul dorit."
       },
       "reverse": {
-        "eyebrow": "Verificați intenția",
         "title": "Verificați traducerea în propria limbă",
         "description": "Vedeți mesajul tradus înapoi în limba dumneavoastră maternă înainte de a apăsa trimite, ca să știți întotdeauna exact ce va citi cealaltă persoană.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext validează o traducere afișând-o din nou în limba maternă a utilizatorului."
       },
       "recipient": {
-        "eyebrow": "Conștient de context",
         "title": "Traduceri potrivite pentru cel cu care vorbiți",
         "description": "Obțineți traduceri exacte alegând genul corect al persoanei cu care vorbiți. Alegeți sistemul de scriere pe care vă simțiți confortabil să îl citiți, fie că este o scriere nativă, fie o romanizare.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Opțiuni de reformulare Arcatext în funcție de genul destinatarului, conversația de grup și alfabetul japonez."
       },
       "synonyms": {
-        "eyebrow": "Îmbogățiți-vă vocabularul",
         "title": "Îmbogățiți-vă vocabularul în timp ce discutați",
         "description": "Fiecare traducere vine cu opțiuni de sinonime, ca să descoperiți noi moduri de a spune același lucru și să învățați limba natural, câte un mesaj pe rând.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext oferă opțiuni de sinonime pentru un mesaj tradus."
       },
       "copy": {
-        "eyebrow": "Rămâneți sincronizați",
         "title": "Păstrați întregul fir de discuție în context",
         "description": "Includeți o copie a fiecărui mesaj în propria limbă, ca să nu vă pierdeți niciodată în conversații și să nu fie nevoie să retraduceți mesaje.",
         "bullets": [

@@ -36,7 +36,6 @@
     "subtitle": "Arcatext là một bàn phím AI hoạt động ngay bên trong các ứng dụng bạn đang dùng, bao quát mọi khía cạnh của việc gửi và nhận tin nhắn trong một cuộc trò chuyện.",
     "items": {
       "receive": {
-        "eyebrow": "Hiểu các phản hồi",
         "title": "Hiểu mọi câu trả lời, ngay trên bàn phím",
         "description": "Dán những tin nhắn bạn nhận được và Arcatext dịch ngay trong ứng dụng, để bạn không bao giờ phải rời khỏi cuộc trò chuyện.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext đang dịch một tin nhắn nhận được kèm tùy chọn phân tích và bản dịch sát nghĩa."
       },
       "homographs": {
-        "eyebrow": "Nói đúng ý bạn",
         "title": "Phân biệt từ đồng tự",
         "description": "Khi một từ có nhiều nghĩa, Arcatext phát hiện và cho bạn chọn đúng biến thể, để tin nhắn của bạn luôn rõ ràng mọi lúc.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext đang nhận diện một từ nhiều nghĩa và đưa ra nghĩa bạn muốn dùng."
       },
       "reverse": {
-        "eyebrow": "Xác nhận ý định",
         "title": "Kiểm tra lại bản dịch bằng chính ngôn ngữ của bạn",
         "description": "Xem tin nhắn của bạn được dịch ngược lại sang tiếng mẹ đẻ trước khi nhấn gửi, để bạn luôn biết chính xác người kia sẽ đọc được gì.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext đang xác thực bản dịch bằng cách hiển thị lại bằng tiếng mẹ đẻ của người dùng."
       },
       "recipient": {
-        "eyebrow": "Nhận biết ngữ cảnh",
         "title": "Bản dịch phù hợp với người bạn đang trò chuyện",
         "description": "Nhận bản dịch chính xác bằng cách chọn đúng giới tính của người bạn đang trò chuyện. Chọn hệ chữ viết bạn thấy dễ đọc, dù đó là chữ bản địa hay chữ La-tinh hóa.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Các tùy chọn diễn đạt lại của Arcatext theo giới tính người nhận, nhóm trò chuyện và bảng chữ cái tiếng Nhật."
       },
       "synonyms": {
-        "eyebrow": "Mở rộng vốn từ",
         "title": "Mở rộng vốn từ ngay khi trò chuyện",
         "description": "Mỗi bản dịch đều đi kèm các từ đồng nghĩa, để bạn tiếp xúc với nhiều cách diễn đạt cùng một ý và tiếp thu ngôn ngữ một cách tự nhiên—từng tin nhắn một.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext đang đưa ra các tùy chọn từ đồng nghĩa cho một tin nhắn đã dịch."
       },
       "copy": {
-        "eyebrow": "Luôn đồng bộ",
         "title": "Giữ cho cả cuộc trò chuyện luôn có ngữ cảnh",
         "description": "Kèm theo một bản sao của mỗi tin nhắn bằng ngôn ngữ của bạn, để bạn không bao giờ lạc trong cuộc trò chuyện hay phải dịch lại tin nhắn.",
         "bullets": [

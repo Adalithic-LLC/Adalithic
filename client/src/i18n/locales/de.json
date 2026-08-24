@@ -36,7 +36,6 @@
     "subtitle": "Arcatext ist eine KI-Tastatur, die in den Apps lebt, die du bereits nutzt, und alle Aspekte des Sendens und Empfangens von Nachrichten während eines Gesprächs abdeckt.",
     "items": {
       "receive": {
-        "eyebrow": "Antworten verstehen",
         "title": "Verstehe jede Antwort, ohne die Tastatur zu verlassen",
         "description": "Füge empfangene Nachrichten ein und Arcatext übersetzt sie direkt in der App, sodass du das Gespräch nie verlassen musst.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext übersetzt eine empfangene Nachricht mit Aufschlüsselungs- und wörtlichen Optionen."
       },
       "homographs": {
-        "eyebrow": "Sag, was du meinst",
         "title": "Homografen unterscheiden",
         "description": "Wenn ein Wort mehrere Bedeutungen hat, erkennt Arcatext das und lässt dich die richtige Variante wählen, damit deine Nachricht jedes Mal klar ist.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext erkennt einen Homografen und bietet die gemeinte Bedeutung an."
       },
       "reverse": {
-        "eyebrow": "Absicht überprüfen",
         "title": "Überprüfe die Übersetzung in deiner eigenen Sprache",
         "description": "Sieh dir deine Nachricht zurück in deine Muttersprache übersetzt an, bevor du auf Senden tippst, damit du immer genau weißt, was die andere Person liest.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext bestätigt eine Übersetzung, indem es sie in der Muttersprache des Nutzers zurückzeigt."
       },
       "recipient": {
-        "eyebrow": "Kontextbewusst",
         "title": "Übersetzungen, die zu deinem Gegenüber passen",
         "description": "Erhalte präzise Übersetzungen, indem du das richtige Geschlecht der Person wählst, mit der du sprichst. Wähle das Schriftsystem, das du am liebsten liest, ob native Schrift oder Romanisierung.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Arcatext-Umformulierungsoptionen für Geschlecht des Empfängers, Gruppenchat und japanisches Alphabet."
       },
       "synonyms": {
-        "eyebrow": "Erweitere deinen Wortschatz",
         "title": "Erweitere deinen Wortschatz beim Chatten",
         "description": "Jede Übersetzung kommt mit Synonymoptionen, sodass du neue Arten kennenlernst, dasselbe zu sagen, und die Sprache ganz natürlich aufnimmst – eine Nachricht nach der anderen.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext bietet Synonymoptionen für eine übersetzte Nachricht."
       },
       "copy": {
-        "eyebrow": "Bleibt im Gleichklang",
         "title": "Behalte den ganzen Verlauf im Kontext",
         "description": "Füge eine Kopie jeder Nachricht in deiner eigenen Sprache hinzu, damit du in Gesprächen nie den Faden verlierst oder Nachrichten erneut übersetzen musst.",
         "bullets": [

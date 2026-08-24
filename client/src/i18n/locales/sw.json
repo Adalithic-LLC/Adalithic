@@ -36,7 +36,6 @@
     "subtitle": "Arcatext ni kibodi ya AI inayoishi ndani ya programu ambazo tayari unazitumia na inashughulikia kila kipengele cha kutuma na kupokea ujumbe wakati wa mazungumzo.",
     "items": {
       "receive": {
-        "eyebrow": "Elewa majibu",
         "title": "Elewa kila jibu, bila kuondoka kwenye kibodi",
         "description": "Bandika ujumbe unaopokea na Arcatext huutafsiri papo hapo ndani ya programu, ili usihitaji kamwe kuondoka kwenye mazungumzo.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext ikitafsiri ujumbe uliopokelewa ikiwa na chaguo za uchambuzi na toleo la moja kwa moja."
       },
       "homographs": {
-        "eyebrow": "Sema unachomaanisha",
         "title": "Fafanua maneno yenye maana nyingi",
         "description": "Neno linapokuwa na maana zaidi ya moja, Arcatext hulitambua na kukuruhusu kuchagua toleo sahihi, ili ujumbe wako uwe wazi kila mara.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext ikitambua neno lenye maana nyingi na kutoa maana iliyokusudiwa."
       },
       "reverse": {
-        "eyebrow": "Thibitisha nia",
         "title": "Hakiki tafsiri kwa lugha yako mwenyewe",
         "description": "Ona ujumbe wako ukitafsiriwa tena kwa lugha yako ya asili kabla ya kubonyeza tuma, ili kila mara ujue hasa kile ambacho mtu mwingine atasoma.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext ikithibitisha tafsiri kwa kuionyesha tena kwa lugha ya asili ya mtumiaji."
       },
       "recipient": {
-        "eyebrow": "Inayozingatia muktadha",
         "title": "Tafsiri zinazomfaa mtu unayezungumza naye",
         "description": "Pata tafsiri sahihi kwa kuchagua jinsia sahihi ya mtu unayezungumza naye. Chagua mfumo wa uandishi unaojisikia vizuri kuusoma, iwe ni maandishi ya asili au herufi za Kirumi.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Chaguo za Arcatext za kuandika upya kulingana na jinsia ya mpokeaji, gumzo la kikundi, na alfabeti ya Kijapani."
       },
       "synonyms": {
-        "eyebrow": "Kuza msamiati wako",
         "title": "Kuza msamiati wako unapopiga gumzo",
         "description": "Kila tafsiri huja na chaguo za visawe, ili ufahamishwe njia mpya za kusema jambo lile lile na kunyakua lugha kwa njia ya asili, ujumbe mmoja kwa wakati.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext ikitoa chaguo za visawe kwa ujumbe uliotafsiriwa."
       },
       "copy": {
-        "eyebrow": "Bakia sambamba",
         "title": "Weka mazungumzo yote katika muktadha",
         "description": "Jumuisha nakala ya kila ujumbe kwa lugha yako mwenyewe, ili usipotee kamwe katika mazungumzo au kulazimika kutafsiri upya ujumbe.",
         "bullets": [

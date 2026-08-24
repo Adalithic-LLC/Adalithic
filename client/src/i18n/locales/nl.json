@@ -36,7 +36,6 @@
     "subtitle": "Arcatext is een AI-toetsenbord dat leeft binnen de apps die je al gebruikt en alle aspecten van het versturen en ontvangen van berichten tijdens een gesprek dekt.",
     "items": {
       "receive": {
-        "eyebrow": "Begrijp antwoorden",
         "title": "Begrijp elk antwoord, zonder het toetsenbord te verlaten",
         "description": "Plak berichten die je ontvangt en Arcatext vertaalt ze direct binnen de app, zodat je het gesprek nooit hoeft te verlaten.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext vertaalt een ontvangen bericht met analyse- en letterlijke opties."
       },
       "homographs": {
-        "eyebrow": "Zeg wat je bedoelt",
         "title": "Homoniemen onderscheiden",
         "description": "Wanneer een woord meerdere betekenissen heeft, herkent Arcatext dit en laat je de juiste variant kiezen, zodat je bericht elke keer duidelijk is.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext identificeert een homoniem en biedt de bedoelde betekenis."
       },
       "reverse": {
-        "eyebrow": "Bedoeling verifiëren",
         "title": "Controleer de vertaling in je eigen taal",
         "description": "Zie je bericht teruggezet in je moedertaal voordat je op verzenden drukt, zodat je altijd precies weet wat de ander zal lezen.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext valideert een vertaling door deze terug te tonen in de moedertaal van de gebruiker."
       },
       "recipient": {
-        "eyebrow": "Contextbewust",
         "title": "Vertalingen die passen bij met wie je praat",
         "description": "Krijg accurate vertalingen door het juiste geslacht te kiezen van de persoon met wie je praat. Kies het schrift dat je prettig vindt om te lezen, of dat nu een oorspronkelijk schrift of romanisering is.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Arcatext-herformuleeropties voor het geslacht van de ontvanger, groepschat en Japans alfabet."
       },
       "synonyms": {
-        "eyebrow": "Vergroot je woordenschat",
         "title": "Vergroot je woordenschat terwijl je chat",
         "description": "Elke vertaling komt met synoniemopties, zodat je kennismaakt met nieuwe manieren om hetzelfde te zeggen en de taal op een natuurlijke manier oppikt—één bericht tegelijk.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext biedt synoniemopties voor een vertaald bericht."
       },
       "copy": {
-        "eyebrow": "Blijf synchroon",
         "title": "Houd het hele gesprek in context",
         "description": "Voeg een kopie van elk bericht in je eigen taal toe, zodat je nooit de draad kwijtraakt in gesprekken of berichten opnieuw hoeft te vertalen.",
         "bullets": [

@@ -36,7 +36,6 @@
     "subtitle": "Arcatext adalah keyboard AI yang hidup di dalam aplikasi yang sudah Anda gunakan dan mencakup setiap aspek pengiriman serta penerimaan pesan selama percakapan.",
     "items": {
       "receive": {
-        "eyebrow": "Pahami balasan",
         "title": "Pahami setiap balasan, tanpa meninggalkan keyboard",
         "description": "Tempel pesan yang Anda terima dan Arcatext menerjemahkannya langsung di dalam aplikasi, sehingga Anda tak perlu meninggalkan percakapan.",
         "bullets": [
@@ -47,7 +46,6 @@
         "alt": "Arcatext menerjemahkan pesan yang diterima dengan opsi uraian dan versi harfiah."
       },
       "homographs": {
-        "eyebrow": "Katakan yang Anda maksud",
         "title": "Perjelas homograf",
         "description": "Ketika sebuah kata memiliki lebih dari satu makna, Arcatext mendeteksinya dan membiarkan Anda memilih varian yang tepat, sehingga pesan Anda selalu jelas.",
         "bullets": [
@@ -58,7 +56,6 @@
         "alt": "Arcatext mengenali sebuah homograf dan menawarkan makna yang dimaksudkan."
       },
       "reverse": {
-        "eyebrow": "Pastikan maksud",
         "title": "Periksa ulang terjemahan dalam bahasa Anda sendiri",
         "description": "Lihat pesan Anda diterjemahkan kembali ke bahasa ibu Anda sebelum menekan kirim, sehingga Anda selalu tahu persis apa yang akan dibaca lawan bicara.",
         "bullets": [
@@ -69,7 +66,6 @@
         "alt": "Arcatext memvalidasi terjemahan dengan menampilkannya kembali dalam bahasa ibu pengguna."
       },
       "recipient": {
-        "eyebrow": "Peka konteks",
         "title": "Terjemahan yang pas dengan lawan bicara Anda",
         "description": "Dapatkan terjemahan yang akurat dengan memilih gender lawan bicara Anda yang tepat. Pilih sistem penulisan yang nyaman Anda baca, entah itu aksara asli atau romanisasi.",
         "bullets": [
@@ -80,7 +76,6 @@
         "alt": "Opsi penyusunan ulang Arcatext untuk gender penerima, obrolan grup, dan alfabet Jepang."
       },
       "synonyms": {
-        "eyebrow": "Perkaya kosakata Anda",
         "title": "Perkaya kosakata Anda sambil mengobrol",
         "description": "Setiap terjemahan disertai opsi sinonim, sehingga Anda mengenal beragam cara mengungkapkan hal yang sama dan menyerap bahasa secara alami, satu pesan setiap kali.",
         "bullets": [
@@ -91,7 +86,6 @@
         "alt": "Arcatext menawarkan opsi sinonim untuk pesan yang telah diterjemahkan."
       },
       "copy": {
-        "eyebrow": "Tetap selaras",
         "title": "Jaga seluruh percakapan tetap dalam konteks",
         "description": "Sertakan salinan setiap pesan dalam bahasa Anda sendiri, sehingga Anda tak pernah tersesat dalam percakapan atau harus menerjemahkan ulang pesan.",
         "bullets": [
