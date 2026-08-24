@@ -73,7 +73,27 @@
           "Choose the meaning you intended",
           "Avoid awkward mistranslations before you send"
         ],
-        "alt": "Arcatext identifying a homograph and offering the intended meaning."
+        "alt": "Arcatext identifying a homograph and offering the intended meaning.",
+        "demo": {
+          "sent": "Morning!",
+          "recv": "What's the plan today?",
+          "reword": "First, I need to go to the bank.",
+          "word": "bank",
+          "meanings": [
+            {
+              "title": "bank",
+              "description": "Financial institution"
+            },
+            {
+              "title": "riverbank",
+              "description": "Land at the edge of a river"
+            },
+            {
+              "title": "tilt",
+              "description": "To lean or slope"
+            }
+          ]
+        }
       },
       "reverse": {
         "title": "Double-check the translation in your own language",
@@ -210,6 +230,11 @@
     "paste": "Paste",
     "language": "English",
     "reword": "Reword",
-    "typePlaceholder": "Type something"
+    "typePlaceholder": "Type something",
+    "checkTitle": "Check",
+    "detectedInMessage": "DETECTED IN YOUR MESSAGE",
+    "experimental": "Experimental",
+    "genderSubtext": "Words that change depending on gender.",
+    "checkGenderedWords": "Check gendered words"
   }
 }

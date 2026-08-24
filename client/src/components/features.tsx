@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import RewordKeyboard from "@/components/reword-keyboard";
 import PasteViewDemo from "@/components/paste-view-demo";
+import CheckViewDemo from "@/components/check-view-demo";
 
 // Each feature focuses on a single value Arcatext delivers, paired with the
 // visual that demonstrates it. Most rows use an in-app screenshot from the
@@ -21,7 +22,7 @@ type Feature = {
 const FEATURES: Feature[] = [
   { key: "reword", visual: () => <RewordKeyboard /> },
   { key: "receive", visual: () => <PasteViewDemo /> },
-  { key: "homographs", image: "/homographs.png" },
+  { key: "homographs", visual: () => <CheckViewDemo /> },
   { key: "reverse", image: "/reverse-translations.png" },
   { key: "recipient", image: "/reword-options.png" },
   { key: "synonyms", image: "/synonyms.png" },
