@@ -156,7 +156,12 @@
           "Never lose track of the thread",
           "Effortless bilingual conversations"
         ],
-        "alt": "Arcatext sending a copy of the message in the user's native language."
+        "alt": "Arcatext sending a copy of the message in the user's native language.",
+        "demo": {
+          "recv": "明日の予定、もう決めた？",
+          "reword": "駅のそばのカフェで会いましょう。",
+          "copy": "Let's meet at the coffee shop by the station."
+        }
       }
     }
   },

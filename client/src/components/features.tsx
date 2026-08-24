@@ -7,19 +7,17 @@ import CheckViewDemo from "@/components/check-view-demo";
 import ReverseCheckDemo from "@/components/reverse-check-demo";
 import RewordOptionsDemo from "@/components/reword-options-demo";
 import SynonymsDemo from "@/components/synonyms-demo";
+import CopyThreadDemo from "@/components/copy-thread-demo";
 
 // Each feature focuses on a single value Arcatext delivers, paired with the
-// visual that demonstrates it. Most rows use an in-app screenshot from the
-// public directory (absolute paths so they resolve from any locale URL depth);
-// the opening Reword row instead renders the keyboard surface itself, shared
-// with the hero. Copy is pulled from i18n under `features.items.<key>`; missing
-// translations fall back to English (the authoritative source language).
+// visual that demonstrates it. Every visual is drawn in DOM from the Arcatext
+// app's own source — no screenshots — so the copy inside them localizes with
+// the rest of the page. Copy is pulled from i18n under `features.items.<key>`;
+// missing translations fall back to English (the authoritative source
+// language).
 type Feature = {
   key: string;
-  /** Screenshot path, or omitted when the row renders its own visual. */
-  image?: string;
-  /** Rendered in place of the screenshot. */
-  visual?: () => JSX.Element;
+  visual: () => JSX.Element;
 };
 
 const FEATURES: Feature[] = [
@@ -29,12 +27,11 @@ const FEATURES: Feature[] = [
   { key: "reverse", visual: () => <ReverseCheckDemo /> },
   { key: "recipient", visual: () => <RewordOptionsDemo /> },
   { key: "synonyms", visual: () => <SynonymsDemo /> },
-  { key: "copy", image: "/copy.png" },
+  { key: "copy", visual: () => <CopyThreadDemo /> },
 ];
 
 function FeatureRow({
   featureKey,
-  image,
   visual,
   index,
 }: Omit<Feature, "key"> & { featureKey: string; index: number }) {
@@ -79,7 +76,7 @@ function FeatureRow({
         </ul>
       </motion.div>
 
-      {/* Screenshot column */}
+      {/* Visual column */}
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.96 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -87,18 +84,7 @@ function FeatureRow({
         transition={{ duration: 0.65, ease: "easeOut" }}
         className={`flex justify-center ${reversed ? "lg:order-1" : "lg:order-2"}`}
       >
-        {visual ? (
-          visual()
-        ) : (
-          <div className="rounded-[2rem] bg-cream p-3 shadow-2xl shadow-blue-900/10 ring-1 ring-black/5">
-            <img
-              src={image}
-              alt={t(`${base}.alt`)}
-              loading="lazy"
-              className="w-auto h-[460px] md:h-[560px] rounded-[1.4rem] object-contain"
-            />
-          </div>
-        )}
+        {visual()}
       </motion.div>
     </div>
   );
@@ -135,7 +121,6 @@ export default function Features() {
             <FeatureRow
               key={feature.key}
               featureKey={feature.key}
-              image={feature.image}
               visual={feature.visual}
               index={index}
             />
