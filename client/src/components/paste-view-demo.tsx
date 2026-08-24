@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { ChevronDown, Settings, Trash2, X } from "lucide-react";
 import {
-  C,
+  Bubble,
   DESIGN_H,
   DESIGN_W,
   InputBar,
   ScaledSurface,
+  SURFACE_MAX_H,
 } from "@/components/keyboard-surface";
 
 /**
@@ -43,9 +44,6 @@ const HEADER_ROW_H = 44;
 const PICKER_H = 38;
 const TOOLBAR_H = 50;
 
-/** Caps the rendered height so this row keeps pace with the others. */
-const MAX_H = 580;
-
 export default function PasteViewDemo() {
   const { t } = useTranslation();
   const demo = `features.items.receive.demo`;
@@ -53,7 +51,7 @@ export default function PasteViewDemo() {
   return (
     <ScaledSurface
       label={t("features.items.receive.alt")}
-      maxHeight={MAX_H}
+      maxHeight={SURFACE_MAX_H}
       maxScale={1}
     >
       <div
@@ -64,22 +62,8 @@ export default function PasteViewDemo() {
             at its real height only a sliver of the thread is left visible —
             which is exactly what you see on a phone. */}
         <div className="flex min-h-0 flex-1 flex-col justify-end gap-1.5 overflow-hidden px-3">
-          <div className="flex justify-end">
-            <div
-              className="max-w-[74%] rounded-[20px] px-3.5 py-2 text-[17px]"
-              style={{ background: C.sentBubble, color: "#fff" }}
-            >
-              {t(`${demo}.sent`)}
-            </div>
-          </div>
-          <div className="flex justify-start">
-            <div
-              className="max-w-[74%] rounded-[20px] px-3.5 py-2 text-[17px]"
-              style={{ background: C.recvGray, color: "#000" }}
-            >
-              {t(`${demo}.received`)}
-            </div>
-          </div>
+          <Bubble side="sent">{t(`${demo}.sent`)}</Bubble>
+          <Bubble side="recv">{t(`${demo}.received`)}</Bubble>
         </div>
 
         <InputBar caret={false} />

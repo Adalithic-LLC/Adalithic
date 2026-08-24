@@ -42,7 +42,13 @@
           "Translate to over 70 languages",
           "Correct to the same language"
         ],
-        "alt": "The Arcatext keyboard with a message in the text field, ready to be reworded."
+        "alt": "The Arcatext keyboard with a message in the text field, ready to be reworded.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Are you free to meet up this weekend?"
+        }
       },
       "receive": {
         "title": "Understand every reply, without leaving the keyboard",

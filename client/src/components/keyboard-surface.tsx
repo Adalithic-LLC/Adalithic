@@ -37,6 +37,37 @@ export const C = {
 export const DESIGN_W = 402;
 export const DESIGN_H = 600;
 
+/** The hero's own scale at the desktop breakpoint. The still frames cap their
+ *  rendered height here so they come out the same size as the hero visual. */
+export const HERO_DESKTOP_SCALE = 0.96;
+export const SURFACE_MAX_H = DESIGN_H * HERO_DESKTOP_SCALE;
+
+/** One message in the thread behind the keyboard. Sent and received styling is
+ *  shared by the hero's animated stack and the features stills. */
+export function Bubble({
+  side,
+  children,
+}: {
+  side: "sent" | "recv";
+  children: React.ReactNode;
+}) {
+  const sent = side === "sent";
+  return (
+    <div className={`flex ${sent ? "justify-end" : "justify-start"}`}>
+      <div
+        className="max-w-[74%] rounded-[20px] px-3.5 py-2 text-[17px]"
+        style={
+          sent
+            ? { background: C.sentBubble, color: "#fff" }
+            : { background: C.recvGray, color: "#000" }
+        }
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
 export function Key({
   label,
   num,
