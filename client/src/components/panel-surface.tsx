@@ -52,6 +52,59 @@ export function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
+/** Radio dot: 20pt ring, filled 12pt core when that option is selected. */
+function Radio({ selected }: { selected: boolean }) {
+  return (
+    <div
+      className="grid shrink-0 place-items-center pt-px"
+      style={{ width: 20, height: 20 }}
+    >
+      <div
+        className="grid place-items-center rounded-full"
+        style={{
+          width: 20,
+          height: 20,
+          border: `${selected ? 2 : 1.5}px solid ${selected ? K.accent : K.placeholder}`,
+        }}
+      >
+        {selected && (
+          <div
+            className="rounded-full"
+            style={{ width: 12, height: 12, background: K.accent }}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** One selectable message row: the text, with its radio on the right. */
+export function OptionRow({
+  text,
+  selected,
+}: {
+  text: string;
+  selected: boolean;
+}) {
+  return (
+    <div
+      className="mx-3 flex items-start gap-2 rounded-[12px] p-3"
+      style={{
+        background: K.cardBg,
+        border: `${selected ? 2 : 1}px solid ${selected ? K.accent : K.cardStroke}`,
+      }}
+    >
+      <p
+        className="min-w-0 flex-1 text-[16px] leading-relaxed"
+        style={{ color: K.xMark }}
+      >
+        {text}
+      </p>
+      <Radio selected={selected} />
+    </div>
+  );
+}
+
 export default function PanelSurface({
   label,
   title,

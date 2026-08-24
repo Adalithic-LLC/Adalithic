@@ -1,6 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { ChevronRight } from "lucide-react";
-import PanelSurface, { K, SectionLabel } from "@/components/panel-surface";
+import PanelSurface, {
+  OptionRow,
+  SectionLabel,
+  K,
+} from "@/components/panel-surface";
 
 /**
  * A still frame of the Arcatext check view scrolled to the top, where the
@@ -12,53 +16,6 @@ import PanelSurface, { K, SectionLabel } from "@/components/panel-surface";
  * REWORD / ORIGINAL MESSAGE radio rows below — `CheckCardSelectionButtonStyle`
  * gives the selected row a 2pt accent stroke, the other a 1pt card stroke.
  */
-
-/** Radio dot: 20pt ring, filled 12pt core when that option is selected. */
-function Radio({ selected }: { selected: boolean }) {
-  return (
-    <div
-      className="grid shrink-0 place-items-center pt-px"
-      style={{ width: 20, height: 20 }}
-    >
-      <div
-        className="grid place-items-center rounded-full"
-        style={{
-          width: 20,
-          height: 20,
-          border: `${selected ? 2 : 1.5}px solid ${selected ? K.accent : K.placeholder}`,
-        }}
-      >
-        {selected && (
-          <div
-            className="rounded-full"
-            style={{ width: 12, height: 12, background: K.accent }}
-          />
-        )}
-      </div>
-    </div>
-  );
-}
-
-/** One selectable message row: the text, with its radio on the right. */
-function OptionRow({ text, selected }: { text: string; selected: boolean }) {
-  return (
-    <div
-      className="mx-3 flex items-start gap-2 rounded-[12px] p-3"
-      style={{
-        background: K.cardBg,
-        border: `${selected ? 2 : 1}px solid ${selected ? K.accent : K.cardStroke}`,
-      }}
-    >
-      <p
-        className="min-w-0 flex-1 text-[16px] leading-relaxed"
-        style={{ color: K.xMark }}
-      >
-        {text}
-      </p>
-      <Radio selected={selected} />
-    </div>
-  );
-}
 
 export default function ReverseCheckDemo() {
   const { t } = useTranslation();

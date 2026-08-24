@@ -137,7 +137,16 @@
           "Discover richer, more natural vocabulary",
           "Real progress from real conversations"
         ],
-        "alt": "Arcatext offering synonym options for a translated message."
+        "alt": "Arcatext offering synonym options for a translated message.",
+        "demo": {
+          "sent": "Hi!",
+          "recv": "今夜、時間ある？",
+          "options": [
+            "今夜は都合が悪いので、明日にしませんか。",
+            "今晩はちょっと忙しいから、また明日にしよう。",
+            "今夜は時間が取れないので、明日ではどうでしょうか。"
+          ]
+        }
       },
       "copy": {
         "title": "Keep the whole thread in context",
@@ -259,6 +268,7 @@
     "groupChat": "Group Chat",
     "genderMale": "Male",
     "genderFemale": "Female",
-    "rewordScript": "REWORD SCRIPT"
+    "rewordScript": "REWORD SCRIPT",
+    "synonyms": "SYNONYMS"
   }
 }

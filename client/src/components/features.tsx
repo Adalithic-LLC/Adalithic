@@ -6,6 +6,7 @@ import PasteViewDemo from "@/components/paste-view-demo";
 import CheckViewDemo from "@/components/check-view-demo";
 import ReverseCheckDemo from "@/components/reverse-check-demo";
 import RewordOptionsDemo from "@/components/reword-options-demo";
+import SynonymsDemo from "@/components/synonyms-demo";
 
 // Each feature focuses on a single value Arcatext delivers, paired with the
 // visual that demonstrates it. Most rows use an in-app screenshot from the
@@ -27,7 +28,7 @@ const FEATURES: Feature[] = [
   { key: "homographs", visual: () => <CheckViewDemo /> },
   { key: "reverse", visual: () => <ReverseCheckDemo /> },
   { key: "recipient", visual: () => <RewordOptionsDemo /> },
-  { key: "synonyms", image: "/synonyms.png" },
+  { key: "synonyms", visual: () => <SynonymsDemo /> },
   { key: "copy", image: "/copy.png" },
 ];
 
