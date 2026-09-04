@@ -4,7 +4,7 @@ export function TermsEs() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operado por Adalithic LLC</p>
-      <p>Última actualización: 2 de julio de 2026</p>
+      <p>Última actualización: 3 de septiembre de 2026</p>
       <p>
         Estos Términos de Uso ("Términos") constituyen un acuerdo legal entre usted y Adalithic LLC
         ("Adalithic", "nosotros" o "nuestro") y rigen su acceso y uso de Arcatext, incluidos

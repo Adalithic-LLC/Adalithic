@@ -4,7 +4,7 @@ export function TermsId() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Dioperasikan oleh Adalithic LLC</p>
-      <p>Terakhir Diperbarui: July 2, 2026</p>
+      <p>Terakhir Diperbarui: September 3, 2026</p>
       <p>
         Ketentuan Penggunaan ini ("Ketentuan") merupakan perjanjian hukum antara Anda dan Adalithic LLC
         ("Adalithic," "kami," atau "milik kami") dan mengatur akses serta penggunaan Anda atas Arcatext, termasuk

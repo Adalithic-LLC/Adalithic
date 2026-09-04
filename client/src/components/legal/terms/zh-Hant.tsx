@@ -4,7 +4,7 @@ export function TermsZhHant() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">由 Adalithic LLC 營運</p>
-      <p>最後更新：2026 年 7 月 2 日</p>
+      <p>最後更新：2026 年 9 月 3 日</p>
       <p>
         本使用條款（下稱「條款」）是您與 Adalithic LLC（下稱「Adalithic」、「我們」或「我方」）之間的法律協議，
         並規範您對 Arcatext 的存取與使用，包括我們的行動應用程式、自訂鍵盤擴充功能、網站，以及相關的語言工具與服務。

@@ -4,7 +4,7 @@ export function TermsIt() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Gestito da Adalithic LLC</p>
-      <p>Ultimo aggiornamento: 2 luglio 2026</p>
+      <p>Ultimo aggiornamento: 3 settembre 2026</p>
       <p>
         I presenti Termini di Utilizzo ("Termini") costituiscono un accordo legale tra te e Adalithic LLC
         ("Adalithic", "noi", "ci" o "nostro") e disciplinano l'accesso e l'utilizzo di Arcatext, inclusi

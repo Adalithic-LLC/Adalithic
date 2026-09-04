@@ -4,7 +4,7 @@ export function TermsTe() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC ద్వారా నిర్వహించబడుతుంది</p>
-      <p>చివరిగా నవీకరించబడింది: జూలై 2, 2026</p>
+      <p>చివరిగా నవీకరించబడింది: సెప్టెంబర్ 3, 2026</p>
       <p>
         ఈ వినియోగ నిబంధనలు ("నిబంధనలు") మీకు మరియు Adalithic LLC
         ("Adalithic," "మేము," "మమ్మల్ని," లేదా "మా") మధ్య ఒక చట్టపరమైన ఒప్పందం మరియు మా

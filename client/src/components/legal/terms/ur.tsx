@@ -4,7 +4,7 @@ export function TermsUr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC کے ذریعے چلایا جاتا ہے</p>
-      <p>آخری بار اپ ڈیٹ کیا گیا: July 2, 2026</p>
+      <p>آخری بار اپ ڈیٹ کیا گیا: September 3, 2026</p>
       <p>
         استعمال کی یہ شرائط ("شرائط") آپ اور Adalithic LLC کے درمیان ایک قانونی معاہدہ ہیں
         ("Adalithic،" "ہم،" "ہمیں،" یا "ہمارا") اور یہ Arcatext تک آپ کی رسائی اور اس کے استعمال کو

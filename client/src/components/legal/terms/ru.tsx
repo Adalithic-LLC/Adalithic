@@ -4,7 +4,7 @@ export function TermsRu() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Управляется Adalithic LLC</p>
-      <p>Последнее обновление: 2 июля 2026 г.</p>
+      <p>Последнее обновление: 3 сентября 2026 г.</p>
       <p>
         Настоящие Условия использования («Условия») представляют собой юридическое соглашение между вами и Adalithic LLC
         («Adalithic», «мы», «нас» или «наш») и регулируют ваш доступ к Arcatext и его использование, включая

@@ -4,7 +4,7 @@ export function TermsZh() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">由 Adalithic LLC 运营</p>
-      <p>最后更新：July 2, 2026</p>
+      <p>最后更新：September 3, 2026</p>
       <p>
         本使用条款（以下称"条款"）是您与 Adalithic LLC
         （以下称"Adalithic"、"我们"或"我们的"）之间的法律协议，管辖您对 Arcatext 的访问和使用，包括

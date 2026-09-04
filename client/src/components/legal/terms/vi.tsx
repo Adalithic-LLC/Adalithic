@@ -4,7 +4,7 @@ export function TermsVi() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Được vận hành bởi Adalithic LLC</p>
-      <p>Cập Nhật Lần Cuối: Ngày 2 tháng 7, 2026</p>
+      <p>Cập Nhật Lần Cuối: Ngày 3 tháng 9, 2026</p>
       <p>
         Các Điều Khoản Sử Dụng này ("Điều Khoản") là một thỏa thuận pháp lý giữa bạn và Adalithic LLC
         ("Adalithic," "chúng tôi," hoặc "của chúng tôi") và điều chỉnh việc bạn truy cập và sử dụng Arcatext, bao gồm

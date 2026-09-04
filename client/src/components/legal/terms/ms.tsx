@@ -4,7 +4,7 @@ export function TermsMs() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Dikendalikan oleh Adalithic LLC</p>
-      <p>Kemas Kini Terakhir: 2 Julai 2026</p>
+      <p>Kemas Kini Terakhir: 3 September 2026</p>
       <p>
         Terma Penggunaan ini ("Terma") merupakan perjanjian undang-undang antara anda dan Adalithic LLC
         ("Adalithic," "kami," atau "milik kami") dan mengawal akses anda kepada dan penggunaan Arcatext, termasuk

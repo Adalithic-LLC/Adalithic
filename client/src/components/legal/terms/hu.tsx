@@ -4,7 +4,7 @@ export function TermsHu() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Üzemeltető: Adalithic LLC</p>
-      <p>Utolsó frissítés: 2026. július 2.</p>
+      <p>Utolsó frissítés: 2026. szeptember 3.</p>
       <p>
         Ez a Felhasználási Feltételek („Feltételek") jogi megállapodás Ön és az Adalithic LLC
         („Adalithic", „mi", „minket" vagy „miénk") között, és szabályozza az Arcatext elérését és

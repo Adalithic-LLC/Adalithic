@@ -4,7 +4,7 @@ export function TermsPl() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Obsługiwane przez Adalithic LLC</p>
-      <p>Ostatnia aktualizacja: 2 lipca 2026</p>
+      <p>Ostatnia aktualizacja: 3 września 2026</p>
       <p>
         Niniejszy Regulamin ("Regulamin") stanowi umowę prawną między Tobą a Adalithic LLC
         ("Adalithic", "my", "nas" lub "nasz") i reguluje Twój dostęp do Arcatext oraz korzystanie z niego, w tym z

@@ -4,7 +4,7 @@ export function TermsHe() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">מופעל על ידי Adalithic LLC</p>
-      <p>עודכן לאחרונה: 2 ביולי 2026</p>
+      <p>עודכן לאחרונה: 3 בספטמבר 2026</p>
       <p>
         תנאי שימוש אלה ("התנאים") הם הסכם משפטי בינך לבין Adalithic LLC
         ("Adalithic", "אנחנו", "אותנו" או "שלנו") ומסדירים את הגישה שלך לשירות Arcatext ואת השימוש בו, לרבות

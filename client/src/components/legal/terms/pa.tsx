@@ -2,7 +2,7 @@ export function TermsPa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC ਦੁਆਰਾ ਸੰਚਾਲਿਤ</p>
-      <p>ਆਖਰੀ ਵਾਰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ: 2 ਜੁਲਾਈ, 2026</p>
+      <p>ਆਖਰੀ ਵਾਰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ: 3 ਸਤੰਬਰ, 2026</p>
       <p>
         ਇਹ ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ ("ਸ਼ਰਤਾਂ") ਤੁਹਾਡੇ ਅਤੇ Adalithic LLC
         ("Adalithic," "ਅਸੀਂ," "ਸਾਨੂੰ," ਜਾਂ "ਸਾਡਾ") ਵਿਚਕਾਰ ਇੱਕ ਕਾਨੂੰਨੀ ਸਮਝੌਤਾ ਹਨ

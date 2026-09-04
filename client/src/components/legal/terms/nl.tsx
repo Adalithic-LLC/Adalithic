@@ -4,7 +4,7 @@ export function TermsNl() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Beheerd door Adalithic LLC</p>
-      <p>Laatst bijgewerkt: 2 juli 2026</p>
+      <p>Laatst bijgewerkt: 3 september 2026</p>
       <p>
         Deze Gebruiksvoorwaarden ("Voorwaarden") vormen een juridische overeenkomst tussen u en Adalithic LLC
         ("Adalithic", "wij", "ons" of "onze") en zijn van toepassing op uw toegang tot en gebruik van Arcatext, met inbegrip van

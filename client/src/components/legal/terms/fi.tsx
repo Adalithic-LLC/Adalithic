@@ -4,7 +4,7 @@ export function TermsFi() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Palvelun tarjoaa Adalithic LLC</p>
-      <p>Viimeksi päivitetty: 2. heinäkuuta 2026</p>
+      <p>Viimeksi päivitetty: 3. syyskuuta 2026</p>
       <p>
         Nämä käyttöehdot ("Ehdot") ovat sinun ja Adalithic LLC:n välinen oikeudellinen sopimus
         ("Adalithic", "me" tai "meidän") ja säätelevät pääsyäsi Arcatextiin ja sen käyttöäsi, mukaan

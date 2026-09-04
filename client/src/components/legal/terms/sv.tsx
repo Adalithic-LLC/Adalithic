@@ -4,7 +4,7 @@ export function TermsSv() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Drivs av Adalithic LLC</p>
-      <p>Senast uppdaterad: 2 juli 2026</p>
+      <p>Senast uppdaterad: 3 september 2026</p>
       <p>
         Dessa användarvillkor ("Villkoren") utgör ett juridiskt avtal mellan dig och Adalithic LLC
         ("Adalithic", "vi", "oss" eller "vår") och reglerar din åtkomst till och användning av Arcatext, inklusive
