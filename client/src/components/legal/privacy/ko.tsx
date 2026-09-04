@@ -4,7 +4,7 @@ export function PrivacyKo() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC 운영</p>
-      <p>최종 업데이트: August 11, 2026</p>
+      <p>최종 업데이트: September 3, 2026</p>
       <p>
         Arcatext는 사용자가 언어 간에 메시지를 작성하고, 번역하고, 다시 표현하고, 더 잘
         이해할 수 있도록 돕기 위해 설계된 맞춤형 키보드 및 언어 애플리케이션입니다. 본

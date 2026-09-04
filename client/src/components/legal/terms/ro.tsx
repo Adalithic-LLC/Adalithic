@@ -4,7 +4,7 @@ export function TermsRo() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operat de Adalithic LLC</p>
-      <p>Ultima actualizare: 2 iulie 2026</p>
+      <p>Ultima actualizare: 3 septembrie 2026</p>
       <p>
         Acești Termeni de utilizare („Termeni") reprezintă un acord juridic între dumneavoastră și Adalithic LLC
         („Adalithic", „noi", „nouă" sau „al nostru") și reglementează accesul dumneavoastră la Arcatext și utilizarea acestuia, inclusiv

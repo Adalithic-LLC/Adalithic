@@ -4,7 +4,7 @@ export function TermsJa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">運営者: Adalithic LLC</p>
-      <p>最終更新日: 2026年7月2日</p>
+      <p>最終更新日: 2026年9月3日</p>
       <p>
         本利用規約(以下「本規約」)は、お客様とAdalithic LLC(以下「Adalithic」、「当社」)との間の
         法的な合意であり、当社のモバイルアプリ、カスタムキーボード拡張機能、ウェブサイト、および

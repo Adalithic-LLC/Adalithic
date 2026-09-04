@@ -4,7 +4,7 @@ export function TermsKo() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC 운영</p>
-      <p>최종 업데이트: July 2, 2026</p>
+      <p>최종 업데이트: September 3, 2026</p>
       <p>
         본 이용약관("약관")은 귀하와 Adalithic LLC("Adalithic", "당사", "우리")
         간의 법적 계약이며, 당사의 모바일 앱, 맞춤형 키보드 확장 프로그램, 웹사이트 및 관련 언어

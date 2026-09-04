@@ -4,7 +4,7 @@ export function PrivacyPl() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Obsługiwane przez Adalithic LLC</p>
-      <p>Ostatnia aktualizacja: August 11, 2026</p>
+      <p>Ostatnia aktualizacja: September 3, 2026</p>
       <p>
         Arcatext to niestandardowa klawiatura i aplikacja językowa zaprojektowana, aby pomagać użytkownikom pisać,
         tłumaczyć, przeformułowywać i lepiej rozumieć wiadomości w różnych językach. Niniejsza Polityka Prywatności

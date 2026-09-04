@@ -4,7 +4,7 @@ export function TermsTr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC tarafından işletilmektedir</p>
-      <p>Son Güncelleme: 2 Temmuz 2026</p>
+      <p>Son Güncelleme: 3 Eylül 2026</p>
       <p>
         Bu Kullanım Koşulları ("Koşullar"), sizinle Adalithic LLC ("Adalithic," "biz," "bize" veya
         "bizim") arasında yasal bir sözleşmedir ve mobil uygulamamız, özel klavye uzantımız, web

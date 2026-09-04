@@ -4,7 +4,7 @@ export function PrivacyEl() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Λειτουργεί από την Adalithic LLC</p>
-      <p>Τελευταία ενημέρωση: August 11, 2026</p>
+      <p>Τελευταία ενημέρωση: September 3, 2026</p>
       <p>
         Το Arcatext είναι μια προσαρμοσμένη εφαρμογή πληκτρολογίου και γλώσσας, σχεδιασμένη να
         βοηθά τους χρήστες να γράφουν, να μεταφράζουν, να αναδιατυπώνουν και να κατανοούν καλύτερα

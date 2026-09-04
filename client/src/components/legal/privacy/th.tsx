@@ -4,7 +4,7 @@ export function PrivacyTh() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">ดำเนินการโดย Adalithic LLC</p>
-      <p>อัปเดตล่าสุด: August 11, 2026</p>
+      <p>อัปเดตล่าสุด: September 3, 2026</p>
       <p>
         Arcatext เป็นแป้นพิมพ์แบบกำหนดเองและแอปพลิเคชันด้านภาษาที่ออกแบบมาเพื่อช่วยให้ผู้ใช้เขียน
         แปล เรียบเรียงถ้อยคำใหม่ และเข้าใจข้อความข้ามภาษาได้ดียิ่งขึ้น นโยบายความเป็นส่วนตัวนี้

@@ -4,7 +4,7 @@ export function TermsBg() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Управлявано от Adalithic LLC</p>
-      <p>Последна актуализация: 2 юли 2026 г.</p>
+      <p>Последна актуализация: 3 септември 2026 г.</p>
       <p>
         Настоящите Условия за ползване („Условия“) представляват правно споразумение между Вас и Adalithic LLC
         („Adalithic“, „ние“, „нас“ или „наш“) и уреждат Вашия достъп до и използване на Arcatext, включително

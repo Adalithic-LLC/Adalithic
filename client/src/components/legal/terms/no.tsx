@@ -4,7 +4,7 @@ export function TermsNo() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Drevet av Adalithic LLC</p>
-      <p>Sist oppdatert: 2. juli 2026</p>
+      <p>Sist oppdatert: 3. september 2026</p>
       <p>
         Disse bruksvilkårene ("Vilkårene") er en juridisk avtale mellom deg og Adalithic LLC
         ("Adalithic", "vi", "oss" eller "vår") og regulerer din tilgang til og bruk av Arcatext, inkludert

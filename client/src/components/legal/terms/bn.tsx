@@ -4,7 +4,7 @@ export function TermsBn() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC দ্বারা পরিচালিত</p>
-      <p>সর্বশেষ হালনাগাদ: জুলাই 2, 2026</p>
+      <p>সর্বশেষ হালনাগাদ: সেপ্টেম্বর 3, 2026</p>
       <p>
         এই ব্যবহারের শর্তাবলী ("শর্তাবলী") হলো আপনার এবং Adalithic LLC-এর মধ্যে একটি আইনি চুক্তি
         ("Adalithic," "আমরা," "আমাদের," বা "আমাদেরকে") এবং এগুলো Arcatext-এ আপনার প্রবেশাধিকার ও

@@ -4,7 +4,7 @@ export function PrivacyVi() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Được vận hành bởi Adalithic LLC</p>
-      <p>Cập Nhật Lần Cuối: August 11, 2026</p>
+      <p>Cập Nhật Lần Cuối: September 3, 2026</p>
       <p>
         Arcatext là một ứng dụng bàn phím tùy chỉnh và ngôn ngữ được thiết kế để giúp người dùng viết,
         dịch, diễn đạt lại và hiểu rõ hơn các tin nhắn qua nhiều ngôn ngữ. Chính Sách Quyền Riêng Tư này

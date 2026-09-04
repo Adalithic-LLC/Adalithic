@@ -4,7 +4,7 @@ export function PrivacyZh() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">由 Adalithic LLC 运营</p>
-      <p>最后更新：August 11, 2026</p>
+      <p>最后更新：September 3, 2026</p>
       <p>
         Arcatext 是一款自定义键盘和语言应用，旨在帮助用户跨语言撰写、翻译、改写并更好地理解消息。本隐私政策
         说明 Arcatext 处理哪些信息、如何使用这些信息、何时存储、何时可能共享，以及您拥有哪些选择。

@@ -4,7 +4,7 @@ export function TermsFr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Exploité par Adalithic LLC</p>
-      <p>Dernière mise à jour : 2 juillet 2026</p>
+      <p>Dernière mise à jour : 3 septembre 2026</p>
       <p>
         Les présentes Conditions d'utilisation (« Conditions ») constituent un accord juridique entre
         vous et Adalithic LLC (« Adalithic », « nous », « notre » ou « nos ») et régissent votre accès

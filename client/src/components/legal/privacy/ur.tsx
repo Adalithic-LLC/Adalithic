@@ -4,7 +4,7 @@ export function PrivacyUr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC کے زیرِ انتظام</p>
-      <p>آخری بار اپ ڈیٹ کیا گیا: August 11, 2026</p>
+      <p>آخری بار اپ ڈیٹ کیا گیا: September 3, 2026</p>
       <p>
         Arcatext ایک کسٹم کی بورڈ اور زبان کی ایپلیکیشن ہے جو صارفین کو مختلف زبانوں میں پیغامات
         لکھنے، ترجمہ کرنے، دوبارہ الفاظ میں ڈھالنے، اور بہتر طور پر سمجھنے میں مدد کے لیے ڈیزائن کی

@@ -4,7 +4,7 @@ export function TermsFil() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Pinapatakbo ng Adalithic LLC</p>
-      <p>Huling In-update: Hulyo 2, 2026</p>
+      <p>Huling In-update: Setyembre 3, 2026</p>
       <p>
         Ang Mga Tuntunin ng Paggamit na ito ("Mga Tuntunin") ay isang legal na kasunduan sa pagitan mo at ng Adalithic LLC
         ("Adalithic," "kami," "amin," o "aming") at namamahala sa iyong pag-access at paggamit ng Arcatext, kabilang ang

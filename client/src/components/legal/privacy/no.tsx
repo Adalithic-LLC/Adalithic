@@ -4,7 +4,7 @@ export function PrivacyNo() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Drevet av Adalithic LLC</p>
-      <p>Sist oppdatert: August 11, 2026</p>
+      <p>Sist oppdatert: September 3, 2026</p>
       <p>
         Arcatext er et tilpasset tastatur og en språkapplikasjon utformet for å hjelpe brukere med å skrive,
         oversette, omformulere og bedre forstå meldinger på tvers av språk. Denne personvernerklæringen

@@ -4,7 +4,7 @@ export function TermsMr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC द्वारे संचालित</p>
-      <p>शेवटचे अद्यतनित: July 2, 2026</p>
+      <p>शेवटचे अद्यतनित: September 3, 2026</p>
       <p>
         या वापराच्या अटी ("अटी") तुमच्या आणि Adalithic LLC ("Adalithic," "आम्ही," "आम्हाला," किंवा
         "आमचे") यांच्यातील कायदेशीर करार आहे आणि आमच्या मोबाइल अ‍ॅप, सानुकूल कीबोर्ड विस्तार, वेबसाइट,

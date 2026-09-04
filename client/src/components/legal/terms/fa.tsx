@@ -4,7 +4,7 @@ export function TermsFa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">اداره‌شده توسط Adalithic LLC</p>
-      <p>آخرین به‌روزرسانی: July 2, 2026</p>
+      <p>آخرین به‌روزرسانی: September 3, 2026</p>
       <p>
         این شرایط استفاده ("شرایط") یک توافق‌نامه حقوقی میان شما و Adalithic LLC
         ("Adalithic"، "ما"، "به ما"، یا "مال ما") است و دسترسی شما به Arcatext و استفاده از آن، از جمله

@@ -4,7 +4,7 @@ export function TermsUk() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Оператор: Adalithic LLC</p>
-      <p>Останнє оновлення: 2 липня 2026 р.</p>
+      <p>Останнє оновлення: 3 вересня 2026 р.</p>
       <p>
         Ці Умови використання ("Умови") є юридичною угодою між вами та Adalithic LLC
         ("Adalithic", "ми", "нас" або "наш") і регулюють ваш доступ до Arcatext та його використання, зокрема

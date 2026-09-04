@@ -4,7 +4,7 @@ export function TermsDe() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Betrieben von Adalithic LLC</p>
-      <p>Zuletzt aktualisiert: 2. Juli 2026</p>
+      <p>Zuletzt aktualisiert: 3. September 2026</p>
       <p>
         Diese Nutzungsbedingungen ("Bedingungen") sind eine rechtliche Vereinbarung zwischen Ihnen und Adalithic LLC
         ("Adalithic", "wir", "uns" oder "unser") und regeln Ihren Zugang zu und Ihre Nutzung von Arcatext, einschließlich

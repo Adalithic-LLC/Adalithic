@@ -4,7 +4,7 @@ export function TermsCs() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Provozováno společností Adalithic LLC</p>
-      <p>Poslední aktualizace: 2. července 2026</p>
+      <p>Poslední aktualizace: 3. září 2026</p>
       <p>
         Tyto Podmínky používání („Podmínky") představují právní dohodu mezi vámi a společností Adalithic LLC
         („Adalithic", „my", „nás" nebo „naše") a upravují váš přístup k aplikaci Arcatext a její používání, včetně

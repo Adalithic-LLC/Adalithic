@@ -4,7 +4,7 @@ export function TermsHi() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC द्वारा संचालित</p>
-      <p>अंतिम बार अद्यतन: 2 जुलाई, 2026</p>
+      <p>अंतिम बार अद्यतन: 3 सितंबर, 2026</p>
       <p>
         ये उपयोग की शर्तें ("शर्तें") आपके और Adalithic LLC ("Adalithic," "हम," "हमें," या "हमारा")
         के बीच एक कानूनी अनुबंध हैं और Arcatext तक आपकी पहुँच और उसके उपयोग को नियंत्रित करती हैं,

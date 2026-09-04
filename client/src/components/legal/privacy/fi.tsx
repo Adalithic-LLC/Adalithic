@@ -4,7 +4,7 @@ export function PrivacyFi() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Palvelun tarjoaa Adalithic LLC</p>
-      <p>Viimeksi päivitetty: August 11, 2026</p>
+      <p>Viimeksi päivitetty: September 3, 2026</p>
       <p>
         Arcatext on mukautettu näppäimistö- ja kielisovellus, joka on suunniteltu auttamaan käyttäjiä
         kirjoittamaan, kääntämään, muotoilemaan uudelleen ja ymmärtämään paremmin viestejä eri kielten

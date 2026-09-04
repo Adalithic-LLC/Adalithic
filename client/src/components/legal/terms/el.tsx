@@ -4,7 +4,7 @@ export function TermsEl() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Λειτουργεί από την Adalithic LLC</p>
-      <p>Τελευταία Ενημέρωση: July 2, 2026</p>
+      <p>Τελευταία Ενημέρωση: September 3, 2026</p>
       <p>
         Οι παρόντες Όροι Χρήσης ("Όροι") αποτελούν νομική συμφωνία μεταξύ εσάς και της Adalithic LLC
         ("Adalithic", "εμείς", "εμάς" ή "μας") και διέπουν την πρόσβασή σας στο Arcatext και τη χρήση του, συμπεριλαμβανομένων

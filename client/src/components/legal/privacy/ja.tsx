@@ -4,7 +4,7 @@ export function PrivacyJa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">運営者: Adalithic LLC</p>
-      <p>最終更新日: August 11, 2026</p>
+      <p>最終更新日: September 3, 2026</p>
       <p>
         Arcatext は、ユーザーが言語をまたいでメッセージを書き、翻訳し、言い換え、より深く理解できるよう
         支援することを目的とした、カスタムキーボードおよび言語アプリケーションです。本プライバシーポリシーは、

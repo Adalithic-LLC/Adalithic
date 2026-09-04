@@ -4,7 +4,7 @@ export function PrivacyHe() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">מופעל על ידי Adalithic LLC</p>
-      <p>עודכן לאחרונה: August 11, 2026</p>
+      <p>עודכן לאחרונה: September 3, 2026</p>
       <p>
         Arcatext היא מקלדת מותאמת אישית ואפליקציית שפה שנועדה לעזור למשתמשים לכתוב,
         לתרגם, לנסח מחדש ולהבין טוב יותר הודעות בין שפות. מדיניות פרטיות זו

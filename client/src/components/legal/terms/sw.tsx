@@ -4,7 +4,7 @@ export function TermsSw() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Inaendeshwa na Adalithic LLC</p>
-      <p>Ilisasishwa Mwisho: Julai 2, 2026</p>
+      <p>Ilisasishwa Mwisho: Septemba 3, 2026</p>
       <p>
         Masharti haya ya Matumizi ("Masharti") ni makubaliano ya kisheria kati yako na Adalithic LLC
         ("Adalithic," "sisi," "wetu," au "yetu") na yanasimamia ufikiaji wako na matumizi ya Arcatext, ikijumuisha

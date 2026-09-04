@@ -4,7 +4,7 @@ export function PrivacyHu() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Üzemelteti: Adalithic LLC</p>
-      <p>Utolsó frissítés: August 11, 2026</p>
+      <p>Utolsó frissítés: September 3, 2026</p>
       <p>
         Az Arcatext egy egyéni billentyűzet és nyelvi alkalmazás, amelyet arra terveztek, hogy
         segítsen a felhasználóknak üzeneteket írni, fordítani, átfogalmazni és jobban megérteni a

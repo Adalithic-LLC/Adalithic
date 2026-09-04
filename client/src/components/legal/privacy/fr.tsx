@@ -4,7 +4,7 @@ export function PrivacyFr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Exploité par Adalithic LLC</p>
-      <p>Dernière mise à jour : August 11, 2026</p>
+      <p>Dernière mise à jour : September 3, 2026</p>
       <p>
         Arcatext est un clavier personnalisé et une application linguistique conçus pour aider les
         utilisateurs à écrire, traduire, reformuler et mieux comprendre les messages dans
