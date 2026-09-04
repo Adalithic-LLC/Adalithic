@@ -4,7 +4,7 @@ export function PrivacyPa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC ਵੱਲੋਂ ਸੰਚਾਲਿਤ</p>
-      <p>ਆਖਰੀ ਵਾਰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ: August 11, 2026</p>
+      <p>ਆਖਰੀ ਵਾਰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ: September 3, 2026</p>
       <p>
         Arcatext ਇੱਕ ਕਸਟਮ ਕੀਬੋਰਡ ਅਤੇ ਭਾਸ਼ਾ ਐਪਲੀਕੇਸ਼ਨ ਹੈ ਜੋ ਉਪਭੋਗਤਾਵਾਂ ਦੀ ਵੱਖ-ਵੱਖ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਸੁਨੇਹੇ ਲਿਖਣ,
         ਅਨੁਵਾਦ ਕਰਨ, ਦੁਬਾਰਾ ਸ਼ਬਦਾਂ ਵਿੱਚ ਢਾਲਣ, ਅਤੇ ਬਿਹਤਰ ਢੰਗ ਨਾਲ ਸਮਝਣ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ ਬਣਾਈ ਗਈ ਹੈ। ਇਹ ਗੋਪਨੀਯਤਾ ਨੀਤੀ

@@ -4,7 +4,7 @@ export function PrivacyFil() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Pinapatakbo ng Adalithic LLC</p>
-      <p>Huling Na-update: August 11, 2026</p>
+      <p>Huling Na-update: September 3, 2026</p>
       <p>
         Ang Arcatext ay isang custom na keyboard at aplikasyon ng wika na dinisenyo upang tulungan
         ang mga user na sumulat, magsalin, mag-reword, at mas maunawaan ang mga mensahe sa iba't

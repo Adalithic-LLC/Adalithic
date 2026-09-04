@@ -4,7 +4,7 @@ export function PrivacyCs() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Provozováno společností Adalithic LLC</p>
-      <p>Poslední aktualizace: August 11, 2026</p>
+      <p>Poslední aktualizace: September 3, 2026</p>
       <p>
         Arcatext je vlastní klávesnice a jazyková aplikace navržená tak, aby uživatelům pomáhala psát,
         překládat, přeformulovávat a lépe rozumět zprávám napříč jazyky. Tyto Zásady ochrany osobních údajů

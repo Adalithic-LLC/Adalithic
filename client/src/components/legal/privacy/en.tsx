@@ -4,7 +4,7 @@ export function PrivacyEn() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operated by Adalithic LLC</p>
-      <p>Last Updated: August 11, 2026</p>
+      <p>Last Updated: September 3, 2026</p>
       <p>
         Arcatext is a custom keyboard and language application designed to help users write,
         translate, reword, and better understand messages across languages. This Privacy Policy

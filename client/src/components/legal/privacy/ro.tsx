@@ -4,7 +4,7 @@ export function PrivacyRo() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operat de Adalithic LLC</p>
-      <p>Ultima actualizare: August 11, 2026</p>
+      <p>Ultima actualizare: September 3, 2026</p>
       <p>
         Arcatext este o tastatură personalizată și o aplicație lingvistică concepută pentru a ajuta
         utilizatorii să scrie, să traducă, să reformuleze și să înțeleagă mai bine mesaje în diferite

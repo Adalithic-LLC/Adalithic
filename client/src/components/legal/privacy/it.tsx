@@ -4,7 +4,7 @@ export function PrivacyIt() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Gestito da Adalithic LLC</p>
-      <p>Ultimo aggiornamento: August 11, 2026</p>
+      <p>Ultimo aggiornamento: September 3, 2026</p>
       <p>
         Arcatext è una tastiera personalizzata e un'applicazione linguistica progettata per aiutare
         gli utenti a scrivere, tradurre, riformulare e comprendere meglio i messaggi tra lingue

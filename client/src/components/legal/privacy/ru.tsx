@@ -4,7 +4,7 @@ export function PrivacyRu() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Управляется Adalithic LLC</p>
-      <p>Последнее обновление: August 11, 2026</p>
+      <p>Последнее обновление: September 3, 2026</p>
       <p>
         Arcatext — это пользовательская клавиатура и языковое приложение, созданное, чтобы помогать
         пользователям писать, переводить, переформулировать и лучше понимать сообщения на разных

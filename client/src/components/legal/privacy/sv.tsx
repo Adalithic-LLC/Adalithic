@@ -4,7 +4,7 @@ export function PrivacySv() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Drivs av Adalithic LLC</p>
-      <p>Senast uppdaterad: August 11, 2026</p>
+      <p>Senast uppdaterad: September 3, 2026</p>
       <p>
         Arcatext är ett anpassat tangentbord och en språkapplikation som är utformad för att hjälpa
         användare att skriva, översätta, omformulera och bättre förstå meddelanden på olika språk.

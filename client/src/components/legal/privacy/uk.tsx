@@ -4,7 +4,7 @@ export function PrivacyUk() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Керується Adalithic LLC</p>
-      <p>Останнє оновлення: August 11, 2026</p>
+      <p>Останнє оновлення: September 3, 2026</p>
       <p>
         Arcatext — це застосунок із кастомною клавіатурою та мовними функціями, створений, щоб
         допомагати користувачам писати, перекладати, переформульовувати та краще розуміти

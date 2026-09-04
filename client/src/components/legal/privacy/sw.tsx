@@ -4,7 +4,7 @@ export function PrivacySw() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Inaendeshwa na Adalithic LLC</p>
-      <p>Ilisasishwa Mwisho: August 11, 2026</p>
+      <p>Ilisasishwa Mwisho: September 3, 2026</p>
       <p>
         Arcatext ni kibodi maalum na programu ya lugha iliyoundwa kuwasaidia watumiaji kuandika,
         kutafsiri, kubadilisha maneno, na kuelewa vizuri zaidi ujumbe katika lugha mbalimbali. Sera

@@ -4,7 +4,7 @@ export function PrivacyAr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">مُشغّل بواسطة Adalithic LLC</p>
-      <p>آخر تحديث: August 11, 2026</p>
+      <p>آخر تحديث: September 3, 2026</p>
       <p>
         Arcatext هو تطبيق لوحة مفاتيح ولغة مخصص مصمم لمساعدة المستخدمين على الكتابة
         والترجمة وإعادة الصياغة وفهم الرسائل بشكل أفضل عبر اللغات. توضح سياسة الخصوصية هذه

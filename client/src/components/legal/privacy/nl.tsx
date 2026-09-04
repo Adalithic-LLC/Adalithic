@@ -4,7 +4,7 @@ export function PrivacyNl() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Beheerd door Adalithic LLC</p>
-      <p>Laatst bijgewerkt: August 11, 2026</p>
+      <p>Laatst bijgewerkt: September 3, 2026</p>
       <p>
         Arcatext is een aangepast toetsenbord en taalapplicatie ontworpen om gebruikers te helpen
         bij het schrijven, vertalen, herformuleren en beter begrijpen van berichten in verschillende

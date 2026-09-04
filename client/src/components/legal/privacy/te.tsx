@@ -4,7 +4,7 @@ export function PrivacyTe() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC ద్వారా నిర్వహించబడుతోంది</p>
-      <p>చివరిగా నవీకరించబడింది: August 11, 2026</p>
+      <p>చివరిగా నవీకరించబడింది: September 3, 2026</p>
       <p>
         Arcatext అనేది వినియోగదారులకు భాషల మధ్య సందేశాలను వ్రాయడానికి, అనువదించడానికి, తిరిగి
         పదాలుగా మార్చడానికి మరియు మెరుగ్గా అర్థం చేసుకోవడానికి సహాయపడేలా రూపొందించబడిన ఒక అనుకూల

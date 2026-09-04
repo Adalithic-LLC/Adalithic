@@ -4,7 +4,7 @@ export function PrivacyBn() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC দ্বারা পরিচালিত</p>
-      <p>সর্বশেষ হালনাগাদ: August 11, 2026</p>
+      <p>সর্বশেষ হালনাগাদ: September 3, 2026</p>
       <p>
         Arcatext হলো একটি কাস্টম কীবোর্ড এবং ভাষা অ্যাপ্লিকেশন যা ব্যবহারকারীদের বিভিন্ন
         ভাষায় বার্তা লিখতে, অনুবাদ করতে, পুনর্গঠন করতে এবং আরও ভালোভাবে বুঝতে সাহায্য করার

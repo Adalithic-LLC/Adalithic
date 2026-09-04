@@ -4,7 +4,7 @@ export function PrivacyBg() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Управлявано от Adalithic LLC</p>
-      <p>Последна актуализация: August 11, 2026</p>
+      <p>Последна актуализация: September 3, 2026</p>
       <p>
         Arcatext е персонализирана клавиатура и езиково приложение, създадено да помага на потребителите да пишат,
         превеждат, преформулират и по-добре разбират съобщения на различни езици. Тази Политика за поверителност

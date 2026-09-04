@@ -4,7 +4,7 @@ export function PrivacyFa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">اداره‌شده توسط Adalithic LLC</p>
-      <p>آخرین به‌روزرسانی: August 11, 2026</p>
+      <p>آخرین به‌روزرسانی: September 3, 2026</p>
       <p>
         Arcatext یک برنامه صفحه‌کلید سفارشی و زبانی است که برای کمک به کاربران در نوشتن،
         ترجمه، بازنویسی و درک بهتر پیام‌ها در میان زبان‌های مختلف طراحی شده است. این سیاست حریم خصوصی

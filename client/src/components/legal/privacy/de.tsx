@@ -4,7 +4,7 @@ export function PrivacyDe() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Betrieben von Adalithic LLC</p>
-      <p>Zuletzt aktualisiert: August 11, 2026</p>
+      <p>Zuletzt aktualisiert: September 3, 2026</p>
       <p>
         Arcatext ist eine benutzerdefinierte Tastatur- und Sprachanwendung, die Nutzern helfen soll,
         Nachrichten über Sprachgrenzen hinweg zu schreiben, zu übersetzen, umzuformulieren und besser

@@ -4,7 +4,7 @@ export function PrivacyTa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC ஆல் இயக்கப்படுகிறது</p>
-      <p>கடைசியாக புதுப்பிக்கப்பட்டது: August 11, 2026</p>
+      <p>கடைசியாக புதுப்பிக்கப்பட்டது: September 3, 2026</p>
       <p>
         Arcatext என்பது பயனர்கள் மொழிகளுக்கு இடையே செய்திகளை எழுத, மொழிபெயர்க்க, மறுசொல்லாக்கம் செய்ய,
         மற்றும் சிறப்பாக புரிந்துகொள்ள உதவ வடிவமைக்கப்பட்ட ஒரு தனிப்பயன் விசைப்பலகை மற்றும் மொழி பயன்பாடாகும். இந்த தனியுரிமைக் கொள்கை

@@ -4,7 +4,7 @@ export function PrivacyDa() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Drives af Adalithic LLC</p>
-      <p>Sidst opdateret: August 11, 2026</p>
+      <p>Sidst opdateret: September 3, 2026</p>
       <p>
         Arcatext er et brugerdefineret tastatur og en sprogapplikation designet til at hjælpe brugere med at skrive,
         oversætte, omformulere og bedre forstå beskeder på tværs af sprog. Denne privatlivspolitik

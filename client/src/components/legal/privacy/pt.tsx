@@ -4,7 +4,7 @@ export function PrivacyPt() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Operado pela Adalithic LLC</p>
-      <p>Última Atualização: August 11, 2026</p>
+      <p>Última Atualização: September 3, 2026</p>
       <p>
         O Arcatext é um teclado personalizado e uma aplicação de idiomas concebida para ajudar as
         pessoas a escrever, traduzir, reformular e compreender melhor mensagens entre idiomas. Esta

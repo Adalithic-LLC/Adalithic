@@ -4,7 +4,7 @@ export function PrivacyTr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC tarafından işletilmektedir</p>
-      <p>Son Güncelleme: August 11, 2026</p>
+      <p>Son Güncelleme: September 3, 2026</p>
       <p>
         Arcatext, kullanıcıların diller arasında mesaj yazmasına, çevirmesine, yeniden
         ifade etmesine ve mesajları daha iyi anlamasına yardımcı olmak için tasarlanmış özel bir

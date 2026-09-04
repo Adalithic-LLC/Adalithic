@@ -4,7 +4,7 @@ export function PrivacyMr() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Adalithic LLC द्वारे संचालित</p>
-      <p>अखेरचे अद्यतनित: August 11, 2026</p>
+      <p>अखेरचे अद्यतनित: September 3, 2026</p>
       <p>
         Arcatext हे एक सानुकूल कीबोर्ड आणि भाषा अनुप्रयोग आहे, जे वापरकर्त्यांना विविध भाषांमध्ये संदेश
         लिहिण्यास, भाषांतर करण्यास, पुनर्रचना करण्यास आणि अधिक चांगल्या प्रकारे समजून घेण्यास मदत करण्यासाठी

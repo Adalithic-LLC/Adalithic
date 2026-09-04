@@ -4,7 +4,7 @@ export function PrivacyId() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Dioperasikan oleh Adalithic LLC</p>
-      <p>Terakhir Diperbarui: August 11, 2026</p>
+      <p>Terakhir Diperbarui: September 3, 2026</p>
       <p>
         Arcatext adalah aplikasi keyboard khusus dan bahasa yang dirancang untuk membantu pengguna menulis,
         menerjemahkan, menyusun ulang kata, dan lebih memahami pesan di berbagai bahasa. Kebijakan Privasi ini

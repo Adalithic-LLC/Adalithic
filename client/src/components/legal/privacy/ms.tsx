@@ -4,7 +4,7 @@ export function PrivacyMs() {
   return (
     <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
       <p className="font-medium text-secondary">Dikendalikan oleh Adalithic LLC</p>
-      <p>Dikemas Kini Terakhir: August 11, 2026</p>
+      <p>Dikemas Kini Terakhir: September 3, 2026</p>
       <p>
         Arcatext ialah papan kekunci tersuai dan aplikasi bahasa yang direka untuk membantu pengguna menulis,
         menterjemah, mengubah semula perkataan, dan lebih memahami mesej merentasi bahasa. Dasar Privasi ini
