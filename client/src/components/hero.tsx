@@ -4,7 +4,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ArcatextIntro from "./arcatext-intro";
-import ArcatextIBeam from "./arcatext-ibeam";
 import AppStoreCard from "./app-store-card";
 import HeroKeyboardAnimation from "./hero-keyboard-animation";
 import { introBus } from "@/lib/intro-bus";
@@ -236,11 +235,6 @@ export default function Hero() {
               ref={titleRef}
               className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-secondary leading-[1.05]"
             >
-              {/* The same I-beam the nav item builds, sized in em so it tracks
-                  the headline across breakpoints. Both instances run off the
-                  one `introBus` cue, so the headline and the nav assemble as a
-                  single motion. */}
-              <ArcatextIBeam size="0.85em" />
               <Trans
                 i18nKey="hero.title"
                 components={{ brand: <span className="text-brand" /> }}
