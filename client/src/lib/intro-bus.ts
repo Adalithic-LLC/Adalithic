@@ -5,9 +5,13 @@
 // a different component (Navigation). This bus lets the Hero tell the nav when
 // to build, without threading refs/props through the whole tree.
 //
+// The nav's build is cued by scroll, not by the intro's timeline: the Hero
+// fires it when the App Store card (which shows the same app icon) has
+// scrolled up out of sight, so the icon is only ever in one place at a time.
+//
 // Phases:
 //   idle     – no intro is playing (e.g. a legal page with no Hero)
-//   armed    – a Hero mounted and an intro will play; nav should wait
+//   armed    – a Hero mounted; nav should wait for its cue
 //   building – Hero fired the "construct the nav logo now" signal
 export type IntroPhase = "idle" | "armed" | "building";
 

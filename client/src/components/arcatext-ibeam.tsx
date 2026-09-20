@@ -43,7 +43,7 @@ interface ArcatextIBeamProps {
 /**
  * The Arcatext I-beam rendered as five rectangles (one column + four corner
  * beams) — the same construction as the app's splash screen — which assembles
- * itself on the homepage intro's cue.
+ * itself on the homepage's cue (see intro-bus).
  *
  * The reserving element is a **zero-height** inline spacer whose width grows
  * from 0 → the glyph's width when cued. Because it has no height it never

@@ -32,6 +32,9 @@ const WIDGET_DESIGN_W = 402;
 // A sent message bubble's text size (px, design) inside the widget.
 const SENT_BUBBLE_FONT = 17;
 
+// Height of the fixed nav bar (h-16), which overlays the top of the viewport.
+const NAV_HEIGHT = 64;
+
 export default function Hero() {
   const { t } = useTranslation();
   const reduceMotion = useReducedMotion();
@@ -41,6 +44,7 @@ export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const taglineRef = useRef<HTMLParagraphElement>(null);
   const fieldRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const [typingActive, setTypingActive] = useState(false);
   const [fieldHighlight, setFieldHighlight] = useState(false);
   const introTimers = useRef<number[]>([]);
@@ -106,16 +110,42 @@ export default function Hero() {
   // text input.
   const handleLand = useCallback(() => setFieldHighlight(true), []);
 
-  // The icon "clicked" and released — begin typing, fade the highlight back
-  // out, and (1s later) have the nav build its logo.
+  // The icon "clicked" and released — begin typing and fade the highlight back
+  // out. (The nav's logo is not cued here; see the scroll observer below.)
   const handleRelease = useCallback(() => {
     setTypingActive(true);
     introTimers.current.push(
       window.setTimeout(() => setFieldHighlight(false), 700)
     );
-    introTimers.current.push(
-      window.setTimeout(() => introBus.set("building"), 1000)
+  }, []);
+
+  // Cue the nav to build its I-beam once the App Store card has scrolled up
+  // out of sight, so the app icon is only ever in one place at a time: in the
+  // card while it is on screen, in the nav after it is gone.
+  //
+  // The observer's root is inset by the fixed nav's height, so "out of sight"
+  // means out from BEHIND the nav rather than merely past the viewport edge —
+  // otherwise the cue would fire while the card is still showing through.
+  //
+  // It fires once and is never reversed: nothing resets the bus or the nav's
+  // build state, so scrolling back up leaves the nav icon in place for good.
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el || introBus.phase === "building") return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // `!isIntersecting` alone would also fire if the card ever left
+        // downward; require that it went up, past the nav.
+        if (!entry.isIntersecting && entry.boundingClientRect.bottom <= NAV_HEIGHT) {
+          observer.disconnect();
+          introBus.set("building");
+        }
+      },
+      { threshold: 0, rootMargin: `-${NAV_HEIGHT}px 0px 0px 0px` },
     );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -215,8 +245,10 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           {/* App Store card — above the headline, so the listing is the first
-              thing on the page rather than the last. */}
+              thing on the page rather than the last. Scrolling it out of sight
+              is what hands the app icon over to the nav. */}
           <motion.div
+            ref={cardRef}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
