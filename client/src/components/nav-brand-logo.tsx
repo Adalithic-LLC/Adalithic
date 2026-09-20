@@ -7,8 +7,7 @@ interface NavBrandLogoProps {
 
 /**
  * The nav bar's Arcatext I-beam. The glyph, and the build animation that
- * assembles it, live in ArcatextIBeam — shared with the hero headline so the
- * two build as one synchronised motion off the same intro cue.
+ * assembles it on the homepage intro's cue, live in ArcatextIBeam.
  */
 export default function NavBrandLogo({ size = 20 }: NavBrandLogoProps) {
   return <ArcatextIBeam size={`${size}px`} />;

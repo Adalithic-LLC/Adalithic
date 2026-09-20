@@ -8,8 +8,8 @@ const BRAND = "#0040DD";
 // Proportions taken from the SwiftUI splash (3x design): total height 150 =
 // column 120 + 2 * beam-height 15; column width 21; beam width 36; total
 // width 21 + 2*36 = 93. Everything below is expressed as a ratio of the total
-// height, so the glyph can be driven by ANY CSS length — px in the nav, em in
-// the hero headline, where it then scales with the font across breakpoints.
+// height, so the glyph can be driven by ANY CSS length — px, or an em value
+// that scales the glyph with whatever text it sits beside.
 const R = {
   columnW: 21 / 150,
   columnH: 120 / 150,
@@ -27,7 +27,7 @@ const R = {
 const VERTICAL_OFFSET = "0.34em";
 
 // Build choreography, in ms after the "building" cue. Shared by every instance,
-// which is what keeps the headline glyph and the nav glyph in lockstep.
+// so any two glyphs on a page assemble in lockstep.
 const T_COLUMN = 350;
 const T_BEAM_WIDTH = 750;
 const T_BEAM_SHIFT = 950;
@@ -53,9 +53,9 @@ interface ArcatextIBeamProps {
  * nudge the text.
  *
  * Every instance listens to the same `introBus` phase and runs the same
- * timings, so the nav item and the hero headline build as one motion rather
- * than two animations that happen to look alike. On any page without an intro
- * (or under reduced-motion) it renders fully-formed with no animation.
+ * timings, so multiple glyphs on a page build as one motion rather than as
+ * animations that happen to look alike. On any page without an intro (or
+ * under reduced-motion) it renders fully-formed with no animation.
  */
 export default function ArcatextIBeam({ size = "20px" }: ArcatextIBeamProps) {
   const reduceMotion = useReducedMotion();
