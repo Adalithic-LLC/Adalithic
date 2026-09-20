@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ArcatextIntro from "./arcatext-intro";
+import ArcatextIBeam from "./arcatext-ibeam";
 import AppStoreCard from "./app-store-card";
 import HeroKeyboardAnimation from "./hero-keyboard-animation";
 import { introBus } from "@/lib/intro-bus";
@@ -214,16 +215,32 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
+          {/* App Store card — above the headline, so the listing is the first
+              thing on the page rather than the last. */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-10 flex justify-center"
+          >
+            <AppStoreCard />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="space-y-7"
           >
             <h1
               ref={titleRef}
               className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-secondary leading-[1.05]"
             >
+              {/* The same I-beam the nav item builds, sized in em so it tracks
+                  the headline across breakpoints. Both instances run off the
+                  one `introBus` cue, so the headline and the nav assemble as a
+                  single motion. */}
+              <ArcatextIBeam size="0.85em" />
               <Trans
                 i18nKey="hero.title"
                 components={{ brand: <span className="text-brand" /> }}
@@ -287,19 +304,6 @@ export default function Hero() {
             >
               {t("hero.getInTouch")}
             </Button>
-          </motion.div>
-
-          {/* App Store card — the one place on the page that takes you
-              straight to the listing. It follows the CTAs rather than joining
-              them so the download reads as the destination, not a third
-              equally-weighted choice. */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.45 }}
-            className="mt-8 flex justify-center"
-          >
-            <AppStoreCard />
           </motion.div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const APP_ICON = "/AppIcon.png";
 const GLYPH_RATIO = 0.6;
 
 interface ArcatextIntroProps {
-  /** The hero <h1> ("Meet Arcatext.") the icon scans across. */
+  /** The hero <h1> ("Arcatext") the icon scans across. */
   titleRef: RefObject<HTMLElement>;
   /** The typewriter "text field" the icon shrinks down to and clicks. */
   fieldRef: RefObject<HTMLElement>;
@@ -33,7 +33,7 @@ type IconStyle = {
 };
 
 /**
- * The page-load flourish: the app icon scans across the "Meet Arcatext"
+ * The page-load flourish: the app icon scans across the "Arcatext"
  * headline at headline size, glides down while shrinking to the typewriter
  * line, "clicks" into it (darken + squish + release), then disappears so the
  * typing animation can take over.
@@ -117,9 +117,9 @@ export default function ArcatextIntro({
       const titleLh = lineHeightOf(title);
       const titleSize = titleLh / GLYPH_RATIO;
 
-      // Measure the actual rendered text ("Meet Arcatext.") rather than the
-      // full-width centered <h1> box, so the scan starts on the "M" and ends
-      // on the period.
+      // Measure the actual rendered text ("Arcatext") rather than the
+      // full-width centered <h1> box, so the scan starts on the "A" and ends
+      // on the "t".
       const textRectOf = (el: HTMLElement): DOMRect => {
         const range = document.createRange();
         range.selectNodeContents(el);
@@ -157,7 +157,7 @@ export default function ArcatextIntro({
       await wait(240);
       if (cancelled) return;
 
-      // 3) One continuous move: scan across "Meet Arcatext" to its end, then —
+      // 3) One continuous move: scan across "Arcatext" to its end, then —
       //    without stopping — sweep along a curve down into the typewriter
       //    field, shrinking as it goes.
       const s = startPoint();
