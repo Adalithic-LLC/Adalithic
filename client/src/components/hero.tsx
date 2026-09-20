@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ArcatextIntro from "./arcatext-intro";
+import AppStoreCard from "./app-store-card";
 import HeroKeyboardAnimation from "./hero-keyboard-animation";
 import { introBus } from "@/lib/intro-bus";
 
@@ -286,6 +287,19 @@ export default function Hero() {
             >
               {t("hero.getInTouch")}
             </Button>
+          </motion.div>
+
+          {/* App Store card — the one place on the page that takes you
+              straight to the listing. It follows the CTAs rather than joining
+              them so the download reads as the destination, not a third
+              equally-weighted choice. */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.45 }}
+            className="mt-8 flex justify-center"
+          >
+            <AppStoreCard />
           </motion.div>
         </div>
       </div>

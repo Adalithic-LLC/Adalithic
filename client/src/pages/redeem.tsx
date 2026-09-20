@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { supabase, isSupabaseConfigured } from "@/lib/supabase";
+import { ARCATEXT_APP_STORE_URL } from "@/lib/app-store";
 
 // Arcatext promo code redemption.
 //
@@ -26,11 +27,6 @@ import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 // The OTP step is what creates the account for a first-time user
 // (shouldCreateUser: true), so "redeem before you have an account" and "redeem
 // after" are the same code path.
-
-// Arcatext's App Store listing (Apple ID 6760385360). The download button is
-// conditional on this being non-empty, so clearing it hides the button rather
-// than shipping a dead link.
-const ARCATEXT_APP_STORE_URL = "https://apps.apple.com/app/id6760385360";
 
 // Arcatext is an iPhone keyboard, so the App Store link only *installs* anything
 // on iOS. On a desktop browser it opens a web listing the visitor cannot install
