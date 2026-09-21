@@ -87,7 +87,11 @@ export default function AdminReferrals() {
   const [selected, setSelected] = useState<SummaryRow | null>(null);
   const [detail, setDetail] = useState<DetailRow[] | null>(null);
 
-  const loadSummary = useCallback(async () => {
+  // Returns the freshly loaded rows as well as setting them. Callers need the
+  // new data synchronously: setRows schedules a re-render, it does not update
+  // `rows` in the current closure, so re-selecting from `rows` right after
+  // would pick up the pre-save values.
+  const loadSummary = useCallback(async (): Promise<SummaryRow[] | null> => {
     setBusy(true);
     setError(null);
     try {
@@ -101,10 +105,12 @@ export default function AdminReferrals() {
             ? "That account is not the referral admin."
             : rpcError.message || "Could not load the ledger.",
         );
-        return;
+        return null;
       }
-      setRows((data as SummaryRow[]) ?? []);
+      const fresh = (data as SummaryRow[]) ?? [];
+      setRows(fresh);
       setStep("ready");
+      return fresh;
     } finally {
       setBusy(false);
     }
@@ -194,11 +200,17 @@ export default function AdminReferrals() {
         return;
       }
       setNotice("Saved. Figures below are recalculated from the new settings.");
-      await loadSummary();
+      const fresh = await loadSummary();
       if (selected?.code === row.code) {
-        const refreshed = { ...row };
-        setSelected(refreshed);
-        await openDetail(refreshed);
+        // `{ ...row }` here was a copy of the row as it looked BEFORE the save,
+        // so the settings panel kept showing the old numbers while the table
+        // above it showed the new ones — change the window from 12 to 6 and the
+        // panel still read 12.
+        const refreshed = fresh?.find((r) => r.code === row.code);
+        if (refreshed) {
+          setSelected(refreshed);
+          await openDetail(refreshed);
+        }
       }
     } finally {
       setBusy(false);
@@ -429,6 +441,7 @@ export default function AdminReferrals() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <NumberSetting
+                  key={`revenue_share_months-${selected.revenue_share_months}`}
                   label="Revenue-share months"
                   help="How many months of each user's payments earn commission. Changing this recalculates every figure above."
                   value={selected.revenue_share_months}
@@ -436,12 +449,14 @@ export default function AdminReferrals() {
                   disabled={busy}
                 />
                 <NumberSetting
+                  key={`revenue_share_percent-${selected.revenue_share_percent}`}
                   label="Commission %"
                   value={selected.revenue_share_percent}
                   onSave={(v) => void saveSetting(selected, "p_revenue_share_percent", v)}
                   disabled={busy}
                 />
                 <NumberSetting
+                  key={`bonus_tokens-${selected.bonus_tokens}`}
                   label="Bonus tokens / month"
                   help="Extra tokens the referred user gets on top of their plan."
                   value={selected.bonus_tokens}
@@ -449,6 +464,7 @@ export default function AdminReferrals() {
                   disabled={busy}
                 />
                 <NumberSetting
+                  key={`bonus_months-${selected.bonus_months}`}
                   label="Bonus months"
                   help="How long the user keeps the perk. Independent of the revenue-share window."
                   value={selected.bonus_months}
