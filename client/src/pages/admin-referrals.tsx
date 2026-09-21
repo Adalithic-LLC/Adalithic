@@ -423,7 +423,10 @@ export default function AdminReferrals() {
                   <TableHead>Influencer</TableHead>
                   <TableHead className="text-right">Users</TableHead>
                   {/* Detached claims still count in Users so the number
-                      reconciles with the drill-down list; Active excludes them. */}
+                      reconciles with the drill-down list; Active excludes them.
+                      Gross is every dollar those users paid; In window is the
+                      subset that falls inside the revenue-share window, each
+                      qualifying payment counted in full. */}
                   <TableHead className="text-right">Active</TableHead>
                   <TableHead className="text-right">Paying</TableHead>
                   <TableHead className="text-right">Gross</TableHead>
@@ -509,7 +512,7 @@ export default function AdminReferrals() {
                 <NumberSetting
                   key={`revenue_share_months-${selected.revenue_share_months}`}
                   label="Per-user month cap (optional)"
-                  help="Caps how many months of ONE subscriber's payments earn commission, counted from their own first payment. Leave blank for a campaign-wide deal — the cutoff date above should be the only thing that ends the money."
+                  help="Optional. Stops a single subscriber's payments earning after this many months from their own first payment. Leave blank for a campaign-wide deal — the cutoff date above should be the only thing that ends the money."
                   value={selected.revenue_share_months}
                   onSave={(v) =>
                     void saveSetting(selected, 
@@ -680,7 +683,7 @@ function NewCodeForm({
           <Field label="Bonus months" hint="How long the user keeps the perk.">
             <Input inputMode="numeric" value={bonusMonths} onChange={(e) => setBonusMonths(e.target.value)} className="bg-white" />
           </Field>
-          <Field label="Revenue share ends" hint="Payments in this month are the last that earn commission — the same window for every user of this code. Blank means no cutoff.">
+          <Field label="Revenue share ends" hint="Payments in this month are the last that earn — the same window for every user of this code, and each payment counts in full. Blank means no cutoff.">
             <Input type="date" value={endsAt} onChange={(e) => setEndsAt(e.target.value)} className="bg-white" />
           </Field>
           <Field label="Commission %">
@@ -818,8 +821,12 @@ function CutoffSetting({
         Save
       </Button>
       {value && (
-        <p className="text-xs text-gray-500 pb-2">
-          Payments in {new Date(value).toLocaleDateString("en-US", { month: "long", year: "numeric" })} are the last that earn.
+        <p className="text-xs text-gray-500 pb-2 max-w-xs">
+          Payments in{" "}
+          {new Date(value).toLocaleDateString("en-US", { month: "long", year: "numeric" })}{" "}
+          are the last that earn. A payment counts in full — an annual plan bought
+          before the cutoff earns commission on the whole amount, not a pro-rated
+          share of it.
         </p>
       )}
       {!value && <p className="text-xs text-gray-500 pb-2">No cutoff — commission continues indefinitely.</p>}
