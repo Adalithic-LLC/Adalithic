@@ -205,6 +205,49 @@ export default function AdminReferrals() {
     }
   }
 
+  async function createCode(fields: {
+    code: string;
+    influencer_name: string;
+    bonus_tokens: number;
+    bonus_months: number;
+    profit_share_months: number;
+    profit_share_percent: number;
+  }) {
+    setBusy(true);
+    setError(null);
+    setNotice(null);
+    try {
+      const { data, error: rpcError } = await supabase.rpc("admin_upsert_referral_code", {
+        p_code: fields.code,
+        p_influencer_name: fields.influencer_name || null,
+        p_bonus_tokens: fields.bonus_tokens,
+        p_bonus_months: fields.bonus_months,
+        p_profit_share_months: fields.profit_share_months,
+        p_profit_share_percent: fields.profit_share_percent,
+      });
+      if (rpcError) {
+        setError(rpcError.message || "Could not create the code.");
+        return false;
+      }
+      if (!data?.success) {
+        setError(data?.message || "Could not create the code.");
+        return false;
+      }
+      // The RPC upserts on lower(code), so re-submitting an existing code
+      // edits it rather than failing. Say which happened — silently editing a
+      // live campaign because of a typo would be worse than an error.
+      setNotice(
+        data.created
+          ? `Created ${fields.code}. Share it as adalithic.com/referral?code=${encodeURIComponent(fields.code)}`
+          : `${fields.code} already existed and was updated.`,
+      );
+      await loadSummary();
+      return true;
+    } finally {
+      setBusy(false);
+    }
+  }
+
   async function recordPayout(row: SummaryRow, amount: number, note: string) {
     setBusy(true);
     setError(null);
@@ -315,6 +358,8 @@ export default function AdminReferrals() {
 
         {error && <p className="text-sm text-red-600">{error}</p>}
         {notice && <p className="text-sm text-green-700">{notice}</p>}
+
+        <NewCodeForm disabled={busy} onCreate={createCode} />
 
         <Card>
           <CardContent className="pt-6 overflow-x-auto">
@@ -474,6 +519,111 @@ export default function AdminReferrals() {
           </Card>
         )}
       </div>
+    </div>
+  );
+}
+
+function NewCodeForm({
+  disabled,
+  onCreate,
+}: {
+  disabled?: boolean;
+  onCreate: (f: {
+    code: string;
+    influencer_name: string;
+    bonus_tokens: number;
+    bonus_months: number;
+    profit_share_months: number;
+    profit_share_percent: number;
+  }) => Promise<boolean>;
+}) {
+  const [open, setOpen] = useState(false);
+  const [code, setCode] = useState("");
+  const [name, setName] = useState("");
+  const [bonusTokens, setBonusTokens] = useState("1000000");
+  const [bonusMonths, setBonusMonths] = useState("12");
+  const [shareMonths, setShareMonths] = useState("12");
+  const [percent, setPercent] = useState("20");
+
+  const nums = [bonusTokens, bonusMonths, shareMonths, percent].map(Number);
+  const valid = code.trim() !== "" && nums.every((n) => !Number.isNaN(n) && n >= 0);
+
+  if (!open) {
+    return (
+      <Button variant="outline" onClick={() => setOpen(true)}>
+        New referral code
+      </Button>
+    );
+  }
+
+  return (
+    <Card>
+      <CardContent className="pt-6 space-y-4">
+        <p className="font-medium">New referral code</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <Field label="Code" hint="Case-insensitive. What the influencer shares.">
+            <Input value={code} onChange={(e) => setCode(e.target.value)} className="bg-white font-mono" autoFocus />
+          </Field>
+          <Field label="Influencer">
+            <Input value={name} onChange={(e) => setName(e.target.value)} className="bg-white" />
+          </Field>
+          <Field label="Bonus tokens / month" hint="On top of the plan allowance.">
+            <Input inputMode="numeric" value={bonusTokens} onChange={(e) => setBonusTokens(e.target.value)} className="bg-white" />
+          </Field>
+          <Field label="Bonus months" hint="How long the user keeps the perk.">
+            <Input inputMode="numeric" value={bonusMonths} onChange={(e) => setBonusMonths(e.target.value)} className="bg-white" />
+          </Field>
+          <Field label="Profit-share months" hint="How long their payments earn commission.">
+            <Input inputMode="numeric" value={shareMonths} onChange={(e) => setShareMonths(e.target.value)} className="bg-white" />
+          </Field>
+          <Field label="Commission %">
+            <Input inputMode="decimal" value={percent} onChange={(e) => setPercent(e.target.value)} className="bg-white" />
+          </Field>
+        </div>
+        <div className="flex gap-2">
+          <Button
+            disabled={disabled || !valid}
+            onClick={async () => {
+              const ok = await onCreate({
+                code: code.trim(),
+                influencer_name: name.trim(),
+                bonus_tokens: Number(bonusTokens),
+                bonus_months: Number(bonusMonths),
+                profit_share_months: Number(shareMonths),
+                profit_share_percent: Number(percent),
+              });
+              if (ok) {
+                setOpen(false);
+                setCode("");
+                setName("");
+              }
+            }}
+          >
+            Create
+          </Button>
+          <Button variant="ghost" onClick={() => setOpen(false)}>
+            Cancel
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function Field({
+  label,
+  hint,
+  children,
+}: {
+  label: string;
+  hint?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="space-y-1">
+      <label className="block text-sm font-medium">{label}</label>
+      {children}
+      {hint && <p className="text-xs text-gray-500">{hint}</p>}
     </div>
   );
 }
