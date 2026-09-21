@@ -38,8 +38,8 @@ interface SummaryRow {
   is_active: boolean;
   bonus_tokens: number;
   bonus_months: number;
-  profit_share_months: number;
-  profit_share_percent: number;
+  revenue_share_months: number;
+  revenue_share_percent: number;
   total_users: number;
   paying_users: number;
   gross_usd: number;
@@ -172,8 +172,8 @@ export default function AdminReferrals() {
     field:
       | "p_bonus_tokens"
       | "p_bonus_months"
-      | "p_profit_share_months"
-      | "p_profit_share_percent"
+      | "p_revenue_share_months"
+      | "p_revenue_share_percent"
       | "p_is_active",
     value: number | boolean,
   ) {
@@ -210,8 +210,8 @@ export default function AdminReferrals() {
     influencer_name: string;
     bonus_tokens: number;
     bonus_months: number;
-    profit_share_months: number;
-    profit_share_percent: number;
+    revenue_share_months: number;
+    revenue_share_percent: number;
   }) {
     setBusy(true);
     setError(null);
@@ -222,8 +222,8 @@ export default function AdminReferrals() {
         p_influencer_name: fields.influencer_name || null,
         p_bonus_tokens: fields.bonus_tokens,
         p_bonus_months: fields.bonus_months,
-        p_profit_share_months: fields.profit_share_months,
-        p_profit_share_percent: fields.profit_share_percent,
+        p_revenue_share_months: fields.revenue_share_months,
+        p_revenue_share_percent: fields.revenue_share_percent,
       });
       if (rpcError) {
         setError(rpcError.message || "Could not create the code.");
@@ -372,7 +372,7 @@ export default function AdminReferrals() {
                   <TableHead className="text-right">Paying</TableHead>
                   <TableHead className="text-right">Gross</TableHead>
                   {/* Gross is every dollar those users have ever paid. In-window
-                      is the part that falls inside profit_share_months, with an
+                      is the part that falls inside revenue_share_months, with an
                       annual payment pro-rated. They differ, and conflating them
                       is how an influencer gets overpaid. */}
                   <TableHead className="text-right">In window</TableHead>
@@ -429,16 +429,16 @@ export default function AdminReferrals() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <NumberSetting
-                  label="Profit-share months"
+                  label="Revenue-share months"
                   help="How many months of each user's payments earn commission. Changing this recalculates every figure above."
-                  value={selected.profit_share_months}
-                  onSave={(v) => void saveSetting(selected, "p_profit_share_months", v)}
+                  value={selected.revenue_share_months}
+                  onSave={(v) => void saveSetting(selected, "p_revenue_share_months", v)}
                   disabled={busy}
                 />
                 <NumberSetting
                   label="Commission %"
-                  value={selected.profit_share_percent}
-                  onSave={(v) => void saveSetting(selected, "p_profit_share_percent", v)}
+                  value={selected.revenue_share_percent}
+                  onSave={(v) => void saveSetting(selected, "p_revenue_share_percent", v)}
                   disabled={busy}
                 />
                 <NumberSetting
@@ -450,7 +450,7 @@ export default function AdminReferrals() {
                 />
                 <NumberSetting
                   label="Bonus months"
-                  help="How long the user keeps the perk. Independent of the profit-share window."
+                  help="How long the user keeps the perk. Independent of the revenue-share window."
                   value={selected.bonus_months}
                   onSave={(v) => void saveSetting(selected, "p_bonus_months", v)}
                   disabled={busy}
@@ -533,8 +533,8 @@ function NewCodeForm({
     influencer_name: string;
     bonus_tokens: number;
     bonus_months: number;
-    profit_share_months: number;
-    profit_share_percent: number;
+    revenue_share_months: number;
+    revenue_share_percent: number;
   }) => Promise<boolean>;
 }) {
   const [open, setOpen] = useState(false);
@@ -573,7 +573,7 @@ function NewCodeForm({
           <Field label="Bonus months" hint="How long the user keeps the perk.">
             <Input inputMode="numeric" value={bonusMonths} onChange={(e) => setBonusMonths(e.target.value)} className="bg-white" />
           </Field>
-          <Field label="Profit-share months" hint="How long their payments earn commission.">
+          <Field label="Revenue-share months" hint="How long their payments earn commission.">
             <Input inputMode="numeric" value={shareMonths} onChange={(e) => setShareMonths(e.target.value)} className="bg-white" />
           </Field>
           <Field label="Commission %">
@@ -589,8 +589,8 @@ function NewCodeForm({
                 influencer_name: name.trim(),
                 bonus_tokens: Number(bonusTokens),
                 bonus_months: Number(bonusMonths),
-                profit_share_months: Number(shareMonths),
-                profit_share_percent: Number(percent),
+                revenue_share_months: Number(shareMonths),
+                revenue_share_percent: Number(percent),
               });
               if (ok) {
                 setOpen(false);
@@ -687,7 +687,7 @@ function PayoutForm({
         {/* Recorded separately from the computed commission on purpose: the
             settings above are editable, so "owed" is a live calculation.
             Without a record of what actually went out, lowering the
-            profit-share window after paying would make this page disagree with
+            revenue-share window after paying would make this page disagree with
             the bank and there would be no way to tell which was right. */}
         <p className="text-xs text-gray-500">
           Currently owed: {usd(owed)}. Recording a payout subtracts it from the owed
