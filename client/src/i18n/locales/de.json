@@ -319,5 +319,50 @@
     "synonyms": "SYNONYME",
     "language": "Deutsch",
     "typePlaceholder": "Schreib etwas"
+  },
+  "referral": {
+    "title": "Tritt einem Empfehlungsprogramm bei",
+    "subtitle": "Gib deine E-Mail-Adresse ein, um dich anzumelden oder ein Arcatext-Konto zu erstellen, und wende dann deinen Empfehlungscode an.",
+    "email": {
+      "label": "E-Mail-Adresse",
+      "placeholder": "du@beispiel.com",
+      "hint": "Wir senden dir einen 6-stelligen Code. Kein Passwort nötig.",
+      "cta": "Weiter"
+    },
+    "otp": {
+      "label": "Gib deinen 6-stelligen Code ein",
+      "sentTo": "Wir haben einen Code an {{email}} gesendet.",
+      "cta": "Bestätigen",
+      "resend": "Code erneut senden",
+      "resent": "Wir haben einen neuen Code gesendet.",
+      "changeEmail": "Andere E-Mail-Adresse verwenden"
+    },
+    "code": {
+      "label": "Empfehlungscode",
+      "placeholder": "Empfehlungscode eingeben",
+      "hint": "Das ist kein Rabattcode. Arcatext ist ein kostenpflichtiges Abo – ein Empfehlungscode bringt zusätzliche Tokens obendrauf.",
+      "cta": "Beitreten"
+    },
+    "done": {
+      "title": "Du bist mit dem Code {{code}} beigetreten.",
+      "bonus": "{{tokens}} zusätzliche Tokens pro Monat für {{months}} Monate, zusätzlich zum Kontingent deines Tarifs.",
+      "activeNow": "Deine zusätzlichen Tokens sind ab sofort aktiv.",
+      "credited": "{{tokens}} zusätzliche Tokens wurden deinem Konto gutgeschrieben.",
+      "startsOnSubscribe": "Deine zusätzlichen Tokens starten, sobald du Arcatext abonnierst.",
+      "nextTitle": "Nächste Schritte",
+      "download": "Arcatext herunterladen",
+      "mobileOnly": "Arcatext ist eine iPhone-App. Öffne den App Store auf deinem iPhone und suche nach Arcatext.",
+      "step1": "Arcatext-App öffnen",
+      "step2": "Mit \"{{email}}\" anmelden",
+      "step3": "Abo abschließen – deine zusätzlichen Tokens werden automatisch gutgeschrieben"
+    },
+    "errors": {
+      "sendFailed": "Wir konnten deinen Code nicht senden. Prüfe die Adresse und versuche es erneut.",
+      "badOtp": "Dieser Code stimmt nicht. Prüfe ihn und versuche es erneut oder fordere einen neuen an.",
+      "invalidCode": "Bitte gib einen gültigen Empfehlungscode ein.",
+      "sessionExpired": "Deine Sitzung ist abgelaufen. Bitte melde dich erneut an.",
+      "network": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "notConfigured": "Diese Seite ist derzeit nicht konfiguriert. Bitte versuche es später erneut."
+    }
   }
 }

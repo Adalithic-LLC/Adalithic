@@ -319,5 +319,50 @@
     "synonyms": "SYNONYMER",
     "language": "Svenska",
     "typePlaceholder": "Skriv något"
+  },
+  "referral": {
+    "title": "Gå med i ett värvningsprogram",
+    "subtitle": "Ange din e-postadress för att logga in eller skapa ett Arcatext-konto och använd sedan din värvningskod.",
+    "email": {
+      "label": "E-postadress",
+      "placeholder": "du@exempel.com",
+      "hint": "Vi skickar en 6-siffrig kod. Inget lösenord behövs.",
+      "cta": "Fortsätt"
+    },
+    "otp": {
+      "label": "Ange din 6-siffriga kod",
+      "sentTo": "Vi har skickat en kod till {{email}}.",
+      "cta": "Verifiera",
+      "resend": "Skicka koden igen",
+      "resent": "Vi har skickat en ny kod.",
+      "changeEmail": "Använd en annan e-postadress"
+    },
+    "code": {
+      "label": "Värvningskod",
+      "placeholder": "Ange din värvningskod",
+      "hint": "Det här är ingen rabattkod. Arcatext är en betald prenumeration – en värvningskod ger extra tokens utöver det din plan innehåller.",
+      "cta": "Gå med"
+    },
+    "done": {
+      "title": "Du gick med med koden {{code}}.",
+      "bonus": "{{tokens}} extra tokens varje månad i {{months}} månader, utöver det din plan innehåller.",
+      "activeNow": "Dina extra tokens är aktiva nu.",
+      "credited": "{{tokens}} extra tokens har lagts till på ditt konto.",
+      "startsOnSubscribe": "Dina extra tokens börjar så snart du prenumererar på Arcatext.",
+      "nextTitle": "Nästa steg",
+      "download": "Ladda ner Arcatext",
+      "mobileOnly": "Arcatext är en iPhone-app. Öppna App Store på din iPhone och sök efter Arcatext.",
+      "step1": "Öppna Arcatext-appen",
+      "step2": "Logga in med \"{{email}}\"",
+      "step3": "Prenumerera, så läggs dina extra tokens till automatiskt"
+    },
+    "errors": {
+      "sendFailed": "Vi kunde inte skicka din kod. Kontrollera adressen och försök igen.",
+      "badOtp": "Koden stämmer inte. Kontrollera den och försök igen, eller begär en ny.",
+      "invalidCode": "Ange en giltig värvningskod.",
+      "sessionExpired": "Din session har gått ut. Logga in igen.",
+      "network": "Något gick fel. Försök igen.",
+      "notConfigured": "Den här sidan är inte konfigurerad just nu. Försök igen senare."
+    }
   }
 }

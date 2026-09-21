@@ -319,5 +319,50 @@
     "synonyms": "SYNONYMA",
     "language": "Čeština",
     "typePlaceholder": "Napište něco"
+  },
+  "referral": {
+    "title": "Zapojte se do programu doporučení",
+    "subtitle": "Zadejte svůj e-mail, abyste se přihlásili nebo si vytvořili účet Arcatext, a poté uplatněte svůj doporučující kód.",
+    "email": {
+      "label": "E-mailová adresa",
+      "placeholder": "vy@priklad.com",
+      "hint": "Pošleme vám 6místný kód. Heslo není potřeba.",
+      "cta": "Pokračovat"
+    },
+    "otp": {
+      "label": "Zadejte svůj 6místný kód",
+      "sentTo": "Poslali jsme kód na {{email}}.",
+      "cta": "Ověřit",
+      "resend": "Poslat kód znovu",
+      "resent": "Poslali jsme nový kód.",
+      "changeEmail": "Použít jiný e-mail"
+    },
+    "code": {
+      "label": "Doporučující kód",
+      "placeholder": "Zadejte svůj doporučující kód",
+      "hint": "Nejde o slevový kód. Arcatext je placené předplatné – doporučující kód přidá tokeny navíc k tomu, co máte v tarifu.",
+      "cta": "Zapojit se"
+    },
+    "done": {
+      "title": "Zapojili jste se s kódem {{code}}.",
+      "bonus": "{{tokens}} tokenů navíc každý měsíc po dobu {{months}} měsíců, nad rámec vašeho tarifu.",
+      "activeNow": "Vaše tokeny navíc jsou aktivní hned teď.",
+      "credited": "Na váš účet bylo přidáno {{tokens}} tokenů navíc.",
+      "startsOnSubscribe": "Vaše tokeny navíc se rozběhnou, jakmile si předplatíte Arcatext.",
+      "nextTitle": "Další kroky",
+      "download": "Stáhnout Arcatext",
+      "mobileOnly": "Arcatext je aplikace pro iPhone. Otevřete App Store na svém iPhonu a vyhledejte Arcatext.",
+      "step1": "Otevřete aplikaci Arcatext",
+      "step2": "Přihlaste se pomocí \"{{email}}\"",
+      "step3": "Předplaťte si Arcatext a tokeny navíc se přidají automaticky"
+    },
+    "errors": {
+      "sendFailed": "Nepodařilo se odeslat váš kód. Zkontrolujte adresu a zkuste to znovu.",
+      "badOtp": "Tento kód nesouhlasí. Zkontrolujte jej a zkuste to znovu, nebo si vyžádejte nový.",
+      "invalidCode": "Zadejte platný doporučující kód.",
+      "sessionExpired": "Vaše relace vypršela. Přihlaste se znovu.",
+      "network": "Něco se pokazilo. Zkuste to prosím znovu.",
+      "notConfigured": "Tato stránka teď není nakonfigurovaná. Zkuste to prosím později."
+    }
   }
 }

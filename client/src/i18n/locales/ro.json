@@ -319,5 +319,50 @@
     "synonyms": "SINONIME",
     "language": "Română",
     "typePlaceholder": "Scrie ceva"
+  },
+  "referral": {
+    "title": "Alătură-te unui program de recomandare",
+    "subtitle": "Introdu adresa de e-mail pentru a te conecta sau a crea un cont Arcatext, apoi aplică-ți codul de recomandare.",
+    "email": {
+      "label": "Adresă de e-mail",
+      "placeholder": "tu@exemplu.com",
+      "hint": "Îți vom trimite un cod din 6 cifre. Nu ai nevoie de parolă.",
+      "cta": "Continuă"
+    },
+    "otp": {
+      "label": "Introdu codul din 6 cifre",
+      "sentTo": "Am trimis un cod la {{email}}.",
+      "cta": "Verifică",
+      "resend": "Retrimite codul",
+      "resent": "Am trimis un cod nou.",
+      "changeEmail": "Folosește altă adresă de e-mail"
+    },
+    "code": {
+      "label": "Cod de recomandare",
+      "placeholder": "Introdu codul tău de recomandare",
+      "hint": "Nu este un cod de reducere. Arcatext este un abonament plătit — un cod de recomandare adaugă tokenuri în plus față de cele din planul tău.",
+      "cta": "Alătură-te"
+    },
+    "done": {
+      "title": "Te-ai alăturat cu codul {{code}}.",
+      "bonus": "{{tokens}} tokenuri în plus în fiecare lună timp de {{months}} luni, peste cele din planul tău.",
+      "activeNow": "Tokenurile tale în plus sunt active acum.",
+      "credited": "{{tokens}} tokenuri în plus au fost adăugate în contul tău.",
+      "startsOnSubscribe": "Tokenurile tale în plus încep imediat ce te abonezi la Arcatext.",
+      "nextTitle": "Pașii următori",
+      "download": "Descarcă Arcatext",
+      "mobileOnly": "Arcatext este o aplicație pentru iPhone. Deschide App Store pe iPhone și caută Arcatext.",
+      "step1": "Deschide aplicația Arcatext",
+      "step2": "Conectează-te cu \"{{email}}\"",
+      "step3": "Abonează-te, iar tokenurile în plus se adaugă automat"
+    },
+    "errors": {
+      "sendFailed": "Nu am putut trimite codul. Verifică adresa și încearcă din nou.",
+      "badOtp": "Codul nu se potrivește. Verifică-l și încearcă din nou sau cere unul nou.",
+      "invalidCode": "Introdu un cod de recomandare valid.",
+      "sessionExpired": "Sesiunea ta a expirat. Conectează-te din nou.",
+      "network": "Ceva nu a mers bine. Încearcă din nou.",
+      "notConfigured": "Această pagină nu este configurată momentan. Încearcă mai târziu."
+    }
   }
 }

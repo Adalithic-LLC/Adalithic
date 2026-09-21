@@ -319,5 +319,50 @@
     "synonyms": "SYNONIEMEN",
     "language": "Nederlands",
     "typePlaceholder": "Typ iets"
+  },
+  "referral": {
+    "title": "Doe mee aan een aanbevelingsprogramma",
+    "subtitle": "Voer je e-mailadres in om in te loggen of een Arcatext-account aan te maken en gebruik daarna je aanbevelingscode.",
+    "email": {
+      "label": "E-mailadres",
+      "placeholder": "jij@voorbeeld.com",
+      "hint": "We sturen je een code van 6 cijfers. Geen wachtwoord nodig.",
+      "cta": "Doorgaan"
+    },
+    "otp": {
+      "label": "Voer je code van 6 cijfers in",
+      "sentTo": "We hebben een code naar {{email}} gestuurd.",
+      "cta": "Verifiëren",
+      "resend": "Code opnieuw versturen",
+      "resent": "We hebben nog een code gestuurd.",
+      "changeEmail": "Ander e-mailadres gebruiken"
+    },
+    "code": {
+      "label": "Aanbevelingscode",
+      "placeholder": "Voer je aanbevelingscode in",
+      "hint": "Dit is geen kortingscode. Arcatext is een betaald abonnement — een aanbevelingscode geeft extra tokens boven op je abonnement.",
+      "cta": "Meedoen"
+    },
+    "done": {
+      "title": "Je doet mee met code {{code}}.",
+      "bonus": "{{tokens}} extra tokens per maand gedurende {{months}} maanden, boven op het tegoed van je abonnement.",
+      "activeNow": "Je extra tokens zijn nu actief.",
+      "credited": "{{tokens}} extra tokens zijn toegevoegd aan je account.",
+      "startsOnSubscribe": "Je extra tokens starten zodra je een Arcatext-abonnement neemt.",
+      "nextTitle": "Volgende stappen",
+      "download": "Arcatext downloaden",
+      "mobileOnly": "Arcatext is een iPhone-app. Open de App Store op je iPhone en zoek naar Arcatext.",
+      "step1": "Open de Arcatext-app",
+      "step2": "Log in met \"{{email}}\"",
+      "step3": "Neem een abonnement en je extra tokens worden automatisch toegevoegd"
+    },
+    "errors": {
+      "sendFailed": "We konden je code niet versturen. Controleer het adres en probeer het opnieuw.",
+      "badOtp": "Die code klopt niet. Controleer hem en probeer het opnieuw, of vraag een nieuwe aan.",
+      "invalidCode": "Voer een geldige aanbevelingscode in.",
+      "sessionExpired": "Je sessie is verlopen. Log opnieuw in.",
+      "network": "Er is iets misgegaan. Probeer het opnieuw.",
+      "notConfigured": "Deze pagina is momenteel niet geconfigureerd. Probeer het later opnieuw."
+    }
   }
 }

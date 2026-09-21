@@ -319,5 +319,50 @@
     "synonyms": "VISAWE",
     "language": "Kiswahili",
     "typePlaceholder": "Andika kitu"
+  },
+  "referral": {
+    "title": "Jiunge na programu ya rufaa",
+    "subtitle": "Weka barua pepe yako ili kuingia au kufungua akaunti ya Arcatext, kisha utumie msimbo wako wa rufaa.",
+    "email": {
+      "label": "Anwani ya barua pepe",
+      "placeholder": "wewe@mfano.com",
+      "hint": "Tutakutumia msimbo wa tarakimu 6. Hakuna nenosiri linalohitajika.",
+      "cta": "Endelea"
+    },
+    "otp": {
+      "label": "Weka msimbo wako wa tarakimu 6",
+      "sentTo": "Tumetuma msimbo kwa {{email}}.",
+      "cta": "Thibitisha",
+      "resend": "Tuma msimbo tena",
+      "resent": "Tumetuma msimbo mpya.",
+      "changeEmail": "Tumia barua pepe nyingine"
+    },
+    "code": {
+      "label": "Msimbo wa rufaa",
+      "placeholder": "Weka msimbo wako wa rufaa",
+      "hint": "Huu si msimbo wa punguzo. Arcatext ni usajili wa kulipia — msimbo wa rufaa huongeza tokeni za ziada juu ya kiasi cha kifurushi chako.",
+      "cta": "Jiunge"
+    },
+    "done": {
+      "title": "Umejiunga kwa msimbo {{code}}.",
+      "bonus": "Tokeni {{tokens}} za ziada kila mwezi kwa miezi {{months}}, juu ya kiasi cha kifurushi chako.",
+      "activeNow": "Tokeni zako za ziada zinatumika sasa.",
+      "credited": "Tokeni {{tokens}} za ziada zimeongezwa kwenye akaunti yako.",
+      "startsOnSubscribe": "Tokeni zako za ziada zitaanza mara tu utakapojisajili kwa Arcatext.",
+      "nextTitle": "Hatua zinazofuata",
+      "download": "Pakua Arcatext",
+      "mobileOnly": "Arcatext ni programu ya iPhone. Fungua App Store kwenye iPhone yako na utafute Arcatext.",
+      "step1": "Fungua programu ya Arcatext",
+      "step2": "Ingia kwa \"{{email}}\"",
+      "step3": "Jisajili, na tokeni zako za ziada zitaongezwa kiotomatiki"
+    },
+    "errors": {
+      "sendFailed": "Hatukuweza kutuma msimbo wako. Angalia anwani kisha ujaribu tena.",
+      "badOtp": "Msimbo huo haulingani. Uangalie kisha ujaribu tena, au uombe mpya.",
+      "invalidCode": "Tafadhali weka msimbo halali wa rufaa.",
+      "sessionExpired": "Kipindi chako kimeisha. Tafadhali ingia tena.",
+      "network": "Hitilafu imetokea. Tafadhali jaribu tena.",
+      "notConfigured": "Ukurasa huu haujasanidiwa kwa sasa. Tafadhali jaribu baadaye."
+    }
   }
 }

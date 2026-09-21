@@ -319,5 +319,50 @@
     "synonyms": "SZINONIMÁK",
     "language": "Magyar",
     "typePlaceholder": "Írj valamit"
+  },
+  "referral": {
+    "title": "Csatlakozz egy ajánlói programhoz",
+    "subtitle": "Add meg az e-mail-címed a bejelentkezéshez vagy egy Arcatext-fiók létrehozásához, majd alkalmazd az ajánlói kódod.",
+    "email": {
+      "label": "E-mail-cím",
+      "placeholder": "te@pelda.com",
+      "hint": "Küldünk egy 6 jegyű kódot. Jelszó nem szükséges.",
+      "cta": "Tovább"
+    },
+    "otp": {
+      "label": "Add meg a 6 jegyű kódot",
+      "sentTo": "Kódot küldtünk a következő címre: {{email}}.",
+      "cta": "Ellenőrzés",
+      "resend": "Kód újraküldése",
+      "resent": "Új kódot küldtünk.",
+      "changeEmail": "Másik e-mail-cím használata"
+    },
+    "code": {
+      "label": "Ajánlói kód",
+      "placeholder": "Add meg az ajánlói kódod",
+      "hint": "Ez nem kedvezménykód. Az Arcatext fizetős előfizetés – az ajánlói kód a csomagod keretén felül ad extra tokeneket.",
+      "cta": "Csatlakozom"
+    },
+    "done": {
+      "title": "Csatlakoztál a(z) {{code}} kóddal.",
+      "bonus": "{{tokens}} extra token minden hónapban {{months}} hónapon át, a csomagod keretén felül.",
+      "activeNow": "Az extra tokenjeid mostantól aktívak.",
+      "credited": "{{tokens}} extra token került a fiókodba.",
+      "startsOnSubscribe": "Az extra tokenjeid azonnal indulnak, amint előfizetsz az Arcatextre.",
+      "nextTitle": "Következő lépések",
+      "download": "Arcatext letöltése",
+      "mobileOnly": "Az Arcatext iPhone-alkalmazás. Nyisd meg az App Store-t az iPhone-odon, és keress rá az Arcatextre.",
+      "step1": "Nyisd meg az Arcatext appot",
+      "step2": "Jelentkezz be a(z) \"{{email}}\" címmel",
+      "step3": "Fizess elő, és az extra tokenek automatikusan jóváíródnak"
+    },
+    "errors": {
+      "sendFailed": "Nem sikerült elküldeni a kódot. Ellenőrizd a címet, és próbáld újra.",
+      "badOtp": "Ez a kód nem egyezik. Ellenőrizd, és próbáld újra, vagy kérj újat.",
+      "invalidCode": "Adj meg egy érvényes ajánlói kódot.",
+      "sessionExpired": "A munkameneted lejárt. Jelentkezz be újra.",
+      "network": "Valami hiba történt. Próbáld újra.",
+      "notConfigured": "Ez az oldal jelenleg nincs beállítva. Próbáld később."
+    }
   }
 }

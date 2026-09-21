@@ -319,5 +319,50 @@
     "synonyms": "SYNONIMY",
     "language": "Polski",
     "typePlaceholder": "Napisz coś"
+  },
+  "referral": {
+    "title": "Dołącz do programu poleceń",
+    "subtitle": "Podaj swój adres e-mail, aby się zalogować lub utworzyć konto Arcatext, a następnie zastosuj kod polecający.",
+    "email": {
+      "label": "Adres e-mail",
+      "placeholder": "ty@przyklad.com",
+      "hint": "Wyślemy Ci 6-cyfrowy kod. Hasło nie jest potrzebne.",
+      "cta": "Dalej"
+    },
+    "otp": {
+      "label": "Wpisz 6-cyfrowy kod",
+      "sentTo": "Wysłaliśmy kod na adres {{email}}.",
+      "cta": "Zweryfikuj",
+      "resend": "Wyślij kod ponownie",
+      "resent": "Wysłaliśmy nowy kod.",
+      "changeEmail": "Użyj innego adresu e-mail"
+    },
+    "code": {
+      "label": "Kod polecający",
+      "placeholder": "Wpisz swój kod polecający",
+      "hint": "To nie jest kod rabatowy. Arcatext to płatna subskrypcja — kod polecający dodaje dodatkowe tokeny do puli z Twojego planu.",
+      "cta": "Dołącz"
+    },
+    "done": {
+      "title": "Dołączono z kodem {{code}}.",
+      "bonus": "{{tokens}} dodatkowych tokenów co miesiąc przez {{months}} mies., ponad pulę z Twojego planu.",
+      "activeNow": "Twoje dodatkowe tokeny są już aktywne.",
+      "credited": "Do Twojego konta dodano {{tokens}} dodatkowych tokenów.",
+      "startsOnSubscribe": "Twoje dodatkowe tokeny ruszą, gdy tylko wykupisz subskrypcję Arcatext.",
+      "nextTitle": "Następne kroki",
+      "download": "Pobierz Arcatext",
+      "mobileOnly": "Arcatext to aplikacja na iPhone'a. Otwórz App Store na swoim iPhonie i wyszukaj Arcatext.",
+      "step1": "Otwórz aplikację Arcatext",
+      "step2": "Zaloguj się przy użyciu \"{{email}}\"",
+      "step3": "Wykup subskrypcję, a dodatkowe tokeny zostaną dodane automatycznie"
+    },
+    "errors": {
+      "sendFailed": "Nie udało się wysłać kodu. Sprawdź adres i spróbuj ponownie.",
+      "badOtp": "Ten kod się nie zgadza. Sprawdź go i spróbuj ponownie lub poproś o nowy.",
+      "invalidCode": "Wpisz prawidłowy kod polecający.",
+      "sessionExpired": "Twoja sesja wygasła. Zaloguj się ponownie.",
+      "network": "Coś poszło nie tak. Spróbuj ponownie.",
+      "notConfigured": "Ta strona nie jest teraz skonfigurowana. Spróbuj ponownie później."
+    }
   }
 }

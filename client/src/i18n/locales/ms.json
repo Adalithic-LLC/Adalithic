@@ -319,5 +319,50 @@
     "synonyms": "SINONIM",
     "language": "Bahasa Melayu",
     "typePlaceholder": "Tulis sesuatu"
+  },
+  "referral": {
+    "title": "Sertai program rujukan",
+    "subtitle": "Masukkan e-mel anda untuk log masuk atau membuat akaun Arcatext, kemudian gunakan kod rujukan anda.",
+    "email": {
+      "label": "Alamat e-mel",
+      "placeholder": "anda@contoh.com",
+      "hint": "Kami akan menghantar kod 6 digit. Kata laluan tidak diperlukan.",
+      "cta": "Teruskan"
+    },
+    "otp": {
+      "label": "Masukkan kod 6 digit anda",
+      "sentTo": "Kami telah menghantar kod ke {{email}}.",
+      "cta": "Sahkan",
+      "resend": "Hantar semula kod",
+      "resent": "Kami telah menghantar kod baharu.",
+      "changeEmail": "Guna e-mel lain"
+    },
+    "code": {
+      "label": "Kod rujukan",
+      "placeholder": "Masukkan kod rujukan anda",
+      "hint": "Ini bukan kod diskaun. Arcatext ialah langganan berbayar — kod rujukan menambah token tambahan di luar kuota pelan anda.",
+      "cta": "Sertai"
+    },
+    "done": {
+      "title": "Anda telah menyertai dengan kod {{code}}.",
+      "bonus": "{{tokens}} token tambahan setiap bulan selama {{months}} bulan, di luar kuota pelan anda.",
+      "activeNow": "Token tambahan anda aktif sekarang.",
+      "credited": "{{tokens}} token tambahan telah ditambah ke akaun anda.",
+      "startsOnSubscribe": "Token tambahan anda bermula sebaik sahaja anda melanggan Arcatext.",
+      "nextTitle": "Langkah seterusnya",
+      "download": "Muat turun Arcatext",
+      "mobileOnly": "Arcatext ialah apl iPhone. Buka App Store pada iPhone anda dan cari Arcatext.",
+      "step1": "Buka apl Arcatext",
+      "step2": "Log masuk dengan \"{{email}}\"",
+      "step3": "Langgan, dan token tambahan anda ditambah secara automatik"
+    },
+    "errors": {
+      "sendFailed": "Kami tidak dapat menghantar kod anda. Semak alamat dan cuba lagi.",
+      "badOtp": "Kod itu tidak sepadan. Semak dan cuba lagi, atau minta kod baharu.",
+      "invalidCode": "Sila masukkan kod rujukan yang sah.",
+      "sessionExpired": "Sesi anda telah tamat. Sila log masuk semula.",
+      "network": "Sesuatu tidak kena. Sila cuba lagi.",
+      "notConfigured": "Halaman ini belum dikonfigurasikan buat masa ini. Sila cuba lagi nanti."
+    }
   }
 }

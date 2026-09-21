@@ -319,5 +319,50 @@
     "synonyms": "MGA KASINGKAHULUGAN",
     "language": "Filipino",
     "typePlaceholder": "Magsulat ng kahit ano"
+  },
+  "referral": {
+    "title": "Sumali sa isang referral program",
+    "subtitle": "Ilagay ang iyong email para mag-sign in o gumawa ng Arcatext account, pagkatapos ay i-apply ang iyong referral code.",
+    "email": {
+      "label": "Email address",
+      "placeholder": "ikaw@halimbawa.com",
+      "hint": "Magpapadala kami ng 6-digit na code. Hindi kailangan ng password.",
+      "cta": "Magpatuloy"
+    },
+    "otp": {
+      "label": "Ilagay ang iyong 6-digit na code",
+      "sentTo": "Nagpadala kami ng code sa {{email}}.",
+      "cta": "I-verify",
+      "resend": "Ipadala muli ang code",
+      "resent": "Nagpadala kami ng bagong code.",
+      "changeEmail": "Gumamit ng ibang email"
+    },
+    "code": {
+      "label": "Referral code",
+      "placeholder": "Ilagay ang iyong referral code",
+      "hint": "Hindi ito discount code. Ang Arcatext ay bayad na subscription — ang referral code ay nagdaragdag ng ekstrang token bukod pa sa alokasyon ng iyong plan.",
+      "cta": "Sumali"
+    },
+    "done": {
+      "title": "Sumali ka gamit ang code na {{code}}.",
+      "bonus": "{{tokens}} ekstrang token kada buwan sa loob ng {{months}} buwan, bukod pa sa alokasyon ng iyong plan.",
+      "activeNow": "Aktibo na ang iyong ekstrang token.",
+      "credited": "{{tokens}} ekstrang token ang naidagdag sa iyong account.",
+      "startsOnSubscribe": "Magsisimula ang iyong ekstrang token sa oras na mag-subscribe ka sa Arcatext.",
+      "nextTitle": "Mga susunod na hakbang",
+      "download": "I-download ang Arcatext",
+      "mobileOnly": "Ang Arcatext ay isang iPhone app. Buksan ang App Store sa iyong iPhone at hanapin ang Arcatext.",
+      "step1": "Buksan ang Arcatext app",
+      "step2": "Mag-sign in gamit ang \"{{email}}\"",
+      "step3": "Mag-subscribe, at awtomatikong idaragdag ang iyong ekstrang token"
+    },
+    "errors": {
+      "sendFailed": "Hindi namin naipadala ang iyong code. Suriin ang address at subukan muli.",
+      "badOtp": "Hindi tugma ang code na iyon. Suriin ito at subukan muli, o humiling ng bago.",
+      "invalidCode": "Maglagay ng balidong referral code.",
+      "sessionExpired": "Nag-expire na ang iyong session. Mag-sign in muli.",
+      "network": "May nangyaring mali. Subukan muli.",
+      "notConfigured": "Hindi pa nakaconfigure ang page na ito ngayon. Subukan muli mamaya."
+    }
   }
 }

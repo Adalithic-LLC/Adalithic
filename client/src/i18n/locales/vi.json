@@ -319,5 +319,50 @@
     "synonyms": "TỪ ĐỒNG NGHĨA",
     "language": "Tiếng Việt",
     "typePlaceholder": "Nhập nội dung"
+  },
+  "referral": {
+    "title": "Tham gia chương trình giới thiệu",
+    "subtitle": "Nhập email của bạn để đăng nhập hoặc tạo tài khoản Arcatext, sau đó áp dụng mã giới thiệu của bạn.",
+    "email": {
+      "label": "Địa chỉ email",
+      "placeholder": "ban@vidu.com",
+      "hint": "Chúng tôi sẽ gửi cho bạn mã gồm 6 chữ số. Không cần mật khẩu.",
+      "cta": "Tiếp tục"
+    },
+    "otp": {
+      "label": "Nhập mã 6 chữ số của bạn",
+      "sentTo": "Chúng tôi đã gửi mã tới {{email}}.",
+      "cta": "Xác minh",
+      "resend": "Gửi lại mã",
+      "resent": "Chúng tôi đã gửi mã mới.",
+      "changeEmail": "Dùng email khác"
+    },
+    "code": {
+      "label": "Mã giới thiệu",
+      "placeholder": "Nhập mã giới thiệu của bạn",
+      "hint": "Đây không phải mã giảm giá. Arcatext là gói đăng ký trả phí — mã giới thiệu cộng thêm token ngoài hạn mức trong gói của bạn.",
+      "cta": "Tham gia"
+    },
+    "done": {
+      "title": "Bạn đã tham gia với mã {{code}}.",
+      "bonus": "Thêm {{tokens}} token mỗi tháng trong {{months}} tháng, ngoài hạn mức trong gói của bạn.",
+      "activeNow": "Token cộng thêm của bạn đã có hiệu lực.",
+      "credited": "Đã thêm {{tokens}} token cộng thêm vào tài khoản của bạn.",
+      "startsOnSubscribe": "Token cộng thêm của bạn bắt đầu ngay khi bạn đăng ký Arcatext.",
+      "nextTitle": "Các bước tiếp theo",
+      "download": "Tải Arcatext",
+      "mobileOnly": "Arcatext là ứng dụng cho iPhone. Mở App Store trên iPhone của bạn và tìm Arcatext.",
+      "step1": "Mở ứng dụng Arcatext",
+      "step2": "Đăng nhập bằng \"{{email}}\"",
+      "step3": "Đăng ký gói, token cộng thêm sẽ được cộng tự động"
+    },
+    "errors": {
+      "sendFailed": "Chúng tôi không gửi được mã của bạn. Hãy kiểm tra địa chỉ và thử lại.",
+      "badOtp": "Mã không khớp. Hãy kiểm tra và thử lại, hoặc yêu cầu mã mới.",
+      "invalidCode": "Vui lòng nhập mã giới thiệu hợp lệ.",
+      "sessionExpired": "Phiên của bạn đã hết hạn. Vui lòng đăng nhập lại.",
+      "network": "Đã xảy ra lỗi. Vui lòng thử lại.",
+      "notConfigured": "Trang này hiện chưa được thiết lập. Vui lòng thử lại sau."
+    }
   }
 }

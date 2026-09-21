@@ -319,5 +319,50 @@
     "synonyms": "SINÔNIMOS",
     "language": "Português",
     "typePlaceholder": "Escreva algo"
+  },
+  "referral": {
+    "title": "Adira a um programa de indicação",
+    "subtitle": "Introduza o seu email para iniciar sessão ou criar uma conta Arcatext e depois aplique o seu código de indicação.",
+    "email": {
+      "label": "Endereço de email",
+      "placeholder": "voce@exemplo.com",
+      "hint": "Enviaremos um código de 6 dígitos. Não precisa de palavra-passe.",
+      "cta": "Continuar"
+    },
+    "otp": {
+      "label": "Introduza o seu código de 6 dígitos",
+      "sentTo": "Enviámos um código para {{email}}.",
+      "cta": "Verificar",
+      "resend": "Reenviar código",
+      "resent": "Enviámos outro código.",
+      "changeEmail": "Usar outro email"
+    },
+    "code": {
+      "label": "Código de indicação",
+      "placeholder": "Introduza o seu código de indicação",
+      "hint": "Não é um código de desconto. O Arcatext é uma subscrição paga — um código de indicação acrescenta tokens extra aos do seu plano.",
+      "cta": "Aderir"
+    },
+    "done": {
+      "title": "Aderiu com o código {{code}}.",
+      "bonus": "{{tokens}} tokens extra por mês durante {{months}} meses, além dos do seu plano.",
+      "activeNow": "Os seus tokens extra já estão ativos.",
+      "credited": "Foram adicionados {{tokens}} tokens extra à sua conta.",
+      "startsOnSubscribe": "Os seus tokens extra começam assim que subscrever o Arcatext.",
+      "nextTitle": "Passos seguintes",
+      "download": "Transferir o Arcatext",
+      "mobileOnly": "O Arcatext é uma app para iPhone. Abra a App Store no seu iPhone e procure por Arcatext.",
+      "step1": "Abra a app Arcatext",
+      "step2": "Inicie sessão com \"{{email}}\"",
+      "step3": "Subscreva e os seus tokens extra são adicionados automaticamente"
+    },
+    "errors": {
+      "sendFailed": "Não foi possível enviar o seu código. Verifique o endereço e tente novamente.",
+      "badOtp": "Esse código não corresponde. Verifique-o e tente novamente, ou peça um novo.",
+      "invalidCode": "Introduza um código de indicação válido.",
+      "sessionExpired": "A sua sessão expirou. Inicie sessão novamente.",
+      "network": "Algo correu mal. Tente novamente.",
+      "notConfigured": "Esta página não está configurada de momento. Tente novamente mais tarde."
+    }
   }
 }

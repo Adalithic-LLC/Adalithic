@@ -319,5 +319,50 @@
     "synonyms": "同义词",
     "language": "中文",
     "typePlaceholder": "输入内容"
+  },
+  "referral": {
+    "title": "加入推荐计划",
+    "subtitle": "输入你的电子邮件以登录或创建 Arcatext 账户，然后使用你的推荐码。",
+    "email": {
+      "label": "电子邮件地址",
+      "placeholder": "you@example.com",
+      "hint": "我们会向你发送一个 6 位数验证码。无需密码。",
+      "cta": "继续"
+    },
+    "otp": {
+      "label": "输入你的 6 位数验证码",
+      "sentTo": "我们已向 {{email}} 发送了验证码。",
+      "cta": "验证",
+      "resend": "重新发送验证码",
+      "resent": "我们已发送新的验证码。",
+      "changeEmail": "使用其他电子邮件"
+    },
+    "code": {
+      "label": "推荐码",
+      "placeholder": "输入你的推荐码",
+      "hint": "这不是折扣码。Arcatext 是付费订阅服务，推荐码会在你的套餐额度之外额外赠送代币。",
+      "cta": "加入"
+    },
+    "done": {
+      "title": "你已使用推荐码 {{code}} 加入。",
+      "bonus": "在 {{months}} 个月内，每月在套餐额度之外额外获得 {{tokens}} 个代币。",
+      "activeNow": "你的额外代币现已生效。",
+      "credited": "已向你的账户添加 {{tokens}} 个额外代币。",
+      "startsOnSubscribe": "订阅 Arcatext 后，你的额外代币即刻开始。",
+      "nextTitle": "后续步骤",
+      "download": "下载 Arcatext",
+      "mobileOnly": "Arcatext 是一款 iPhone 应用。请在 iPhone 上打开 App Store 并搜索 Arcatext。",
+      "step1": "打开 Arcatext 应用",
+      "step2": "使用 \"{{email}}\" 登录",
+      "step3": "订阅后，额外代币会自动添加"
+    },
+    "errors": {
+      "sendFailed": "无法发送验证码。请检查地址后重试。",
+      "badOtp": "验证码不匹配。请检查后重试，或请求一个新的验证码。",
+      "invalidCode": "请输入有效的推荐码。",
+      "sessionExpired": "你的会话已过期。请重新登录。",
+      "network": "出了点问题，请重试。",
+      "notConfigured": "此页面当前尚未配置。请稍后再试。"
+    }
   }
 }

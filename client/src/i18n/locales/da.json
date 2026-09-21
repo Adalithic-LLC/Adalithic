@@ -319,5 +319,50 @@
     "synonyms": "SYNONYMER",
     "language": "Dansk",
     "typePlaceholder": "Skriv noget"
+  },
+  "referral": {
+    "title": "Vær med i et henvisningsprogram",
+    "subtitle": "Indtast din e-mailadresse for at logge ind eller oprette en Arcatext-konto, og brug derefter din henvisningskode.",
+    "email": {
+      "label": "E-mailadresse",
+      "placeholder": "dig@eksempel.com",
+      "hint": "Vi sender dig en 6-cifret kode. Ingen adgangskode nødvendig.",
+      "cta": "Fortsæt"
+    },
+    "otp": {
+      "label": "Indtast din 6-cifrede kode",
+      "sentTo": "Vi har sendt en kode til {{email}}.",
+      "cta": "Bekræft",
+      "resend": "Send koden igen",
+      "resent": "Vi har sendt en ny kode.",
+      "changeEmail": "Brug en anden e-mailadresse"
+    },
+    "code": {
+      "label": "Henvisningskode",
+      "placeholder": "Indtast din henvisningskode",
+      "hint": "Det er ikke en rabatkode. Arcatext er et betalt abonnement – en henvisningskode giver ekstra tokens oven i det, dit abonnement indeholder.",
+      "cta": "Vær med"
+    },
+    "done": {
+      "title": "Du er med via koden {{code}}.",
+      "bonus": "{{tokens}} ekstra tokens hver måned i {{months}} måneder oven i det, dit abonnement indeholder.",
+      "activeNow": "Dine ekstra tokens er aktive nu.",
+      "credited": "{{tokens}} ekstra tokens er føjet til din konto.",
+      "startsOnSubscribe": "Dine ekstra tokens starter, så snart du abonnerer på Arcatext.",
+      "nextTitle": "Næste trin",
+      "download": "Download Arcatext",
+      "mobileOnly": "Arcatext er en iPhone-app. Åbn App Store på din iPhone, og søg efter Arcatext.",
+      "step1": "Åbn Arcatext-appen",
+      "step2": "Log ind med \"{{email}}\"",
+      "step3": "Tegn abonnement, så tilføjes dine ekstra tokens automatisk"
+    },
+    "errors": {
+      "sendFailed": "Vi kunne ikke sende din kode. Tjek adressen, og prøv igen.",
+      "badOtp": "Koden passer ikke. Tjek den, og prøv igen, eller bed om en ny.",
+      "invalidCode": "Indtast en gyldig henvisningskode.",
+      "sessionExpired": "Din session er udløbet. Log ind igen.",
+      "network": "Noget gik galt. Prøv igen.",
+      "notConfigured": "Denne side er ikke konfigureret lige nu. Prøv igen senere."
+    }
   }
 }

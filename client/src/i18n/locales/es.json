@@ -319,5 +319,50 @@
     "synonyms": "SINÓNIMOS",
     "language": "Español",
     "typePlaceholder": "Escribe algo"
+  },
+  "referral": {
+    "title": "Únete a un programa de recomendación",
+    "subtitle": "Introduce tu correo electrónico para iniciar sesión o crear una cuenta de Arcatext y luego aplica tu código de recomendación.",
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "tu@ejemplo.com",
+      "hint": "Te enviaremos un código de 6 dígitos. No necesitas contraseña.",
+      "cta": "Continuar"
+    },
+    "otp": {
+      "label": "Introduce tu código de 6 dígitos",
+      "sentTo": "Hemos enviado un código a {{email}}.",
+      "cta": "Verificar",
+      "resend": "Reenviar código",
+      "resent": "Hemos enviado otro código.",
+      "changeEmail": "Usar otro correo electrónico"
+    },
+    "code": {
+      "label": "Código de recomendación",
+      "placeholder": "Introduce tu código de recomendación",
+      "hint": "No es un código de descuento. Arcatext es una suscripción de pago: un código de recomendación añade tokens adicionales a los de tu plan.",
+      "cta": "Unirme"
+    },
+    "done": {
+      "title": "Te has unido con el código {{code}}.",
+      "bonus": "{{tokens}} tokens adicionales cada mes durante {{months}} meses, además de los de tu plan.",
+      "activeNow": "Tus tokens adicionales ya están activos.",
+      "credited": "Se han añadido {{tokens}} tokens adicionales a tu cuenta.",
+      "startsOnSubscribe": "Tus tokens adicionales empezarán en cuanto te suscribas a Arcatext.",
+      "nextTitle": "Siguientes pasos",
+      "download": "Descargar Arcatext",
+      "mobileOnly": "Arcatext es una app para iPhone. Abre la App Store en tu iPhone y busca Arcatext.",
+      "step1": "Abre la app Arcatext",
+      "step2": "Inicia sesión con \"{{email}}\"",
+      "step3": "Suscríbete y tus tokens adicionales se añadirán automáticamente"
+    },
+    "errors": {
+      "sendFailed": "No hemos podido enviar tu código. Comprueba la dirección e inténtalo de nuevo.",
+      "badOtp": "Ese código no coincide. Compruébalo e inténtalo de nuevo, o solicita uno nuevo.",
+      "invalidCode": "Introduce un código de recomendación válido.",
+      "sessionExpired": "Tu sesión ha caducado. Vuelve a iniciar sesión.",
+      "network": "Algo ha salido mal. Inténtalo de nuevo.",
+      "notConfigured": "Esta página no está configurada ahora mismo. Inténtalo de nuevo más tarde."
+    }
   }
 }

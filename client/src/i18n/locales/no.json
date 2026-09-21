@@ -319,5 +319,50 @@
     "synonyms": "SYNONYMER",
     "language": "Norsk",
     "typePlaceholder": "Skriv noe"
+  },
+  "referral": {
+    "title": "Bli med i et verveprogram",
+    "subtitle": "Skriv inn e-postadressen din for å logge inn eller opprette en Arcatext-konto, og bruk deretter vervekoden din.",
+    "email": {
+      "label": "E-postadresse",
+      "placeholder": "deg@eksempel.com",
+      "hint": "Vi sender deg en 6-sifret kode. Du trenger ikke passord.",
+      "cta": "Fortsett"
+    },
+    "otp": {
+      "label": "Skriv inn den 6-sifrede koden",
+      "sentTo": "Vi har sendt en kode til {{email}}.",
+      "cta": "Bekreft",
+      "resend": "Send koden på nytt",
+      "resent": "Vi har sendt en ny kode.",
+      "changeEmail": "Bruk en annen e-postadresse"
+    },
+    "code": {
+      "label": "Vervekode",
+      "placeholder": "Skriv inn vervekoden din",
+      "hint": "Dette er ikke en rabattkode. Arcatext er et betalt abonnement – en vervekode gir ekstra tokens i tillegg til det abonnementet ditt inneholder.",
+      "cta": "Bli med"
+    },
+    "done": {
+      "title": "Du ble med via koden {{code}}.",
+      "bonus": "{{tokens}} ekstra tokens hver måned i {{months}} måneder, i tillegg til det abonnementet ditt inneholder.",
+      "activeNow": "De ekstra tokensene dine er aktive nå.",
+      "credited": "{{tokens}} ekstra tokens er lagt til på kontoen din.",
+      "startsOnSubscribe": "De ekstra tokensene dine starter så snart du abonnerer på Arcatext.",
+      "nextTitle": "Neste steg",
+      "download": "Last ned Arcatext",
+      "mobileOnly": "Arcatext er en iPhone-app. Åpne App Store på iPhonen din og søk etter Arcatext.",
+      "step1": "Åpne Arcatext-appen",
+      "step2": "Logg inn med \"{{email}}\"",
+      "step3": "Tegn abonnement, så legges de ekstra tokensene til automatisk"
+    },
+    "errors": {
+      "sendFailed": "Vi klarte ikke å sende koden din. Sjekk adressen og prøv igjen.",
+      "badOtp": "Koden stemmer ikke. Sjekk den og prøv igjen, eller be om en ny.",
+      "invalidCode": "Skriv inn en gyldig vervekode.",
+      "sessionExpired": "Økten din er utløpt. Logg inn igjen.",
+      "network": "Noe gikk galt. Prøv igjen.",
+      "notConfigured": "Denne siden er ikke konfigurert akkurat nå. Prøv igjen senere."
+    }
   }
 }

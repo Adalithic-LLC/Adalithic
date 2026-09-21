@@ -319,5 +319,50 @@
     "synonyms": "SYNONYMES",
     "language": "Français",
     "typePlaceholder": "Écrivez quelque chose"
+  },
+  "referral": {
+    "title": "Rejoignez un programme de parrainage",
+    "subtitle": "Saisissez votre adresse e-mail pour vous connecter ou créer un compte Arcatext, puis appliquez votre code de parrainage.",
+    "email": {
+      "label": "Adresse e-mail",
+      "placeholder": "vous@exemple.com",
+      "hint": "Nous vous enverrons un code à 6 chiffres. Aucun mot de passe requis.",
+      "cta": "Continuer"
+    },
+    "otp": {
+      "label": "Saisissez votre code à 6 chiffres",
+      "sentTo": "Nous avons envoyé un code à {{email}}.",
+      "cta": "Vérifier",
+      "resend": "Renvoyer le code",
+      "resent": "Nous avons envoyé un nouveau code.",
+      "changeEmail": "Utiliser une autre adresse"
+    },
+    "code": {
+      "label": "Code de parrainage",
+      "placeholder": "Saisissez votre code de parrainage",
+      "hint": "Ce n'est pas un code de réduction. Arcatext est un abonnement payant : un code de parrainage ajoute des jetons supplémentaires à ceux de votre formule.",
+      "cta": "Rejoindre"
+    },
+    "done": {
+      "title": "Vous avez rejoint le programme avec le code {{code}}.",
+      "bonus": "{{tokens}} jetons supplémentaires chaque mois pendant {{months}} mois, en plus de ceux de votre formule.",
+      "activeNow": "Vos jetons supplémentaires sont actifs dès maintenant.",
+      "credited": "{{tokens}} jetons supplémentaires ont été ajoutés à votre compte.",
+      "startsOnSubscribe": "Vos jetons supplémentaires démarreront dès votre abonnement à Arcatext.",
+      "nextTitle": "Étapes suivantes",
+      "download": "Télécharger Arcatext",
+      "mobileOnly": "Arcatext est une application iPhone. Ouvrez l'App Store sur votre iPhone et recherchez Arcatext.",
+      "step1": "Ouvrez l'application Arcatext",
+      "step2": "Connectez-vous avec \"{{email}}\"",
+      "step3": "Abonnez-vous, et vos jetons supplémentaires seront ajoutés automatiquement"
+    },
+    "errors": {
+      "sendFailed": "Impossible d'envoyer votre code. Vérifiez l'adresse et réessayez.",
+      "badOtp": "Ce code ne correspond pas. Vérifiez-le et réessayez, ou demandez-en un nouveau.",
+      "invalidCode": "Veuillez saisir un code de parrainage valide.",
+      "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter.",
+      "network": "Une erreur s'est produite. Veuillez réessayer.",
+      "notConfigured": "Cette page n'est pas configurée pour le moment. Veuillez réessayer plus tard."
+    }
   }
 }

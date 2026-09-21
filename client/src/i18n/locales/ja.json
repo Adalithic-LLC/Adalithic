@@ -319,5 +319,50 @@
     "synonyms": "類義語",
     "language": "日本語",
     "typePlaceholder": "何か入力"
+  },
+  "referral": {
+    "title": "紹介プログラムに参加する",
+    "subtitle": "メールアドレスを入力してログインするか Arcatext アカウントを作成し、紹介コードを適用してください。",
+    "email": {
+      "label": "メールアドレス",
+      "placeholder": "you@example.com",
+      "hint": "6桁のコードをお送りします。パスワードは不要です。",
+      "cta": "続ける"
+    },
+    "otp": {
+      "label": "6桁のコードを入力",
+      "sentTo": "{{email}} にコードを送信しました。",
+      "cta": "確認",
+      "resend": "コードを再送信",
+      "resent": "新しいコードを送信しました。",
+      "changeEmail": "別のメールアドレスを使う"
+    },
+    "code": {
+      "label": "紹介コード",
+      "placeholder": "紹介コードを入力",
+      "hint": "これは割引コードではありません。Arcatext は有料サブスクリプションで、紹介コードはプランのトークンに上乗せされます。",
+      "cta": "参加する"
+    },
+    "done": {
+      "title": "コード {{code}} で参加しました。",
+      "bonus": "{{months}} か月間、毎月 {{tokens}} トークンをプランの割り当てに上乗せします。",
+      "activeNow": "追加トークンは今すぐご利用いただけます。",
+      "credited": "{{tokens}} トークンがアカウントに追加されました。",
+      "startsOnSubscribe": "追加トークンは Arcatext に登録した時点で始まります。",
+      "nextTitle": "次のステップ",
+      "download": "Arcatext をダウンロード",
+      "mobileOnly": "Arcatext は iPhone 用アプリです。iPhone で App Store を開き、Arcatext を検索してください。",
+      "step1": "Arcatext アプリを開く",
+      "step2": "\"{{email}}\" でログインする",
+      "step3": "登録すると、追加トークンが自動的に付与されます"
+    },
+    "errors": {
+      "sendFailed": "コードを送信できませんでした。アドレスを確認してもう一度お試しください。",
+      "badOtp": "コードが一致しません。確認してもう一度お試しいただくか、新しいコードをリクエストしてください。",
+      "invalidCode": "有効な紹介コードを入力してください。",
+      "sessionExpired": "セッションの有効期限が切れました。もう一度ログインしてください。",
+      "network": "問題が発生しました。もう一度お試しください。",
+      "notConfigured": "このページは現在設定されていません。しばらくしてからお試しください。"
+    }
   }
 }

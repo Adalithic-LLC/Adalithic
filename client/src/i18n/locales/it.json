@@ -319,5 +319,50 @@
     "synonyms": "SINONIMI",
     "language": "Italiano",
     "typePlaceholder": "Scrivi qualcosa"
+  },
+  "referral": {
+    "title": "Unisciti a un programma di invito",
+    "subtitle": "Inserisci la tua email per accedere o creare un account Arcatext, poi applica il tuo codice invito.",
+    "email": {
+      "label": "Indirizzo email",
+      "placeholder": "tu@esempio.com",
+      "hint": "Ti invieremo un codice di 6 cifre. Nessuna password necessaria.",
+      "cta": "Continua"
+    },
+    "otp": {
+      "label": "Inserisci il codice di 6 cifre",
+      "sentTo": "Abbiamo inviato un codice a {{email}}.",
+      "cta": "Verifica",
+      "resend": "Invia di nuovo il codice",
+      "resent": "Abbiamo inviato un altro codice.",
+      "changeEmail": "Usa un'altra email"
+    },
+    "code": {
+      "label": "Codice invito",
+      "placeholder": "Inserisci il tuo codice invito",
+      "hint": "Non è un codice sconto. Arcatext è un abbonamento a pagamento: un codice invito aggiunge token extra a quelli del tuo piano.",
+      "cta": "Unisciti"
+    },
+    "done": {
+      "title": "Ti sei unito con il codice {{code}}.",
+      "bonus": "{{tokens}} token extra ogni mese per {{months}} mesi, oltre a quelli del tuo piano.",
+      "activeNow": "I tuoi token extra sono già attivi.",
+      "credited": "{{tokens}} token extra sono stati aggiunti al tuo account.",
+      "startsOnSubscribe": "I tuoi token extra partiranno non appena ti abbonerai ad Arcatext.",
+      "nextTitle": "Passaggi successivi",
+      "download": "Scarica Arcatext",
+      "mobileOnly": "Arcatext è un'app per iPhone. Apri l'App Store sul tuo iPhone e cerca Arcatext.",
+      "step1": "Apri l'app Arcatext",
+      "step2": "Accedi con \"{{email}}\"",
+      "step3": "Abbonati e i tuoi token extra verranno aggiunti automaticamente"
+    },
+    "errors": {
+      "sendFailed": "Non siamo riusciti a inviare il codice. Controlla l'indirizzo e riprova.",
+      "badOtp": "Il codice non corrisponde. Controllalo e riprova, oppure richiedine uno nuovo.",
+      "invalidCode": "Inserisci un codice invito valido.",
+      "sessionExpired": "La tua sessione è scaduta. Accedi di nuovo.",
+      "network": "Qualcosa è andato storto. Riprova.",
+      "notConfigured": "Questa pagina non è configurata al momento. Riprova più tardi."
+    }
   }
 }
