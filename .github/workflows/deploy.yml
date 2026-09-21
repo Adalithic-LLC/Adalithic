@@ -71,12 +71,20 @@ jobs:
           # browser locale, so a Spanish visitor handed /redeem lands on
           # /es/redeem and would 404 without a real file there.
           cp dist/public/index.html dist/public/redeem.html
+          # Referral join page, same reasoning as /redeem above. The code
+          # travels in the query string, so one file per locale is enough.
+          cp dist/public/index.html dist/public/referral.html
+          # Admin ledger: English only, and detect-locale skips /admin, so it
+          # needs exactly one file and no per-locale copies.
+          mkdir -p dist/public/admin
+          cp dist/public/index.html dist/public/admin/referrals.html
           for L in es fr de ja it pl nl pt zh ko tr el ar he sv cs ro hu da fi no bg vi th id hi ru uk zh-Hant bn ta te mr ur fa ms fil sw pa; do
             mkdir -p "dist/public/$L"
             cp dist/public/index.html "dist/public/$L/index.html"
             cp dist/public/index.html "dist/public/$L/privacy.html"
             cp dist/public/index.html "dist/public/$L/terms.html"
             cp dist/public/index.html "dist/public/$L/redeem.html"
+            cp dist/public/index.html "dist/public/$L/referral.html"
           done
       - uses: actions/upload-pages-artifact@v3
         with:
