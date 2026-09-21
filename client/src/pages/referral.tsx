@@ -72,6 +72,11 @@ interface ClaimResult {
   // but the perk and the influencer's commission window both start at their
   // first subscription payment.
   activeNow: boolean;
+  // What was ACTUALLY credited to their balance just now. Reported separately
+  // from activeNow because the two can disagree: a code whose bonus is zero,
+  // or a first period whose usage offset swallowed it, leaves this at 0 and
+  // the page must not claim tokens arrived when none did.
+  tokensCredited: number;
 }
 
 export default function Referral() {
@@ -171,6 +176,7 @@ export default function Referral() {
           bonusTokens: data.data?.bonus_tokens ?? null,
           bonusMonths: data.data?.bonus_months ?? null,
           activeNow: Boolean(data.data?.active_now),
+          tokensCredited: Number(data.data?.tokens_credited ?? 0),
         });
         setStep("done");
         return;
@@ -360,7 +366,11 @@ export default function Referral() {
                       else; saying otherwise would set up a support ticket. */}
                   <p className="text-sm text-gray-600">
                     {result.activeNow
-                      ? t("referral.done.activeNow")
+                      ? result.tokensCredited > 0
+                        ? t("referral.done.credited", {
+                            tokens: formatTokens(result.tokensCredited),
+                          })
+                        : t("referral.done.activeNow")
                       : t("referral.done.startsOnSubscribe")}
                   </p>
 

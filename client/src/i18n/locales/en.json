@@ -347,6 +347,7 @@
       "title": "You've joined with code {{code}}.",
       "bonus": "{{tokens}} extra tokens every month for {{months}} months, on top of your plan's allowance.",
       "activeNow": "Your extra tokens are active now.",
+      "credited": "{{tokens}} extra tokens have been added to your account.",
       "startsOnSubscribe": "Your extra tokens start as soon as you subscribe to Arcatext.",
       "nextTitle": "Next steps",
       "download": "Download Arcatext",

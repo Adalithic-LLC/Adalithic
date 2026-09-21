@@ -38,9 +38,13 @@ interface SummaryRow {
   is_active: boolean;
   bonus_tokens: number;
   bonus_months: number;
-  revenue_share_months: number;
+  // Optional PER-USER cap. null = no cap, which is what a campaign-wide deal
+  // wants: one shared window for everyone, ended by revenue_share_ends_at.
+  revenue_share_months: number | null;
   revenue_share_percent: number;
+  revenue_share_ends_at: string | null;
   total_users: number;
+  active_users: number;
   paying_users: number;
   gross_usd: number;
   attributed_usd: number;
@@ -55,6 +59,7 @@ interface DetailRow {
   claimed_at: string;
   referral_start_at: string | null;
   subscription_tier: string | null;
+  claim_active: boolean;
   bonus_active: boolean;
   bonus_ends_at: string | null;
   payments: number;
@@ -172,24 +177,18 @@ export default function AdminReferrals() {
   }
 
   // Settings are sent field-by-field: the RPC treats a NULL argument as "leave
-  // alone", so a single changed number never blanks the rest of the row.
-  async function saveSetting(
-    row: SummaryRow,
-    field:
-      | "p_bonus_tokens"
-      | "p_bonus_months"
-      | "p_revenue_share_months"
-      | "p_revenue_share_percent"
-      | "p_is_active",
-    value: number | boolean,
-  ) {
+  // alone", so a single changed field never blanks the rest of the row. That
+  // convention cannot express "set this back to nothing", which is why the RPC
+  // has explicit p_clear_* flags and why this takes an arbitrary arg object
+  // rather than one field name and value.
+  async function saveSetting(row: SummaryRow, args: Record<string, unknown>) {
     setBusy(true);
     setError(null);
     setNotice(null);
     try {
       const { data, error: rpcError } = await supabase.rpc("admin_upsert_referral_code", {
         p_code: row.code,
-        [field]: value,
+        ...args,
       });
       if (rpcError) {
         setError(rpcError.message || "Could not save.");
@@ -222,7 +221,7 @@ export default function AdminReferrals() {
     influencer_name: string;
     bonus_tokens: number;
     bonus_months: number;
-    revenue_share_months: number;
+    revenue_share_ends_at: string | null;
     revenue_share_percent: number;
   }) {
     setBusy(true);
@@ -234,8 +233,12 @@ export default function AdminReferrals() {
         p_influencer_name: fields.influencer_name || null,
         p_bonus_tokens: fields.bonus_tokens,
         p_bonus_months: fields.bonus_months,
-        p_revenue_share_months: fields.revenue_share_months,
+        // New codes get NO per-user cap: a campaign-wide deal is the common
+        // shape, and a cap would silently truncate it if the cutoff were later
+        // extended. Add one afterwards if a deal actually needs it.
+        p_clear_revenue_share_months: true,
         p_revenue_share_percent: fields.revenue_share_percent,
+        p_revenue_share_ends_at: fields.revenue_share_ends_at,
       });
       if (rpcError) {
         setError(rpcError.message || "Could not create the code.");
@@ -255,6 +258,44 @@ export default function AdminReferrals() {
       );
       await loadSummary();
       return true;
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  // Detach a user from a code, or put them back. The RPC is keyed by email
+  // because that is what an admin has to hand when someone writes in; a user
+  // whose account was deleted has no email and cannot be detached, which is
+  // why the button is disabled for them.
+  async function setClaimActive(row: DetailRow, active: boolean) {
+    if (!row.email) return;
+    setBusy(true);
+    setError(null);
+    setNotice(null);
+    try {
+      const { data, error: rpcError } = await supabase.rpc(
+        "admin_set_referral_claim_active",
+        { p_user_email: row.email, p_active: active },
+      );
+      if (rpcError) {
+        setError(rpcError.message || "Could not change that claim.");
+        return;
+      }
+      if (!data?.success) {
+        setError(data?.message || "Could not change that claim.");
+        return;
+      }
+      setNotice(
+        active
+          ? `${row.email} is attached to this code again.`
+          : `${row.email} is detached. Their perk stops and no further payments are attributed; rows already recorded stay.`,
+      );
+      const fresh = await loadSummary();
+      const refreshed = selected ? fresh?.find((r) => r.code === selected.code) : undefined;
+      if (refreshed) {
+        setSelected(refreshed);
+        await openDetail(refreshed);
+      }
     } finally {
       setBusy(false);
     }
@@ -381,6 +422,9 @@ export default function AdminReferrals() {
                   <TableHead>Code</TableHead>
                   <TableHead>Influencer</TableHead>
                   <TableHead className="text-right">Users</TableHead>
+                  {/* Detached claims still count in Users so the number
+                      reconciles with the drill-down list; Active excludes them. */}
+                  <TableHead className="text-right">Active</TableHead>
                   <TableHead className="text-right">Paying</TableHead>
                   <TableHead className="text-right">Gross</TableHead>
                   {/* Gross is every dollar those users have ever paid. In-window
@@ -397,7 +441,7 @@ export default function AdminReferrals() {
               <TableBody>
                 {visible.length === 0 && (
                   <TableRow>
-                    <TableCell colSpan={10} className="text-center text-gray-500">
+                    <TableCell colSpan={11} className="text-center text-gray-500">
                       No referral codes yet.
                     </TableCell>
                   </TableRow>
@@ -407,6 +451,7 @@ export default function AdminReferrals() {
                     <TableCell className="font-mono font-medium">{r.code}</TableCell>
                     <TableCell>{r.influencer_name ?? "—"}</TableCell>
                     <TableCell className="text-right">{num(r.total_users)}</TableCell>
+                    <TableCell className="text-right">{num(r.active_users)}</TableCell>
                     <TableCell className="text-right">{num(r.paying_users)}</TableCell>
                     <TableCell className="text-right">{usd(r.gross_usd)}</TableCell>
                     <TableCell className="text-right">{usd(r.attributed_usd)}</TableCell>
@@ -439,20 +484,47 @@ export default function AdminReferrals() {
                 </Button>
               </div>
 
+              <div className="flex flex-wrap items-center gap-3">
+                <CodeActiveToggle
+                  code={selected}
+                  disabled={busy}
+                  onToggle={(active) => void saveSetting(selected, { p_is_active: active })}
+                />
+                <CutoffSetting
+                  key={`cutoff-${selected.revenue_share_ends_at ?? "none"}`}
+                  value={selected.revenue_share_ends_at}
+                  disabled={busy}
+                  onSave={(iso) =>
+                    void saveSetting(
+                      selected,
+                      iso === null
+                        ? { p_clear_revenue_share_ends_at: true }
+                        : { p_revenue_share_ends_at: iso },
+                    )
+                  }
+                />
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <NumberSetting
                   key={`revenue_share_months-${selected.revenue_share_months}`}
-                  label="Revenue-share months"
-                  help="How many months of each user's payments earn commission. Changing this recalculates every figure above."
+                  label="Per-user month cap (optional)"
+                  help="Caps how many months of ONE subscriber's payments earn commission, counted from their own first payment. Leave blank for a campaign-wide deal — the cutoff date above should be the only thing that ends the money."
                   value={selected.revenue_share_months}
-                  onSave={(v) => void saveSetting(selected, "p_revenue_share_months", v)}
+                  onSave={(v) =>
+                    void saveSetting(selected, 
+                      v === null
+                        ? { p_clear_revenue_share_months: true }
+                        : { p_revenue_share_months: v },
+                    )
+                  }
                   disabled={busy}
                 />
                 <NumberSetting
                   key={`revenue_share_percent-${selected.revenue_share_percent}`}
                   label="Commission %"
                   value={selected.revenue_share_percent}
-                  onSave={(v) => void saveSetting(selected, "p_revenue_share_percent", v)}
+                  onSave={(v) => void saveSetting(selected, { p_revenue_share_percent: v })}
                   disabled={busy}
                 />
                 <NumberSetting
@@ -460,7 +532,7 @@ export default function AdminReferrals() {
                   label="Bonus tokens / month"
                   help="Extra tokens the referred user gets on top of their plan."
                   value={selected.bonus_tokens}
-                  onSave={(v) => void saveSetting(selected, "p_bonus_tokens", v)}
+                  onSave={(v) => void saveSetting(selected, { p_bonus_tokens: v })}
                   disabled={busy}
                 />
                 <NumberSetting
@@ -468,7 +540,7 @@ export default function AdminReferrals() {
                   label="Bonus months"
                   help="How long the user keeps the perk. Independent of the revenue-share window."
                   value={selected.bonus_months}
-                  onSave={(v) => void saveSetting(selected, "p_bonus_months", v)}
+                  onSave={(v) => void saveSetting(selected, { p_bonus_months: v })}
                   disabled={busy}
                 />
               </div>
@@ -492,26 +564,32 @@ export default function AdminReferrals() {
                       <TableHead className="text-right">Gross</TableHead>
                       <TableHead className="text-right">In window</TableHead>
                       <TableHead className="text-right">Commission</TableHead>
+                      <TableHead />
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {detail === null && (
                       <TableRow>
-                        <TableCell colSpan={9} className="text-center text-gray-500">
+                        <TableCell colSpan={10} className="text-center text-gray-500">
                           Loading…
                         </TableCell>
                       </TableRow>
                     )}
                     {detail?.length === 0 && (
                       <TableRow>
-                        <TableCell colSpan={9} className="text-center text-gray-500">
+                        <TableCell colSpan={10} className="text-center text-gray-500">
                           Nobody has used this code yet.
                         </TableCell>
                       </TableRow>
                     )}
                     {detail?.map((d) => (
-                      <TableRow key={d.user_id}>
-                        <TableCell className="text-sm">{d.email ?? d.user_id}</TableCell>
+                      <TableRow key={d.user_id} className={d.claim_active ? "" : "opacity-50"}>
+                        <TableCell className="text-sm">
+                          {d.email ?? d.user_id}
+                          {!d.claim_active && (
+                            <span className="ml-2 text-xs text-gray-500">(detached)</span>
+                          )}
+                        </TableCell>
                         <TableCell className="text-sm">{date(d.claimed_at)}</TableCell>
                         {/* Blank until their first payment under the referral —
                             both the perk and the commission window start there. */}
@@ -525,6 +603,19 @@ export default function AdminReferrals() {
                         <TableCell className="text-right">{usd(d.attributed_usd)}</TableCell>
                         <TableCell className="text-right font-medium">
                           {usd(d.commission_usd)}
+                        </TableCell>
+                        <TableCell className="text-right">
+                          {/* Detaching stops the perk and stops further revenue
+                              rows. Rows already recorded stay, because they
+                              describe money that really moved. */}
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            disabled={busy || !d.email}
+                            onClick={() => void setClaimActive(d, !d.claim_active)}
+                          >
+                            {d.claim_active ? "Detach" : "Re-attach"}
+                          </Button>
                         </TableCell>
                       </TableRow>
                     ))}
@@ -549,7 +640,7 @@ function NewCodeForm({
     influencer_name: string;
     bonus_tokens: number;
     bonus_months: number;
-    revenue_share_months: number;
+    revenue_share_ends_at: string | null;
     revenue_share_percent: number;
   }) => Promise<boolean>;
 }) {
@@ -558,10 +649,10 @@ function NewCodeForm({
   const [name, setName] = useState("");
   const [bonusTokens, setBonusTokens] = useState("1000000");
   const [bonusMonths, setBonusMonths] = useState("12");
-  const [shareMonths, setShareMonths] = useState("12");
+  const [endsAt, setEndsAt] = useState("");
   const [percent, setPercent] = useState("20");
 
-  const nums = [bonusTokens, bonusMonths, shareMonths, percent].map(Number);
+  const nums = [bonusTokens, bonusMonths, percent].map(Number);
   const valid = code.trim() !== "" && nums.every((n) => !Number.isNaN(n) && n >= 0);
 
   if (!open) {
@@ -589,8 +680,8 @@ function NewCodeForm({
           <Field label="Bonus months" hint="How long the user keeps the perk.">
             <Input inputMode="numeric" value={bonusMonths} onChange={(e) => setBonusMonths(e.target.value)} className="bg-white" />
           </Field>
-          <Field label="Revenue-share months" hint="How long their payments earn commission.">
-            <Input inputMode="numeric" value={shareMonths} onChange={(e) => setShareMonths(e.target.value)} className="bg-white" />
+          <Field label="Revenue share ends" hint="Payments in this month are the last that earn commission — the same window for every user of this code. Blank means no cutoff.">
+            <Input type="date" value={endsAt} onChange={(e) => setEndsAt(e.target.value)} className="bg-white" />
           </Field>
           <Field label="Commission %">
             <Input inputMode="decimal" value={percent} onChange={(e) => setPercent(e.target.value)} className="bg-white" />
@@ -605,7 +696,7 @@ function NewCodeForm({
                 influencer_name: name.trim(),
                 bonus_tokens: Number(bonusTokens),
                 bonus_months: Number(bonusMonths),
-                revenue_share_months: Number(shareMonths),
+                revenue_share_ends_at: endsAt === "" ? null : `${endsAt}T23:59:59Z`,
                 revenue_share_percent: Number(percent),
               });
               if (ok) {
@@ -644,6 +735,10 @@ function Field({
   );
 }
 
+// `value` may be null, and an empty box saves null rather than being rejected.
+// That is what makes "no per-user cap" expressible: without it there would be
+// no way to remove a cap once set, which is the trap a campaign-wide deal falls
+// into when the cutoff is later extended.
 function NumberSetting({
   label,
   help,
@@ -653,31 +748,113 @@ function NumberSetting({
 }: {
   label: string;
   help?: string;
-  value: number;
-  onSave: (v: number) => void;
+  value: number | null;
+  onSave: (v: number | null) => void;
   disabled?: boolean;
 }) {
-  const [draft, setDraft] = useState(String(value));
-  const dirty = draft !== String(value);
+  const asText = value === null || value === undefined ? "" : String(value);
+  const [draft, setDraft] = useState(asText);
+  const trimmed = draft.trim();
+  const dirty = draft !== asText;
+  const parses = trimmed === "" || !Number.isNaN(Number(trimmed));
   return (
     <div className="space-y-1">
       <label className="block text-sm font-medium">{label}</label>
       <div className="flex gap-2">
         <Input
           inputMode="decimal"
+          placeholder="none"
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
           className="bg-white"
         />
         <Button
           size="sm"
-          disabled={disabled || !dirty || draft.trim() === "" || Number.isNaN(Number(draft))}
-          onClick={() => onSave(Number(draft))}
+          disabled={disabled || !dirty || !parses}
+          onClick={() => onSave(trimmed === "" ? null : Number(trimmed))}
         >
           Save
         </Button>
       </div>
       {help && <p className="text-xs text-gray-500">{help}</p>}
+    </div>
+  );
+}
+
+// The campaign-wide cutoff: the date after which no payment earns commission,
+// for every user of this code alike. This is the knob a fixed-term deal wants;
+// the per-user cap beside it is for a differently shaped arrangement.
+function CutoffSetting({
+  value,
+  onSave,
+  disabled,
+}: {
+  value: string | null;
+  onSave: (iso: string | null) => void;
+  disabled?: boolean;
+}) {
+  const asDate = value ? new Date(value).toISOString().slice(0, 10) : "";
+  const [draft, setDraft] = useState(asDate);
+  const dirty = draft !== asDate;
+  return (
+    <div className="flex items-end gap-2">
+      <div className="space-y-1">
+        <label className="block text-sm font-medium">Revenue share ends</label>
+        <Input
+          type="date"
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          className="bg-white"
+          disabled={disabled}
+        />
+      </div>
+      <Button
+        size="sm"
+        disabled={disabled || !dirty}
+        // End of the chosen day. Only the calendar month is used in the
+        // calculation, so the time is for human readability, not arithmetic.
+        onClick={() => onSave(draft === "" ? null : `${draft}T23:59:59Z`)}
+      >
+        Save
+      </Button>
+      {value && (
+        <p className="text-xs text-gray-500 pb-2">
+          Payments in {new Date(value).toLocaleDateString("en-US", { month: "long", year: "numeric" })} are the last that earn.
+        </p>
+      )}
+      {!value && <p className="text-xs text-gray-500 pb-2">No cutoff — commission continues indefinitely.</p>}
+    </div>
+  );
+}
+
+// is_active on a code means "open to NEW claims" and nothing else. Closing it
+// deliberately does NOT strip the perk from users who already claimed it, nor
+// stop their payments earning commission — that would punish paying customers
+// for a commercial decision. Set bonus tokens to 0 to end a perk outright.
+function CodeActiveToggle({
+  code,
+  onToggle,
+  disabled,
+}: {
+  code: SummaryRow;
+  onToggle: (active: boolean) => void;
+  disabled?: boolean;
+}) {
+  return (
+    <div className="flex items-center gap-2">
+      <span
+        className={`text-sm font-medium ${code.is_active ? "text-green-700" : "text-gray-500"}`}
+      >
+        {code.is_active ? "Open to new claims" : "Closed to new claims"}
+      </span>
+      <Button
+        size="sm"
+        variant="outline"
+        disabled={disabled}
+        onClick={() => onToggle(!code.is_active)}
+      >
+        {code.is_active ? "Close" : "Re-open"}
+      </Button>
     </div>
   );
 }
