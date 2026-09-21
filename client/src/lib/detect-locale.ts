@@ -30,11 +30,24 @@ import {
 
     const basePath = stripLocale(path); // unprefixed path, normalized ("/", "/privacy", …)
 
+    // The rewrite is a LOCALE CHANGE, not a navigation, so everything else the
+    // visitor arrived with has to survive it. Rebuilding the URL from pathname
+    // alone silently dropped the query string and fragment: a referral link of
+    // the form /referral?code=HANNAH became /es/referral for every non-English
+    // visitor, losing the influencer's code before React ever mounted.
+    const suffix = (window.location.search || "") + (window.location.hash || "");
+
+    // The admin ledger is English-only and has no per-locale copies on Pages,
+    // so rewriting /admin/referrals to /es/admin/referrals would 404 for any
+    // non-English browser — including, inconveniently, on the one page whose
+    // only user is the person who deployed it.
+    if (basePath === "/admin" || basePath.startsWith("/admin/")) return;
+
     // Returning visitor: honor the remembered choice (English included).
     const stored = readStoredLocale();
     if (stored) {
       if (stored !== DEFAULT_LOCALE) {
-        window.history.replaceState(null, "", localePath(basePath, stored));
+        window.history.replaceState(null, "", localePath(basePath, stored) + suffix);
       }
       return;
     }
@@ -43,7 +56,7 @@ import {
     const detected = preferredBrowserLocale();
     if (detected && detected !== DEFAULT_LOCALE) {
       rememberLocale(detected); // keep it consistent on later visits
-      window.history.replaceState(null, "", localePath(basePath, detected));
+      window.history.replaceState(null, "", localePath(basePath, detected) + suffix);
     }
   } catch {
     /* non-fatal: stay on English */

@@ -9,6 +9,8 @@ import Home from "@/pages/home";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Redeem from "@/pages/redeem";
+import Referral from "@/pages/referral";
+import AdminReferrals from "@/pages/admin-referrals";
 import NotFound from "@/pages/not-found";
 import { getLocaleFromPath, isPrefixLocale, isRtl } from "@/lib/locale";
 import { useSeo } from "@/lib/seo";
@@ -44,6 +46,15 @@ function Router() {
           for most non-English visitors. The app never links here either way
           (guideline 3.1.1(a) anti-steering). */}
       <Route path="/redeem" component={Redeem} />
+      {/* Referral program. Shared by influencers as /referral?code=THEIRCODE —
+          a query parameter rather than a path segment so the URL resolves to a
+          real referral.html (HTTP 200) instead of falling through 404.html,
+          which matters for a link posted publicly. */}
+      <Route path="/referral" component={Referral} />
+      {/* Admin ledger. Unlinked and unlocalized; it is not hidden because
+          hiding it would be decoration — every RPC it calls re-checks the
+          admin identity server-side. */}
+      <Route path="/admin/referrals" component={AdminReferrals} />
       {/* Prefixed locales: /es, /es/privacy, /fr/terms, ... An unknown prefix
           (e.g. /xx/privacy) falls through to NotFound. Order matters — the
           bare "/:lang" catch must come after the more specific routes. */}
@@ -55,6 +66,9 @@ function Router() {
       </Route>
       <Route path="/:lang/redeem">
         {(params) => (isPrefixLocale(params.lang) ? <Redeem /> : <NotFound />)}
+      </Route>
+      <Route path="/:lang/referral">
+        {(params) => (isPrefixLocale(params.lang) ? <Referral /> : <NotFound />)}
       </Route>
       <Route path="/:lang">
         {(params) => (isPrefixLocale(params.lang) ? <Home /> : <NotFound />)}
