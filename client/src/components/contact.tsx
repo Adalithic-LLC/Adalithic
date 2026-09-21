@@ -147,6 +147,11 @@ export default function Contact() {
                           <Input
                             placeholder={t("contact.phCompany")}
                             {...field}
+                            // company is the one nullable column on the form, so
+                            // field.value is string | null | undefined. Coerce it
+                            // to "" to keep the input controlled — React drops a
+                            // null value and the field would switch to uncontrolled.
+                            value={field.value ?? ""}
                             className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                           />
                         </FormControl>
