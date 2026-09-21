@@ -79,6 +79,25 @@ const num = (n: number | null | undefined) =>
 const date = (iso: string | null) =>
   iso ? new Date(iso).toLocaleDateString("en-US", { dateStyle: "medium" }) : "—";
 
+// The table renders numbers with `num()`, i.e. grouped with commas, so a value
+// copied back out of it ("5,000,000") has to parse. Plain Number() returns NaN
+// for that and the old code silently disabled the button, which read as the
+// page being broken.
+//
+// Separators are stripped ONLY where they actually group digits in threes, so a
+// European decimal comma ("1,5") stays invalid rather than quietly becoming 15.
+// Returns null for anything unparseable; callers turn that into a visible
+// reason, never a dead button.
+export function parseNumeric(raw: string): number | null {
+  const s = raw.trim().replace(/\u00a0/g, " ");
+  if (s === "") return null;
+  const grouped = /^\d{1,3}([, ]\d{3})+(\.\d+)?$/.test(s);
+  const bare = grouped ? s.replace(/[, ]/g, "") : s;
+  if (!/^\d+(\.\d+)?$/.test(bare)) return null;
+  const n = Number(bare);
+  return Number.isFinite(n) ? n : null;
+}
+
 export default function AdminReferrals() {
   const [step, setStep] = useState<"email" | "otp" | "ready">("email");
   const [email, setEmail] = useState("");
@@ -633,7 +652,7 @@ export default function AdminReferrals() {
   );
 }
 
-function NewCodeForm({
+export function NewCodeForm({
   disabled,
   onCreate,
 }: {
@@ -655,8 +674,29 @@ function NewCodeForm({
   const [endsAt, setEndsAt] = useState("");
   const [percent, setPercent] = useState("20");
 
-  const nums = [bonusTokens, bonusMonths, percent].map(Number);
-  const valid = code.trim() !== "" && nums.every((n) => !Number.isNaN(n) && n >= 0);
+  const tokensN = parseNumeric(bonusTokens);
+  const monthsN = parseNumeric(bonusMonths);
+  const percentN = parseNumeric(percent);
+
+  // Mirrors the column constraints so a bad value is caught here with a
+  // sentence rather than as a raw Postgres error: bonus_tokens and
+  // bonus_months are `integer`, revenue_share_percent is numeric(5,2)
+  // CHECKed to 0-100.
+  const problem: string | null =
+    code.trim() === ""
+      ? "Enter a code."
+      : tokensN === null || !Number.isInteger(tokensN)
+        ? "Bonus tokens must be a whole number."
+        : tokensN > 2147483647
+          ? "Bonus tokens is too large."
+          : monthsN === null || !Number.isInteger(monthsN)
+            ? "Bonus months must be a whole number."
+            : percentN === null
+              ? "Commission % must be a number."
+              : percentN > 100
+                ? "Commission % cannot be above 100."
+                : null;
+  const valid = problem === null;
 
   if (!open) {
     return (
@@ -697,10 +737,10 @@ function NewCodeForm({
               const ok = await onCreate({
                 code: code.trim(),
                 influencer_name: name.trim(),
-                bonus_tokens: Number(bonusTokens),
-                bonus_months: Number(bonusMonths),
+                bonus_tokens: tokensN as number,
+                bonus_months: monthsN as number,
                 revenue_share_ends_at: endsAt === "" ? null : `${endsAt}T23:59:59Z`,
-                revenue_share_percent: Number(percent),
+                revenue_share_percent: percentN as number,
               });
               if (ok) {
                 setOpen(false);
@@ -714,6 +754,9 @@ function NewCodeForm({
           <Button variant="ghost" onClick={() => setOpen(false)}>
             Cancel
           </Button>
+          {problem && (
+            <p className="self-center text-sm text-amber-700">{problem}</p>
+          )}
         </div>
       </CardContent>
     </Card>
@@ -759,7 +802,8 @@ function NumberSetting({
   const [draft, setDraft] = useState(asText);
   const trimmed = draft.trim();
   const dirty = draft !== asText;
-  const parses = trimmed === "" || !Number.isNaN(Number(trimmed));
+  const parsedVal = trimmed === "" ? null : parseNumeric(trimmed);
+  const parses = trimmed === "" || parsedVal !== null;
   return (
     <div className="space-y-1">
       <label className="block text-sm font-medium">{label}</label>
@@ -774,7 +818,7 @@ function NumberSetting({
         <Button
           size="sm"
           disabled={disabled || !dirty || !parses}
-          onClick={() => onSave(trimmed === "" ? null : Number(trimmed))}
+          onClick={() => onSave(parsedVal)}
         >
           Save
         </Button>
@@ -877,8 +921,9 @@ function PayoutForm({
 }) {
   const [amount, setAmount] = useState("");
   const [note, setNote] = useState("");
-  const parsed = Number(amount);
-  const valid = amount.trim() !== "" && !Number.isNaN(parsed) && parsed > 0;
+  const parsedAmount = parseNumeric(amount);
+  const parsed = parsedAmount ?? 0;
+  const valid = parsedAmount !== null && parsedAmount > 0;
 
   return (
     <div className="border rounded-md p-4 bg-gray-50 space-y-3">
