@@ -79,6 +79,21 @@
     "title": "Alles wat je nodig hebt om talen te overbruggen",
     "subtitle": "Arcatext is een AI-toetsenbord dat leeft binnen de apps die je al gebruikt en alle aspecten van het versturen en ontvangen van berichten tijdens een gesprek dekt.",
     "items": {
+      "reword": {
+        "title": "Snelle vertalingen met één tik",
+        "description": "Vertaal alles wat je schrijft, met correcte grammatica, spelling en interpunctie, en zo dicht mogelijk bij je oorspronkelijke bericht.",
+        "bullets": [
+          "Vertaal naar meer dan 70 talen",
+          "Corrigeer in dezelfde taal"
+        ],
+        "alt": "Het Arcatext-toetsenbord met een bericht in het tekstveld, klaar om te herschrijven.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Heb je dit weekend tijd?"
+        }
+      },
       "receive": {
         "title": "Begrijp elk antwoord, zonder het toetsenbord te verlaten",
         "description": "Plak berichten die je ontvangt en Arcatext vertaalt ze direct binnen de app, zodat je het gesprek nooit hoeft te verlaten.",
@@ -104,9 +119,9 @@
         ],
         "alt": "Arcatext identificeert een homoniem en biedt de bedoelde betekenis.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
+          "sent": "Goedemorgen!",
+          "recv": "今日どうする？",
+          "reword": "Eerst moet ik nog langs de bank.",
           "word": "bank",
           "meanings": [
             {
@@ -114,12 +129,12 @@
               "description": "Financiële instelling"
             },
             {
-              "title": "riverbank",
-              "description": "Land langs een rivier"
+              "title": "zitbank",
+              "description": "Lange zitplaats voor meerdere personen"
             },
             {
-              "title": "tilt",
-              "description": "Hellen of kantelen"
+              "title": "zandbank",
+              "description": "Ondiepte in het water"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Laten we afspreken in het café bij het station."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Heb je dit weekend tijd?"
         }
       }
     }

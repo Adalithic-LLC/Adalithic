@@ -79,6 +79,21 @@
     "title": "Lahat ng kailangan mo para makapag-usap sa iba't ibang wika",
     "subtitle": "Ang Arcatext ay isang AI keyboard na nasa loob mismo ng mga app na ginagamit mo na at sumasaklaw sa lahat ng aspeto ng pagpapadala at pagtanggap ng mga mensahe sa isang usapan.",
     "items": {
+      "reword": {
+        "title": "Mabilis na pagsasalin sa isang tap",
+        "description": "Isalin ang kahit anong isulat mo, habang inaayos ang grammar, spelling, at bantas at pinananatiling pinakamalapit hangga't maaari sa orihinal mong mensahe.",
+        "bullets": [
+          "Magsalin sa mahigit 70 wika",
+          "Iwasto sa parehong wika"
+        ],
+        "alt": "Ang Arcatext keyboard na may mensahe sa text field, handa nang ayusin.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "May oras ka ba ngayong weekend?"
+        }
+      },
       "receive": {
         "title": "Unawain ang bawat sagot, nang hindi umaalis sa keyboard",
         "description": "I-paste ang mga mensaheng natatanggap mo at isasalin ito ng Arcatext mismo sa loob ng app, para hindi mo na kailangang umalis sa usapan.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Tinutukoy ng Arcatext ang isang homograph at inaalok ang ninanais na kahulugan.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Magandang umaga!",
+          "recv": "今日どうする？",
+          "reword": "Kailangan ko munang kunin ang salamin.",
+          "word": "salamin",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Institusyong pampinansyal"
+              "title": "salamin (pansalamin)",
+              "description": "Bagay na nagpapakita ng repleksyon"
             },
             {
-              "title": "riverbank",
-              "description": "Lupa sa tabi ng ilog"
+              "title": "salamin (antipara)",
+              "description": "Suot sa mata para makakita nang malinaw"
             },
             {
-              "title": "tilt",
-              "description": "Kumiling o humilig"
+              "title": "salamin (bubog)",
+              "description": "Materyal na malinaw at madaling mabasag"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Magkita tayo sa cafe malapit sa istasyon."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "May oras ka ba ngayong weekend?"
         }
       }
     }

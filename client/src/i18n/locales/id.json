@@ -79,6 +79,21 @@
     "title": "Semua yang Anda butuhkan untuk berbincang lintas bahasa",
     "subtitle": "Arcatext adalah keyboard AI yang hidup di dalam aplikasi yang sudah Anda gunakan dan mencakup setiap aspek pengiriman serta penerimaan pesan selama percakapan.",
     "items": {
+      "reword": {
+        "title": "Terjemahan cepat dengan sekali ketuk",
+        "description": "Terjemahkan apa pun yang Anda tulis, dengan tata bahasa, ejaan, dan tanda baca yang diperbaiki serta sedekat mungkin dengan pesan asli Anda.",
+        "bullets": [
+          "Terjemahkan ke lebih dari 70 bahasa",
+          "Perbaiki dalam bahasa yang sama"
+        ],
+        "alt": "Keyboard Arcatext dengan sebuah pesan di kolom teks, siap diparafrase.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Kamu ada waktu akhir pekan ini?"
+        }
+      },
       "receive": {
         "title": "Pahami setiap balasan, tanpa meninggalkan keyboard",
         "description": "Tempel pesan yang Anda terima dan Arcatext menerjemahkannya langsung di dalam aplikasi, sehingga Anda tak perlu meninggalkan percakapan.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext mengenali sebuah homograf dan menawarkan makna yang dimaksudkan.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Selamat pagi!",
+          "recv": "今日どうする？",
+          "reword": "Pertama, saya harus ke kali dulu.",
+          "word": "kali",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Lembaga keuangan"
+              "title": "kali (sungai)",
+              "description": "Aliran air yang mengalir"
             },
             {
-              "title": "riverbank",
-              "description": "Tanah di tepi sungai"
+              "title": "kali (perkalian)",
+              "description": "Operasi hitung perkalian"
             },
             {
-              "title": "tilt",
-              "description": "Miring atau condong"
+              "title": "kali (waktu)",
+              "description": "Satuan untuk menyatakan frekuensi"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Ketemu di kafe dekat stasiun, ya."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Kamu ada waktu akhir pekan ini?"
         }
       }
     }

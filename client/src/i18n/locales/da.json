@@ -79,6 +79,21 @@
     "title": "Alt, hvad du har brug for til at tale på tværs af sprog",
     "subtitle": "Arcatext er et AI-tastatur, der lever inde i de apps, du allerede bruger, og dækker alle aspekter af at sende og modtage beskeder under en samtale.",
     "items": {
+      "reword": {
+        "title": "Hurtige oversættelser med ét tryk",
+        "description": "Oversæt alt, hvad du skriver, med rettet grammatik, stavning og tegnsætning og så tæt på din oprindelige besked som muligt.",
+        "bullets": [
+          "Oversæt til over 70 sprog",
+          "Ret til det samme sprog"
+        ],
+        "alt": "Arcatext-tastaturet med en besked i tekstfeltet, klar til at blive omformuleret.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Har du tid i weekenden?"
+        }
+      },
       "receive": {
         "title": "Forstå hvert svar uden at forlade tastaturet",
         "description": "Indsæt beskeder, du modtager, og Arcatext oversætter dem direkte i appen, så du aldrig behøver at forlade samtalen.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identificerer en homograf og tilbyder den tilsigtede betydning.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Godmorgen!",
+          "recv": "今日どうする？",
+          "reword": "Først skal jeg lige ordne min skat.",
+          "word": "skat",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Finansiel institution"
+              "title": "skat (afgift)",
+              "description": "Beløb man betaler til staten"
             },
             {
-              "title": "riverbank",
-              "description": "Jord langs en flodbred"
+              "title": "skat (skjult værdi)",
+              "description": "Gemt rigdom"
             },
             {
-              "title": "tilt",
-              "description": "At hælde eller skråne"
+              "title": "skat (kælenavn)",
+              "description": "Kærligt tiltaleord"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Lad os mødes på caféen ved stationen."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Har du tid i weekenden?"
         }
       }
     }

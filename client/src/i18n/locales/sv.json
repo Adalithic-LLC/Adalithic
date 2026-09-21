@@ -79,6 +79,21 @@
     "title": "Allt du behöver för att prata över språkgränserna",
     "subtitle": "Arcatext är ett AI-tangentbord som finns inuti apparna du redan använder och täcker alla aspekter av att skicka och ta emot meddelanden under ett samtal.",
     "items": {
+      "reword": {
+        "title": "Snabba översättningar med ett tryck",
+        "description": "Översätt allt du skriver, med rättad grammatik, stavning och interpunktion och så nära ditt ursprungliga meddelande som möjligt.",
+        "bullets": [
+          "Översätt till över 70 språk",
+          "Rätta till samma språk"
+        ],
+        "alt": "Arcatext-tangentbordet med ett meddelande i textfältet, redo att skrivas om.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Har du tid i helgen?"
+        }
+      },
       "receive": {
         "title": "Förstå varje svar utan att lämna tangentbordet",
         "description": "Klistra in meddelanden du får så översätter Arcatext dem direkt i appen, så att du aldrig behöver lämna samtalet.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identifierar en homograf och erbjuder den avsedda betydelsen.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "God morgon!",
+          "recv": "今日どうする？",
+          "reword": "Först måste jag byta fil.",
+          "word": "fil",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Finansinstitut"
+              "title": "fil (körfält)",
+              "description": "Ett körfält på vägen"
             },
             {
-              "title": "riverbank",
-              "description": "Mark längs en flodstrand"
+              "title": "fil (datafil)",
+              "description": "En fil som sparas på datorn"
             },
             {
-              "title": "tilt",
-              "description": "Luta eller slutta"
+              "title": "fil (mjölkprodukt)",
+              "description": "Syrad mjölkprodukt"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Vi ses på kaféet vid stationen."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Har du tid i helgen?"
         }
       }
     }

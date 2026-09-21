@@ -79,6 +79,21 @@
     "title": "Alles, was du brauchst, um über Sprachgrenzen hinweg zu sprechen",
     "subtitle": "Arcatext ist eine KI-Tastatur, die in den Apps lebt, die du bereits nutzt, und alle Aspekte des Sendens und Empfangens von Nachrichten während eines Gesprächs abdeckt.",
     "items": {
+      "reword": {
+        "title": "Schnelle Übersetzungen mit einem Tippen",
+        "description": "Übersetze alles, was du schreibst – Grammatik, Rechtschreibung und Zeichensetzung werden korrigiert, und deine ursprüngliche Nachricht bleibt so weit wie möglich erhalten.",
+        "bullets": [
+          "Übersetze in über 70 Sprachen",
+          "Korrigiere in derselben Sprache"
+        ],
+        "alt": "Die Arcatext-Tastatur mit einer Nachricht im Textfeld, bereit zum Umschreiben.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Hast du am Wochenende Zeit?"
+        }
+      },
       "receive": {
         "title": "Verstehe jede Antwort, ohne die Tastatur zu verlassen",
         "description": "Füge empfangene Nachrichten ein und Arcatext übersetzt sie direkt in der App, sodass du das Gespräch nie verlassen musst.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext erkennt einen Homografen und bietet die gemeinte Bedeutung an.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Guten Morgen!",
+          "recv": "今日どうする？",
+          "reword": "Zuerst muss ich noch zur Bank.",
+          "word": "Bank",
           "meanings": [
             {
-              "title": "bank",
+              "title": "Bank",
               "description": "Geldinstitut"
             },
             {
-              "title": "riverbank",
-              "description": "Land am Ufer eines Flusses"
+              "title": "Sitzbank",
+              "description": "Langes Sitzmöbel"
             },
             {
-              "title": "tilt",
-              "description": "Sich neigen oder kippen"
+              "title": "Sandbank",
+              "description": "Erhöhung im flachen Wasser"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Treffen wir uns im Café am Bahnhof."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Hast du am Wochenende Zeit?"
         }
       }
     }

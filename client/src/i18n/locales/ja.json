@@ -79,6 +79,21 @@
     "title": "言語を越えて話すために必要なすべてを",
     "subtitle": "Arcatextは、あなたがすでに使っているアプリの中で動作するAIキーボードです。会話の中でメッセージを送受信する、あらゆる場面をカバーします。",
     "items": {
+      "reword": {
+        "title": "ワンタップで素早く翻訳",
+        "description": "書いた内容をそのまま翻訳。文法・つづり・句読点を直しながら、元のメッセージにできるだけ忠実に仕上げます。",
+        "bullets": [
+          "70以上の言語に翻訳",
+          "同じ言語のまま校正"
+        ],
+        "alt": "テキスト欄にメッセージが入力され、変換を待つArcatextのキーボード。",
+        "demo": {
+          "recv1": "¡Cuánto tiempo! ¿Cómo has estado?",
+          "sent1": "¡Muy bien! ¿Y tú?",
+          "recv2": "¡Yo también! Deberíamos vernos pronto.",
+          "draft": "今週末、会える？"
+        }
+      },
       "receive": {
         "title": "キーボードから離れることなく、すべての返信を理解",
         "description": "受け取ったメッセージを貼り付けるだけで、Arcatextがアプリ内でそのまま翻訳。会話から離れる必要はありません。",
@@ -104,22 +119,22 @@
         ],
         "alt": "多義語を判別し、意図した意味を提示するArcatext。",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "おはよう！",
+          "recv": "¿Qué hacemos hoy?",
+          "reword": "まず、はしを買いに行かないと。",
+          "word": "はし",
           "meanings": [
             {
-              "title": "bank",
-              "description": "金融機関"
+              "title": "箸",
+              "description": "食事に使う二本の棒"
             },
             {
-              "title": "riverbank",
-              "description": "川べりの土地"
+              "title": "橋",
+              "description": "川などに架かる構造物"
             },
             {
-              "title": "tilt",
-              "description": "傾く、かたむける"
+              "title": "端",
+              "description": "物のふち"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "¿Ya decidiste el plan de mañana?",
           "reword": "Vemos en el café junto a la estación.",
           "copy": "駅のそばのカフェで会いましょう。"
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "¡Cuánto tiempo! ¿Cómo has estado?",
-          "sent1": "¡Muy bien! ¿Y tú?",
-          "recv2": "¡Yo también! Deberíamos vernos pronto.",
-          "draft": "今週末、会える？"
         }
       }
     }

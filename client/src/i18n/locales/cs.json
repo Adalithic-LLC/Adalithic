@@ -79,6 +79,21 @@
     "title": "Vše, co potřebujete ke komunikaci napříč jazyky",
     "subtitle": "Arcatext je klávesnice s umělou inteligencí, která funguje přímo v aplikacích, jež už používáte, a pokrývá všechny části odesílání i přijímání zpráv během konverzace.",
     "items": {
+      "reword": {
+        "title": "Rychlé překlady jediným ťuknutím",
+        "description": "Přeložte vše, co napíšete – s opravenou gramatikou, pravopisem a interpunkcí a co nejblíže vaší původní zprávě.",
+        "bullets": [
+          "Překládejte do více než 70 jazyků",
+          "Opravujte ve stejném jazyce"
+        ],
+        "alt": "Klávesnice Arcatext se zprávou v textovém poli, připravenou k přepsání.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Máš čas tento víkend?"
+        }
+      },
       "receive": {
         "title": "Porozumějte každé odpovědi, aniž byste opustili klávesnici",
         "description": "Vložte zprávy, které dostanete, a Arcatext je přeloží přímo v aplikaci, takže nikdy nemusíte opustit konverzaci.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext rozpoznává homonymum a nabízí zamýšlený význam.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Dobré ráno!",
+          "recv": "今日どうする？",
+          "reword": "Nejdřív musím najít ten list.",
+          "word": "list",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Finanční instituce"
+              "title": "list (papíru)",
+              "description": "Kus papíru"
             },
             {
-              "title": "riverbank",
-              "description": "Půda na břehu řeky"
+              "title": "list (na stromě)",
+              "description": "Zelená část rostliny"
             },
             {
-              "title": "tilt",
-              "description": "Naklánět se"
+              "title": "list (dopis)",
+              "description": "Psaní určené někomu"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Sejdeme se v kavárně u nádraží."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Máš čas tento víkend?"
         }
       }
     }

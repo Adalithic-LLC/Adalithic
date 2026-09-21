@@ -79,6 +79,21 @@
     "title": "Tutto ciò che ti serve per parlare tra lingue diverse",
     "subtitle": "Arcatext è una tastiera con IA che vive dentro le app che usi già e copre ogni aspetto dell'invio e della ricezione dei messaggi durante una conversazione.",
     "items": {
+      "reword": {
+        "title": "Traduzioni veloci con un solo tocco",
+        "description": "Traduci tutto ciò che scrivi, correggendo grammatica, ortografia e punteggiatura e restando il più fedele possibile al tuo messaggio originale.",
+        "bullets": [
+          "Traduci in oltre 70 lingue",
+          "Correggi nella stessa lingua"
+        ],
+        "alt": "La tastiera Arcatext con un messaggio nel campo di testo, pronto per essere riscritto.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Sei libero questo fine settimana?"
+        }
+      },
       "receive": {
         "title": "Comprendi ogni risposta senza lasciare la tastiera",
         "description": "Incolla i messaggi che ricevi e Arcatext li traduce direttamente nell'app, così non devi mai lasciare la conversazione.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext individua un omografo e propone il significato desiderato.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Buongiorno!",
+          "recv": "今日どうする？",
+          "reword": "Prima devo sistemare il piano.",
+          "word": "piano",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Istituto finanziario"
+              "title": "piano (progetto)",
+              "description": "Programma di azioni da seguire"
             },
             {
-              "title": "riverbank",
-              "description": "Terreno lungo un fiume"
+              "title": "piano (di un edificio)",
+              "description": "Livello di un edificio"
             },
             {
-              "title": "tilt",
-              "description": "Inclinarsi o pendere"
+              "title": "pianoforte",
+              "description": "Strumento musicale a tastiera"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Ci vediamo al bar vicino alla stazione."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Sei libero questo fine settimana?"
         }
       }
     }

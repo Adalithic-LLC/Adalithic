@@ -79,6 +79,21 @@
     "title": "Wszystko, czego potrzebujesz, by rozmawiać w różnych językach",
     "subtitle": "Arcatext to klawiatura oparta na sztucznej inteligencji, która działa wewnątrz aplikacji, których już używasz, i obejmuje wszystkie aspekty wysyłania i odbierania wiadomości podczas rozmowy.",
     "items": {
+      "reword": {
+        "title": "Szybkie tłumaczenia jednym dotknięciem",
+        "description": "Przetłumacz wszystko, co napiszesz — z poprawioną gramatyką, pisownią i interpunkcją, pozostając jak najbliżej Twojej oryginalnej wiadomości.",
+        "bullets": [
+          "Tłumacz na ponad 70 języków",
+          "Popraw w tym samym języku"
+        ],
+        "alt": "Klawiatura Arcatext z wiadomością w polu tekstowym, gotową do poprawienia.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Masz czas w ten weekend?"
+        }
+      },
       "receive": {
         "title": "Zrozum każdą odpowiedź bez opuszczania klawiatury",
         "description": "Wklej otrzymane wiadomości, a Arcatext przetłumaczy je bezpośrednio w aplikacji, więc nigdy nie musisz opuszczać rozmowy.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identyfikujący homograf i proponujący zamierzone znaczenie.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Dzień dobry!",
+          "recv": "今日どうする？",
+          "reword": "Najpierw muszę naprawić zamek.",
+          "word": "zamek",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Instytucja finansowa"
+              "title": "zamek (w drzwiach)",
+              "description": "Mechanizm zamykający"
             },
             {
-              "title": "riverbank",
-              "description": "Teren nad brzegiem rzeki"
+              "title": "zamek (budowla)",
+              "description": "Warowna rezydencja"
             },
             {
-              "title": "tilt",
-              "description": "Przechylać się"
+              "title": "zamek błyskawiczny",
+              "description": "Suwak w ubraniu"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Spotkajmy się w kawiarni przy dworcu."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Masz czas w ten weekend?"
         }
       }
     }

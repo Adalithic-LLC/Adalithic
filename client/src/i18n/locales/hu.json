@@ -79,6 +79,21 @@
     "title": "Minden, amire szükséged van a nyelvek közötti kommunikációhoz",
     "subtitle": "Az Arcatext egy mesterséges intelligenciára épülő billentyűzet, amely a már használt alkalmazásaidon belül működik, és lefedi az üzenetek küldésének és fogadásának minden oldalát egy beszélgetés során.",
     "items": {
+      "reword": {
+        "title": "Gyors fordítás egyetlen koppintással",
+        "description": "Fordíts le bármit, amit írsz – a nyelvtan, a helyesírás és a központozás javításával, az eredeti üzenetedhez a lehető legközelebb maradva.",
+        "bullets": [
+          "Fordíts több mint 70 nyelvre",
+          "Javíts ugyanazon a nyelven"
+        ],
+        "alt": "Az Arcatext billentyűzet egy üzenettel a szövegmezőben, készen az átírásra.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Ráérsz a hétvégén?"
+        }
+      },
       "receive": {
         "title": "Értsd meg minden választ anélkül, hogy elhagynád a billentyűzetet",
         "description": "Illeszd be a kapott üzeneteket, és az Arcatext egyből az alkalmazáson belül lefordítja őket, így soha nem kell elhagynod a beszélgetést.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Az Arcatext azonosít egy homográfot, és felkínálja a szándékolt jelentést.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Jó reggelt!",
+          "recv": "今日どうする？",
+          "reword": "Előbb veszek pár szemet.",
+          "word": "szem",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Pénzintézet"
+              "title": "szem (gyümölcs)",
+              "description": "Egy darab bogyós gyümölcs"
             },
             {
-              "title": "riverbank",
-              "description": "Folyó menti part"
+              "title": "szem (testrész)",
+              "description": "A látás szerve"
             },
             {
-              "title": "tilt",
-              "description": "Megdőlni"
+              "title": "szem (gyöngy)",
+              "description": "Füzérre fűzhető apró darab"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Találkozzunk az állomás melletti kávézóban."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Ráérsz a hétvégén?"
         }
       }
     }

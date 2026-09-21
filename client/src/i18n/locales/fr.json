@@ -79,6 +79,21 @@
     "title": "Tout ce qu'il vous faut pour parler d'une langue à l'autre",
     "subtitle": "Arcatext est un clavier IA qui s'intègre aux applications que vous utilisez déjà et couvre tous les aspects de l'envoi et de la réception de messages au cours d'une conversation.",
     "items": {
+      "reword": {
+        "title": "Des traductions rapides en un seul geste",
+        "description": "Traduisez tout ce que vous écrivez : la grammaire, l'orthographe et la ponctuation sont corrigées, tout en restant au plus près de votre message d'origine.",
+        "bullets": [
+          "Traduisez vers plus de 70 langues",
+          "Corrigez dans la même langue"
+        ],
+        "alt": "Le clavier Arcatext avec un message dans le champ de texte, prêt à être reformulé.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Tu es libre ce week-end ?"
+        }
+      },
       "receive": {
         "title": "Comprenez chaque réponse sans quitter le clavier",
         "description": "Collez les messages que vous recevez et Arcatext les traduit directement dans l'application, pour que vous n'ayez jamais à quitter la conversation.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identifiant un homographe et proposant le sens voulu.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Bonjour !",
+          "recv": "今日どうする？",
+          "reword": "D'abord, je dois passer au poste.",
+          "word": "poste",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Établissement financier"
+              "title": "poste de police",
+              "description": "Commissariat"
             },
             {
-              "title": "riverbank",
-              "description": "Terrain au bord d'une rivière"
+              "title": "poste (emploi)",
+              "description": "Fonction occupée dans une entreprise"
             },
             {
-              "title": "tilt",
-              "description": "Pencher ou incliner"
+              "title": "poste (appareil)",
+              "description": "Récepteur de radio ou de télévision"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Retrouvons-nous au café près de la gare."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Tu es libre ce week-end ?"
         }
       }
     }

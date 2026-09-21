@@ -79,6 +79,21 @@
     "title": "Kila kitu unachohitaji ili kuzungumza kati ya lugha",
     "subtitle": "Arcatext ni kibodi ya AI inayoishi ndani ya programu ambazo tayari unazitumia na inashughulikia kila kipengele cha kutuma na kupokea ujumbe wakati wa mazungumzo.",
     "items": {
+      "reword": {
+        "title": "Tafsiri za haraka kwa mguso mmoja",
+        "description": "Tafsiri chochote unachoandika, huku sarufi, tahajia na alama za uakifishaji zikirekebishwa na maandishi yakisalia karibu iwezekanavyo na ujumbe wako wa awali.",
+        "bullets": [
+          "Tafsiri kwa zaidi ya lugha 70",
+          "Rekebisha katika lugha ile ile"
+        ],
+        "alt": "Kibodi ya Arcatext ikiwa na ujumbe katika sehemu ya maandishi, tayari kurekebishwa.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Una nafasi wikendi hii?"
+        }
+      },
       "receive": {
         "title": "Elewa kila jibu, bila kuondoka kwenye kibodi",
         "description": "Bandika ujumbe unaopokea na Arcatext huutafsiri papo hapo ndani ya programu, ili usihitaji kamwe kuondoka kwenye mazungumzo.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext ikitambua neno lenye maana nyingi na kutoa maana iliyokusudiwa.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Habari za asubuhi!",
+          "recv": "今日どうする？",
+          "reword": "Kwanza, ninahitaji kuangalia paa.",
+          "word": "paa",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Taasisi ya kifedha"
+              "title": "paa (la nyumba)",
+              "description": "Sehemu ya juu ya nyumba"
             },
             {
-              "title": "riverbank",
-              "description": "Ardhi kando ya mto"
+              "title": "paa (mnyama)",
+              "description": "Mnyama mwenye kasi kama swala"
             },
             {
-              "title": "tilt",
-              "description": "Kuinama au kuegemea"
+              "title": "paa (kupaa)",
+              "description": "Kupanda juu angani"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Tuonane kwenye mkahawa karibu na stesheni."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Una nafasi wikendi hii?"
         }
       }
     }

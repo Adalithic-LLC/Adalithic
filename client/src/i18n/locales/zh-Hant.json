@@ -79,6 +79,21 @@
     "title": "跨語言交流所需的一切",
     "subtitle": "Arcatext 是一款人工智慧鍵盤，就運行在你已經在用的應用程式之中，涵蓋對話中收發訊息的各個面向。",
     "items": {
+      "reword": {
+        "title": "一鍵快速翻譯",
+        "description": "翻譯你寫下的任何內容，同時修正文法、拼寫與標點，並盡可能貼近你的原始訊息。",
+        "bullets": [
+          "翻譯成 70 多種語言",
+          "在同一語言內校正"
+        ],
+        "alt": "Arcatext 鍵盤，文字欄位中有一則待改寫的訊息。",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "這週末有空嗎？"
+        }
+      },
       "receive": {
         "title": "無需離開鍵盤，讀懂每一則回覆",
         "description": "貼上收到的訊息，Arcatext 就會在應用程式內直接翻譯，讓你無需離開對話。",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext 辨識出多義詞並提供你想表達的含義。",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "早安！",
+          "recv": "今日どうする？",
+          "reword": "我先去買點東西。",
+          "word": "東西",
           "meanings": [
             {
-              "title": "bank",
-              "description": "金融機構"
+              "title": "東西（物品）",
+              "description": "泛指各種物件"
             },
             {
-              "title": "riverbank",
-              "description": "河岸邊的土地"
+              "title": "東西（方向）",
+              "description": "東邊和西邊"
             },
             {
-              "title": "tilt",
-              "description": "傾斜"
+              "title": "東西（罵人）",
+              "description": "用來罵人的說法"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "我們在車站旁邊的咖啡館見吧。"
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "這週末有空嗎？"
         }
       }
     }

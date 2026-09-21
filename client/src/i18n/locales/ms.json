@@ -79,6 +79,21 @@
     "title": "Segala yang anda perlukan untuk berbual merentas bahasa",
     "subtitle": "Arcatext ialah papan kekunci AI yang hidup di dalam aplikasi yang anda sudah gunakan dan merangkumi setiap aspek menghantar dan menerima mesej sepanjang perbualan.",
     "items": {
+      "reword": {
+        "title": "Terjemahan pantas dengan satu ketikan",
+        "description": "Terjemahkan apa sahaja yang anda tulis, dengan tatabahasa, ejaan dan tanda baca yang diperbetulkan serta sehampir mungkin dengan mesej asal anda.",
+        "bullets": [
+          "Terjemah ke lebih 70 bahasa",
+          "Perbetulkan dalam bahasa yang sama"
+        ],
+        "alt": "Papan kekunci Arcatext dengan mesej dalam medan teks, sedia untuk diolah.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Awak lapang hujung minggu ini?"
+        }
+      },
       "receive": {
         "title": "Fahami setiap balasan, tanpa meninggalkan papan kekunci",
         "description": "Tampal mesej yang anda terima dan Arcatext menterjemahkannya terus di dalam aplikasi, supaya anda tidak perlu meninggalkan perbualan.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext mengenal pasti homograf dan menawarkan makna yang dimaksudkan.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Selamat pagi!",
+          "recv": "今日どうする？",
+          "reword": "Saya perlu tengok muka itu dulu.",
+          "word": "muka",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Institusi kewangan"
+              "title": "muka (wajah)",
+              "description": "Bahagian hadapan kepala"
             },
             {
-              "title": "riverbank",
-              "description": "Tanah di tebing sungai"
+              "title": "muka (halaman)",
+              "description": "Sehelai halaman buku"
             },
             {
-              "title": "tilt",
-              "description": "Condong atau miring"
+              "title": "muka (hadapan)",
+              "description": "Bahagian yang di depan"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Jom jumpa di kafe berdekatan stesen."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Awak lapang hujung minggu ini?"
         }
       }
     }

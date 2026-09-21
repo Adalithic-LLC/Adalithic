@@ -79,6 +79,21 @@
     "title": "언어를 넘어 소통하는 데 필요한 모든 것",
     "subtitle": "Arcatext는 여러분이 이미 사용하는 앱 안에서 작동하는 AI 키보드로, 대화 중 메시지를 주고받는 모든 순간을 아우릅니다.",
     "items": {
+      "reword": {
+        "title": "한 번의 탭으로 빠르게 번역",
+        "description": "입력한 내용을 그대로 번역하면서 문법, 철자, 문장 부호를 바로잡고 원래 메시지에 최대한 가깝게 유지합니다.",
+        "bullets": [
+          "70개 이상의 언어로 번역",
+          "같은 언어로 교정"
+        ],
+        "alt": "텍스트 입력란에 메시지가 있어 변환을 기다리는 Arcatext 키보드.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "이번 주말에 시간 있어?"
+        }
+      },
       "receive": {
         "title": "키보드를 벗어나지 않고 모든 답장을 이해하세요",
         "description": "받은 메시지를 붙여넣기만 하면 Arcatext가 앱 안에서 바로 번역해 주므로, 대화를 벗어날 필요가 없습니다.",
@@ -104,22 +119,22 @@
         ],
         "alt": "동형이의어를 식별하고 의도한 의미를 제안하는 Arcatext.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "좋은 아침!",
+          "recv": "今日どうする？",
+          "reword": "먼저 배를 사러 가야 해.",
+          "word": "배",
           "meanings": [
             {
-              "title": "bank",
-              "description": "금융 기관"
+              "title": "배 (과일)",
+              "description": "나무에서 나는 둥근 과일"
             },
             {
-              "title": "riverbank",
-              "description": "강가의 땅"
+              "title": "배 (선박)",
+              "description": "물 위를 다니는 탈것"
             },
             {
-              "title": "tilt",
-              "description": "기울다"
+              "title": "배 (신체)",
+              "description": "몸통의 가운데 부분"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "역 근처 카페에서 만나자."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "이번 주말에 시간 있어?"
         }
       }
     }

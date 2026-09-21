@@ -79,6 +79,21 @@
     "title": "Todo lo que necesitas para hablar entre idiomas",
     "subtitle": "Arcatext es un teclado con IA que vive dentro de las apps que ya usas y cubre todos los aspectos de enviar y recibir mensajes durante una conversación.",
     "items": {
+      "reword": {
+        "title": "Traducciones rápidas con un solo toque",
+        "description": "Traduce todo lo que escribes, corrigiendo la gramática, la ortografía y la puntuación, y manteniéndose lo más fiel posible a tu mensaje original.",
+        "bullets": [
+          "Traduce a más de 70 idiomas",
+          "Corrige en el mismo idioma"
+        ],
+        "alt": "El teclado Arcatext con un mensaje en el campo de texto, listo para reformular.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "¿Quedamos este fin de semana?"
+        }
+      },
       "receive": {
         "title": "Entiende cada respuesta sin salir del teclado",
         "description": "Pega los mensajes que recibes y Arcatext los traduce dentro de la propia app, para que nunca tengas que salir de la conversación.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identificando un homógrafo y ofreciendo el significado deseado.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "¡Buenos días!",
+          "recv": "今日どうする？",
+          "reword": "Primero, tengo que pasar por el banco.",
+          "word": "banco",
           "meanings": [
             {
-              "title": "bank",
+              "title": "banco",
               "description": "Entidad financiera"
             },
             {
-              "title": "riverbank",
-              "description": "Terreno junto a un río"
+              "title": "banco (asiento)",
+              "description": "Asiento largo para varias personas"
             },
             {
-              "title": "tilt",
-              "description": "Inclinarse o ladearse"
+              "title": "banco (de peces)",
+              "description": "Grupo numeroso de peces"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Vemos en la cafetería junto a la estación."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "¿Quedamos este fin de semana?"
         }
       }
     }

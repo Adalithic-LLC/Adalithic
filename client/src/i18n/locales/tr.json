@@ -79,6 +79,21 @@
     "title": "Diller arasında konuşmak için ihtiyacınız olan her şey",
     "subtitle": "Arcatext, zaten kullandığınız uygulamaların içinde yaşayan ve bir sohbet sırasında mesaj gönderip almanın her yönünü kapsayan bir yapay zeka klavyesidir.",
     "items": {
+      "reword": {
+        "title": "Tek dokunuşla hızlı çeviri",
+        "description": "Yazdığınız her şeyi çevirin; dil bilgisi, yazım ve noktalama düzeltilirken metin orijinal mesajınıza olabildiğince sadık kalır.",
+        "bullets": [
+          "70'ten fazla dile çevirin",
+          "Aynı dilde düzeltin"
+        ],
+        "alt": "Metin alanında düzenlenmeyi bekleyen bir mesajın bulunduğu Arcatext klavyesi.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Bu hafta sonu müsait misin?"
+        }
+      },
       "receive": {
         "title": "Klavyeden çıkmadan her yanıtı anlayın",
         "description": "Aldığınız mesajları yapıştırın, Arcatext onları uygulamanın içinde hemen çevirsin; böylece sohbetten hiç ayrılmanıza gerek kalmasın.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext, eş yazımlı bir kelimeyi belirleyip kastedilen anlamı önerirken.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Günaydın!",
+          "recv": "今日どうする？",
+          "reword": "Önce ocağa bakmam gerek.",
+          "word": "ocak",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Finans kurumu"
+              "title": "ocak (mutfak)",
+              "description": "Yemek pişirilen ısıtıcı"
             },
             {
-              "title": "riverbank",
-              "description": "Nehir kenarındaki arazi"
+              "title": "Ocak (ay)",
+              "description": "Yılın ilk ayı"
             },
             {
-              "title": "tilt",
-              "description": "Eğilmek veya yatmak"
+              "title": "ocak (maden)",
+              "description": "Yer altından maden çıkarılan yer"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "İstasyonun yanındaki kafede buluşalım."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Bu hafta sonu müsait misin?"
         }
       }
     }

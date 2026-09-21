@@ -79,6 +79,21 @@
     "title": "Alt du trenger for å snakke på tvers av språk",
     "subtitle": "Arcatext er et KI-tastatur som lever inne i appene du allerede bruker, og dekker alle sider ved å sende og motta meldinger under en samtale.",
     "items": {
+      "reword": {
+        "title": "Raske oversettelser med ett trykk",
+        "description": "Oversett alt du skriver, med rettet grammatikk, staving og tegnsetting og så nær den opprinnelige meldingen din som mulig.",
+        "bullets": [
+          "Oversett til over 70 språk",
+          "Rett til samme språk"
+        ],
+        "alt": "Arcatext-tastaturet med en melding i tekstfeltet, klar til å omformuleres.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Har du tid i helgen?"
+        }
+      },
       "receive": {
         "title": "Forstå hvert svar uten å forlate tastaturet",
         "description": "Lim inn meldinger du mottar, så oversetter Arcatext dem direkte i appen, slik at du aldri trenger å forlate samtalen.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identifiserer en homograf og tilbyr den tiltenkte betydningen.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "God morgen!",
+          "recv": "今日どうする？",
+          "reword": "Først må jeg få et bedre tak.",
+          "word": "tak",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Finansinstitusjon"
+              "title": "tak (grep)",
+              "description": "Fast greie om noe"
             },
             {
-              "title": "riverbank",
-              "description": "Land langs en elvebredd"
+              "title": "tak (på hus)",
+              "description": "Den øverste delen av et bygg"
             },
             {
-              "title": "tilt",
-              "description": "Å helle eller skråne"
+              "title": "tak (svømmetak)",
+              "description": "Ett åretak eller svømmetak"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "La oss møtes på kafeen ved stasjonen."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Har du tid i helgen?"
         }
       }
     }
