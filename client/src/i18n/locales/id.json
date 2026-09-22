@@ -79,6 +79,21 @@
     "title": "Semua yang Anda butuhkan untuk berbincang lintas bahasa",
     "subtitle": "Arcatext adalah keyboard AI yang hidup di dalam aplikasi yang sudah Anda gunakan dan mencakup setiap aspek pengiriman serta penerimaan pesan selama percakapan.",
     "items": {
+      "reword": {
+        "title": "Terjemahan cepat dengan sekali ketuk",
+        "description": "Terjemahkan apa pun yang Anda tulis, dengan tata bahasa, ejaan, dan tanda baca yang diperbaiki serta sedekat mungkin dengan pesan asli Anda.",
+        "bullets": [
+          "Terjemahkan ke lebih dari 70 bahasa",
+          "Perbaiki dalam bahasa yang sama"
+        ],
+        "alt": "Keyboard Arcatext dengan sebuah pesan di kolom teks, siap diparafrase.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Kamu ada waktu akhir pekan ini?"
+        }
+      },
       "receive": {
         "title": "Pahami setiap balasan, tanpa meninggalkan keyboard",
         "description": "Tempel pesan yang Anda terima dan Arcatext menerjemahkannya langsung di dalam aplikasi, sehingga Anda tak perlu meninggalkan percakapan.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext mengenali sebuah homograf dan menawarkan makna yang dimaksudkan.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Selamat pagi!",
+          "recv": "今日どうする？",
+          "reword": "Pertama, saya harus ke kali dulu.",
+          "word": "kali",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Lembaga keuangan"
+              "title": "kali (sungai)",
+              "description": "Aliran air yang mengalir"
             },
             {
-              "title": "riverbank",
-              "description": "Tanah di tepi sungai"
+              "title": "kali (perkalian)",
+              "description": "Operasi hitung perkalian"
             },
             {
-              "title": "tilt",
-              "description": "Miring atau condong"
+              "title": "kali (waktu)",
+              "description": "Satuan untuk menyatakan frekuensi"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Ketemu di kafe dekat stasiun, ya."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Kamu ada waktu akhir pekan ini?"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "SINONIM",
     "language": "Bahasa Indonesia",
     "typePlaceholder": "Tulis sesuatu"
+  },
+  "referral": {
+    "title": "Bergabung dengan program rujukan",
+    "subtitle": "Masukkan email Anda untuk masuk atau membuat akun Arcatext, lalu gunakan kode rujukan Anda.",
+    "email": {
+      "label": "Alamat email",
+      "placeholder": "anda@contoh.com",
+      "hint": "Kami akan mengirimkan kode 6 digit. Tidak perlu kata sandi.",
+      "cta": "Lanjutkan"
+    },
+    "otp": {
+      "label": "Masukkan kode 6 digit Anda",
+      "sentTo": "Kami telah mengirim kode ke {{email}}.",
+      "cta": "Verifikasi",
+      "resend": "Kirim ulang kode",
+      "resent": "Kami telah mengirim kode baru.",
+      "changeEmail": "Gunakan email lain"
+    },
+    "code": {
+      "label": "Kode rujukan",
+      "placeholder": "Masukkan kode rujukan Anda",
+      "hint": "Ini bukan kode diskon. Arcatext adalah langganan berbayar — kode rujukan menambahkan token ekstra di luar jatah paket Anda.",
+      "cta": "Gabung"
+    },
+    "done": {
+      "title": "Anda bergabung dengan kode {{code}}.",
+      "bonus": "{{tokens}} token ekstra setiap bulan selama {{months}} bulan, di luar jatah paket Anda.",
+      "activeNow": "Token ekstra Anda aktif sekarang.",
+      "credited": "{{tokens}} token ekstra telah ditambahkan ke akun Anda.",
+      "startsOnSubscribe": "Token ekstra Anda dimulai begitu Anda berlangganan Arcatext.",
+      "nextTitle": "Langkah berikutnya",
+      "download": "Unduh Arcatext",
+      "mobileOnly": "Arcatext adalah aplikasi iPhone. Buka App Store di iPhone Anda dan cari Arcatext.",
+      "step1": "Buka aplikasi Arcatext",
+      "step2": "Masuk dengan \"{{email}}\"",
+      "step3": "Berlanggananlah, dan token ekstra Anda ditambahkan otomatis"
+    },
+    "errors": {
+      "sendFailed": "Kami tidak dapat mengirim kode Anda. Periksa alamatnya dan coba lagi.",
+      "badOtp": "Kode tidak cocok. Periksa dan coba lagi, atau minta kode baru.",
+      "invalidCode": "Masukkan kode rujukan yang valid.",
+      "sessionExpired": "Sesi Anda telah berakhir. Silakan masuk lagi.",
+      "network": "Terjadi kesalahan. Silakan coba lagi.",
+      "notConfigured": "Halaman ini belum dikonfigurasi saat ini. Silakan coba lagi nanti."
+    }
   }
 }

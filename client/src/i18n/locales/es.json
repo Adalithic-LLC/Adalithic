@@ -79,6 +79,21 @@
     "title": "Todo lo que necesitas para hablar entre idiomas",
     "subtitle": "Arcatext es un teclado con IA que vive dentro de las apps que ya usas y cubre todos los aspectos de enviar y recibir mensajes durante una conversación.",
     "items": {
+      "reword": {
+        "title": "Traducciones rápidas con un solo toque",
+        "description": "Traduce todo lo que escribes, corrigiendo la gramática, la ortografía y la puntuación, y manteniéndose lo más fiel posible a tu mensaje original.",
+        "bullets": [
+          "Traduce a más de 70 idiomas",
+          "Corrige en el mismo idioma"
+        ],
+        "alt": "El teclado Arcatext con un mensaje en el campo de texto, listo para reformular.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "¿Quedamos este fin de semana?"
+        }
+      },
       "receive": {
         "title": "Entiende cada respuesta sin salir del teclado",
         "description": "Pega los mensajes que recibes y Arcatext los traduce dentro de la propia app, para que nunca tengas que salir de la conversación.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identificando un homógrafo y ofreciendo el significado deseado.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "¡Buenos días!",
+          "recv": "今日どうする？",
+          "reword": "Primero, tengo que pasar por el banco.",
+          "word": "banco",
           "meanings": [
             {
-              "title": "bank",
+              "title": "banco",
               "description": "Entidad financiera"
             },
             {
-              "title": "riverbank",
-              "description": "Terreno junto a un río"
+              "title": "banco (asiento)",
+              "description": "Asiento largo para varias personas"
             },
             {
-              "title": "tilt",
-              "description": "Inclinarse o ladearse"
+              "title": "banco (de peces)",
+              "description": "Grupo numeroso de peces"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Vemos en la cafetería junto a la estación."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "¿Quedamos este fin de semana?"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "SINÓNIMOS",
     "language": "Español",
     "typePlaceholder": "Escribe algo"
+  },
+  "referral": {
+    "title": "Únete a un programa de recomendación",
+    "subtitle": "Introduce tu correo electrónico para iniciar sesión o crear una cuenta de Arcatext y luego aplica tu código de recomendación.",
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "tu@ejemplo.com",
+      "hint": "Te enviaremos un código de 6 dígitos. No necesitas contraseña.",
+      "cta": "Continuar"
+    },
+    "otp": {
+      "label": "Introduce tu código de 6 dígitos",
+      "sentTo": "Hemos enviado un código a {{email}}.",
+      "cta": "Verificar",
+      "resend": "Reenviar código",
+      "resent": "Hemos enviado otro código.",
+      "changeEmail": "Usar otro correo electrónico"
+    },
+    "code": {
+      "label": "Código de recomendación",
+      "placeholder": "Introduce tu código de recomendación",
+      "hint": "No es un código de descuento. Arcatext es una suscripción de pago: un código de recomendación añade tokens adicionales a los de tu plan.",
+      "cta": "Unirme"
+    },
+    "done": {
+      "title": "Te has unido con el código {{code}}.",
+      "bonus": "{{tokens}} tokens adicionales cada mes durante {{months}} meses, además de los de tu plan.",
+      "activeNow": "Tus tokens adicionales ya están activos.",
+      "credited": "Se han añadido {{tokens}} tokens adicionales a tu cuenta.",
+      "startsOnSubscribe": "Tus tokens adicionales empezarán en cuanto te suscribas a Arcatext.",
+      "nextTitle": "Siguientes pasos",
+      "download": "Descargar Arcatext",
+      "mobileOnly": "Arcatext es una app para iPhone. Abre la App Store en tu iPhone y busca Arcatext.",
+      "step1": "Abre la app Arcatext",
+      "step2": "Inicia sesión con \"{{email}}\"",
+      "step3": "Suscríbete y tus tokens adicionales se añadirán automáticamente"
+    },
+    "errors": {
+      "sendFailed": "No hemos podido enviar tu código. Comprueba la dirección e inténtalo de nuevo.",
+      "badOtp": "Ese código no coincide. Compruébalo e inténtalo de nuevo, o solicita uno nuevo.",
+      "invalidCode": "Introduce un código de recomendación válido.",
+      "sessionExpired": "Tu sesión ha caducado. Vuelve a iniciar sesión.",
+      "network": "Algo ha salido mal. Inténtalo de nuevo.",
+      "notConfigured": "Esta página no está configurada ahora mismo. Inténtalo de nuevo más tarde."
+    }
   }
 }

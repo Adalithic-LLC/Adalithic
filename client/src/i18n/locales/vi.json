@@ -79,6 +79,21 @@
     "title": "Mọi thứ bạn cần để trò chuyện xuyên ngôn ngữ",
     "subtitle": "Arcatext là một bàn phím AI hoạt động ngay bên trong các ứng dụng bạn đang dùng, bao quát mọi khía cạnh của việc gửi và nhận tin nhắn trong một cuộc trò chuyện.",
     "items": {
+      "reword": {
+        "title": "Dịch nhanh chỉ với một chạm",
+        "description": "Dịch mọi thứ bạn viết, đồng thời sửa ngữ pháp, chính tả, dấu câu và bám sát nhất có thể tin nhắn gốc của bạn.",
+        "bullets": [
+          "Dịch sang hơn 70 ngôn ngữ",
+          "Sửa trong cùng một ngôn ngữ"
+        ],
+        "alt": "Bàn phím Arcatext với một tin nhắn trong ô văn bản, sẵn sàng để viết lại.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Cuối tuần này bạn rảnh không?"
+        }
+      },
       "receive": {
         "title": "Hiểu mọi câu trả lời, ngay trên bàn phím",
         "description": "Dán những tin nhắn bạn nhận được và Arcatext dịch ngay trong ứng dụng, để bạn không bao giờ phải rời khỏi cuộc trò chuyện.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext đang nhận diện một từ nhiều nghĩa và đưa ra nghĩa bạn muốn dùng.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Chào buổi sáng!",
+          "recv": "今日どうする？",
+          "reword": "Trước tiên mình phải đi mua đường.",
+          "word": "đường",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Tổ chức tài chính"
+              "title": "đường (gia vị)",
+              "description": "Chất ngọt dùng khi nấu ăn"
             },
             {
-              "title": "riverbank",
-              "description": "Vùng đất ven sông"
+              "title": "đường (lối đi)",
+              "description": "Con đường để di chuyển"
             },
             {
-              "title": "tilt",
-              "description": "Nghiêng hoặc dốc"
+              "title": "đường (nét)",
+              "description": "Nét kẻ dài trên mặt phẳng"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Gặp nhau ở quán cà phê cạnh nhà ga nhé."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Cuối tuần này bạn rảnh không?"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "TỪ ĐỒNG NGHĨA",
     "language": "Tiếng Việt",
     "typePlaceholder": "Nhập nội dung"
+  },
+  "referral": {
+    "title": "Tham gia chương trình giới thiệu",
+    "subtitle": "Nhập email của bạn để đăng nhập hoặc tạo tài khoản Arcatext, sau đó áp dụng mã giới thiệu của bạn.",
+    "email": {
+      "label": "Địa chỉ email",
+      "placeholder": "ban@vidu.com",
+      "hint": "Chúng tôi sẽ gửi cho bạn mã gồm 6 chữ số. Không cần mật khẩu.",
+      "cta": "Tiếp tục"
+    },
+    "otp": {
+      "label": "Nhập mã 6 chữ số của bạn",
+      "sentTo": "Chúng tôi đã gửi mã tới {{email}}.",
+      "cta": "Xác minh",
+      "resend": "Gửi lại mã",
+      "resent": "Chúng tôi đã gửi mã mới.",
+      "changeEmail": "Dùng email khác"
+    },
+    "code": {
+      "label": "Mã giới thiệu",
+      "placeholder": "Nhập mã giới thiệu của bạn",
+      "hint": "Đây không phải mã giảm giá. Arcatext là gói đăng ký trả phí — mã giới thiệu cộng thêm token ngoài hạn mức trong gói của bạn.",
+      "cta": "Tham gia"
+    },
+    "done": {
+      "title": "Bạn đã tham gia với mã {{code}}.",
+      "bonus": "Thêm {{tokens}} token mỗi tháng trong {{months}} tháng, ngoài hạn mức trong gói của bạn.",
+      "activeNow": "Token cộng thêm của bạn đã có hiệu lực.",
+      "credited": "Đã thêm {{tokens}} token cộng thêm vào tài khoản của bạn.",
+      "startsOnSubscribe": "Token cộng thêm của bạn bắt đầu ngay khi bạn đăng ký Arcatext.",
+      "nextTitle": "Các bước tiếp theo",
+      "download": "Tải Arcatext",
+      "mobileOnly": "Arcatext là ứng dụng cho iPhone. Mở App Store trên iPhone của bạn và tìm Arcatext.",
+      "step1": "Mở ứng dụng Arcatext",
+      "step2": "Đăng nhập bằng \"{{email}}\"",
+      "step3": "Đăng ký gói, token cộng thêm sẽ được cộng tự động"
+    },
+    "errors": {
+      "sendFailed": "Chúng tôi không gửi được mã của bạn. Hãy kiểm tra địa chỉ và thử lại.",
+      "badOtp": "Mã không khớp. Hãy kiểm tra và thử lại, hoặc yêu cầu mã mới.",
+      "invalidCode": "Vui lòng nhập mã giới thiệu hợp lệ.",
+      "sessionExpired": "Phiên của bạn đã hết hạn. Vui lòng đăng nhập lại.",
+      "network": "Đã xảy ra lỗi. Vui lòng thử lại.",
+      "notConfigured": "Trang này hiện chưa được thiết lập. Vui lòng thử lại sau."
+    }
   }
 }

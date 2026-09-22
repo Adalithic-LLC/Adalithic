@@ -79,6 +79,21 @@
     "title": "Tot ce vă trebuie ca să vorbiți în orice limbă",
     "subtitle": "Arcatext este o tastatură cu inteligență artificială care funcționează direct în aplicațiile pe care le folosiți deja și acoperă toate aspectele trimiterii și primirii mesajelor într-o conversație.",
     "items": {
+      "reword": {
+        "title": "Traduceri rapide dintr-o singură atingere",
+        "description": "Traduceți tot ce scrieți, cu gramatica, ortografia și punctuația corectate și cât mai aproape de mesajul dumneavoastră original.",
+        "bullets": [
+          "Traduceți în peste 70 de limbi",
+          "Corectați în aceeași limbă"
+        ],
+        "alt": "Tastatura Arcatext cu un mesaj în câmpul de text, gata să fie rescris.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Ești liber în weekendul acesta?"
+        }
+      },
       "receive": {
         "title": "Înțelegeți fiecare răspuns, fără să părăsiți tastatura",
         "description": "Lipiți mesajele pe care le primiți, iar Arcatext le traduce chiar în aplicație, ca să nu fie nevoie să părăsiți niciodată conversația.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identifică un omograf și oferă sensul dorit.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Bună dimineața!",
+          "recv": "今日どうする？",
+          "reword": "Mai întâi trebuie să pregătesc masa.",
+          "word": "masă",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Instituție financiară"
+              "title": "masă (mobilă)",
+              "description": "Mobilier cu blat și picioare"
             },
             {
-              "title": "riverbank",
-              "description": "Teren de pe malul unui râu"
+              "title": "masă (mâncare)",
+              "description": "Prânzul sau cina"
             },
             {
-              "title": "tilt",
-              "description": "A se înclina"
+              "title": "masă (fizică)",
+              "description": "Cantitatea de materie a unui corp"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Ne vedem la cafeneaua de lângă gară."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Ești liber în weekendul acesta?"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "SINONIME",
     "language": "Română",
     "typePlaceholder": "Scrie ceva"
+  },
+  "referral": {
+    "title": "Alătură-te unui program de recomandare",
+    "subtitle": "Introdu adresa de e-mail pentru a te conecta sau a crea un cont Arcatext, apoi aplică-ți codul de recomandare.",
+    "email": {
+      "label": "Adresă de e-mail",
+      "placeholder": "tu@exemplu.com",
+      "hint": "Îți vom trimite un cod din 6 cifre. Nu ai nevoie de parolă.",
+      "cta": "Continuă"
+    },
+    "otp": {
+      "label": "Introdu codul din 6 cifre",
+      "sentTo": "Am trimis un cod la {{email}}.",
+      "cta": "Verifică",
+      "resend": "Retrimite codul",
+      "resent": "Am trimis un cod nou.",
+      "changeEmail": "Folosește altă adresă de e-mail"
+    },
+    "code": {
+      "label": "Cod de recomandare",
+      "placeholder": "Introdu codul tău de recomandare",
+      "hint": "Nu este un cod de reducere. Arcatext este un abonament plătit — un cod de recomandare adaugă tokenuri în plus față de cele din planul tău.",
+      "cta": "Alătură-te"
+    },
+    "done": {
+      "title": "Te-ai alăturat cu codul {{code}}.",
+      "bonus": "{{tokens}} tokenuri în plus în fiecare lună timp de {{months}} luni, peste cele din planul tău.",
+      "activeNow": "Tokenurile tale în plus sunt active acum.",
+      "credited": "{{tokens}} tokenuri în plus au fost adăugate în contul tău.",
+      "startsOnSubscribe": "Tokenurile tale în plus încep imediat ce te abonezi la Arcatext.",
+      "nextTitle": "Pașii următori",
+      "download": "Descarcă Arcatext",
+      "mobileOnly": "Arcatext este o aplicație pentru iPhone. Deschide App Store pe iPhone și caută Arcatext.",
+      "step1": "Deschide aplicația Arcatext",
+      "step2": "Conectează-te cu \"{{email}}\"",
+      "step3": "Abonează-te, iar tokenurile în plus se adaugă automat"
+    },
+    "errors": {
+      "sendFailed": "Nu am putut trimite codul. Verifică adresa și încearcă din nou.",
+      "badOtp": "Codul nu se potrivește. Verifică-l și încearcă din nou sau cere unul nou.",
+      "invalidCode": "Introdu un cod de recomandare valid.",
+      "sessionExpired": "Sesiunea ta a expirat. Conectează-te din nou.",
+      "network": "Ceva nu a mers bine. Încearcă din nou.",
+      "notConfigured": "Această pagină nu este configurată momentan. Încearcă mai târziu."
+    }
   }
 }

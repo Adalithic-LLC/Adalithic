@@ -16,7 +16,7 @@
     "legal": "法的情報",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
-    "rights": "© 2026 Adalithic. All rights reserved."
+    "rights": "© 2026 Adalithic. 無断転載を禁じます。"
   },
   "hero": {
     "title": "<brand>Arcatext</brand>",
@@ -79,6 +79,21 @@
     "title": "言語を越えて話すために必要なすべてを",
     "subtitle": "Arcatextは、あなたがすでに使っているアプリの中で動作するAIキーボードです。会話の中でメッセージを送受信する、あらゆる場面をカバーします。",
     "items": {
+      "reword": {
+        "title": "ワンタップで素早く翻訳",
+        "description": "書いた内容をそのまま翻訳。文法・つづり・句読点を直しながら、元のメッセージにできるだけ忠実に仕上げます。",
+        "bullets": [
+          "70以上の言語に翻訳",
+          "同じ言語のまま校正"
+        ],
+        "alt": "テキスト欄にメッセージが入力され、変換を待つArcatextのキーボード。",
+        "demo": {
+          "recv1": "¡Cuánto tiempo! ¿Cómo has estado?",
+          "sent1": "¡Muy bien! ¿Y tú?",
+          "recv2": "¡Yo también! Deberíamos vernos pronto.",
+          "draft": "今週末、会える？"
+        }
+      },
       "receive": {
         "title": "キーボードから離れることなく、すべての返信を理解",
         "description": "受け取ったメッセージを貼り付けるだけで、Arcatextがアプリ内でそのまま翻訳。会話から離れる必要はありません。",
@@ -104,22 +119,22 @@
         ],
         "alt": "多義語を判別し、意図した意味を提示するArcatext。",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "おはよう！",
+          "recv": "¿Qué hacemos hoy?",
+          "reword": "まず、はしを買いに行かないと。",
+          "word": "はし",
           "meanings": [
             {
-              "title": "bank",
-              "description": "金融機関"
+              "title": "箸",
+              "description": "食事に使う二本の棒"
             },
             {
-              "title": "riverbank",
-              "description": "川べりの土地"
+              "title": "橋",
+              "description": "川などに架かる構造物"
             },
             {
-              "title": "tilt",
-              "description": "傾く、かたむける"
+              "title": "端",
+              "description": "物のふち"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "¿Ya decidiste el plan de mañana?",
           "reword": "Vemos en el café junto a la estación.",
           "copy": "駅のそばのカフェで会いましょう。"
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "¡Cuánto tiempo! ¿Cómo has estado?",
-          "sent1": "¡Muy bien! ¿Y tú?",
-          "recv2": "¡Yo también! Deberíamos vernos pronto.",
-          "draft": "今週末、会える？"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "類義語",
     "language": "日本語",
     "typePlaceholder": "何か入力"
+  },
+  "referral": {
+    "title": "紹介プログラムに参加する",
+    "subtitle": "メールアドレスを入力してログインするか Arcatext アカウントを作成し、紹介コードを適用してください。",
+    "email": {
+      "label": "メールアドレス",
+      "placeholder": "you@example.com",
+      "hint": "6桁のコードをお送りします。パスワードは不要です。",
+      "cta": "続ける"
+    },
+    "otp": {
+      "label": "6桁のコードを入力",
+      "sentTo": "{{email}} にコードを送信しました。",
+      "cta": "確認",
+      "resend": "コードを再送信",
+      "resent": "新しいコードを送信しました。",
+      "changeEmail": "別のメールアドレスを使う"
+    },
+    "code": {
+      "label": "紹介コード",
+      "placeholder": "紹介コードを入力",
+      "hint": "これは割引コードではありません。Arcatext は有料サブスクリプションで、紹介コードはプランのトークンに上乗せされます。",
+      "cta": "参加する"
+    },
+    "done": {
+      "title": "コード {{code}} で参加しました。",
+      "bonus": "{{months}} か月間、毎月 {{tokens}} トークンをプランの割り当てに上乗せします。",
+      "activeNow": "追加トークンは今すぐご利用いただけます。",
+      "credited": "{{tokens}} トークンがアカウントに追加されました。",
+      "startsOnSubscribe": "追加トークンは Arcatext に登録した時点で始まります。",
+      "nextTitle": "次のステップ",
+      "download": "Arcatext をダウンロード",
+      "mobileOnly": "Arcatext は iPhone 用アプリです。iPhone で App Store を開き、Arcatext を検索してください。",
+      "step1": "Arcatext アプリを開く",
+      "step2": "\"{{email}}\" でログインする",
+      "step3": "登録すると、追加トークンが自動的に付与されます"
+    },
+    "errors": {
+      "sendFailed": "コードを送信できませんでした。アドレスを確認してもう一度お試しください。",
+      "badOtp": "コードが一致しません。確認してもう一度お試しいただくか、新しいコードをリクエストしてください。",
+      "invalidCode": "有効な紹介コードを入力してください。",
+      "sessionExpired": "セッションの有効期限が切れました。もう一度ログインしてください。",
+      "network": "問題が発生しました。もう一度お試しください。",
+      "notConfigured": "このページは現在設定されていません。しばらくしてからお試しください。"
+    }
   }
 }

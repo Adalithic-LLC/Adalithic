@@ -79,6 +79,21 @@
     "title": "跨語言交流所需的一切",
     "subtitle": "Arcatext 是一款人工智慧鍵盤，就運行在你已經在用的應用程式之中，涵蓋對話中收發訊息的各個面向。",
     "items": {
+      "reword": {
+        "title": "一鍵快速翻譯",
+        "description": "翻譯你寫下的任何內容，同時修正文法、拼寫與標點，並盡可能貼近你的原始訊息。",
+        "bullets": [
+          "翻譯成 70 多種語言",
+          "在同一語言內校正"
+        ],
+        "alt": "Arcatext 鍵盤，文字欄位中有一則待改寫的訊息。",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "這週末有空嗎？"
+        }
+      },
       "receive": {
         "title": "無需離開鍵盤，讀懂每一則回覆",
         "description": "貼上收到的訊息，Arcatext 就會在應用程式內直接翻譯，讓你無需離開對話。",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext 辨識出多義詞並提供你想表達的含義。",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "早安！",
+          "recv": "今日どうする？",
+          "reword": "我先去買點東西。",
+          "word": "東西",
           "meanings": [
             {
-              "title": "bank",
-              "description": "金融機構"
+              "title": "東西（物品）",
+              "description": "泛指各種物件"
             },
             {
-              "title": "riverbank",
-              "description": "河岸邊的土地"
+              "title": "東西（方向）",
+              "description": "東邊和西邊"
             },
             {
-              "title": "tilt",
-              "description": "傾斜"
+              "title": "東西（罵人）",
+              "description": "用來罵人的說法"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "我們在車站旁邊的咖啡館見吧。"
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "這週末有空嗎？"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "同義詞",
     "language": "繁體中文",
     "typePlaceholder": "輸入內容"
+  },
+  "referral": {
+    "title": "加入推薦計畫",
+    "subtitle": "輸入你的電子郵件以登入或建立 Arcatext 帳戶，然後使用你的推薦碼。",
+    "email": {
+      "label": "電子郵件地址",
+      "placeholder": "you@example.com",
+      "hint": "我們會傳送一組 6 位數驗證碼給你。不需要密碼。",
+      "cta": "繼續"
+    },
+    "otp": {
+      "label": "輸入你的 6 位數驗證碼",
+      "sentTo": "我們已將驗證碼傳送至 {{email}}。",
+      "cta": "驗證",
+      "resend": "重新傳送驗證碼",
+      "resent": "我們已傳送新的驗證碼。",
+      "changeEmail": "使用其他電子郵件"
+    },
+    "code": {
+      "label": "推薦碼",
+      "placeholder": "輸入你的推薦碼",
+      "hint": "這不是折扣碼。Arcatext 是付費訂閱服務，推薦碼會在你的方案額度之外額外贈送代幣。",
+      "cta": "加入"
+    },
+    "done": {
+      "title": "你已使用推薦碼 {{code}} 加入。",
+      "bonus": "在 {{months}} 個月內，每月在方案額度之外額外獲得 {{tokens}} 個代幣。",
+      "activeNow": "你的額外代幣現已生效。",
+      "credited": "已將 {{tokens}} 個額外代幣加入你的帳戶。",
+      "startsOnSubscribe": "訂閱 Arcatext 後，你的額外代幣即刻開始。",
+      "nextTitle": "後續步驟",
+      "download": "下載 Arcatext",
+      "mobileOnly": "Arcatext 是一款 iPhone 應用程式。請在 iPhone 上開啟 App Store 並搜尋 Arcatext。",
+      "step1": "開啟 Arcatext 應用程式",
+      "step2": "使用 \"{{email}}\" 登入",
+      "step3": "訂閱後，額外代幣會自動加入"
+    },
+    "errors": {
+      "sendFailed": "無法傳送驗證碼。請檢查地址後再試一次。",
+      "badOtp": "驗證碼不符。請檢查後再試一次，或要求新的驗證碼。",
+      "invalidCode": "請輸入有效的推薦碼。",
+      "sessionExpired": "你的工作階段已過期。請重新登入。",
+      "network": "發生問題，請再試一次。",
+      "notConfigured": "此頁面目前尚未設定。請稍後再試。"
+    }
   }
 }

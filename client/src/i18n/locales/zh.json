@@ -79,6 +79,21 @@
     "title": "跨语言交流所需的一切",
     "subtitle": "Arcatext 是一款 AI 键盘，就运行在你已经在用的应用之中，涵盖对话中收发消息的方方面面。",
     "items": {
+      "reword": {
+        "title": "一键快速翻译",
+        "description": "翻译你写下的任何内容，同时修正语法、拼写和标点，并尽可能贴近你的原始消息。",
+        "bullets": [
+          "翻译成 70 多种语言",
+          "在同一语言内校正"
+        ],
+        "alt": "Arcatext 键盘，文本框中有一条待改写的消息。",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "这周末有空吗？"
+        }
+      },
       "receive": {
         "title": "无需离开键盘，读懂每一条回复",
         "description": "粘贴收到的消息，Arcatext 就会在应用内直接翻译，让你无需离开对话。",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext 识别出多义词并提供你想表达的含义。",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "早上好！",
+          "recv": "今日どうする？",
+          "reword": "我先去买点面。",
+          "word": "面",
           "meanings": [
             {
-              "title": "bank",
-              "description": "金融机构"
+              "title": "面条",
+              "description": "用面粉做的条状食物"
             },
             {
-              "title": "riverbank",
-              "description": "河岸边的土地"
+              "title": "面粉",
+              "description": "磨碎小麦制成的粉"
             },
             {
-              "title": "tilt",
-              "description": "倾斜"
+              "title": "表面",
+              "description": "物体朝外的一层"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "我们在车站旁边的咖啡馆见吧。"
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "这周末有空吗？"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "同义词",
     "language": "中文",
     "typePlaceholder": "输入内容"
+  },
+  "referral": {
+    "title": "加入推荐计划",
+    "subtitle": "输入你的电子邮件以登录或创建 Arcatext 账户，然后使用你的推荐码。",
+    "email": {
+      "label": "电子邮件地址",
+      "placeholder": "you@example.com",
+      "hint": "我们会向你发送一个 6 位数验证码。无需密码。",
+      "cta": "继续"
+    },
+    "otp": {
+      "label": "输入你的 6 位数验证码",
+      "sentTo": "我们已向 {{email}} 发送了验证码。",
+      "cta": "验证",
+      "resend": "重新发送验证码",
+      "resent": "我们已发送新的验证码。",
+      "changeEmail": "使用其他电子邮件"
+    },
+    "code": {
+      "label": "推荐码",
+      "placeholder": "输入你的推荐码",
+      "hint": "这不是折扣码。Arcatext 是付费订阅服务，推荐码会在你的套餐额度之外额外赠送代币。",
+      "cta": "加入"
+    },
+    "done": {
+      "title": "你已使用推荐码 {{code}} 加入。",
+      "bonus": "在 {{months}} 个月内，每月在套餐额度之外额外获得 {{tokens}} 个代币。",
+      "activeNow": "你的额外代币现已生效。",
+      "credited": "已向你的账户添加 {{tokens}} 个额外代币。",
+      "startsOnSubscribe": "订阅 Arcatext 后，你的额外代币即刻开始。",
+      "nextTitle": "后续步骤",
+      "download": "下载 Arcatext",
+      "mobileOnly": "Arcatext 是一款 iPhone 应用。请在 iPhone 上打开 App Store 并搜索 Arcatext。",
+      "step1": "打开 Arcatext 应用",
+      "step2": "使用 \"{{email}}\" 登录",
+      "step3": "订阅后，额外代币会自动添加"
+    },
+    "errors": {
+      "sendFailed": "无法发送验证码。请检查地址后重试。",
+      "badOtp": "验证码不匹配。请检查后重试，或请求一个新的验证码。",
+      "invalidCode": "请输入有效的推荐码。",
+      "sessionExpired": "你的会话已过期。请重新登录。",
+      "network": "出了点问题，请重试。",
+      "notConfigured": "此页面当前尚未配置。请稍后再试。"
+    }
   }
 }

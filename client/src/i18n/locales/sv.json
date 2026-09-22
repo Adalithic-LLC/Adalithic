@@ -79,6 +79,21 @@
     "title": "Allt du behöver för att prata över språkgränserna",
     "subtitle": "Arcatext är ett AI-tangentbord som finns inuti apparna du redan använder och täcker alla aspekter av att skicka och ta emot meddelanden under ett samtal.",
     "items": {
+      "reword": {
+        "title": "Snabba översättningar med ett tryck",
+        "description": "Översätt allt du skriver, med rättad grammatik, stavning och interpunktion och så nära ditt ursprungliga meddelande som möjligt.",
+        "bullets": [
+          "Översätt till över 70 språk",
+          "Rätta till samma språk"
+        ],
+        "alt": "Arcatext-tangentbordet med ett meddelande i textfältet, redo att skrivas om.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Har du tid i helgen?"
+        }
+      },
       "receive": {
         "title": "Förstå varje svar utan att lämna tangentbordet",
         "description": "Klistra in meddelanden du får så översätter Arcatext dem direkt i appen, så att du aldrig behöver lämna samtalet.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext identifierar en homograf och erbjuder den avsedda betydelsen.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "God morgon!",
+          "recv": "今日どうする？",
+          "reword": "Först måste jag byta fil.",
+          "word": "fil",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Finansinstitut"
+              "title": "fil (körfält)",
+              "description": "Ett körfält på vägen"
             },
             {
-              "title": "riverbank",
-              "description": "Mark längs en flodstrand"
+              "title": "fil (datafil)",
+              "description": "En fil som sparas på datorn"
             },
             {
-              "title": "tilt",
-              "description": "Luta eller slutta"
+              "title": "fil (mjölkprodukt)",
+              "description": "Syrad mjölkprodukt"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Vi ses på kaféet vid stationen."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Har du tid i helgen?"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "SYNONYMER",
     "language": "Svenska",
     "typePlaceholder": "Skriv något"
+  },
+  "referral": {
+    "title": "Gå med i ett värvningsprogram",
+    "subtitle": "Ange din e-postadress för att logga in eller skapa ett Arcatext-konto och använd sedan din värvningskod.",
+    "email": {
+      "label": "E-postadress",
+      "placeholder": "du@exempel.com",
+      "hint": "Vi skickar en 6-siffrig kod. Inget lösenord behövs.",
+      "cta": "Fortsätt"
+    },
+    "otp": {
+      "label": "Ange din 6-siffriga kod",
+      "sentTo": "Vi har skickat en kod till {{email}}.",
+      "cta": "Verifiera",
+      "resend": "Skicka koden igen",
+      "resent": "Vi har skickat en ny kod.",
+      "changeEmail": "Använd en annan e-postadress"
+    },
+    "code": {
+      "label": "Värvningskod",
+      "placeholder": "Ange din värvningskod",
+      "hint": "Det här är ingen rabattkod. Arcatext är en betald prenumeration – en värvningskod ger extra tokens utöver det din plan innehåller.",
+      "cta": "Gå med"
+    },
+    "done": {
+      "title": "Du gick med med koden {{code}}.",
+      "bonus": "{{tokens}} extra tokens varje månad i {{months}} månader, utöver det din plan innehåller.",
+      "activeNow": "Dina extra tokens är aktiva nu.",
+      "credited": "{{tokens}} extra tokens har lagts till på ditt konto.",
+      "startsOnSubscribe": "Dina extra tokens börjar så snart du prenumererar på Arcatext.",
+      "nextTitle": "Nästa steg",
+      "download": "Ladda ner Arcatext",
+      "mobileOnly": "Arcatext är en iPhone-app. Öppna App Store på din iPhone och sök efter Arcatext.",
+      "step1": "Öppna Arcatext-appen",
+      "step2": "Logga in med \"{{email}}\"",
+      "step3": "Prenumerera, så läggs dina extra tokens till automatiskt"
+    },
+    "errors": {
+      "sendFailed": "Vi kunde inte skicka din kod. Kontrollera adressen och försök igen.",
+      "badOtp": "Koden stämmer inte. Kontrollera den och försök igen, eller begär en ny.",
+      "invalidCode": "Ange en giltig värvningskod.",
+      "sessionExpired": "Din session har gått ut. Logga in igen.",
+      "network": "Något gick fel. Försök igen.",
+      "notConfigured": "Den här sidan är inte konfigurerad just nu. Försök igen senare."
+    }
   }
 }

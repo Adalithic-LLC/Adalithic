@@ -79,6 +79,21 @@
     "title": "Kaikki, mitä tarvitset viestiäksesi kielten välillä",
     "subtitle": "Arcatext on tekoälynäppäimistö, joka toimii suoraan jo käyttämiesi sovellusten sisällä ja kattaa kaikki viestien lähettämisen ja vastaanottamisen puolet keskustelun aikana.",
     "items": {
+      "reword": {
+        "title": "Nopeat käännökset yhdellä napautuksella",
+        "description": "Käännä kaikki kirjoittamasi niin, että kielioppi, oikeinkirjoitus ja välimerkit korjataan ja viesti pysyy mahdollisimman lähellä alkuperäistä.",
+        "bullets": [
+          "Käännä yli 70 kielelle",
+          "Korjaa samalla kielellä"
+        ],
+        "alt": "Arcatext-näppäimistö, jonka tekstikentässä on viesti valmiina muotoiltavaksi.",
+        "demo": {
+          "recv1": "久しぶり！元気にしてた？",
+          "sent1": "うん、元気だよ！そっちは？",
+          "recv2": "私も元気！今度会いたいね。",
+          "draft": "Onko sinulla aikaa tänä viikonloppuna?"
+        }
+      },
       "receive": {
         "title": "Ymmärrä jokainen vastaus poistumatta näppäimistöltä",
         "description": "Liitä saamasi viestit, niin Arcatext kääntää ne suoraan sovelluksessa, jotta sinun ei koskaan tarvitse poistua keskustelusta.",
@@ -104,22 +119,22 @@
         ],
         "alt": "Arcatext tunnistaa homografin ja tarjoaa tarkoitettua merkitystä.",
         "demo": {
-          "sent": "Morning!",
-          "recv": "What's the plan today?",
-          "reword": "First, I need to go to the bank.",
-          "word": "bank",
+          "sent": "Huomenta!",
+          "recv": "今日どうする？",
+          "reword": "Ensin pitää hakea kuusi.",
+          "word": "kuusi",
           "meanings": [
             {
-              "title": "bank",
-              "description": "Rahoituslaitos"
+              "title": "kuusi (puu)",
+              "description": "Havupuu, joka pysyy vihreänä"
             },
             {
-              "title": "riverbank",
-              "description": "Joen rannan maa"
+              "title": "kuusi (luku)",
+              "description": "Numero 6"
             },
             {
-              "title": "tilt",
-              "description": "Kallistua"
+              "title": "kuusi (kuu + -si)",
+              "description": "Sinun kuusi"
             }
           ]
         }
@@ -190,14 +205,6 @@
           "recv": "明日の予定、もう決めた？",
           "reword": "駅のそばのカフェで会いましょう。",
           "copy": "Tavataan aseman vieressä olevassa kahvilassa."
-        }
-      },
-      "reword": {
-        "demo": {
-          "recv1": "久しぶり！元気にしてた？",
-          "sent1": "うん、元気だよ！そっちは？",
-          "recv2": "私も元気！今度会いたいね。",
-          "draft": "Onko sinulla aikaa tänä viikonloppuna?"
         }
       }
     }
@@ -312,5 +319,50 @@
     "synonyms": "SYNONYYMIT",
     "language": "Suomi",
     "typePlaceholder": "Kirjoita jotain"
+  },
+  "referral": {
+    "title": "Liity suositteluohjelmaan",
+    "subtitle": "Kirjoita sähköpostiosoitteesi kirjautuaksesi sisään tai luodaksesi Arcatext-tilin ja käytä sitten suosittelukoodiasi.",
+    "email": {
+      "label": "Sähköpostiosoite",
+      "placeholder": "sina@esimerkki.com",
+      "hint": "Lähetämme sinulle 6-numeroisen koodin. Salasanaa ei tarvita.",
+      "cta": "Jatka"
+    },
+    "otp": {
+      "label": "Anna 6-numeroinen koodisi",
+      "sentTo": "Lähetimme koodin osoitteeseen {{email}}.",
+      "cta": "Vahvista",
+      "resend": "Lähetä koodi uudelleen",
+      "resent": "Lähetimme uuden koodin.",
+      "changeEmail": "Käytä toista sähköpostiosoitetta"
+    },
+    "code": {
+      "label": "Suosittelukoodi",
+      "placeholder": "Anna suosittelukoodisi",
+      "hint": "Tämä ei ole alennuskoodi. Arcatext on maksullinen tilaus – suosittelukoodi tuo lisätokeneita tilauksesi kiintiön päälle.",
+      "cta": "Liity"
+    },
+    "done": {
+      "title": "Liityit koodilla {{code}}.",
+      "bonus": "{{tokens}} lisätokenia joka kuukausi {{months}} kuukauden ajan, tilauksesi kiintiön lisäksi.",
+      "activeNow": "Lisätokenisi ovat käytössä heti.",
+      "credited": "Tilillesi lisättiin {{tokens}} lisätokenia.",
+      "startsOnSubscribe": "Lisätokenisi alkavat heti, kun tilaat Arcatextin.",
+      "nextTitle": "Seuraavat vaiheet",
+      "download": "Lataa Arcatext",
+      "mobileOnly": "Arcatext on iPhone-sovellus. Avaa App Store iPhonessasi ja hae Arcatext.",
+      "step1": "Avaa Arcatext-sovellus",
+      "step2": "Kirjaudu sisään osoitteella \"{{email}}\"",
+      "step3": "Tee tilaus, niin lisätokenit lisätään automaattisesti"
+    },
+    "errors": {
+      "sendFailed": "Koodin lähettäminen ei onnistunut. Tarkista osoite ja yritä uudelleen.",
+      "badOtp": "Koodi ei täsmää. Tarkista se ja yritä uudelleen tai pyydä uusi.",
+      "invalidCode": "Anna kelvollinen suosittelukoodi.",
+      "sessionExpired": "Istuntosi vanheni. Kirjaudu sisään uudelleen.",
+      "network": "Jokin meni pieleen. Yritä uudelleen.",
+      "notConfigured": "Tätä sivua ei ole juuri nyt määritetty. Yritä myöhemmin uudelleen."
+    }
   }
 }
