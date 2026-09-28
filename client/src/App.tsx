@@ -11,6 +11,7 @@ import Terms from "@/pages/terms";
 import Redeem from "@/pages/redeem";
 import Referral from "@/pages/referral";
 import AdminReferrals from "@/pages/admin-referrals";
+import ProfessorChats from "@/pages/professor-chats";
 import NotFound from "@/pages/not-found";
 import { getLocaleFromPath, isPrefixLocale, isRtl } from "@/lib/locale";
 import { useSeo } from "@/lib/seo";
@@ -55,6 +56,9 @@ function Router() {
           hiding it would be decoration — every RPC it calls re-checks the
           admin identity server-side. */}
       <Route path="/admin/referrals" component={AdminReferrals} />
+      {/* Professor Chats authoring (admin). Unlinked and English-only, like
+          the ledger above; publishing is gated server-side by the RPC. */}
+      <Route path="/ProfessorChats" component={ProfessorChats} />
       {/* Prefixed locales: /es, /es/privacy, /fr/terms, ... An unknown prefix
           (e.g. /xx/privacy) falls through to NotFound. Order matters — the
           bare "/:lang" catch must come after the more specific routes. */}
