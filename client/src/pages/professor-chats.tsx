@@ -21,8 +21,9 @@ import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 // server-side; signing in here is what makes that check pass. Republishing
 // the same chat (same `family`) replaces its rounds in place.
 //
-// "Upload vocab" reads a word list (.txt / .csv: one per line or comma
-// separated) and "Generate" asks the professor-chat-generate edge function
+// Vocab lives in a text field the author can type or paste into; "Upload
+// vocab" appends a .txt / .csv file's contents to it. Words are pulled from
+// the field (one per line, or separated by commas / semicolons / tabs) and "Generate" asks the professor-chat-generate edge function
 // (admin only) to write the current length's rounds around those words. The
 // model picks the topic and title; both land in the editable fields.
 //
@@ -50,10 +51,24 @@ interface Draft {
   title: string;
   // zt_chats.topic_title: the app's section heading. Blank = "Professor Chats".
   topic?: string;
+  // Raw vocab text; the word list is parsed from it (parseVocab).
+  vocabText?: string;
+  // Older drafts stored the parsed list only; folded into vocabText on read.
   vocab?: string[];
   targetLanguage: string;
   meaningLanguage: string;
   versions: Record<Length, Round[]>;
+}
+
+function parseVocab(text: string): string[] {
+  return Array.from(
+    new Set(
+      text
+        .split(/[\n\r,;\t]+/)
+        .map((w) => w.trim())
+        .filter(Boolean),
+    ),
+  );
 }
 
 const STORAGE_KEY = "professor-chats-draft";
@@ -251,25 +266,20 @@ export default function ProfessorChats() {
   const [busy, setBusy] = useState(false);
   const [generating, setGenerating] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
-  const vocab = draft.vocab ?? [];
+  const vocabText = draft.vocabText ?? (draft.vocab ?? []).join("\n");
+  const vocab = parseVocab(vocabText);
+  const setVocabText = (text: string) => setDraft((d) => ({ ...d, vocabText: text, vocab: undefined }));
 
   async function uploadVocab(file: File) {
-    const text = await file.text();
-    const words = Array.from(
-      new Set(
-        text
-          .split(/[\n\r,;\t]+/)
-          .map((w) => w.trim())
-          .filter(Boolean),
-      ),
-    );
-    setDraft((d) => ({ ...d, vocab: words }));
-    toast({ title: `${words.length} vocab word${words.length === 1 ? "" : "s"} loaded` });
+    const text = (await file.text()).trim();
+    const added = parseVocab(text).length;
+    setVocabText(vocabText.trim() ? `${vocabText.trim()}\n${text}` : text);
+    toast({ title: `${added} vocab word${added === 1 ? "" : "s"} added from ${file.name}` });
   }
 
   async function generate() {
     if (vocab.length === 0) {
-      fileRef.current?.click();
+      toast({ title: "Add some vocab first", description: "Type words in the vocab box or upload a list." });
       return;
     }
     if (!signedIn) {
@@ -525,16 +535,26 @@ export default function ProfessorChats() {
               {generating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
               {generating ? "Generating…" : `Generate ${LENGTH_LABEL[length]} chat`}
             </Button>
-            {vocab.length > 0 && (
+            <span className="text-xs text-neutral-500">
+              {vocab.length} word{vocab.length === 1 ? "" : "s"}
+            </span>
+            {vocabText.trim() && (
               <button
                 type="button"
                 className="ml-auto flex items-center gap-1 text-xs text-neutral-500 hover:text-red-500"
-                onClick={() => setDraft({ ...draft, vocab: [] })}
+                onClick={() => setVocabText("")}
               >
                 <X className="h-3 w-3" /> Clear vocab
               </button>
             )}
           </div>
+          <textarea
+            value={vocabText}
+            onChange={(e) => setVocabText(e.target.value)}
+            rows={4}
+            placeholder={"Type or paste vocab — one per line, or separated by commas\ne.g. café, la cuenta, por favor"}
+            className="block w-full resize-y rounded-md border border-neutral-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-blue-500 dark:border-neutral-700"
+          />
           {vocab.length > 0 ? (
             <div className="flex max-h-28 flex-wrap gap-1.5 overflow-y-auto">
               {vocab.map((w) => (
@@ -545,8 +565,8 @@ export default function ProfessorChats() {
             </div>
           ) : (
             <p className="text-xs text-neutral-500">
-              Upload a .txt or .csv word list (one per line or comma-separated). Generate writes the selected
-              length's rounds using those words and picks a topic.
+              Type words above or upload a .txt / .csv list. Generate writes the selected length's rounds using
+              those words and picks a topic.
             </p>
           )}
         </div>
