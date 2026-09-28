@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, ChevronUp, Copy, FilePlus, Loader2, Plus, Send, Trash2 } from "lucide-react";
+import { ChevronDown, ChevronUp, Copy, FilePlus, Loader2, Plus, Send, Sparkles, Trash2, Upload, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -20,6 +20,11 @@ import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 // with no service-role key, so the RPC re-checks the admin identity
 // server-side; signing in here is what makes that check pass. Republishing
 // the same chat (same `family`) replaces its rounds in place.
+//
+// "Upload vocab" reads a word list (.txt / .csv: one per line or comma
+// separated) and "Generate" asks the professor-chat-generate edge function
+// (admin only) to write the current length's rounds around those words. The
+// model picks the topic and title; both land in the editable fields.
 //
 // Drafts are kept in localStorage so a refresh doesn't lose work.
 
@@ -43,6 +48,9 @@ interface Draft {
   // update this chat rather than create a new one.
   family: string;
   title: string;
+  // zt_chats.topic_title: the app's section heading. Blank = "Professor Chats".
+  topic?: string;
+  vocab?: string[];
   targetLanguage: string;
   meaningLanguage: string;
   versions: Record<Length, Round[]>;
@@ -241,6 +249,80 @@ export default function ProfessorChats() {
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const [busy, setBusy] = useState(false);
+  const [generating, setGenerating] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const vocab = draft.vocab ?? [];
+
+  async function uploadVocab(file: File) {
+    const text = await file.text();
+    const words = Array.from(
+      new Set(
+        text
+          .split(/[\n\r,;\t]+/)
+          .map((w) => w.trim())
+          .filter(Boolean),
+      ),
+    );
+    setDraft((d) => ({ ...d, vocab: words }));
+    toast({ title: `${words.length} vocab word${words.length === 1 ? "" : "s"} loaded` });
+  }
+
+  async function generate() {
+    if (vocab.length === 0) {
+      fileRef.current?.click();
+      return;
+    }
+    if (!signedIn) {
+      toast({ title: "Sign in first", description: "Use the admin email above to get a code." });
+      return;
+    }
+    if (rounds.length > 0 && rounds.some((r) => r.bot.text || r.replies.some((x) => x.text))) {
+      if (!window.confirm(`Replace the ${LENGTH_LABEL[length]} rounds with a generated chat?`)) return;
+    }
+    setGenerating(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("professor-chat-generate", {
+        body: {
+          vocab,
+          length,
+          target_language: draft.targetLanguage.trim().toLowerCase(),
+          meaning_language: draft.meaningLanguage.trim().toLowerCase(),
+        },
+      });
+      if (error || !data?.rounds) {
+        let msg = error?.message ?? "No chat came back";
+        try {
+          const body = await (error as { context?: Response })?.context?.json();
+          if (body?.error) msg = body.error;
+        } catch {
+          /* keep the generic message */
+        }
+        toast({ title: "Generation failed", description: msg, variant: "destructive" });
+        return;
+      }
+      const generated: Round[] = (data.rounds as Array<{
+        bot_text: string;
+        bot_meaning: string;
+        replies: Line[];
+      }>).map((r) => ({
+        id: uid(),
+        bot: { text: r.bot_text ?? "", meaning: r.bot_meaning ?? "" },
+        replies: [0, 1, 2].map((k) => ({
+          text: r.replies?.[k]?.text ?? "",
+          meaning: r.replies?.[k]?.meaning ?? "",
+        })) as Round["replies"],
+      }));
+      setDraft((d) => ({
+        ...d,
+        title: d.title.trim() ? d.title : data.title ?? "",
+        topic: data.topic || d.topic,
+        versions: { ...d.versions, [length]: generated },
+      }));
+      toast({ title: `Generated ${generated.length} rounds`, description: data.topic ? `Topic: ${data.topic}` : undefined });
+    } finally {
+      setGenerating(false);
+    }
+  }
 
   async function sendCode() {
     if (!email.trim()) return;
@@ -277,12 +359,10 @@ export default function ProfessorChats() {
 
   async function send() {
     const versions = LENGTHS.filter((l) => draft.versions[l].length > 0);
-    if (!draft.title.trim()) {
-      toast({ title: "Add a title first", variant: "destructive" });
-      return;
-    }
+    // No content rules: blanks are sent as-is. Only a chat with no rounds at
+    // all can't be sent — the app has nothing to open.
     if (versions.length === 0) {
-      toast({ title: "Add at least one round", variant: "destructive" });
+      toast({ title: "Nothing to send", description: "Add a round first.", variant: "destructive" });
       return;
     }
     if (!isSupabaseConfigured) {
@@ -296,6 +376,7 @@ export default function ProfessorChats() {
     const payload = {
       family: draft.family,
       title: draft.title.trim(),
+      topic: (draft.topic ?? "").trim(),
       target_language: draft.targetLanguage.trim().toLowerCase(),
       meaning_language: draft.meaningLanguage.trim().toLowerCase(),
       versions: versions.map((l) => ({
@@ -397,6 +478,15 @@ export default function ProfessorChats() {
               onChange={(e) => setDraft({ ...draft, title: e.target.value })}
             />
           </label>
+          <label className="text-xs font-medium text-neutral-500 sm:col-span-3">
+            Topic (auto-chosen when you generate)
+            <Input
+              className="mt-1"
+              value={draft.topic ?? ""}
+              placeholder="Professor Chats"
+              onChange={(e) => setDraft({ ...draft, topic: e.target.value })}
+            />
+          </label>
           <label className="text-xs font-medium text-neutral-500">
             Target language code
             <Input
@@ -413,6 +503,52 @@ export default function ProfessorChats() {
               onChange={(e) => setDraft({ ...draft, meaningLanguage: e.target.value })}
             />
           </label>
+        </div>
+
+        <div className="space-y-2 rounded-xl bg-white p-4 shadow-sm dark:bg-neutral-900">
+          <input
+            ref={fileRef}
+            type="file"
+            accept=".txt,.csv,.tsv,text/plain,text/csv"
+            className="hidden"
+            onChange={(e) => {
+              const f = e.target.files?.[0];
+              if (f) uploadVocab(f);
+              e.target.value = "";
+            }}
+          />
+          <div className="flex flex-wrap items-center gap-2">
+            <Button variant="outline" size="sm" className="gap-2" onClick={() => fileRef.current?.click()}>
+              <Upload className="h-4 w-4" /> Upload vocab
+            </Button>
+            <Button size="sm" className="gap-2" onClick={generate} disabled={generating || vocab.length === 0}>
+              {generating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
+              {generating ? "Generating…" : `Generate ${LENGTH_LABEL[length]} chat`}
+            </Button>
+            {vocab.length > 0 && (
+              <button
+                type="button"
+                className="ml-auto flex items-center gap-1 text-xs text-neutral-500 hover:text-red-500"
+                onClick={() => setDraft({ ...draft, vocab: [] })}
+              >
+                <X className="h-3 w-3" /> Clear vocab
+              </button>
+            )}
+          </div>
+          {vocab.length > 0 ? (
+            <div className="flex max-h-28 flex-wrap gap-1.5 overflow-y-auto">
+              {vocab.map((w) => (
+                <span key={w} className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs dark:bg-neutral-800">
+                  {w}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <p className="text-xs text-neutral-500">
+              Upload a .txt or .csv word list (one per line or comma-separated). Generate writes the selected
+              length's rounds using those words and picks a topic.
+            </p>
+          )}
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-2">
