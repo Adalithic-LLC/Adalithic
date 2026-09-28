@@ -78,6 +78,9 @@ jobs:
           # needs exactly one file and no per-locale copies.
           mkdir -p dist/public/admin
           cp dist/public/index.html dist/public/admin/referrals.html
+          # Professor Chats authoring page: English only, skipped by
+          # detect-locale like /admin, so one file.
+          cp dist/public/index.html dist/public/ProfessorChats.html
           for L in es fr de ja it pl nl pt zh ko tr el ar he sv cs ro hu da fi no bg vi th id hi ru uk zh-Hant bn ta te mr ur fa ms fil sw pa; do
             mkdir -p "dist/public/$L"
             cp dist/public/index.html "dist/public/$L/index.html"

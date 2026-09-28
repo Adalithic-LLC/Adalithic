@@ -42,6 +42,8 @@ import {
     // non-English browser — including, inconveniently, on the one page whose
     // only user is the person who deployed it.
     if (basePath === "/admin" || basePath.startsWith("/admin/")) return;
+    // Same for the Professor Chats authoring page (English-only, one file).
+    if (basePath.toLowerCase() === "/professorchats") return;
 
     // Returning visitor: honor the remembered choice (English included).
     const stored = readStoredLocale();
