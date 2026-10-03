@@ -26,8 +26,9 @@ import {
  * keyboard + toolbar, floating over the page background (no device frame).
  * It auto-plays the core loop — type a message, tap Reword to translate it in
  * place, then send it. Sent and received messages stack just above the input
- * bar; each new message pushes the older ones straight up, and they fade out
- * completely as they rise, before ever reaching the hero copy above.
+ * bar; each new message pushes the older ones straight up. Only the newest
+ * VISIBLE_MESSAGES are shown — an older one fades out as it is pushed up, so the
+ * stack never climbs into the hero copy above.
  *
  * The keyboard/toolbar colors and layout are reused from the interactive
  * keyboard prototype in the product-design portfolio (ArcatextKeyboard.tsx).
@@ -72,13 +73,14 @@ type Bubble = {
 };
 
 // Per-bubble stack placement, computed from measured heights: how far up the
-// bubble is pushed (design px). Opacity is applied separately by a rAF that
-// reads each bubble's live position, so the fade always matches where it is.
-type Placement = { y: number };
+// bubble is pushed (design px), and its rank in the stack (0 = newest), which
+// decides whether it is still shown.
+type Placement = { y: number; rank: number };
 
 // Surface geometry (design pixels). No device frame — just the message stack,
 // input bar and keyboard. Messages stack just above the input bar and are
-// pushed straight up by newer messages, fading out before the parked row.
+// pushed straight up by newer messages, fading out once they drop out of the
+// newest VISIBLE_MESSAGES.
 // The surface is taller than the keyboard so the message stack has room to
 // scroll up and fade; the features stills are drawn to the same size.
 const SURFACE_H = DESIGN_H;
@@ -88,8 +90,11 @@ const BASE_BOTTOM = 4; // a new bubble starts just above the input bar
 const STACK_GAP = 8; // vertical gap between stacked messages (design px)
 const FIELD_GAP = 24; // gap between the input field's top and the lowest bubble
 const BASE_OFFSET_DEFAULT = 408; // fallback until the keyboard panel is measured
-const FADE_CAP_DEFAULT = 200; // fallback fade-out height until measured (design px)
-const NEWEST_CLEAR = 60; // px reserved at the base so the newest message stays fully opaque
+// How many messages are shown at once. The fade is keyed to stack rank rather
+// than to screen position: a position-based fade measured against the hero copy
+// in viewport coordinates goes stale as soon as the page scrolls, letting
+// messages drift visibly over the App Store card on phones.
+const VISIBLE_MESSAGES = 2;
 
 const TYPE_MS = 1000; // total typing duration (both input and received bubbles)
 const perChar = (len: number) =>
@@ -102,16 +107,12 @@ interface HeroKeyboardAnimationProps {
   focused?: boolean;
   /** Ref to the input field, for callers that need to measure it. */
   inputRef?: React.Ref<HTMLDivElement>;
-  /** The hero element just above the animation — rising messages fade out
-   *  just below it. */
-  ceilingRef?: React.RefObject<HTMLElement | null>;
 }
 
 export default function HeroKeyboardAnimation({
   active = true,
   focused = false,
   inputRef,
-  ceilingRef,
 }: HeroKeyboardAnimationProps) {
   const { t, i18n } = useTranslation();
   const reduceMotion = useReducedMotion();
@@ -123,7 +124,6 @@ export default function HeroKeyboardAnimation({
   const [pressed, setPressed] = useState<"reword" | "send" | null>(null);
 
   const bubbleId = useRef(1);
-  const bubbleAreaRef = useRef<HTMLDivElement>(null);
   const keyboardPanelRef = useRef<HTMLDivElement>(null);
   // The input field element, tracked here (and mirrored to the forwarded
   // inputRef) so the stack can measure the field's top and keep a fixed gap
@@ -143,25 +143,17 @@ export default function HeroKeyboardAnimation({
   // bottom — the keyboard panel plus a min-height input bar — so the messages
   // stay put even when the input field grows to wrap a long message.
   const [baseOffset, setBaseOffset] = useState(BASE_OFFSET_DEFAULT);
-  // Height (design px) at which a rising message is fully faded out — the
-  // clearance below the parked row, so the stack never reaches it (used to prune
-  // messages that have scrolled off the top).
-  const [fadeCap, setFadeCap] = useState(FADE_CAP_DEFAULT);
   // Per-bubble stack placement (push distance), keyed by id.
   const [placement, setPlacement] = useState<Map<number, Placement>>(new Map());
 
-  // Bubble DOM nodes, so the stack can measure each message's height and the
-  // rAF can read each bubble's live screen position for the fade.
+  // Bubble DOM nodes, so the stack can measure each message's height.
   const elMap = useRef<Map<number, HTMLDivElement>>(new Map());
-  // Screen-space fade band (px): opacity is 0 at/above `clearLine` (just below
-  // the parked row) and 1 at/below clearLine + `band`.
-  const clearLineRef = useRef(0);
-  const bandRef = useRef(400);
 
   // Lay the stack out: newest message sits at the base, each older one pushed up
   // by the heights below it. Runs after every change so a new (or growing)
-  // message pushes the others straight up. Fully-scrolled-off messages are
-  // pruned; opacity is handled by the rAF below.
+  // message pushes the others straight up. The first message past
+  // VISIBLE_MESSAGES fades out as it is pushed; anything older than that has
+  // already faded and is pruned.
   useLayoutEffect(() => {
     if (reduceMotion) return;
     const next = new Map<number, Placement>();
@@ -171,38 +163,15 @@ export default function HeroKeyboardAnimation({
       const bub = bubbles[i];
       const el = elMap.current.get(bub.id);
       const h = el ? el.offsetHeight : 40;
-      next.set(bub.id, { y: cum });
-      if (cum > fadeCap) gone.push(bub.id); // wholly above the cap → drop it
+      const rank = bubbles.length - 1 - i;
+      next.set(bub.id, { y: cum, rank });
+      if (rank > VISIBLE_MESSAGES) gone.push(bub.id); // already faded → drop it
       cum += h + STACK_GAP;
     }
     setPlacement(next);
     if (gone.length)
       setBubbles((prev) => prev.filter((b) => !gone.includes(b.id)));
-  }, [bubbles, fadeCap, reduceMotion]);
-
-  // Fade each message by its LIVE screen position (framer animates the push;
-  // this reads where the bubble actually is each frame and sets its opacity), so
-  // the fade always matches the position even mid-push — a message is fully
-  // transparent by the time it reaches the parked row.
-  useEffect(() => {
-    if (reduceMotion) return;
-    let raf = 0;
-    const tick = () => {
-      const clearLine = clearLineRef.current;
-      const band = bandRef.current || 1;
-      elMap.current.forEach((el) => {
-        const inner = el.firstElementChild as HTMLElement | null;
-        if (!inner) return;
-        const top = el.getBoundingClientRect().top;
-        let o = (top - clearLine) / band;
-        o = o < 0 ? 0 : o > 1 ? 1 : o;
-        inner.style.opacity = String(o);
-      });
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [reduceMotion]);
+  }, [bubbles, reduceMotion]);
 
   // Responsive scale so the floating keyboard fits the hero at every
   // breakpoint, clamped so it never overflows the viewport width.
@@ -237,39 +206,18 @@ export default function HeroKeyboardAnimation({
     syncBaseOffset();
   }, [text, syncBaseOffset]);
 
-  // Measure the fade budget: fade messages out just below the ceiling element
-  // so a rising message is gone before it reaches it.
+  // Re-sync the stack's base after the hero's entrance animation has settled,
+  // and on resize.
   useEffect(() => {
-    const measure = () => {
-      syncBaseOffset();
-      const area = bubbleAreaRef.current?.getBoundingClientRect();
-      if (!area || !scale) return;
-      const baseY = area.bottom; // messages stack up from here
-
-      const ceiling = ceilingRef?.current?.getBoundingClientRect();
-      if (ceiling) {
-        const clearLine = ceiling.bottom + 24; // opacity reaches 0 a little below the ceiling
-        clearLineRef.current = clearLine;
-        // Reserve a little space at the base so the newest message stays fully
-        // opaque, then fade across the rest of the gap up to the clear line.
-        bandRef.current = Math.max(
-          40,
-          baseY - clearLine - NEWEST_CLEAR * scale,
-        );
-        setFadeCap(Math.max(70, (baseY - clearLine) / scale));
-      }
-    };
-    measure();
-    const raf = requestAnimationFrame(measure);
-    // Re-measure after the hero's entrance animation has settled.
-    const timers = [400, 1000, 1800, 3000].map((ms) => setTimeout(measure, ms));
-    window.addEventListener("resize", measure);
+    const raf = requestAnimationFrame(syncBaseOffset);
+    const timers = [400, 1000].map((ms) => setTimeout(syncBaseOffset, ms));
+    window.addEventListener("resize", syncBaseOffset);
     return () => {
       cancelAnimationFrame(raf);
       timers.forEach(clearTimeout);
-      window.removeEventListener("resize", measure);
+      window.removeEventListener("resize", syncBaseOffset);
     };
-  }, [scale, ceilingRef, syncBaseOffset]);
+  }, [syncBaseOffset]);
 
   // Build the continuously looping timeline. Rebuilt when reduced-motion or the
   // language changes — the script is localized, so switching locale restarts it
@@ -281,7 +229,7 @@ export default function HeroKeyboardAnimation({
     if (reduceMotion) {
       setText("");
       let id = 1;
-      const last = script.slice(-4).map((s) => ({
+      const last = script.slice(-VISIBLE_MESSAGES).map((s) => ({
         id: id++,
         side: (s.kind === "sent" ? "sent" : "recv") as "sent" | "recv",
         text: s.kind === "sent" ? (s.reworded ?? s.native) : s.text,
@@ -419,13 +367,12 @@ export default function HeroKeyboardAnimation({
         {/* Transparent stage — no card. Floating bubbles, the input bar and the
             keyboard, over the hero background. */}
         <div className="relative h-full w-full">
-          {/* Bubble layer: each message floats up, curves out around the hero
-              copy, and fades in line with the headline. Pinned to a stable
+          {/* Bubble layer: each message is pushed up by the next and fades
+              out once it drops out of the newest two. Pinned to a stable
               bottom (keyboard panel + a min-height input bar) so it never shifts
               when the input field grows to wrap a long message. Overflow visible
               so bubbles float clear of the keyboard. */}
           <div
-            ref={bubbleAreaRef}
             className="pointer-events-none absolute inset-x-0 top-0"
             style={{ bottom: baseOffset, overflow: "visible" }}
           >
@@ -473,8 +420,11 @@ export default function HeroKeyboardAnimation({
                       }}
                       className="absolute"
                       style={style}
-                      initial={{ y: 0 }}
-                      animate={{ y: p ? -p.y : 0 }}
+                      initial={{ y: 0, opacity: 1 }}
+                      animate={{
+                        y: p ? -p.y : 0,
+                        opacity: p && p.rank >= VISIBLE_MESSAGES ? 0 : 1,
+                      }}
                       transition={{
                         type: "tween",
                         duration: 0.5,
