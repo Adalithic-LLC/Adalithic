@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import AppStoreCard from "./app-store-card";
@@ -7,8 +7,6 @@ import { introBus } from "@/lib/intro-bus";
 
 export default function Hero() {
   const { t } = useTranslation();
-
-  const cardRef = useRef<HTMLDivElement>(null);
 
   // Announce to the nav that the hero is here (so its logo waits for a cue
   // rather than appearing fully formed), then cue it straight away so the
@@ -62,7 +60,6 @@ export default function Hero() {
 
           {/* Link card: the App Store listing over "See how it works". */}
           <motion.div
-            ref={cardRef}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
@@ -73,15 +70,14 @@ export default function Hero() {
 
           {/* Live keyboard animation, below everything else. It starts typing
               on load, then Rewords and sends the conversation, each message
-              pushing the last up the stack and fading out before it reaches
-              the card. */}
+              pushing the last up; only the newest two stay visible. */}
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
             className="mt-8 flex justify-center"
           >
-            <HeroKeyboardAnimation ceilingRef={cardRef} />
+            <HeroKeyboardAnimation />
           </motion.div>
         </div>
       </div>
