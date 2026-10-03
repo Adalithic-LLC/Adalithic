@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. Haki zote zimehifadhiwa."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Kibodi ya AI inayoendesha mazungumzo ya lugha nyingi",
+    "title": "<brand>Kujifunza lugha</brand> kwa njia yako",
+    "body": "Jifunze kwa kutuma ujumbe katika programu yoyote. Rahisisha mawasiliano ya pande mbili kati ya lugha tofauti.",
     "imageAlt": "Kibodi ya Arcatext ikitafsiri na kusahihisha ujumbe katika programu ya gumzo.",
     "learnMore": "Ona jinsi inavyofanya kazi",
-    "getInTouch": "Wasiliana nasi",
     "typewriter": [
       "Jifunze lugha",
       "Wasiliana kwa ajili ya biashara",

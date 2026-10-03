@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. 保留一切權利。"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "驅動多語對話的人工智慧鍵盤",
+    "title": "由你主導的<brand>語言學習</brand>",
+    "body": "在任何應用程式裡，邊傳訊息邊學習。讓跨語言的雙向溝通更順暢。",
     "imageAlt": "Arcatext 鍵盤在聊天應用程式中翻譯並修正一則訊息。",
     "learnMore": "看看它如何運作",
-    "getInTouch": "聯絡我們",
     "typewriter": [
       "學習一門語言",
       "用於商務溝通",

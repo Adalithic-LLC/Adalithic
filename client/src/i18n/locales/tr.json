@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. Tüm hakları saklıdır."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Çok dilli sohbetlere güç veren yapay zeka klavyesi",
+    "title": "Kullanıcı odaklı <brand>dil öğrenimi</brand>",
+    "body": "Herhangi bir uygulamada mesajlaşarak öğrenin. Diller arasında iki yönlü iletişimi kolaylaştırın.",
     "imageAlt": "Arcatext klavyesi bir sohbet uygulamasında bir mesajı çevirip düzeltirken.",
     "learnMore": "Nasıl çalıştığını görün",
-    "getInTouch": "Bize ulaşın",
     "typewriter": [
       "Bir dil öğrenin",
       "İş için iletişim kurun",

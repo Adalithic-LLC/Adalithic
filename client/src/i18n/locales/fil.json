@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. Nakalaan ang lahat ng karapatan."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Ang AI keyboard na nagpapagana ng usapan sa maraming wika",
+    "title": "<brand>Pag-aaral ng wika</brand> sa sarili mong paraan",
+    "body": "Matuto habang nagte-text sa kahit anong app. Padaliin ang dalawang-panig na komunikasyon sa iba't ibang wika.",
     "imageAlt": "Ang Arcatext keyboard na nagsasalin at nagwawasto ng isang mensahe sa isang chat app.",
     "learnMore": "Tingnan kung paano ito gumagana",
-    "getInTouch": "Makipag-ugnayan sa amin",
     "typewriter": [
       "Matuto ng isang wika",
       "Makipag-usap para sa negosyo",

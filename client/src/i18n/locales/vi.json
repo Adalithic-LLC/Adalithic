@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. Bảo lưu mọi quyền."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Bàn phím AI tiếp sức cho những cuộc trò chuyện đa ngôn ngữ",
+    "title": "<brand>Học ngôn ngữ</brand> theo cách của bạn",
+    "body": "Học qua việc nhắn tin trong bất kỳ ứng dụng nào. Giúp giao tiếp hai chiều giữa các ngôn ngữ trở nên dễ dàng hơn.",
     "imageAlt": "Bàn phím Arcatext đang dịch và chỉnh sửa một tin nhắn trong ứng dụng trò chuyện.",
     "learnMore": "Xem cách hoạt động",
-    "getInTouch": "Liên hệ với chúng tôi",
     "typewriter": [
       "Học một ngôn ngữ",
       "Giao tiếp trong công việc",

@@ -71,8 +71,9 @@ export function useSeo() {
       title = `${t("legalPages.termsTitle")} · Arcatext`;
       description = `${t("legalPages.termsTitle")} · Arcatext by Adalithic LLC.`;
     } else {
-      title = `Arcatext — ${t("hero.tagline")}`;
-      description = t("features.subtitle");
+      // The headline carries <brand> markup for the hero; strip it here.
+      title = `Arcatext — ${t("hero.title").replace(/<\/?brand>/g, "")}`;
+      description = t("hero.body");
     }
 
     document.title = title;

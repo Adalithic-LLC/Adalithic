@@ -19,10 +19,9 @@
     "features": "Funkciók"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "A mesterséges intelligenciára épülő billentyűzet, amely többnyelvű beszélgetéseket hajt",
+    "title": "<brand>Nyelvtanulás</brand> a saját utadon",
+    "body": "Tanulj üzenetküldés közben, bármelyik alkalmazásban. Tedd gördülékenyebbé a kétirányú kommunikációt a nyelvek között.",
     "learnMore": "Nézd meg, hogyan működik",
-    "getInTouch": "Lépj kapcsolatba velünk",
     "imageAlt": "Az Arcatext billentyűzet egy üzenetet fordít és javít egy csevegőalkalmazásban.",
     "typewriter": [
       "Tanulj meg egy nyelvet",

@@ -19,10 +19,9 @@
     "features": "Funcționalități"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Tastatura cu inteligență artificială care alimentează conversații multilingve",
+    "title": "<brand>Învățarea limbilor</brand>, în ritmul dumneavoastră",
+    "body": "Învățați scriind mesaje în orice aplicație. Simplificați comunicarea în ambele sensuri, între limbi diferite.",
     "learnMore": "Vedeți cum funcționează",
-    "getInTouch": "Contactați-ne",
     "imageAlt": "Tastatura Arcatext traduce și corectează un mesaj într-o aplicație de chat.",
     "typewriter": [
       "Învățați o limbă",

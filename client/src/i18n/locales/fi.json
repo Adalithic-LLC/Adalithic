@@ -19,10 +19,9 @@
     "features": "Ominaisuudet"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Tekoälynäppäimistö, joka vie monikielisiä keskusteluja eteenpäin",
+    "title": "Käyttäjälähtöistä <brand>kieltenoppimista</brand>",
+    "body": "Opi viestittelemällä missä tahansa sovelluksessa. Sujuvoita kaksisuuntaista viestintää kielestä toiseen.",
     "learnMore": "Katso, miten se toimii",
-    "getInTouch": "Ota yhteyttä",
     "imageAlt": "Arcatext-näppäimistö kääntää ja korjaa viestiä chat-sovelluksessa.",
     "typewriter": [
       "Opi kieli",

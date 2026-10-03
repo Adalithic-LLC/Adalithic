@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. Tous droits réservés."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Le clavier IA qui fait vivre des conversations multilingues",
+    "title": "<brand>L’apprentissage des langues</brand>, piloté par vous",
+    "body": "Apprenez en écrivant des messages dans n’importe quelle application. Simplifiez la communication dans les deux sens, d’une langue à l’autre.",
     "imageAlt": "Le clavier Arcatext traduisant et corrigeant un message dans une application de messagerie.",
     "learnMore": "Découvrez comment ça marche",
-    "getInTouch": "Nous contacter",
     "typewriter": [
       "Apprenez une langue",
       "Communiquez pour le travail",

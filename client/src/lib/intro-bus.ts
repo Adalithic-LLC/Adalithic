@@ -1,13 +1,11 @@
 // Tiny cross-component signal bus for the homepage intro animation.
 //
-// The Hero component orchestrates the flying-icon sequence, but the final
-// step — the I-beam logo "constructing" itself in the top nav bar — lives in
-// a different component (Navigation). This bus lets the Hero tell the nav when
+// The hero's opening flourish — the I-beam logo "constructing" itself in the
+// top nav bar — lives in a different component (Navigation) from the Hero. This bus lets the Hero tell the nav when
 // to build, without threading refs/props through the whole tree.
 //
-// The nav's build is cued by scroll, not by the intro's timeline: the Hero
-// fires it when the App Store card (which shows the same app icon) has
-// scrolled up out of sight, so the icon is only ever in one place at a time.
+// The Hero fires the cue as soon as it mounts, so the I-beam builds as the
+// hero's keyboard animation starts typing.
 //
 // Phases:
 //   idle     – no intro is playing (e.g. a legal page with no Hero)

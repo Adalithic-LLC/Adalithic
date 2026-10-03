@@ -19,11 +19,10 @@
     "features": "Funktioner"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "AI-tastaturet, der driver flersprogede samtaler",
+    "title": "<brand>Sproglæring</brand> på dine præmisser",
+    "body": "Lær ved at skrive beskeder i en hvilken som helst app. Gør kommunikationen begge veje nemmere på tværs af sprog.",
     "imageAlt": "Arcatext-tastaturet, der oversætter og retter en besked i en chat-app.",
     "learnMore": "Se, hvordan det virker",
-    "getInTouch": "Kontakt os",
     "typewriter": [
       "Lær et sprog",
       "Kommunikér i erhvervslivet",

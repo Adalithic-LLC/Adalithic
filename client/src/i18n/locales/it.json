@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. Tutti i diritti riservati."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "La tastiera con IA che alimenta conversazioni multilingue",
+    "title": "<brand>Imparare le lingue</brand> a modo tuo",
+    "body": "Impara scrivendo messaggi in qualsiasi app. Semplifica la comunicazione bidirezionale tra lingue diverse.",
     "imageAlt": "La tastiera Arcatext traduce e corregge un messaggio in un'app di chat.",
     "learnMore": "Scopri come funziona",
-    "getInTouch": "Contattaci",
     "typewriter": [
       "Impara una lingua",
       "Comunica per lavoro",

@@ -19,11 +19,10 @@
     "features": "Functies"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Het AI-toetsenbord dat meertalige gesprekken mogelijk maakt",
+    "title": "<brand>Talen leren</brand> op jouw manier",
+    "body": "Leer door te appen in elke app. Stroomlijn tweerichtingscommunicatie over taalgrenzen heen.",
     "imageAlt": "Het Arcatext-toetsenbord dat een bericht in een chat-app vertaalt en corrigeert.",
     "learnMore": "Ontdek hoe het werkt",
-    "getInTouch": "Neem contact op",
     "typewriter": [
       "Leer een taal",
       "Communiceer voor zaken",
