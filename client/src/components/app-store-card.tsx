@@ -1,6 +1,5 @@
-import { useId } from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { ARCATEXT_APP_STORE_URL } from "@/lib/app-store";
 
 interface AppStoreCardProps {
@@ -10,31 +9,10 @@ interface AppStoreCardProps {
   className?: string;
 }
 
-/**
- * The App Store logo: the white "A" (pencil, brush and ruler) on Apple's blue
- * gradient tile. Drawn inline so it stays crisp at any size and needs no asset.
- * The gradient id is per-instance so two cards on one page can't collide.
- */
-function AppStoreLogo({ className = "" }: { className?: string }) {
-  const gradientId = useId();
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden className={className}>
-      <defs>
-        <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#18BFFB" />
-          <stop offset="1" stopColor="#2072F3" />
-        </linearGradient>
-      </defs>
-      <rect width="24" height="24" rx="5.4" fill={`url(#${gradientId})`} />
-      <g stroke="#fff" strokeWidth="1.7" strokeLinecap="round" fill="none">
-        <path d="M13.1 6.4 7.5 16.1" />
-        <path d="M10.9 6.4 16.5 16.1" />
-        <path d="M6 13.6h12" />
-        <path d="M6.6 17.6 6 18.6" />
-      </g>
-    </svg>
-  );
-}
+// Apple's official App Store icon, from the App Store marketing resources
+// (developer.apple.com/app-store/marketing/guidelines). Used as supplied —
+// Apple's guidelines don't allow redrawing or recoloring it.
+const APP_STORE_ICON = "/app-store-icon.png";
 
 /**
  * The hero's link card: the App Store listing (primary) stacked over a
@@ -63,7 +41,12 @@ export default function AppStoreCard({ onHowItWorks, className = "" }: AppStoreC
             data-testid="link-app-store"
             className="group flex items-center gap-4 rounded-2xl bg-gray-950 px-5 py-3.5 text-white shadow-lg shadow-blue-900/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
           >
-            <AppStoreLogo className="h-11 w-11 flex-shrink-0" />
+            <img
+              src={APP_STORE_ICON}
+              alt=""
+              aria-hidden
+              className="h-12 w-12 flex-shrink-0"
+            />
 
             <span className="flex-1 text-left">
               <span className="block text-xs font-semibold uppercase tracking-wider text-white/60">
@@ -87,13 +70,9 @@ export default function AppStoreCard({ onHowItWorks, className = "" }: AppStoreC
           type="button"
           onClick={onHowItWorks}
           data-testid="button-learn-more"
-          className="group flex items-center justify-center gap-2 rounded-2xl border border-gray-300 bg-white px-5 py-3.5 text-lg font-semibold text-secondary transition-colors duration-200 hover:border-gray-400 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          className="flex items-center justify-center rounded-2xl border border-gray-300 bg-white px-5 py-3.5 text-lg font-semibold text-secondary transition-colors duration-200 hover:border-gray-400 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
         >
           {t("hero.learnMore")}
-          <ArrowDown
-            aria-hidden
-            className="h-4 w-4 transition-transform duration-200 group-hover:translate-y-0.5"
-          />
         </button>
       </div>
     </div>
