@@ -39,7 +39,7 @@ export default function AppStoreCard({ onHowItWorks, className = "" }: AppStoreC
             target="_blank"
             rel="noopener noreferrer"
             data-testid="link-app-store"
-            className="group flex items-center gap-4 rounded-2xl bg-gray-950 px-5 py-3.5 text-white shadow-lg shadow-blue-900/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+            className="group flex items-center gap-4 rounded-2xl bg-brand px-5 py-3.5 text-white shadow-lg shadow-blue-900/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
           >
             <img
               src={APP_STORE_ICON}
@@ -49,7 +49,7 @@ export default function AppStoreCard({ onHowItWorks, className = "" }: AppStoreC
             />
 
             <span className="flex-1 text-left">
-              <span className="block text-xs font-semibold uppercase tracking-wider text-white/60">
+              <span className="block text-xs font-semibold uppercase tracking-wider text-white/70">
                 App Store
               </span>
               {/* Fully Latin, so pin it LTR rather than leaning on the bidi
@@ -61,7 +61,7 @@ export default function AppStoreCard({ onHowItWorks, className = "" }: AppStoreC
 
             <ArrowUpRight
               aria-hidden
-              className="h-5 w-5 flex-shrink-0 text-white/50 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:text-white rtl:-scale-x-100"
+              className="h-5 w-5 flex-shrink-0 text-white/60 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:text-white rtl:-scale-x-100"
             />
           </a>
         )}
