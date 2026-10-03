@@ -12,9 +12,9 @@ const APP_ICON = "/AppIcon.png";
 const GLYPH_RATIO = 0.6;
 
 interface ArcatextIntroProps {
-  /** The hero <h1> ("Arcatext") the icon scans across. */
+  /** The hero <h1> the icon scans across (its last line). */
   titleRef: RefObject<HTMLElement>;
-  /** The typewriter "text field" the icon shrinks down to and clicks. */
+  /** The keyboard's input field the icon shrinks down to and clicks. */
   fieldRef: RefObject<HTMLElement>;
   /** Fires when the icon lands in the field — cue the highlight. */
   onLand: () => void;
@@ -33,9 +33,9 @@ type IconStyle = {
 };
 
 /**
- * The page-load flourish: the app icon scans across the "Arcatext"
- * headline at headline size, glides down while shrinking to the typewriter
- * line, "clicks" into it (darken + squish + release), then disappears so the
+ * The page-load flourish: the app icon scans across the headline's last line
+ * at headline size, glides down while shrinking to the keyboard's input
+ * field, "clicks" into it (darken + squish + release), then disappears so the
  * typing animation can take over.
  *
  * Rendered as a single fixed-position <img> driven imperatively so we control
@@ -117,23 +117,34 @@ export default function ArcatextIntro({
       const titleLh = lineHeightOf(title);
       const titleSize = titleLh / GLYPH_RATIO;
 
-      // Measure the actual rendered text ("Arcatext") rather than the
-      // full-width centered <h1> box, so the scan starts on the "A" and ends
-      // on the "t".
-      const textRectOf = (el: HTMLElement): DOMRect => {
+      // Measure the actual rendered text rather than the full-width centered
+      // <h1> box, so the scan starts on the first letter and ends on the last.
+      // The headline wraps, so take only its LAST line — the one nearest the
+      // field the icon curves down into. A line can span several rects (the
+      // brand-colored span is its own box), so union every rect on that line.
+      const textRectOf = (el: HTMLElement) => {
         const range = document.createRange();
         range.selectNodeContents(el);
-        const r = range.getBoundingClientRect();
+        const rects = Array.from(range.getClientRects()).filter((r) => r.width > 0);
         range.detach();
-        return r;
+        if (!rects.length) return el.getBoundingClientRect();
+        const lastTop = Math.max(...rects.map((r) => r.top));
+        // Leading is tight (1.05), so lines' rects overlap vertically — group
+        // by top instead, within half a line of the last.
+        const line = rects.filter((r) => r.top > lastTop - r.height / 2);
+        const top = Math.min(...line.map((r) => r.top));
+        const bottom = Math.max(...line.map((r) => r.bottom));
+        const left = Math.min(...line.map((r) => r.left));
+        const right = Math.max(...line.map((r) => r.right));
+        return { left, right, top, height: bottom - top };
       };
 
       const startPoint = () => {
         const tr = textRectOf(title);
         return {
-          x: tr.left - 16, // 16px left of the "M"
+          x: tr.left - 16, // 16px left of the line's first letter
           y: tr.top + tr.height / 2,
-          right: tr.right + 16, // 16px right of the "." — where the curve begins
+          right: tr.right + 16, // 16px right of its last — where the curve begins
         };
       };
 
@@ -157,9 +168,9 @@ export default function ArcatextIntro({
       await wait(240);
       if (cancelled) return;
 
-      // 3) One continuous move: scan across "Arcatext" to its end, then —
-      //    without stopping — sweep along a curve down into the typewriter
-      //    field, shrinking as it goes.
+      // 3) One continuous move: scan across the headline's last line to its
+      //    end, then — without stopping — sweep along a curve down into the
+      //    input field, shrinking as it goes.
       const s = startPoint();
       const fr = field.getBoundingClientRect();
       const bigSize = titleSize;

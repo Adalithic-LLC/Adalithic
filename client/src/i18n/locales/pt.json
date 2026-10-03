@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. Todos os direitos reservados."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "O teclado com IA que impulsiona conversas multilíngues",
+    "title": "<brand>Aprendizado de idiomas</brand> do seu jeito",
+    "body": "Aprenda trocando mensagens em qualquer app. Simplifique a comunicação nos dois sentidos entre idiomas.",
     "imageAlt": "O teclado Arcatext traduzindo e corrigindo uma mensagem em um app de chat.",
     "learnMore": "Veja como funciona",
-    "getInTouch": "Fale conosco",
     "typewriter": [
       "Aprenda um idioma",
       "Comunique-se para negócios",

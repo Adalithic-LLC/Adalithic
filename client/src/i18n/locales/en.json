@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. All rights reserved."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "The AI Keyboard Powering Multilingual Conversations",
+    "title": "User-driven <brand>language learning</brand>",
+    "body": "Learn by texting in any app. Streamline 2‑way communication across languages.",
     "imageAlt": "The Arcatext keyboard translating and correcting a message in a chat app.",
     "learnMore": "See how it works",
-    "getInTouch": "Get in touch",
     "typewriter": [
       "Learn a language",
       "Communicate for business",

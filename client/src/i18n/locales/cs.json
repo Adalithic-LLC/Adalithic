@@ -19,10 +19,9 @@
     "features": "Funkce"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Klávesnice s umělou inteligencí, která pohání vícejazyčné konverzace",
+    "title": "<brand>Výuka jazyků</brand> podle vás",
+    "body": "Učte se psaním zpráv v jakékoli aplikaci. Zjednodušte oboustrannou komunikaci napříč jazyky.",
     "learnMore": "Podívejte se, jak to funguje",
-    "getInTouch": "Kontaktujte nás",
     "imageAlt": "Klávesnice Arcatext překládá a opravuje zprávu v chatovací aplikaci.",
     "typewriter": [
       "Naučte se jazyk",

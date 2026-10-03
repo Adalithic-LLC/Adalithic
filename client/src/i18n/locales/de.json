@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. Alle Rechte vorbehalten."
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Die KI-Tastatur, die mehrsprachige Gespräche antreibt",
+    "title": "Selbstbestimmtes <brand>Sprachenlernen</brand>",
+    "body": "Lerne beim Texten in jeder App. Vereinfache die Kommunikation in beide Richtungen – über Sprachgrenzen hinweg.",
     "imageAlt": "Die Arcatext-Tastatur übersetzt und korrigiert eine Nachricht in einer Chat-App.",
     "learnMore": "So funktioniert's",
-    "getInTouch": "Kontakt aufnehmen",
     "typewriter": [
       "Lerne eine Sprache",
       "Kommuniziere geschäftlich",

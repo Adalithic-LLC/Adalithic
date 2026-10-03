@@ -19,11 +19,10 @@
     "features": "Funkcje"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "Klawiatura ze sztuczną inteligencją, która napędza wielojęzyczne rozmowy",
+    "title": "<brand>Nauka języków</brand> na Twoich zasadach",
+    "body": "Ucz się, pisząc wiadomości w dowolnej aplikacji. Usprawnij dwustronną komunikację między językami.",
     "imageAlt": "Klawiatura Arcatext tłumacząca i poprawiająca wiadomość w aplikacji do czatowania.",
     "learnMore": "Zobacz, jak to działa",
-    "getInTouch": "Skontaktuj się",
     "typewriter": [
       "Ucz się języka",
       "Komunikuj się w biznesie",

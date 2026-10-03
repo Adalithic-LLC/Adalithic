@@ -19,11 +19,10 @@
     "features": "Funksjoner"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "KI-tastaturet som driver flerspråklige samtaler",
+    "title": "<brand>Språklæring</brand> på dine premisser",
+    "body": "Lær ved å sende meldinger i hvilken som helst app. Gjør kommunikasjonen begge veier enklere på tvers av språk.",
     "imageAlt": "Arcatext-tastaturet som oversetter og retter en melding i en chat-app.",
     "learnMore": "Se hvordan det fungerer",
-    "getInTouch": "Ta kontakt",
     "typewriter": [
       "Lær et språk",
       "Kommuniser i næringslivet",

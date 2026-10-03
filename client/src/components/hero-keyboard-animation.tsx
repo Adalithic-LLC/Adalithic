@@ -27,8 +27,7 @@ import {
  * It auto-plays the core loop — type a message, tap Reword to translate it in
  * place, then send it. Sent and received messages stack just above the input
  * bar; each new message pushes the older ones straight up, and they fade out
- * completely as they rise, before ever reaching the three parked bubbles that
- * snapped into the row below the tagline.
+ * completely as they rise, before ever reaching the hero copy above.
  *
  * The keyboard/toolbar colors and layout are reused from the interactive
  * keyboard prototype in the product-design portfolio (ArcatextKeyboard.tsx).
@@ -36,9 +35,7 @@ import {
 
 // A demo back-and-forth conversation. Each sent message is typed in the user's
 // native language, then Reworded (translated) in place before being sent; the
-// received messages type themselves out as replies. The very first "message" is
-// the subheader itself — it is typed, sent, and flown up into place by the hero
-// (see onSubheaderSend), so the conversation here opens with the reply to it.
+// received messages type themselves out as replies.
 type Step =
   // A sent message with no `reworded` types and sends in the native language
   // (no Reword step); with `reworded` it types, Rewords, then sends in Japanese.
@@ -105,35 +102,22 @@ interface HeroKeyboardAnimationProps {
   focused?: boolean;
   /** Ref to the input field so the intro can fly the logo into it. */
   inputRef?: React.Ref<HTMLDivElement>;
-  /** The subheader/tagline — rising messages fade out just below it. */
-  taglineRef?: React.RefObject<HTMLElement | null>;
-  /** The headline (unused now the stack fades below the subheader). */
-  titleRef?: React.RefObject<HTMLElement | null>;
-  /** The subheader text the intro types and sends before the conversation. */
-  subheaderText?: string;
-  /**
-   * Fires once the intro has typed and "sent" the subheader message — the hero
-   * then flies the bubble up into place as the real subheader.
-   */
-  onSubheaderSend?: () => void;
+  /** The hero element just above the animation — rising messages fade out
+   *  just below it. */
+  ceilingRef?: React.RefObject<HTMLElement | null>;
 }
 
 export default function HeroKeyboardAnimation({
   active = true,
   focused = false,
   inputRef,
-  taglineRef,
-  titleRef,
-  subheaderText = "",
-  onSubheaderSend,
+  ceilingRef,
 }: HeroKeyboardAnimationProps) {
   const { t, i18n } = useTranslation();
   const reduceMotion = useReducedMotion();
 
   // ── visual state driven by the timeline ──
-  // The subheader starts already typed in the field (it is "sent" on logo-click
-  // rather than typed out).
-  const [text, setText] = useState(subheaderText);
+  const [text, setText] = useState("");
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
   const [rewordLoading, setRewordLoading] = useState(false);
   const [pressed, setPressed] = useState<"reword" | "send" | null>(null);
@@ -173,10 +157,6 @@ export default function HeroKeyboardAnimation({
   // the parked row) and 1 at/below clearLine + `band`.
   const clearLineRef = useRef(0);
   const bandRef = useRef(400);
-  // Keep the subheader-send callback in a ref so the timeline effect (rebuilt
-  // only on reduced-motion / active changes) always calls the latest one.
-  const onSubheaderRef = useRef(onSubheaderSend);
-  onSubheaderRef.current = onSubheaderSend;
 
   // Lay the stack out: newest message sits at the base, each older one pushed up
   // by the heights below it. Runs after every change so a new (or growing)
@@ -257,8 +237,8 @@ export default function HeroKeyboardAnimation({
     syncBaseOffset();
   }, [text, syncBaseOffset]);
 
-  // Measure the fade budget: fade messages out just below the subheader so a
-  // rising message is gone before it reaches it.
+  // Measure the fade budget: fade messages out just below the ceiling element
+  // so a rising message is gone before it reaches it.
   useEffect(() => {
     const measure = () => {
       syncBaseOffset();
@@ -266,9 +246,9 @@ export default function HeroKeyboardAnimation({
       if (!area || !scale) return;
       const baseY = area.bottom; // messages stack up from here
 
-      const tag = taglineRef?.current?.getBoundingClientRect();
-      if (tag) {
-        const clearLine = tag.bottom + 24; // opacity reaches 0 a little below the subheader
+      const ceiling = ceilingRef?.current?.getBoundingClientRect();
+      if (ceiling) {
+        const clearLine = ceiling.bottom + 24; // opacity reaches 0 a little below the ceiling
         clearLineRef.current = clearLine;
         // Reserve a little space at the base so the newest message stays fully
         // opaque, then fade across the rest of the gap up to the clear line.
@@ -281,8 +261,7 @@ export default function HeroKeyboardAnimation({
     };
     measure();
     const raf = requestAnimationFrame(measure);
-    // Re-measure after the hero's entrance animation has settled and after the
-    // subheader has flown into place.
+    // Re-measure after the hero's entrance animation has settled.
     const timers = [400, 1000, 1800, 3000].map((ms) => setTimeout(measure, ms));
     window.addEventListener("resize", measure);
     return () => {
@@ -290,7 +269,7 @@ export default function HeroKeyboardAnimation({
       timers.forEach(clearTimeout);
       window.removeEventListener("resize", measure);
     };
-  }, [scale, taglineRef, titleRef, syncBaseOffset]);
+  }, [scale, ceilingRef, syncBaseOffset]);
 
   // Build the continuously looping timeline. Rebuilt when reduced-motion or the
   // language changes — the script is localized, so switching locale restarts it
@@ -298,7 +277,7 @@ export default function HeroKeyboardAnimation({
   const script = useMemo(() => buildScript(t), [t, i18n.language]);
   useEffect(() => {
     // Reduced motion: skip the animation and show the last few messages
-    // statically (the hero reveals the subheader directly).
+    // statically.
     if (reduceMotion) {
       setText("");
       let id = 1;
@@ -347,22 +326,8 @@ export default function HeroKeyboardAnimation({
 
     b(() => {}, 150); // brief settle after the logo clicks the field
 
-    // Subheader intro (once): the subheader is already sitting in the field — on
-    // the logo's "click" we press send, then hand off to the hero, which lets
-    // the bubble sit for 0.5s and flies it up into place as the real subheader.
-    // The conversation loop resumes AFTER this, so it plays only once.
-    if (subheaderText) {
-      b(() => setText(subheaderText), 40); // ensure the pre-filled text is shown
-      b(() => setPressed("send"), 240); // press send on logo-click
-      b(() => {
-        setPressed(null);
-        setText("");
-        onSubheaderRef.current?.();
-      }, 1600); // hold while the bubble sits and flies up into place
-    }
-
-    // The beat index the loop restarts at: the subheader intro plays once, then
-    // the conversation loops from here.
+    // The beat index the loop restarts at: the settle plays once, then the
+    // conversation loops from here.
     const loopStart = beats.length;
 
     script.forEach((step) => {
@@ -424,14 +389,14 @@ export default function HeroKeyboardAnimation({
       const beat = beats[i];
       beat.fn();
       i += 1;
-      // Loop back to the start of the conversation; the subheader intro plays
-      // only once.
+      // Loop back to the start of the conversation; the settle plays only
+      // once.
       if (i >= beats.length) i = loopStart;
       timer = setTimeout(run, beat.ms);
     };
     run();
     return () => clearTimeout(timer);
-  }, [reduceMotion, active, subheaderText, script]);
+  }, [reduceMotion, active, script]);
 
   // Shift state: the keys show caps only while the field is empty.
   const lower = text === "";

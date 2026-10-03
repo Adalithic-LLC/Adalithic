@@ -19,11 +19,10 @@
     "rights": "© 2026 Adalithic. 無断転載を禁じます。"
   },
   "hero": {
-    "title": "<brand>Arcatext</brand>",
-    "tagline": "多言語の会話を動かすAIキーボード",
+    "title": "あなたが主役の<brand>語学学習</brand>",
+    "body": "どのアプリでも、メッセージを送りながら学べる。言語の壁を越えた双方向のコミュニケーションを、もっとスムーズに。",
     "imageAlt": "チャットアプリでメッセージを翻訳・修正するArcatextキーボード。",
     "learnMore": "仕組みを見る",
-    "getInTouch": "お問い合わせ",
     "typewriter": [
       "言語を学ぶ",
       "ビジネスでコミュニケーション",
