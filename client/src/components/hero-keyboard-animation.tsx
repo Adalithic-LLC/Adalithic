@@ -96,11 +96,11 @@ const perChar = (len: number) =>
   Math.max(18, Math.round(TYPE_MS / Math.max(1, len)));
 
 interface HeroKeyboardAnimationProps {
-  /** Held until the intro's logo "clicks" into the field; then typing begins. */
+  /** Typing is held while this is false. */
   active?: boolean;
-  /** Lights up the input field while the logo is landing in it. */
+  /** Lights up the input field like a focused text input. */
   focused?: boolean;
-  /** Ref to the input field so the intro can fly the logo into it. */
+  /** Ref to the input field, for callers that need to measure it. */
   inputRef?: React.Ref<HTMLDivElement>;
   /** The hero element just above the animation — rising messages fade out
    *  just below it. */
@@ -291,8 +291,7 @@ export default function HeroKeyboardAnimation({
       return;
     }
 
-    // Wait for the intro to hand off (the logo "clicks" the field) before the
-    // first message starts typing.
+    // Hold the first message until the caller lets typing begin.
     if (!active) return;
 
     // A sent bubble appears at the base of the stack, pushing older messages up.
@@ -324,7 +323,7 @@ export default function HeroKeyboardAnimation({
     const beats: { fn: () => void; ms: number }[] = [];
     const b = (fn: () => void, ms: number) => beats.push({ fn, ms });
 
-    b(() => {}, 150); // brief settle after the logo clicks the field
+    b(() => {}, 150); // brief settle before the first message
 
     // The beat index the loop restarts at: the settle plays once, then the
     // conversation loops from here.
