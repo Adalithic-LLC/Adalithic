@@ -93,6 +93,26 @@
           "draft": "Una nafasi wikendi hii?"
         }
       },
+      "study": {
+        "title": "Mwongozo wa kujifunza unaokua kwa kila tafsiri",
+        "description": "Kila neno na kirai ambacho Reword hukutafsiria au kukusahihishia huhifadhiwa kwenye Mwongozo wako wa Kujifunza, pamoja na maana yake na ujumbe ulioutumia, ili uweze kurudia lugha unayoitumia kweli.",
+        "bullets": [
+          "Hujengwa kiotomatiki kutoka kwa mazungumzo yako mwenyewe",
+          "Ona kwanza maneno unayokosea mara nyingi zaidi",
+          "Chuja kwa lugha na aina ya neno"
+        ],
+        "alt": "Mwongozo wa Kujifunza wa Arcatext ukiwa wazi kwenye kibodi, ukionyesha maingizo ya Kihispania yaliyopangwa kuanzia yanayokosewa mara nyingi zaidi.",
+        "demo": {
+          "translations": [
+            "tukutane, tuonane",
+            "inanifaa, ni sawa kwangu",
+            "bado, hadi sasa",
+            "hamu, shauku, tamaa",
+            "kutumia vizuri, kunufaika na",
+            "mara moja, papo hapo"
+          ]
+        }
+      },
       "receive": {
         "title": "Elewa kila jibu, bila kuondoka kwenye kibodi",
         "description": "Bandika ujumbe unaopokea na Arcatext huutafsiri papo hapo ndani ya programu, ili usihitaji kamwe kuondoka kwenye mazungumzo.",
@@ -317,7 +337,18 @@
     "rewordScript": "ALFABETI YA LUGHA LENGWA",
     "synonyms": "VISAWE",
     "language": "Kiswahili",
-    "typePlaceholder": "Andika kitu"
+    "typePlaceholder": "Andika kitu",
+    "studyTitle": "Jifunze",
+    "studyTotal": "Jumla {{n}}",
+    "studySortFrequent": "Hukosewa mara kwa mara",
+    "studyAllTypes": "Aina zote",
+    "studyLanguage": "Kihispania",
+    "studyPos": {
+      "verb": "Kitenzi",
+      "phrase": "Kirai",
+      "adverb": "Kielezi",
+      "noun": "Nomino"
+    }
   },
   "referral": {
     "title": "Jiunge na programu ya rufaa",

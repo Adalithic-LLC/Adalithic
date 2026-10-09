@@ -93,6 +93,26 @@
           "draft": "Onko sinulla aikaa tänä viikonloppuna?"
         }
       },
+      "study": {
+        "title": "Opinto-opas, joka kasvaa jokaisen käännöksen myötä",
+        "description": "Jokainen sana ja ilmaus, jonka Reword kääntää tai korjaa puolestasi, tallentuu opinto-oppaaseesi yhdessä merkityksensä ja sen viestin kanssa, jossa käytit sitä, joten voit kerrata juuri sitä kieltä, jota oikeasti käytät.",
+        "bullets": [
+          "Syntyy automaattisesti omista keskusteluistasi",
+          "Näet ensin sanat, joissa teet eniten virheitä",
+          "Suodata kielen ja sanaluokan mukaan"
+        ],
+        "alt": "Arcatextin opinto-opas auki näppäimistössä, espanjankieliset merkinnät järjestettynä virheiden määrän mukaan.",
+        "demo": {
+          "translations": [
+            "nähdäänkö, tavataan",
+            "sopii minulle, käy minulle",
+            "vielä, yhä",
+            "halu, into, mieli",
+            "hyödyntää, ottaa kaikki irti",
+            "heti, saman tien"
+          ]
+        }
+      },
       "receive": {
         "title": "Ymmärrä jokainen vastaus poistumatta näppäimistöltä",
         "description": "Liitä saamasi viestit, niin Arcatext kääntää ne suoraan sovelluksessa, jotta sinun ei koskaan tarvitse poistua keskustelusta.",
@@ -317,7 +337,18 @@
     "rewordScript": "KOHDEKIELEN KIRJOITUSJÄRJESTELMÄ",
     "synonyms": "SYNONYYMIT",
     "language": "Suomi",
-    "typePlaceholder": "Kirjoita jotain"
+    "typePlaceholder": "Kirjoita jotain",
+    "studyTitle": "Opiskele",
+    "studyTotal": "Yhteensä {{n}}",
+    "studySortFrequent": "Usein menneet ohi",
+    "studyAllTypes": "Kaikki tyypit",
+    "studyLanguage": "Espanja",
+    "studyPos": {
+      "verb": "Verbi",
+      "phrase": "Fraasi",
+      "adverb": "Adverbi",
+      "noun": "Substantiivi"
+    }
   },
   "referral": {
     "title": "Liity suositteluohjelmaan",

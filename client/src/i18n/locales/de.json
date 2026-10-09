@@ -93,6 +93,26 @@
           "draft": "Hast du am Wochenende Zeit?"
         }
       },
+      "study": {
+        "title": "Ein Lernleitfaden, der mit jeder Übersetzung wächst",
+        "description": "Jedes Wort und jede Wendung, die Reword für dich übersetzt oder korrigiert, landet in deinem Lernleitfaden – mit Bedeutung und der Nachricht, in der du sie verwendet hast. So wiederholst du genau die Sprache, die du wirklich benutzt.",
+        "bullets": [
+          "Entsteht automatisch aus deinen eigenen Gesprächen",
+          "Sieh zuerst die Wörter, bei denen du am häufigsten danebenliegst",
+          "Filtere nach Sprache und Wortart"
+        ],
+        "alt": "Der Arcatext-Lernleitfaden in der Tastatur, mit spanischen Einträgen, sortiert nach den häufigsten Fehlern.",
+        "demo": {
+          "translations": [
+            "treffen wir uns, wollen wir uns treffen",
+            "passt mir, kommt mir gelegen",
+            "noch, immer noch",
+            "Lust, Verlangen, Drang",
+            "nutzen, das Beste daraus machen",
+            "sofort, gleich"
+          ]
+        }
+      },
       "receive": {
         "title": "Verstehe jede Antwort, ohne die Tastatur zu verlassen",
         "description": "Füge empfangene Nachrichten ein und Arcatext übersetzt sie direkt in der App, sodass du das Gespräch nie verlassen musst.",
@@ -317,7 +337,18 @@
     "rewordScript": "SCHRIFT DER ZIELSPRACHE",
     "synonyms": "SYNONYME",
     "language": "Deutsch",
-    "typePlaceholder": "Schreib etwas"
+    "typePlaceholder": "Schreib etwas",
+    "studyTitle": "Lernen",
+    "studyTotal": "{{n}} insgesamt",
+    "studySortFrequent": "Häufig verfehlt",
+    "studyAllTypes": "Alle Typen",
+    "studyLanguage": "Spanisch",
+    "studyPos": {
+      "verb": "Verb",
+      "phrase": "Ausdruck",
+      "adverb": "Adverb",
+      "noun": "Nomen"
+    }
   },
   "referral": {
     "title": "Tritt einem Empfehlungsprogramm bei",

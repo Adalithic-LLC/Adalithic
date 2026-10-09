@@ -93,6 +93,26 @@
           "draft": "이번 주말에 시간 있어?"
         }
       },
+      "study": {
+        "title": "번역할 때마다 늘어나는 학습 가이드",
+        "description": "Reword가 번역하거나 교정한 모든 단어와 표현이 그 뜻, 실제로 사용한 메시지와 함께 학습 가이드에 저장되므로, 내가 실제로 쓰는 언어를 복습할 수 있습니다.",
+        "bullets": [
+          "내 대화에서 자동으로 생성",
+          "자주 틀리는 단어부터 먼저 확인",
+          "언어와 품사별로 필터링"
+        ],
+        "alt": "가장 자주 틀린 순으로 정렬된 스페인어 항목을 보여 주는, 키보드에서 열린 Arcatext 학습 가이드.",
+        "demo": {
+          "translations": [
+            "만나자, 만날까",
+            "괜찮아, 나한테 딱 맞아",
+            "아직, 여전히",
+            "하고 싶은 마음, 의욕, 바람",
+            "활용하다, 이용하다",
+            "곧바로, 즉시"
+          ]
+        }
+      },
       "receive": {
         "title": "키보드를 벗어나지 않고 모든 답장을 이해하세요",
         "description": "받은 메시지를 붙여넣기만 하면 Arcatext가 앱 안에서 바로 번역해 주므로, 대화를 벗어날 필요가 없습니다.",
@@ -317,7 +337,18 @@
     "rewordScript": "번역 언어 문자",
     "synonyms": "동의어",
     "language": "한국어",
-    "typePlaceholder": "무엇이든 입력하세요"
+    "typePlaceholder": "무엇이든 입력하세요",
+    "studyTitle": "학습",
+    "studyTotal": "총 {{n}}개",
+    "studySortFrequent": "자주 틀림",
+    "studyAllTypes": "모든 유형",
+    "studyLanguage": "스페인어",
+    "studyPos": {
+      "verb": "동사",
+      "phrase": "구",
+      "adverb": "부사",
+      "noun": "명사"
+    }
   },
   "referral": {
     "title": "추천 프로그램 참여",

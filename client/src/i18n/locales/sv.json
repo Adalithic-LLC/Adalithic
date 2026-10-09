@@ -93,6 +93,26 @@
           "draft": "Har du tid i helgen?"
         }
       },
+      "study": {
+        "title": "En studieguide som växer med varje översättning",
+        "description": "Varje ord och fras som Reword översätter eller rättar åt dig sparas i din studieguide, tillsammans med vad det betyder och meddelandet du använde det i, så att du kan repetera det språk du faktiskt använder.",
+        "bullets": [
+          "Byggs automatiskt utifrån dina egna samtal",
+          "Se de ord du oftast missar först",
+          "Filtrera efter språk och ordklass"
+        ],
+        "alt": "Arcatexts studieguide öppen i tangentbordet, med spanska poster sorterade efter vilka som oftast missas.",
+        "demo": {
+          "translations": [
+            "ska vi ses, vi ses",
+            "det passar mig, funkar för mig",
+            "fortfarande, ännu",
+            "lust, längtan, sug",
+            "ta vara på, utnyttja",
+            "genast, med en gång"
+          ]
+        }
+      },
       "receive": {
         "title": "Förstå varje svar utan att lämna tangentbordet",
         "description": "Klistra in meddelanden du får så översätter Arcatext dem direkt i appen, så att du aldrig behöver lämna samtalet.",
@@ -317,7 +337,18 @@
     "rewordScript": "MÅLSPRÅKETS SKRIFT",
     "synonyms": "SYNONYMER",
     "language": "Svenska",
-    "typePlaceholder": "Skriv något"
+    "typePlaceholder": "Skriv något",
+    "studyTitle": "Plugga",
+    "studyTotal": "{{n}} totalt",
+    "studySortFrequent": "Ofta missade",
+    "studyAllTypes": "Alla typer",
+    "studyLanguage": "Spanska",
+    "studyPos": {
+      "verb": "Verb",
+      "phrase": "Uttryck",
+      "adverb": "Adverb",
+      "noun": "Substantiv"
+    }
   },
   "referral": {
     "title": "Gå med i ett värvningsprogram",

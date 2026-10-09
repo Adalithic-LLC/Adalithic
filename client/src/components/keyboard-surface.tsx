@@ -450,13 +450,17 @@ export function ScaledSurface({
   return (
     <div ref={wrapRef} className="flex w-full justify-center">
       <div
+        className="relative"
         style={{ width: width * scale, height: naturalH * scale }}
         role="img"
         aria-label={label}
       >
+        {/* Pinned to the frame's left edge: the scale runs from top left, so
+            in a right-to-left page the unscaled box would otherwise hang off
+            the frame's right edge and the drawing would land off-centre. */}
         <div
           ref={innerRef}
-          className="text-left"
+          className="absolute left-0 top-0 text-left"
           style={{
             width,
             transform: `scale(${scale})`,

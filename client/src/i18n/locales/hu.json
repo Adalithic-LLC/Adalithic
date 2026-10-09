@@ -93,6 +93,26 @@
           "draft": "Ráérsz a hétvégén?"
         }
       },
+      "study": {
+        "title": "Tanulási útmutató, amely minden fordítással bővül",
+        "description": "Minden szó és kifejezés, amelyet a Reword lefordít vagy kijavít neked, bekerül a Tanulási útmutatódba a jelentésével és azzal az üzenettel együtt, amelyben használtad, így azt a nyelvet ismételheted át, amelyet valóban használsz.",
+        "bullets": [
+          "Automatikusan épül fel a saját beszélgetéseidből",
+          "Elsőként azokat a szavakat látod, amelyeket a legtöbbször elrontasz",
+          "Szűrés nyelv és szófaj szerint"
+        ],
+        "alt": "Az Arcatext Tanulási útmutatója a billentyűzetben megnyitva, a leggyakrabban elrontott szavak szerint rendezett spanyol bejegyzésekkel.",
+        "demo": {
+          "translations": [
+            "találkozzunk, összefussunk",
+            "nekem megfelel, nekem jó",
+            "még, még mindig",
+            "kedv, vágy, sóvárgás",
+            "kihasználni, élni vele",
+            "azonnal, rögtön"
+          ]
+        }
+      },
       "receive": {
         "title": "Értsd meg minden választ anélkül, hogy elhagynád a billentyűzetet",
         "description": "Illeszd be a kapott üzeneteket, és az Arcatext egyből az alkalmazáson belül lefordítja őket, így soha nem kell elhagynod a beszélgetést.",
@@ -317,7 +337,18 @@
     "rewordScript": "CÉLNYELV ÍRÁSRENDSZERE",
     "synonyms": "SZINONIMÁK",
     "language": "Magyar",
-    "typePlaceholder": "Írj valamit"
+    "typePlaceholder": "Írj valamit",
+    "studyTitle": "Tanulás",
+    "studyTotal": "Összesen {{n}}",
+    "studySortFrequent": "Gyakran elrontott",
+    "studyAllTypes": "Minden típus",
+    "studyLanguage": "Spanyol",
+    "studyPos": {
+      "verb": "Ige",
+      "phrase": "Kifejezés",
+      "adverb": "Határozószó",
+      "noun": "Főnév"
+    }
   },
   "referral": {
     "title": "Csatlakozz egy ajánlói programhoz",

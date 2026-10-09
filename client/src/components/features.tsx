@@ -8,6 +8,7 @@ import ReverseCheckDemo from "@/components/reverse-check-demo";
 import RewordOptionsDemo from "@/components/reword-options-demo";
 import SynonymsDemo from "@/components/synonyms-demo";
 import CopyThreadDemo from "@/components/copy-thread-demo";
+import StudyGuideDemo from "@/components/study-guide-demo";
 
 // Each feature focuses on a single value Arcatext delivers, paired with the
 // visual that demonstrates it. Every visual is drawn in DOM from the Arcatext
@@ -22,6 +23,7 @@ type Feature = {
 
 const FEATURES: Feature[] = [
   { key: "reword", visual: () => <RewordKeyboard /> },
+  { key: "study", visual: () => <StudyGuideDemo /> },
   { key: "receive", visual: () => <PasteViewDemo /> },
   { key: "homographs", visual: () => <CheckViewDemo /> },
   { key: "reverse", visual: () => <ReverseCheckDemo /> },

@@ -93,6 +93,26 @@
           "draft": "Kamu ada waktu akhir pekan ini?"
         }
       },
+      "study": {
+        "title": "Panduan belajar yang terus bertambah di setiap terjemahan",
+        "description": "Setiap kata dan frasa yang diterjemahkan atau diperbaiki Reword untuk Anda tersimpan di Panduan Belajar, lengkap dengan artinya dan pesan tempat Anda menggunakannya, sehingga Anda bisa mengulang bahasa yang benar-benar Anda pakai.",
+        "bullets": [
+          "Tersusun otomatis dari percakapan Anda sendiri",
+          "Kata yang paling sering membuat Anda keliru tampil lebih dulu",
+          "Saring berdasarkan bahasa dan kelas kata"
+        ],
+        "alt": "Panduan Belajar Arcatext terbuka di keyboard, menampilkan entri bahasa Spanyol yang diurutkan dari yang paling sering keliru.",
+        "demo": {
+          "translations": [
+            "ayo ketemuan, kita ketemu yuk",
+            "cocok buat saya, pas untuk saya",
+            "masih, belum",
+            "keinginan, hasrat, kemauan",
+            "memanfaatkan, memaksimalkan",
+            "segera, langsung"
+          ]
+        }
+      },
       "receive": {
         "title": "Pahami setiap balasan, tanpa meninggalkan keyboard",
         "description": "Tempel pesan yang Anda terima dan Arcatext menerjemahkannya langsung di dalam aplikasi, sehingga Anda tak perlu meninggalkan percakapan.",
@@ -317,7 +337,18 @@
     "rewordScript": "AKSARA BAHASA SASARAN",
     "synonyms": "SINONIM",
     "language": "Bahasa Indonesia",
-    "typePlaceholder": "Tulis sesuatu"
+    "typePlaceholder": "Tulis sesuatu",
+    "studyTitle": "Belajar",
+    "studyTotal": "Total {{n}}",
+    "studySortFrequent": "Sering terlewat",
+    "studyAllTypes": "Semua jenis",
+    "studyLanguage": "Spanyol",
+    "studyPos": {
+      "verb": "Kata kerja",
+      "phrase": "Frasa",
+      "adverb": "Kata keterangan",
+      "noun": "Kata benda"
+    }
   },
   "referral": {
     "title": "Bergabung dengan program rujukan",

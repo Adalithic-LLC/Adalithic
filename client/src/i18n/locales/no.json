@@ -93,6 +93,26 @@
           "draft": "Har du tid i helgen?"
         }
       },
+      "study": {
+        "title": "En studieguide som vokser med hver oversettelse",
+        "description": "Hvert ord og uttrykk Reword oversetter eller retter for deg, lagres i studieguiden din sammen med betydningen og meldingen du brukte det i, slik at du kan repetere språket du faktisk bruker.",
+        "bullets": [
+          "Bygges automatisk fra dine egne samtaler",
+          "Se ordene du oftest bommer på, først",
+          "Filtrer etter språk og ordklasse"
+        ],
+        "alt": "Arcatext-studieguiden åpen i tastaturet, med spanske oppføringer sortert etter hvilke som oftest blir feil.",
+        "demo": {
+          "translations": [
+            "skal vi møtes, la oss møtes",
+            "passer meg fint, passer for meg",
+            "fortsatt, ennå",
+            "lyst, trang, ønske",
+            "utnytte, benytte seg av",
+            "med en gang, straks"
+          ]
+        }
+      },
       "receive": {
         "title": "Forstå hvert svar uten å forlate tastaturet",
         "description": "Lim inn meldinger du mottar, så oversetter Arcatext dem direkte i appen, slik at du aldri trenger å forlate samtalen.",
@@ -317,7 +337,18 @@
     "rewordScript": "MÅLSPRÅKETS SKRIFT",
     "synonyms": "SYNONYMER",
     "language": "Norsk",
-    "typePlaceholder": "Skriv noe"
+    "typePlaceholder": "Skriv noe",
+    "studyTitle": "Lær",
+    "studyTotal": "{{n}} totalt",
+    "studySortFrequent": "Ofte bommet",
+    "studyAllTypes": "Alle typer",
+    "studyLanguage": "Spansk",
+    "studyPos": {
+      "verb": "Verb",
+      "phrase": "Uttrykk",
+      "adverb": "Adverb",
+      "noun": "Substantiv"
+    }
   },
   "referral": {
     "title": "Bli med i et verveprogram",

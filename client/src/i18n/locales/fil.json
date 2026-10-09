@@ -93,6 +93,26 @@
           "draft": "May oras ka ba ngayong weekend?"
         }
       },
+      "study": {
+        "title": "Isang study guide na lumalago sa bawat salin",
+        "description": "Bawat salita at pariralang isinasalin o itinatama ng Reword para sa iyo ay nase-save sa iyong Study Guide, kasama ang kahulugan nito at ang mensaheng pinaggamitan mo, para mabalikan mo ang wikang talagang ginagamit mo.",
+        "bullets": [
+          "Awtomatikong nabubuo mula sa sarili mong mga usapan",
+          "Unang makita ang mga salitang pinakamadalas mong pagkamalian",
+          "I-filter ayon sa wika at bahagi ng pananalita"
+        ],
+        "alt": "Ang Arcatext Study Guide na bukas sa keyboard, na nagpapakita ng mga Spanish na entry na nakaayos ayon sa pinakamadalas na pagkakamali.",
+        "demo": {
+          "translations": [
+            "magkita tayo, magkikita ba tayo",
+            "ayos lang sa akin, swak sa akin",
+            "pa rin, pa",
+            "gana, pananabik, kagustuhan",
+            "samantalahin, sulitin",
+            "agad, ngayon din"
+          ]
+        }
+      },
       "receive": {
         "title": "Unawain ang bawat sagot, nang hindi umaalis sa keyboard",
         "description": "I-paste ang mga mensaheng natatanggap mo at isasalin ito ng Arcatext mismo sa loob ng app, para hindi mo na kailangang umalis sa usapan.",
@@ -317,7 +337,18 @@
     "rewordScript": "ALPABETO NG WIKANG PINUPUNTAHAN",
     "synonyms": "MGA KASINGKAHULUGAN",
     "language": "Filipino",
-    "typePlaceholder": "Magsulat ng kahit ano"
+    "typePlaceholder": "Magsulat ng kahit ano",
+    "studyTitle": "Pag-aaral",
+    "studyTotal": "{{n}} lahat",
+    "studySortFrequent": "Madalas na nalalampasan",
+    "studyAllTypes": "Lahat ng uri",
+    "studyLanguage": "Spanish",
+    "studyPos": {
+      "verb": "Pandiwa",
+      "phrase": "Parirala",
+      "adverb": "Pang-abay",
+      "noun": "Pangngalan"
+    }
   },
   "referral": {
     "title": "Sumali sa isang referral program",

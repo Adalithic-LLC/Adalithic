@@ -93,6 +93,26 @@
           "draft": "Você está livre neste fim de semana?"
         }
       },
+      "study": {
+        "title": "Um guia de estudo que cresce a cada tradução",
+        "description": "Cada palavra e expressão que o Reword traduz ou corrige para você é salva no seu Guia de estudo, com o significado e a mensagem em que você a usou, para você revisar o idioma que realmente usa.",
+        "bullets": [
+          "Criado automaticamente a partir das suas próprias conversas",
+          "Veja primeiro as palavras que você mais erra",
+          "Filtre por idioma e classe gramatical"
+        ],
+        "alt": "O Guia de estudo do Arcatext aberto no teclado, mostrando entradas em espanhol ordenadas pelas que você mais erra.",
+        "demo": {
+          "translations": [
+            "vamos nos encontrar, a gente se vê?",
+            "pra mim está bom, me serve",
+            "ainda, até agora",
+            "vontade, desejo, anseio",
+            "aproveitar, tirar proveito de",
+            "já, imediatamente"
+          ]
+        }
+      },
       "receive": {
         "title": "Entenda cada resposta sem sair do teclado",
         "description": "Cole as mensagens que você recebe e o Arcatext as traduz dentro do próprio app, para você nunca precisar sair da conversa.",
@@ -317,7 +337,18 @@
     "rewordScript": "ESCRITA DO IDIOMA DE DESTINO",
     "synonyms": "SINÔNIMOS",
     "language": "Português",
-    "typePlaceholder": "Escreva algo"
+    "typePlaceholder": "Escreva algo",
+    "studyTitle": "Estudar",
+    "studyTotal": "{{n}} no total",
+    "studySortFrequent": "Errados com frequência",
+    "studyAllTypes": "Todos os tipos",
+    "studyLanguage": "Espanhol",
+    "studyPos": {
+      "verb": "Verbo",
+      "phrase": "Expressão",
+      "adverb": "Advérbio",
+      "noun": "Substantivo"
+    }
   },
   "referral": {
     "title": "Adira a um programa de indicação",

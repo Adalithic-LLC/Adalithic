@@ -93,6 +93,26 @@
           "draft": "這週末有空嗎？"
         }
       },
+      "study": {
+        "title": "隨每次翻譯不斷擴充的學習指南",
+        "description": "Reword 為你翻譯或修正的每個單字和片語都會儲存到學習指南中，附上釋義和你使用它的那則訊息，讓你複習自己真正在用的語言。",
+        "bullets": [
+          "根據你自己的對話自動建立",
+          "優先查看最常出錯的單字",
+          "依語言和詞性篩選"
+        ],
+        "alt": "在鍵盤中開啟的 Arcatext 學習指南，顯示依出錯頻率排序的西班牙文條目。",
+        "demo": {
+          "translations": [
+            "見個面吧，要不要見面",
+            "我方便，對我合適",
+            "仍然，還",
+            "渴望，慾望，想要",
+            "充分利用，趁機",
+            "馬上，立刻"
+          ]
+        }
+      },
       "receive": {
         "title": "無需離開鍵盤，讀懂每一則回覆",
         "description": "貼上收到的訊息，Arcatext 就會在應用程式內直接翻譯，讓你無需離開對話。",
@@ -317,7 +337,18 @@
     "rewordScript": "目標語言文字",
     "synonyms": "同義詞",
     "language": "繁體中文",
-    "typePlaceholder": "輸入內容"
+    "typePlaceholder": "輸入內容",
+    "studyTitle": "學習",
+    "studyTotal": "共 {{n}} 個",
+    "studySortFrequent": "經常出錯",
+    "studyAllTypes": "所有類型",
+    "studyLanguage": "西班牙文",
+    "studyPos": {
+      "verb": "動詞",
+      "phrase": "片語",
+      "adverb": "副詞",
+      "noun": "名詞"
+    }
   },
   "referral": {
     "title": "加入推薦計畫",
