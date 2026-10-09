@@ -93,6 +93,26 @@
           "draft": "这周末有空吗？"
         }
       },
+      "study": {
+        "title": "随每次翻译不断扩充的学习指南",
+        "description": "Reword 为你翻译或修正的每个单词和短语都会保存到学习指南中，附上释义和你使用它的那条消息，让你复习自己真正在用的语言。",
+        "bullets": [
+          "根据你自己的对话自动生成",
+          "优先查看最常出错的单词",
+          "按语言和词性筛选"
+        ],
+        "alt": "在键盘中打开的 Arcatext 学习指南，显示按出错频率排序的西班牙语条目。",
+        "demo": {
+          "translations": [
+            "见个面吧，要不要见面",
+            "我方便，对我合适",
+            "仍然，还",
+            "渴望，欲望，想要",
+            "充分利用，趁机",
+            "马上，立刻"
+          ]
+        }
+      },
       "receive": {
         "title": "无需离开键盘，读懂每一条回复",
         "description": "粘贴收到的消息，Arcatext 就会在应用内直接翻译，让你无需离开对话。",
@@ -317,7 +337,18 @@
     "rewordScript": "目标语言文字",
     "synonyms": "同义词",
     "language": "中文",
-    "typePlaceholder": "输入内容"
+    "typePlaceholder": "输入内容",
+    "studyTitle": "学习",
+    "studyTotal": "共 {{n}} 条",
+    "studySortFrequent": "经常出错",
+    "studyAllTypes": "所有类型",
+    "studyLanguage": "西班牙语",
+    "studyPos": {
+      "verb": "动词",
+      "phrase": "短语",
+      "adverb": "副词",
+      "noun": "名词"
+    }
   },
   "referral": {
     "title": "加入推荐计划",

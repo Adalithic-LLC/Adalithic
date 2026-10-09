@@ -93,6 +93,26 @@
           "draft": "Heb je dit weekend tijd?"
         }
       },
+      "study": {
+        "title": "Een studiegids die met elke vertaling groeit",
+        "description": "Elk woord en elke uitdrukking die Reword voor je vertaalt of corrigeert, wordt opgeslagen in je Studiegids, samen met de betekenis en het bericht waarin je het gebruikte, zodat je de taal herhaalt die je echt gebruikt.",
+        "bullets": [
+          "Automatisch opgebouwd uit je eigen gesprekken",
+          "Zie eerst de woorden waarmee je het vaakst de mist ingaat",
+          "Filter op taal en woordsoort"
+        ],
+        "alt": "De Arcatext-studiegids geopend in het toetsenbord, met Spaanse items gesorteerd op de woorden die het vaakst fout gaan.",
+        "demo": {
+          "translations": [
+            "zullen we afspreken, laten we afspreken",
+            "komt me goed uit, past me",
+            "nog, nog steeds",
+            "zin, verlangen, behoefte",
+            "benutten, profiteren van",
+            "meteen, zo dadelijk"
+          ]
+        }
+      },
       "receive": {
         "title": "Begrijp elk antwoord, zonder het toetsenbord te verlaten",
         "description": "Plak berichten die je ontvangt en Arcatext vertaalt ze direct binnen de app, zodat je het gesprek nooit hoeft te verlaten.",
@@ -317,7 +337,18 @@
     "rewordScript": "SCHRIFT VAN DE DOELTAAL",
     "synonyms": "SYNONIEMEN",
     "language": "Nederlands",
-    "typePlaceholder": "Typ iets"
+    "typePlaceholder": "Typ iets",
+    "studyTitle": "Leren",
+    "studyTotal": "{{n}} in totaal",
+    "studySortFrequent": "Vaak gemist",
+    "studyAllTypes": "Alle typen",
+    "studyLanguage": "Spaans",
+    "studyPos": {
+      "verb": "Werkwoord",
+      "phrase": "Uitdrukking",
+      "adverb": "Bijwoord",
+      "noun": "Zelfstandig naamwoord"
+    }
   },
   "referral": {
     "title": "Doe mee aan een aanbevelingsprogramma",

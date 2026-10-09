@@ -93,6 +93,26 @@
           "draft": "Har du tid i weekenden?"
         }
       },
+      "study": {
+        "title": "En studieguide, der vokser med hver oversættelse",
+        "description": "Hvert ord og udtryk, som Reword oversætter eller retter for dig, gemmes i din studieguide sammen med betydningen og den besked, du brugte det i, så du kan repetere det sprog, du faktisk bruger.",
+        "bullets": [
+          "Bygges automatisk ud fra dine egne samtaler",
+          "Se først de ord, du oftest laver fejl i",
+          "Filtrér efter sprog og ordklasse"
+        ],
+        "alt": "Arcatexts studieguide åben i tastaturet med spanske opslag sorteret efter flest fejl.",
+        "demo": {
+          "translations": [
+            "skal vi ses, lad os mødes",
+            "passer mig fint, det passer mig",
+            "stadig, endnu",
+            "lyst, trang, længsel",
+            "udnytte, få mest muligt ud af",
+            "med det samme, straks"
+          ]
+        }
+      },
       "receive": {
         "title": "Forstå hvert svar uden at forlade tastaturet",
         "description": "Indsæt beskeder, du modtager, og Arcatext oversætter dem direkte i appen, så du aldrig behøver at forlade samtalen.",
@@ -317,7 +337,18 @@
     "rewordScript": "OMFORMULERINGSSPROGETS SKRIFT",
     "synonyms": "SYNONYMER",
     "language": "Dansk",
-    "typePlaceholder": "Skriv noget"
+    "typePlaceholder": "Skriv noget",
+    "studyTitle": "Lær",
+    "studyTotal": "{{n}} i alt",
+    "studySortFrequent": "Ofte misset",
+    "studyAllTypes": "Alle typer",
+    "studyLanguage": "Spansk",
+    "studyPos": {
+      "verb": "Udsagnsord",
+      "phrase": "Udtryk",
+      "adverb": "Biord",
+      "noun": "Navneord"
+    }
   },
   "referral": {
     "title": "Vær med i et henvisningsprogram",

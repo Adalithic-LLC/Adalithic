@@ -93,6 +93,26 @@
           "draft": "Sei libero questo fine settimana?"
         }
       },
+      "study": {
+        "title": "Una guida allo studio che cresce a ogni traduzione",
+        "description": "Ogni parola ed espressione che Reword traduce o corregge per te viene salvata nella tua Guida allo studio, con il suo significato e il messaggio in cui l'hai usata, così puoi ripassare la lingua che usi davvero.",
+        "bullets": [
+          "Creata automaticamente dalle tue conversazioni",
+          "Vedi per prime le parole che sbagli più spesso",
+          "Filtra per lingua e parte del discorso"
+        ],
+        "alt": "La Guida allo studio di Arcatext aperta nella tastiera, con voci in spagnolo ordinate dalle parole sbagliate più spesso.",
+        "demo": {
+          "translations": [
+            "vediamoci, ci vediamo?",
+            "mi va bene, mi sta bene",
+            "ancora, tuttora",
+            "voglia, desiderio, gran voglia",
+            "approfittare di, sfruttare",
+            "subito, immediatamente"
+          ]
+        }
+      },
       "receive": {
         "title": "Comprendi ogni risposta senza lasciare la tastiera",
         "description": "Incolla i messaggi che ricevi e Arcatext li traduce direttamente nell'app, così non devi mai lasciare la conversazione.",
@@ -317,7 +337,18 @@
     "rewordScript": "SCRITTURA DELLA LINGUA DI DESTINAZIONE",
     "synonyms": "SINONIMI",
     "language": "Italiano",
-    "typePlaceholder": "Scrivi qualcosa"
+    "typePlaceholder": "Scrivi qualcosa",
+    "studyTitle": "Studia",
+    "studyTotal": "{{n}} in totale",
+    "studySortFrequent": "Sbagliati spesso",
+    "studyAllTypes": "Tutti i tipi",
+    "studyLanguage": "Spagnolo",
+    "studyPos": {
+      "verb": "Verbo",
+      "phrase": "Frase",
+      "adverb": "Avverbio",
+      "noun": "Nome"
+    }
   },
   "referral": {
     "title": "Unisciti a un programma di invito",

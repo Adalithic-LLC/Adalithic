@@ -93,6 +93,26 @@
           "draft": "Máš čas tento víkend?"
         }
       },
+      "study": {
+        "title": "Studijní průvodce, který roste s každým překladem",
+        "description": "Každé slovo a fráze, které vám Reword přeloží nebo opraví, se uloží do vašeho studijního průvodce i s významem a zprávou, ve které jste je použili, takže si můžete opakovat jazyk, který skutečně používáte.",
+        "bullets": [
+          "Vzniká automaticky z vašich vlastních konverzací",
+          "Nejdřív uvidíte slova, ve kterých chybujete nejčastěji",
+          "Filtrujte podle jazyka a slovního druhu"
+        ],
+        "alt": "Studijní průvodce Arcatext otevřený v klávesnici se španělskými hesly seřazenými podle nejčastějších chyb.",
+        "demo": {
+          "translations": [
+            "sejdeme se, uvidíme se",
+            "hodí se mi, vyhovuje mi",
+            "ještě, stále",
+            "chuť, touha, nutkání",
+            "využít, těžit z",
+            "hned, okamžitě"
+          ]
+        }
+      },
       "receive": {
         "title": "Porozumějte každé odpovědi, aniž byste opustili klávesnici",
         "description": "Vložte zprávy, které dostanete, a Arcatext je přeloží přímo v aplikaci, takže nikdy nemusíte opustit konverzaci.",
@@ -317,7 +337,18 @@
     "rewordScript": "PÍSMO CÍLOVÉHO JAZYKA",
     "synonyms": "SYNONYMA",
     "language": "Čeština",
-    "typePlaceholder": "Napište něco"
+    "typePlaceholder": "Napište něco",
+    "studyTitle": "Studium",
+    "studyTotal": "Celkem {{n}}",
+    "studySortFrequent": "Často chybované",
+    "studyAllTypes": "Všechny typy",
+    "studyLanguage": "Španělština",
+    "studyPos": {
+      "verb": "Sloveso",
+      "phrase": "Fráze",
+      "adverb": "Příslovce",
+      "noun": "Podstatné jméno"
+    }
   },
   "referral": {
     "title": "Zapojte se do programu doporučení",

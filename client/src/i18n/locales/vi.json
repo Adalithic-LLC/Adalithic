@@ -93,6 +93,26 @@
           "draft": "Cuối tuần này bạn rảnh không?"
         }
       },
+      "study": {
+        "title": "Sổ tay học tập lớn dần sau mỗi lần dịch",
+        "description": "Mọi từ và cụm từ mà Reword dịch hoặc sửa cho bạn đều được lưu vào Sổ tay học tập, kèm theo nghĩa và tin nhắn bạn đã dùng, để bạn ôn lại chính ngôn ngữ mình thực sự sử dụng.",
+        "bullets": [
+          "Tự động xây dựng từ chính các cuộc trò chuyện của bạn",
+          "Xem trước những từ bạn hay sai nhất",
+          "Lọc theo ngôn ngữ và từ loại"
+        ],
+        "alt": "Sổ tay học tập của Arcatext mở trong bàn phím, hiển thị các mục tiếng Tây Ban Nha được sắp xếp theo mức độ hay sai nhất.",
+        "demo": {
+          "translations": [
+            "gặp nhau nhé, mình gặp nhau không",
+            "tiện cho tôi, hợp với tôi",
+            "vẫn, vẫn còn",
+            "mong muốn, khao khát, thèm",
+            "tận dụng, tranh thủ",
+            "ngay, lập tức"
+          ]
+        }
+      },
       "receive": {
         "title": "Hiểu mọi câu trả lời, ngay trên bàn phím",
         "description": "Dán những tin nhắn bạn nhận được và Arcatext dịch ngay trong ứng dụng, để bạn không bao giờ phải rời khỏi cuộc trò chuyện.",
@@ -317,7 +337,18 @@
     "rewordScript": "BẢNG CHỮ NGÔN NGỮ ĐÍCH",
     "synonyms": "TỪ ĐỒNG NGHĨA",
     "language": "Tiếng Việt",
-    "typePlaceholder": "Nhập nội dung"
+    "typePlaceholder": "Nhập nội dung",
+    "studyTitle": "Học",
+    "studyTotal": "Tổng {{n}}",
+    "studySortFrequent": "Hay sai",
+    "studyAllTypes": "Tất cả loại",
+    "studyLanguage": "Tiếng Tây Ban Nha",
+    "studyPos": {
+      "verb": "Động từ",
+      "phrase": "Cụm từ",
+      "adverb": "Trạng từ",
+      "noun": "Danh từ"
+    }
   },
   "referral": {
     "title": "Tham gia chương trình giới thiệu",

@@ -93,6 +93,26 @@
           "draft": "Masz czas w ten weekend?"
         }
       },
+      "study": {
+        "title": "Przewodnik do nauki, który rośnie z każdym tłumaczeniem",
+        "description": "Każde słowo i wyrażenie, które Reword dla Ciebie przetłumaczy lub poprawi, trafia do Twojego Przewodnika do nauki wraz ze znaczeniem i wiadomością, z której pochodzi, dzięki czemu powtarzasz język, którego naprawdę używasz.",
+        "bullets": [
+          "Tworzony automatycznie z Twoich własnych rozmów",
+          "Najpierw zobacz słowa, w których najczęściej się mylisz",
+          "Filtruj według języka i części mowy"
+        ],
+        "alt": "Przewodnik do nauki Arcatext otwarty w klawiaturze, z hiszpańskimi hasłami posortowanymi od najczęściej mylonych.",
+        "demo": {
+          "translations": [
+            "spotkajmy się, umówimy się?",
+            "pasuje mi, odpowiada mi",
+            "jeszcze, wciąż",
+            "ochota, chęć, pragnienie",
+            "wykorzystać, skorzystać z",
+            "zaraz, od razu"
+          ]
+        }
+      },
       "receive": {
         "title": "Zrozum każdą odpowiedź bez opuszczania klawiatury",
         "description": "Wklej otrzymane wiadomości, a Arcatext przetłumaczy je bezpośrednio w aplikacji, więc nigdy nie musisz opuszczać rozmowy.",
@@ -317,7 +337,18 @@
     "rewordScript": "PISMO JĘZYKA DOCELOWEGO",
     "synonyms": "SYNONIMY",
     "language": "Polski",
-    "typePlaceholder": "Napisz coś"
+    "typePlaceholder": "Napisz coś",
+    "studyTitle": "Nauka",
+    "studyTotal": "Łącznie {{n}}",
+    "studySortFrequent": "Często mylone",
+    "studyAllTypes": "Wszystkie typy",
+    "studyLanguage": "Hiszpański",
+    "studyPos": {
+      "verb": "Czasownik",
+      "phrase": "Wyrażenie",
+      "adverb": "Przysłówek",
+      "noun": "Rzeczownik"
+    }
   },
   "referral": {
     "title": "Dołącz do programu poleceń",

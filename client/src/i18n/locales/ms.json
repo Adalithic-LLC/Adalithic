@@ -93,6 +93,26 @@
           "draft": "Awak lapang hujung minggu ini?"
         }
       },
+      "study": {
+        "title": "Panduan belajar yang berkembang dengan setiap terjemahan",
+        "description": "Setiap perkataan dan frasa yang diterjemah atau diperbetulkan oleh Reword untuk anda disimpan dalam Panduan Belajar anda, bersama maksudnya dan mesej yang anda gunakannya, supaya anda boleh mengulang kaji bahasa yang benar-benar anda gunakan.",
+        "bullets": [
+          "Dibina secara automatik daripada perbualan anda sendiri",
+          "Lihat dahulu perkataan yang paling kerap anda silap",
+          "Tapis mengikut bahasa dan golongan kata"
+        ],
+        "alt": "Panduan Belajar Arcatext dibuka dalam papan kekunci, memaparkan entri bahasa Sepanyol yang disusun mengikut perkataan yang paling kerap tersilap.",
+        "demo": {
+          "translations": [
+            "jom jumpa, nak jumpa tak",
+            "sesuai untuk saya, kena dengan saya",
+            "masih, belum",
+            "keinginan, hasrat, teringin",
+            "memanfaatkan, menggunakan sebaik-baiknya",
+            "segera, serta-merta"
+          ]
+        }
+      },
       "receive": {
         "title": "Fahami setiap balasan, tanpa meninggalkan papan kekunci",
         "description": "Tampal mesej yang anda terima dan Arcatext menterjemahkannya terus di dalam aplikasi, supaya anda tidak perlu meninggalkan perbualan.",
@@ -317,7 +337,18 @@
     "rewordScript": "ABJAD BAHASA SASARAN",
     "synonyms": "SINONIM",
     "language": "Bahasa Melayu",
-    "typePlaceholder": "Tulis sesuatu"
+    "typePlaceholder": "Tulis sesuatu",
+    "studyTitle": "Belajar",
+    "studyTotal": "Jumlah {{n}}",
+    "studySortFrequent": "Kerap terlepas",
+    "studyAllTypes": "Semua jenis",
+    "studyLanguage": "Sepanyol",
+    "studyPos": {
+      "verb": "Kata kerja",
+      "phrase": "Frasa",
+      "adverb": "Kata keterangan",
+      "noun": "Kata nama"
+    }
   },
   "referral": {
     "title": "Sertai program rujukan",

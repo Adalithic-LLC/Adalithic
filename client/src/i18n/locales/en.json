@@ -93,6 +93,26 @@
           "draft": "Are you free to meet up this weekend?"
         }
       },
+      "study": {
+        "title": "A study guide that grows with every translation",
+        "description": "Every word and phrase Reword translates or corrects for you is saved to your Study Guide, with what it means and the message you used it in, so you can review the language you actually use.",
+        "bullets": [
+          "Built automatically from your own conversations",
+          "See the words you miss most often first",
+          "Filter by language and part of speech"
+        ],
+        "alt": "The Arcatext Study Guide open in the keyboard, showing Spanish entries sorted by most frequently missed.",
+        "demo": {
+          "translations": [
+            "let's meet up, shall we meet",
+            "works for me, suits me",
+            "still, yet",
+            "desire, urge, wanting",
+            "make the most of, take advantage of",
+            "right away, at once"
+          ]
+        }
+      },
       "receive": {
         "title": "Understand every reply, without leaving the keyboard",
         "description": "Paste messages you receive and Arcatext translates it within the app, so you never need to leave the conversation.",
@@ -317,7 +337,18 @@
     "genderMale": "Male",
     "genderFemale": "Female",
     "rewordScript": "REWORD SCRIPT",
-    "synonyms": "SYNONYMS"
+    "synonyms": "SYNONYMS",
+    "studyTitle": "Study",
+    "studyTotal": "{{n}} total",
+    "studySortFrequent": "Frequently missed",
+    "studyAllTypes": "All types",
+    "studyLanguage": "Spanish",
+    "studyPos": {
+      "verb": "Verb",
+      "phrase": "Phrase",
+      "adverb": "Adverb",
+      "noun": "Noun"
+    }
   },
   "referral": {
     "title": "Join a referral program",

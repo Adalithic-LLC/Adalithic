@@ -93,6 +93,26 @@
           "draft": "Tu es libre ce week-end ?"
         }
       },
+      "study": {
+        "title": "Un guide d'étude qui s'enrichit à chaque traduction",
+        "description": "Chaque mot et chaque expression que Reword traduit ou corrige pour vous sont enregistrés dans votre guide d'étude, avec leur sens et le message dans lequel vous les avez employés, pour réviser la langue que vous utilisez vraiment.",
+        "bullets": [
+          "Constitué automatiquement à partir de vos propres conversations",
+          "Voyez d'abord les mots sur lesquels vous butez le plus souvent",
+          "Filtrez par langue et par catégorie grammaticale"
+        ],
+        "alt": "Le guide d'étude Arcatext ouvert dans le clavier, avec des entrées en espagnol triées par erreurs les plus fréquentes.",
+        "demo": {
+          "translations": [
+            "on se voit, on se retrouve",
+            "ça me va, ça m'arrange",
+            "encore, toujours",
+            "envie, désir, élan",
+            "profiter de, tirer parti de",
+            "tout de suite, aussitôt"
+          ]
+        }
+      },
       "receive": {
         "title": "Comprenez chaque réponse sans quitter le clavier",
         "description": "Collez les messages que vous recevez et Arcatext les traduit directement dans l'application, pour que vous n'ayez jamais à quitter la conversation.",
@@ -317,7 +337,18 @@
     "rewordScript": "ÉCRITURE DE LA LANGUE CIBLE",
     "synonyms": "SYNONYMES",
     "language": "Français",
-    "typePlaceholder": "Écrivez quelque chose"
+    "typePlaceholder": "Écrivez quelque chose",
+    "studyTitle": "Étudier",
+    "studyTotal": "{{n}} au total",
+    "studySortFrequent": "Souvent manqués",
+    "studyAllTypes": "Tous les types",
+    "studyLanguage": "Espagnol",
+    "studyPos": {
+      "verb": "Verbe",
+      "phrase": "Expression",
+      "adverb": "Adverbe",
+      "noun": "Nom"
+    }
   },
   "referral": {
     "title": "Rejoignez un programme de parrainage",

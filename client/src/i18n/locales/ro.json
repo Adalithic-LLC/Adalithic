@@ -93,6 +93,26 @@
           "draft": "Ești liber în weekendul acesta?"
         }
       },
+      "study": {
+        "title": "Un ghid de studiu care crește cu fiecare traducere",
+        "description": "Fiecare cuvânt și expresie pe care Reword le traduce sau le corectează pentru dumneavoastră se salvează în Ghidul de studiu, împreună cu sensul și mesajul în care le-ați folosit, ca să puteți recapitula limba pe care o folosiți cu adevărat.",
+        "bullets": [
+          "Construit automat din propriile dumneavoastră conversații",
+          "Vedeți mai întâi cuvintele pe care le greșiți cel mai des",
+          "Filtrați după limbă și parte de vorbire"
+        ],
+        "alt": "Ghidul de studiu Arcatext deschis în tastatură, cu intrări în spaniolă ordonate după cele mai des greșite.",
+        "demo": {
+          "translations": [
+            "să ne vedem, ne întâlnim",
+            "îmi convine, mi se potrivește",
+            "încă, până acum",
+            "dorință, poftă, chef",
+            "a valorifica, a profita de",
+            "imediat, îndată"
+          ]
+        }
+      },
       "receive": {
         "title": "Înțelegeți fiecare răspuns, fără să părăsiți tastatura",
         "description": "Lipiți mesajele pe care le primiți, iar Arcatext le traduce chiar în aplicație, ca să nu fie nevoie să părăsiți niciodată conversația.",
@@ -317,7 +337,18 @@
     "rewordScript": "SCRIEREA LIMBII ȚINTĂ",
     "synonyms": "SINONIME",
     "language": "Română",
-    "typePlaceholder": "Scrie ceva"
+    "typePlaceholder": "Scrie ceva",
+    "studyTitle": "Studiu",
+    "studyTotal": "{{n}} în total",
+    "studySortFrequent": "Ratate des",
+    "studyAllTypes": "Toate tipurile",
+    "studyLanguage": "Spaniolă",
+    "studyPos": {
+      "verb": "Verb",
+      "phrase": "Expresie",
+      "adverb": "Adverb",
+      "noun": "Substantiv"
+    }
   },
   "referral": {
     "title": "Alătură-te unui program de recomandare",

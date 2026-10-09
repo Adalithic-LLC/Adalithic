@@ -93,6 +93,26 @@
           "draft": "Bu hafta sonu müsait misin?"
         }
       },
+      "study": {
+        "title": "Her çeviriyle büyüyen bir çalışma kılavuzu",
+        "description": "Reword ile çevirdiğiniz veya düzelttiğiniz her kelime ve ifade, anlamı ve içinde geçtiği mesajla birlikte Çalışma Kılavuzunuza kaydedilir; böylece gerçekten kullandığınız dili tekrar edebilirsiniz.",
+        "bullets": [
+          "Kendi sohbetlerinizden otomatik olarak oluşturulur",
+          "En sık hata yaptığınız kelimeleri önce görün",
+          "Dile ve sözcük türüne göre filtreleyin"
+        ],
+        "alt": "Klavyede açık olan Arcatext Çalışma Kılavuzu; İspanyolca girişler en sık hata yapılandan başlayarak sıralanmış.",
+        "demo": {
+          "translations": [
+            "buluşalım, buluşalım mı",
+            "bana uyar, işime gelir",
+            "hâlâ, henüz",
+            "istek, heves, arzu",
+            "en iyi şekilde değerlendirmek, yararlanmak",
+            "hemen, derhal"
+          ]
+        }
+      },
       "receive": {
         "title": "Klavyeden çıkmadan her yanıtı anlayın",
         "description": "Aldığınız mesajları yapıştırın, Arcatext onları uygulamanın içinde hemen çevirsin; böylece sohbetten hiç ayrılmanıza gerek kalmasın.",
@@ -317,7 +337,18 @@
     "rewordScript": "HEDEF DİL YAZISI",
     "synonyms": "EŞ ANLAMLILAR",
     "language": "Türkçe",
-    "typePlaceholder": "Bir şeyler yaz"
+    "typePlaceholder": "Bir şeyler yaz",
+    "studyTitle": "Çalış",
+    "studyTotal": "Toplam {{n}}",
+    "studySortFrequent": "Sık kaçırılanlar",
+    "studyAllTypes": "Tüm türler",
+    "studyLanguage": "İspanyolca",
+    "studyPos": {
+      "verb": "Fiil",
+      "phrase": "İfade",
+      "adverb": "Zarf",
+      "noun": "İsim"
+    }
   },
   "referral": {
     "title": "Referans programına katılın",
