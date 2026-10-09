@@ -7,7 +7,10 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronDown, Plus, ArrowUp, Mic } from "lucide-react";
 // Keyboard glyphs, from the design assets (accurate to the Arcatext app).
-import menuUrl from "@/assets/keyboard/menu.svg";
+// The first toolbar button opens the Study Guide, so the app draws it with
+// `leaf.fill`, the Study tab's icon. study.svg is that symbol exported from
+// the SF Symbols app, drawn 20x17 so its weight matches Paste and Check.
+import studyUrl from "@/assets/keyboard/study.svg";
 import pasteUrl from "@/assets/keyboard/paste.svg";
 import shiftUrl from "@/assets/keyboard/shift.svg";
 import backspaceUrl from "@/assets/keyboard/backspace.svg";
@@ -117,7 +120,7 @@ const ROW3 = ["z", "x", "c", "v", "b", "n", "m"];
 const NUMS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 /**
- * The floating keyboard panel: toolbar (menu / paste / check / Reword), the
+ * The floating keyboard panel: toolbar (study / paste / check / Reword), the
  * four key rows and the bottom utility strip. Purely presentational — every
  * bit of state it can show is passed in.
  */
@@ -157,7 +160,7 @@ export function KeyboardPanel({
               className="grid place-items-center rounded-[12px]"
               style={{ width: 57, height: 50, backgroundColor: C.toolButtonBg }}
             >
-              <img src={menuUrl} alt="" style={{ width: 21, height: 21 }} />
+              <img src={studyUrl} alt="" style={{ width: 20, height: 17 }} />
             </div>
           </div>
           <div className="relative mr-[3px]">
@@ -169,7 +172,7 @@ export function KeyboardPanel({
             </div>
           </div>
           {/* Check — now a magnifying-glass icon (was a text label). Sized
-              and colored like the menu/paste buttons since it no longer
+              and colored like the study/paste buttons since it no longer
               holds text. */}
           <div className="relative">
             <div
