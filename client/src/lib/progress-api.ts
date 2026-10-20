@@ -10,15 +10,26 @@ export type DashboardError = "not_found" | "blocked" | "network";
 
 export interface Member { userId: string; name: string; isCreator: boolean; lastActive: string | null; sharedChats: number }
 export interface GroupData { name: string; members: Member[] }
+// Optional fields are absent while an older group-dashboard is deployed.
+export interface MissedRow {
+  word: string; // the dictionary form (base); the word itself when pending
+  forms?: string[]; // the Reworded spellings seen (verb forms together)
+  misses: number;
+  lastMissedAt: string;
+  originalWord: string; // what the student typed for it at the latest miss; "" when nothing
+  originalMessage: string; // the whole typed message at the latest miss
+  language?: string; // ISO code of the Reworded text; "" when pending
+  common?: boolean; // function word: hidden unless "Show common words"
+  pending?: boolean; // not AI-analysed yet: matched by spelling
+}
 export interface StudentData {
   vocabulary: { word: string; typed: number; sent: number }[];
-  // At the most recent miss: originalWord, the typed word this one replaced
-  // ("" when that isn't unambiguous, e.g. inside a fully translated sentence);
-  // originalMessage, the whole typed message as written.
-  missed: { word: string; misses: number; lastMissedAt: string; originalWord: string; originalMessage: string }[];
-  nowCorrect: { word: string; misses: number; correctSince: number; firstCorrectAt: string }[];
-  // Every shared chat, newest first; lastAt is null for a chat with no messages yet.
-  chats: { conversationId: string; partnerName: string; messages: number; lastAt: string | null }[];
+  missed: MissedRow[];
+  nowCorrect: { word: string; misses: number; correctSince: number; firstCorrectAt: string; pending?: boolean }[];
+  pendingMessages?: number; // Reworded messages still waiting for the AI analysis
+  // Every chat sent to the group, newest first; lastAt is null for a chat with no messages yet.
+  // messages / lastAt stop at the student's last Send (sentThrough).
+  chats: { conversationId: string; partnerName: string; messages: number; lastAt: string | null; sentThrough?: string }[];
   truncated: boolean; // the word analysis covers only the 5,000 most recent sent messages
 }
 // A hidden partner message carries NO id, time or body (it never leaves the database).
@@ -29,6 +40,7 @@ export type ChatMessage =
 export interface ChatData {
   partnerName: string;
   partnerShared: boolean;
+  sentThrough?: string; // the snapshot: messages up to the student's last Send
   truncated: boolean; // only the 2,000 most recent messages: show "Older messages not shown."
   messages: ChatMessage[]; // oldest first
 }

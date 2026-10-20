@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import {
-  type ChatData, type DashboardError, type GroupData, loadChat, loadGroup, loadStudent, type Member, type StudentData,
+  type ChatData, type DashboardError, type GroupData, loadChat, loadGroup, loadStudent, type Member, type MissedRow,
+  type StudentData,
 } from "@/lib/progress-api";
 
 const CODE_KEY = "progress.code"; // sessionStorage only: never in the URL
@@ -14,6 +15,25 @@ const errorText: Record<DashboardError, string> = {
 };
 
 type Tab = "vocabulary" | "missed" | "correct" | "chats";
+
+const languageNames = (() => {
+  try {
+    return new Intl.DisplayNames(["en"], { type: "language" });
+  } catch {
+    return null;
+  }
+})();
+
+function languageName(code: string | undefined): string {
+  if (!code || code === "und") return "—";
+  try {
+    return languageNames?.of(code) ?? code;
+  } catch {
+    return code;
+  }
+}
+
+const day = (iso: string) => new Date(iso).toLocaleDateString();
 
 export default function Progress() {
   const [code, setCode] = useState(() => sessionStorage.getItem(CODE_KEY) ?? "");
@@ -66,8 +86,8 @@ export default function Progress() {
                 {group.members.length} {group.members.length === 1 ? "member" : "members"}
               </p>
               <ul className="divide-y border rounded-lg">
-                {/* Everyone, the creator included: a creator can share their own
-                    chats with the group, and hiding them hid that data. */}
+                {/* Everyone, the creator included: a creator can send their own
+                    chats to the group, and hiding them hid that data. */}
                 {group.members.map((m) => (
                   <li key={m.userId}>
                     <button className="w-full text-left px-4 py-3 hover:bg-gray-50 flex justify-between" onClick={() => setStudent(m)}>
@@ -76,8 +96,8 @@ export default function Progress() {
                         {m.isCreator && <span className="ml-2 text-xs text-gray-500 font-normal">Creator</span>}
                       </span>
                       <span className="text-sm text-gray-500">
-                        {m.sharedChats} {m.sharedChats === 1 ? "shared chat" : "shared chats"}
-                        {m.lastActive ? ` · active ${new Date(m.lastActive).toLocaleDateString()}` : ""}
+                        {m.sharedChats} {m.sharedChats === 1 ? "chat sent" : "chats sent"}
+                        {m.lastActive ? ` · active ${day(m.lastActive)}` : ""}
                       </span>
                     </button>
                   </li>
@@ -87,6 +107,7 @@ export default function Progress() {
           )}
           <p className="text-xs text-gray-500 mt-12">
             Students choose what they share and can leave at any time; their data disappears from this page when they do.
+            Each chat shows what the student sent, up to the moment they sent it.
           </p>
         </div>
       </section>
@@ -128,30 +149,19 @@ function StudentView({ code, member, onBack }: { code: string; member: Member; o
           </table>
         </div>
       ) : tab === "missed" ? (
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="text-left text-gray-500">
-              <th className="py-1">Reworded To</th><th>Original Word</th><th>Original Message</th><th>Times missed</th><th>Last missed</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.missed.map((r) => (
-              <tr key={r.word} className="border-t align-top">
-                <td className="py-1">{r.word}</td>
-                <td className="text-gray-600">{r.originalWord || "—"}</td>
-                <td className="text-gray-600 pr-4">{r.originalMessage || "—"}</td>
-                <td>{r.misses}</td>
-                <td>{new Date(r.lastMissedAt).toLocaleDateString()}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <MissedWords rows={data.missed} pendingMessages={data.pendingMessages ?? 0} />
       ) : tab === "correct" ? (
         <table className="w-full text-sm">
           <thead><tr className="text-left text-gray-500"><th className="py-1">Word</th><th>Past misses</th><th>Correct since</th><th>First correct</th></tr></thead>
           <tbody>
             {data.nowCorrect.map((r) => (
-              <tr key={r.word} className="border-t"><td className="py-1">{r.word}</td><td>{r.misses}</td><td>{r.correctSince}</td><td>{new Date(r.firstCorrectAt).toLocaleDateString()}</td></tr>
+              <tr key={`${r.pending ? "p" : "a"}:${r.word}`} className="border-t">
+                <td className="py-1">
+                  {r.word}
+                  {r.pending && <span className="ml-2 text-xs text-amber-700">analysis pending</span>}
+                </td>
+                <td>{r.misses}</td><td>{r.correctSince}</td><td>{day(r.firstCorrectAt)}</td>
+              </tr>
             ))}
           </tbody>
         </table>
@@ -161,12 +171,61 @@ function StudentView({ code, member, onBack }: { code: string; member: Member; o
             <li key={c.conversationId}>
               <button className="w-full text-left px-4 py-3 hover:bg-gray-50 flex justify-between" onClick={() => setChat(c.conversationId)}>
                 <span>Chat with {c.partnerName}</span>
-                <span className="text-sm text-gray-500">{c.messages} messages{c.lastAt ? ` · ${new Date(c.lastAt).toLocaleDateString()}` : ""}</span>
+                <span className="text-sm text-gray-500">
+                  {c.messages} messages{c.lastAt ? ` · ${day(c.lastAt)}` : ""}{c.sentThrough ? ` · sent ${day(c.sentThrough)}` : ""}
+                </span>
               </button>
             </li>
           ))}
         </ul>
       )}
+    </div>
+  );
+}
+
+function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMessages: number }) {
+  const [showCommon, setShowCommon] = useState(false);
+  const commonCount = rows.filter((r) => r.common).length;
+  const shown = showCommon ? rows : rows.filter((r) => !r.common);
+  return (
+    <div>
+      {pendingMessages > 0 && (
+        <p className="text-sm text-gray-500 mb-3">
+          {pendingMessages} {pendingMessages === 1 ? "message is" : "messages are"} still being analysed. Their words are
+          matched by spelling for now and marked "analysis pending".
+        </p>
+      )}
+      <label className="inline-flex items-center gap-2 text-sm mb-3">
+        <input type="checkbox" checked={showCommon} onChange={(e) => setShowCommon(e.target.checked)} />
+        Show common words{commonCount > 0 ? ` (${commonCount})` : ""}
+      </label>
+      <table className="w-full text-sm">
+        <thead>
+          <tr className="text-left text-gray-500">
+            <th className="py-1">Reworded To</th><th>Original Word</th><th>Original Message</th><th>Language</th>
+            <th>Times missed</th><th>Last missed</th>
+          </tr>
+        </thead>
+        <tbody>
+          {shown.map((r) => {
+            const otherForms = (r.forms ?? []).filter((f) => f !== r.word);
+            return (
+              <tr key={`${r.pending ? "p" : "a"}:${r.word}`} className="border-t align-top">
+                <td className="py-1 pr-2">
+                  <div className="font-medium">{r.word}</div>
+                  {otherForms.length > 0 && <div className="text-xs text-gray-500">{otherForms.join(", ")}</div>}
+                  {r.pending && <div className="text-xs text-amber-700">analysis pending</div>}
+                </td>
+                <td className="text-gray-600 pr-2">{r.originalWord || "—"}</td>
+                <td className="text-gray-600 pr-4">{r.originalMessage || "—"}</td>
+                <td className="text-gray-600 pr-2">{languageName(r.language)}</td>
+                <td>{r.misses}</td>
+                <td>{day(r.lastMissedAt)}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
@@ -179,7 +238,10 @@ function ChatView({ code, member, conversationId, onBack }: { code: string; memb
   return (
     <div>
       <button className="text-sm underline mb-4" onClick={onBack}>← {member.name}</button>
-      <h1 className="text-2xl font-bold text-secondary mb-6">{member.name} and {data?.partnerName ?? "…"}</h1>
+      <h1 className="text-2xl font-bold text-secondary mb-2">{member.name} and {data?.partnerName ?? "…"}</h1>
+      {data?.sentThrough && (
+        <p className="text-sm text-gray-500 mb-4">Sent to the group {new Date(data.sentThrough).toLocaleString()}: messages up to then.</p>
+      )}
       {data?.truncated && <p className="text-sm text-gray-500 mb-4">Older messages not shown.</p>}
       <div className="flex flex-col gap-2 max-w-2xl">
         {data?.messages.map((m, i) => m.hidden ? (
