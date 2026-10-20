@@ -62,14 +62,22 @@ export default function Progress() {
                   Close dashboard
                 </button>
               </div>
-              <p className="text-gray-600 mb-4">{group.members.length} members</p>
+              <p className="text-gray-600 mb-4">
+                {group.members.length} {group.members.length === 1 ? "member" : "members"}
+              </p>
               <ul className="divide-y border rounded-lg">
-                {group.members.filter((m) => !m.isCreator).map((m) => (
+                {/* Everyone, the creator included: a creator can share their own
+                    chats with the group, and hiding them hid that data. */}
+                {group.members.map((m) => (
                   <li key={m.userId}>
                     <button className="w-full text-left px-4 py-3 hover:bg-gray-50 flex justify-between" onClick={() => setStudent(m)}>
-                      <span className="font-medium">{m.name}</span>
+                      <span className="font-medium">
+                        {m.name}
+                        {m.isCreator && <span className="ml-2 text-xs text-gray-500 font-normal">Creator</span>}
+                      </span>
                       <span className="text-sm text-gray-500">
-                        {m.sharedChats} shared chats{m.lastActive ? ` · active ${new Date(m.lastActive).toLocaleDateString()}` : ""}
+                        {m.sharedChats} {m.sharedChats === 1 ? "shared chat" : "shared chats"}
+                        {m.lastActive ? ` · active ${new Date(m.lastActive).toLocaleDateString()}` : ""}
                       </span>
                     </button>
                   </li>
