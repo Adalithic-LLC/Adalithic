@@ -139,19 +139,19 @@ function StudentView({ code, member, onBack }: { code: string; member: Member; o
       {!data ? <p className="text-gray-500">Loading…</p> : tab === "vocabulary" ? (
         <div>
           <input placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)} className="border rounded-lg px-3 py-2 mb-3" />
-          <table className="w-full text-sm">
+          <div className="overflow-x-auto"><table className="w-full text-sm">
             <thead><tr className="text-left text-gray-500"><th className="py-1">Word typed</th><th>Instances</th><th>Reworded</th></tr></thead>
             <tbody>
               {data.vocabulary.filter((v) => v.word.includes(query.toLowerCase())).map((v) => (
                 <tr key={v.word} className="border-t"><td className="py-1">{v.word}</td><td>{v.typed}</td><td>{v.sent}</td></tr>
               ))}
             </tbody>
-          </table>
+          </table></div>
         </div>
       ) : tab === "missed" ? (
         <MissedWords rows={data.missed} pendingMessages={data.pendingMessages ?? 0} />
       ) : tab === "correct" ? (
-        <table className="w-full text-sm">
+        <div className="overflow-x-auto"><table className="w-full text-sm">
           <thead><tr className="text-left text-gray-500"><th className="py-1">Word</th><th>Past misses</th><th>Correct since</th><th>First correct</th></tr></thead>
           <tbody>
             {data.nowCorrect.map((r) => (
@@ -164,7 +164,7 @@ function StudentView({ code, member, onBack }: { code: string; member: Member; o
               </tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
       ) : (
         <ul className="divide-y border rounded-lg">
           {data.chats.map((c) => (
@@ -191,7 +191,7 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
     <div>
       {pendingMessages > 0 && (
         <p className="text-sm text-gray-500 mb-3">
-          {pendingMessages} {pendingMessages === 1 ? "message is" : "messages are"} still being analysed. Their words are
+          {pendingMessages} {pendingMessages === 1 ? "message is" : "messages are"} not analysed yet. Their words are
           matched by spelling for now and marked "analysis pending".
         </p>
       )}
@@ -199,7 +199,10 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
         <input type="checkbox" checked={showCommon} onChange={(e) => setShowCommon(e.target.checked)} />
         Show common words{commonCount > 0 ? ` (${commonCount})` : ""}
       </label>
-      <table className="w-full text-sm">
+      {rows.length > 0 && shown.length === 0 && (
+        <p className="text-sm text-gray-500 mb-3">Only common words so far — turn on Show common words to see them.</p>
+      )}
+      <div className="overflow-x-auto"><table className="w-full text-sm">
         <thead>
           <tr className="text-left text-gray-500">
             <th className="py-1">Reworded To</th><th>Original Word</th><th>Original Message</th><th>Language</th>
@@ -225,7 +228,7 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
             );
           })}
         </tbody>
-      </table>
+      </table></div>
     </div>
   );
 }
