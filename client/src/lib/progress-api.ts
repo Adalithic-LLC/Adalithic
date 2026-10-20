@@ -21,11 +21,16 @@ export interface MissedRow {
   language?: string; // ISO code of the Reworded text; "" when pending
   common?: boolean; // function word: hidden unless "Show common words"
   pending?: boolean; // not AI-analysed yet: matched by spelling
+  // Why it was missed at the latest miss; null when pending or analysed before reasons existed.
+  reason?: MissReason | null;
+  correction?: string | null; // misused rows only: the word Reword replaced it with
+  misused?: boolean; // `word` is what the student typed: a real word, wrong in context
 }
+export type MissReason = "translation" | "spelling" | "grammar" | "wrong_word" | "added";
 export interface StudentData {
   vocabulary: { word: string; typed: number; sent: number }[];
   missed: MissedRow[];
-  nowCorrect: { word: string; misses: number; correctSince: number; firstCorrectAt: string; pending?: boolean }[];
+  nowCorrect: { word: string; misses: number; correctSince: number; firstCorrectAt: string; pending?: boolean; misused?: boolean }[];
   pendingMessages?: number; // Reworded messages still waiting for the AI analysis
   // Every chat sent to the group, newest first; lastAt is null for a chat with no messages yet.
   // messages / lastAt stop at the student's last Send (sentThrough).

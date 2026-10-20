@@ -12,8 +12,8 @@ import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import {
-  type ChatData, type DashboardError, type GroupData, loadChat, loadGroup, loadStudent, type Member, type MissedRow,
-  type StudentData,
+  type ChatData, type DashboardError, type GroupData, loadChat, loadGroup, loadStudent, type Member, type MissReason,
+  type MissedRow, type StudentData,
 } from "@/lib/progress-api";
 
 const CODE_KEY = "progress.code"; // sessionStorage only: never in the URL
@@ -593,6 +593,17 @@ function commonlyMissedThreshold(rows: MissedRow[]): number {
   return Math.max(2, counts[index]);
 }
 
+const reasons: Record<MissReason, { label: string; tone: "slate" | "amber" | "blue" | "violet" | "rose"; title: string }> = {
+  translation: { label: "Translation", tone: "blue", title: "Typed in another language" },
+  spelling: { label: "Spelling", tone: "amber", title: "Misspelled (accents included)" },
+  grammar: { label: "Grammar", tone: "violet", title: "Right word, wrong form: conjugation, agreement, gender, number or tense" },
+  wrong_word: { label: "Wrong in context", tone: "rose", title: "A real word, but the wrong one here" },
+  added: { label: "Added", tone: "slate", title: "Not typed: Reword added it" },
+};
+const reasonLabel = (r: MissedRow) => (r.reason ? reasons[r.reason]?.label ?? null : null);
+const missedRowKey = (r: { pending?: boolean; misused?: boolean; word: string }) =>
+  `${r.pending ? "p" : r.misused ? "w" : "a"}:${r.word}`;
+
 function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMessages: number }) {
   const [onlyCommonlyMissed, setOnlyCommonlyMissed] = useState(false);
   const [commonlyMissedFirst, setCommonlyMissedFirst] = useState(false);
@@ -603,8 +614,9 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
   const visible = onlyCommonlyMissed ? rows.filter(isCommonlyMissed) : rows;
   const q = query.trim().toLowerCase();
   const shown = q
-    ? visible.filter((r) => [r.word, ...(r.forms ?? []), r.originalWord, r.originalMessage, languageName(r.language)]
-      .some((s) => s?.toLowerCase().includes(q)))
+    ? visible.filter((r) => [
+      r.word, ...(r.forms ?? []), r.originalWord, r.originalMessage, languageName(r.language), reasonLabel(r), r.correction,
+    ].some((s) => s?.toLowerCase().includes(q)))
     : visible;
   const columns: Column<MissedRow>[] = [
     {
@@ -622,9 +634,21 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
               )}
               {r.pending && <Pill tone="amber">analysis pending</Pill>}
             </div>
+            {r.misused && r.correction && (
+              <div className="text-xs text-slate-500" title="Replaced in the sent message with">→ {r.correction}</div>
+            )}
             {otherForms.length > 0 && <div className="text-xs text-slate-500">{otherForms.join(", ")}</div>}
           </div>
         );
+      },
+    },
+    {
+      key: "reason", header: "Reason", sortValue: (r) => reasonLabel(r), className: "whitespace-nowrap",
+      cell: (r) => {
+        const reason = r.reason ? reasons[r.reason] : undefined;
+        return reason
+          ? <Pill tone={reason.tone} title={reason.title}>{reason.label}</Pill>
+          : <span className="text-slate-400">—</span>;
       },
     },
     {
@@ -667,7 +691,7 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
         </label>
         <Count shown={shown.length} total={visible.length} noun={["word", "words"]} />
       </Toolbar>
-      <DataGrid columns={columns} rows={shown} rowKey={(r) => `${r.pending ? "p" : "a"}:${r.word}`}
+      <DataGrid columns={columns} rows={shown} rowKey={missedRowKey}
         pinFirst={commonlyMissedFirst ? isCommonlyMissed : undefined}
         empty={
           <EmptyState icon={XCircle}>
@@ -691,6 +715,7 @@ function NowCorrect({ rows }: { rows: CorrectRow[] }) {
         <span className="flex flex-wrap items-center gap-1.5">
           <span className="font-medium text-slate-900">{r.word}</span>
           {r.pending && <Pill tone="amber">analysis pending</Pill>}
+          {r.misused && <Pill tone="rose" title="Was used in the wrong context; now used correctly">Wrong in context</Pill>}
         </span>
       ),
     },
@@ -704,7 +729,7 @@ function NowCorrect({ rows }: { rows: CorrectRow[] }) {
         <SearchBox value={query} onChange={setQuery} placeholder="Search words" />
         <Count shown={shown.length} total={rows.length} noun={["word", "words"]} />
       </Toolbar>
-      <DataGrid columns={columns} rows={shown} rowKey={(r) => `${r.pending ? "p" : "a"}:${r.word}`}
+      <DataGrid columns={columns} rows={shown} rowKey={missedRowKey}
         empty={<EmptyState icon={CheckCircle2}>{rows.length ? "No words match your search." : "No words corrected yet."}</EmptyState>} />
     </>
   );
