@@ -89,8 +89,9 @@ function Avatar({ name, size = "md" }: { name: string; size?: "sm" | "md" | "lg"
   );
 }
 
-function Pill({ tone, children, title }: { tone: "slate" | "amber" | "blue" | "violet"; children: ReactNode; title?: string }) {
+function Pill({ tone, children, title }: { tone: "slate" | "amber" | "blue" | "violet" | "rose"; children: ReactNode; title?: string }) {
   const tones = {
+    rose: "border-rose-200 bg-rose-50 text-rose-800",
     slate: "border-slate-200 bg-slate-50 text-slate-700",
     amber: "border-amber-200 bg-amber-50 text-amber-800",
     blue: "border-sky-200 bg-sky-50 text-sky-800",
@@ -572,11 +573,26 @@ function Vocabulary({ rows }: { rows: VocabRow[] }) {
   );
 }
 
+/**
+ * The times-missed count at or above which a word counts as "commonly missed"
+ * for THIS student: the top 20% of their missed words by times missed, and
+ * never fewer than 2 misses. Recomputed from their data on every load, so it
+ * moves as they send more chats.
+ */
+function commonlyMissedThreshold(rows: MissedRow[]): number {
+  if (rows.length === 0) return Infinity;
+  const counts = rows.map((r) => r.misses).sort((a, b) => b - a);
+  const index = Math.max(0, Math.ceil(counts.length * 0.2) - 1);
+  return Math.max(2, counts[index]);
+}
+
 function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMessages: number }) {
-  const [showCommon, setShowCommon] = useState(false);
+  const [onlyCommonlyMissed, setOnlyCommonlyMissed] = useState(false);
   const [query, setQuery] = useState("");
-  const commonCount = rows.filter((r) => r.common).length;
-  const visible = showCommon ? rows : rows.filter((r) => !r.common);
+  const threshold = commonlyMissedThreshold(rows);
+  const isCommonlyMissed = (r: MissedRow) => r.misses >= threshold;
+  const commonlyMissedCount = rows.filter(isCommonlyMissed).length;
+  const visible = onlyCommonlyMissed ? rows.filter(isCommonlyMissed) : rows;
   const q = query.trim().toLowerCase();
   const shown = q
     ? visible.filter((r) => [r.word, ...(r.forms ?? []), r.originalWord, r.originalMessage, languageName(r.language)]
@@ -591,7 +607,11 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
           <div className="space-y-0.5">
             <div className="flex flex-wrap items-center gap-1.5">
               <span className="font-medium text-slate-900">{r.word}</span>
-              {r.common && <Pill tone="slate">common</Pill>}
+              {isCommonlyMissed(r) && (
+                <Pill tone="rose" title={`Missed ${threshold}+ times: among this student's most missed words`}>
+                  Commonly missed
+                </Pill>
+              )}
               {r.pending && <Pill tone="amber">analysis pending</Pill>}
             </div>
             {otherForms.length > 0 && <div className="text-xs text-slate-500">{otherForms.join(", ")}</div>}
@@ -630,8 +650,8 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
       <Toolbar>
         <SearchBox value={query} onChange={setQuery} placeholder="Search missed words" />
         <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-slate-700">
-          <Switch checked={showCommon} onCheckedChange={setShowCommon} className="focus-visible:ring-primary" />
-          Show common words{commonCount > 0 ? ` (${commonCount})` : ""}
+          <Switch checked={onlyCommonlyMissed} onCheckedChange={setOnlyCommonlyMissed} className="focus-visible:ring-primary" />
+          Commonly missed only ({commonlyMissedCount})
         </label>
         <Count shown={shown.length} total={visible.length} noun={["word", "words"]} />
       </Toolbar>
@@ -639,7 +659,7 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
         empty={
           <EmptyState icon={XCircle}>
             {rows.length > 0 && visible.length === 0
-              ? "Only common words so far — turn on Show common words to see them."
+              ? "No commonly missed words yet — a word needs at least 2 misses to count."
               : q ? "No missed words match your search." : "No missed words yet."}
           </EmptyState>
         } />
