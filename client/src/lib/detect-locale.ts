@@ -44,6 +44,8 @@ import {
     if (basePath === "/admin" || basePath.startsWith("/admin/")) return;
     // Same for the Professor Chats authoring page (English-only, one file).
     if (basePath.toLowerCase() === "/professorchats") return;
+    // And the study-group dashboard (English-only, one file).
+    if (basePath === "/progress") return;
 
     // Returning visitor: honor the remembered choice (English included).
     const stored = readStoredLocale();

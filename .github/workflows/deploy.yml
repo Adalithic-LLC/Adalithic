@@ -81,6 +81,9 @@ jobs:
           # Professor Chats authoring page: English only, skipped by
           # detect-locale like /admin, so one file.
           cp dist/public/index.html dist/public/ProfessorChats.html
+          # Study-group dashboard: English only, skipped by detect-locale like
+          # /admin, so one file.
+          cp dist/public/index.html dist/public/progress.html
           for L in es fr de ja it pl nl pt zh ko tr el ar he sv cs ro hu da fi no bg vi th id hi ru uk zh-Hant bn ta te mr ur fa ms fil sw pa; do
             mkdir -p "dist/public/$L"
             cp dist/public/index.html "dist/public/$L/index.html"

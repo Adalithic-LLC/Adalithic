@@ -12,6 +12,7 @@ import Redeem from "@/pages/redeem";
 import Referral from "@/pages/referral";
 import AdminReferrals from "@/pages/admin-referrals";
 import ProfessorChats from "@/pages/professor-chats";
+import Progress from "@/pages/progress";
 import NotFound from "@/pages/not-found";
 import { getLocaleFromPath, isPrefixLocale, isRtl } from "@/lib/locale";
 import { useSeo } from "@/lib/seo";
@@ -59,6 +60,10 @@ function Router() {
       {/* Professor Chats authoring (admin). Unlinked and English-only, like
           the ledger above; publishing is gated server-side by the RPC. */}
       <Route path="/ProfessorChats" component={ProfessorChats} />
+      {/* Study-group dashboard for teachers (Arcatext Chat). English-only and
+          unlinked; the dashboard code is the credential, checked server-side
+          by the group-dashboard edge function on every request. */}
+      <Route path="/progress" component={Progress} />
       {/* Prefixed locales: /es, /es/privacy, /fr/terms, ... An unknown prefix
           (e.g. /xx/privacy) falls through to NotFound. Order matters — the
           bare "/:lang" catch must come after the more specific routes. */}
