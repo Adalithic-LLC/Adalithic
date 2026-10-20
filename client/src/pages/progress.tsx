@@ -209,6 +209,8 @@ interface DataGridProps<T> {
   onRowClick?: (row: T) => void;
   rowLabel?: (row: T) => string; // accessible name for clickable rows
   empty: ReactNode;
+  /** Rows to keep above the rest, after any column sort; each group keeps its order. */
+  pinFirst?: (row: T) => boolean;
 }
 
 function compare(a: SortValue, b: SortValue): number {
@@ -220,20 +222,25 @@ function compare(a: SortValue, b: SortValue): number {
   return String(a).localeCompare(String(b), undefined, { sensitivity: "base", numeric: true });
 }
 
-function DataGrid<T>({ columns, rows, rowKey, initialSort, onRowClick, rowLabel, empty }: DataGridProps<T>) {
+function DataGrid<T>({ columns, rows, rowKey, initialSort, onRowClick, rowLabel, empty, pinFirst }: DataGridProps<T>) {
   const [sort, setSort] = useState<{ key: string; dir: "asc" | "desc" } | null>(initialSort ?? null);
 
   const sorted = useMemo(() => {
     const col = sort && columns.find((c) => c.key === sort.key);
-    if (!sort || !col?.sortValue) return rows;
-    const get = col.sortValue;
-    const sign = sort.dir === "asc" ? 1 : -1;
-    return [...rows].sort((a, b) => {
-      const va = get(a), vb = get(b);
-      if (va === null || vb === null) return compare(va, vb); // nulls last in both directions
-      return sign * compare(va, vb);
-    });
-  }, [rows, sort, columns]);
+    let out = rows;
+    if (sort && col?.sortValue) {
+      const get = col.sortValue;
+      const sign = sort.dir === "asc" ? 1 : -1;
+      out = [...rows].sort((a, b) => {
+        const va = get(a), vb = get(b);
+        if (va === null || vb === null) return compare(va, vb); // nulls last in both directions
+        return sign * compare(va, vb);
+      });
+    }
+    // Pinned rows go first; both groups keep their order, so turning the pin
+    // off puts every row back where it was.
+    return pinFirst ? [...out.filter(pinFirst), ...out.filter((r) => !pinFirst(r))] : out;
+  }, [rows, sort, columns, pinFirst]);
 
   const toggleSort = (key: string) =>
     setSort((s) => (s?.key === key ? { key, dir: s.dir === "asc" ? "desc" : "asc" } : { key, dir: "asc" }));
@@ -588,6 +595,7 @@ function commonlyMissedThreshold(rows: MissedRow[]): number {
 
 function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMessages: number }) {
   const [onlyCommonlyMissed, setOnlyCommonlyMissed] = useState(false);
+  const [commonlyMissedFirst, setCommonlyMissedFirst] = useState(false);
   const [query, setQuery] = useState("");
   const threshold = commonlyMissedThreshold(rows);
   const isCommonlyMissed = (r: MissedRow) => r.misses >= threshold;
@@ -653,9 +661,14 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
           <Switch checked={onlyCommonlyMissed} onCheckedChange={setOnlyCommonlyMissed} className="focus-visible:ring-primary" />
           Commonly missed only ({commonlyMissedCount})
         </label>
+        <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-slate-700">
+          <Switch checked={commonlyMissedFirst} onCheckedChange={setCommonlyMissedFirst} className="focus-visible:ring-primary" />
+          Move commonly missed words to the top
+        </label>
         <Count shown={shown.length} total={visible.length} noun={["word", "words"]} />
       </Toolbar>
       <DataGrid columns={columns} rows={shown} rowKey={(r) => `${r.pending ? "p" : "a"}:${r.word}`}
+        pinFirst={commonlyMissedFirst ? isCommonlyMissed : undefined}
         empty={
           <EmptyState icon={XCircle}>
             {rows.length > 0 && visible.length === 0
