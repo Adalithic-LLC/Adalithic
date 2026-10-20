@@ -103,7 +103,7 @@ function StudentView({ code, member, onBack }: { code: string; member: Member; o
   useEffect(() => { loadStudent(code, member.userId).then(setData).catch(() => setData(null)); }, [code, member.userId]);
 
   if (chat) return <ChatView code={code} member={member} conversationId={chat} onBack={() => setChat(null)} />;
-  const tabs: [Tab, string][] = [["vocabulary", "Vocabulary"], ["missed", "Missed words"], ["correct", "Now correct"], ["chats", "Chats"]];
+  const tabs: [Tab, string][] = [["vocabulary", "All Words Used"], ["missed", "Missed words"], ["correct", "Now correct"], ["chats", "Chats"]];
   return (
     <div>
       <button className="text-sm underline mb-4" onClick={onBack}>← All members</button>
@@ -119,7 +119,7 @@ function StudentView({ code, member, onBack }: { code: string; member: Member; o
         <div>
           <input placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)} className="border rounded-lg px-3 py-2 mb-3" />
           <table className="w-full text-sm">
-            <thead><tr className="text-left text-gray-500"><th className="py-1">Word</th><th>Typed</th><th>Sent (Reworded)</th></tr></thead>
+            <thead><tr className="text-left text-gray-500"><th className="py-1">Word typed</th><th>Instances</th><th>Reworded</th></tr></thead>
             <tbody>
               {data.vocabulary.filter((v) => v.word.includes(query.toLowerCase())).map((v) => (
                 <tr key={v.word} className="border-t"><td className="py-1">{v.word}</td><td>{v.typed}</td><td>{v.sent}</td></tr>
