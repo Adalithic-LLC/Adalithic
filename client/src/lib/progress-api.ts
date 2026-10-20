@@ -12,7 +12,9 @@ export interface Member { userId: string; name: string; isCreator: boolean; last
 export interface GroupData { name: string; members: Member[] }
 export interface StudentData {
   vocabulary: { word: string; typed: number; sent: number }[];
-  missed: { word: string; misses: number; lastMissedAt: string }[];
+  // original: what the student typed instead, at the most recent miss
+  // ("" when Reword inserted the word with nothing typed in its place).
+  missed: { word: string; misses: number; lastMissedAt: string; original: string }[];
   nowCorrect: { word: string; misses: number; correctSince: number; firstCorrectAt: string }[];
   // Every shared chat, newest first; lastAt is null for a chat with no messages yet.
   chats: { conversationId: string; partnerName: string; messages: number; lastAt: string | null }[];

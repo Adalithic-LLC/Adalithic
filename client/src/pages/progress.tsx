@@ -129,10 +129,15 @@ function StudentView({ code, member, onBack }: { code: string; member: Member; o
         </div>
       ) : tab === "missed" ? (
         <table className="w-full text-sm">
-          <thead><tr className="text-left text-gray-500"><th className="py-1">Word</th><th>Times missed</th><th>Last missed</th></tr></thead>
+          <thead><tr className="text-left text-gray-500"><th className="py-1">Word</th><th>Original</th><th>Times missed</th><th>Last missed</th></tr></thead>
           <tbody>
             {data.missed.map((r) => (
-              <tr key={r.word} className="border-t"><td className="py-1">{r.word}</td><td>{r.misses}</td><td>{new Date(r.lastMissedAt).toLocaleDateString()}</td></tr>
+              <tr key={r.word} className="border-t">
+                <td className="py-1">{r.word}</td>
+                <td className="text-gray-600">{r.original || "—"}</td>
+                <td>{r.misses}</td>
+                <td>{new Date(r.lastMissedAt).toLocaleDateString()}</td>
+              </tr>
             ))}
           </tbody>
         </table>
