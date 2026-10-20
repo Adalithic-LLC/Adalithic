@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect, useMemo, useState } from "react";
 import {
   ArrowDown, ArrowLeft, ArrowUp, ArrowUpDown, BookOpen, CheckCircle2, ChevronDown, ChevronRight, ChevronUp, Clock,
-  Inbox, KeyRound, Loader2, LogOut, MessageSquare, Search, Users, XCircle,
+  Inbox, KeyRound, Loader2, LogOut, MessageSquare, RotateCw, Search, Users, XCircle,
 } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -133,6 +133,47 @@ function EmptyState({ icon: Icon = Inbox, children }: { icon?: typeof Inbox; chi
       <p>{children}</p>
     </div>
   );
+}
+
+const loadErrorText: Record<DashboardError, string> = {
+  not_found: "This student's data isn't available any more — they may have left the group or removed the chat.",
+  blocked: "Too many attempts. Try again in 5 minutes.",
+  network: "Couldn't reach the server.",
+};
+
+function ErrorState({ error, onRetry }: { error: DashboardError; onRetry: () => void }) {
+  return (
+    <div className="flex flex-col items-center justify-center gap-3 px-4 py-12 text-center" role="alert">
+      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-50">
+        <XCircle className="h-5 w-5 text-red-600" aria-hidden />
+      </span>
+      <p className="max-w-md text-sm text-slate-700">{loadErrorText[error]}</p>
+      <Button variant="outline" size="sm" onClick={onRetry} className="gap-1.5">
+        <RotateCw className="h-4 w-4" aria-hidden />
+        Try again
+      </Button>
+    </div>
+  );
+}
+
+// Loads once per key change and again on retry(); a failure is kept as an
+// error instead of leaving the view on "Loading…".
+function useLoad<T>(load: () => Promise<T>, deps: unknown[], onNotFound?: () => void) {
+  const [data, setData] = useState<T | null>(null);
+  const [error, setError] = useState<DashboardError | null>(null);
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => {
+    let live = true;
+    setData(null); setError(null);
+    load().then((d) => { if (live) setData(d); }).catch((e: unknown) => {
+      if (!live) return;
+      const err: DashboardError = e === "not_found" || e === "blocked" ? e : "network";
+      setError(err);
+      if (err === "not_found") onNotFound?.();
+    });
+    return () => { live = false; };
+  }, [...deps, attempt]);
+  return { data, error, retry: () => setAttempt((n) => n + 1) };
 }
 
 function LoadingState() {
@@ -333,6 +374,18 @@ export default function Progress() {
 
   const close = () => { sessionStorage.removeItem(CODE_KEY); setCode(""); setGroup(null); };
 
+  // A student or chat load came back not_found. The function answers 404 for
+  // a dead code too, so re-check the code: if it was reset, go back to the
+  // code form with the same message the gate shows; otherwise refresh the
+  // member list (the student may have left) and let the view show its error.
+  const recheckCode = () => {
+    loadGroup(code).then(setGroup).catch((e: DashboardError) => {
+      if (e !== "not_found") return;
+      sessionStorage.removeItem(CODE_KEY);
+      setStudent(null); setGroup(null); setCode(""); setError("not_found");
+    });
+  };
+
   return (
     <div className="min-h-screen bg-slate-100">
       <Navigation />
@@ -359,7 +412,7 @@ export default function Progress() {
               </form>
             </Panel>
           ) : student ? (
-            <StudentView code={code} member={student} onBack={() => setStudent(null)} />
+            <StudentView code={code} member={student} onBack={() => setStudent(null)} onNotFound={recheckCode} />
           ) : (
             <GroupView group={group} onOpen={setStudent} onClose={close} />
           )}
@@ -434,13 +487,16 @@ function GroupView({ group, onOpen, onClose }: { group: GroupData; onOpen: (m: M
   );
 }
 
-function StudentView({ code, member, onBack }: { code: string; member: Member; onBack: () => void }) {
-  const [data, setData] = useState<StudentData | null>(null);
+function StudentView({ code, member, onBack, onNotFound }: {
+  code: string; member: Member; onBack: () => void; onNotFound: () => void;
+}) {
   const [tab, setTab] = useState<Tab>("vocabulary");
   const [chat, setChat] = useState<string | null>(null);
-  useEffect(() => { loadStudent(code, member.userId).then(setData).catch(() => setData(null)); }, [code, member.userId]);
+  const { data, error, retry } = useLoad(() => loadStudent(code, member.userId), [code, member.userId], onNotFound);
 
-  if (chat) return <ChatView code={code} member={member} conversationId={chat} onBack={() => setChat(null)} />;
+  if (chat) {
+    return <ChatView code={code} member={member} conversationId={chat} onBack={() => setChat(null)} onNotFound={onNotFound} />;
+  }
   const tabs: [Tab, string, typeof Inbox][] = [
     ["vocabulary", "All Words Used", BookOpen], ["missed", "Missed words", XCircle],
     ["correct", "Now correct", CheckCircle2], ["chats", "Chats", MessageSquare],
@@ -481,7 +537,7 @@ function StudentView({ code, member, onBack }: { code: string; member: Member; o
       {data?.truncated && <Notice>Statistics cover the most recent 5,000 messages.</Notice>}
 
       <Panel className="overflow-hidden">
-        {!data ? <LoadingState /> : tab === "vocabulary" ? (
+        {error ? <ErrorState error={error} onRetry={retry} /> : !data ? <LoadingState /> : tab === "vocabulary" ? (
           <Vocabulary rows={data.vocabulary} />
         ) : tab === "missed" ? (
           <MissedWords rows={data.missed} pendingMessages={data.pendingMessages ?? 0} />
@@ -660,10 +716,12 @@ function Chats({ rows, onOpen }: { rows: ChatRow[]; onOpen: (conversationId: str
   );
 }
 
-function ChatView({ code, member, conversationId, onBack }: { code: string; member: Member; conversationId: string; onBack: () => void }) {
-  const [data, setData] = useState<ChatData | null>(null);
+function ChatView({ code, member, conversationId, onBack, onNotFound }: {
+  code: string; member: Member; conversationId: string; onBack: () => void; onNotFound: () => void;
+}) {
   const [open, setOpen] = useState<Set<string>>(new Set());
-  useEffect(() => { loadChat(code, member.userId, conversationId).then(setData).catch(() => setData(null)); }, [code, member.userId, conversationId]);
+  const { data, error, retry } = useLoad<ChatData>(
+    () => loadChat(code, member.userId, conversationId), [code, member.userId, conversationId], onNotFound);
   const toggle = (id: string) => setOpen((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
   return (
     <div className="space-y-4">
@@ -684,7 +742,7 @@ function ChatView({ code, member, conversationId, onBack }: { code: string; memb
       </div>
       {data?.truncated && <Notice>Older messages not shown.</Notice>}
       <Panel className="p-4 sm:p-6">
-        {!data ? <LoadingState /> : data.messages.length === 0 ? (
+        {error ? <ErrorState error={error} onRetry={retry} /> : !data ? <LoadingState /> : data.messages.length === 0 ? (
           <EmptyState icon={MessageSquare}>No messages in this chat yet.</EmptyState>
         ) : (
           <div className="mx-auto flex max-w-2xl flex-col gap-2">
