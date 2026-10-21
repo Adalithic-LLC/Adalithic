@@ -7,13 +7,16 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import {
   type ChatData, type DashboardError, type GroupData, loadChat, loadGroup, loadStudent, type Member, type MissReason,
-  type MissedRow, type NotRewordedRow, saveCorrection, type StudentData,
+  type MissedRow, type NotRewordedRow, PARTS_OF_SPEECH, type PartOfSpeech, saveCorrection, type StudentData,
 } from "@/lib/progress-api";
 
 const CODE_KEY = "progress.code"; // sessionStorage only: never in the URL
@@ -350,6 +353,113 @@ function Count({ shown, total, noun }: { shown: number; total: number; noun: [st
 }
 
 /* ------------------------------------------------------------------ */
+/* Part of speech filter (the app's Study Guide filter, on the web)     */
+/* ------------------------------------------------------------------ */
+
+// The app's Study Guide labels (study.pos.<value>, English).
+const posLabels: Record<PartOfSpeech, string> = {
+  noun: "Noun", verb: "Verb", adjective: "Adjective", adverb: "Adverb", phrase: "Phrase", pronoun: "Pronoun",
+  preposition: "Preposition", determiner: "Determiner", conjunction: "Conjunction", number: "Number",
+  interjection: "Interjection",
+};
+type PosChoice = PartOfSpeech | "unknown";
+type WithPos = { pos?: string | null };
+/** A row's part of speech; "unknown" when missing (pending, older analysis) or not a value this page knows. */
+const posOf = (r: WithPos): PosChoice =>
+  r.pos && (PARTS_OF_SPEECH as readonly string[]).includes(r.pos) ? (r.pos as PartOfSpeech) : "unknown";
+const posLabel = (r: WithPos): string | null => {
+  const p = posOf(r);
+  return p === "unknown" ? null : posLabels[p];
+};
+const choiceLabel = (c: PosChoice) => (c === "unknown" ? "Unknown" : posLabels[c]);
+
+interface PosFilterState<T> {
+  choice: PosChoice | null; // null = All
+  setChoice: (c: PosChoice | null) => void;
+  options: { value: PosChoice; count: number }[];
+  total: number;
+  keep: (row: T) => boolean;
+}
+
+/**
+ * Mirrors the app's Study Guide filter (StudyFilterOptions): it offers only
+ * the parts of speech that rows behind it actually have, in the Study Guide's
+ * order, plus "Unknown" (last) only when some rows have none; "All" is the
+ * default; and a choice the rows no longer contain falls back to All in the
+ * same render, so the table never sits on a filter nobody can see to clear.
+ * `rows` are the table's rows under its OTHER filters (e.g. Commonly missed),
+ * not the search, so a search never makes an option disappear.
+ */
+function usePosFilter<T extends WithPos>(rows: T[]): PosFilterState<T> {
+  const [picked, setPicked] = useState<PosChoice | null>(null);
+  const options = useMemo(() => {
+    const counts = new Map<PosChoice, number>();
+    for (const r of rows) {
+      const k = posOf(r);
+      counts.set(k, (counts.get(k) ?? 0) + 1);
+    }
+    return [...PARTS_OF_SPEECH, "unknown" as const]
+      .filter((k) => counts.has(k))
+      .map((value) => ({ value, count: counts.get(value) ?? 0 }));
+  }, [rows]);
+  const choice = picked !== null && options.some((o) => o.value === picked) ? picked : null;
+  useEffect(() => {
+    if (picked !== null && choice === null) setPicked(null);
+  }, [picked, choice]);
+  return { choice, setChoice: setPicked, options, total: rows.length, keep: (r) => choice === null || posOf(r) === choice };
+}
+
+function PosFilter<T>({ filter }: { filter: PosFilterState<T> }) {
+  const { choice, setChoice, options, total } = filter;
+  const count = (n: number) => <span className="ml-auto pl-6 text-xs tabular-nums text-slate-500">{n.toLocaleString()}</span>;
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="outline"
+          size="sm"
+          aria-label={`Part of speech: ${choice === null ? "All" : choiceLabel(choice)}`}
+          className={cn(
+            "h-8 gap-1.5 border-slate-200 font-normal text-slate-700 focus-visible:ring-primary",
+            choice !== null && "border-sky-300 bg-sky-50 text-sky-900 hover:bg-sky-100",
+          )}
+        >
+          {choice === null ? "All parts of speech" : choiceLabel(choice)}
+          <ChevronDown className="h-3.5 w-3.5 opacity-60" aria-hidden />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="start" className="min-w-[13rem]">
+        <DropdownMenuCheckboxItem checked={choice === null} onCheckedChange={() => setChoice(null)}>
+          All parts of speech{count(total)}
+        </DropdownMenuCheckboxItem>
+        {options.length > 0 && <DropdownMenuSeparator />}
+        {options.map((o) => (
+          <DropdownMenuCheckboxItem key={o.value} checked={choice === o.value} onCheckedChange={() => setChoice(o.value)}>
+            {choiceLabel(o.value)}{count(o.count)}
+          </DropdownMenuCheckboxItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+/** The empty-table message when rows exist but the search or part-of-speech filter hides them all. */
+function noMatch<T>(query: string, pos: PosFilterState<T>): string {
+  const label = pos.choice === null ? null : choiceLabel(pos.choice);
+  if (query.trim() && label) return `No ${label === "Unknown" ? "words of unknown part of speech" : label.toLowerCase() + "s"} match your search.`;
+  if (label) return label === "Unknown" ? "No words of unknown part of speech." : `No ${label.toLowerCase()}s.`;
+  return "No words match your search.";
+}
+
+/** The Part of speech column, shared by the four word tables. */
+function posColumn<T extends WithPos>(): Column<T> {
+  return {
+    key: "pos", header: "Part of speech", sortValue: (r) => posLabel(r), className: "whitespace-nowrap",
+    cell: (r) => posLabel(r) ?? <span className="text-slate-400">—</span>,
+  };
+}
+
+/* ------------------------------------------------------------------ */
 /* Page                                                                */
 /* ------------------------------------------------------------------ */
 
@@ -561,9 +671,11 @@ function StudentView({ code, member, onBack, onNotFound }: {
 type VocabRow = StudentData["vocabulary"][number];
 function Vocabulary({ rows }: { rows: VocabRow[] }) {
   const [query, setQuery] = useState("");
-  const shown = rows.filter((v) => v.word.includes(query.toLowerCase()));
+  const pos = usePosFilter(rows);
+  const shown = rows.filter((v) => v.word.includes(query.toLowerCase()) && pos.keep(v));
   const columns: Column<VocabRow>[] = [
     { key: "word", header: "Word typed", sortValue: (v) => v.word, cell: (v) => <span className="font-medium text-slate-900">{v.word}</span> },
+    posColumn<VocabRow>(),
     { key: "typed", header: "Instances", align: "right", sortValue: (v) => v.typed, className: "w-32", cell: (v) => v.typed.toLocaleString() },
     { key: "sent", header: "Reworded", align: "right", sortValue: (v) => v.sent, className: "w-32", cell: (v) => v.sent.toLocaleString() },
   ];
@@ -571,10 +683,11 @@ function Vocabulary({ rows }: { rows: VocabRow[] }) {
     <>
       <Toolbar>
         <SearchBox value={query} onChange={setQuery} placeholder="Search words" />
+        <PosFilter filter={pos} />
         <Count shown={shown.length} total={rows.length} noun={["word", "words"]} />
       </Toolbar>
       <DataGrid columns={columns} rows={shown} rowKey={(v) => v.word}
-        empty={<EmptyState icon={BookOpen}>{rows.length ? "No words match your search." : "No words used yet."}</EmptyState>} />
+        empty={<EmptyState icon={BookOpen}>{rows.length ? noMatch(query, pos) : "No words used yet."}</EmptyState>} />
     </>
   );
 }
@@ -616,14 +729,16 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
   const threshold = commonlyMissedThreshold(rows);
   const isCommonlyMissed = (r: MissedRow) => r.misses >= threshold;
   const commonlyMissedCount = rows.filter(isCommonlyMissed).length;
-  const visible = onlyCommonlyMissed ? rows.filter(isCommonlyMissed) : rows;
+  const visible = useMemo(
+    () => (onlyCommonlyMissed ? rows.filter((r) => r.misses >= threshold) : rows),
+    [rows, onlyCommonlyMissed, threshold],
+  );
+  const pos = usePosFilter(visible);
   const q = query.trim().toLowerCase();
-  const shown = q
-    ? visible.filter((r) => [
-      r.word, ...(r.forms ?? []), r.originalWord, r.originalMessage, languageName(r.language), reasonLabel(r), r.correction,
-      r.editedWord,
-    ].some((s) => s?.toLowerCase().includes(q)))
-    : visible;
+  const shown = visible.filter((r) => pos.keep(r) && (!q || [
+    r.word, ...(r.forms ?? []), r.originalWord, r.originalMessage, languageName(r.language), reasonLabel(r), r.correction,
+    r.editedWord,
+  ].some((s) => s?.toLowerCase().includes(q))));
   const columns: Column<MissedRow>[] = [
     {
       key: "word", header: "Reworded To", sortValue: rewordedTo, className: "min-w-[10rem]",
@@ -646,6 +761,7 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
         );
       },
     },
+    posColumn<MissedRow>(),
     {
       key: "reason", header: "Reason", sortValue: (r) => reasonLabel(r), className: "whitespace-nowrap",
       cell: (r) => {
@@ -695,13 +811,14 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
           <Switch checked={onlyCommonlyMissed} onCheckedChange={setOnlyCommonlyMissed} className="focus-visible:ring-primary" />
           Commonly missed only ({commonlyMissedCount})
         </label>
+        <PosFilter filter={pos} />
         <Count shown={shown.length} total={visible.length} noun={["word", "words"]} />
       </Toolbar>
       <DataGrid columns={columns} rows={shown} rowKey={missedRowKey}        empty={
           <EmptyState icon={XCircle}>
             {rows.length > 0 && visible.length === 0
               ? "No commonly missed words yet — a word needs at least 2 misses to count."
-              : q ? "No missed words match your search." : "No missed words yet."}
+              : visible.length > 0 ? noMatch(query, pos) : "No missed words yet."}
           </EmptyState>
         } />
     </>
@@ -711,7 +828,8 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
 type CorrectRow = StudentData["nowCorrect"][number];
 function NowCorrect({ rows }: { rows: CorrectRow[] }) {
   const [query, setQuery] = useState("");
-  const shown = rows.filter((r) => r.word.toLowerCase().includes(query.trim().toLowerCase()));
+  const pos = usePosFilter(rows);
+  const shown = rows.filter((r) => r.word.toLowerCase().includes(query.trim().toLowerCase()) && pos.keep(r));
   const columns: Column<CorrectRow>[] = [
     {
       key: "word", header: "Word", sortValue: (r) => r.word,
@@ -723,6 +841,7 @@ function NowCorrect({ rows }: { rows: CorrectRow[] }) {
         </span>
       ),
     },
+    posColumn<CorrectRow>(),
     { key: "misses", header: "Past misses", align: "right", sortValue: (r) => r.misses, className: "w-32 whitespace-nowrap", cell: (r) => r.misses.toLocaleString() },
     { key: "since", header: "Correct since", align: "right", sortValue: (r) => r.correctSince, className: "w-32 whitespace-nowrap", cell: (r) => r.correctSince.toLocaleString() },
     { key: "first", header: "First correct", align: "right", sortValue: (r) => time(r.firstCorrectAt), className: "w-32 whitespace-nowrap", cell: (r) => day(r.firstCorrectAt) },
@@ -731,10 +850,11 @@ function NowCorrect({ rows }: { rows: CorrectRow[] }) {
     <>
       <Toolbar>
         <SearchBox value={query} onChange={setQuery} placeholder="Search words" />
+        <PosFilter filter={pos} />
         <Count shown={shown.length} total={rows.length} noun={["word", "words"]} />
       </Toolbar>
       <DataGrid columns={columns} rows={shown} rowKey={missedRowKey}
-        empty={<EmptyState icon={CheckCircle2}>{rows.length ? "No words match your search." : "No words corrected yet."}</EmptyState>} />
+        empty={<EmptyState icon={CheckCircle2}>{rows.length ? noMatch(query, pos) : "No words corrected yet."}</EmptyState>} />
     </>
   );
 }
@@ -813,12 +933,14 @@ function NotReworded({ rows, code, userId, onNotFound }: {
       return false;
     }
   };
+  const pos = usePosFilter(rows);
   const q = query.trim().toLowerCase();
-  const shown = q
-    ? rows.filter((r) => [r.word, r.exampleMessage, correctionOf(r)].some((s) => s.toLowerCase().includes(q)))
-    : rows;
+  const shown = rows.filter((r) =>
+    pos.keep(r) && (!q || [r.word, r.exampleMessage, correctionOf(r)].some((s) => s.toLowerCase().includes(q)))
+  );
   const columns: Column<NotRewordedRow>[] = [
     { key: "word", header: "Word", sortValue: (r) => r.word, className: "min-w-[8rem]", cell: (r) => <span className="font-medium text-slate-900">{r.word}</span> },
+    posColumn<NotRewordedRow>(),
     {
       key: "correction", header: "Corrections", sortValue: (r) => correctionOf(r) || null, className: "min-w-[11rem]",
       cell: (r) => <CorrectionCell word={r.word} value={correctionOf(r)} onSave={(next) => save(r.word, next)} />,
@@ -837,10 +959,11 @@ function NotReworded({ rows, code, userId, onNotFound }: {
     <>
       <Toolbar>
         <SearchBox value={query} onChange={setQuery} placeholder="Search words" />
+        <PosFilter filter={pos} />
         <Count shown={shown.length} total={rows.length} noun={["word", "words"]} />
       </Toolbar>
       <DataGrid columns={columns} rows={shown} rowKey={(r) => r.word}
-        empty={<EmptyState icon={PenLine}>{rows.length ? "No words match your search." : "Every message so far went through Reword."}</EmptyState>} />
+        empty={<EmptyState icon={PenLine}>{rows.length ? noMatch(query, pos) : "Every message so far went through Reword."}</EmptyState>} />
     </>
   );
 }

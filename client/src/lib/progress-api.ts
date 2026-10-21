@@ -10,6 +10,15 @@ export type DashboardError = "not_found" | "blocked" | "network";
 
 export interface Member { userId: string; name: string; isCreator: boolean; lastActive: string | null; sharedChats: number }
 export interface GroupData { name: string; members: Member[] }
+// A word's part of speech: exactly the app's Study Guide set
+// (StudyPartOfSpeech), in its order. null/absent = unknown (analysis pending,
+// analysed before parts of speech, or an older group-dashboard).
+export const PARTS_OF_SPEECH = [
+  "noun", "verb", "adjective", "adverb", "phrase", "pronoun", "preposition", "determiner", "conjunction", "number",
+  "interjection",
+] as const;
+export type PartOfSpeech = typeof PARTS_OF_SPEECH[number];
+
 // Optional fields are absent while an older group-dashboard is deployed.
 export interface MissedRow {
   word: string; // the dictionary form (base); the word itself when pending
@@ -27,6 +36,7 @@ export interface MissedRow {
   misused?: boolean; // `word` is what the student typed: a real word, wrong in context
   // Typed by hand in place of the Reworded word after the Reword (a manual edit); null when not edited.
   editedWord?: string | null;
+  pos?: PartOfSpeech | null; // of the latest pair for this word
 }
 // A word in messages the student sent WITHOUT Reword (their own messages only).
 export interface NotRewordedRow {
@@ -36,12 +46,16 @@ export interface NotRewordedRow {
   lastUsedAt: string;
   exampleMessage: string; // the most recent un-Reworded message containing it (shown as Original Message)
   correction?: string | null; // the teacher's saved correct form; absent before the corrections deploy
+  pos?: PartOfSpeech | null; // from the AI labelling of messages sent without Reword
 }
 export type MissReason = "translation" | "spelling" | "grammar" | "wrong_word" | "added";
 export interface StudentData {
-  vocabulary: { word: string; typed: number; sent: number }[];
+  vocabulary: { word: string; typed: number; sent: number; pos?: PartOfSpeech | null }[];
   missed: MissedRow[];
-  nowCorrect: { word: string; misses: number; correctSince: number; firstCorrectAt: string; pending?: boolean; misused?: boolean }[];
+  nowCorrect: {
+    word: string; misses: number; correctSince: number; firstCorrectAt: string; pending?: boolean; misused?: boolean;
+    pos?: PartOfSpeech | null;
+  }[];
   notReworded?: NotRewordedRow[]; // absent while an older group-dashboard is deployed
   pendingMessages?: number; // Reworded messages still waiting for the AI analysis
   // Every chat sent to the group, newest first; lastAt is null for a chat with no messages yet.
