@@ -32,7 +32,8 @@ export interface NotRewordedRow {
   uses: number; // total occurrences
   messages: number; // distinct un-Reworded messages containing it
   lastUsedAt: string;
-  exampleMessage: string; // the most recent un-Reworded message containing it
+  exampleMessage: string; // the most recent un-Reworded message containing it (shown as Original Message)
+  correction?: string | null; // the teacher's saved correct form; absent before the corrections deploy
 }
 export type MissReason = "translation" | "spelling" | "grammar" | "wrong_word" | "added";
 export interface StudentData {
@@ -78,5 +79,8 @@ async function post<T>(code: string, request: Record<string, string>): Promise<T
 
 export const loadGroup = (code: string) => post<GroupData>(code, { type: "group" });
 export const loadStudent = (code: string, userId: string) => post<StudentData>(code, { type: "student", userId });
-export const loadChat = (code: string, userId: string, conversationId: string) =>
+// Saves (or, with "", deletes) the teacher's correction for one Not Reworded word.
+export const saveCorrection = (code: string, userId: string, word: string, correction: string) =>
+  post<{ status: "saved" | "deleted"; correction: string | null }>(code, { type: "set_correction", userId, word, correction });
+export const loadChat =(code: string, userId: string, conversationId: string) =>
   post<ChatData>(code, { type: "chat", userId, conversationId });

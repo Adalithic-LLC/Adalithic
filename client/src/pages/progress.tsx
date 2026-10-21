@@ -1,4 +1,4 @@
-import { type ReactNode, useEffect, useMemo, useState } from "react";
+import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowDown, ArrowLeft, ArrowUp, ArrowUpDown, BookOpen, CheckCircle2, ChevronDown, ChevronRight, ChevronUp, Clock,
   Inbox, KeyRound, Loader2, LogOut, MessageSquare, PenLine, RotateCw, Search, Users, XCircle,
@@ -13,7 +13,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import {
   type ChatData, type DashboardError, type GroupData, loadChat, loadGroup, loadStudent, type Member, type MissReason,
-  type MissedRow, type NotRewordedRow, type StudentData,
+  type MissedRow, type NotRewordedRow, saveCorrection, type StudentData,
 } from "@/lib/progress-api";
 
 const CODE_KEY = "progress.code"; // sessionStorage only: never in the URL
@@ -549,7 +549,7 @@ function StudentView({ code, member, onBack, onNotFound }: {
         ) : tab === "correct" ? (
           <NowCorrect rows={data.nowCorrect} />
         ) : tab === "notReworded" ? (
-          <NotReworded rows={data.notReworded ?? []} />
+          <NotReworded rows={data.notReworded ?? []} code={code} userId={member.userId} onNotFound={onNotFound} />
         ) : (
           <Chats rows={data.chats} onOpen={setChat} />
         )}
@@ -732,16 +732,94 @@ function NowCorrect({ rows }: { rows: CorrectRow[] }) {
   );
 }
 
-function NotReworded({ rows }: { rows: NotRewordedRow[] }) {
+type SaveState = "idle" | "saving" | "saved" | "error";
+
+/**
+ * The teacher's correction for one word. Saves on blur and Enter, Escape
+ * reverts. `value` is the parent's (optimistic) value; on a failed save the
+ * parent rolls it back and the draft follows.
+ */
+function CorrectionCell({ word, value, onSave }: { word: string; value: string; onSave: (next: string) => Promise<boolean> }) {
+  const [draft, setDraft] = useState(value);
+  const [state, setState] = useState<SaveState>("idle");
+  const skipBlur = useRef(false);
+  useEffect(() => setDraft(value), [value]);
+
+  const commit = async () => {
+    const next = draft.trim();
+    if (next === value) { setDraft(value); return; }
+    setState("saving");
+    setState((await onSave(next)) ? "saved" : "error");
+  };
+
+  return (
+    <div className="flex items-center gap-1.5">
+      <Input
+        value={draft}
+        maxLength={80}
+        aria-label={`Correction for ${word}`}
+        placeholder="Add correction"
+        onChange={(e) => { setDraft(e.target.value); if (state !== "saving") setState("idle"); }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") { e.preventDefault(); e.currentTarget.blur(); }
+          if (e.key === "Escape") { e.preventDefault(); skipBlur.current = true; setDraft(value); setState("idle"); e.currentTarget.blur(); }
+        }}
+        onBlur={() => {
+          if (skipBlur.current) { skipBlur.current = false; return; }
+          void commit();
+        }}
+        aria-invalid={state === "error"}
+        className={cn(
+          "h-7 min-w-[9rem] border-slate-200 bg-white px-2 text-sm focus-visible:ring-primary",
+          state === "error" && "border-red-300",
+        )}
+      />
+      <span className="w-4 shrink-0" aria-live="polite">
+        {state === "saving" && <Loader2 className="h-3.5 w-3.5 animate-spin text-slate-400" aria-label="Saving" />}
+        {state === "saved" && <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" aria-label="Saved" />}
+        {state === "error" && <XCircle className="h-3.5 w-3.5 text-red-600" aria-label="Not saved. Try again." />}
+      </span>
+    </div>
+  );
+}
+
+function NotReworded({ rows, code, userId, onNotFound }: {
+  rows: NotRewordedRow[]; code: string; userId: string; onNotFound: () => void;
+}) {
   const [query, setQuery] = useState("");
+  // word -> correction ("" = none). Optimistic: set before the save, rolled back if it fails.
+  const [corrections, setCorrections] = useState<Record<string, string>>({});
+  useEffect(() => {
+    setCorrections(Object.fromEntries(rows.map((r) => [r.word, r.correction ?? ""])));
+  }, [rows]);
+  const correctionOf = (r: NotRewordedRow) => corrections[r.word] ?? r.correction ?? "";
+  const save = async (word: string, next: string) => {
+    const previous = corrections[word] ?? "";
+    setCorrections((c) => ({ ...c, [word]: next }));
+    try {
+      const res = await saveCorrection(code, userId, word, next);
+      setCorrections((c) => ({ ...c, [word]: res.correction ?? "" }));
+      return true;
+    } catch (e) {
+      setCorrections((c) => ({ ...c, [word]: previous }));
+      if (e === "not_found") onNotFound();
+      return false;
+    }
+  };
   const q = query.trim().toLowerCase();
-  const shown = q ? rows.filter((r) => [r.word, r.exampleMessage].some((s) => s.toLowerCase().includes(q))) : rows;
+  const shown = q
+    ? rows.filter((r) => [r.word, r.exampleMessage, correctionOf(r)].some((s) => s.toLowerCase().includes(q)))
+    : rows;
   const columns: Column<NotRewordedRow>[] = [
     { key: "word", header: "Word", sortValue: (r) => r.word, className: "min-w-[8rem]", cell: (r) => <span className="font-medium text-slate-900">{r.word}</span> },
+    {
+      key: "correction", header: "Corrections", sortValue: (r) => correctionOf(r) || null, className: "min-w-[11rem]",
+      cell: (r) => <CorrectionCell word={r.word} value={correctionOf(r)} onSave={(next) => save(r.word, next)} />,
+    },
     { key: "uses", header: "Times used", align: "right", sortValue: (r) => r.uses, className: "w-28 whitespace-nowrap", cell: (r) => r.uses.toLocaleString() },
     { key: "messages", header: "Messages", align: "right", sortValue: (r) => r.messages, className: "w-28 whitespace-nowrap", cell: (r) => r.messages.toLocaleString() },
     {
-      key: "example", header: "Example Message", sortValue: (r) => r.exampleMessage || null, className: "min-w-[16rem] max-w-md",
+      key: "example", header: "Original Message", sortValue: (r) => r.exampleMessage || null, className: "min-w-[16rem] max-w-md",
       cell: (r) => r.exampleMessage
         ? <span className="line-clamp-3 text-slate-600" title={r.exampleMessage}>{r.exampleMessage}</span>
         : <span className="text-slate-400">—</span>,
