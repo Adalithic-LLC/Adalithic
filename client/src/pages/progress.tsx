@@ -621,6 +621,7 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
   const shown = q
     ? visible.filter((r) => [
       r.word, ...(r.forms ?? []), r.originalWord, r.originalMessage, languageName(r.language), reasonLabel(r), r.correction,
+      r.editedWord,
     ].some((s) => s?.toLowerCase().includes(q)))
     : visible;
   const columns: Column<MissedRow>[] = [
@@ -657,6 +658,12 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
     {
       key: "original", header: "Original Word", sortValue: (r) => r.originalWord || null, className: "min-w-[8rem]",
       cell: (r) => r.originalWord || <span className="text-slate-400">—</span>,
+    },
+    {
+      key: "edited", header: "Edited Word", sortValue: (r) => r.editedWord || null, className: "min-w-[8rem]",
+      cell: (r) => r.editedWord
+        ? <span title="Typed by hand after the Reword">{r.editedWord}</span>
+        : <span className="text-slate-400">—</span>,
     },
     {
       key: "message", header: "Original Message", sortValue: (r) => r.originalMessage || null, className: "min-w-[16rem] max-w-md",

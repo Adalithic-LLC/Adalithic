@@ -25,6 +25,8 @@ export interface MissedRow {
   reason?: MissReason | null;
   correction?: string | null; // misused rows only: the word Reword replaced it with
   misused?: boolean; // `word` is what the student typed: a real word, wrong in context
+  // Typed by hand in place of the Reworded word after the Reword (a manual edit); null when not edited.
+  editedWord?: string | null;
 }
 // A word in messages the student sent WITHOUT Reword (their own messages only).
 export interface NotRewordedRow {
