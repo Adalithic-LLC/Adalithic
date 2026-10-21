@@ -511,8 +511,8 @@ export default function Progress() {
                 <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-sky-50">
                   <KeyRound className="h-5 w-5 text-primary" aria-hidden />
                 </span>
-                <h1 className="mb-1 text-xl font-semibold text-slate-900">Study group progress</h1>
-                <p className="mb-5 text-sm text-slate-500">Enter the dashboard code from your study group.</p>
+                <h1 className="mb-1 text-xl font-semibold text-slate-900">Teacher group progress</h1>
+                <p className="mb-5 text-sm text-slate-500">Enter the dashboard code from your teacher group.</p>
                 <label className="mb-1.5 block text-sm font-medium text-slate-700" htmlFor="code">Dashboard code</label>
                 <Input id="code" value={input} onChange={(e) => setInput(e.target.value)} autoComplete="off"
                   aria-invalid={!!error} aria-describedby={error ? "code-error" : undefined}
