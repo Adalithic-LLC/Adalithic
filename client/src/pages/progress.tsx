@@ -670,7 +670,7 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
     <>
       {pendingMessages > 0 && (
         <div className="border-b border-slate-200 bg-amber-50/60 px-3 py-2 text-sm text-amber-900">
-          {pendingMessages} {pendingMessages === 1 ? "message is" : "messages are"} not analysed yet. Their words are
+          {pendingMessages} {pendingMessages === 1 ? "message is" : "messages are"} not analyzed yet. Their words are
           matched by spelling for now and marked "analysis pending".
         </div>
       )}
