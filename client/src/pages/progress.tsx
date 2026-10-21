@@ -597,6 +597,13 @@ const reasons: Record<MissReason, { label: string; tone: "slate" | "amber" | "bl
   added: { label: "Added", tone: "slate", title: "Not typed: Reword added it" },
 };
 const reasonLabel = (r: MissedRow) => (r.reason ? reasons[r.reason]?.label ?? null : null);
+/**
+ * The word(s) as Reword actually sent them ("estás"), not the dictionary
+ * form the row is grouped under ("estar"). A row groups every form of one
+ * word, so several sent forms are listed together.
+ */
+const rewordedTo = (r: MissedRow) => (r.forms?.length ? r.forms.join(", ") : r.word);
+
 const missedRowKey = (r: { pending?: boolean; misused?: boolean; word: string }) =>
   `${r.pending ? "p" : r.misused ? "w" : "a"}:${r.word}`;
 
@@ -615,13 +622,12 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
     : visible;
   const columns: Column<MissedRow>[] = [
     {
-      key: "word", header: "Reworded To", sortValue: (r) => r.word, className: "min-w-[10rem]",
+      key: "word", header: "Reworded To", sortValue: rewordedTo, className: "min-w-[10rem]",
       cell: (r) => {
-        const otherForms = (r.forms ?? []).filter((f) => f !== r.word);
         return (
           <div className="space-y-0.5">
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="font-medium text-slate-900">{r.word}</span>
+              <span className="font-medium text-slate-900">{rewordedTo(r)}</span>
               {isCommonlyMissed(r) && (
                 <Pill tone="rose" title={`Missed ${threshold}+ times: among this student's most missed words`}>
                   Commonly missed
@@ -632,7 +638,6 @@ function MissedWords({ rows, pendingMessages }: { rows: MissedRow[]; pendingMess
             {r.misused && r.correction && (
               <div className="text-xs text-slate-500" title="Replaced in the sent message with">→ {r.correction}</div>
             )}
-            {otherForms.length > 0 && <div className="text-xs text-slate-500">{otherForms.join(", ")}</div>}
           </div>
         );
       },
