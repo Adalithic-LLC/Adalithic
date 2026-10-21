@@ -26,11 +26,20 @@ export interface MissedRow {
   correction?: string | null; // misused rows only: the word Reword replaced it with
   misused?: boolean; // `word` is what the student typed: a real word, wrong in context
 }
+// A word in messages the student sent WITHOUT Reword (their own messages only).
+export interface NotRewordedRow {
+  word: string;
+  uses: number; // total occurrences
+  messages: number; // distinct un-Reworded messages containing it
+  lastUsedAt: string;
+  exampleMessage: string; // the most recent un-Reworded message containing it
+}
 export type MissReason = "translation" | "spelling" | "grammar" | "wrong_word" | "added";
 export interface StudentData {
   vocabulary: { word: string; typed: number; sent: number }[];
   missed: MissedRow[];
   nowCorrect: { word: string; misses: number; correctSince: number; firstCorrectAt: string; pending?: boolean; misused?: boolean }[];
+  notReworded?: NotRewordedRow[]; // absent while an older group-dashboard is deployed
   pendingMessages?: number; // Reworded messages still waiting for the AI analysis
   // Every chat sent to the group, newest first; lastAt is null for a chat with no messages yet.
   // messages / lastAt stop at the student's last Send (sentThrough).

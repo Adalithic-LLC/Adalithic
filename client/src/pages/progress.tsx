@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect, useMemo, useState } from "react";
 import {
   ArrowDown, ArrowLeft, ArrowUp, ArrowUpDown, BookOpen, CheckCircle2, ChevronDown, ChevronRight, ChevronUp, Clock,
-  Inbox, KeyRound, Loader2, LogOut, MessageSquare, RotateCw, Search, Users, XCircle,
+  Inbox, KeyRound, Loader2, LogOut, MessageSquare, PenLine, RotateCw, Search, Users, XCircle,
 } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -13,7 +13,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import {
   type ChatData, type DashboardError, type GroupData, loadChat, loadGroup, loadStudent, type Member, type MissReason,
-  type MissedRow, type StudentData,
+  type MissedRow, type NotRewordedRow, type StudentData,
 } from "@/lib/progress-api";
 
 const CODE_KEY = "progress.code"; // sessionStorage only: never in the URL
@@ -24,7 +24,7 @@ const errorText: Record<DashboardError, string> = {
   network: "Couldn't reach the server. Try again.",
 };
 
-type Tab = "vocabulary" | "missed" | "correct" | "chats";
+type Tab = "vocabulary" | "missed" | "correct" | "notReworded" | "chats";
 
 const languageNames = (() => {
   try {
@@ -503,7 +503,8 @@ function StudentView({ code, member, onBack, onNotFound }: {
   }
   const tabs: [Tab, string, typeof Inbox][] = [
     ["vocabulary", "All Words Used", BookOpen], ["missed", "Missed words", XCircle],
-    ["correct", "Now correct", CheckCircle2], ["chats", "Chats", MessageSquare],
+    ["correct", "Now correct", CheckCircle2], ["notReworded", "Not Reworded Words", PenLine],
+    ["chats", "Chats", MessageSquare],
   ];
   return (
     <div className="space-y-4">
@@ -547,6 +548,8 @@ function StudentView({ code, member, onBack, onNotFound }: {
           <MissedWords rows={data.missed} pendingMessages={data.pendingMessages ?? 0} />
         ) : tab === "correct" ? (
           <NowCorrect rows={data.nowCorrect} />
+        ) : tab === "notReworded" ? (
+          <NotReworded rows={data.notReworded ?? []} />
         ) : (
           <Chats rows={data.chats} onOpen={setChat} />
         )}
@@ -725,6 +728,34 @@ function NowCorrect({ rows }: { rows: CorrectRow[] }) {
       </Toolbar>
       <DataGrid columns={columns} rows={shown} rowKey={missedRowKey}
         empty={<EmptyState icon={CheckCircle2}>{rows.length ? "No words match your search." : "No words corrected yet."}</EmptyState>} />
+    </>
+  );
+}
+
+function NotReworded({ rows }: { rows: NotRewordedRow[] }) {
+  const [query, setQuery] = useState("");
+  const q = query.trim().toLowerCase();
+  const shown = q ? rows.filter((r) => [r.word, r.exampleMessage].some((s) => s.toLowerCase().includes(q))) : rows;
+  const columns: Column<NotRewordedRow>[] = [
+    { key: "word", header: "Word", sortValue: (r) => r.word, className: "min-w-[8rem]", cell: (r) => <span className="font-medium text-slate-900">{r.word}</span> },
+    { key: "uses", header: "Times used", align: "right", sortValue: (r) => r.uses, className: "w-28 whitespace-nowrap", cell: (r) => r.uses.toLocaleString() },
+    { key: "messages", header: "Messages", align: "right", sortValue: (r) => r.messages, className: "w-28 whitespace-nowrap", cell: (r) => r.messages.toLocaleString() },
+    {
+      key: "example", header: "Example Message", sortValue: (r) => r.exampleMessage || null, className: "min-w-[16rem] max-w-md",
+      cell: (r) => r.exampleMessage
+        ? <span className="line-clamp-3 text-slate-600" title={r.exampleMessage}>{r.exampleMessage}</span>
+        : <span className="text-slate-400">—</span>,
+    },
+    { key: "last", header: "Last used", align: "right", sortValue: (r) => time(r.lastUsedAt), className: "w-28 whitespace-nowrap", cell: (r) => day(r.lastUsedAt) },
+  ];
+  return (
+    <>
+      <Toolbar>
+        <SearchBox value={query} onChange={setQuery} placeholder="Search words" />
+        <Count shown={shown.length} total={rows.length} noun={["word", "words"]} />
+      </Toolbar>
+      <DataGrid columns={columns} rows={shown} rowKey={(r) => r.word}
+        empty={<EmptyState icon={PenLine}>{rows.length ? "No words match your search." : "Every message so far went through Reword."}</EmptyState>} />
     </>
   );
 }
